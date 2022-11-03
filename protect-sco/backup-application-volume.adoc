@@ -1,0 +1,96 @@
+---
+permalink: protect-sco/backup-application-volume.html 
+sidebar: sidebar 
+keywords: application volume, back up 
+summary: 'Vous pouvez sauvegarder le volume d"application à partir de la page Ressources si le volume d"application ne fait partie d"aucun groupe de ressources.' 
+---
+= Sauvegarder le volume d'application
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si le volume d'application ne fait partie d'aucun groupe de ressources, vous pouvez sauvegarder le volume d'application à partir de la page Ressources.
+
+*À propos de cette tâche*
+
+Par défaut, des sauvegardes de groupe de cohérence sont créées. Si vous souhaitez créer des sauvegardes basées sur des volumes, définissez la valeur de *EnableOracleNdvVolumeBasedBackup* sur true dans le fichier _web.config_.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Oracle Database dans la liste.
+. Dans la page Ressources, sélectionnez *Volume d'application* dans la liste *Affichage*.
+. Cliquez sur *image:../media/filter_icon.gif[""]*, puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources.
++
+Vous pouvez ensuite cliquer sur *image:../media/filter_icon.gif[""]* pour fermer le volet de filtre.
+
+. Sélectionnez le volume d'application à sauvegarder.
++
+La page protection du volume de l'application s'affiche.
+
+. Dans la page ressource, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Utilisez le format de nom personnalisé pour la copie Snapshot
+ a| 
+Cochez cette case, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+
+Par exemple, clienttext__policy_hostname ou Resource_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+
+
+
+ a| 
+Exclure les destinations du journal d'archivage de la sauvegarde
+ a| 
+Spécifiez les destinations des fichiers journaux d'archive que vous ne souhaitez pas sauvegarder.
+
+|===
+. Dans la page stratégies, effectuez les opérations suivantes :
++
+.. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
++
+
+NOTE: Vous pouvez également créer une stratégie en cliquant sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+
+
+
++
+Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
+
++
+.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif[""] Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Dans la fenêtre Ajouter des planifications pour la stratégie _policy_name_, configurez le planning, puis cliquez sur *OK*.
++
+_policy_name_ est le nom de la stratégie que vous avez sélectionnée.
+
++
+Les planifications configurées sont répertoriées dans la colonne programmes appliqués.
+
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Si vous souhaitez joindre le rapport de l'opération de sauvegarde effectuée sur la ressource, puis sélectionnez *attacher un rapport de travail*.
+
++
+
+NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface graphique ou de la commande PowerShell set-SmSmtpServer.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
++
+La page topologie du volume de l'application s'affiche.
+
+. Cliquez sur *Sauvegarder maintenant*.
+. Dans la page sauvegarde, effectuez les opérations suivantes :
++
+.. Si vous avez appliqué plusieurs stratégies à la ressource, dans la liste déroulante *Stratégie*, sélectionnez la stratégie que vous souhaitez utiliser pour la sauvegarde.
+.. Cliquez sur *Backup*.
+
+
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+

@@ -1,0 +1,43 @@
+---
+permalink: protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez utiliser les applets de commande PowerShell pour restaurer une réplique défectueuse en utilisant la copie la plus récente sur le même hôte ou la copie la plus récente depuis un autre hôte. 
+---
+= Réamorçage d'une réplique à l'aide des applets de commande PowerShell pour la base de données Exchange
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser les applets de commande PowerShell pour restaurer une réplique défectueuse en utilisant la copie la plus récente sur le même hôte ou la copie la plus récente depuis un autre hôte.
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+*Étapes*
+
+. Démarrez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié en utilisant le `Open-SmConnection` applet de commande.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. Réamorçage de la base de données à l'aide du `reseed-SmDagReplicaCopy` applet de commande.
++
+Cet exemple replace la copie échouée de la base de données appelée execdb sur l'hôte "mva-rx200.netapp.com" en utilisant la dernière sauvegarde sur cet hôte.
+
++
+[listing]
+----
+reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database execdb
+----
++
+Cet exemple replace la copie échouée de la base de données appelée execdb en utilisant la dernière sauvegarde de la base de données (production/copie) sur un autre hôte "mva-rx201.netapp.com."
+
++
+[listing]
+----
+reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database  execdb -BackupHost "mva-rx201.netapp.com"
+----
+

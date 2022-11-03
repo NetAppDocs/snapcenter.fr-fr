@@ -1,0 +1,105 @@
+---
+permalink: sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html 
+sidebar: sidebar 
+keywords:  
+summary: La fonctionnalité de reprise après incident SnapCenter utilise les API REST pour sauvegarder SnapCenter Server. 
+---
+= API REST prise en charge pour la reprise après incident d'SnapCenter Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fonctionnalité de reprise après incident SnapCenter utilise des API REST pour sauvegarder le serveur SnapCenter. Avec les API REST, vous pouvez effectuer les opérations suivantes sur la page swagger des API REST. Pour plus d'informations sur l'accès à la page de swagger, reportez-vous à la section link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["Comment accéder aux API REST à l'aide de la page Web de l'API swagger"].
+
+*Ce dont vous aurez besoin*
+
+* Vous devez vous connecter en tant qu'utilisateur administrateur SnapCenter.
+* Le serveur SnapCenter doit être opérationnel pour exécuter l'API de restauration de reprise après incident.
+
+
+*À propos de cette tâche*
+
+SnapCenter Server DR prend en charge tous les plug-ins.
+
+[cols="10,40,50,10"]
+|===
+| Étape | Description | API REST | Méthode HTTP 
+
+
+ a| 
+1
+ a| 
+Récupérer les sauvegardes de reprise sur incident de SnapCenter Server existantes
+
+
+NOTE: Vous devez indiquer le chemin cible où les sauvegardes de reprise après incident sont stockées.
+ a| 
+`/4.5/disasterrecovery/server/backup?targetpath={path}`
+ a| 
+OBTENEZ
+
+
+
+ a| 
+2
+ a| 
+Créez une sauvegarde de reprise après incident de serveur.
+ a| 
+`/4.5/disasterrecovery/server/backup`
+ a| 
+POST
+
+
+
+ a| 
+3
+ a| 
+Restaure un serveur SnapCenter à partir d'une sauvegarde de reprise après incident de serveur spécifiée.
+
+* Conditions préalables*
+
+* Le nom d'hôte du serveur secondaire doit être identique au serveur principal, mais l'adresse IP peut être différente.
+* La version du serveur doit être identique à celle du serveur principal.
+* Assurez-vous que les fichiers de sauvegarde DR sont copiés sur le nouveau serveur SnapCenter à l'aide de la commande suivante :
++
+`xcopy <Ssource_Path> \\<Destination_Server_IP>\<Folder_Path> /O /X /E /H /K  {ex : xcopy C:\DRBackup \\10.225.81.114\c$\DRBackup /O /X /E /H /K}`
+
+
+
+Si le plug-in n'est pas en mesure de résoudre le nom d'hôte du serveur, connectez-vous à chacun des hôtes du plug-in et ajoutez l'entrée etc/host pour la nouvelle adresse IP au format suivant :
+`<New IP>	SC_Server_Name`
+
+Par exemple, 10.225.81.35 SCServer1
+
+Le fichier serveur etc/hôte ne sera pas restauré. Vous pouvez le restaurer manuellement à partir du dossier de sauvegarde DR.
+ a| 
+`/4.5/disasterrecovery/server/restore`
+ a| 
+POST
+
+
+
+ a| 
+4
+ a| 
+Supprimez la sauvegarde de reprise après incident du serveur en fonction du nom de sauvegarde.
+ a| 
+``/4.5/disasterrecovery/server/backup``
+ a| 
+SUPPRIMER
+
+
+
+ a| 
+5
+ a| 
+Activez ou désactivez la reprise après incident du stockage
+ a| 
+`/4.5/disasterrecovery/storage`
+ a| 
+POST
+
+|===
+Pour plus d'informations, reportez-vous à la section https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["API de reprise après incident"^] vidéo.

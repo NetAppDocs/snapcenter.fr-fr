@@ -1,0 +1,115 @@
+---
+section: protect-sce
+title: Protection des bases de données Microsoft Exchange Server
+entries:
+- title: Concepts du plug-in SnapCenter pour Microsoft Exchange Server
+  entries:
+  - title: Présentation
+    url: "/protect-sce/concept_snapcenter_plug_in_for_exchange_server_overview.html"
+  - title: Avantages du plug-in SnapCenter pour Microsoft Exchange Server
+    url: "/protect-sce/concept_what_you_can_do_with_snapcenter_plug_in_for_microsoft_exchange_server.html"
+  - title: Types de stockage pris en charge par le plug-in SnapCenter pour Microsoft
+      Windows et pour Microsoft Exchange Server
+    url: "/protect-sce/reference_storage_types_supported_by_snapcenter_plug_in_for_microsoft_windows_and_for_microsoft_exchange_server.html"
+  - title: Privilèges minimum ONTAP requis
+    url: "/protect-sce/concept_minimum_privileges_required_exchange_plug_in.html"
+  - title: Préparez les systèmes de stockage pour la réplication SnapMirror et SnapVault
+    url: "/protect-sce/reference_prepare_storage_system_for_snapmirror_and_snapvault.html"
+  - title: Définir une stratégie de sauvegarde pour les ressources Exchange Server
+    url: "/protect-sce/task_define_a_backup_strategy_for_exchange_server_resources.html"
+  - title: Définir une stratégie de restauration pour les bases de données Exchange
+    url: "/protect-sce/task_define_a_restore_strategy_for_exchange_databases.html"
+- title: Installez le plug-in SnapCenter pour Microsoft Exchange Server
+  entries:
+  - title: Workflow d'installation du plug-in SnapCenter pour Microsoft Exchange Server
+    url: "/protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html"
+  - title: Conditions préalables à l'ajout d'hôtes et à l'installation du plug-in
+      SnapCenter pour Microsoft Exchange Server
+    url: "/protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html"
+  - title: Configuration des informations d'identification pour le plug-in SnapCenter
+      pour Windows
+    url: "/protect-sce/task_set_up_credentials_for_the_snapcenter_plug_in_for_windows_sce.html"
+  - title: Configurez GMSA sur Windows Server 2012 ou version ultérieure
+    url: "/protect-sce/task_configure_gMSA_on_windows_server_2012_or_later.html"
+  - title: Ajoutez des hôtes et installez le plug-in pour Exchange
+    url: "/protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html"
+  - title: Installez le plug-in pour Exchange à partir de l'hôte SnapCenter Server
+      à l'aide des applets de commande PowerShell
+    url: "/protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html"
+  - title: Installez le plug-in SnapCenter pour l'échange silencieusement à partir
+      de la ligne de commande
+    url: "/protect-sce/task_install_the_snapcenter_plug_in_for_exchange_silently_from_the_command_line.html"
+  - title: Contrôler l'état d'installation du module d'extension SnapCenter
+    url: "/protect-sce/task_monitor_snapcenter_plug_in_package_installation_status.html"
+  - title: Configurer le certificat CA
+    entries:
+    - title: Générer le fichier CSR de certificat CA
+      url: "/protect-sce/reference_generate_CA_certificate_CSR_file.html"
+    - title: Importer des certificats CA
+      url: "/protect-sce/task_import_CA_certificates.html"
+    - title: Obtenez le certificat CA imprimé
+      url: "/protect-sce/task_get_the_CA_certificate_thumbprint.html"
+    - title: Configurez le certificat d'autorité de certification avec les services
+        de plug-in d'hôte Windows
+      url: "/protect-sce/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
+    - title: Activez les certificats CA pour les plug-ins
+      url: "/protect-sce/task_enable_ca_certificates_for_plug-ins.html"
+  - title: Configurez SnapManager 7.x pour Exchange et SnapCenter afin qu'ils coexistent
+    url: "/protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html"
+- title: Installation du plug-in SnapCenter pour VMware vSphere
+  url: "/protect-sce/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
+- title: Préparation à la protection des données
+  url: "/protect-sce/concept_prepare_for_data_protection.html"
+- title: Sauvegarder les ressources Exchange
+  entries:
+  - title: Workflow de sauvegarde
+    url: "/protect-sce/concept_back_up_exchange_resources.html"
+  - title: Vérification des sauvegardes et des bases de données Exchange
+    url: "/protect-sce/reference_exchange_database_and_backup_verification.html"
+  - title: Déterminez si des ressources Exchange sont disponibles pour la sauvegarde
+    url: "/protect-sce/task_determine_whether_exchange_resources_are_available_for_backup_sce.html"
+  - title: Créer des stratégies de sauvegarde pour les bases de données Exchange Server
+    url: "/protect-sce/task_create_backup_policies_for_exchange_server_databases.html"
+  - title: Créez des groupes de ressources et associez des stratégies pour les serveurs
+      Exchange
+    url: "/protect-sce/task_create_resource_groups_and_attach_policies_for_exchange_servers.html"
+  - title: Sauvegarde des bases de données Exchange
+    url: "/protect-sce/task_back_up_exchange_databases.html"
+  - title: Sauvegardez les groupes de ressources Exchange
+    url: "/protect-sce/task_back_up_exchange_resources_groups.html"
+  - title: Créer une connexion au système de stockage et une autorisation d'accès
+      à l'aide des applets de commande PowerShell pour Exchange Server
+    url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
+  - title: Sauvegarde des ressources Exchange à l'aide des applets de commande PowerShell
+    url: "/protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html"
+  - title: Surveiller les opérations de sauvegarde
+    url: "/protect-sce/task_monitor_backup_operations.html"
+  - title: Annuler les opérations de sauvegarde pour la base de données Exchange
+    url: "/protect-sce/task_cancel_backup_operations_for_exchange_database.html"
+  - title: Suppression des sauvegardes Exchange via des applets de commande PowerShell
+    url: "/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html"
+  - title: Afficher les sauvegardes Exchange sur la page topologie
+    url: "/protect-sce/task_view_exchange_backups_in_the_topology_page.html"
+- title: Restaurer les ressources Exchange
+  entries:
+  - title: Restaurer le flux de travail
+    url: "/protect-sce/reference_restore_exchange_resources.html"
+  - title: Conditions requises pour la restauration d'une base de données Exchange
+    url: "/protect-sce/concept_requirements_for_restoring_an_exchange_database.html"
+  - title: Restaurer les bases de données Exchange
+    url: "/protect-sce/task_restore_exchange_databases.html"
+  - title: Restauration granulaire des e-mails et des boîtes aux lettres
+    url: "/protect-sce/reference_granular_recovery_of_mails_and_mailbox.html"
+  - title: Restaurer une base de données Exchange Server à partir du stockage secondaire
+    url: "/protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html"
+  - title: Restauration des ressources Exchange à l'aide des applets de commande PowerShell
+    url: "/protect-sce/task_restore_exchange_resources_using_powershell_cmdlets.html"
+  - title: Réamorçage d'un réplica de nœud Exchange passif
+    url: "/protect-sce/task_reseed_a_passive_exchange_node_replica.html"
+  - title: Réamorçage d'une réplique à l'aide des applets de commande PowerShell pour
+      la base de données Exchange
+    url: "/protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html"
+  - title: Surveiller les opérations de restauration
+    url: "/protect-sce/task_monitor_restore_operations.html"
+  - title: Annuler les opérations de restauration
+    url: "/protect-sce/task_cancel_restore_operations.html"

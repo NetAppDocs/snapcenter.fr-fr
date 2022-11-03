@@ -1,0 +1,35 @@
+---
+permalink: admin/task_request_reports_of_the_protection_status_from_the_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez demander des informations sur la protection des ressources gérées par des plug-ins spécifiques à l"aide du tableau de bord.' 
+---
+= Demander des rapports d'état de protection à partir du tableau de bord
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez demander des informations sur la protection des ressources gérées par des plug-ins spécifiques à l'aide du tableau de bord. Seules les sauvegardes de données sont considérées pour la synthèse de la protection des données.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Dashboard*.
+. Recherchez la dernière vignette protection Summary dans le tableau de bord et utilisez le menu déroulant pour sélectionner un plug-in.
++
+Le tableau de bord affiche un tableau des beignets pour les ressources sauvegardées dans le stockage primaire et, le cas échéant, le plug-in, un tableau des beignets pour les ressources sauvegardées dans le stockage secondaire.
+
++
+
+NOTE: Les rapports sur la protection des données sont disponibles uniquement pour certains types de plug-ins. La spécification de *tous les plug-ins* n'est pas prise en charge.
+
+. Cliquez sur la coupe donut représentant l'état pour lequel vous voulez un rapport.
++
+Lorsque vous cliquez sur le graphique donut, vous êtes redirigé de la page Tableau de bord vers les rapports, puis vers la page Plug-in. Le rapport affiche uniquement l'état du plug-in sélectionné. Vous pouvez consulter le rapport ou le télécharger sur votre système local.
+
++
+
+NOTE: La redirection vers la page Reports pour les graphiques SnapMirror et la sauvegarde SAP HANA basée sur les fichiers n'est pas prise en charge.
+
+

@@ -1,0 +1,74 @@
+---
+permalink: protect-sce/concept_prepare_for_data_protection.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Exchange Server 
+summary: 'Avant d"effectuer des opérations de protection des données telles que la sauvegarde, le clonage ou la restauration, vous devez définir votre stratégie et configurer l"environnement. Vous pouvez également configurer le serveur SnapCenter pour qu"il utilise la technologie SnapMirror et SnapVault.' 
+---
+= Préparation à la protection des données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Avant d'effectuer des opérations de protection des données telles que la sauvegarde, le clonage ou la restauration, vous devez définir votre stratégie et configurer l'environnement. Vous pouvez également configurer le serveur SnapCenter pour qu'il utilise la technologie SnapMirror et SnapVault.
+
+Pour profiter des avantages de SnapVault et de la technologie SnapMirror, vous devez configurer et initialiser une relation de protection des données entre les volumes source et destination sur le périphérique de stockage. Vous pouvez utiliser NetAppSystem Manager ou utiliser la ligne de commandes de la console de stockage pour effectuer ces tâches.
+
+*Plus d'informations*
+
+link:https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_rest_api.html["Mise en route de l'API REST"]
+
+
+
+== Conditions préalables à l'utilisation du plug-in SnapCenter pour Microsoft Exchange Server
+
+Avant d'utiliser le plug-in pour Exchange, l'administrateur SnapCenter doit installer et configurer le serveur SnapCenter et effectuer les tâches préalables.
+
+* Installer et configurer SnapCenter Server.
+* Connectez-vous à SnapCenter.
+* Configurez l'environnement SnapCenter en ajoutant ou en attribuant des connexions au système de stockage et en créant des identifiants.
++
+
+NOTE: SnapCenter ne prend pas en charge plusieurs SVM de même nom sur différents clusters. Chaque SVM pris en charge par SnapCenter doit avoir un nom unique.
+
+* Ajoutez des hôtes, installez le plug-in SnapCenter pour Microsoft Windows et le plug-in SnapCenter pour Microsoft Exchange Server et découvrez (actualisez) les ressources.
+* Provisionnez le stockage côté hôte à l'aide du plug-in SnapCenter pour Microsoft Windows.
+* Si vous utilisez SnapCenter Server pour protéger les bases de données Exchange résidant sur des LUN RDM VMware, vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter. La documentation du plug-in SnapCenter pour VMware vSphere contient des informations supplémentaires.
++
+
+NOTE: Les VMDK ne sont pas pris en charge.
+
+* Déplacer une base de données Microsoft Exchange Server existante d'un disque local vers un stockage pris en charge à l'aide des outils Microsoft Exchange.
+* Configurez les relations SnapMirror et SnapVault, si vous souhaitez effectuer une réplication de sauvegarde.
+
+
+Pour les utilisateurs de SnapCenter 4.1.1, la documentation du plug-in SnapCenter pour VMware vSphere 4.1.1 contient des informations sur la protection des bases de données virtualisées et des systèmes de fichiers. Pour les utilisateurs de SnapCenter 4.2.x, NetApp Data Broker 1.0 et 1.0.1, la documentation relative à la protection des bases de données et des systèmes de fichiers virtualisés à l'aide du plug-in SnapCenter pour VMware vSphere fourni par le dispositif virtuel NetApp Data Broker basé sur Linux (format Open Virtual Appliance). Pour les utilisateurs de SnapCenter 4.3.x, la documentation du plug-in SnapCenter pour VMware vSphere 4.3 contient des informations sur la protection des bases de données virtualisées et des systèmes de fichiers à l'aide du plug-in SnapCenter basé sur Linux pour l'appliance virtuelle VMware vSphere (format Open Virtual Appliance).
+
+https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["Documentation du plug-in SnapCenter pour VMware vSphere"^]
+
+
+
+== Mode d'utilisation des ressources, des groupes de ressources et des stratégies pour la protection d'Exchange Server
+
+Avant d'utiliser SnapCenter, il est utile de comprendre les concepts de base associés aux opérations de sauvegarde, de restauration et de réamorçage que vous souhaitez effectuer. Vous interagissez avec les ressources, les groupes de ressources et les stratégies pour différentes opérations.
+
+* Les ressources sont généralement des bases de données de boîtes aux lettres ou des groupes de disponibilité de base de données Microsoft Exchange que vous sauvegardez avec SnapCenter.
+* Un groupe de ressources SnapCenter, est un ensemble de ressources d'un DAG hôte ou Exchange, et le groupe de ressources peut inclure un DAG entier ou des bases de données individuelles.
++
+Lorsque vous effectuez une opération sur un groupe de ressources, vous effectuez cette opération sur les ressources définies dans le groupe de ressources en fonction du planning que vous spécifiez pour le groupe de ressources.
+
++
+Vous pouvez sauvegarder à la demande une seule ressource ou un groupe de ressources. Vous pouvez également effectuer des sauvegardes planifiées pour des ressources et des groupes de ressources uniques.
+
++
+Les groupes de ressources étaient auparavant appelés ensembles de données.
+
+* Les stratégies définissent la fréquence de sauvegarde, la conservation des copies, les scripts et d'autres caractéristiques des opérations de protection des données.
++
+Lorsque vous créez un groupe de ressources, vous sélectionnez une ou plusieurs stratégies pour ce groupe. Vous pouvez également sélectionner une ou plusieurs stratégies lorsque vous effectuez une sauvegarde à la demande pour une seule ressource.
+
+
+
+Pensez à un groupe de ressources comme définissant _quoi_ vous voulez protéger et quand vous voulez le protéger en termes de jour et de temps. Pensez à une stratégie comme définir _comment_ vous voulez la protéger. Si vous sauvegardez toutes les bases de données d'un hôte, par exemple, vous pouvez créer un groupe de ressources qui inclut toutes les bases de données de l'hôte. Vous pouvez ensuite associer deux stratégies au groupe de ressources : une stratégie quotidienne et une stratégie horaire. Lorsque vous créez le groupe de ressources et joignez les stratégies, vous pouvez configurer le groupe de ressources pour effectuer une sauvegarde complète tous les jours et un autre programme qui effectue des sauvegardes de journaux toutes les heures. L'image suivante illustre la relation entre les ressources, les groupes de ressources et les politiques des bases de données :
+
+image::../media/sce_resourcegroup_policy.gif[stratégie sce resourcegroup]

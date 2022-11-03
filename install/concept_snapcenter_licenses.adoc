@@ -1,0 +1,111 @@
+---
+permalink: install/concept_snapcenter_licenses.html 
+sidebar: sidebar 
+keywords: licenses, FAS, AFF, SnapMirror, SnapVault, SnapRestore, FlexClone, SMBR, Single Mailbox Recovery 
+summary: SnapCenter nécessite plusieurs licences pour permettre les opérations de protection des données. Le type de licence SnapCenter que vous installez dépend de votre environnement de stockage et des fonctionnalités que vous souhaitez utiliser. 
+---
+= Licences SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter nécessite plusieurs licences pour permettre la protection des données des applications, des bases de données, des systèmes de fichiers et des machines virtuelles. Le type de licence SnapCenter que vous installez dépend de votre environnement de stockage et des fonctionnalités que vous souhaitez utiliser.
+
+|===
+| Licence | Si nécessaire 
+
+
+ a| 
+Contrôleur SnapCenter standard
+ a| 
+Requis pour FAS, AFF et Amazon FSX
+
+La licence SnapCenter Standard est basée sur le contrôleur et incluse dans le bundle Premium. Si vous disposez de la licence SnapManager Suite, vous bénéficiez également des droits de licence SnapCenter Standard. Si vous souhaitez installer SnapCenter sous forme d'essai avec les systèmes de stockage FAS ou AFF, vous pouvez obtenir une licence d'évaluation Premium Bundle en contactant l'ingénieur commercial.
+
+
+NOTE: SnapCenter fait également partie du pack de protection des données. Si vous avez acheté A400 ou une version ultérieure, vous devez acheter le pack de protection des données.
+
+
+
+ a| 
+SnapCenter Standard basé sur la capacité
+ a| 
+Requis avec ONTAP Select et Cloud Volumes ONTAP
+
+Si vous êtes un client Cloud Volumes ONTAP ou ONTAP Select, vous devez obtenir une licence basée sur la capacité par To en fonction des données gérées par SnapCenter. Par défaut, SnapCenter propose une licence d'évaluation standard basée sur la capacité SnapCenter 90 jours intégrée, avec une capacité de 100 To. Pour plus d'informations, contactez l'ingénieur commercial.
+
+
+
+ a| 
+SnapMirror ou SnapVault
+ a| 
+ONTAP
+
+Une licence SnapMirror ou SnapVault est requise si la réplication est activée dans SnapCenter.
+
+
+
+ a| 
+SnapRestore
+ a| 
+Indispensable pour restaurer et vérifier les sauvegardes.
+
+Sur les systèmes de stockage primaires
+
+* Indispensable sur les systèmes de destination SnapVault pour effectuer une vérification à distance et une restauration à partir d'une sauvegarde.
+* Nécessaire sur les systèmes de destination SnapMirror pour effectuer une vérification à distance.
+
+
+
+
+ a| 
+FlexClone
+ a| 
+Requises pour cloner les bases de données et les opérations de vérification.
+
+Sur les systèmes de stockage primaires et secondaires
+
+* Requis sur les systèmes de destination SnapVault pour créer des clones à partir d'une sauvegarde secondaire à distance.
+* Requis sur les systèmes de destination SnapMirror pour créer des clones à partir d'une sauvegarde SnapMirror secondaire
+
+
+
+
+ a| 
+Protocoles
+ a| 
+* Licence iSCSI ou FC pour LUN
+* Licence CIFS pour les partages SMB
+* Licence NFS pour VMDK de type NFS
+* Licence iSCSI ou FC pour les VMDK de type VMFS
+
+
+Indispensable sur les systèmes de destination SnapMirror pour transmettre les données en cas d'indisponibilité d'un volume source.
+
+
+
+ a| 
+Licences SnapCenter Standard (en option)
+ a| 
+Destinations secondaires
+
+
+NOTE: Il est recommandé, mais pas obligatoire, d'ajouter des licences SnapCenter Standard aux destinations secondaires. Si les licences SnapCenter Standard ne sont pas activées sur les destinations secondaires, vous ne pouvez pas utiliser SnapCenter pour sauvegarder les ressources sur la destination secondaire après avoir effectué une opération de basculement. Une licence FlexClone est toutefois requise sur les destinations secondaires pour effectuer les opérations de clonage et de vérification.
+
+|===
+
+NOTE: Les licences SnapCenter Advanced et SnapCenter NAS File Services sont obsolètes et ne sont plus disponibles.
+
+Vous devez installer une ou plusieurs licences SnapCenter. Pour plus d'informations sur l'ajout de licences, reportez-vous à la section link:../install/concept_snapcenter_standard_controller_based_licenses.html["Ajout de licences SnapCenter standard basées sur le contrôleur"] ou link:../install/concept_snapcenter_standard_capacity_based_licenses.html["Ajoutez des licences SnapCenter standard basées sur la capacité"].
+
+
+
+== Licences Single Mailbox Recovery (SMBR)
+
+Si vous utilisez le plug-in SnapCenter pour Exchange pour gérer les bases de données Microsoft Exchange Server et SMBR (Single Mailbox Recovery), vous devez disposer d'une licence supplémentaire pour SMBR qui doit être achetée séparément selon la boîte aux lettres des utilisateurs.
+
+Contactez votre ingénieur commercial NetApp pour acheter des licences SMBR disponibles sous forme d'unités de 1000, 5000, 15000 et 25000 boîtes aux lettres. Après l'achat de la référence, vous pouvez obtenir la licence en suivant les instructions de la section https://library.netapp.com/ecm/ecm_download_file/ECMLP2863893["Notes de mise à jour de SMBR"^].
+
+Lorsque vous soumettez la demande de clé de licence, Kroll Ontrack émet 50 clés de licence de boîte aux lettres. En fonction de vos droits, le Kroll Ontrack mettra à niveau les licences de la boîte aux lettres après vérification.

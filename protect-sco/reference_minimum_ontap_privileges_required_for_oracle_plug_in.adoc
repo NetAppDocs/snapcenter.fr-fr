@@ -1,0 +1,126 @@
+---
+permalink: protect-sco/reference_minimum_ontap_privileges_required_for_oracle_plug_in.html 
+sidebar: sidebar 
+keywords: ONTAP privileges 
+summary: Les privilèges minimum ONTAP requis varient en fonction des plug-ins SnapCenter utilisés pour la protection des données. 
+---
+= Privilèges ONTAP minimum requis pour le plug-in pour Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les privilèges minimum ONTAP requis varient en fonction des plug-ins SnapCenter utilisés pour la protection des données.
+
+|===
+| Commandes All-Access : privilèges minimum requis pour ONTAP 8.3.0 et versions ultérieures 
+
+
+ a| 
+* event generate-autosupport-log
+
+
+
+
+ a| 
+* l'historique des tâches s'affiche
+* fin de la tâche
+
+
+
+
+ a| 
+* lun
+* l'attribut de lun affiche
+* la création de lun
+* suppression de la lun
+* géométrie de lun
+* lun igroup add
+* créez un groupe initiateur lun
+* suppression du groupe initiateur lun
+* renommer la lun igroup
+* affichage de la lun igroup
+* lun mapping des nœuds supplémentaires
+* création d'un mappage de lun
+* suppression du mappage de lun
+* mappage de lun supprimer-rapports-nœuds
+* les mappages de lun s'affichent
+* modification de lun
+* déplacement des lun dans le volume
+* lun hors ligne
+* lun en ligne
+* suppression de la réservation persistante de lun
+* redimensionner la lun
+* série de lun
+* affichage de la lun
+
+
+
+
+ a| 
+* ajout de règle snapmirror
+* règle de modification de snapmirror
+* règle de suppression de snapmirror
+* affichage des règles snapmirror
+* restauration snapmirror
+* montrer snapmirror
+* historique des données du mode snapmirror
+* mise à jour snapmirror
+* snapmirror update-ls-set
+* destinations des listes snapmirror
+
+
+
+
+ a| 
+* version
+
+
+
+
+ a| 
+* création de clones de volumes
+* clone de volume affiche
+* démarrage du fractionnement du clone de volume
+* arrêt du fractionnement du clone de volume
+* création de volumes
+* destruction des volumes
+* création d'un clone de fichiers de volumes
+* volume fichier show-disk-usage
+* volume hors ligne
+* volume en ligne
+* modification de volume
+* création de qtree volume
+* suppression qtree du volume
+* modification de qtree volume
+* volume qtree show
+* restrictions de volume
+* volume affiché
+* création de copies snapshot de volume
+* suppression du snapshot de volume
+* modification de snapshot de volume
+* renommage snapshot de volume
+* restauration snapshot du volume
+* fichier de restauration de snapshot de volume
+* snapshot de volume apparaît
+* démontage de volume
+
+
+
+
+ a| 
+* un vserver
+* cifs vserver
+* vserver cifs shadowcopy show
+* vserver show
+
+
+
+
+ a| 
+* interface réseau
+* interface réseau affiche
+
+
+|===

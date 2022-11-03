@@ -1,0 +1,115 @@
+---
+permalink: protect-hana/task_add_resources_manually_to_the_plug_in_host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'La détection automatique n"est pas prise en charge pour certaines instances HANA. Vous devez ajouter ces ressources manuellement.' 
+---
+= Ajoutez des ressources manuellement au plug-in hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La détection automatique n'est pas prise en charge pour certaines instances HANA. Vous devez ajouter ces ressources manuellement.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la configuration des connexions du système de stockage et l'ajout d'une clé de stockage utilisateur HDB.
+* Pour la réplication des systèmes SAP HANA, il est recommandé d'ajouter toutes les ressources de ce système HANA dans un groupe de ressources et de sauvegarder un groupe de ressources. Cela garantit une sauvegarde transparente en mode basculement/retour arrière.
+
+
+link:task_create_resource_groups_and_attach_policies.html["Créer des groupes de ressources et attacher des stratégies"].
+
+*À propos de cette tâche*
+
+La détection automatique n'est pas prise en charge pour les configurations suivantes :
+
+* Dispositions RDM et VMDK
++
+
+NOTE: Lorsque les ressources ci-dessus sont découvertes, les opérations de protection des données ne sont pas prises en charge sur ces ressources.
+
+* Configuration HANA avec plusieurs hôtes
+* Plusieurs instances sur le même hôte
+* Réplication système HANA scale-out multi-niveaux
+* Environnement de réplication en cascade en mode réplication du système
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, sélectionnez le plug-in SnapCenter pour base de données SAP HANA dans la liste déroulante, puis cliquez sur *Ressources*.
+. Dans la page Ressources, cliquez sur *Ajouter une base de données SAP HANA*.
+. Dans la page Détails de la ressource, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Type de ressource
+ a| 
+Entrez le type de ressource. Les types de ressources sont conteneur unique, conteneur de base de données mutualisé (MDC) et volume non data.
+
+
+
+ a| 
+Nom du système HANA
+ a| 
+Entrez le nom descriptif du système SAP HANA. Cette option n'est disponible que si vous avez sélectionné des types de ressources conteneur unique ou MDC.
+
+
+
+ a| 
+SID
+ a| 
+Saisissez l'ID système (SID). Le système SAP HANA installé est identifié par un SID unique.
+
+
+
+ a| 
+Hôte de plug-in
+ a| 
+Sélectionnez l'hôte du plug-in.
+
+
+
+ a| 
+Clés de stockage sécurisé HDB
+ a| 
+Entrez la clé pour vous connecter au système SAP HANA.
+
+La clé contient les informations de connexion à la base de données.
+
+Pour la réplication système SAP HANA, la clé utilisateur secondaire n'est pas validée. Ceci sera utilisé pendant le basculement.
+
+
+
+ a| 
+Utilisateur HDBSQL
+ a| 
+Entrez le nom d'utilisateur pour lequel la clé de stockage sécurisée de l'utilisateur HDB est configurée. Pour Windows, il est obligatoire que l'utilisateur HDBSQL OS soit l'utilisateur SYSTÈME. Par conséquent, vous devez configurer la clé de stockage sécurisée de l'utilisateur HDB pour l'utilisateur SYSTÈME.
+
+|===
+. Dans la page Entitetour Storage Footprint, sélectionnez un système de stockage et choisissez un ou plusieurs volumes, LUN et qtrees, puis cliquez sur *Save*.
++
+Facultatif : vous pouvez cliquer sur *image:../media/add_policy_from_resourcegroup.gif[""]* Icône pour ajouter plus de volumes, de LUN et de qtrees à partir d'autres systèmes de stockage.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
++
+Les bases de données s'affichent avec des informations telles que le SID, l'hôte du plug-in, les groupes de ressources et les stratégies associés et l'état global
+
+
+
+Si vous souhaitez donner aux utilisateurs l'accès aux ressources, vous devez affecter ces ressources aux utilisateurs. Cela permet aux utilisateurs d'effectuer les actions pour lesquelles ils ont des autorisations sur les ressources qui leur sont assignées.
+
+link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html["Ajoutez un utilisateur ou un groupe et attribuez un rôle et des ressources"]
+
+Après avoir ajouté les bases de données, vous pouvez modifier les détails de la base de données SAP HANA.
+
+Vous ne pouvez pas modifier ce qui suit si des sauvegardes sont associées à la ressource SAP HANA :
+
+* Conteneurs de base de données mutualisés (MDC) : SID ou hôte HDBSQL client (plug-in)
+* Conteneur unique : SID ou hôte client HDBSQL (plug-in)
+* Volume non-données : nom de la ressource, SID associé ou hôte du plug-in
+

@@ -1,0 +1,135 @@
+---
+permalink: protect-sce/task_restore_exchange_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez utiliser SnapCenter pour restaurer des bases de données Exchange sauvegardées. 
+---
+= Restaurer les bases de données Exchange
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour restaurer des bases de données Exchange sauvegardées.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir sauvegardé les groupes de ressources, la base de données ou les groupes de disponibilité de base de données (DAG).
+* Lorsque la base de données Exchange est migrée vers un autre emplacement, l'opération de restauration ne fonctionne pas pour les anciennes sauvegardes.
+* Si vous répliquez des copies Snapshot dans un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué les SVM à la fois pour les volumes source et de destination.
+* Dans un DAG, si une copie active de la base de données se trouve sur un stockage non NetApp et que vous souhaitez restaurer à partir de la sauvegarde passive de copie de base de données sur un stockage NetApp, faire la copie passive (stockage NetApp) comme copie active, actualiser les ressources et exécuter l'opération de restauration.
++
+Exécutez le `Move-ActiveMailboxDatabase` commande pour faire de la copie passive de la base de données une copie active de la base de données.
+
++
+Le https://docs.microsoft.com/en-us/powershell/module/exchange/move-activemailboxdatabase?view=exchange-ps["Documentation Microsoft"^] contient des informations sur cette commande.
+
+
+
+*À propos de cette tâche*
+
+* Lorsque l'opération de restauration est effectuée sur une base de données, la base de données est rémontée sur le même hôte et aucun nouveau volume n'est créé.
+* Les sauvegardes de niveau DAG doivent être restaurées à partir de bases de données individuelles.
+* La restauration complète du disque n'est pas prise en charge lorsque des fichiers autres que le fichier de base de données Exchange (.edb) existent.
++
+Le plug-in pour Exchange n'effectue pas de restauration complète sur un disque si celui-ci contient des fichiers Exchange tels que ceux utilisés pour la réplication. Lorsqu'une restauration complète peut avoir un impact sur les fonctionnalités d'Exchange, le plug-in pour Exchange effectue une seule opération de restauration de fichiers.
+
+* Le plug-in pour Exchange ne peut pas restaurer les disques cryptés BitLocker.
+* Le CHEMIN_SCRIPTS est défini à l'aide de la clé pré-défini WindowsScriptsDirectory située dans le fichier SMCoreServiceHost.exe.Config de l'hôte du plug-in.
++
+Si nécessaire, vous pouvez modifier ce chemin et redémarrer le service SMcore. Il est recommandé d'utiliser le chemin par défaut pour la sécurité.
+
++
+La valeur de la clé peut être affichée à partir de Swagger via l'API : API /4.7/configsettings
+
++
+Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
+
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources* dans le coin supérieur gauche de la page ressource.
+. Sélectionnez le plug-in Exchange Server dans la liste déroulante.
+. Dans la page Ressources, sélectionnez *Database* dans la liste vue.
+. Sélectionnez la base de données dans la liste.
+. Dans la vue gestion des copies, sélectionnez *backups* dans la table sauvegardes primaires, puis cliquez sur *image:../media/restore_icon.gif["icône restaurer"]*.
+. Dans la page Options, sélectionnez l'une des options de sauvegarde des journaux suivantes :
++
+|===
+| Option | Description 
+
+
+ a| 
+Toutes les sauvegardes de journaux
+ a| 
+Choisissez *toutes les sauvegardes de journaux* pour effectuer une opération de restauration de sauvegarde à la minute afin de restaurer toutes les sauvegardes de journaux disponibles après la sauvegarde complète.
+
+
+
+ a| 
+En journaliser les sauvegardes jusqu'à
+ a| 
+Choisissez *par sauvegardes de journaux jusqu'à* pour effectuer une opération de restauration ponctuelle, qui restaure la base de données en fonction des sauvegardes de journaux jusqu'au journal sélectionné.
+
+
+NOTE: Le nombre de journaux affichés dans la liste déroulante est basé sur UTM. Par exemple, si la conservation complète des sauvegardes est 5 et que la conservation UTM est 3, le nombre de sauvegardes de journaux disponibles est 5, mais dans la liste déroulante, seulement 3 journaux sont répertoriés pour effectuer l'opération de restauration.
+
+
+
+ a| 
+Par date spécifique jusqu'à
+ a| 
+Choisissez *par date spécifique jusqu'à* pour spécifier la date et l'heure auxquelles les journaux de transactions sont appliqués à la base de données restaurée. Cette opération de restauration ponctuelle restaure les entrées du journal de transactions enregistrées jusqu'à la dernière sauvegarde à la date et à l'heure spécifiées.
+
+
+
+ a| 
+Aucune
+ a| 
+Choisissez *aucun* si vous devez restaurer uniquement la sauvegarde complète sans sauvegarde de journaux.
+
+|===
++
+Vous pouvez effectuer l'une des opérations suivantes :
+
++
+** *Récupérer et monter la base de données après la restauration* - cette option est sélectionnée par défaut.
+** *Ne pas vérifier l'intégrité des journaux de transactions dans la sauvegarde avant restauration* - par défaut, SnapCenter vérifie l'intégrité des journaux de transactions dans une sauvegarde avant d'effectuer une opération de restauration.
++
+|===
+
+
+| *Meilleure pratique:* vous ne devez pas sélectionner cette option. 
+|===
+
+
+. Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript qui doivent être exécutés avant ou après l'opération de restauration, respectivement.
++
+Les arguments de restauration du prescripteur incluent $Database et $Serverinstance.
+
++
+Les arguments Restore PostScript incluent $Database, $ServerInstance, $BackupName, $logDirectory et $TargetServerInstance.
+
++
+Vous pouvez exécuter un script pour mettre à jour les interruptions SNMP, automatiser les alertes, envoyer des journaux, etc.
+
++
+
+NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou de partages. Le chemin doit être relatif au CHEMIN_SCRIPTS.
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Vous pouvez afficher l'état du travail de restauration en développant le panneau activité au bas de la page.
++
+Vous devez contrôler le processus de restauration à l'aide de la page *moniteur* > *travaux*.
+
+
+
+Lorsque vous restaurez une base de données active à partir d'une sauvegarde, la base de données passive peut passer à l'état suspendu ou en échec s'il y a un décalage entre la réplique et la base de données active.
+
+Le changement d'état peut se produire lorsque la chaîne de logs de la base de données active va et commence une nouvelle branche qui rompt la réplication. Exchange Server tente de corriger le réplica, mais s'il ne parvient pas à le faire, après la restauration, vous devez créer une nouvelle sauvegarde, puis réamorcer le réplica.

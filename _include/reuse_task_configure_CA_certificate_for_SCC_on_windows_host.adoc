@@ -1,0 +1,123 @@
+= Gérer le mot de passe pour le magasin de clés de plug-in personnalisé et l'alias de la paire de clés signée par l'autorité de certification utilisée
+:allow-uri-read: 
+
+
+Vous devez gérer le mot de passe du magasin de clés de plug-ins personnalisé et de son certificat, configurer le certificat de l'autorité de certification, configurer les certificats racine ou intermédiaires sur le magasin de confiance des plug-ins personnalisés et configurer la paire de clés signée par l'autorité de certification sur le magasin de confiance des plug-ins personnalisés avec le service des plug-ins personnalisés SnapCenter pour activer le certificat numérique installé.
+
+Les plug-ins personnalisés utilisent le fichier _keystore.jks_, qui se trouve à l'adresse _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_ comme magasin de confiance et magasin de clés.
+
+
+
+== Gérer le mot de passe pour le magasin de clés de plug-in personnalisé et l'alias de la paire de clés signée par l'autorité de certification utilisée
+
+*Étapes*
+
+. Vous pouvez récupérer le mot de passe par défaut du magasin de clés enfichable personnalisé à partir du fichier de propriétés de l'agent du plug-in personnalisé.
++
+C'est la valeur correspondant à la clé _KEYSTORE_PASS_.
+
+. Modifiez le mot de passe du magasin de clés :
++
+_keytool -storepasswd -keystore keystore.jks_
+
++
+
+NOTE: Si la commande "keytool" n'est pas reconnue sur l'invite de commande Windows, remplacez la commande keytool par son chemin complet.
+
++
+_C:\Program Files\Java\<jdk_version>\bin\keytool.exe » -storepasswd -keystore.jks_
+
+. Remplacez le mot de passe de tous les alias des entrées de clé privée du magasin de clés par le même mot de passe que celui utilisé pour le magasin de clés :
++
+_keytool -keypasswd -alias "alias_name_in_cert" -keystore.jks_
+
++
+Procédez de même pour la clé KEYSTORE_PASS dans le fichier _agent.properties_.
+
+. Redémarrez le service après avoir modifié le mot de passe.
++
+
+NOTE: Le mot de passe du magasin de clés de plug-in personnalisé et de tous les mots de passe d'alias associés à la clé privée doivent être identiques.
+
+
+
+
+
+== Configurez les certificats racine ou intermédiaire sur le magasin de confiance du plug-in personnalisé
+
+Vous devez configurer les certificats racine ou intermédiaire sans la clé privée sur le magasin de confiance du plug-in personnalisé.
+
+*Étapes*
+
+. Accédez au dossier contenant le magasin de clés personnalisé du plug-in _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_
+. Localisez le fichier 'keystore.jks'.
+. Répertoriez les certificats ajoutés dans le magasin de clés :
++
+_keytool -list -v -keystore keystore.jks_
+
+. Ajouter un certificat racine ou intermédiaire :
++
+_Keytool -import -trucacts -alias myRootCA -file /root/USERTrustRSA_Root.cer -keystore.jks_
+
+. Redémarrez le service après avoir configuré les certificats racine ou intermédiaire sur le magasin de confiance personnalisé du plug-in.
+
+
+
+NOTE: Vous devez ajouter le certificat de l'autorité de certification racine, puis les certificats de l'autorité de certification intermédiaire.
+
+
+
+== Configurez la paire de clés signée CA sur un plug-in de stockage en fiducie personnalisé
+
+Vous devez configurer la paire de clés signées CA dans le magasin de confiance personnalisé du plug-in.
+
+*Étapes*
+
+. Accédez au dossier contenant le magasin de clés personnalisé du plug-in _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_
+. Localisez le fichier _keystore.jks_.
+. Répertoriez les certificats ajoutés dans le magasin de clés :
++
+_keytool -list -v -keystore keystore.jks_
+
+. Ajoutez le certificat de l'autorité de certification ayant une clé privée et une clé publique.
++
+_Keytool -importkeystore -srckeystore /root/snapcenter.ssl.test.netapp.com.pfx -srcstoretype pkcs12 -destkeystore.jks -desstoretype JKS_
+
+. Répertorier les certificats ajoutés dans le magasin de clés.
++
+_keytool -list -v -keystore keystore.jks_
+
+. Vérifiez que le magasin de clés contient l'alias correspondant au nouveau certificat de l'autorité de certification, qui a été ajouté au magasin de clés.
+. Remplacez le mot de passe de la clé privée ajoutée pour le certificat CA par le mot de passe du magasin de clés.
++
+Le mot de passe de magasin de clés personnalisé par défaut est la valeur du FICHIER KEYSTORE_PASS dans le fichier agent.properties.
+
++
+_Keytool -keypasswd -alias "alias_name_in_CA_cert" -keystore.jks_
+
+. Configurez le nom d'alias à partir du certificat CA dans le fichier _agent.properties_.
++
+Mettez cette valeur à jour par rapport à la clé SCC_CERTIFICATE_ALIAS.
+
+. Redémarrez le service après avoir configuré la paire de clés signée par l'autorité de certification dans le magasin de confiance personnalisé du plug-in.
+
+
+
+
+== Configurez la liste de révocation de certificats (CRL) pour les plug-ins personnalisés SnapCenter
+
+*À propos de cette tâche*
+
+* Pour télécharger le fichier CRL le plus récent pour le certificat d'autorité de certification associé, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["Comment mettre à jour le fichier de liste de révocation de certificats dans le certificat d'autorité de certification SnapCenter"].
+* Les plug-ins personnalisés SnapCenter rechercheront les fichiers CRL dans un répertoire préconfiguré.
+* Le répertoire par défaut des fichiers CRL pour les plug-ins personnalisés SnapCenter est _'C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\ etc\crl'_.
+
+
+*Étapes*
+
+. Vous pouvez modifier et mettre à jour le répertoire par défaut du fichier _agent.properties_ par rapport à la clé CRL_PATH.
+. Vous pouvez placer plusieurs fichiers CRL dans ce répertoire.
++
+Les certificats entrants seront vérifiés pour chaque CRL.
+
+

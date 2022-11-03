@@ -1,0 +1,131 @@
+---
+permalink: protect-scw/task_create_resource_groups_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords: resource groups 
+summary: Un groupe de ressources est le conteneur auquel vous pouvez ajouter plusieurs systèmes de fichiers que vous souhaitez protéger. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de tâche de protection des données que vous souhaitez exécuter, puis spécifier la planification de sauvegarde. 
+---
+= Créez des groupes de ressources pour les systèmes de fichiers Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un groupe de ressources est le conteneur auquel vous pouvez ajouter plusieurs systèmes de fichiers que vous souhaitez protéger. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de tâche de protection des données que vous souhaitez exécuter, puis spécifier la planification de sauvegarde.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *systèmes de fichiers* dans la liste.
++
+
+NOTE: Si vous avez récemment ajouté un système de fichiers à SnapCenter, cliquez sur *Actualiser les ressources* pour afficher la nouvelle ressource ajoutée.
+
+. Cliquez sur *Nouveau groupe de ressources*.
+. Dans la page Nom de l'assistant, procédez comme suit :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom
+ a| 
+Entrez le nom du groupe de ressources.
+
+
+NOTE: Le nom du groupe de ressources ne doit pas dépasser 250 caractères.
+
+
+
+ a| 
+Utilisez le format de nom personnalisé pour la copie Snapshot
+ a| 
+Facultatif : entrez le nom et le format d'une copie Snapshot personnalisée.
+
+Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+
+
+
+ a| 
+Balise
+ a| 
+Entrez une balise descriptive pour faciliter la recherche d'un groupe de ressources.
+
+|===
+. Dans la page Ressources, effectuez les tâches suivantes :
++
+.. Sélectionnez l'hôte pour filtrer la liste des ressources.
++
+Si vous avez récemment ajouté des ressources, elles apparaissent dans la liste des ressources disponibles uniquement après avoir actualisé votre liste de ressources.
+
+.. Dans la section Ressources disponibles, cliquez sur les systèmes de fichiers à sauvegarder, puis cliquez sur la flèche vers la droite pour les déplacer vers la section ajoutée.
++
+Si vous sélectionnez l'option *Autosélectionner toutes les ressources sur le même volume de stockage*, toutes les ressources du même volume sont sélectionnées. Lorsque vous les déplacez vers la section ajoutée, toutes les ressources du volume sont déplacées simultanément.
+
++
+Pour ajouter un système de fichiers unique, désactivez l'option *Autosélectionner toutes les ressources sur le même volume de stockage*, puis sélectionnez les systèmes de fichiers que vous souhaitez déplacer vers la section ajoutée.
+
+
+
+. Dans la page stratégies, effectuez les tâches suivantes :
++
+.. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
++
+Vous pouvez sélectionner une stratégie existante et cliquer sur *Détails* pour déterminer si vous pouvez utiliser cette stratégie.
+
++
+Si aucune politique existante ne répond à vos exigences, vous pouvez créer une nouvelle politique en cliquant sur *image:../media/add_policy_from_resourcegroup.gif[""]* pour démarrer l'assistant de règles.
+
++
+Les stratégies sélectionnées sont répertoriées dans la colonne Stratégie de la section configurer les plannings pour les stratégies sélectionnées.
+
+.. Dans la section configurer les plannings des stratégies sélectionnées, cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer le planning.
+.. Si la stratégie est associée à plusieurs types d'horaires (fréquences), sélectionnez la fréquence à configurer.
+.. Dans la boîte de dialogue Ajouter des planifications pour la stratégie _policy_name_, configurez la planification en spécifiant la date de début, la date d'expiration et la fréquence, puis cliquez sur *Finish*.
++
+Les planifications configurées sont répertoriées dans la colonne programmes appliqués de la section configurer les planifications pour les stratégies sélectionnées.
+
+
+
++
+Les planifications de sauvegardes tierces ne sont pas prises en charge lorsqu'elles se chevauchent avec les planifications de sauvegarde SnapCenter. Vous ne devez pas modifier les planifications à partir du planificateur de tâches Windows et de SQL Server Agent.
+
+. Dans la page notification, fournissez les informations de notification comme suit :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Préférence de courrier électronique
+ a| 
+Sélectionnez *Always*, *On Failure* ou *On Failure ou warning* pour envoyer des e-mails aux destinataires après la création de groupes de ressources de sauvegarde, la connexion de stratégies et la configuration des planifications. Entrez le serveur SMTP, la ligne d'objet de l'e-mail par défaut, ainsi que les adresses e-mail de à et de.
+
+
+
+ a| 
+De
+ a| 
+Adresse électronique
+
+
+
+ a| 
+À
+ a| 
+Adresse e-mail
+
+
+
+ a| 
+Objet
+ a| 
+Ligne d'objet de l'e-mail par défaut
+
+|===
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
++
+Vous pouvez effectuer une sauvegarde à la demande ou attendre que la sauvegarde planifiée soit effectuée.
+
+

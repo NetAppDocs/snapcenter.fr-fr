@@ -1,0 +1,69 @@
+---
+permalink: protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Databases 
+summary: 'Lorsque vous préparez une sauvegarde ou le clonage d"une ressource, vous trouverez peut-être utile d"afficher une représentation graphique de toutes les sauvegardes et clones sur le stockage primaire et secondaire.' 
+---
+= Afficher les sauvegardes et clones des bases de données Oracle sur la page topologie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous préparez une sauvegarde ou le clonage d'une ressource, vous trouverez peut-être utile d'afficher une représentation graphique de toutes les sauvegardes et clones sur le stockage primaire et secondaire.
+
+*À propos de cette tâche*
+
+Sur la page topologie, vous pouvez voir toutes les sauvegardes et clones disponibles pour la ressource ou le groupe de ressources sélectionné. Vous pouvez afficher les détails de ces sauvegardes et clones, puis les sélectionner pour effectuer des opérations de protection des données.
+
+Vous pouvez consulter les icônes suivantes dans la vue gérer les copies pour déterminer si les sauvegardes et les clones sont disponibles sur le stockage principal ou secondaire (copies en miroir ou copies du coffre-fort).
+
+* image:../media/topology_primary_storage.gif["icône stockage principal"] affiche le nombre de sauvegardes et de clones disponibles sur le stockage principal.
+* image:../media/topology_mirror_secondary_storage.gif["Icône du miroir du stockage secondaire"] Affiche le nombre de sauvegardes et de clones mis en miroir sur le système de stockage secondaire à l'aide de la technologie SnapMirror.
+* image:../media/topology_vault_secondary_storage.gif["icône de coffre-fort secondaire"] Affiche le nombre de sauvegardes et de clones répliqués sur le système de stockage secondaire à l'aide de la technologie SnapVault.
++
+Le nombre de sauvegardes affichées inclut les sauvegardes supprimées du stockage secondaire. Par exemple, si vous avez créé 6 sauvegardes à l'aide d'une stratégie de conservation de 4 sauvegardes seulement, le nombre de sauvegardes affichées est 6.
+
+
+
+
+NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume de type miroir-coffre-fort sont affichés dans la vue topologique, mais le nombre de sauvegardes en miroir dans la vue topologique n'inclut pas la sauvegarde flexible de version.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez la ressource ou le groupe de ressources dans la liste déroulante *Affichage*.
+. Sélectionnez la ressource dans la vue Détails de la ressource ou dans la vue Détails du groupe de ressources.
++
+Si la ressource est protégée, la page topologie de la ressource sélectionnée s'affiche.
+
+. Consultez la fiche récapitulative pour connaître le nombre de sauvegardes et de clones disponibles sur les stockages primaire et secondaire.
++
+La section carte récapitulative affiche le nombre total de sauvegardes et de clones ainsi que le nombre total de sauvegardes de journaux.
+
++
+Cliquez sur le bouton *Actualiser* pour lancer une requête sur le stockage afin d'afficher un décompte précis.
+
+. Dans la vue gérer les copies, cliquez sur *sauvegardes* ou *clones* à partir du stockage primaire ou secondaire pour afficher les détails d'une sauvegarde ou d'un clone.
++
+Le détail des sauvegardes et des clones est affiché sous forme de tableau.
+
+. Sélectionnez la sauvegarde dans le tableau, puis cliquez sur les icônes de protection des données pour effectuer la restauration, le clonage, le montage, le démontage, le renommage, catalogue, décatalogue et suppression des opérations.
++
+
+NOTE: Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent sur le stockage secondaire.
+
++
+** Si vous avez sélectionné une sauvegarde de journal, vous ne pouvez effectuer que renommer, monter, démonter, catalogue, décataloguer, les opérations de suppression et de suppression.
+** Si vous avez catalogué la sauvegarde à l'aide d'Oracle Recovery Manager (RMAN), vous ne pouvez pas renommer ces sauvegardes cataloguées.
+
+
+. Pour supprimer un clone, sélectionnez-le dans le tableau, puis cliquez sur image:../media/delete_icon.gif[""].
+
+
+Si la valeur attribuée à SnapmirrorStatusUpdateWaitTime est inférieure, les copies de sauvegarde Mirror et Vault ne sont pas répertoriées sur la page topologique, même si les volumes de données et de journaux sont protégés avec succès. Vous devez augmenter la valeur attribuée à SnapmirrorStatusUpdateWaitTime à l'aide de l'applet de commande _set-SmConfigSettings_ PowerShell.
+
+Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_.
+
+Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["Guide de référence sur les commandes du logiciel SnapCenter"^] ou https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

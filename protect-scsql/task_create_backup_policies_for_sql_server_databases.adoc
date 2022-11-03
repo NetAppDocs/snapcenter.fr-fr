@@ -1,0 +1,340 @@
+---
+permalink: protect-scsql/task_create_backup_policies_for_sql_server_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez créer une stratégie de sauvegarde pour la ressource ou le groupe de ressources avant d"utiliser SnapCenter pour sauvegarder les ressources SQL Server, ou vous pouvez créer une stratégie de sauvegarde au moment où vous créez un groupe de ressources ou sauvegardez une seule ressource.' 
+---
+= Créer des stratégies de sauvegarde pour les bases de données SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer une stratégie de sauvegarde pour la ressource ou le groupe de ressources avant d'utiliser SnapCenter pour sauvegarder les ressources SQL Server, ou vous pouvez créer une stratégie de sauvegarde au moment où vous créez un groupe de ressources ou sauvegardez une seule ressource.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir défini votre stratégie de protection des données.
+* Vous devez être prêt à préparer la protection des données en exécutant des tâches telles que l'installation d'SnapCenter, l'ajout d'hôtes, l'identification des ressources et la création de connexions du système de stockage.
+* Vous devez avoir configuré le répertoire du journal hôte pour la sauvegarde des journaux.
+* Vous devez avoir actualisé (découvert) les ressources SQL Server.
+* Si vous répliquez des copies Snapshot dans un miroir ou un coffre-fort, l'administrateur SnapCenter doit avoir attribué les serveurs virtuels de stockage (SVM) aux volumes source et aux volumes de destination.
++
+Pour plus d'informations sur la manière dont les administrateurs attribuent des ressources aux utilisateurs, consultez les informations d'installation de SnapCenter.
+
+* Si vous souhaitez exécuter les scripts PowerShell dans les scripts prescripteurs et postscripts, définissez la valeur du paramètre usePowerProcessforScripts sur true dans le fichier web.config.
++
+La valeur par défaut est FALSE
+
+
+
+*À propos de cette tâche*
+
+* Une stratégie de sauvegarde est un ensemble de règles qui régit la façon dont vous gérez et conservez les sauvegardes, ainsi que la fréquence de sauvegarde de la ressource ou du groupe de ressources. En outre, vous pouvez spécifier des paramètres de réplication et de script. La définition d'options dans une stratégie permet de gagner du temps lorsque vous souhaitez réutiliser la stratégie pour un autre groupe de ressources.
+* Le CHEMIN_SCRIPTS est défini à l'aide de la clé pré-défini WindowsScriptsDirectory située dans le fichier SMCoreServiceHost.exe.Config de l'hôte du plug-in.
++
+Si nécessaire, vous pouvez modifier ce chemin et redémarrer le service SMcore. Il est recommandé d'utiliser le chemin par défaut pour la sécurité.
+
++
+La valeur de la clé peut être affichée à partir de Swagger via l'API : API /4.7/configsettings
+
++
+Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
+
+* La plupart des champs de ces pages de l'assistant sont explicites. Les informations suivantes décrivent certains des champs pour lesquels vous pouvez avoir besoin de conseils.
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *stratégies*.
+. Cliquez sur *Nouveau*.
+. Dans la page Nom, entrez le nom et la description de la stratégie.
+. Dans la page Type de sauvegarde, effectuez les opérations suivantes :
++
+.. Choisissez le type de sauvegarde :
++
+|===
+| Les fonctions que vous recherchez... | Procédez comme ça... 
+
+
+ a| 
+Sauvegardez les fichiers de base de données et les journaux de transactions et tronquez les journaux de transactions
+ a| 
+... Sélectionnez *sauvegarde complète et sauvegarde du journal*.
+... Entrez le nombre maximal de bases de données à sauvegarder pour chaque copie Snapshot.
++
+
+NOTE: Vous devez augmenter cette valeur si vous souhaitez exécuter simultanément plusieurs opérations de sauvegarde.
+
+
+
+
+
+ a| 
+Sauvegardez les fichiers de base de données
+ a| 
+... Sélectionnez *sauvegarde complète*.
+... Entrez le nombre maximal de bases de données à sauvegarder pour chaque copie Snapshot. La valeur par défaut est 100
++
+
+NOTE: Vous devez augmenter cette valeur si vous souhaitez exécuter simultanément plusieurs opérations de sauvegarde.
+
+
+
+
+
+ a| 
+Sauvegardez les journaux de transactions
+ a| 
+Sélectionnez *sauvegarde journal*.
+
+|===
+.. Si vous sauvegardez vos ressources à l'aide d'une autre application de sauvegarde, sélectionnez *copie uniquement sauvegarde*.
++
+Le fait de préserver l'intégrité des journaux de transactions permet à toute application de sauvegarde de restaurer les bases de données. En règle générale, vous ne devez pas utiliser l'option de copie uniquement dans d'autres cas.
+
++
+
+NOTE: Microsoft SQL ne prend pas en charge l'option *copie uniquement sauvegarde* avec l'option *sauvegarde complète et sauvegarde de journal* pour stockage secondaire.
+
+.. Dans la section Paramètres du groupe de disponibilité, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Sauvegardez uniquement sur la réplique de sauvegarde préférée
+ a| 
+Sélectionnez cette option pour sauvegarder uniquement sur la réplique de sauvegarde préférée. La réplique de sauvegarde préférée est déterminée par les préférences de sauvegarde configurées pour l'AG dans SQL Server.
+
+
+
+ a| 
+Sélectionnez répliques pour la sauvegarde
+ a| 
+Choisissez la réplique AG principale ou la réplique AG secondaire pour la sauvegarde.
+
+
+
+ a| 
+Priorité de sauvegarde (priorité de sauvegarde minimale et maximale)
+ a| 
+Spécifiez un numéro de priorité de sauvegarde minimum et un numéro de priorité de sauvegarde maximum qui déterminent la réplique AG pour la sauvegarde. Par exemple, vous pouvez avoir une priorité minimale de 10 et une priorité maximale de 50. Dans ce cas, toutes les répliques AG de priorité supérieure à 10 et inférieure à 50 sont considérées comme des sauvegardes.
+
+
+NOTE: Par défaut, la priorité minimale est 1 et la priorité maximale est 100.
+
+|===
++
+
+NOTE: Dans les configurations en cluster, les sauvegardes sont conservées sur chaque nœud du cluster en fonction des paramètres de conservation définis dans la règle. Si le nœud propriétaire de l'AG change, les sauvegardes sont prises en fonction des paramètres de conservation et les sauvegardes du nœud propriétaire précédent seront conservées. La conservation pour le groupe AG est applicable uniquement au niveau du nœud.
+
+.. Si vous souhaitez planifier la sauvegarde que vous souhaitez créer avec cette stratégie, spécifiez le type d'horaire en sélectionnant *à la demande*, *horaire*, *quotidien*, *hebdomadaire* ou *mensuel*.
++
+Vous pouvez sélectionner un type de planification pour une stratégie.
+
++
+image::../media/backup_settings.gif[sauvegarder les paramètres]
+
++
+
+NOTE: Vous pouvez spécifier la planification (date de début, date de fin et fréquence) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais vous permet d'affecter des programmes de sauvegarde différents à chaque stratégie.
+
++
+
+NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
+
+
+
+. Dans la page Retention, selon le type de sauvegarde sélectionné dans la page Type de sauvegarde, effectuez une ou plusieurs des opérations suivantes :
++
+.. Dans la section Paramètres de conservation de l'opération de restauration à la minute, effectuez l'une des opérations suivantes :
++
+|===
+| Les fonctions que vous recherchez... | Procédez comme ça... 
+
+
+ a| 
+Conservation d'un nombre spécifique de copies Snapshot
+ a| 
+Sélectionnez l'option *conserver les sauvegardes de journal applicables au dernier <chiffre> jours* et indiquez le nombre de jours à conserver. Si vous vous approchez de cette limite, vous pouvez supprimer des anciennes copies.
+
+
+
+ a| 
+Conservation des copies de sauvegarde pendant un nombre spécifique de jours
+ a| 
+Sélectionnez l'option *conserver les sauvegardes de journal applicables à <nombre> jours de sauvegardes complètes* et spécifiez le nombre de jours pour conserver les copies de sauvegarde de journal.
+
+|===
+.. Dans la section *Paramètres de rétention de sauvegarde complète* pour les paramètres de rétention à la demande, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Copies Snapshot totales à conserver
+ a| 
+Si vous souhaitez spécifier le nombre de copies Snapshot à conserver, sélectionnez *nombre total de copies Snapshot à conserver*.
+
+Si le nombre de copies Snapshot dépasse le nombre spécifié, les copies Snapshot sont supprimées par les plus anciennes copies supprimées en premier.
+
+
+NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+
+
+IMPORTANT: Par défaut, la valeur du nombre de rétention est définie sur 2. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+
+
+
+ a| 
+Conservation des copies Snapshot pour
+ a| 
+Si vous souhaitez spécifier le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer, sélectionnez *conserver les copies Snapshot pour*.
+
+|===
+.. Dans la section *Paramètres de rétention de sauvegarde complète* pour les paramètres de conservation horaire, quotidien, hebdomadaire et mensuel, spécifiez les paramètres de conservation pour le type de programme sélectionné dans la page Type de sauvegarde.
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Copies Snapshot totales à conserver
+ a| 
+Si vous souhaitez spécifier le nombre de copies Snapshot à conserver, sélectionnez *nombre total de copies Snapshot à conserver*. Si le nombre de copies Snapshot dépasse le nombre spécifié, les copies Snapshot sont supprimées par les plus anciennes copies supprimées en premier.
+
+
+IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+
+
+
+ a| 
+Conservation des copies Snapshot pour
+ a| 
+Si vous souhaitez spécifier le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer, sélectionnez *conserver les copies Snapshot pour*.
+
+|===
++
+Par défaut, la conservation des copies Snapshot de journaux est définie sur 7 jours. Utilisez l'applet de commande set-SmPolicy pour modifier la conservation des copies Snapshot du journal.
+
++
+Dans cet exemple, la conservation des copies Snapshot de journal est définie sur 2 :
+
++
+[listing]
+----
+Set-SmPolicy -PolicyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'SCSQL' -sqlbackuptype 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='DATA';ScheduleType='Hourly';RetentionCount=2},@{BackupType='LOG_SNAPSHOT';ScheduleType='None';RetentionCount=2},@{BackupType='LOG';ScheduleType='Hourly';RetentionCount=2} -scheduletype 'Hourly'
+----
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter conserve les copies Snapshot de la base de données"]
+
+
+
+. Dans la page réplication, spécifiez la réplication vers le système de stockage secondaire :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Mettez à jour SnapMirror après avoir créé une copie Snapshot locale
+ a| 
+Sélectionnez cette option pour créer des copies miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
+
+
+
+ a| 
+Mettez à jour la SnapVault après la création d'une copie Snapshot
+ a| 
+Sélectionnez cette option pour effectuer la réplication de sauvegarde disque à disque.
+
+
+
+ a| 
+Deuxième étiquette de police
+ a| 
+Sélectionnez une étiquette Snapshot.
+
+En fonction de l'étiquette de copie Snapshot que vous sélectionnez, ONTAP applique la règle de conservation des copies Snapshot secondaires correspondant à l'étiquette.
+
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+
+
+ a| 
+Nombre de tentatives d'erreur
+ a| 
+Saisissez le nombre de tentatives de réplication qui doivent se produire avant l'interruption du processus.
+
+|===
+. Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript qui doivent être exécutés avant ou après l'opération de sauvegarde, respectivement.
++
+Par exemple, vous pouvez exécuter un script pour mettre à jour les traps SNMP, automatiser les alertes et envoyer des logs.
+
++
+
+NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou de partages. Le chemin doit être relatif au CHEMIN_SCRIPTS.
+
++
+
+NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP, de sorte que le stockage secondaire n'atteigne pas la limite maximale des copies Snapshot.
+
+. Dans la page Vérification, effectuez les opérations suivantes :
++
+.. Dans la section Exécuter la vérification pour les programmes de sauvegarde suivants, sélectionnez la fréquence de planification.
+.. Dans la section Options de vérification de cohérence de la base de données, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Limiter la structure d'intégrité à la structure physique de la base de données (PHYSIQUE_UNIQUEMENT)
+ a| 
+Sélectionnez *Limit the Integrity structure to Physical structure of the database (PHYSICAL_ONLY)* (limiter la vérification de l'intégrité à la structure physique de la base de données) et pour détecter les pages déchirées, les échecs de somme de contrôle et les défaillances matérielles courantes qui affectent la base de données.
+
+
+
+ a| 
+Suppression de tous les messages d'information (PAS d'INFOMSGS)
+ a| 
+Sélectionnez *Supprimer tous les messages d'information (NO_INFOMSGS)* pour supprimer tous les messages d'information. Sélectionné par défaut.
+
+
+
+ a| 
+Afficher tous les messages d'erreur signalés par objet (ALL_ERRORMSGS)
+ a| 
+Sélectionnez *Afficher tous les messages d'erreur signalés par objet (ALL_ERRORMSGS)* pour afficher toutes les erreurs signalées par objet.
+
+
+
+ a| 
+Ne pas vérifier les index non mis en cluster (ABSENCE DE clusters)
+ a| 
+Sélectionnez *ne pas cocher les index non clusterisés (REGROUPÉS EN CLUSTERS)* si vous ne souhaitez pas vérifier les index non clusterisés. La base de données SQL Server utilise le vérificateur de cohérence de base de données Microsoft SQL Server (DBCC) pour vérifier l'intégrité logique et physique des objets de la base de données.
+
+
+
+ a| 
+Limiter les vérifications et obtenir les verrouillages au lieu d'utiliser une copie Snapshot de base de données interne (TABLOCK)
+ a| 
+Sélectionnez *limiter les vérifications et obtenir les verrous au lieu d'utiliser une copie Snapshot de base de données interne (TABLOCK)* pour limiter les vérifications et obtenir des verrous au lieu d'utiliser une copie Snapshot de base de données interne.
+
+|===
+.. Dans la section *Log Backup*, sélectionnez *Verify log backup upon terminés* pour vérifier la sauvegarde du journal à la fin de l'opération.
+.. Dans la section *Paramètres du script de vérification*, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript qui doivent être exécutés avant ou après l'opération de vérification, respectivement.
++
+
+NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou de partages. Le chemin doit être relatif au CHEMIN_SCRIPTS.
+
+
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

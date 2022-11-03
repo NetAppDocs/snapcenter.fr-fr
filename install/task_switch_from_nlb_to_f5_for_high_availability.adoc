@@ -1,0 +1,25 @@
+---
+permalink: install/task_switch_from_nlb_to_f5_for_high_availability.html 
+sidebar: sidebar 
+keywords: F5, NLB, high availability 
+summary: 'Vous pouvez modifier votre configuration SnapCenter HA à partir de l"équilibrage de la charge du réseau (NLB) pour utiliser F5 Load Balancer.' 
+---
+= Passez de NLB à F5 pour la haute disponibilité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier votre configuration SnapCenter HA à partir de l'équilibrage de la charge du réseau (NLB) pour utiliser F5 Load Balancer.
+
+*Étapes*
+
+. Configurez les serveurs SnapCenter pour une haute disponibilité à l'aide de F5. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["En savoir plus >>"^].
+. Sur l'hôte SnapCenter Server, lancez PowerShell.
+. Démarrez une session à l'aide de la cmdlet Open-SmConnection, puis saisissez vos informations d'identification.
+. Mettez à jour le serveur SnapCenter pour qu'il pointe vers l'adresse IP du cluster F5 à l'aide de l'applet de commande Update-SmServerCluster.
++
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+

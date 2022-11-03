@@ -1,0 +1,63 @@
+---
+permalink: admin/task_manage_rbac.html 
+sidebar: sidebar 
+keywords: modify RBAC, role, users, groups 
+summary: SnapCenter permet de modifier les rôles, les utilisateurs et les groupes. 
+---
+= Gérer le RBAC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter permet de modifier les rôles, les utilisateurs et les groupes.
+
+
+
+== Modifier un rôle
+
+Vous pouvez modifier un rôle SnapCenter pour supprimer des utilisateurs ou des groupes et modifier les autorisations associées au rôle. Il est particulièrement utile de modifier des rôles lorsque vous voulez modifier ou supprimer les autorisations utilisées par un rôle entier.
+
+*Ce dont vous aurez besoin*
+
+Vous devez avoir ouvert une session en tant que rôle « SnapCenterAdmin ».
+
+
+NOTE: Vous ne pouvez ni modifier ni supprimer les autorisations pour le rôle SnapCenterAdmin.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *rôles*.
+. Dans le champ Nom du rôle, cliquez sur le rôle à modifier.
+. Dans la page Role Details (Détails du rôle), modifiez les autorisations ou annulez l'affectation des membres selon les besoins.
+. Select *tous les membres de ce rôle peuvent voir les objets d'autres membres* pour permettre aux autres membres du rôle d'afficher les ressources telles que les volumes et les hôtes après avoir actualisé la liste des ressources.
++
+Désélectionnez cette option si vous ne souhaitez pas que les membres de ce rôle voient les objets auxquels les autres membres sont affectés.
+
++
+
+NOTE: Lorsque cette option est activée, il n'est pas nécessaire d'attribuer aux utilisateurs un accès aux objets ou aux ressources si les utilisateurs appartiennent au même rôle que l'utilisateur qui a créé les objets ou les ressources.
+
+. Cliquez sur *soumettre*.
+
+
+
+
+== Modifier les utilisateurs et les groupes
+
+Vous pouvez modifier les utilisateurs ou les groupes SnapCenter pour modifier leur rôle et leurs ressources.
+
+*Ce dont vous aurez besoin*
+
+Vous devez être connecté en tant qu'administrateur SnapCenter.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *utilisateurs et accès*.
+. Dans la liste Nom d'utilisateur ou de groupe, cliquez sur l'utilisateur ou le groupe que vous souhaitez modifier.
+. Dans la page Détails de l'utilisateur ou du groupe, modifiez les rôles et les actifs.
+. Cliquez sur *soumettre*.
+

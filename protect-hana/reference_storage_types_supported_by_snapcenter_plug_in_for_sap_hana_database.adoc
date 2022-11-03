@@ -1,0 +1,39 @@
+---
+permalink: protect-hana/reference_storage_types_supported_by_snapcenter_plug_in_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'SnapCenter prend en charge un large éventail de types de stockage sur les machines physiques et virtuelles \(VM\). Vous devez vérifier la prise en charge de votre type de stockage avant d"installer le plug-in SnapCenter pour la base de données SAP HANA.' 
+---
+= Types de stockage pris en charge par le plug-in SnapCenter pour la base de données SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter prend en charge de nombreux types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier la prise en charge de votre type de stockage avant d'installer le plug-in SnapCenter pour la base de données SAP HANA.
+
+|===
+| Machine | Type de stockage 
+
+
+ a| 
+Serveurs physiques et virtuels
+ a| 
+LUN connectés via FC
+
+
+
+ a| 
+Serveur physique
+ a| 
+LUN connectées à l'iSCSI
+
+
+
+ a| 
+Serveurs physiques et virtuels
+ a| 
+Volumes connectés par NFS
+
+|===

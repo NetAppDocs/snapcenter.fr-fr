@@ -1,0 +1,57 @@
+---
+permalink: protect-scsql/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_sql.html 
+sidebar: sidebar 
+keywords: SAP HANA,Custom plug-ins 
+summary: 'Avant d"installer le package de plug-ins SnapCenter pour Windows, vous devez connaître les exigences en matière d"espace système hôte de base et de dimensionnement.' 
+---
+= Configuration requise pour l'hôte pour installer le module de plug-ins SnapCenter pour Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Avant d'installer le package de plug-ins SnapCenter pour Windows, vous devez connaître les exigences en matière d'espace système hôte de base et de dimensionnement.
+
+|===
+| Élément | De formation 
+
+
+ a| 
+Systèmes d'exploitation
+ a| 
+Microsoft Windows
+
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+
+
+
+ a| 
+RAM minimale pour le plug-in SnapCenter sur l'hôte
+ a| 
+1 GO
+
+
+
+ a| 
+Espace minimal d'installation et de journalisation pour le plug-in SnapCenter sur l'hôte
+ a| 
+5 GO
+
+
+NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommation de stockage par le dossier des journaux. L'espace de journalisation requis varie en fonction du nombre d'entités à protéger et de la fréquence des opérations de protection des données. S'il n'y a pas suffisamment d'espace disque, les journaux ne seront pas créés pour les opérations récentes.
+
+
+
+ a| 
+Packs logiciels requis
+ a| 
+* Microsoft .NET Framework 4.7.2 ou version ultérieure
+* Windows Management Framework (WMF) 4.0 ou version ultérieure
+* PowerShell 4.0 ou version ultérieure
+
+
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+
+Pour plus d'informations sur le dépannage de .NET, voir, link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]
+
+|===

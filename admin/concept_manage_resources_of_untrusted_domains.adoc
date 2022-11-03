@@ -1,0 +1,83 @@
+---
+permalink: admin/concept_manage_resources_of_untrusted_domains.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Outre la gestion des hôtes dans des domaines de confiance Active Directory \(AD\), SnapCenter gère aussi les hôtes dans plusieurs domaines AD non fiables. Les domaines AD non fiables doivent être enregistrés auprès du serveur SnapCenter. SnapCenter prend en charge les utilisateurs et groupes de plusieurs domaines AD non approuvés.' 
+---
+= Gérer les ressources des domaines non fiables
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Outre la gestion des hôtes dans les domaines de confiance Active Directory (AD), SnapCenter gère aussi les hôtes dans plusieurs domaines AD non fiables. Les domaines AD non fiables doivent être enregistrés auprès du serveur SnapCenter. SnapCenter prend en charge les utilisateurs et groupes de plusieurs domaines AD non approuvés.
+
+Vous pouvez installer le serveur SnapCenter sur un ordinateur qui se trouve dans un domaine ou un groupe de travail. Pour installer le serveur SnapCenter, vous devez spécifier les informations d'identification du domaine si la machine se trouve dans un domaine ou les informations d'identification de l'administrateur local si la machine est dans un groupe de travail.
+
+Les groupes Active Directory (AD) appartenant à des domaines non enregistrés auprès du serveur SnapCenter ne sont pas pris en charge. Bien que vous puissiez créer des rôles SnapCenter avec ces groupes AD, la connexion au serveur SnapCenter échoue avec le message d'erreur suivant : l'utilisateur que vous essayez de vous connecter n'appartient à aucun rôle. Veuillez contacter votre administrateur système.
+
+
+
+== Modifier les domaines non fiables
+
+Vous pouvez modifier un domaine non approuvé lorsque vous souhaitez mettre à jour les adresses IP du contrôleur de domaine ou le nom de domaine complet (FQDN).
+
+*À propos de cette tâche*
+
+Après avoir modifié le FQDN, les ressources associées (hôtes, utilisateurs et groupes) peuvent ne pas fonctionner comme prévu.
+
+Pour modifier un domaine non fiable, vous pouvez utiliser l'interface utilisateur SnapCenter ou les applets de commande PowerShell.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *Paramètres globaux*.
+. Dans la page Paramètres globaux, cliquez sur *Paramètres de domaine*.
+. Cliquez sur image:../media/edit_icon.gif["Icône Modifier"], puis fournissez les détails suivants :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+FQDN du domaine
+ a| 
+Spécifiez le FQDN, puis cliquez sur *résoudre*.
+
+
+
+ a| 
+Adresses IP du contrôleur de domaine
+ a| 
+Si le FQDN du domaine ne peut pas être résolu, spécifiez une ou plusieurs adresses IP du contrôleur de domaine.
+
+|===
+. Cliquez sur *OK*.
+
+
+
+
+== Annuler l'inscription des domaines Active Directory non fiables
+
+Vous pouvez annuler l'enregistrement d'un domaine Active Directory non fiable si vous ne souhaitez pas utiliser les ressources associées à ce domaine.
+
+*Ce dont vous aurez besoin*
+
+Vous devez avoir supprimé les hôtes, les utilisateurs, les groupes et les informations d'identification associés au domaine non fiable.
+
+*À propos de cette tâche*
+
+* Une fois le domaine non enregistré du serveur SnapCenter, les utilisateurs de ce domaine ne peuvent pas accéder au serveur SnapCenter.
+* Si des ressources sont associées (hôtes, utilisateurs et groupes), après l'annulation de l'enregistrement du domaine, les actifs ne seront pas opérationnels.
+* Pour annuler l'enregistrement d'un domaine non fiable, vous pouvez utiliser l'interface utilisateur SnapCenter ou les applets de commande PowerShell.
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *Paramètres globaux*.
+. Dans la page Paramètres globaux, cliquez sur *Paramètres de domaine*.
+. Dans la liste des domaines, sélectionnez le domaine que vous souhaitez annuler l'enregistrement.
+. Cliquez sur image:../media/delete_icon.gif[""], Puis cliquez sur *OK*.
+

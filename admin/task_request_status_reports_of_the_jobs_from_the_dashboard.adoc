@@ -1,0 +1,34 @@
+---
+permalink: admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez demander des rapports sur les tâches de sauvegarde, de restauration et de clonage à partir de la page Tableau de bord. Cette fonction est utile si vous souhaitez identifier le nombre total de tâches réussies ou ayant échoué dans votre environnement SnapCenter. 
+---
+= Rapports d'état des requêtes des travaux à partir du tableau de bord
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez demander des rapports sur les tâches de sauvegarde, de restauration et de clonage à partir de la page Tableau de bord. Cette fonction est utile si vous souhaitez identifier le nombre total de tâches réussies ou ayant échoué dans votre environnement SnapCenter.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Dashboard*
+. Localisez la mosaïque travaux dans le tableau de bord, puis sélectionnez *Backup*, *Restore* ou *Clone*.
+. Dans le menu déroulant, sélectionnez la période pour laquelle vous souhaitez obtenir des informations sur les tâches : 24 heures, 7 jours ou 30 jours.
++
+Les systèmes affichent un graphique donut couvrant les données.
+
+. Cliquez sur la tranche donut représentant les informations de travail pour lesquelles vous souhaitez obtenir un rapport.
++
+Lorsque vous cliquez sur le graphique donut, vous êtes redirigé de la page Tableau de bord vers la page moniteur. La page moniteur affiche les travaux dont l'état est sélectionné dans le graphique donut.
+
+. Dans la liste de la page moniteur, cliquez sur un travail spécifique pour le sélectionner.
+. En haut de la page moniteur, cliquez sur *Rapports*.
+
+
+*Résultats*
+
+Le rapport affiche des informations uniquement pour le travail que vous avez sélectionné. Vous pouvez consulter le rapport ou le télécharger sur votre système local.

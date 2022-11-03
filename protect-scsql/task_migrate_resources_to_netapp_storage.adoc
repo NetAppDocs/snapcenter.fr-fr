@@ -1,0 +1,101 @@
+---
+permalink: protect-scsql/task_migrate_resources_to_netapp_storage.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Une fois votre système de stockage NetApp provisionné à l"aide du plug-in SnapCenter pour Microsoft Windows, vous pouvez migrer vos ressources vers le système de stockage NetApp ou d"un LUN NetApp vers un autre LUN NetApp à l"aide de l"interface graphique utilisateur SnapCenter \(GUI\) ou des applets de commande PowerShell.' 
+---
+= Migration des ressources vers un système de stockage NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois votre système de stockage NetApp provisionné à l'aide du plug-in SnapCenter pour Microsoft Windows, vous pouvez migrer vos ressources vers le système de stockage NetApp ou d'un LUN NetApp vers un autre LUN NetApp à l'aide de l'interface graphique SnapCenter ou des applets de commande PowerShell.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir ajouté des systèmes de stockage à SnapCenter Server.
+* Vous devez avoir actualisé (découvert) les ressources SQL Server.
+
+
+La plupart des champs de ces pages de l'assistant sont explicites. Les informations suivantes décrivent certains des champs pour lesquels vous pouvez avoir besoin de conseils.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Database* ou *instance* dans la liste déroulante *View*.
+. Sélectionnez la base de données ou l'instance dans la liste et cliquez sur *migrer*.
+. Dans la page Ressources, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+*Nom de base de données* (facultatif)
+ a| 
+Si vous avez sélectionné une instance pour la migration, vous devez sélectionner les bases de données de cette instance dans la liste déroulante *Databases*.
+
+
+
+ a| 
+*Sélectionnez destinations*
+ a| 
+Sélectionnez l'emplacement cible des fichiers de données et de journaux.
+
+Les fichiers de données et de journaux sont respectivement déplacés vers le dossier données et journaux sous le lecteur NetApp sélectionné. Si aucun dossier de la structure de dossiers n'est présent, un dossier est créé et la ressource est migrée.
+
+
+
+ a| 
+*Afficher les détails du fichier de base de données* (facultatif)
+ a| 
+Sélectionnez cette option pour migrer plusieurs fichiers d'une base de données unique.
+
+
+NOTE: Cette option ne s'affiche pas lorsque vous sélectionnez la ressource *instance*.
+
+
+
+ a| 
+*Options*
+ a| 
+Sélectionnez *Supprimer la copie de la base de données migrée à l'emplacement d'origine* pour supprimer la copie de la base de données de la source.
+
+Facultatif : *EXÉCUTEZ METTRE À JOUR LES STATISTIQUES sur les tables avant de détacher la base de données*.
+
+|===
+. Dans la page vérifier, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+*Options de vérification de cohérence de la base de données*
+ a| 
+Sélectionnez *Exécuter avant* pour vérifier l'intégrité de la base de données avant la migration. Sélectionnez *Exécuter après* pour vérifier l'intégrité de la base de données après la migration.
+
+
+
+ a| 
+*Options DBCC CHECKDB*
+ a| 
+** Sélectionnez l'option *PHYSICAL_ONLY* pour limiter le contrôle d'intégrité à la structure physique de la base de données et détecter les pages déchirées, les échecs de somme de contrôle et les défaillances matérielles courantes qui ont un impact sur la base de données.
+** Sélectionnez l'option *NO_INFOMSGS* pour supprimer tous les messages d'information.
+** Sélectionnez l'option *ALL_ERRORMSGS* pour afficher toutes les erreurs signalées par objet.
+** Sélectionnez l'option *ABSENCE D'index en cluster si vous ne souhaitez pas vérifier les index non mis en cluster.
++
+La base de données SQL Server utilise le vérificateur de cohérence de base de données Microsoft SQL Server (DBCC) pour vérifier l'intégrité logique et physique des objets de la base de données.
+
++
+
+NOTE: Vous pouvez sélectionner cette option pour réduire la durée d'exécution.
+
+** Sélectionnez l'option **TABLOCK** pour limiter les vérifications et obtenir des verrous au lieu d'utiliser une copie Snapshot interne de la base de données.
+
+
+|===
+. Examinez le résumé, puis cliquez sur **Terminer**.
+

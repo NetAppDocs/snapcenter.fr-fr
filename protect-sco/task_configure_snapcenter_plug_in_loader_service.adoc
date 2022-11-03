@@ -1,0 +1,180 @@
+---
+permalink: protect-sco/task_configure_snapcenter_plug_in_loader_service.html 
+sidebar: sidebar 
+keywords: SPL, plug-in loader service 
+summary: 'Le service de chargeur de plug-in SnapCenter charge le package de plug-in pour Linux ou AIX afin d"interagir avec le serveur SnapCenter. Le service de chargeur de plug-in SnapCenter est installé lorsque vous installez le package de plug-ins SnapCenter pour Linux ou le package de plug-ins SnapCenter pour AIX.' 
+---
+= Configurer le service du chargeur enfichable SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le service de chargeur de plug-in SnapCenter charge le package de plug-in pour Linux ou AIX afin d'interagir avec le serveur SnapCenter. Le service de chargeur de plug-in SnapCenter est installé lorsque vous installez le package de plug-ins SnapCenter pour Linux ou le package de plug-ins SnapCenter pour AIX.
+
+*À propos de cette tâche*
+
+Après avoir installé le progiciel de plug-ins SnapCenter pour Linux ou le progiciel de plug-ins SnapCenter pour AIX, le service chargeur de plug-in SnapCenter démarre automatiquement. Si le service du chargeur enfichable SnapCenter ne démarre pas automatiquement, vous devez :
+
+* Assurez-vous que le répertoire dans lequel le plug-in fonctionne n'est pas supprimé
+* Augmentez l'espace mémoire alloué à la machine virtuelle Java
+
+
+Le fichier spl.properties, qui se trouve à _/Custom_location/NetApp/snapcenter/spl/etc/_, contient les paramètres suivants. Les valeurs par défaut sont attribuées à ces paramètres.
+
+|===
+| Nom du paramètre | Description 
+
+
+ a| 
+NIVEAU_JOURNAL
+ a| 
+Affiche les niveaux de journaux pris en charge.
+
+Les valeurs possibles sont INFO, DEBUG, TRACE, ERREUR, FATAL, Et AVERTIR.
+
+
+
+ a| 
+SPL_PROTOCOL
+ a| 
+Affiche le protocole pris en charge par le chargeur SnapCenter Plug-in.
+
+Seul le protocole HTTPS est pris en charge. Vous pouvez ajouter la valeur si la valeur par défaut est manquante.
+
+
+
+ a| 
+SNAPCENTER_SERVER_PROTOCOL
+ a| 
+Affiche le protocole pris en charge par le serveur SnapCenter.
+
+Seul le protocole HTTPS est pris en charge. Vous pouvez ajouter la valeur si la valeur par défaut est manquante.
+
+
+
+ a| 
+SKIP_JAVAHOME_UPDATE
+ a| 
+Par défaut, le service SPL détecte le chemin Java et met à jour LE paramètre JAVA_HOME.
+
+Par conséquent, la valeur par défaut est DÉFINIE sur FALSE. Vous pouvez définir LA valeur TRUE si vous souhaitez désactiver le comportement par défaut et corriger manuellement le chemin Java.
+
+
+
+ a| 
+SPL_KEYSTORE_PASS
+ a| 
+Affiche le mot de passe du fichier keystore.
+
+Vous ne pouvez modifier cette valeur que si vous modifiez le mot de passe ou si vous créez un nouveau fichier de magasin de clés.
+
+
+
+ a| 
+SPL_PORT
+ a| 
+Affiche le numéro de port sur lequel le service du chargeur enfichable SnapCenter est exécuté.
+
+Vous pouvez ajouter la valeur si la valeur par défaut est manquante.
+
+
+NOTE: Vous ne devez pas modifier la valeur après l'installation des modules externes.
+
+
+
+ a| 
+SNAPCENTER_SERVER_HOST
+ a| 
+Affiche l'adresse IP ou le nom d'hôte du serveur SnapCenter.
+
+
+
+ a| 
+CHEMIN_DU_MAGASIN_DE_CLÉS SPL
+ a| 
+Affiche le chemin absolu du fichier de magasin de clés.
+
+
+
+ a| 
+SNAPCENTER_SERVER_PORT
+ a| 
+Affiche le numéro de port sur lequel le serveur SnapCenter s'exécute.
+
+
+
+ a| 
+LOGS_MAX_COUNT
+ a| 
+Affiche le nombre de fichiers journaux du chargeur de plug-in SnapCenter qui sont conservés dans le dossier _/Custom_location/snapcenter/spl/logs_.
+
+La valeur par défaut est 5000. Si le nombre est supérieur à la valeur spécifiée, les 5000 derniers fichiers modifiés sont conservés. La vérification du nombre de fichiers est effectuée automatiquement toutes les 24 heures à partir du démarrage du service du chargeur de plug-in SnapCenter.
+
+
+NOTE: Si vous supprimez manuellement le fichier spl.properties, le nombre de fichiers à conserver est défini sur 9999.
+
+
+
+ a| 
+JAVA_HOME
+ a| 
+Affiche le chemin absolu du répertoire Java_HOME utilisé pour démarrer le service SPL.
+
+Ce chemin est déterminé lors de l'installation et dans le cadre du démarrage de SPL.
+
+
+
+ a| 
+LOG_MAX_SIZE
+ a| 
+Affiche la taille maximale du fichier journal des travaux.
+
+Une fois la taille maximale atteinte, le fichier journal est compressé et les journaux sont écrits dans le nouveau fichier de ce travail.
+
+
+
+ a| 
+RETAIN_LOGS_OF_LAST_DAYS
+ a| 
+Affiche le nombre de jours jusqu'à lesquels les journaux sont conservés.
+
+
+
+ a| 
+ACTIVER_CERTIFICAT_VALIDATION
+ a| 
+Affiche TRUE lorsque la validation du certificat CA est activée pour l'hôte.
+
+Vous pouvez activer ou désactiver ce paramètre en modifiant le fichier spl.properties ou en utilisant l'interface graphique ou l'applet de commande SnapCenter.
+
+|===
+Si l'un de ces paramètres n'est pas affecté à la valeur par défaut ou si vous souhaitez attribuer ou modifier la valeur, vous pouvez modifier le fichier spl.properties. Vous pouvez également vérifier le fichier spl.properties et le modifier pour résoudre tous les problèmes liés aux valeurs qui sont affectées aux paramètres. Après avoir modifié le fichier spl.properties, vous devez redémarrer le service de chargeur de plug-in SnapCenter.
+
+*Étapes*
+
+. Effectuez l'une des opérations suivantes, si nécessaire :
++
+** Démarrer le service du chargeur enfichable SnapCenter en tant qu'utilisateur root :
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+** Arrêtez le service du chargeur enfichable SnapCenter :
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
++
+
+NOTE: Vous pouvez utiliser l'option -force avec la commande stop pour arrêter le service SnapCenter Plug-in Loader avec force. Cependant, vous devez faire preuve de prudence avant de le faire car il met également fin aux opérations existantes.
+
+** Redémarrez le service du chargeur Plug-in SnapCenter :
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+** Rechercher l'état du service du chargeur enfichable SnapCenter :
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+** Trouver le changement dans le service du chargeur Plug-in SnapCenter :
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+
+
+

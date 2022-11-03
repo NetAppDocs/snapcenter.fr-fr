@@ -1,0 +1,49 @@
+---
+permalink: protect-scc/task_monitor_scc_resources_backup_operations.html 
+sidebar: sidebar 
+keywords: SnapCenter Server 
+summary: 'Vous pouvez contrôler la progression des différentes opérations de sauvegarde à l"aide de la page tâches SnapCenter. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s"il y a un problème.' 
+---
+= Surveiller les opérations de sauvegarde des ressources de plug-ins personnalisées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Vous pouvez surveiller la progression des différentes opérations de sauvegarde à l'aide de la page SnapCenterJobs. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s'il y a un problème.
+
+*À propos de cette tâche*
+
+Les icônes suivantes apparaissent sur la page travaux et indiquent l'état correspondant des opérations :
+
+* image:../media/progress_icon.gif["Icône en cours"] En cours
+* image:../media/success_icon.gif["Icône terminé"] Terminé avec succès
+* image:../media/failed_icon.gif["Icône échec"] Échec
+* image:../media/warning_icon.gif["Terminé avec l'icône d'avertissement"] Terminé avec des avertissements ou impossible de démarrer en raison d'avertissements
+* image:../media/verification_job_in_queue.gif["La tâche de vérification est mise en file d'attente"] En file d'attente
+* image:../media/cancel_icon.gif[""] Annulée
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *moniteur*.
+. Dans la page moniteur, cliquez sur *travaux*.
+. Dans la page travaux, effectuez les opérations suivantes :
++
+.. Cliquez sur image:../media/filter_icon.gif[""] pour filtrer la liste de manière à ce que seules les opérations de sauvegarde soient répertoriées.
+.. Spécifiez les dates de début et de fin.
+.. Dans la liste déroulante *Type*, sélectionnez *Backup*.
+.. Dans la liste déroulante *Status*, sélectionnez l'état de la sauvegarde.
+.. Cliquez sur *appliquer* pour afficher les opérations effectuées avec succès.
+
+
+. Sélectionnez une tâche de sauvegarde, puis cliquez sur *Détails* pour afficher les détails de la tâche.
++
+
+NOTE: Bien que l'état de la tâche de sauvegarde s'afficheimage:../media/success_icon.gif["Icône terminé"], lorsque vous cliquez sur les détails du travail, vous pouvez constater que certaines tâches enfants de l'opération de sauvegarde sont toujours en cours ou marquées d'un signe d'avertissement.
+
+. Dans la page Détails du travail, cliquez sur *Afficher les journaux*.
++
+Le bouton *Afficher les journaux* affiche les journaux détaillés de l'opération sélectionnée.
+
+

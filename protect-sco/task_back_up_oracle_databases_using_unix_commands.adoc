@@ -1,0 +1,51 @@
+---
+permalink: protect-sco/task_back_up_oracle_databases_using_unix_commands.html 
+sidebar: sidebar 
+keywords: backup, cli, commands 
+summary: 'Le workflow de sauvegarde comprend la planification, l"identification des ressources de sauvegarde, la création de stratégies de sauvegarde, la création de groupes de ressources et la connexion de stratégies, la création de sauvegardes et le contrôle des opérations.' 
+---
+= Sauvegarder les bases de données Oracle à l'aide des commandes UNIX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le workflow de sauvegarde comprend la planification, l'identification des ressources de sauvegarde, la création de stratégies de sauvegarde, la création de groupes de ressources et la connexion de stratégies, la création de sauvegardes et le contrôle des opérations.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir ajouté les connexions du système de stockage et créé les informations d'identification à l'aide des commandes _Add-SmStorageConnection_ et _Add-SmCredential_.
+* Vous devez avoir établi la session de connexion avec le serveur SnapCenter à l'aide de la commande _Open-SmConnection_.
++
+Vous ne pouvez avoir qu'une seule session de connexion de compte SnapCenter et le token est stocké dans le répertoire d'accueil de l'utilisateur.
+
++
+
+NOTE: La session de connexion n'est valide que pendant 24 heures. Cependant, vous pouvez créer un jeton avec l'option TokenNeverExpires pour créer un jeton qui n'expire jamais et la session sera toujours valide.
+
+
+
+*À propos de cette tâche*
+
+Vous devez exécuter les commandes suivantes pour établir la connexion avec le serveur SnapCenter, découvrir les instances de base de données Oracle, ajouter une stratégie et un groupe de ressources, sauvegarder et vérifier la sauvegarde.
+
+Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["Guide de référence sur les commandes du logiciel SnapCenter"^].
+
+*Étapes*
+
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié : _Open-SmConnection_
+. Effectuer une opération de découverte des ressources hôte : _get-SmResources_
+. Configurer les informations d'identification de la base de données Oracle et les nœuds préférés pour le fonctionnement de sauvegarde d'une base de données RAC (Real application Cluster) : _Configure-SmOracleDatabase_
+. Créez une stratégie de sauvegarde : _Add-SmPolicy_
+. Récupérez les informations sur l'emplacement de stockage secondaire (SnapVault ou SnapMirror) : _get-SmDeuxièmement_Details_
++
+Cette commande récupère les détails de mappage du stockage principal vers le stockage secondaire d'une ressource spécifiée. Vous pouvez utiliser les détails de mappage pour configurer les paramètres de vérification secondaires lors de la création d'un groupe de ressources de sauvegarde.
+
+. Ajoutez un groupe de ressources à SnapCenter : _Add-SmResourceGroup_
+. Créer une sauvegarde : _New-SmBackup_
++
+Vous pouvez interroger le travail à l'aide de l'option WaitForCompletion. Si cette option est spécifiée, la commande continue à interroger le serveur jusqu'à la fin de la procédure de sauvegarde.
+
+. Récupérez les journaux depuis SnapCenter : _get-SmLogs_
+

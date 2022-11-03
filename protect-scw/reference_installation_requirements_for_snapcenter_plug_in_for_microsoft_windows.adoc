@@ -1,0 +1,210 @@
+---
+permalink: protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords: requirements 
+summary: 'Avant d"installer le plug-in pour Windows, vous devez connaître certaines conditions d"installation.' 
+---
+= Conditions d'installation requises pour le plug-in SnapCenter pour Microsoft Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer le plug-in pour Windows, vous devez connaître certaines conditions d'installation.
+
+Avant de commencer à utiliser le plug-in pour Windows, l'administrateur SnapCenter doit installer et configurer SnapCenter Server et effectuer les tâches préalables.
+
+* Vous devez disposer des privilèges d'administrateur SnapCenter pour installer le plug-in pour Windows.
++
+Le rôle d'administrateur SnapCenter doit disposer de privilèges d'administrateur.
+
+* Vous devez avoir installé et configuré le serveur SnapCenter.
+* Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré ou si l'utilisateur appartient à un utilisateur de groupe de travail local, vous devez désactiver l'UAC sur l'hôte.
+* Si vous souhaitez sauvegarder la réplication, vous devez configurer SnapMirror et SnapVault.
+
+
+
+
+== Configuration requise pour l'hôte pour installer le module de plug-ins SnapCenter pour Windows
+
+Avant d'installer le package de plug-ins SnapCenter pour Windows, vous devez connaître les exigences en matière d'espace système hôte de base et de dimensionnement.
+
+|===
+| Élément | De formation 
+
+
+ a| 
+Systèmes d'exploitation
+ a| 
+Microsoft Windows
+
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+
+
+
+ a| 
+RAM minimale pour le plug-in SnapCenter sur l'hôte
+ a| 
+1 GO
+
+
+
+ a| 
+Espace minimal d'installation et de journalisation pour le plug-in SnapCenter sur l'hôte
+ a| 
+5 GO
+
+
+NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommation de stockage par le dossier des journaux. L'espace de journalisation requis varie en fonction du nombre d'entités à protéger et de la fréquence des opérations de protection des données. S'il n'y a pas suffisamment d'espace disque, les journaux ne seront pas créés pour les opérations récentes.
+
+
+
+ a| 
+Packs logiciels requis
+ a| 
+* Microsoft .NET Framework 4.7.2 ou version ultérieure
+* Windows Management Framework (WMF) 4.0 ou version ultérieure
+* PowerShell 4.0 ou version ultérieure
+
+
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+
+Pour plus d'informations sur le dépannage de .NET, voir, link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]
+
+|===
+
+
+== Configurez vos informations d'identification pour le plug-in pour Windows
+
+SnapCenter utilise des identifiants pour authentifier les utilisateurs pour les opérations SnapCenter. Vous devez créer des informations d'identification pour l'installation des plug-ins SnapCenter, ainsi que des informations d'identification supplémentaires pour exécuter les opérations de protection des données sur les systèmes de fichiers Windows.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez configurer les informations d'identification Windows avant d'installer les plug-ins.
+* Vous devez configurer les informations d'identification avec les privilèges d'administrateur, y compris les droits d'administrateur, sur l'hôte distant.
+* Si vous configurez des informations d'identification pour des groupes de ressources individuels et que l'utilisateur ne dispose pas de privilèges d'administrateur complets, vous devez affecter au moins le groupe de ressources et les privilèges de sauvegarde à l'utilisateur.
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *Credential*.
+. Cliquez sur *Nouveau*.
+. Dans la page informations d'identification, procédez comme suit :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom d'identification
+ a| 
+Saisissez un nom pour les informations d'identification.
+
+
+
+ a| 
+Nom d'utilisateur/Mot de passe
+ a| 
+Entrez le nom d'utilisateur et le mot de passe utilisés pour l'authentification.
+
+** Administrateur de domaine ou tout membre du groupe d'administrateurs
++
+Spécifiez l'administrateur de domaine ou tout membre du groupe d'administrateurs sur le système sur lequel vous installez le plug-in SnapCenter. Les formats valides pour le champ Nom d'utilisateur sont les suivants :
+
++
+*** `NetBIOS\UserName`
+*** `Domain FQDN\UserName`
+*** `UserName@upn`
+
+
+** Administrateur local (groupes de travail uniquement)
++
+Pour les systèmes appartenant à un groupe de travail, spécifiez l'administrateur local intégré sur le système sur lequel vous installez le plug-in SnapCenter. Vous pouvez spécifier un compte d'utilisateur local appartenant au groupe d'administrateurs locaux si le compte d'utilisateur dispose de privilèges élevés ou si la fonction de contrôle d'accès utilisateur est désactivée sur le système hôte. Le format du champ Nom d'utilisateur est le suivant : `UserName`
+
++
+N'utilisez pas de guillemets (") ou de contre-coches (") dans les mots de passe. Vous ne devez pas utiliser moins de (<) et un point d'exclamation (!) symboles ensemble dans les mots de passe. Par exemple, moins<!10, moins dix<!, contre-recul 12.
+
+
+
+
+
+ a| 
+Mot de passe
+ a| 
+Entrez le mot de passe utilisé pour l'authentification.
+
+|===
+. Cliquez sur *OK*.
++
+Une fois que vous avez terminé la configuration des informations d'identification, vous pouvez affecter la maintenance des informations d'identification à un utilisateur ou à un groupe d'utilisateurs sur la page utilisateur et accès.
+
+
+
+
+
+== Configurez GMSA sur Windows Server 2012 ou version ultérieure
+
+Windows Server 2012 ou version ultérieure vous permet de créer un compte de service géré de groupe (GMSA) qui fournit une gestion automatisée des mots de passe de compte de service à partir d'un compte de domaine géré.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez disposer d'un contrôleur de domaine Windows Server 2012 ou version ultérieure.
+* Vous devez disposer d'un hôte Windows Server 2012 ou version ultérieure, qui est membre du domaine.
+
+
+*Étapes*
+
+. Créez une clé racine KDS pour générer des mots de passe uniques pour chaque objet de votre GMSA.
+. Pour chaque domaine, exécutez la commande suivante à partir du contrôleur de domaine Windows : Add-KDSRootKey -EffectiveImmediely
+. Créez et configurez votre GMSA :
++
+.. Créez un compte de groupe d'utilisateurs au format suivant :
++
+ domainName\accountName$
+.. Ajouter des objets d'ordinateur au groupe.
+.. Utilisez le groupe d'utilisateurs que vous venez de créer pour créer le GMSA.
++
+Par exemple :
+
++
+ New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
+.. Courez `Get-ADServiceAccount` pour vérifier le compte de service.
+
+
+. Configurez le GMSA sur vos hôtes :
++
+.. Activez le module Active Directory pour Windows PowerShell sur l'hôte sur lequel vous souhaitez utiliser le compte GMSA.
++
+Pour ce faire lancer la commande suivante depuis PowerShell :
+
++
+[listing]
+----
+PS C:\> Get-WindowsFeature AD-Domain-Services
+
+Display Name                           Name                Install State
+------------                           ----                -------------
+[ ] Active Directory Domain Services   AD-Domain-Services  Available
+
+
+PS C:\> Install-WindowsFeature AD-DOMAIN-SERVICES
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Active Directory Domain Services, Active ...
+WARNING: Windows automatic updating is not enabled. To ensure that your newly-installed role or feature is
+automatically updated, turn on Windows Update.
+----
+.. Redémarrez votre hôte.
+.. Installez GMSA sur votre hôte en exécutant la commande suivante à partir de l'invite de commande PowerShell : `Install-AdServiceAccount <gMSA>`
+.. Vérifiez votre compte GMSA en exécutant la commande suivante : `Test-AdServiceAccount <gMSA>`
+
+
+. Attribuez les privilèges d'administration au GMSA configuré sur l'hôte.
+. Ajoutez l'hôte Windows en spécifiant le compte GMSA configuré dans le serveur SnapCenter.
++
+Le serveur SnapCenter installe les plug-ins sélectionnés sur l'hôte et le GMSA spécifié sera utilisé comme compte de journal de service lors de l'installation du plug-in.
+
+

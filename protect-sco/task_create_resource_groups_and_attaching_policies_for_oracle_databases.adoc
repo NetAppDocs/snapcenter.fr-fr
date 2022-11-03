@@ -1,0 +1,142 @@
+---
+permalink: protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: run as 
+summary: Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. 
+---
+= Créez des groupes de ressources et associez des stratégies pour les bases de données Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée.
+
+*À propos de cette tâche*
+
+Vous devez vous assurer que la base de données contenant des fichiers sur les groupes de disques ASM doit être à l'état "MONTER" ou "OUVRIR" pour vérifier ses sauvegardes à l'aide de l'utilitaire Oracle DBVERIFY.
+
+Vous devez associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter.
+
+L'image suivante illustre la relation entre les ressources, les groupes de ressources et les politiques des bases de données :
+
+image::../media/sco_resourcegroup_policy.gif[stratégie de groupe de ressources sco]
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, cliquez sur *Nouveau groupe de ressources*.
+. Dans la page Nom, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom
+ a| 
+Entrez un nom pour le groupe de ressources.
+
+
+NOTE: Le nom du groupe de ressources ne doit pas dépasser 250 caractères.
+
+
+
+ a| 
+Étiquettes
+ a| 
+Entrez un ou plusieurs libellés qui vous aideront à rechercher ultérieurement le groupe de ressources.
+
+Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de ressources, vous pourrez rechercher par la suite tous les groupes de ressources associés à la balise RH.
+
+
+
+ a| 
+Utilisez le format de nom personnalisé pour la copie Snapshot
+ a| 
+Cochez cette case, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+
+Par exemple, clienttext_Resource group_policy_hostname ou Resource group_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+
+
+
+ a| 
+Exclure les destinations du journal d'archivage de la sauvegarde
+ a| 
+Spécifiez les destinations des fichiers journaux d'archive que vous ne souhaitez pas sauvegarder.
+
+|===
+. Dans la page Ressources, sélectionnez un nom d'hôte de base de données Oracle dans la liste déroulante *hôte*.
++
+
+NOTE: Les ressources sont répertoriées dans la section Ressources disponibles uniquement si la ressource a été découverte avec succès. Si vous avez récemment ajouté des ressources, elles apparaissent dans la liste des ressources disponibles uniquement après avoir actualisé votre liste de ressources.
+
+. Sélectionnez les ressources de la section Ressources disponibles et déplacez-les vers la section Ressources sélectionnées.
++
+
+NOTE: Vous pouvez ajouter des bases de données à partir d'hôtes Linux et AIX dans un seul groupe de ressources.
+
+. Dans la page stratégies, effectuez les opérations suivantes :
++
+.. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
++
+
+NOTE: Vous pouvez également créer une stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif[""].
+
++
+Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
+
+.. Cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Dans la fenêtre Ajouter des planifications pour la stratégie _policy_name_, configurez le planning, puis cliquez sur *OK*.
++
+Où, _policy_name_ est le nom de la stratégie que vous avez sélectionnée.
+
++
+Les planifications configurées sont répertoriées dans la colonne programmes appliqués.
+
+
+
++
+Les planifications de sauvegardes tierces ne sont pas prises en charge lorsqu'elles se chevauchent avec les planifications de sauvegarde SnapCenter.
+
+. Sur la page Vérification, effectuez les opérations suivantes :
++
+.. Cliquez sur *Charger les localisateurs* pour charger les volumes SnapMirror ou SnapVault afin d'effectuer une vérification sur le stockage secondaire.
+.. Cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes pour configurer le planning de vérification pour tous les types de planification de la stratégie.
+.. Dans la boîte de dialogue Ajouter des programmes de vérification nom_stratégie, effectuez les opérations suivantes :
++
+|===
+| Les fonctions que vous recherchez... | Procédez comme ça... 
+
+
+ a| 
+Exécutez la vérification après la sauvegarde
+ a| 
+Sélectionnez *Exécuter la vérification après la sauvegarde*.
+
+
+
+ a| 
+Planifier une vérification
+ a| 
+Sélectionnez *Exécuter la vérification programmée*, puis sélectionnez le type de planification dans la liste déroulante.
+
+|===
+.. Sélectionnez *vérifier sur l'emplacement secondaire* pour vérifier vos sauvegardes sur le système de stockage secondaire.
+.. Cliquez sur *OK*.
++
+Les planifications de vérification configurées sont répertoriées dans la colonne programmes appliqués.
+
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Si vous souhaitez joindre le rapport de l'opération effectuée sur le groupe de ressources, sélectionnez *attacher un rapport de travail*.
+
++
+
+NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface graphique ou de la commande PowerShell set-SmSmtpServer.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

@@ -1,0 +1,16 @@
+---
+permalink: protect-scsql/task_define_a_backup_strategy_for_sql_server_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La définition d"une stratégie de sauvegarde avant de créer vos tâches de sauvegarde vous permet de vous assurer que vous disposez des sauvegardes dont vous avez besoin pour restaurer ou cloner vos bases de données. Votre contrat de niveau de service \(SLA\), votre objectif de délai de restauration \(RTO\) et votre objectif de point de récupération \(RPO\) déterminent pour l"essentiel votre stratégie de sauvegarde.' 
+---
+= Définir une stratégie de sauvegarde pour les ressources SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La définition d'une stratégie de sauvegarde avant de créer vos tâches de sauvegarde vous permet de vous assurer que vous disposez des sauvegardes dont vous avez besoin pour restaurer ou cloner vos bases de données. Votre accord de niveau de service (SLA), votre objectif de délai de restauration (RTO) et votre objectif de point de récupération (RPO) déterminent largement votre stratégie de sauvegarde.
+
+Un SLA définit le niveau de service attendu et traite de nombreux problèmes liés au service, notamment la disponibilité et les performances de celui-ci. Le RTO est le moment par où un processus métier doit être restauré suite à une interruption de service. Un RPO définit la stratégie selon laquelle les fichiers doivent être récupérés à partir du stockage de sauvegarde afin que des opérations régulières puissent reprendre après une défaillance. Les niveaux de service, RTO et RPO contribuent à la stratégie de sauvegarde.

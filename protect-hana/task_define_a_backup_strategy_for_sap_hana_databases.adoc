@@ -1,0 +1,30 @@
+---
+permalink: protect-hana/task_define_a_backup_strategy_for_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'Définir une stratégie de sauvegarde avant de créer vos tâches de sauvegarde vous aide à disposer des sauvegardes dont vous avez besoin pour restaurer ou cloner vos ressources. Votre contrat de niveau de service \(SLA\), votre objectif de délai de restauration \(RTO\) et votre objectif de point de restauration \(RPO\) déterminent pour l"essentiel votre stratégie de sauvegarde.' 
+---
+= Définissez une stratégie de sauvegarde pour les bases de données SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Définir une stratégie de sauvegarde avant de créer vos tâches de sauvegarde vous aide à disposer des sauvegardes dont vous avez besoin pour restaurer ou cloner vos ressources. Votre contrat de niveau de service (SLA), votre objectif de délai de restauration (RTO) et votre objectif de point de restauration (RPO) déterminent largement votre stratégie de sauvegarde.
+
+*À propos de cette tâche*
+
+Un SLA définit le niveau de service attendu et traite de nombreux problèmes liés à la prestation, notamment la disponibilité et les performances du service. Le RTO est le moment par lequel un processus métier doit être restauré suite à une interruption de service. L'objectif RPO définit la stratégie selon laquelle les fichiers doivent être récupérés depuis le stockage de sauvegarde afin que les opérations régulières puissent reprendre après une défaillance. Les niveaux de service, RTO et RPO contribuent à la stratégie de protection des données.
+
+*Étapes*
+
+. Déterminez à quel moment il est nécessaire de sauvegarder vos ressources.
+. Déterminer le nombre de tâches de sauvegarde dont vous avez besoin
+. Choisissez le nom de vos sauvegardes.
+. Décider de créer ou non une règle Snapshot pour sauvegarder des copies Snapshot cohérentes au niveau des applications de la base de données
+. Décidez si vous voulez vérifier l'intégrité de la base de données.
+. Choisissez si vous souhaitez utiliser la technologie NetApp SnapMirror pour la réplication ou la technologie NetApp SnapVault pour la conservation à long terme.
+. Déterminez la période de conservation des copies Snapshot sur le système de stockage source et la destination SnapMirror.
+. Déterminez si vous souhaitez exécuter des commandes avant ou après l'opération de sauvegarde et fournissez un prescripteur ou un PostScript.
+

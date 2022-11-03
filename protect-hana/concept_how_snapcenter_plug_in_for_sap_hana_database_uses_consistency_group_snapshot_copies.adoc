@@ -1,0 +1,16 @@
+---
+permalink: protect-hana/concept_how_snapcenter_plug_in_for_sap_hana_database_uses_consistency_group_snapshot_copies.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'Ce plug-in permet de créer des copies Snapshot de groupe de cohérence pour les groupes de ressources. Un groupe de cohérence est un conteneur qui peut héberger plusieurs volumes, de sorte que vous puissiez les gérer comme une entité unique. Un groupe de cohérence est constitué de copies Snapshot simultanées de plusieurs volumes, ce qui permet d"obtenir des copies cohérentes d"un groupe de volumes.' 
+---
+= Comment le plug-in SnapCenter pour la base de données SAP HANA utilise les copies Snapshot de groupe de cohérence
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ce plug-in permet de créer des copies Snapshot de groupe de cohérence pour les groupes de ressources. Un groupe de cohérence est un conteneur qui peut héberger plusieurs volumes, de sorte que vous puissiez les gérer comme une entité unique. Un groupe de cohérence est constitué de copies Snapshot simultanées de plusieurs volumes, ce qui permet d'obtenir des copies cohérentes d'un groupe de volumes.
+
+Vous pouvez également spécifier le temps d'attente avant que le contrôleur de stockage ne grouper les copies Snapshot de manière cohérente. Les options de temps d'attente disponibles sont *urgent*, *Moyen* et *détendu*. Vous pouvez également activer ou désactiver la synchronisation WAFL (Write Anywhere File Layout) au cours des copies Snapshot de groupe cohérentes. La synchronisation WAFL améliore les performances de la copie Snapshot de groupe de cohérence.

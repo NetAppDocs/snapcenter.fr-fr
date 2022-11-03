@@ -1,0 +1,51 @@
+---
+permalink: protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez installer les plug-ins personnalisés SnapCenter à l"aide de l"interface utilisateur SnapCenter. Si votre environnement ne permet pas l"installation à distance du plug-in à partir de l"interface utilisateur SnapCenter, vous pouvez installer le plug-in personnalisé en mode console ou en mode silencieux à l"aide de l"interface de ligne de commande \(CLI\).' 
+---
+= Installez les plug-ins personnalisés SnapCenter sur les hôtes Linux à l'aide de l'interface de ligne de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez installer les plug-ins personnalisés SnapCenter à l'aide de l'interface utilisateur SnapCenter. Si votre environnement ne permet pas l'installation à distance du plug-in à partir de l'interface utilisateur SnapCenter, vous pouvez installer les plug-ins personnalisés en mode console ou en mode silencieux à l'aide de l'interface de ligne de commande (CLI).
+
+*Étapes*
+
+. Copiez le fichier d'installation du package de plug-ins SnapCenter pour Linux (snapcenter_linux_host_plugin.bin) depuis C:\ProgramData\NetApp\SnapCenter\Package Repository vers l'hôte où vous souhaitez installer les plug-ins personnalisés.
++
+Vous pouvez accéder à ce chemin à partir de l'hôte sur lequel le serveur SnapCenter est installé.
+
+. À partir de l'invite de commande, accédez au répertoire dans lequel vous avez copié le fichier d'installation.
+. Installez le plug-in : `path_to_installation_bin_file/snapcenter_linux_host_plugin.bin -i silent -DPORT=port_number_for_host -DSERVER_IP=server_name_or_ip_address -DSERVER_HTTPS_PORT=port_number_for_server`
++
+** -DPORT spécifie le port de communication SMCore HTTPS.
+** -DSERVER_IP spécifie l'adresse IP du serveur SnapCenter.
+** -DSERVER_HTTPS_PORT spécifie le port HTTPS du serveur SnapCenter.
+** -DUSER_INSTALL_DIR indique le répertoire dans lequel vous souhaitez installer le module de plug-ins SnapCenter pour Linux.
+** DINSTALL_LOG_NAME indique le nom du fichier journal.
+
+
++
+[listing]
+----
+/tmp/sc-plugin-installer/snapcenter_linux_host_plugin.bin -i silent  -DPORT=8145 -DSERVER_IP=scserver.domain.com -DSERVER_HTTPS_PORT=8146 -DUSER_INSTALL_DIR=/opt -DINSTALL_LOG_NAME=SnapCenter_Linux_Host_Plugin_Install_2.log -DCHOSEN_FEATURE_LIST=CUSTOM
+----
+. Ajoutez l'hôte au serveur SnapCenter à l'aide de l'applet de commande Add-Smhost et des paramètres requis.
++
+Les informations relatives aux paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+. Connectez-vous à SnapCenter et téléchargez le plug-in personnalisé depuis l'interface utilisateur ou via les applets de commande PowerShell.
++
+Vous pouvez télécharger le plug-in personnalisé à partir de l'interface utilisateur en vous reportant à link:task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html["Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants"] section.
+
++
+L'aide de la cmdlet de SnapCenter et les informations de référence de la cmdlet contiennent plus d'informations sur les applets de commande PowerShell.
+
++
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+

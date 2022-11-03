@@ -1,0 +1,108 @@
+---
+permalink: protect-scc/task_clone_from_a_backup.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d"une sauvegarde principale ou secondaire. Les fonctionnalités des opérations de clonage dépendent du plug-in que vous utilisez.' 
+---
+= Cloner à partir d'une sauvegarde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d'une sauvegarde principale ou secondaire. Les fonctionnalités des opérations de clonage dépendent du plug-in que vous utilisez.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir sauvegardé les ressources ou le groupe de ressources.
+* L'opération de clonage par défaut ne cloner que les objets de stockage. Les opérations de clonage au niveau applicatif ne peuvent être réalisées que si le plug-in personnalisé offre cette fonctionnalité.
+* Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
++
+Les ressources s'affichent avec des informations telles que le type, le nom de l'hôte ou du cluster, les groupes de ressources et les stratégies associés et l'état.
+
+. Sélectionnez la ressource ou le groupe de ressources.
++
+Vous devez sélectionner une ressource si vous sélectionnez un groupe de ressources.
+
++
+La page topologie des ressources ou des groupes de ressources s'affiche.
+
+. Dans la vue gestion des copies, sélectionnez *sauvegardes* dans les systèmes de stockage primaire ou secondaire (en miroir ou en stockage).
+. Sélectionnez la sauvegarde des données dans le tableau, puis cliquez sur image:../media/clone_icon.gif["icône cloner"].
+. Dans la page emplacements, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Serveur clone
+ a| 
+Par défaut, l'hôte source est renseigné.
+
+Si vous souhaitez spécifier un autre hôte, sélectionnez l'hôte sur lequel le clone doit être monté et le plug-in est installé.
+
+
+
+ a| 
+Suffixe du clone
+ a| 
+Cette opération est obligatoire lorsque la destination du clone est la même que la source.
+
+Indiquez un suffixe à ajouter au nom du nouveau clone. Le suffixe garantit que la ressource clonée est unique sur l'hôte.
+
+Par exemple, rs1_clone. Si vous effectuez le clonage sur le même hôte que la ressource d'origine, vous devez fournir un suffixe permettant de différencier la ressource clonée de la ressource d'origine. Dans le cas contraire, l'opération échoue.
+
+|===
++
+Si la ressource sélectionnée est une LUN et si vous effectuez un clonage à partir d'une sauvegarde secondaire, les volumes de destination sont répertoriés. Une seule source peut avoir plusieurs volumes de destination.
+
+. Dans la page Paramètres, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom de l'initiateur
+ a| 
+Entrez le nom de l'initiateur hôte, qui est soit un IQDN, soit un WWPN.
+
+
+
+ a| 
+Protocole d'iGroup
+ a| 
+Sélectionnez le protocole iGroup.
+
+|===
++
+
+NOTE: La page des paramètres s'affiche uniquement si le type de stockage est LUN.
+
+. Dans la page scripts, entrez les commandes de pré-clonage ou post-clonage qui doivent être exécutées avant ou après l'opération de clonage, respectivement. Entrez la commande mount pour monter un système de fichiers sur un hôte.
++
+Par exemple :
+
++
+** Commande de pré-clonage : permet de supprimer les bases de données existantes portant le même nom
+** Commande post-clone : vérifiez une base de données ou démarrez une base de données.
++
+Commande mount pour un volume ou un qtree sur une machine Linux : mount<VSERVER_NAME>:%<VOLUME_NAME_Clone /mnt>
+
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail.
+
+. Vérifiez le résumé et cliquez sur *Terminer*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+

@@ -1,0 +1,61 @@
+---
+permalink: protect-scsql/concept_type_of_backups_supported.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour sauvegarder les bases de données système et utilisateur SQL Server à l"aide de SnapCenter, vous devez choisir le type de ressource, comme les bases de données, les instances de serveur SQL et les groupes de disponibilité \(AG\). La technologie de copie Snapshot permet de créer des copies en ligne et en lecture seule des volumes sur lesquels résident les ressources.' 
+---
+= Types de sauvegardes pris en charge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour sauvegarder des bases de données système et utilisateur SQL Server à l'aide de SnapCenter, vous devez choisir le type de ressource, tel que les bases de données, les instances SQL Server et les groupes de disponibilité (AG). La technologie de copie Snapshot permet de créer des copies en ligne et en lecture seule des volumes sur lesquels résident les ressources.
+
+Vous pouvez sélectionner l'option copie seule pour indiquer que SQL Server ne tronque pas les journaux de transactions. Vous devez utiliser cette option lorsque vous gérez également SQL Server avec d'autres applications de sauvegarde. Le fait de préserver l'intégrité des journaux de transactions permet à toute application de sauvegarde de restaurer les bases de données système. Les sauvegardes de copie uniquement sont indépendantes de la séquence des sauvegardes planifiées et n'affectent pas les procédures de sauvegarde et de restauration de la base de données.
+
+|===
+| Type de sauvegarde | Description | Option de copie uniquement avec type de sauvegarde 
+
+
+ a| 
+Sauvegarde complète et sauvegarde des journaux
+ a| 
+Sauvegarde la base de données système et tronque les journaux de transactions.
+
+SQL Server tronque les journaux de transactions en supprimant les entrées déjà engagées dans la base de données.
+
+Une fois la sauvegarde complète terminée, cette option crée un journal de transactions qui capture les informations de transaction. Généralement, vous devez choisir cette option. Toutefois, si votre temps de sauvegarde est court, vous pouvez choisir de ne pas exécuter de sauvegarde complète du journal de transactions.
+
+Vous ne pouvez pas créer de sauvegarde de journal pour les bases de données système master et msdb. Toutefois, vous pouvez créer des sauvegardes de journaux pour la base de données du système modèle.
+ a| 
+Sauvegarde les fichiers de base de données système et les journaux de transactions sans tronquer les journaux.
+
+Une sauvegarde de copie uniquement ne peut pas servir de base différentielle ou de sauvegarde différentielle et n'affecte pas la base différentielle. La restauration d'une sauvegarde complète pour copie uniquement est la même que pour toute autre sauvegarde complète.
+
+
+
+ a| 
+Sauvegarde complète de la base de données
+ a| 
+Sauvegarde les fichiers de la base de données système.
+
+Vous pouvez créer une sauvegarde complète de la base de données pour les bases de données du système maître, modèle et msdb.
+ a| 
+Sauvegarde les fichiers de la base de données système.
+
+
+
+ a| 
+Sauvegarde du journal des transactions
+ a| 
+Sauvegarde les journaux de transactions tronqués, en copiant uniquement les transactions validées depuis la sauvegarde du journal de transactions le plus récent.
+
+Si vous planifiez des sauvegardes fréquentes du journal des transactions parallèlement à des sauvegardes complètes de bases de données, vous pouvez choisir des points de restauration granulaires.
+ a| 
+Sauvegarde les journaux de transactions sans les tronquer.
+
+Ce type de sauvegarde n'affecte pas le séquencement des sauvegardes de journaux standard. Les sauvegardes de journaux avec copie uniquement sont utiles pour les opérations de restauration en ligne.
+
+|===

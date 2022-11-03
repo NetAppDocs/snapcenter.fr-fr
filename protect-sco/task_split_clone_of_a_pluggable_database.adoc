@@ -1,0 +1,31 @@
+---
+permalink: protect-sco/task_split_clone_of_a_pluggable_database.html 
+sidebar: sidebar 
+keywords: split, PDB, cloned PDB 
+summary: 'Vous pouvez utiliser SnapCenter pour fractionner une base de données enfichable clonée \(PDB\).' 
+---
+= Séparer le clone d'une base de données enfichable
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour diviser une base de données clonée enfichable (PDB).
+
+*À propos de cette tâche*
+
+Si vous avez créé une sauvegarde du CDB cible dans laquelle le PDB est cloné, lorsque vous fractionnez le clone PDB, le PDB cloné est également supprimé de toutes les sauvegardes du BCD cible contenant le PDB cloné.
+
+
+NOTE: Les clones PDB ne sont pas affichés dans la vue Inventaire ou ressources.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Sélectionnez la base de données du conteneur source (CDB) dans la vue ressource ou groupe de ressources.
+. Dans la vue gérer les copies, sélectionnez *clones* dans les systèmes de stockage primaire ou secondaire (mis en miroir ou répliqué).
+. Sélectionnez le clone PDB (targetCDB:PDBClone), puis cliquez sur image:../media/split_cone.gif[""].
+. Vérifiez la taille estimée du clone à diviser et l'espace requis disponible sur l'agrégat, puis cliquez sur *Start*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+

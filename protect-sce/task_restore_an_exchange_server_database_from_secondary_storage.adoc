@@ -1,0 +1,30 @@
+---
+permalink: protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez restaurer une base de données Exchange Server sauvegardée à partir du stockage secondaire (miroir ou coffre-fort).' 
+---
+= Restaurer une base de données Exchange Server à partir du stockage secondaire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez restaurer une base de données Exchange Server sauvegardée à partir du stockage secondaire (miroir ou coffre-fort).
+
+Vous devez avoir répliqué les copies Snapshot à partir d'un stockage primaire vers un stockage secondaire.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez *le plug-in Microsoft Exchange Server* dans la liste.
+. Dans la page Ressources, sélectionnez *Database* ou *Resource Group* dans la liste déroulante *View*.
+. Sélectionnez la base de données ou le groupe de ressources.
++
+La page topologie de la base de données ou du groupe de ressources s'affiche.
+
+. Dans la section gérer les copies, sélectionnez *sauvegardes* dans le système de stockage secondaire (miroir ou coffre-fort).
+. Sélectionnez la sauvegarde dans la liste, puis cliquez sur image:../media/restore_icon.gif["icône restaurer"].
+. Dans la page emplacement, choisissez le volume de destination pour restaurer la ressource sélectionnée.
+. Terminez l'assistant Restaurer, vérifiez le résumé, puis cliquez sur *Terminer*.
+

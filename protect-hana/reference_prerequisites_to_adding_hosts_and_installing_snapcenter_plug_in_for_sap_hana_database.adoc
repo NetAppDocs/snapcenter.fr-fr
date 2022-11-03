@@ -1,0 +1,54 @@
+---
+permalink: protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 'Avant d"ajouter un hôte et d"installer les modules d"extension, vous devez remplir toutes les conditions requises. Le plug-in SnapCenter pour base de données SAP HANA est disponible dans les environnements Windows et Linux.' 
+---
+= Conditions préalables pour l'ajout d'hôtes et l'installation du plug-in SnapCenter pour la base de données SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'ajouter un hôte et d'installer les modules d'extension, vous devez remplir toutes les conditions requises. Le plug-in SnapCenter pour base de données SAP HANA est disponible dans les environnements Windows et Linux.
+
+* Vous devez avoir installé Java 1.8 64 bits sur votre hôte.
+* Vous devez avoir installé le terminal interactif de la base de données SAP HANA (client HDBSQL) sur l'hôte.
+* Pour Windows, Plug-in Creator Service doit être en cours d'exécution à l'aide de l'utilisateur Windows « LocalSystem », ce qui est le comportement par défaut lorsque Plug-in pour SAP HANA Database est installé en tant qu'administrateur de domaine.
+* Pour Windows, les clés de la boutique utilisateur doivent être créées en tant qu'utilisateur SYSTÈME.
+* Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré ou si l'utilisateur appartient à un utilisateur de groupe de travail local, vous devez désactiver l'UAC sur l'hôte. Le plug-in SnapCenter pour Microsoft Windows sera déployé par défaut avec le plug-in SAP HANA sur les hôtes Windows.
+* Pour l'hôte Linux, les clés HDB Secure User Store sont accessibles en tant qu'utilisateur HDBSQL OS.
+* Le serveur SnapCenter doit avoir accès au port 8145 ou personnalisé du plug-in pour l'hôte de base de données SAP HANA.
+
+
+
+
+== Hôtes Windows
+
+* Vous devez disposer d'un utilisateur de domaine disposant de privilèges d'administrateur local avec des autorisations de connexion locales sur l'hôte distant.
+* Lors de l'installation du plug-in pour base de données SAP HANA sur un hôte Windows, le plug-in SnapCenter pour Microsoft Windows est installé automatiquement.
+* Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
+* Vous devez avoir installé Java 1.8 64 bits sur votre hôte Windows.
++
+http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
+
+
+
+
+
+== Hôtes Linux
+
+* Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
+* Vous devez avoir installé Java 1.8 64 bits sur votre hôte Linux.
++
+http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
+
+* Pour les bases de données SAP HANA qui s'exécutent sur un hôte Linux, lors de l'installation du plug-in pour base de données SAP HANA, le plug-in SnapCenter pour UNIX est installé automatiquement.
+

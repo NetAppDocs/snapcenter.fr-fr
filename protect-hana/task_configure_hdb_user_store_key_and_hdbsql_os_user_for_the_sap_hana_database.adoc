@@ -1,0 +1,40 @@
+---
+permalink: protect-hana/task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez configurer la clé de stockage utilisateur HDB et l"utilisateur HDBSQL pour effectuer des opérations de protection des données sur des bases de données SAP HANA.' 
+---
+= Configurez la clé HDB User Store et l'utilisateur HDBSQL OS pour la base de données SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez configurer la clé de stockage utilisateur HDB et l'utilisateur HDBSQL pour effectuer des opérations de protection des données sur des bases de données SAP HANA.
+
+*Ce dont vous aurez besoin*
+
+* Si la clé HDB Secure User Store et l'utilisateur HDB SQL OS ne sont pas configurés dans la base de données SAP HANA, une icône de cadenas rouge s'affiche uniquement pour les ressources découvertes automatiquement. Si, au cours d'une opération de découverte ultérieure, la clé de stockage sécurisée HDB configurée a été détectée comme incorrecte ou n'a pas fourni d'accès à la base de données elle-même, l'icône rouge du cadenas réapparaîtra.
+* Vous devez configurer la clé du magasin d'utilisateurs sécurisé HDB et l'utilisateur HDB SQL OS pour pouvoir protéger la base de données ou l'ajouter à un groupe de ressources pour effectuer des opérations de protection des données.
+* Vous devez configurer HDB SQL OS User pour accéder à la base de données système. Si HDB SQL OS User est configuré pour accéder uniquement à la base de données de tenant, l'opération de découverte échoue.
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez Plug-in SnapCenter pour base de données SAP HANA dans la liste.
+. Dans la page Ressources, sélectionnez le type de ressource dans la liste *Affichage*.
+. (Facultatif) cliquez sur image:../media/filter_icon.gif[""] et sélectionnez le nom d'hôte.
++
+Vous pouvez ensuite cliquer sur image:../media/filter_icon.gif[""] pour fermer le volet de filtre.
+
+. Sélectionnez la base de données, puis cliquez sur *configurer la base de données*.
+. Dans la section configurer les paramètres de la base de données, entrez la clé de stockage sécurisée de l'utilisateur HDB.
++
+
+NOTE: Le nom d'hôte du plug-in s'affiche et l'utilisateur HDB SQL OS est automatiquement renseigné sur <sid<adm.
+
+. Cliquez sur *OK*.
+
+
+Vous pouvez modifier la configuration de la base de données à partir de la page topologie.

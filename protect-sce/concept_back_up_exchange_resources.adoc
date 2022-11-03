@@ -1,0 +1,20 @@
+---
+permalink: protect-sce/concept_back_up_exchange_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Lorsque vous installez le plug-in SnapCenter pour Microsoft Exchange Server dans votre environnement, vous pouvez utiliser SnapCenter pour sauvegarder les ressources Exchange. 
+---
+= Workflow de sauvegarde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous installez le plug-in SnapCenter pour Microsoft Exchange Server dans votre environnement, vous pouvez utiliser SnapCenter pour sauvegarder les ressources Exchange.
+
+Vous pouvez planifier plusieurs sauvegardes pour les exécuter simultanément sur plusieurs serveurs. Les opérations de sauvegarde et de restauration ne peuvent pas être effectuées simultanément sur la même ressource. Les copies de sauvegarde actives et passives sur le même volume ne sont pas prises en charge.
+
+Le workflow suivant montre la séquence dans laquelle vous devez effectuer l'opération de sauvegarde :
+
+image:../media/sce_backup_workflow.gif[""]

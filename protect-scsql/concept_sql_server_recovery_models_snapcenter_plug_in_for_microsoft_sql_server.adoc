@@ -1,0 +1,30 @@
+---
+permalink: protect-scsql/concept_sql_server_recovery_models_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Des modèles de reprise spécifiques sont attribués par défaut à chaque type de base de données. L"administrateur de base de données SQL Server peut réaffecter chaque base de données à un modèle de restauration différent.' 
+---
+= Modèles de restauration SQL Server pris en charge par SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Des modèles de reprise spécifiques sont attribués par défaut à chaque type de base de données. L'administrateur de base de données SQL Server peut réaffecter chaque base de données à un modèle de restauration différent.
+
+SnapCenter prend en charge trois types de modèles de restauration SQL Server :
+
+* Modèle de restauration simple
++
+Lorsque vous utilisez le modèle de récupération simple, vous ne pouvez pas sauvegarder les journaux de transactions.
+
+* Modèle de restauration complet
++
+Lorsque vous utilisez le modèle de récupération complète, vous pouvez restaurer une base de données à son état précédent à partir du point d'échec.
+
+* Modèle de restauration enregistré en bloc
++
+Lorsque vous utilisez le modèle de récupération de journalisation en bloc, vous devez exécuter à nouveau manuellement l'opération de consignation en bloc. Vous devez effectuer l'opération de consignation groupée si le journal de transactions contenant l'enregistrement de validation de l'opération n'a pas été sauvegardé avant la restauration. Si l'opération de consignation groupée insère 10 millions de lignes dans une base de données et que la base de données échoue avant la sauvegarde du journal de transactions, la base de données restaurée ne contiendra pas les lignes qui ont été insérées par l'opération de consignation groupée.
+
+

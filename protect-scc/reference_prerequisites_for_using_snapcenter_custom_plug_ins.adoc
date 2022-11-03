@@ -1,0 +1,32 @@
+---
+permalink: protect-scc/reference_prerequisites_for_using_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords: Credentials 
+summary: 'Avant d"utiliser les plug-ins personnalisés SnapCenter, l"administrateur SnapCenter doit installer et configurer le serveur SnapCenter et effectuer les tâches préalables.' 
+---
+= Conditions préalables à l'utilisation des plug-ins personnalisés SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser les plug-ins personnalisés SnapCenter, l'administrateur SnapCenter doit installer et configurer le serveur SnapCenter et effectuer les tâches préalables.
+
+* Installer et configurer SnapCenter Server.
+* Connectez-vous au serveur SnapCenter.
+* Configurez l'environnement SnapCenter en ajoutant des connexions au système de stockage et en créant des identifiants, le cas échéant.
+* Ajoutez des hôtes, et installez et téléchargez les plug-ins.
+* Le cas échéant, installez Java 1.7 ou Java 1.8 sur l'hôte du plug-in.
+* Si vous disposez de plusieurs chemins d'accès aux données (LIF) ou d'une configuration dNFS, vous pouvez effectuer les opérations suivantes à l'aide de l'interface de ligne de commandes SnapCenter sur l'hôte de base de données :
++
+** Par défaut toutes les adresses IP de l'hôte de base de données sont ajoutées à la règle d'exportation du stockage NFS dans la machine virtuelle de stockage (SVM) pour les volumes clonés. Si vous souhaitez avoir une adresse IP spécifique ou restreindre à un sous-ensemble d'adresses IP, exécutez l'interface de ligne de commande set-PreferredHostIPsInStorageExportPolicy.
+** Si plusieurs chemins de données (LIF) sont disponibles dans des SVM, SnapCenter choisit le chemin d'accès aux données (LIF) approprié pour le montage du volume cloné NFS. Toutefois, si vous souhaitez spécifier un chemin de données spécifique (LIF), vous devez exécuter l'interface de ligne de commande set-SvmPreferredDataPath. Les informations relatives aux paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["Guide de référence sur les commandes du logiciel SnapCenter"^].
+
+
+* Configurer SnapMirror et SnapVault pour la réplication de sauvegarde.
+* Assurez-vous que le port 9090 n'est pas utilisé par une autre application de l'hôte.
++
+Le port 9090 doit être réservé pour être utilisé par les plug-ins personnalisés SnapCenter en plus des autres ports requis par SnapCenter.
+
+

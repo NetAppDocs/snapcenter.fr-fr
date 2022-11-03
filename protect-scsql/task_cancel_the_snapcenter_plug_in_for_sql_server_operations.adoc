@@ -1,0 +1,58 @@
+---
+permalink: protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez annuler les opérations de sauvegarde en cours d"exécution, en file d"attente ou non réactives. Lorsque vous annulez une opération de sauvegarde, le serveur SnapCenter arrête l"opération et supprime toutes les copies Snapshot du stockage si la sauvegarde créée n"est pas enregistrée auprès du serveur SnapCenter. Si la sauvegarde est déjà enregistrée avec SnapCenter Server, elle ne pourra pas restaurer la copie Snapshot déjà créée, même après le déclenchement de l"annulation.' 
+---
+= Annulez les opérations de sauvegarde du plug-in SnapCenter pour Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez annuler les opérations de sauvegarde en cours d'exécution, en file d'attente ou non réactives. Lorsque vous annulez une opération de sauvegarde, le serveur SnapCenter arrête l'opération et supprime toutes les copies Snapshot du stockage si la sauvegarde créée n'est pas enregistrée auprès du serveur SnapCenter. Si la sauvegarde est déjà enregistrée avec SnapCenter Server, elle ne pourra pas restaurer la copie Snapshot déjà créée, même après le déclenchement de l'annulation.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez être connecté en tant qu'administrateur SnapCenter ou propriétaire de tâche pour annuler les opérations de restauration.
+* Vous pouvez annuler uniquement les opérations de journalisation ou de sauvegarde complète qui sont mises en file d'attente ou en cours d'exécution.
+* Vous ne pouvez pas annuler l'opération après le début de la vérification.
++
+Si vous annulez l'opération avant vérification, l'opération est annulée et l'opération de vérification ne sera pas effectuée.
+
+* Vous pouvez annuler une opération de sauvegarde à partir de la page moniteur ou du volet activité.
+* Outre l'interface graphique SnapCenter, vous pouvez utiliser les applets de commande PowerShell pour annuler des opérations.
+* Le bouton *Annuler tâche* est désactivé pour les opérations qui ne peuvent pas être annulées.
+* Si vous avez sélectionné *tous les membres de ce rôle peuvent voir et fonctionner sur d'autres objets membres* dans la page utilisateurs\groupes lors de la création d'un rôle, vous pouvez annuler les opérations de sauvegarde en file d'attente d'autres membres tout en utilisant ce rôle.
+
+
+*Étape*
+
+Effectuez l'une des opérations suivantes :
+
+|===
+| Du... | Action 
+
+
+ a| 
+Page moniteur
+ a| 
+. Dans le volet de navigation de gauche, cliquez sur *moniteur* > *travaux*.
+. Sélectionnez le travail et cliquez sur *Annuler le travail* .
+
+
+
+
+ a| 
+Volet activité
+ a| 
+. Après avoir lancé la procédure de sauvegarde, cliquez sur image:../media/activity_pane_icon.gif[""] Dans le volet activité pour afficher les cinq opérations les plus récentes.
+. Sélectionner l'opération.
+. Dans la page Détails du travail, cliquez sur *Annuler le travail*.
+
+
+|===
+*Résultat*
+
+L'opération est annulée et la ressource est rétablie à l'état précédent. Si l'opération que vous avez annulée n'est pas réactive à l'état d'annulation ou d'exécution, vous devez exécuter le `Cancel-SmJob -JobID <int> -Force` cmdlet arrête avec force l'opération de sauvegarde.

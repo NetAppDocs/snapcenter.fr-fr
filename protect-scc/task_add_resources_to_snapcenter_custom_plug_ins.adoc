@@ -1,0 +1,112 @@
+---
+permalink: protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon votre environnement, les ressources peuvent être des instances de base de données ou des collections que vous souhaitez sauvegarder ou cloner. 
+---
+= Ajoutez des ressources aux plug-ins personnalisés SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon votre environnement, les ressources peuvent être des instances de base de données ou des collections que vous souhaitez sauvegarder ou cloner.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la création de connexions au système de stockage et l'ajout d'informations d'identification.
+* Vous devez avoir créé un plug-in personnalisé.
++
+link:concept_develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
+
+* Vous devez avoir chargé les plug-ins sur SnapCenter Server.
+
+
+*À propos de cette tâche*
+
+Vous pouvez également ajouter des ressources pour les applications MySQL et DB2. Ces plug-ins peuvent être téléchargés depuis le https://automationstore.netapp.com/home.shtml["Stockage NetApp Storage Automation Store"].
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, cliquez sur *Ajouter ressource*.
+. Dans la page Détails de la ressource, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom
+ a| 
+Entrez le nom de la ressource.
+
+
+
+ a| 
+Nom d'hôte
+ a| 
+Sélectionnez l'hôte.
+
+
+
+ a| 
+Type
+ a| 
+Sélectionnez le type. Le type est défini par l'utilisateur conformément au fichier de description du plug-in. Par exemple, base de données et instance.
+
+Si le type sélectionné a un parent, entrez les détails du parent. Par exemple, si le type est base de données et que le parent est instance, entrez les détails de l'instance.
+
+
+
+ a| 
+Nom d'identification
+ a| 
+Sélectionnez Credential ou créez une nouvelle information d'identification.
+
+
+
+ a| 
+Chemins de montage
+ a| 
+Entrez les chemins de montage sur lesquels la ressource est montée. Cette option est applicable uniquement à un hôte Windows.
+
+|===
+. Dans la page Entitetour Storage Footprint, sélectionnez un système de stockage et choisissez un ou plusieurs volumes, LUN et qtrees, puis cliquez sur *Save*.
++
+Facultatif : cliquez sur le bouton image:../media/add_policy_from_resourcegroup.gif[""] Icône pour ajouter d'autres volumes, LUN et qtrees à partir d'autres systèmes de stockage.
+
++
+
+NOTE: Les plug-ins personnalisés SnapCenter ne prennent pas en charge la découverte automatique des ressources et des informations de stockage pour les environnements physiques et virtuels. Vous devez fournir les informations de stockage pour les environnements physiques et virtuels tout en créant les ressources.
+
++
+image::../media/storage_footprint.gif[Encombrement du stockage]
+
+. Dans la page Resource Settings, fournissez des paires clé-valeur personnalisées pour la ressource.
++
+Utilisez les paires clé-valeur personnalisées pour transmettre des informations spécifiques aux ressources. Par exemple, lorsque vous utilisez le plug-in MySQL, vous devez spécifier un HÔTE comme HÔTE=hostname, PORT =port-no utilisé pour MySQL et la configuration maître-esclave comme MAÎTRE_ESCLAVE = « OUI » ou « NON » (le nom est MAÎTRE_ESCLAVE et la valeur est « OUI » ou « NON »).
+
++
+
+NOTE: Assurez-vous que les mots HÔTE et PORT sont en majuscules.
+
++
+image::../media/resource_settings.gif[paramètres de ressources]
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+
+
+*Résultat*
+
+Les ressources s'affichent avec des informations telles que le type, le nom de l'hôte ou du cluster, les groupes de ressources et les stratégies associés et l'état global.
+
+
+IMPORTANT: Vous devez actualiser les ressources si les bases de données sont renommées en dehors de SnapCenter.
+
+*Après la fin*
+
+Si vous souhaitez donner accès aux ressources à d'autres utilisateurs, l'administrateur SnapCenter doit attribuer des ressources à ces utilisateurs. Cela permet aux utilisateurs d'effectuer les actions pour lesquelles ils ont des autorisations sur les ressources qui leur sont assignées.
+
+Après avoir ajouté les ressources, vous pouvez modifier les détails de la ressource. Si des sauvegardes sont associées à une ressource de plug-in personnalisée, les champs suivants ne peuvent pas être modifiés : nom de ressource, type de ressource et nom d'hôte.

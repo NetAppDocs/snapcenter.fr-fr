@@ -1,0 +1,9 @@
+= 
+:allow-uri-read: 
+
+
+Vous pouvez vérifier les copies de sauvegarde sur le volume de stockage primaire ou sur le volume de stockage secondaire SnapMirror ou SnapVault. La vérification à l'aide d'un volume de stockage secondaire réduit la charge sur le volume de stockage primaire.
+
+Lorsque vous vérifiez une sauvegarde sur le volume de stockage primaire ou secondaire, toutes les copies Snapshot primaires et secondaires sont marquées comme vérifiées.
+
+Une licence SnapRestore est requise pour vérifier les copies de sauvegarde sur les volumes de stockage secondaire SnapMirror et SnapVault.

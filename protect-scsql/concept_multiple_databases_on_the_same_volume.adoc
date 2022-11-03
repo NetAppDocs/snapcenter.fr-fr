@@ -1,0 +1,16 @@
+---
+permalink: protect-scsql/concept_multiple_databases_on_the_same_volume.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez placer toutes les bases de données sur le même volume, car la stratégie de sauvegarde a une option permettant de définir le maximum de bases de données par sauvegarde \(la valeur par défaut est 100\).' 
+---
+= Plusieurs bases de données sur un même volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez placer toutes les bases de données sur le même volume, car la stratégie de sauvegarde a une option permettant de définir le maximum de bases de données par sauvegarde (la valeur par défaut est 100).
+
+Par exemple, si vous disposez de 200 bases de données dans le même volume, deux copies Snapshot sont créées avec 100 bases de données dans chacune des deux copies Snapshot.

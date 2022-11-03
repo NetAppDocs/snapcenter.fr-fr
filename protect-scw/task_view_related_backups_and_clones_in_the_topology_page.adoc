@@ -1,0 +1,75 @@
+---
+permalink: protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html 
+sidebar: sidebar 
+keywords:  
+summary: Lorsque vous préparez une ressource à sauvegarder ou à cloner une ressource, vous pouvez afficher une représentation graphique de toutes les sauvegardes et clones sur le stockage primaire et secondaire. Sur la page topologie, vous pouvez voir toutes les sauvegardes et clones disponibles pour la ressource ou le groupe de ressources sélectionné. Vous pouvez afficher les détails de ces sauvegardes et clones, puis les sélectionner pour effectuer des opérations de protection des données. 
+---
+= Afficher les sauvegardes et clones associés sur la page topologie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous préparez une ressource à sauvegarder ou à cloner une ressource, vous pouvez afficher une représentation graphique de toutes les sauvegardes et clones sur le stockage primaire et secondaire. Sur la page topologie, vous pouvez voir toutes les sauvegardes et clones disponibles pour la ressource ou le groupe de ressources sélectionné. Vous pouvez afficher les détails de ces sauvegardes et clones, puis les sélectionner pour effectuer des opérations de protection des données.
+
+*À propos de cette tâche*
+
+Vous pouvez consulter les icônes suivantes dans la vue gérer les copies pour déterminer si les sauvegardes et les clones sont disponibles sur le stockage principal ou secondaire (copies en miroir ou copies du coffre-fort).
+
+* image:../media/topology_primary_storage.gif["icône stockage principal"] affiche le nombre de sauvegardes et de clones disponibles sur le stockage principal.
+* image:../media/topology_mirror_secondary_storage.gif["Icône du miroir du stockage secondaire"] Affiche le nombre de sauvegardes et de clones mis en miroir sur le système de stockage secondaire à l'aide de la technologie SnapMirror.
++
+
+NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume de type miroir-coffre-fort sont affichés dans la vue topologique, mais le nombre de sauvegardes du miroir dans la vue topologique n'inclut pas la sauvegarde flexible de version.
+
+* image:../media/topology_vault_secondary_storage.gif["icône de coffre-fort secondaire"] Affiche le nombre de sauvegardes et de clones répliqués sur le système de stockage secondaire à l'aide de la technologie SnapVault.
++
+** Le nombre de sauvegardes affichées inclut les sauvegardes supprimées du stockage secondaire. Par exemple, si vous avez créé 6 sauvegardes à l'aide d'une stratégie pour ne conserver que 4 sauvegardes, le nombre de sauvegardes affichées est 6.
+** Si vous avez effectué une mise à niveau à partir de SnapCenter 1.1, les clones du système secondaire (mise en miroir ou coffre-fort) ne sont pas affichés sous copies miroir ou copies du coffre-fort dans la page topologie. Tous les clones créés à l'aide de SnapCenter 1.1 sont affichés sous les copies locales dans SnapCenter 3.0.
+
+
+
+
+
+NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume de type miroir-coffre-fort sont affichés dans la vue topologique, mais le nombre de sauvegardes du miroir dans la vue topologique n'inclut pas la sauvegarde flexible de version.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez la ressource ou le groupe de ressources dans la liste déroulante *Affichage*.
+. Sélectionnez la ressource dans la vue Détails de la ressource ou dans la vue Détails du groupe de ressources.
++
+Si la ressource est protégée, la page topologique de la ressource sélectionnée s'affiche.
+
+. Consultez la fiche récapitulative pour connaître le nombre de sauvegardes et de clones disponibles sur les stockages primaire et secondaire.
++
+La section carte récapitulative affiche le nombre total de sauvegardes et de clones. Pour la base de données Oracle uniquement, la section carte de résumé affiche également le nombre total de sauvegardes de journaux.
+
++
+Cliquez sur le bouton Actualiser pour afficher un décompte précis.
+
+. Dans la vue gérer les copies, cliquez sur *sauvegardes* ou *clones* à partir du stockage primaire ou secondaire pour afficher les détails d'une sauvegarde ou d'un clone.
++
+Le détail des sauvegardes et des clones est affiché sous forme de tableau.
+
+. Sélectionnez la sauvegarde dans le tableau, puis cliquez sur les icônes de protection des données pour effectuer des opérations de restauration, de clonage, de renommage et de suppression.
++
+
+NOTE: Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent sur le système de stockage secondaire.
+
++
+Si vous utilisez des plug-ins personnalisés SnapCenter, vous ne pouvez pas renommer les sauvegardes qui se trouvent sur le système de stockage principal.
+
++
+** Si vous sélectionnez une sauvegarde d'une ressource ou d'un groupe de ressources Oracle, vous pouvez également effectuer des opérations de montage et de démontage.
+** Si vous avez sélectionné une sauvegarde des journaux d'une ressource ou d'un groupe de ressources Oracle, vous pouvez effectuer des opérations de renommage, de montage, de démontage et de suppression.
+** Si vous utilisez le module SnapCenter Plug-ins Package pour Linux et que vous avez catalogué la sauvegarde à l'aide d'Oracle Recovery Manager (RMAN), vous ne pouvez pas renommer ces sauvegardes cataloguées.
+
+
+. Pour supprimer un clone, sélectionnez-le dans le tableau, puis cliquez sur image:../media/delete_icon.gif[""] pour supprimer le clone.
+
+
+*Exemple de sauvegarde et de clones sur le stockage primaire*
+
+image:../media/topology_backups_and_clones_primary_storage.gif["Vue topologique des sauvegardes et des clones du stockage primaire."]

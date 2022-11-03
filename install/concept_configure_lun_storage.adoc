@@ -1,0 +1,109 @@
+---
+permalink: install/concept_configure_lun_storage.html 
+sidebar: sidebar 
+keywords: LUN storage, iSCSI, 
+summary: Vous pouvez utiliser SnapCenter pour configurer une LUN connectée à un port FC ou à un port iSCSI. Vous pouvez également utiliser SnapCenter pour connecter un LUN existant à un hôte Windows. 
+---
+= Configurer le stockage LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour configurer une LUN connectée à un port FC ou à un port iSCSI. Vous pouvez également utiliser SnapCenter pour connecter un LUN existant à un hôte Windows.
+
+Les LUN sont l'unité de stockage de base dans une configuration SAN. L'hôte Windows voit les LUN de votre système comme des disques virtuels. Pour plus d'informations, voir http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanconf/home.html["Guide de configuration du SAN ONTAP 9"^].
+
+
+
+== Établir une session iSCSI
+
+Si vous utilisez iSCSI pour vous connecter à une LUN, vous devez établir une session iSCSI avant de créer la LUN pour activer la communication.
+
+*Avant de commencer*
+
+* Vous devez avoir défini le nœud du système de stockage comme cible iSCSI.
+* Vous devez avoir démarré le service iSCSI sur le système de stockage. http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["En savoir plus >>"^]
+
+
+*À propos de cette tâche*
+
+Vous pouvez établir une session iSCSI uniquement entre les mêmes versions IP, soit d'IPv6 vers IPv6, soit d'IPv4 vers IPv4.
+
+Vous pouvez utiliser une adresse IPv6 lien-local pour la gestion des sessions iSCSI et pour la communication entre un hôte et une cible uniquement lorsque les deux se trouvent dans le même sous-réseau.
+
+Si vous modifiez le nom d'un initiateur iSCSI, l'accès aux cibles iSCSI est affecté. Après avoir modifié le nom, vous devrez peut-être reconfigurer les cibles auxquelles l'initiateur a accès afin qu'il puisse reconnaître le nouveau nom. Vous devez vous assurer de redémarrer l'hôte après avoir modifié le nom d'un initiateur iSCSI.
+
+Si votre hôte dispose de plusieurs interfaces iSCSI, une fois que vous avez établi une session iSCSI vers SnapCenter à l'aide d'une adresse IP sur la première interface, vous ne pouvez pas établir de session iSCSI à partir d'une autre interface avec une autre adresse IP.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Dans la page hôtes, cliquez sur *session iSCSI*.
+. Dans la liste déroulante *Storage Virtual machine*, sélectionnez la machine virtuelle de stockage (SVM) pour la cible iSCSI.
+. Dans la liste déroulante *Host*, sélectionnez l'hôte de la session.
+. Cliquez sur *établir session*.
++
+L'assistant d'établissement de session s'affiche.
+
+. Dans l'assistant établir une session, identifiez la cible :
++
+|===
+| Dans ce champ... | Entrer... 
+
+
+ a| 
+Nom du nœud cible
+ a| 
+Nom du nœud de la cible iSCSI
+
+S'il existe un nom de nœud cible existant, le nom est affiché en lecture seule.
+
+
+
+ a| 
+Adresse du portail cible
+ a| 
+L'adresse IP du portail réseau cible
+
+
+
+ a| 
+Port du portail cible
+ a| 
+Port TCP du portail réseau cible
+
+
+
+ a| 
+Adresse du portail de l'initiateur
+ a| 
+L'adresse IP du portail réseau de l'initiateur
+
+|===
+. Lorsque vous êtes satisfait de vos entrées, cliquez sur *connexion*.
++
+SnapCenter établit la session iSCSI.
+
+. Répétez cette procédure pour établir une session pour chaque cible.
+
+
+
+
+== Déconnectez une session iSCSI
+
+Il peut arriver que vous deviez déconnecter une session iSCSI d'une cible avec laquelle vous disposez de plusieurs sessions.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Dans la page hôtes, cliquez sur *session iSCSI*.
+. Dans la liste déroulante *Storage Virtual machine*, sélectionnez la machine virtuelle de stockage (SVM) pour la cible iSCSI.
+. Dans la liste déroulante *Host*, sélectionnez l'hôte de la session.
+. Dans la liste des sessions iSCSI, sélectionnez la session à déconnecter et cliquez sur *déconnecter session*.
+. Dans la boîte de dialogue déconnecter la session, cliquez sur *OK*.
++
+SnapCenter déconnecte la session iSCSI.
+
+

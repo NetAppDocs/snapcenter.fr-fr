@@ -1,0 +1,66 @@
+---
+permalink: protect-sce/task_reseed_a_passive_exchange_node_replica.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous devez réamorcer une copie de réplica, par exemple lorsqu"une copie est corrompue, vous pouvez réamorcer la dernière sauvegarde à l"aide de la fonction de réamorçage dans SnapCenter.' 
+---
+= Réamorçage d'un réplica de nœud Exchange passif
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous devez réamorcer une copie de réplica, par exemple lorsqu'une copie est corrompue, vous pouvez réamorcer la dernière sauvegarde à l'aide de la fonction de réamorçage dans SnapCenter.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez utiliser SnapCenter Server 4.1 ou version ultérieure et Plug-in pour Exchange 4.1 ou version ultérieure.
++
+Le réamorçage d'une réplique n'est pas pris en charge dans les versions SnapCenter antérieures à 4.1.
+
+* Vous devez avoir créé une sauvegarde de la base de données à réamorçage.
+
+
+|===
+
+
+| *Meilleure pratique:* pour éviter d'être retardé entre les nœuds, nous vous recommandons soit de créer une nouvelle sauvegarde avant d'effectuer une opération de réamorçage, soit de choisir l'hôte avec la dernière sauvegarde. 
+|===
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez *le plug-in Microsoft Exchange Server* dans la liste.
+. Sur la page Ressources, sélectionnez l'option appropriée dans la liste Afficher :
++
+|===
+| Option | Description 
+
+
+ a| 
+Pour réamorcer une seule base de données
+ a| 
+Sélectionnez *Database* dans la liste Affichage.
+
+
+
+ a| 
+Pour réamorcer les bases de données dans un DAG
+ a| 
+Sélectionnez *Database Availability Group* dans la liste View.
+
+|===
+. Sélectionnez la ressource à réamorçage.
+. Dans la page gérer les copies, cliquez sur *Reseed*.
+. Dans la liste des copies de bases de données malsaines de l'assistant de réamorçage, sélectionnez celle que vous voulez réamorcer, puis cliquez sur *Suivant*.
+. Dans la fenêtre hôte, sélectionnez l'hôte avec la sauvegarde à partir de laquelle vous souhaitez réamorcer, puis cliquez sur *Suivant*.
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Vous pouvez afficher l'état du travail en développant le panneau activité au bas de la page.
++
+
+NOTE: L'opération de réamorçage n'est pas prise en charge si la copie passive de la base de données réside sur une solution de stockage non NetApp.
+
+

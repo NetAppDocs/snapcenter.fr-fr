@@ -1,0 +1,71 @@
+= 
+:allow-uri-read: 
+
+
+Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent.
+
+*À propos de cette tâche*
+
+* Vous ne pouvez pas effectuer l'opération de fractionnement de clone sur un clone intermédiaire.
++
+Par exemple, après avoir créé clone1 à partir d'une sauvegarde de base de données, vous pouvez créer une sauvegarde de clone1, puis cloner cette sauvegarde (clone2). Après avoir créé clone2, clone1 est un clone intermédiaire et vous ne pouvez pas effectuer l'opération de séparation de clone sur clone1. Toutefois, vous pouvez réaliser l'opération de séparation des clones sur clone2.
+
++
+Après avoir divisé le clone2, vous pouvez effectuer l'opération de fractionnement de clone sur clone1 car clone1 n'est plus le clone intermédiaire.
+
+* Lorsque vous fractionnez un clone, les copies de sauvegarde et les tâches de clonage du clone sont supprimées.
+* Pour plus d'informations sur les limites des opérations de fractionnement de clonage, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guide de gestion du stockage logique ONTAP 9"^].
+* Assurez-vous que le volume ou l'agrégat du système de stockage est en ligne.
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Sur la page Ressources, sélectionnez l'option appropriée dans la liste Afficher :
++
+|===
+| Option | Description 
+
+
+ a| 
+Des applications de base de données
+ a| 
+Sélectionnez *Database* dans la liste Affichage.
+
+
+
+ a| 
+Pour les systèmes de fichiers
+ a| 
+Sélectionnez *Path* dans la liste vue.
+
+|===
+. Sélectionnez la ressource appropriée dans la liste.
++
+La page topologie de ressources s'affiche.
+
+. Dans la vue gérer les copies, sélectionnez la ressource clonée (par exemple, la base de données ou la LUN), puis cliquez sur *image:../media/split_cone.gif[""]*.
+. Vérifiez la taille estimée du clone à diviser et l'espace requis disponible sur l'agrégat, puis cliquez sur *Start*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
++
+L'opération de fractionnement du clone cesse de répondre si le service SMCore redémarre. Vous devez exécuter la cmdlet Stop-SmJob pour arrêter l’opération de fractionnement du clone, puis recommencer l’opération de fractionnement du clone.
+
++
+Si vous voulez un temps d'interrogation plus long ou plus court pour vérifier si le clone est divisé ou non, vous pouvez modifier la valeur du paramètre _CloneSplitStatusCheckPollTime_ dans le fichier _SMCoreServiceHost.exe.config_ pour définir l'intervalle de temps pour que SMCore interroge l'état de l'opération de fractionnement du clone. La valeur est exprimée en millisecondes et la valeur par défaut est 5 minutes.
+
++
+Par exemple :
+
++
+[listing]
+----
+<add key="CloneSplitStatusCheckPollTime" value="300000" />
+----
++
+L'opération de démarrage du fractionnement du clone échoue si la sauvegarde, la restauration ou un autre clone est en cours d'exécution. Redémarrez l'opération de fractionnement de clone uniquement une fois les opérations en cours d'exécution terminées.
+
+
+
+*Plus d'informations*
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["Le clone SnapCenter ou une vérification échoue avec un agrégat"]

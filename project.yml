@@ -1,0 +1,112 @@
+---
+settings:
+  name: SnapCenter Software 4.7
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  versions:
+  - name: Logiciel SnapCenter
+    url: "/snapcenter"
+    version-number: '4.7'
+  - name: Logiciel SnapCenter
+    url: "/snapcenter-46"
+    version-number: '4.6'
+  - name: Logiciel SnapCenter
+    url: "/snapcenter-45"
+    version-number: '4.5'
+  langs: fr-fr,us-en,ja-jp,zh-cn,zh-tw,ko-kr,de-de
+sidebar:
+  entries:
+  - title: Documentation sur le logiciel SnapCenter 4.7
+    url: "/index.html"
+  - title: Notes de mise à jour
+    url: "/release-notes.html"
+  - section: concept
+  - section: install
+  - section: protect-scsql
+  - section: protect-hana
+  - section: protect-sco
+  - section: protect-scw
+  - section: protect-sce
+  - section: protect-scc
+  - section: admin
+  - section: upgrade
+  - section: uninstall
+  - section: sc-automation
+  - title: Mentions légales
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: Commencez
+    links:
+    - title: Notes de mise à jour
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883299
+    - title: Découvrez SnapCenter
+      url: "/concept/concept_snapcenter_overview.html"
+    - title: Référence rapide pour protéger les bases de données SQL Server
+      url: "/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html"
+    - title: Mettez à niveau les plug-ins SnapCenter Server et SnapCenter
+      url: "/upgrade/upgrade_workflow.html"
+  - title: Installez le serveur SnapCenter
+    links:
+    - title: Licences requises
+      url: "/install/concept_snapcenter_licenses.html"
+    - title: Configurez les ports
+      url: "/install/reference_connection_and_port_requirements.html"
+    - title: Installez le serveur SnapCenter
+      url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+    - title: Configurer la haute disponibilité à l'aide de F5
+      url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
+    - title: Reprise après incident de SnapCenter Server
+      url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"
+  - title: Protection des bases de données Microsoft SQL Server
+    links:
+    - title: Installez le plug-in SnapCenter pour la base de données Microsoft SQL
+        Server
+      url: "/protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html"
+    - title: Créez des règles pour sauvegarder des bases de données SQL Server
+      url: "/protect-scsql/task_create_backup_policies_for_sql_server_databases.html"
+    - title: Sauvegarder les bases de données SQL Server
+      url: "/protect-scsql/task_back_up_sql_resources.html"
+    - title: Reprise après incident du plug-in SnapCenter pour SQL Server
+      url: "/protect-scsql/task_disaster_recovery_scsql.html"
+  - title: Protection des bases de données SAP HANA
+    links:
+    - title: Installez le plug-in SnapCenter pour la base de données SAP HANA
+      url: "/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html"
+    - title: Créez des règles pour sauvegarder les bases de données SAP HANA
+      url: "/protect-hana/task_create_backup_policies_for_sap_hana_databases.html"
+    - title: Sauvegarde des bases de données SAP HANA
+      url: "/protect-hana/task_back_up_sap_hana_databases.html"
+  - title: Protection des bases de données Oracle
+    links:
+    - title: Installez le plug-in SnapCenter pour la base de données Oracle
+      url: "/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html"
+    - title: Créez des règles pour sauvegarder des bases de données Oracle
+      url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
+    - title: Sauvegarde des bases de données Oracle
+      url: "/protect-sco/task_back_up_oracle_resources.html"
+  - title: Protéger les bases de données sur VMware
+    links:
+    - title: En savoir plus sur le plug-in SnapCenter pour VMware vSphere
+      url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html
+    - title: Déployez le plug-in SnapCenter pour VMware vSphere
+      url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html
+  - title: Communauté sur les blogs
+    links:
+    - title: Blog NetApp - SnapCenter
+      url: https://blog.netapp.com/tag/snapcenter/
+    - title: Communauté NetApp - SnapCenter
+      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
+  - title: Ressources supplémentaires
+    links:
+    - title: Guide de référence de l'applet de commande
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300
+    - title: Guide de référence sur les commandes
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301
+    - title: Documentation relative aux versions antérieures de SnapCenter
+      url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
+    - title: Base de connaissances NetApp - SnapCenter
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

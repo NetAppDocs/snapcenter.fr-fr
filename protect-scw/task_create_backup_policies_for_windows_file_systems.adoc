@@ -1,0 +1,169 @@
+---
+permalink: protect-scw/task_create_backup_policies_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez créer une nouvelle stratégie de sauvegarde pour les ressources avant d"utiliser SnapCenter pour sauvegarder des systèmes de fichiers Windows, ou vous pouvez créer une nouvelle stratégie de sauvegarde au moment de créer un groupe de ressources ou de sauvegarder une ressource.' 
+---
+= Créez des stratégies de sauvegarde pour les systèmes de fichiers Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer une nouvelle stratégie de sauvegarde pour les ressources avant d'utiliser SnapCenter pour sauvegarder des systèmes de fichiers Windows, ou vous pouvez créer une nouvelle stratégie de sauvegarde au moment de créer un groupe de ressources ou de sauvegarder une ressource.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir défini votre stratégie de sauvegarde. link:task_define_a_backup_strategy_for_windows_file_systems.html["En savoir plus >>"^]
+* Vous devez avoir préparé pour la protection des données,
++
+Pour préparer la protection des données, vous devez réaliser des tâches telles que l'installation de SnapCenter, l'ajout d'hôtes, la détection de ressources et la création de connexions de serveurs virtuels de stockage (SVM).
+
+* Si vous répliquez des copies Snapshot sur un stockage secondaire miroir ou vault, l'administrateur SnapCenter doit avoir attribué les SVM à vous pour les volumes source et de destination.
+* Si vous souhaitez exécuter les scripts PowerShell dans les scripts prescripteurs et postscripts, définissez la valeur du paramètre usePowerProcessforScripts sur true dans le fichier web.config.
++
+La valeur par défaut est FALSE
+
+
+
+*À propos de cette tâche*
+
+* Le CHEMIN_SCRIPTS est défini à l'aide de la clé pré-défini WindowsScriptsDirectory située dans le fichier SMCoreServiceHost.exe.Config de l'hôte du plug-in.
++
+Si nécessaire, vous pouvez modifier ce chemin et redémarrer le service SMcore. Il est recommandé d'utiliser le chemin par défaut pour la sécurité.
+
++
+La valeur de la clé peut être affichée à partir de Swagger via l'API : API /4.7/configsettings
+
++
+Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
+
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *stratégies*.
+. Pour déterminer si vous pouvez utiliser une stratégie existante, sélectionnez le nom de la stratégie, puis cliquez sur *Détails*.
++
+Après avoir passé en revue les stratégies existantes, vous pouvez effectuer l'une des opérations suivantes :
+
++
+** Utiliser une stratégie existante.
+** Copier une stratégie existante et modifier la configuration de la règle.
+** Création d'une nouvelle règle.
+
+
+. Pour créer une nouvelle stratégie, cliquez sur *Nouveau*.
+. Dans la page Nom, entrez le nom de la stratégie et une description.
+. Dans la page Options de sauvegarde, effectuez les tâches suivantes :
++
+.. Sélectionnez un paramètre de sauvegarde.
++
+|===
+| Option | Description 
+
+
+ a| 
+Sauvegarde cohérente avec le système de fichiers
+ a| 
+Choisissez cette option si vous souhaitez que SnapCenter arrête le lecteur sur lequel réside le système de fichiers avant le début de l'opération de sauvegarde, puis reprenne le lecteur après la fin de l'opération de sauvegarde.
+
+
+
+ a| 
+Sauvegarde cohérente en cas de panne du système de fichiers
+ a| 
+Choisissez cette option si vous ne souhaitez pas que SnapCenter arrête le lecteur de disque sur lequel réside le système de fichiers.
+
+|===
+.. Sélectionnez une fréquence de planification (également appelée type de stratégie).
++
+La stratégie spécifie uniquement la fréquence de sauvegarde. La planification de protection spécifique pour la sauvegarde est définie dans le groupe de ressources. Par conséquent, au moins deux groupes de ressources peuvent partager la même stratégie et la même fréquence de sauvegarde, mais ont des programmes de sauvegarde différents.
+
++
+
+NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
+
+
+
+. Sur la page Retention, spécifiez les paramètres de conservation pour les sauvegardes à la demande et pour chaque fréquence d'horaire sélectionnée.
++
+|===
+| Option | Description 
+
+
+ a| 
+Nombre total de copies Snapshot à conserver
+ a| 
+Sélectionnez cette option si vous souhaitez spécifier le nombre de copies Snapshot stockées par SnapCenter avant de les supprimer automatiquement.
+
+
+
+ a| 
+Supprimez les copies Snapshot antérieures à
+ a| 
+Sélectionnez cette option si vous souhaitez spécifier le nombre de jours pendant lesquels SnapCenter conserve une copie de sauvegarde avant de la supprimer.
+
+|===
++
+
+IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, définissez le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de réplications sur 1, l'opération de conservation peut échouer. En effet, la première copie Snapshot de référence est la copie Snapshot de référence de la relation SnapVault jusqu'à ce que la nouvelle copie Snapshot soit répliquée sur la cible.
+
++
+
+NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+
+. Dans la page réplication, spécifiez la réplication vers le système de stockage secondaire :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Mettez à jour SnapMirror après avoir créé une copie Snapshot locale
+ a| 
+Sélectionnez cette option pour créer des copies miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
+
+
+
+ a| 
+Mettez à jour la SnapVault après la création d'une copie Snapshot
+ a| 
+Sélectionnez cette option pour effectuer la réplication de sauvegarde disque à disque.
+
+
+
+ a| 
+Deuxième étiquette de police
+ a| 
+Sélectionnez une étiquette Snapshot.
+
+En fonction de l'étiquette de copie Snapshot que vous sélectionnez, ONTAP applique la règle de conservation des copies Snapshot secondaires correspondant à l'étiquette.
+
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+
+
+ a| 
+Nombre de tentatives d'erreur
+ a| 
+Saisissez le nombre de tentatives de réplication qui doivent se produire avant l'interruption du processus.
+
+|===
++
+
+NOTE: Il est recommandé de configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter la limite maximale des copies Snapshot sur le stockage secondaire.
+
+. Dans la page script, entrez le chemin d'accès du prescripteur ou du PostScript que vous souhaitez que le serveur SnapCenter s'exécute avant ou après l'opération de sauvegarde, respectivement, et un délai d'attente que SnapCenter attend pour que le script s'exécute avant l'expiration du délai.
++
+Par exemple, vous pouvez exécuter un script pour mettre à jour les traps SNMP, automatiser les alertes et envoyer des logs.
+
++
+
+NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou de partages. Le chemin doit être relatif au CHEMIN_SCRIPTS.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

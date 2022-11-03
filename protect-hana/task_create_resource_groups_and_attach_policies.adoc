@@ -1,0 +1,210 @@
+---
+permalink: protect-hana/task_create_resource_groups_and_attach_policies.html 
+sidebar: sidebar 
+keywords: run as 
+summary: Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. Un groupe de ressources est requis pour toute tâche de protection des données. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter. 
+---
+= Créer des groupes de ressources et attacher des stratégies
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. Un groupe de ressources est requis pour toute tâche de protection des données. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter.
+
+*À propos de cette tâche*
+
+Pour créer des sauvegardes de réplication du système SAP HANA, il est recommandé d'ajouter toutes les ressources du système SAP HANA dans un groupe de ressources. Cela garantit une sauvegarde transparente en mode basculement/retour arrière.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, cliquez sur *Nouveau groupe de ressources*.
+. Dans la page Nom, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom
+ a| 
+Entrez un nom pour le groupe de ressources.
+
+
+NOTE: Le nom du groupe de ressources ne doit pas dépasser 250 caractères.
+
+
+
+ a| 
+Étiquettes
+ a| 
+Entrez un ou plusieurs libellés qui vous aideront à rechercher ultérieurement le groupe de ressources.
+
+Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de ressources, vous pourrez rechercher par la suite tous les groupes de ressources associés à la balise RH.
+
+
+
+ a| 
+Utilisez le format de nom personnalisé pour la copie Snapshot
+ a| 
+Cochez cette case, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+
+Par exemple, clienttext_Resource group_policy_hostname ou Resource group_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+
+|===
+. Dans la page Ressources, sélectionnez un nom d'hôte dans la liste déroulante *hôte* et le type de ressource dans la liste déroulante *Type de ressource*.
++
+Cela aide à filtrer les informations affichées à l'écran.
+
+. Sélectionnez les ressources dans la section *Ressources disponibles*, puis cliquez sur la flèche vers la droite pour les déplacer dans la section *Ressources sélectionnées*.
+. Dans la page Paramètres de l'application, procédez comme suit :
++
+.. Cliquez sur la flèche *backups* pour définir des options de sauvegarde supplémentaires :
++
+Activez la sauvegarde de groupe de cohérence et effectuez les tâches suivantes :
+
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Permet d'attendre la fin de l'opération Snapshot du groupe de cohérence
+ a| 
+Sélectionnez *urgent*, *Moyen* ou *relâché* pour spécifier le temps d'attente de l'opération de copie Snapshot.
+
+Urgent = 5 secondes, Moyen = 7 secondes et détendu = 20 secondes.
+
+
+
+ a| 
+Désactivez la synchronisation WAFL
+ a| 
+Sélectionnez cette option pour éviter de forcer un point de cohérence WAFL.
+
+|===
++
+image:../media/application_settings.gif[""]
+
+.. Cliquez sur la flèche *scripts* et entrez les commandes avant et après pour les opérations de mise en veille, de copie Snapshot et de mise en veille. Vous pouvez également saisir les pré-commandes à exécuter avant de quitter en cas de défaillance.
+.. Cliquez sur la flèche *configurations personnalisées* et entrez les paires clé-valeur personnalisées requises pour toutes les opérations de protection des données utilisant cette ressource.
++
+|===
+| Paramètre | Réglage | Description 
+
+
+ a| 
+ARCHIVE_LOG_ENABLE
+ a| 
+(O/N)
+ a| 
+Permet à la gestion des journaux d'archive de supprimer les journaux d'archive.
+
+
+
+ a| 
+ARCHIVAGE_LOG_RÉTENTION
+ a| 
+nombre_de_jours
+ a| 
+Indique le nombre de jours pendant lesquels les journaux d'archive sont conservés.
+
+Ce paramètre doit être supérieur ou égal à NTAP_SNAPSHOT_ RETENTIONS.
+
+
+
+ a| 
+ARCHIVE_LOG_DIR
+ a| 
+change_info_répertoire/logs
+ a| 
+Indique le chemin d'accès au répertoire contenant les journaux d'archive.
+
+
+
+ a| 
+ARCHIVE_LOG_EXT
+ a| 
+extension_fichier
+ a| 
+Spécifie la longueur d'extension du fichier journal d'archives.
+
+Par exemple, si le journal d'archives est log_backup_0_0_0_0.161518551942 9 et si la valeur file_extension est 5, l'extension du journal conserve 5 chiffres, soit 16151.
+
+
+
+ a| 
+ARCHIVE_LOG_RÉCURSIVE_SE ARCH
+ a| 
+(O/N)
+ a| 
+Permet la gestion des journaux d'archivage dans les sous-répertoires.
+
+Vous devez utiliser ce paramètre si les journaux d'archivage sont situés sous des sous-répertoires.
+
+|===
++
+
+NOTE: Les paires de clé à valeur personnalisée sont prises en charge pour les systèmes du plug-in SAP HANA Linux et ne sont pas prises en charge pour la base de données SAP HANA enregistrée en tant que plug-in centralisé Windows.
+
+.. Cliquez sur la flèche *Snapshot Copy Tool* pour sélectionner l'outil de création de copies Snapshot :
++
+|===
+| Les fonctions que vous recherchez... | Alors... 
+
+
+ a| 
+SnapCenter pour utiliser le plug-in pour Windows et placer le système de fichiers dans un état cohérent avant de créer une copie Snapshot. Pour les ressources Linux, cette option n'est pas applicable.
+ a| 
+Sélectionnez *SnapCenter avec cohérence du système de fichiers*.
+
+Cette option ne s'applique pas au plug-in SnapCenter pour base de données SAP HANA.
+
+
+
+ a| 
+SnapCenter pour créer une copie Snapshot au niveau du stockage
+ a| 
+Sélectionnez *SnapCenter sans cohérence du système de fichiers*.
+
+
+
+ a| 
+Pour saisir la commande à exécuter sur l'hôte pour créer des copies Snapshot.
+ a| 
+Sélectionnez *autre*, puis entrez la commande à exécuter sur l'hôte pour créer une copie Snapshot.
+
+|===
+
+
+. Dans la page stratégies, effectuez les opérations suivantes :
++
+.. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
++
+
+NOTE: Vous pouvez également créer une stratégie en cliquant sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+
++
+Les stratégies sont répertoriées dans la section Configuration des planifications pour les stratégies sélectionnées.
+
+.. Dans la colonne configurer les programmes, cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* pour la stratégie que vous souhaitez configurer.
+.. Dans la boîte de dialogue Ajouter des planifications pour la stratégie _policy_name_, configurez le programme, puis cliquez sur *OK*.
++
+Où, nom_stratégie est le nom de la règle que vous avez sélectionnée.
+
++
+Les planifications configurées sont répertoriées dans la colonne *programmes appliqués*.
+
++
+Les planifications de sauvegardes tierces ne sont pas prises en charge lorsqu'elles se chevauchent avec les planifications de sauvegarde SnapCenter.
+
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Le serveur SMTP doit être configuré dans *Paramètres* > *Paramètres globaux*.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

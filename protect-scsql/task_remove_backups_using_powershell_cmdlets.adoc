@@ -1,0 +1,39 @@
+---
+permalink: protect-scsql/task_remove_backups_using_powershell_cmdlets_for_sql.html 
+sidebar: sidebar 
+keywords: backups 
+summary: 'Vous pouvez utiliser l"applet de commande Remove-SmBackup pour supprimer des sauvegardes si vous n"en avez plus besoin pour d"autres opérations de protection des données.' 
+---
+= Suppression des sauvegardes à l'aide des applets de commande PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Vous pouvez utiliser l'applet de commande Remove-SmBackup pour supprimer des sauvegardes si vous n'en avez plus besoin pour d'autres opérations de protection des données.
+
+Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+*Étapes*
+
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. Supprimez une ou plusieurs sauvegardes à l'aide de la cmdlet Remove-SmBackup.
++
+Cet exemple supprime deux sauvegardes à l'aide de leurs ID de sauvegarde :
+
++
+[listing]
+----
+Remove-SmBackup -BackupIds 3,4
+Remove-SmBackup
+Are you sure want to remove the backup(s).
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+----
+

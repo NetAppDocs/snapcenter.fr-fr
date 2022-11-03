@@ -1,0 +1,74 @@
+---
+permalink: admin/concept_manage_ems_data_collection.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez planifier et gérer la collecte de données EMS (Event Management System) à l"aide des applets de commande PowerShell. La collecte des données EMS implique la collecte de détails sur le serveur SnapCenter, les modules du plug-in SnapCenter installés, les hôtes et des informations similaires, puis leur envoi à une machine virtuelle de stockage ONTAP spécifiée \(SVM\).' 
+---
+= Gérer la collecte de données EMS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez planifier et gérer la collecte de données EMS (Event Management System) à l'aide des applets de commande PowerShell. La collecte des données EMS implique la collecte de détails sur le serveur SnapCenter, les modules du plug-in SnapCenter installés, les hôtes et des informations similaires, puis leur envoi à un SVM (Storage Virtual machine) ONTAP spécifié.
+
+
+NOTE: L'utilisation de l'UC du système est élevée lorsque la tâche de collecte des données est en cours. Le taux d'utilisation du processeur reste élevé tant que l'opération est en cours, quelle que soit la taille des données.
+
+
+
+== Arrêter la collecte de données EMS
+
+La collecte de données EMS est activée par défaut et s'exécute tous les sept jours après la date d'installation. Vous pouvez désactiver la collecte de données à tout moment à l'aide de la cmdlet PowerShell _Disable-SmDataCollectionEMS_.
+
+*Étapes*
+
+. À partir d'une ligne de commande PowerShell, établissez une session avec SnapCenter en entrant _Open-SmConnection_.
+. Désactivez la collecte de données EMS en entrant _Disable-SmDataCollectionEms_.
+
+
+
+
+== Démarrer la collecte de données EMS
+
+La collecte de données EMS est activée par défaut et est planifiée pour s'exécuter tous les sept jours à compter de la date d'installation. Si vous l'avez désactivé, vous pouvez relancer la collecte de données EMS en utilisant la commande _Enable-SmDataCollectionEMS_ cmdlet.
+
+L'autorisation Generate-autosupport-log des événements Data ONTAP a été accordée à l'utilisateur de SVM (Storage Virtual machine).
+
+*Étapes*
+
+. À partir d'une ligne de commande PowerShell, établissez une session avec SnapCenter en entrant _Open-SmConnection_.
+. Activez la collecte de données EMS en entrant _Enable-SmDataCollectionEMS_.
+
+
+
+
+== Modifier la planification de la collecte de données EMS et le SVM cible
+
+Vous pouvez utiliser les applets de commande PowerShell pour modifier la planification de la collecte de données EMS ou la machine virtuelle de stockage cible (SVM).
+
+*Étapes*
+
+. À partir d'une ligne de commande PowerShell, pour établir une session avec SnapCenter, entrez l'applet de commande _Open-SmConnection_.
+. Pour modifier la cible de collecte de données EMS, entrez la commande _set-SmDataCollectionEmsTarget_ cmdlet.
+. Pour modifier le planning de collecte de données EMS, entrez la commande _set-SmDataCollectionEmsSchedule_ cmdlet.
+
+
+
+
+== Surveiller l'état de la collecte de données EMS
+
+Vous pouvez surveiller l'état de votre collecte de données EMS à l'aide de plusieurs applets de commande PowerShell. Vous pouvez obtenir des informations sur le planning, la cible de machine virtuelle de stockage et l'état.
+
+*Étapes*
+
+. À partir d'une ligne de commande PowerShell, établissez une session avec SnapCenter en entrant _Open-SmConnection_.
+. Récupérez des informations sur le planning de collecte de données EMS en entrant _get-SmDataCollectionEmsSchedule_.
+. Récupérez des informations sur l'état de la collecte de données EMS en entrant _get-SmDataCollectionEmsStatus_.
+. Récupérez des informations sur la cible de collecte de données EMS en entrant _get-SmDataCollectionEmsTarget_.
+
+
+*Plus d'informations*
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

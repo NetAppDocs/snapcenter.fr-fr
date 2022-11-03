@@ -1,0 +1,50 @@
+---
+permalink: admin/task_delete_clones.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez supprimer les clones si vous les trouvez devenus superflus. 
+---
+= Supprimer les clones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer les clones si vous les trouvez devenus superflus.
+
+*À propos de cette tâche*
+
+Vous ne pouvez pas supprimer des clones qui agissent comme la source pour d'autres clones.
+
+Par exemple, si la base de données de production est db1, la base de données clone1 est clonée à partir de la sauvegarde de db1, puis clone1 est protégée. La base de données clone2 est clonée à partir de la sauvegarde de clone1. Si vous décidez de supprimer clone1, vous devez d'abord supprimer clone2, puis supprimer clone1.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez la ressource ou le groupe de ressources dans la liste déroulante *Affichage*.
+. Sélectionnez la ressource ou le groupe de ressources dans la liste.
++
+La page topologie de ressource ou de groupe de ressources s'affiche.
+
+. Dans la vue gérer les copies, sélectionnez *clones* dans les systèmes de stockage primaire ou secondaire (mis en miroir ou répliqué).
+. Sélectionnez le clone, puis cliquez sur image:../media/delete_icon.gif[""].
++
+Si vous supprimez des clones de base de données SAP HANA, effectuez les opérations suivantes dans la page Delete Clone :
+
++
+.. Dans le champ *Pre clone delete*, entrez les commandes à exécuter avant de supprimer le clone.
+.. Dans le champ *Unmount*, entrez la commande pour démonter le clone avant de supprimer le clone.
+
+
+. Cliquez sur *OK*.
+
+
+*Après la fin*
+
+Parfois, les systèmes de fichiers ne sont pas supprimés. Vous devez augmenter la valeur du paramètre CLONE_DELETE_DELAY en exécutant la commande suivante :``./sccli Set-SmConfigSettings``
+
+
+NOTE: Le paramètre CLONE_DELETE_DELAY indique le nombre de secondes d'attente après la suppression du clone d'application et avant de lancer la suppression du système de fichiers.
+
+Après avoir modifié la valeur du paramètre, redémarrer le service SnapCenter Plug-in Loader (SPL).

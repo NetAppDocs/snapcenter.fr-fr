@@ -1,0 +1,71 @@
+---
+permalink: protect-sce/task_determine_whether_exchange_resources_are_available_for_backup_sce.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 'Les ressources sont les bases de données, les groupes de disponibilité de base de données Exchange gérés par les plug-ins que vous avez installés. Vous pouvez ajouter ces ressources aux groupes de ressources de sorte que vous puissiez effectuer des tâches de protection des données, mais vous devez d"abord identifier les ressources disponibles. La détermination des ressources disponibles permet également de vérifier que l"installation du plug-in s"est déroulée correctement.' 
+---
+= Déterminez si des ressources Exchange sont disponibles pour la sauvegarde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les ressources sont les bases de données, les groupes de disponibilité de base de données Exchange gérés par les plug-ins que vous avez installés. Vous pouvez ajouter ces ressources aux groupes de ressources de sorte que vous puissiez effectuer des tâches de protection des données, mais vous devez d'abord identifier les ressources disponibles. La détermination des ressources disponibles permet également de vérifier que l'installation du plug-in s'est déroulée correctement.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir déjà terminé des tâches telles que l'installation de SnapCenter Server, l'ajout d'hôtes, la création de connexions au système de stockage, l'ajout d'informations d'identification et l'installation du plug-in pour Exchange.
+* Pour tirer parti des fonctionnalités du logiciel Single Mailbox Recovery, vous devez avoir localisé votre base de données active sur le serveur Exchange Server sur lequel le logiciel Single Mailbox Recovery est installé.
+* Si les bases de données résident sur des LUN RDM VMware, vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter. Le https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["Documentation du plug-in SnapCenter pour VMware vSphere"] a plus d'informations.
+
+
+*À propos de cette tâche*
+
+* Vous ne pouvez pas sauvegarder les bases de données lorsque l'option *Etat général* de la page Détails est définie sur non disponible pour la sauvegarde. L'option *Etat général* est définie sur non disponible pour la sauvegarde lorsque l'un des éléments suivants est vrai :
++
+** Les bases de données ne se trouvent pas sur un LUN NetApp.
+** Les bases de données ne sont pas dans un état normal.
++
+Les bases de données ne sont pas à l'état normal lorsqu'elles sont en montage, démontage, réamorçage ou récupération en attente.
+
+
+
+* Si vous disposez d'un groupe de disponibilité de base de données (DAG), vous pouvez sauvegarder toutes les bases de données du groupe en exécutant la tâche de sauvegarde à partir du DAG.
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez *Microsoft Exchange Server* dans la liste déroulante des plug-ins située dans le coin supérieur gauche de la page Ressources.
+. Dans la page Ressources, sélectionnez *Database*, *Database Availability Group* ou *Resource Group* dans la liste déroulante *View*.
++
+Toutes les bases de données et les fichiers DAG sont affichés avec leurs noms DAG ou d'hôte au format FQDN, ce qui vous permet de distinguer entre plusieurs bases de données.
+
++
+Cliquez sur image:../media/filter_icon.gif[""] Et sélectionnez le nom d'hôte et le serveur Exchange pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.gif[""] pour fermer le volet de filtre.
+
+. Cliquez sur *Actualiser les ressources*.
++
+Les ressources récemment ajoutées, renommées ou supprimées sont mises à jour dans l'inventaire du serveur SnapCenter.
+
++
+
+IMPORTANT: Vous devez actualiser les ressources si les bases de données sont renommées en dehors de SnapCenter.
+
++
+Les ressources s'affichent avec des informations telles que le nom de la ressource, le nom du groupe de disponibilité de la base de données, le serveur dans lequel la base de données est actuellement active, le serveur avec copies, l'heure de la dernière sauvegarde et l'état global.
+
++
+** Si la base de données se trouve sur un stockage non-NetApp, la colonne État global n'est pas disponible pour la sauvegarde.
++
+Dans un DAG, si la copie de la base de données active se trouve sur un stockage non NetApp et si au moins une copie de base de données passive se trouve sur un stockage NetApp, elle n'est pas protégée dans la colonne *global Status*.
+
++
+Vous ne pouvez pas effectuer d'opérations de protection des données sur une base de données se résidant sur un type de stockage non NetApp.
+
+** Si la base de données se trouve sur du stockage NetApp et n'est pas protégée, elle ne sera pas protégée dans la colonne *global Status*.
+** Si la base de données se trouve sur un système de stockage NetApp et est protégée, l'interface utilisateur affiche le message Backup not run dans la colonne *global Status*.
+** Si la base de données se trouve sur un système de stockage NetApp et est protégée et si la sauvegarde est déclenchée pour la base de données, l'interface utilisateur affiche le message Backup succeeded (sauvegarde réussie) dans la colonne *global Status* (État général).
+
+
+

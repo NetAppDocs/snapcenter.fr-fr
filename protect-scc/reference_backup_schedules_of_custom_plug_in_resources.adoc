@@ -1,0 +1,30 @@
+---
+permalink: protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le facteur le plus important dans la détermination d"un planning de sauvegarde est le taux de modification de la ressource. Le nombre de journaux d"archivage que SnapCenter doit utiliser pour la restauration, donc le plus souvent pour les sauvegardes, accélère les opérations de restauration.' 
+---
+= Planification de sauvegarde des ressources de plug-in personnalisées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le facteur le plus important dans la détermination d'un planning de sauvegarde est le taux de modification de la ressource. Le nombre de journaux d'archivage que SnapCenter doit utiliser pour la restauration, donc le plus souvent pour les sauvegardes, accélère les opérations de restauration.
+
+Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. D'autres facteurs entrent en ligne de compte l'importance des ressources pour votre entreprise, votre contrat de niveau de service et votre objectif de point de récupération (RPO).
+
+Le SLA définit le niveau de service attendu et traite de nombreux problèmes liés aux services, notamment la disponibilité et les performances de celui-ci. L'objectif RPO définit la stratégie selon laquelle les fichiers doivent être récupérés depuis le stockage de sauvegarde afin que les opérations régulières puissent reprendre après une défaillance. Les niveaux de service et le RPO contribuent à la stratégie de protection des données.
+
+Les planifications de sauvegarde ont deux parties, comme suit :
+
+* Fréquence des sauvegardes
++
+La fréquence des sauvegardes (fréquence d'exécution des sauvegardes), également appelée type de planification pour certains plug-ins, fait partie d'une configuration de règles. Par exemple, vous pouvez configurer la fréquence des sauvegardes sous la forme horaire, quotidien, hebdomadaire ou mensuel. Vous pouvez accéder aux stratégies dans l'interface utilisateur graphique de SnapCenter en cliquant sur *Paramètres* > *stratégies*.
+
+* Planifications de sauvegarde
++
+Les planifications de sauvegarde (exactement quand les sauvegardes doivent être effectuées) font partie d'une configuration de ressource ou de groupe de ressources. Par exemple, si un groupe de ressources dispose d'une stratégie configurée pour les sauvegardes hebdomadaires, vous pouvez configurer la planification pour la sauvegarder tous les jeudis à 10 h 00 Vous pouvez accéder aux planifications de groupes de ressources dans l'interface utilisateur graphique SnapCenter en cliquant sur *Ressources*, puis en sélectionnant le plug-in approprié et en cliquant sur *Affichage* > *Groupe de ressources*.
+
+

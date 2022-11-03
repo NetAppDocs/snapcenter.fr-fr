@@ -1,0 +1,35 @@
+---
+permalink: protect-scsql/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 'Avant d"ajouter un hôte et d"installer les packages de plug-ins, vous devez respecter toutes les exigences.' 
+---
+= Conditions préalables à l'ajout d'hôtes et à l'installation du plug-in SnapCenter pour Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'ajouter un hôte et d'installer les packages de plug-ins, vous devez respecter toutes les exigences.
+
+* Si vous utilisez iSCSI, le service iSCSI doit être en cours d'exécution.
+* Vous devez disposer d'un utilisateur disposant de privilèges d'administrateur local avec des autorisations de connexion locales sur l'hôte distant.
+* Si vous gérez des nœuds de cluster dans SnapCenter, vous devez disposer d'un utilisateur disposant de privilèges d'administration sur tous les nœuds du cluster.
+* Vous devez disposer d'un utilisateur avec des autorisations sysadmin sur le serveur SQL.
++
+Le plug-in SnapCenter pour Microsoft SQL Server utilise l'infrastructure VDI Microsoft, qui requiert l'accès sysadmin.
+
++
+http://support.microsoft.com/kb/2926557/["Article 2926557 du support Microsoft : les opérations de sauvegarde et de restauration VDI SQL Server nécessitent des privilèges sysadmin"]
+
+* Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré ou si l'utilisateur appartient à un utilisateur de groupe de travail local, vous devez désactiver l'UAC sur l'hôte.
+* Si SnapManager pour Microsoft SQL Server est installé, vous devez avoir arrêté ou désactivé le service et les programmes.
++
+Si vous envisagez d'importer des tâches de sauvegarde ou de clonage dans SnapCenter, ne désinstallez pas SnapManager pour Microsoft SQL Server.
+
+* L'hôte doit être résolu au nom de domaine complet (FQDN) du serveur.
++
+Si le fichier hosts est modifié pour le rendre résolu et si le nom court et le FQDN sont spécifiés dans le fichier hosts, créez une entrée dans le fichier hosts SnapCenter au format suivant : <adresse_ip> <nom_hôte> <nom_hôte>
+
+

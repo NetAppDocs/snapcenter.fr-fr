@@ -1,0 +1,54 @@
+---
+permalink: protect-sco/task_split_an_oracle_database_clone.html 
+sidebar: sidebar 
+keywords: split a clone, split 
+summary: Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent. 
+---
+= Séparer un clone de base de données Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent.
+
+*À propos de cette tâche*
+
+* Vous ne pouvez pas effectuer l'opération de fractionnement de clone sur un clone intermédiaire.
++
+Par exemple, après avoir créé clone1 à partir d'une sauvegarde de base de données, vous pouvez créer une sauvegarde de clone1, puis cloner cette sauvegarde (clone2). Après avoir créé clone2, clone1 est un clone intermédiaire et vous ne pouvez pas effectuer l'opération de séparation de clone sur clone1. Toutefois, vous pouvez réaliser l'opération de séparation des clones sur clone2.
+
++
+Après avoir divisé le clone2, vous pouvez effectuer l'opération de fractionnement de clone sur clone1 car clone1 n'est plus le clone intermédiaire.
+
+* Lorsque vous fractionnez un clone, les copies de sauvegarde du clone sont supprimées.
+* Pour plus d'informations sur les limites des opérations de fractionnement de clonage, reportez-vous à la http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guide de gestion du stockage logique ONTAP 9"^].
+* Assurez-vous que le volume ou l'agrégat du système de stockage est en ligne.
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Database* dans la liste *View*.
+. Sélectionnez la ressource clonée (par exemple, la base de données ou la LUN), puis cliquez sur image:../media/split_cone.gif[""].
+. Vérifiez la taille estimée du clone à diviser et l'espace requis disponible sur l'agrégat, puis cliquez sur *Start*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
++
+L'opération de fractionnement de clone cesse de répondre si le service SMCore redémarre et si les bases de données sur lesquelles l'opération de fractionnement de clone ont été exécutées sont répertoriées sous forme de clones dans la page Ressources. Vous devez exécuter l'applet de commande _Stop-SmJob_ pour arrêter l'opération de fractionnement du clone, puis relancer l'opération de fractionnement du clone.
+
++
+Si vous souhaitez un temps d'interrogation plus long ou plus court pour vérifier si le clone est divisé ou non, vous pouvez modifier la valeur du paramètre CloneSplitStatusCheckPollTime dans le fichier SMCoreServiceHost.exe.config afin de définir l'intervalle de temps pour que SMCore interroge l'état de l'opération de fractionnement du clone. La valeur est exprimée en millisecondes et la valeur par défaut est 5 minutes.
+
++
+Par exemple :
+
++
+[listing]
+----
+<add key="CloneSplitStatusCheckPollTime" value="300000" />
+----
+
+
+
+IMPORTANT: L'opération de démarrage du fractionnement du clone échoue si la sauvegarde, la restauration ou le fractionnement d'un autre clone est en cours. Redémarrez l'opération de fractionnement de clone uniquement une fois les opérations en cours d'exécution terminées.

@@ -1,0 +1,195 @@
+---
+permalink: protect-scsql/task_restore_sql_server_database_backups.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser SnapCenter pour restaurer des bases de données SQL Server sauvegardées. La restauration de la base de données est un processus multiphase qui copie toutes les pages de données et de journaux d"une sauvegarde SQL Server spécifique vers une base de données spécifiée.' 
+---
+= Restaurez les sauvegardes des bases de données SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour restaurer des bases de données SQL Server sauvegardées. La restauration de la base de données est un processus multiphase qui copie toutes les pages de données et de journaux d'une sauvegarde SQL Server spécifique vers une base de données spécifiée.
+
+*À propos de cette tâche*
+
+* Vous pouvez restaurer les bases de données SQL Server sauvegardées sur une autre instance SQL Server sur le même hôte où la sauvegarde a été créée.
++
+Vous pouvez utiliser SnapCenter pour restaurer les bases de données SQL Server sauvegardées sur un autre chemin afin de ne pas remplacer une version de production.
+
+* SnapCenter peut restaurer les bases de données dans un cluster Windows sans mettre le groupe de clusters SQL Server hors ligne.
+* En cas de défaillance d'un cluster (opération de déplacement d'un groupe de clusters) lors d'une opération de restauration (par exemple, si le nœud qui possède les ressources tombe en panne), vous devez vous reconnecter à l'instance SQL Server, puis redémarrer l'opération de restauration.
+* Vous ne pouvez pas restaurer la base de données lorsque les utilisateurs ou les travaux de l'agent SQL Server accèdent à la base de données.
+* Vous ne pouvez pas restaurer les bases de données système sur un chemin alternatif.
+* Le CHEMIN_SCRIPTS est défini à l'aide de la clé pré-défini WindowsScriptsDirectory située dans le fichier SMCoreServiceHost.exe.Config de l'hôte du plug-in.
++
+Si nécessaire, vous pouvez modifier ce chemin et redémarrer le service SMcore. Il est recommandé d'utiliser le chemin par défaut pour la sécurité.
+
++
+La valeur de la clé peut être affichée à partir de Swagger via l'API : API /4.7/configsettings
+
++
+Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
+
+* La plupart des champs des pages de l'assistant de restauration sont explicites. Les informations suivantes décrivent les champs pour lesquels vous aurez peut-être besoin d'aide.
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Database* ou *Resource Group* dans la liste *View*.
+. Sélectionnez la base de données ou le groupe de ressources dans la liste.
++
+La page topologie s'affiche.
+
+. Dans la vue gérer les copies, sélectionnez *sauvegardes* dans le système de stockage.
+. Sélectionnez la sauvegarde dans la table, puis cliquez sur image:../media/restore_icon.gif["icône restaurer"] icône.
++
+image::../media/restoring_resource.gif[restauration des ressources]
+
+. Dans la page objectif de restauration, sélectionnez l'une des options suivantes :
++
+|===
+| Option | Description 
+
+
+ a| 
+Restaurez la base de données sur le même hôte où la sauvegarde a été créée
+ a| 
+Sélectionnez cette option si vous souhaitez restaurer la base de données sur le même serveur SQL où les sauvegardes sont effectuées.
+
+
+
+ a| 
+Restaurez la base de données sur un autre hôte
+ a| 
+Sélectionnez cette option si vous souhaitez que la base de données soit restaurée sur un autre serveur SQL dans le même hôte ou sur un hôte différent où des sauvegardes sont effectuées.
+
+Sélectionnez un nom d'hôte, indiquez un nom de base de données (facultatif), sélectionnez une instance et spécifiez les chemins de restauration.
+
+
+NOTE: L'extension de fichier fournie dans le chemin alternatif doit être identique à celle du fichier de base de données d'origine.
+
+Si l'option *Restaurer la base de données sur un autre hôte* n'est pas affichée dans la page Restaurer l'étendue, effacez le cache du navigateur.
+
+
+
+ a| 
+Restaurez la base de données à l'aide de fichiers de base de données existants
+ a| 
+Sélectionnez cette option si vous souhaitez que la base de données soit restaurée sur un autre serveur SQL dans le même hôte ou sur un hôte différent où des sauvegardes sont effectuées.
+
+Les fichiers de base de données doivent déjà être présents sur les chemins de fichier existants donnés. Sélectionnez un nom d'hôte, indiquez un nom de base de données (facultatif), sélectionnez une instance et spécifiez les chemins de restauration.
+
+|===
+. Dans la page étendue de la récupération, sélectionnez l'une des options suivantes :
++
+|===
+| Option | Description 
+
+
+ a| 
+Aucune
+ a| 
+Sélectionnez *aucun* si vous devez restaurer uniquement la sauvegarde complète sans journaux.
+
+
+
+ a| 
+Toutes les sauvegardes de journaux
+ a| 
+Sélectionnez *toutes les sauvegardes de journaux* sauvegarde à la minute pour restaurer toutes les sauvegardes de journaux disponibles après la sauvegarde complète.
+
+
+
+ a| 
+En journaliser les sauvegardes jusqu'à
+ a| 
+Sélectionnez *par sauvegardes de journaux* pour effectuer une opération de restauration ponctuelle, qui restaure la base de données en fonction des journaux de sauvegarde jusqu'à ce que le journal de sauvegarde avec la date sélectionnée.
+
+
+
+ a| 
+Par date spécifique jusqu'à
+ a| 
+Sélectionnez *par date spécifique jusqu'à* pour spécifier la date et l'heure après lesquelles les journaux de transactions ne sont pas appliqués à la base de données restaurée.
+
+Cette opération de restauration ponctuelle interrompt la restauration des entrées du journal de transactions enregistrées après la date et l'heure spécifiées.
+
+
+
+ a| 
+Utiliser le répertoire de journaux personnalisé
+ a| 
+Si vous avez sélectionné *toutes les sauvegardes de journaux*, *par sauvegarde de journaux* ou *par date spécifique jusqu'à* et que les journaux se trouvent à un emplacement personnalisé, sélectionnez *utiliser le répertoire de journaux personnalisé*, puis spécifiez l'emplacement du journal.
+
+
+NOTE: Le répertoire des journaux personnalisés n'est pas pris en charge pour la base de données des groupes de disponibilité.
+
+|===
+. Dans la page pré-opération, effectuez les opérations suivantes :
++
+.. Dans la page Options de pré-restauration, sélectionnez l'une des options suivantes :
++
+*** Sélectionnez *Ecraser la base de données du même nom pendant la restauration* pour restaurer la base de données du même nom.
+*** Sélectionnez *conserver les paramètres de réplication de base de données SQL* pour restaurer la base de données et conserver les paramètres de réplication existants.
+*** Sélectionnez *Créer une sauvegarde du journal de transactions avant la restauration* pour créer un journal de transactions avant le début de l'opération de restauration.
+*** Sélectionnez *Quitter la restauration si la sauvegarde du journal de transactions avant la restauration échoue* pour abandonner l'opération de restauration si la sauvegarde du journal de transactions échoue.
+
+
+.. Spécifiez les scripts facultatifs à exécuter avant d'effectuer une tâche de restauration.
++
+Vous pouvez par exemple exécuter un script pour mettre à jour les interruptions SNMP, automatiser les alertes, envoyer les journaux, etc.
+
++
+
+NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou de partages. Le chemin doit être relatif au CHEMIN_SCRIPTS.
+
+
+
+. Dans la page Post Ops, effectuez les opérations suivantes :
++
+.. Dans la section choisir l'état de la base de données une fois la restauration terminée, sélectionnez l'une des options suivantes :
++
+*** Sélectionnez *opérationnel, mais non disponible pour la restauration de journaux de transactions supplémentaires* si vous restaurez maintenant toutes les sauvegardes nécessaires.
++
+Il s'agit du comportement par défaut, qui laisse la base de données prête à l'emploi en revenant les transactions non validées. Vous ne pouvez pas restaurer d'autres journaux de transactions tant que vous n'avez pas créé de sauvegarde.
+
+*** Sélectionnez *non opérationnel, mais disponible pour la restauration de journaux transactionnels supplémentaires* pour laisser la base de données non opérationnelle sans reprise des transactions non validées.
++
+Des journaux de transactions supplémentaires peuvent être restaurés. Vous ne pouvez pas utiliser la base de données tant qu'elle n'a pas été restaurée.
+
+*** Sélectionnez *mode lecture seule, disponible pour la restauration de journaux transactionnels supplémentaires* pour quitter la base de données en mode lecture seule.
++
+Cette option annule les transactions non validées, mais enregistre les actions annulées dans un fichier de secours afin que les effets de récupération puissent être restaurés.
+
++
+Si l'option Annuler le répertoire est activée, davantage de journaux de transactions sont restaurés. Si l'opération de restauration du journal de transactions échoue, les modifications peuvent être annulées. La documentation de SQL Server contient des informations supplémentaires.
+
+
+
+.. Spécifiez les scripts facultatifs à exécuter après l'exécution d'une tâche de restauration.
++
+Vous pouvez par exemple exécuter un script pour mettre à jour les interruptions SNMP, automatiser les alertes, envoyer les journaux, etc.
+
++
+
+NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou de partages. Le chemin doit être relatif au CHEMIN_SCRIPTS.
+
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez le processus de restauration à l'aide de la page *Monitor* > *Jobs*.
+
+
+*Plus d'informations*
+
+link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["Restauration et restauration des ressources via les applets de commande PowerShell"]
+
+link:task_restore_a_sql_server_database_from_secondary_storage.html["Restaurer une base de données SQL Server à partir du stockage secondaire"]

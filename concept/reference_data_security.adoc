@@ -1,0 +1,53 @@
+---
+permalink: concept/reference_data_security.html 
+sidebar: sidebar 
+keywords: security,authentication, CA certificates 
+summary: 'SnapCenter utilise des fonctionnalités de sécurité et d"authentification strictes pour sécuriser vos données.' 
+---
+= Fonctions de sécurité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter utilise des fonctionnalités de sécurité et d'authentification strictes pour sécuriser vos données.
+
+SnapCenter comprend les fonctions de sécurité suivantes :
+
+* Toutes les communications avec SnapCenter utilisent HTTP over SSL (HTTPS).
+* Toutes les identifiants de SnapCenter sont protégés à l'aide d'un chiffrement AES (Advanced Encryption Standard).
+* SnapCenter utilise des algorithmes de sécurité conformes à la norme FIPS (Federal information Processing Standard).
+* SnapCenter prend en charge l'utilisation des certificats d'autorité de certification agréés fournis par le client.
+* SnapCenter 4.1.1 ou version ultérieure prend en charge la communication TLS (transport Layer Security) 1.2 avec ONTAP. Vous pouvez également utiliser la communication TLS 1.2 entre les clients et les serveurs.
+* SnapCenter prend en charge un certain nombre de suites de cryptage SSL pour assurer la sécurité dans toute la communication réseau.
++
+Pour plus d'informations, voir https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["Configuration de la suite de cryptage SSL prise en charge"].
+
+* SnapCenter est installé à l'intérieur du pare-feu de votre entreprise pour permettre l'accès au serveur SnapCenter et permettre la communication entre le serveur SnapCenter et les plug-ins.
+* L'accès en opération et l'API SnapCenter utilise des jetons chiffrés avec un chiffrement AES, qui expire au bout de 24 heures.
+* SnapCenter s'intègre à Windows Active Directory pour la connexion et le contrôle d'accès basé sur des rôles (RBAC) qui régissent les autorisations d'accès.
+* Les applets de commande SnapCenter PowerShell sont sécurisés pour la session.
+* Après une période d'inactivité par défaut de 15 minutes, SnapCenter vous avertit que vous serez déconnecté dans 5 minutes. Au bout de 20 minutes d'inactivité, SnapCenter vous déconnecte et vous devez vous reconnecter. Vous pouvez modifier la période de déconnexion.
+* La connexion est temporairement désactivée après 5 tentatives de connexion incorrectes ou plus.
+
+
+
+
+== Présentation du certificat CA
+
+Le programme d'installation du serveur SnapCenter active la prise en charge centralisée du certificat SSL pendant l'installation. Pour améliorer la communication sécurisée entre le serveur et le plug-in, SnapCenter prend en charge l'utilisation des certificats d'autorité de certification autorisés fournis par le client.
+
+Vous devez déployer des certificats d'autorité de certification après avoir installé le serveur SnapCenter et les plug-ins correspondants. Pour plus d'informations, voir link:../install/reference_generate_CA_certificate_CSR_file.html["Générer le fichier CSR de certificat CA"].
+
+Vous pouvez également déployer le certificat d'autorité de certification pour le plug-in SnapCenter pour VMware vSphere. Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#create-and-import-certificates["Créer et importer des certificats"^].
+
+
+
+== Authentification multifacteur (MFA)
+
+L'authentification multifacteur fait appel à un fournisseur d'identité tiers via le langage SAML pour gérer les sessions utilisateur. Cette fonctionnalité améliore la sécurité de l'authentification en ayant la possibilité d'utiliser plusieurs facteurs tels que le TOTP, la biométrie, les notifications push, etc., ainsi que le nom d'utilisateur et le mot de passe existants. De plus, il permet au client d'utiliser ses propres fournisseurs d'identité d'utilisateur pour obtenir un identifiant d'utilisateur unifié (SSO) dans son portefeuille.
+
+L'authentification multifacteur s'applique uniquement à la connexion à l'interface utilisateur du serveur SnapCenter. Les identifiants de connexion sont authentifiés via le IDP Active Directory Federation Services (AD FS). Vous pouvez configurer différents facteurs d'authentification sur AD FS. SnapCenter est le fournisseur de services. Vous devez configurer SnapCenter en tant que fournisseur de stockage basé dans AD FS. Pour activer MFA dans SnapCenter, vous aurez besoin des métadonnées AD FS.
+
+Pour plus d'informations sur l'activation de MFA, reportez-vous à la section link:../install/enable_multifactor_authentication.html["Activer l'authentification multifacteur"].

@@ -1,0 +1,39 @@
+---
+permalink: protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html 
+sidebar: sidebar 
+keywords: backups 
+summary: 'Vous pouvez utiliser l"applet de commande Remove-SmBackup pour nettoyer le nombre de sauvegardes pour les sauvegardes secondaires qui ne possèdent pas de copie Snapshot. Vous pouvez utiliser cette applet de commande lorsque le paramètre de conservation des copies Snapshot totales affiché dans la topologie gérer les copies ne correspond pas au paramètre de conservation des copies Snapshot de stockage secondaire.' 
+---
+= Nettoyez le nombre de sauvegardes secondaires à l'aide des applets de commande PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Vous pouvez utiliser l'applet de commande Remove-SmBackup pour nettoyer le nombre de sauvegardes pour les sauvegardes secondaires qui ne possèdent pas de copie Snapshot. Vous pouvez utiliser cette applet de commande lorsque le nombre total de copies Snapshot affichées dans la topologie gérer les copies ne correspond pas au paramètre de conservation des copies Snapshot de stockage secondaire.
+
+Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+*Étapes*
+
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. Nettoyez le nombre de sauvegardes secondaires à l'aide du paramètre -CleanuppyBackups.
++
+Dans cet exemple, nous nettoie le nombre de sauvegardes pour les sauvegardes secondaires, sans copie Snapshot :
+
++
+[listing]
+----
+Remove-SmBackup -CleanupSecondaryBackups
+Remove-SmBackup
+Are you sure want to remove the backup(s).
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+----
+

@@ -1,0 +1,289 @@
+---
+permalink: protect-sce/task_create_backup_policies_for_exchange_server_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez créer une stratégie de sauvegarde pour les ressources Exchange ou pour les groupes de ressources avant d"utiliser SnapCenter pour sauvegarder les ressources Microsoft Exchange Server, ou vous pouvez créer une stratégie de sauvegarde au moment de créer un groupe de ressources ou de sauvegarder une seule ressource.' 
+---
+= Créer des stratégies de sauvegarde pour les bases de données Exchange Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer une stratégie de sauvegarde pour les ressources Exchange ou pour les groupes de ressources avant d'utiliser SnapCenter pour sauvegarder les ressources Microsoft Exchange Server, ou vous pouvez créer une stratégie de sauvegarde au moment de créer un groupe de ressources ou de sauvegarder une seule ressource.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir défini votre stratégie de protection des données.
++
+Pour en savoir plus, consultez les informations sur la définition d'une stratégie de protection des données pour les bases de données Exchange.
+
+* Vous devez être prêt à préparer la protection des données en exécutant des tâches telles que l'installation d'SnapCenter, l'ajout d'hôtes, l'identification des ressources et la création de connexions du système de stockage.
+* Vous devez avoir actualisé (découvert) les ressources Exchange Server.
+* Si vous répliquez des copies Snapshot dans un miroir ou un coffre-fort, l'administrateur SnapCenter doit avoir attribué les serveurs virtuels de stockage (SVM) aux volumes source et aux volumes de destination.
+* Si vous voulez exécuter les scripts PowerShell dans les prescripteurs et les postscripts, vous devez définir la valeur de `usePowershellProcessforScripts` paramètre à vrai dans le `web.config` fichier.
++
+La valeur par défaut est FALSE
+
+
+
+*À propos de cette tâche*
+
+* Une stratégie de sauvegarde est un ensemble de règles qui régit la façon dont vous gérez et conservez les sauvegardes, ainsi que la fréquence de sauvegarde de la ressource ou du groupe de ressources. En outre, vous pouvez spécifier des paramètres de script. La définition d'options dans une stratégie permet de gagner du temps lorsque vous souhaitez réutiliser la stratégie pour un autre groupe de ressources.
+* La conservation complète des sauvegardes est spécifique à une règle donnée. Une base de données ou une ressource utilisant la stratégie A avec une conservation de sauvegarde complète de 4 conserve 4 sauvegardes complètes et n'a aucun effet sur la stratégie B pour la même base de données ou ressource, qui peut avoir une rétention de 3 pour conserver 3 sauvegardes complètes.
+* La conservation des sauvegardes de journaux est efficace pour toutes les stratégies et s'applique à toutes les sauvegardes de journaux d'une base de données ou d'une ressource. Par conséquent, lorsqu'une sauvegarde complète est effectuée à l'aide de la stratégie B, le paramètre de conservation des journaux affecte les sauvegardes des journaux créées par la stratégie A sur la même base de données ou ressource. De même, le paramètre de rétention des journaux de la stratégie A affecte les sauvegardes des journaux créées par la stratégie B sur la même base de données.
+* Le CHEMIN_SCRIPTS est défini à l'aide de la clé pré-défini WindowsScriptsDirectory située dans le fichier SMCoreServiceHost.exe.Config de l'hôte du plug-in.
++
+Si nécessaire, vous pouvez modifier ce chemin et redémarrer le service SMcore. Il est recommandé d'utiliser le chemin par défaut pour la sécurité.
+
++
+La valeur de la clé peut être affichée à partir de Swagger via l'API : API /4.7/configsettings
+
++
+Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
+
+
+
+|===
+
+
+| *Meilleure pratique:* il est préférable de configurer la stratégie de rétention secondaire en fonction du nombre de sauvegardes complètes et de journaux, globalement, que vous voulez conserver. Lorsque vous configurez des règles de conservation secondaires, gardez à l'esprit que lorsque les bases de données et les journaux se trouvent dans des volumes différents, chaque sauvegarde peut avoir trois copies Snapshot. Lorsque les bases de données et les journaux se trouvent dans le même volume, chaque sauvegarde peut avoir deux copies Snapshot. 
+|===
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *stratégies*.
+. Cliquez sur *Nouveau*.
+. Dans la page Nom, entrez le nom et la description de la stratégie.
+. Dans la page Type de sauvegarde, effectuez les opérations suivantes :
++
+.. Choisissez un type de sauvegarde :
++
+|===
+| Les fonctions que vous recherchez... | Procédez comme ça... 
+
+
+ a| 
+Sauvegardez les fichiers de base de données et les journaux de transactions requis
+ a| 
+Sélectionnez *sauvegarde complète et sauvegarde du journal*.
+
+Les bases de données sont sauvegardées par troncature de journaux, et tous les journaux sont sauvegardés, notamment les journaux tronqués.
+
+
+NOTE: Il s'agit du type de sauvegarde recommandé.
+
+
+
+ a| 
+Sauvegardez les fichiers de base de données et les journaux de transactions non validés
+ a| 
+Sélectionnez *sauvegarde complète*.
+
+Les bases de données sont sauvegardées par troncature de journal, et les journaux tronqués ne sont pas sauvegardés.
+
+
+
+ a| 
+Sauvegardez tous les journaux de transaction
+ a| 
+Sélectionnez *sauvegarde journal*.
+
+Tous les journaux de transactions du système de fichiers actif sont sauvegardés et il n'y a pas de troncature de journal.
+
+Un répertoire _scebackupinfo_ est créé sur le même disque que le journal live. Ce répertoire contient le pointeur vers les modifications incrémentielles de la base de données Exchange et il n'est pas équivalent aux fichiers journaux complets.
+
+
+
+ a| 
+Sauvegardez tous les fichiers de base de données et les journaux de transactions sans tronquer les fichiers journaux de transaction
+ a| 
+Sélectionnez *Copier sauvegarde*.
+
+Toutes les bases de données et tous les journaux sont sauvegardés, et il n'y a pas de troncature de journal. Généralement, ce type de sauvegarde est utilisé pour le réamorçage d'une réplique, pour le test ou le diagnostic d'un problème.
+
+|===
++
+
+NOTE: Vous devez définir l'espace requis pour les sauvegardes de journaux en fonction de la conservation complète des sauvegardes et non pas en fonction de la conservation à chaud (UTM).
+
+.. Dans la section Database Availability Group Settings, sélectionnez une action :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Sauvegarde des copies actives
+ a| 
+Sélectionnez cette option pour sauvegarder uniquement les copies actives de la base de données sélectionnée.
+
+Pour les groupes de disponibilité de base de données (DAG), cette option sauvegarde uniquement les copies actives de toutes les bases de données du DAG.
+
+Les copies passives ne sont pas sauvegardées.
+
+
+
+ a| 
+Sauvegarder les copies sur les serveurs à sélectionner au moment de la création des tâches de sauvegarde
+ a| 
+Sélectionnez cette option pour sauvegarder toutes les copies des bases de données sur les serveurs sélectionnés, actifs et passifs.
+
+Pour les fichiers DAG, cette option sauvegarde les copies actives et passives de toutes les bases de données des serveurs sélectionnés.
+
+|===
++
+
+NOTE: Dans les configurations en cluster, les sauvegardes sont conservées sur chaque nœud du cluster en fonction des paramètres de conservation définis dans la règle. Si le nœud propriétaire du cluster change, les sauvegardes du nœud propriétaire précédent seront conservées. La conservation s'applique uniquement au niveau des nœuds.
+
+.. Dans la section fréquence d'horaires, sélectionnez un ou plusieurs types de fréquence : *sur demande*, *horaire*, *quotidien*, *hebdomadaire* et *mensuel*.
++
+
+NOTE: Vous pouvez spécifier le planning (date de début, date de fin) des opérations de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais vous permet d'affecter des programmes de sauvegarde différents à chaque stratégie.
+
++
+
+NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
+
+
+
+. Dans la page Retention, configurez les paramètres de rétention.
++
+Les options affichées dépendent du type de sauvegarde et du type de fréquence que vous avez précédemment sélectionnés.
+
++
+
+NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+
++
+
+IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+
++
+.. Dans la section Paramètres de conservation des sauvegardes de journaux, sélectionnez l'une des options suivantes :
++
+|===
+| Les fonctions que vous recherchez... | Procédez comme ça... 
+
+
+ a| 
+Conservation d'un nombre spécifique de sauvegardes de journaux
+ a| 
+Sélectionnez *nombre de sauvegardes complètes pour lesquelles les journaux sont conservés* et spécifiez le nombre de sauvegardes complètes pour lesquelles vous souhaitez pouvoir être restaurées à la minute.
+
+La conservation des données en moins d'une minute s'applique à la sauvegarde des journaux créée via une sauvegarde complète ou une sauvegarde des journaux. Par exemple, si les paramètres de conservation UTM sont configurés pour conserver les sauvegardes des journaux des 5 dernières sauvegardes complètes, les sauvegardes des journaux des 5 dernières sauvegardes complètes sont conservées.
+
+Les dossiers de journaux créés dans le cadre de sauvegardes complètes et de journaux sont automatiquement supprimés dans le cadre d'UTM. Vous ne pouvez pas supprimer les dossiers de journal manuellement. Par exemple, si le paramètre de conservation de sauvegarde complète ou complète et de sauvegarde des journaux est défini sur 1 mois et que la rétention UTM est définie sur 10 jours, le dossier de journaux créé dans le cadre de ces sauvegardes sera supprimé conformément à UTM. Par conséquent, seuls les dossiers journaux de 10 jours seront présents et toutes les autres sauvegardes sont marquées pour la restauration à un point dans le temps.
+
+Vous pouvez définir la valeur de rétention UTM sur 0, si vous ne souhaitez pas effectuer une restauration en moins d'une minute. Cela active l'opération de restauration instantanée.
+
+*Meilleure pratique :* il est préférable que le paramètre soit égal au paramètre pour les copies Snapshot totales (sauvegardes complètes) dans la section Paramètres de conservation de la sauvegarde complète. Cela permet de s'assurer que les fichiers journaux sont conservés pour chaque sauvegarde complète.
+
+
+
+ a| 
+Conservation des copies de sauvegarde pendant un nombre spécifique de jours
+ a| 
+Sélectionnez l'option *conserver les sauvegardes du journal pour le dernier* et indiquez le nombre de jours pour conserver les copies de sauvegarde du journal.
+
+Les sauvegardes de journaux ne prennent pas plus de jours, mais sont conservées.
+
+|===
++
+Si vous avez sélectionné *Log backup* comme type de sauvegarde, les sauvegardes de journaux sont conservées dans le cadre des paramètres de conservation à la minute pour les sauvegardes complètes.
+
+.. Dans la section Paramètres de conservation des sauvegardes complètes, sélectionnez l'une des options suivantes pour les sauvegardes à la demande, puis sélectionnez-en une pour les sauvegardes complètes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Conservation d'un nombre spécifique de copies Snapshot
+ a| 
+Si vous souhaitez spécifier le nombre de sauvegardes complètes à conserver, sélectionnez l'option *Total des copies Snapshot à conserver* et spécifiez le nombre de copies Snapshot (sauvegardes complètes) à conserver.
+
+Si le nombre de sauvegardes complètes dépasse le nombre spécifié, les sauvegardes complètes dépassant le nombre spécifié sont supprimées, les copies les plus anciennes étant supprimées en premier.
+
+
+
+ a| 
+Conservation des sauvegardes complètes pendant un nombre spécifique de jours
+ a| 
+Sélectionnez l'option *conserver les copies Snapshot pour* et spécifiez le nombre de jours pour conserver les copies Snapshot (sauvegardes complètes).
+
+|===
++
+
+NOTE: Si vous disposez d'une base de données avec uniquement des sauvegardes de journaux et qu'aucune sauvegarde complète sur un hôte dans une configuration DAG, les sauvegardes de journaux sont conservées de la manière suivante :
+
++
+*** Par défaut, SnapCenter trouve la sauvegarde complète la plus ancienne pour cette base de données dans tous les autres hôtes du DAG, et supprime toutes les sauvegardes des journaux de cet hôte qui ont été effectuées avant la sauvegarde complète.
+*** Vous pouvez ignorer le comportement de conservation par défaut ci-dessus pour une base de données sur un hôte d'un DAG avec uniquement des sauvegardes de journaux en ajoutant la clé *MaxBackupLogOnlyCountWithoutFullBackup* dans le fichier _C:\Program Files\NetApp\SnapCenter WebApp\web.config_.
++
+ <add key="MaxLogBackupOnlyCountWithoutFullBackup" value="10">
++
+Dans l'exemple, la valeur 10 signifie que vous conservez jusqu'à 10 sauvegardes de journaux sur l'hôte.
+
+
+
+
+
+. Dans la page réplication, sélectionnez une ou les deux options de réplication secondaire suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Mettez à jour SnapMirror après avoir créé une copie Snapshot locale
+ a| 
+Sélectionnez cette option pour conserver des copies en miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
+
+
+
+ a| 
+Mettez à jour SnapVault après avoir créé une copie Snapshot locale
+ a| 
+Sélectionnez cette option pour effectuer la réplication de sauvegarde disque à disque.
+
+
+
+ a| 
+Deuxième étiquette de police
+ a| 
+Sélectionnez une étiquette Snapshot.
+
+En fonction de l'étiquette de copie Snapshot que vous sélectionnez, ONTAP applique la règle de conservation des copies Snapshot secondaires correspondant à l'étiquette.
+
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+
+
+ a| 
+Nombre de tentatives d'erreur
+ a| 
+Saisissez le nombre de tentatives de réplication qui doivent se produire avant l'interruption du processus.
+
+|===
++
+
+NOTE: Il est recommandé de configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter la limite maximale des copies Snapshot sur le stockage secondaire.
+
+. Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript qui doivent être exécutés avant ou après l'opération de sauvegarde, respectivement.
++
+** Les arguments de sauvegarde du prescripteur incluent « »$Database' et «»$ServerInstance' ».
+** Les arguments de sauvegarde PostScript incluent ""$Database""", ""$Serverinstance""", ""$BackupName""", ""$logDirectory""" et ""$Logsnapshot""".
++
+Vous pouvez exécuter un script pour mettre à jour les interruptions SNMP, automatiser les alertes, envoyer des journaux, etc.
+
++
+
+NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou de partages. Le chemin doit être relatif au CHEMIN_SCRIPTS.
+
+
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

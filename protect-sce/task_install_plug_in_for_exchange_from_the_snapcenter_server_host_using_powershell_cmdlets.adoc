@@ -1,0 +1,39 @@
+---
+permalink: protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez installer le plug-in pour Exchange à partir de l"interface utilisateur graphique de SnapCenter. Si vous ne souhaitez pas utiliser l"interface graphique, vous pouvez utiliser les applets de commande PowerShell sur l"hôte SnapCenter Server ou sur un hôte distant.' 
+---
+= Installez le plug-in pour Exchange à partir de l'hôte SnapCenter Server à l'aide des applets de commande PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez installer le plug-in pour Exchange à partir de l'interface utilisateur graphique de SnapCenter. Si vous ne souhaitez pas utiliser l'interface graphique, vous pouvez utiliser les applets de commande PowerShell sur l'hôte SnapCenter Server ou sur un hôte distant.
+
+*Ce dont vous aurez besoin*
+
+* Le serveur SnapCenter doit avoir été installé et configuré.
+* Vous devez être un administrateur local sur l'hôte ou un utilisateur disposant de privilèges d'administration.
+* Vous devez être un utilisateur affecté à un rôle disposant des autorisations de plug-in, d'installation et de désinstallation, telles que SnapCenter Admin.
+* Vous devez avoir vérifié les conditions d'installation requises et les types de configurations prises en charge avant d'installer le plug-in pour Exchange.
+* L'hôte sur lequel vous souhaitez installer le plug-in pour Exchange doit être un hôte Windows.
+
+
+*Étapes*
+
+. Sur l'hôte du serveur SnapCenter, établissez une session à l'aide de l'applet de commande _Open-SmConnection_, puis saisissez vos informations d'identification.
+. Ajoutez l'hôte sur lequel vous souhaitez installer le plug-in pour Exchange à l'aide de l'applet de commande _Add-SmHost_ avec les paramètres requis.
++
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
++
+L'hôte peut être un hôte autonome ou un DAG. Si vous spécifiez un DAG, le paramètre _-IsDAG_ est requis.
+
+. Installez le plug-in pour Exchange à l'aide de l'applet de commande _Install-SmHostPackage_ avec les paramètres requis.
++
+Cette commande installe le plug-in pour Exchange sur l'hôte spécifié, puis enregistre le plug-in avec SnapCenter.
+
+

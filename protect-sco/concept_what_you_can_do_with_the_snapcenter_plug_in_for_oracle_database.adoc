@@ -1,0 +1,37 @@
+---
+permalink: protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html 
+sidebar: sidebar 
+keywords: backup, restore, clone, oracle database 
+summary: 'Vous pouvez utiliser le plug-in pour Oracle Database pour sauvegarder, vérifier, restaurer, récupérer, monter, Démonter et cloner les bases de données Oracle et leurs ressources. Vous pouvez également cataloguer ou annuler le catalogue des sauvegardes de base de données avec Oracle Recovery Manager (RMAN).' 
+---
+= Quelles sont les possibilités possibles grâce au plug-in pour Oracle Database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in SnapCenter pour base de données Oracle est un composant côté hôte du logiciel NetApp SnapCenter qui permet de gérer la protection des données des bases de données Oracle avec cohérence applicative.
+
+Le plug-in pour Oracle Database automatise la sauvegarde, le catalogage et le décatalogage grâce à Oracle Recovery Manager (RMAN), la vérification, le montage, le démontage, la restauration, Récupération et clonage de bases de données Oracle dans votre environnement SnapCenter. Le plug-in pour base de données Oracle installe le plug-in SnapCenter pour UNIX afin d'effectuer toutes les opérations de protection des données.
+
+Vous pouvez utiliser le plug-in pour Oracle Database afin de gérer les sauvegardes de bases de données Oracle exécutant des applications SAP. Cependant, l'intégration de SAP BR*Tools n'est pas prise en charge.
+
+* Sauvegardez les fichiers de données, les fichiers de contrôle et les fichiers journaux d'archivage.
++
+La sauvegarde n'est prise en charge qu'au niveau de la base de données du conteneur (CDB).
+
+* Restauration et récupération des bases de données, CDBS et des bases de données enfichables (PDB).
++
+La récupération incomplète des BDD n'est pas prise en charge.
+
+* Créer des clones de bases de données de production à un point dans le temps.
++
+Le clonage n'est pris en charge qu'au niveau CDB.
+
+* Vérifier immédiatement les sauvegardes.
+* Monter et démonter les sauvegardes de données et de journaux pour une opération de restauration.
+* Planifiez les opérations de sauvegarde et de vérification.
+* Contrôle de toutes les opérations.
+* Afficher les rapports relatifs aux opérations de sauvegarde, de restauration et de clonage.
+

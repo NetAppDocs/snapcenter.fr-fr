@@ -1,0 +1,30 @@
+---
+permalink: protect-scsql/reference_clone_sql_server_database_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez effectuer plusieurs tâches à l"aide du serveur SnapCenter avant de cloner les ressources de base de données à partir d"une sauvegarde. Le clonage de la base de données consiste à créer une copie instantanée d"une base de données de production ou de son jeu de sauvegarde. Vous pouvez cloner les bases de données pour tester les fonctionnalités qui doivent être implémentées en utilisant la structure et le contenu actuels de la base de données pendant les cycles de développement d"applications, pour utiliser les outils d"extraction et de manipulation des données lors du remplissage des data warehouses, ou pour récupérer les données qui ont été supprimées ou modifiées par erreur.' 
+---
+= Workflow de clonage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez effectuer plusieurs tâches à l'aide du serveur SnapCenter avant de cloner les ressources de base de données à partir d'une sauvegarde. Le clonage de la base de données consiste à créer une copie instantanée d'une base de données de production ou de son jeu de sauvegarde. Vous pouvez cloner les bases de données pour tester les fonctionnalités qui doivent être implémentées en utilisant la structure et le contenu actuels de la base de données pendant les cycles de développement d'applications, pour utiliser les outils d'extraction et de manipulation des données lors du remplissage des data warehouses, ou pour récupérer les données qui ont été supprimées ou modifiées par erreur.
+
+Une opération de clonage de base de données génère des rapports basés sur les ID de travail.
+
+Le workflow suivant montre l'ordre dans lequel vous devez effectuer les opérations de clonage :
+
+image::../media/scsql_clone_workflow.png[Cloner le diagramme de workflow]
+
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration, de restauration, de vérification et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"]
+
+*Plus d'informations*
+
+link:task_clone_from_a_sql_server_database_backup.html["Clonage à partir d'une sauvegarde de base de données SQL Server"]
+
+link:task_perform_clone_lifecycle_management.html["Réaliser le cycle de vie des clones"]
+
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["Le clonage peut échouer ou prendre plus de temps avec la valeur TCP_TIMEOUT par défaut"]

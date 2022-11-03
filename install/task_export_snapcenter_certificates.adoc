@@ -1,0 +1,65 @@
+---
+permalink: install/task_export_snapcenter_certificates.html 
+sidebar: sidebar 
+keywords: exporting certificates 
+summary: Exporter les certificats SnapCenter. 
+---
+= Exporter les certificats SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+*Étapes*
+
+. Accédez à la console de gestion Microsoft (MMC), puis cliquez sur *fichier* > *Ajouter/Supprimer composant logiciel enfichable*.
+. Dans la fenêtre Ajouter ou supprimer des Snap-ins, sélectionnez *certificats*, puis cliquez sur *Ajouter*.
+. Dans la fenêtre du composant logiciel enfichable certificats, sélectionnez l'option *mon compte utilisateur*, puis cliquez sur *Terminer*.
+. Cliquez sur *Console Root* > *Certificates - Current User* > *Trusted Root Certification autorités* > *Certificates*.
+. Cliquez avec le bouton droit de la souris sur le certificat dont le nom est convivial SnapCenter, puis sélectionnez *toutes les tâches* > *Exporter* pour lancer l'assistant d'exportation.
+. Complétez l'assistant comme suit :
++
+|===
+| Dans cette fenêtre de l'assistant... | Procédez comme suit... 
+
+
+ a| 
+Exporter la clé privée
+ a| 
+Sélectionnez l'option *Oui, exportez la clé privée*, puis cliquez sur *Suivant*.
+
+
+
+ a| 
+Exporter le format de fichier
+ a| 
+N'apportez aucune modification ; cliquez sur *Suivant*.
+
+
+
+ a| 
+Sécurité
+ a| 
+Spécifiez le nouveau mot de passe à utiliser pour le certificat exporté, puis cliquez sur *Suivant*.
+
+
+
+ a| 
+Fichier à exporter
+ a| 
+Spécifiez un nom de fichier pour le certificat exporté (vous devez utiliser .pfx), puis cliquez sur *Suivant*.
+
+
+
+ a| 
+Exécution de l'assistant d'exportation de certificat
+ a| 
+Vérifiez le résumé, puis cliquez sur *Terminer* pour lancer l'exportation.
+
+|===
+
+
+*Résultats*
+
+Les certificats sont exportés au format .pfx.

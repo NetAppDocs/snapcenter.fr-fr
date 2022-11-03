@@ -1,0 +1,156 @@
+---
+sidebar: sidebar 
+permalink: sc-automation/concept_interpreting_an_api_response.html 
+keywords: http status code, error code 
+summary: 'Chaque requête d"API génère une réponse au client. Vous devez examiner la réponse pour déterminer si elle a réussi et récupérer des données supplémentaires si nécessaire.' 
+---
+= Interprétation d'une réponse API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Chaque requête d'API génère une réponse au client. Vous devez examiner la réponse pour déterminer si elle a réussi et récupérer des données supplémentaires si nécessaire.
+
+
+
+== Code d'état HTTP
+
+Les codes d'état HTTP utilisés par l'API REST de SnapCenter sont décrits ci-dessous.
+
+|===
+| Code | Description 
+
+
+| 200 | OK indique que les appels qui ne créent pas d'objet ont réussi. 
+
+
+| 201 | Un objet créé a été créé. L'en-tête d'emplacement de la réponse inclut l'identifiant unique de l'objet. 
+
+
+| 202 | Accepté Une tâche d'arrière-plan a été démarrée pour exécuter la demande, mais n'a pas encore été terminée. 
+
+
+| 400 | Demande incorrecte l'entrée de demande n'est pas reconnue ou est inappropriée. 
+
+
+| 401 | L'authentification utilisateur non autorisée a échoué. 
+
+
+| 403 | Accès interdit en raison d'une erreur d'autorisation (RBAC). 
+
+
+| 404 | Introuvable la ressource mentionnée dans la demande n'existe pas. 
+
+
+| 405 | Méthode non autorisée la méthode HTTP de la requête n'est pas prise en charge pour la ressource. 
+
+
+| 409 | Conflit une tentative de création d'un objet a échoué car un objet différent doit d'abord être créé ou l'objet demandé existe déjà. 
+
+
+| 500 | Erreur interne Une erreur interne générale s'est produite au niveau du serveur. 
+|===
+
+
+== En-têtes de réponse
+
+Plusieurs en-têtes sont inclus dans la réponse HTTP générée par le SnapCenter.
+
+
+
+=== Emplacement
+
+Lorsqu'un objet est créé, l'en-tête d'emplacement inclut l'URL complète du nouvel objet, y compris l'identifiant unique attribué à l'objet.
+
+
+
+=== Type de contenu
+
+Cela sera normalement `application/json`.
+
+
+
+== Corps de réponse
+
+Le contenu du corps de réponse résultant d'une requête API diffère selon l'objet, le type de traitement et le succès ou l'échec de la requête. La réponse est toujours affichée au format JSON.
+
+
+
+=== Objet unique
+
+Un objet peut être renvoyé avec un ensemble de champs en fonction de la requête. Par exemple, vous pouvez utiliser OBTENIR pour extraire les propriétés sélectionnées d'un cluster à l'aide de l'identifiant unique.
+
+
+
+=== Objets multiples
+
+Plusieurs objets d'une collection de ressources peuvent être renvoyés. Dans tous les cas, un format cohérent est utilisé avec `num_records` indique le nombre d'enregistrements et d'enregistrements contenant un tableau des instances d'objet. Par exemple, vous pouvez extraire les nœuds définis dans un cluster spécifique.
+
+
+
+=== Objet travail
+
+Si un appel API est traité de manière asynchrone, un objet travail est renvoyé, qui ancres la tâche d'arrière-plan. Par exemple, la demande DE CORRECTIF utilisée pour mettre à jour la configuration du cluster est traitée de manière asynchrone et renvoie un objet travail.
+
+
+
+=== Objet erreur
+
+Si une erreur se produit, un objet erreur est toujours renvoyé. Par exemple, vous recevrez une erreur lors de la tentative de modification d'un champ non défini pour un cluster.
+
+
+
+=== Vide
+
+Dans certains cas, aucune donnée n'est renvoyée et le corps de réponse inclut un objet JSON vide.
+
+
+
+== Erreurs
+
+Si une erreur se produit, un objet d'erreur est renvoyé dans le corps de réponse.
+
+
+
+=== Format
+
+Un objet d'erreur a le format suivant :
+
+....
+"error": {
+"message": "<string>",
+"code": <integer>[,
+"target": "<string>"]
+}
+....
+Vous pouvez utiliser la valeur de code pour déterminer le type ou la catégorie d'erreur générale, et le message pour déterminer l'erreur spécifique. Lorsqu'il est disponible, le champ cible inclut l'entrée utilisateur spécifique associée à l'erreur.
+
+
+
+=== Codes d'erreur courants
+
+Les codes d'erreur courants sont décrits dans le tableau suivant. Certains appels API peuvent inclure des codes d'erreur supplémentaires.
+
+|===
+| Code | Description 
+
+
+| 409 | Un objet ayant le même identifiant existe déjà. 
+
+
+| 400 | La valeur d'un champ n'est pas valide ou est manquante ou un champ supplémentaire a été fourni. 
+
+
+| 400 | L'opération n'est pas prise en charge. 
+
+
+| 405 | Impossible de trouver un objet avec l'identificateur spécifié. 
+
+
+| 403 | L'autorisation d'effectuer la demande est refusée. 
+
+
+| 409 | La ressource est en cours d'utilisation. 
+|===

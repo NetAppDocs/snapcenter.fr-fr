@@ -1,0 +1,78 @@
+---
+permalink: concept/concept_types_of_role_based_access_control_in_snapcenter.html 
+sidebar: sidebar 
+keywords: RBAC, roles, permissions, application-level RBAC, ONTAP permissions 
+summary: 'Le contrôle d"accès basé sur des rôles (RBAC) SnapCenter et les autorisations ONTAP permettent aux administrateurs SnapCenter de créer des rôles et de définir des autorisations d"accès. Cet accès géré de manière centralisée permet aux administrateurs d"applications de travailler en toute sécurité dans les environnements délégués.' 
+---
+= Types de RBAC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le contrôle d'accès basé sur des rôles (RBAC) SnapCenter et les autorisations ONTAP permettent aux administrateurs SnapCenter de déléguer le contrôle des ressources SnapCenter à différents utilisateurs ou groupes d'utilisateurs. Cet accès géré de manière centralisée permet aux administrateurs d'applications de travailler en toute sécurité dans les environnements délégués.
+
+Vous pouvez créer et modifier des rôles, ajouter un accès aux ressources aux utilisateurs à tout moment, mais lorsque vous configurez SnapCenter pour la première fois, vous devez ajouter au moins des utilisateurs ou des groupes Active Directory aux rôles, puis ajouter un accès aux ressources à ces utilisateurs ou groupes.
+
+
+NOTE: Vous ne pouvez pas utiliser SnapCenter pour créer des comptes d'utilisateur ou de groupe. Vous devez créer des comptes d'utilisateur ou de groupe dans Active Directory du système d'exploitation ou de la base de données.
+
+SnapCenter utilise les types suivants de contrôle d'accès basé sur les rôles :
+
+* RBAC SnapCenter
+* Plug-in RBAC SnapCenter (pour certains plug-ins)
+* RBAC au niveau des applications
+* Autorisations ONTAP
+
+
+
+
+== RBAC SnapCenter
+
+
+
+=== Rôles et autorisations
+
+SnapCenter propose des rôles prédéfinis avec des autorisations déjà attribuées. Vous pouvez affecter des utilisateurs ou des groupes d'utilisateurs à ces rôles. Vous pouvez également créer de nouveaux rôles et gérer les autorisations et les utilisateurs.
+
+*Affectation d'autorisations aux utilisateurs ou aux groupes*
+
+Vous pouvez attribuer des autorisations aux utilisateurs ou aux groupes pour accéder aux objets SnapCenter tels que les hôtes, les connexions de stockage et les groupes de ressources. Vous ne pouvez pas modifier les autorisations du rôle SnapCenterAdmin.
+
+Vous pouvez attribuer des autorisations RBAC aux utilisateurs et groupes au sein de la même forêt et aux utilisateurs appartenant à différentes forêts. Vous ne pouvez pas attribuer d'autorisations RBAC aux utilisateurs appartenant à des groupes imbriqués dans les forêts.
+
+
+NOTE: Si vous créez un rôle personnalisé, il doit contenir toutes les autorisations du rôle d'administrateur SnapCenter. Si vous copiez uniquement certaines autorisations, par exemple, l'ajout ou le retrait d'hôte, vous ne pouvez pas effectuer ces opérations.
+
+
+
+=== Authentification
+
+Les utilisateurs doivent fournir une authentification lors de la connexion, via l'interface utilisateur graphique ou via les applets de commande PowerShell. Si les utilisateurs sont membres de plusieurs rôles, après avoir saisi des informations d'identification, ils sont invités à spécifier le rôle qu'ils souhaitent utiliser. Les utilisateurs doivent également fournir une authentification pour l'exécution des API.
+
+
+
+== RBAC au niveau des applications
+
+SnapCenter utilise les identifiants pour vérifier que les utilisateurs SnapCenter autorisés disposent également des autorisations au niveau de l'application.
+
+Par exemple, si vous souhaitez effectuer des opérations de copie Snapshot et de protection des données dans un environnement SQL Server, vous devez définir des identifiants avec les identifiants Windows ou SQL appropriés. Le serveur SnapCenter authentifie les informations d'identification définies à l'aide de l'une ou l'autre méthode. Pour effectuer des opérations de copie Snapshot et de protection des données dans un environnement de système de fichiers Windows sur un système de stockage ONTAP, le rôle d'administrateur SnapCenter doit disposer de privilèges d'administration sur l'hôte Windows.
+
+De même, si vous souhaitez effectuer des opérations de protection des données sur une base de données Oracle et si l'authentification du système d'exploitation est désactivée dans l'hôte de la base de données, vous devez définir les informations d'identification avec la base de données Oracle ou les informations d'identification Oracle ASM. Le serveur SnapCenter authentifie les informations d'identification définies à l'aide de l'une de ces méthodes, en fonction de l'opération.
+
+
+
+== Plug-in SnapCenter pour VMware vSphere RBAC
+
+Si vous utilisez le plug-in SnapCenter pour la protection de données cohérente avec les machines virtuelles, vCenter Server offre un niveau supplémentaire de contrôle d'accès basé sur des rôles (RBAC). Le plug-in SnapCenter prend en charge le RBAC de vCenter Server et le RBAC d'Data ONTAP.
+
+Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["Plug-in SnapCenter pour VMware vSphere RBAC"^]
+
+
+
+== Autorisations ONTAP
+
+Vous devez créer un compte vsadmin avec les autorisations requises pour accéder au système de stockage
+
+Pour plus d'informations sur la création du compte et l'attribution des autorisations, reportez-vous à la section link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html["Créez un rôle de cluster ONTAP avec des privilèges minimaux"^]

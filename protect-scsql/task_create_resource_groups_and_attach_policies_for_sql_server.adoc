@@ -1,0 +1,148 @@
+---
+permalink: protect-scsql/task_create_resource_groups_and_attach_policies_for_sql_server.html 
+sidebar: sidebar 
+keywords: run as 
+summary: Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger ensemble. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. Un groupe de ressources est requis pour toute tâche de protection des données. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter. 
+---
+= Créez des groupes de ressources et associez des stratégies pour SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger ensemble. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. Un groupe de ressources est requis pour toute tâche de protection des données. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter.
+
+Vous pouvez protéger les ressources individuellement sans créer de nouveau groupe de ressources. Vous pouvez effectuer des sauvegardes sur la ressource protégée.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Database* dans la liste *View*.
++
+
+NOTE: Si vous avez récemment ajouté une ressource à SnapCenter, cliquez sur *Actualiser les ressources* pour afficher la nouvelle ressource ajoutée.
+
+. Cliquez sur *Nouveau groupe de ressources*.
+. Dans la page Nom, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom
+ a| 
+Entrez le nom du groupe de ressources.
+
+
+NOTE: Le nom du groupe de ressources ne doit pas dépasser 250 caractères.
+
+
+
+ a| 
+Étiquettes
+ a| 
+Entrez un ou plusieurs libellés qui vous aideront à rechercher ultérieurement le groupe de ressources. Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de ressources, vous pourrez rechercher par la suite tous les groupes de ressources associés à la balise RH.
+
+
+
+ a| 
+Utilisez le format de nom personnalisé pour la copie Snapshot
+ a| 
+Facultatif : entrez le nom et le format d'une copie Snapshot personnalisée. Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+
+|===
+. Dans la page Ressources, effectuez les opérations suivantes :
++
+.. Sélectionnez le nom d'hôte, le type de ressource et l'instance SQL Server dans les listes déroulantes pour filtrer la liste des ressources.
++
+
+NOTE: Si vous avez récemment ajouté des ressources, elles apparaissent dans la liste des ressources disponibles uniquement après avoir actualisé votre liste de ressources.
+
+.. Pour déplacer des ressources de la section *Ressources disponibles* vers la section Ressources sélectionnées, effectuez l'une des opérations suivantes :
++
+*** Sélectionnez *Autosélectionner toutes les ressources sur le même volume de stockage* pour déplacer toutes les ressources du même volume vers la section Ressources sélectionnées.
+*** Sélectionnez les ressources dans la section *Ressources disponibles*, puis cliquez sur la flèche vers la droite pour les déplacer dans la section *Ressources sélectionnées*.
+
+
+
+
+. Dans la page stratégies, effectuez les opérations suivantes :
++
+.. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
++
+
+NOTE: Vous pouvez également créer une stratégie en cliquant sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+
++
+Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
+
+.. Dans la section configurer les plannings des stratégies sélectionnées, cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer le planning.
+.. Dans la boîte de dialogue Ajouter des planifications pour la stratégie _policy_name_, configurez la planification en spécifiant la date de début, la date d'expiration et la fréquence, puis cliquez sur *OK*.
++
+Vous devez le faire pour chaque fréquence répertoriée dans la police. Les planifications configurées sont répertoriées dans la colonne programmes appliqués de la section *configurer les planifications pour les stratégies sélectionnées*.
+
+.. Sélectionnez le planificateur Microsoft SQL Server.
++
+Vous devez également sélectionner une instance de planificateur à associer à la stratégie de planification.
+
++
+Si vous ne sélectionnez pas le planificateur Microsoft SQL Server, le planificateur Microsoft Windows par défaut est le planificateur Microsoft Windows.
+
+
+
++
+Les planifications de sauvegardes tierces ne sont pas prises en charge lorsqu'elles se chevauchent avec les planifications de sauvegarde SnapCenter. Vous ne devez pas modifier les plannings et renommer la tâche de sauvegarde créée dans le planificateur Windows ou l'agent SQL Server.
+
+. Dans la page Vérification, effectuez les opérations suivantes :
++
+.. Sélectionnez le serveur de vérification dans la liste déroulante *serveur de vérification*.
++
+La liste inclut tous les serveurs SQL ajoutés dans SnapCenter. Vous pouvez sélectionner plusieurs serveurs de vérification (hôte local ou hôte distant).
+
++
+
+NOTE: La version du serveur de vérification doit correspondre à la version et à l'édition du serveur SQL qui héberge la base de données primaire.
+
+.. Cliquez sur *Charger les localisateurs* pour charger les volumes SnapMirror et SnapVault afin d'effectuer une vérification sur le stockage secondaire.
+.. Sélectionnez la stratégie pour laquelle vous souhaitez configurer votre planning de vérification, puis cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Dans la boîte de dialogue Ajouter des programmes de vérification nom_stratégie, effectuez les opérations suivantes :
++
+|===
+| Les fonctions que vous recherchez... | Procédez comme ça... 
+
+
+ a| 
+Exécutez la vérification après la sauvegarde
+ a| 
+Sélectionnez *Exécuter la vérification après la sauvegarde*.
+
+
+
+ a| 
+Planifier une vérification
+ a| 
+Sélectionnez *Exécuter la vérification planifiée*.
+
+|===
+.. Cliquez sur *OK*.
++
+Les planifications configurées sont répertoriées dans la colonne programmes appliqués. Vous pouvez vérifier, puis modifier en cliquant sur *image:../media/edit_icon.gif["pour modifier les horaires configurés"]* ou supprimer en cliquant sur *image:../media/delete_icon_for_configuringschedule.gif["icône supprimer"]*.
+
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Si vous souhaitez joindre le rapport de l'opération effectuée sur le groupe de ressources, sélectionnez *attacher un rapport de travail*.
+
++
+
+NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface utilisateur graphique ou de la commande PowerShell set-SmtpServer.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+
+
+*Plus d'informations*
+
+link:task_create_backup_policies_for_sql_server_databases.html["Créer des stratégies de sauvegarde pour les bases de données SQL Server"]

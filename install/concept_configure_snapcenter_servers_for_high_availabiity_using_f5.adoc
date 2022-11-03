@@ -1,0 +1,41 @@
+---
+permalink: install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html 
+sidebar: sidebar 
+keywords: F5,load balancer 
+summary: 'Pour prendre en charge la haute disponibilité \(HA\) dans SnapCenter, vous pouvez installer l"équilibreur de charge F5. F5 permet au serveur SnapCenter de prendre en charge les configurations actif-passif dans un maximum de deux hôtes au même emplacement. Pour utiliser F5 Load Balancer dans SnapCenter, vous devez configurer les serveurs SnapCenter et l"équilibreur de charge F5.' 
+---
+= Configurer les serveurs SnapCenter pour la haute disponibilité à l'aide de F5
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour prendre en charge la haute disponibilité (HA) dans SnapCenter, vous pouvez installer l'équilibreur de charge F5. F5 permet au serveur SnapCenter de prendre en charge les configurations actif-passif dans un maximum de deux hôtes au même emplacement. Pour utiliser F5 Load Balancer dans SnapCenter, vous devez configurer les serveurs SnapCenter et l'équilibreur de charge F5.
+
+
+IMPORTANT: Si vous avez effectué une mise à niveau à partir de SnapCenter 4.2.x et que vous utilisiez précédemment l'équilibrage de la charge du réseau (NLB), vous pouvez continuer à utiliser cette configuration ou passer à F5.
+
+L'image de workflow répertorie les étapes de configuration des serveurs SnapCenter pour une haute disponibilité à l'aide de F5 Load Balancer. Pour des instructions détaillées, voir https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["Comment configurer les serveurs SnapCenter pour la haute disponibilité à l'aide de F5 Load Balancer"^].
+
+image::../media/sc-F5-configure-workflow.png[sc F5 configurer le flux de travail]
+
+Vous devez être membre du groupe administrateurs locaux sur les serveurs SnapCenter (en plus d'être affecté au rôle SnapCenterAdmin) pour utiliser les applets de commande suivantes pour ajouter et supprimer des clusters F5 :
+
+* Add-SmServerCluster
+* Add-SmServer
+* Remove-SmServerCluster
++
+Pour plus d'informations, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+
+
+
+
+== Informations supplémentaires sur la configuration F5
+
+* Après avoir installé et configuré SnapCenter pour la haute disponibilité, modifiez le raccourci du bureau SnapCenter pour pointer vers l'adresse IP du cluster F5.
+* Si un basculement se produit entre les serveurs SnapCenter et s'il existe également une session SnapCenter existante, vous devez fermer le navigateur et vous reconnecter à SnapCenter.
+* Dans la configuration de l'équilibreur de charge (NLB ou F5), si vous ajoutez un nœud partiellement résolu par le nœud NLB ou F5 et si le nœud SnapCenter n'est pas en mesure d'atteindre ce nœud, la page hôte SnapCenter bascule fréquemment entre les hôtes et l'état d'exécution. Pour résoudre ce problème, assurez-vous que les deux nœuds SnapCenter peuvent résoudre l'hôte dans le nœud NLB ou F5.
+* Les commandes SnapCenter pour les paramètres MFA doivent être exécutées sur tous les nœuds. La configuration des parties utilisatrices doit être effectuée dans le serveur Active Directory Federation Services (AD FS) à l'aide des détails du cluster F5. L'accès à l'interface utilisateur SnapCenter au niveau du nœud sera bloqué après l'activation de l'authentification multifacteur.
+

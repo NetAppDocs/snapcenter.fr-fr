@@ -1,0 +1,113 @@
+---
+permalink: protect-scsql/task_back_up_resources_using_powershell_cmdlets_for_sql.html 
+sidebar: sidebar 
+keywords: backup 
+summary: 'Vous pouvez utiliser les applets de commande PowerShell pour sauvegarder des bases de données SQL Server ou des systèmes de fichiers Windows. Cela inclut la sauvegarde d"une base de données SQL Server ou d"un système de fichiers Windows, notamment l"établissement d"une connexion avec le serveur SnapCenter, la découverte des instances de base de données SQL Server ou des systèmes de fichiers Windows, l"ajout d"une règle, la création d"un groupe de ressources de sauvegarde, la sauvegarde et la vérification de la sauvegarde.' 
+---
+= Sauvegarde des ressources avec les applets de commande PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Vous pouvez utiliser les applets de commande PowerShell pour sauvegarder des bases de données SQL Server ou des systèmes de fichiers Windows. Cela inclut la sauvegarde d'une base de données SQL Server ou d'un système de fichiers Windows, notamment l'établissement d'une connexion avec le serveur SnapCenter, la découverte des instances de base de données SQL Server ou des systèmes de fichiers Windows, l'ajout d'une règle, la création d'un groupe de ressources de sauvegarde, la sauvegarde et la vérification de la sauvegarde.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
+* Vous devez avoir ajouté la connexion au système de stockage et créé une autorisation d'accès.
+* Vous devez avoir ajouté des hôtes et des ressources découvertes.
+
+
+*Étapes*
+
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
+----
++
+L'invite du nom d'utilisateur et du mot de passe s'affiche.
+
+. Créez une stratégie de sauvegarde à l'aide de l'applet de commande Add-SmPolicy.
++
+Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde SQL fullbackup :
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName TESTPolicy
+-PluginPolicyType SCSQL -PolicyType Backup
+-SqlBackupType FullBackup -Verbose
+----
++
+Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde de système de fichiers Windows de CrashConsistent :
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName FileSystemBackupPolicy
+-PluginPolicyType SCW -PolicyType Backup
+-ScwBackupType CrashConsistent -Verbose
+----
+. Découvrez les ressources hôte à l'aide de l'applet de commande Get-SmResources.
++
+Cet exemple recherche les ressources du plug-in Microsoft SQL sur l'hôte spécifié :
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise-f6.sddev.mycompany.com
+-PluginCode SCSQL
+----
++
+Cet exemple détecte les ressources des systèmes de fichiers Windows sur l'hôte spécifié :
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise2-f6.sddev.mycompany.com
+-PluginCode SCW
+----
+. Ajoutez un nouveau groupe de ressources à SnapCenter à l'aide de l'applet de commande Add-SmResourceGroup.
++
+Cet exemple crée un nouveau groupe de ressources de sauvegarde de base de données SQL avec la stratégie et les ressources spécifiées :
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName AccountingResource
+-Resources @{"Host"="visef6.org.com";
+"Type"="SQL Database";"Names"="vise-f6\PayrollDatabase"}
+-Policies "BackupPolicy"
+----
++
+Cet exemple crée un nouveau groupe de ressources de sauvegarde du système de fichiers Windows avec la stratégie et les ressources spécifiées :
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName EngineeringResource
+-PluginCode SCW -Resources @{"Host"="WIN-VOK20IKID5I";
+"Type"="Windows Filesystem";"Names"="E:\"}
+-Policies "EngineeringBackupPolicy"
+----
+. Lancez une nouvelle tâche de sauvegarde à l'aide de la cmdlet New-SmBackup.
++
+[listing]
+----
+PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
+----
+. Affichez l'état de la tâche de sauvegarde à l'aide de l'applet de commande Get-SmBackupReport.
++
+Cet exemple affiche un rapport récapitulatif de tous les travaux exécutés à la date spécifiée :
+
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -Date '1/27/2016'
+----
+
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

@@ -1,0 +1,63 @@
+---
+permalink: protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'Lorsque vous préparez une sauvegarde ou le clonage d"une ressource, vous trouverez peut-être utile d"afficher une représentation graphique de toutes les sauvegardes et clones sur le stockage primaire et secondaire.' 
+---
+= Affichez les sauvegardes et les clones des bases de données SAP HANA sur la page topologie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous préparez une sauvegarde ou le clonage d'une ressource, vous trouverez peut-être utile d'afficher une représentation graphique de toutes les sauvegardes et clones sur le stockage primaire et secondaire.
+
+*À propos de cette tâche*
+
+Vous pouvez consulter les icônes suivantes dans la vue gérer les copies pour déterminer si les sauvegardes et les clones sont disponibles sur le stockage principal ou secondaire (copies en miroir ou copies du coffre-fort).
+
+* image:../media/topology_primary_storage.gif["icône stockage principal"] affiche le nombre de sauvegardes et de clones disponibles sur le stockage principal.
+* image:../media/topology_mirror_secondary_storage.gif["Icône du miroir du stockage secondaire"] Affiche le nombre de sauvegardes et de clones mis en miroir sur le système de stockage secondaire à l'aide de la technologie SnapMirror.
+* image:../media/topology_vault_secondary_storage.gif["icône de coffre-fort secondaire"] Affiche le nombre de sauvegardes et de clones répliqués sur le système de stockage secondaire à l'aide de la technologie SnapVault.
++
+
+NOTE: Le nombre de sauvegardes affichées inclut les sauvegardes supprimées du stockage secondaire. Par exemple, si vous avez créé 6 sauvegardes à l'aide d'une stratégie de conservation de 4 sauvegardes seulement, le nombre de sauvegardes affichées est 6.
+
+
+
+
+NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume de type miroir-coffre-fort sont affichés dans la vue topologique, mais le nombre de sauvegardes en miroir dans la vue topologique n'inclut pas la sauvegarde flexible de version.
+
+
+NOTE: Pour les ressources primaires de réplication du système SAP HANA, les opérations de restauration et de suppression sont prises en charge, et pour les ressources secondaires, l'opération de clonage est prise en charge.
+
+Sur la page topologie, vous pouvez voir toutes les sauvegardes et clones disponibles pour la ressource ou le groupe de ressources sélectionné. Vous pouvez afficher les détails de ces sauvegardes et clones, puis les sélectionner pour effectuer des opérations de protection des données.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez la ressource ou le groupe de ressources dans la liste déroulante *Affichage*.
+. Sélectionnez la ressource dans la vue Détails de la ressource ou dans la vue Détails du groupe de ressources.
++
+Si la ressource est protégée, la page topologique de la ressource sélectionnée s'affiche.
+
+. Consultez la *carte Résumé* pour afficher un résumé du nombre de sauvegardes et de clones disponibles sur le stockage primaire et secondaire.
++
+La section *Résumé Card* affiche le nombre total de sauvegardes basées sur les fichiers, de sauvegardes de copies Snapshot et de clones.
+
++
+Cliquez sur le bouton *Actualiser* pour lancer une requête sur le stockage afin d'afficher un décompte précis.
+
+. Dans la vue gérer les copies, cliquez sur *sauvegardes* ou *clones* à partir du stockage primaire ou secondaire pour afficher les détails d'une sauvegarde ou d'un clone.
++
+Le détail des sauvegardes et des clones est affiché sous forme de tableau.
+
+. Sélectionnez la sauvegarde dans le tableau, puis cliquez sur les icônes de protection des données pour effectuer des opérations de restauration, de clonage et de suppression.
++
+
+NOTE: Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent sur le stockage secondaire.
+
+. Pour supprimer un clone, sélectionnez-le dans le tableau, puis cliquez sur image:../media/delete_icon.gif[""].
+. Pour fractionner un clone, sélectionnez le clone dans le tableau, puis cliquez sur image:../media/split_cone.gif[""].
+

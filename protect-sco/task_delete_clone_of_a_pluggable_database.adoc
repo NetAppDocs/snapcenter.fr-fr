@@ -1,0 +1,28 @@
+---
+permalink: protect-sco/task_delete_clone_of_a_pluggable_database.html 
+sidebar: sidebar 
+keywords: delete, PDB, clone PDB 
+summary: 'Vous pouvez supprimer le clone d"une base de données enfichable \(PDB\) si vous n"en avez plus besoin.' 
+---
+= Supprimer le clone d'une base de données enfichable
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer le clone d'une base de données enfichable (PDB) si vous n'en avez plus besoin.
+
+Si vous avez créé une sauvegarde du CDB cible dans laquelle le PDB est cloné, lorsque vous supprimez le clone PDB, le PDB cloné est également supprimé de la sauvegarde du CDB cible.
+
+
+NOTE: Les clones PDB ne sont pas affichés dans la vue Inventaire ou ressources.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Sélectionnez la base de données du conteneur source (CDB) dans la vue ressource ou groupe de ressources.
+. Dans la vue gérer les copies, sélectionnez *clones* dans les systèmes de stockage primaire ou secondaire (mis en miroir ou répliqué).
+. Sélectionnez le clone PDB (targetCDB:PDBClone), puis cliquez sur image:../media/delete_icon.gif[""].
+. Cliquez sur *OK*.
+

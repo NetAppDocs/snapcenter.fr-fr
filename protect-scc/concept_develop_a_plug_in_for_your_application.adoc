@@ -1,0 +1,197 @@
+---
+permalink: protect-scc/concept_develop_a_plug_in_for_your_application.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Server vous permet de déployer et de gérer vos applications en tant que plug-ins pour SnapCenter. 
+---
+= Présentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Server vous permet de déployer et de gérer vos applications en tant que plug-ins pour SnapCenter. Les applications de votre choix peuvent être connectées au serveur SnapCenter pour assurer la protection et la gestion des données.
+
+SnapCenter vous permet de développer des plug-ins personnalisés à l'aide de différents langages de programmation. Vous pouvez développer un plug-in personnalisé à l'aide de Perl, Java, BATCH ou d'autres langages de script.
+
+Pour utiliser des plug-ins personnalisés dans SnapCenter, vous devez effectuer les tâches suivantes :
+
+* Créez un plug-in pour votre application en suivant les instructions de ce guide
+* Créez un fichier de description
+* Exportez le plug-in personnalisé pour l'installer sur l'hôte SnapCenter
+* Chargez le fichier zip du plug-in dans SnapCenter Server
+
+
+
+
+== Gestion générique du plug-in dans tous les appels API
+
+[role="lead"]
+Pour chaque appel d'API, utilisez les informations suivantes :
+
+* Paramètres du plug-in
+* Codes de sortie
+* Consigner les messages d'erreur
+* La cohérence des données
+
+
+
+
+=== Utiliser les paramètres du plug-in
+
+Un ensemble de paramètres est transmis au plug-in dans le cadre de chaque appel d'API effectué. Le tableau suivant répertorie les informations spécifiques pour les paramètres.
+
+|===
+| Paramètre | Objectif 
+
+
+ a| 
+ACTION
+ a| 
+Détermine le nom du flux de travail. Par exemple, découverte, sauvegarde, fileOrVolRestore ou cloneVolAndLun
+
+
+
+ a| 
+RESSOURCES
+ a| 
+Répertorie les ressources à protéger. Une ressource est identifiée par un UID et un Type. La liste est présentée au plug-in au format suivant :
+
+“<UID>,<TYPE>;<UID>,<TYPE>”. Par exemple, “Instance1,instance;Instance2\\DB1,Database”
+
+
+
+ a| 
+NOM_APPLICATION
+ a| 
+Détermine le plug-in utilisé. Par exemple, DB2 et MYSQL. Le serveur SnapCenter prend en charge les applications répertoriées. Ce paramètre est sensible à la casse.
+
+
+
+ a| 
+APP_IGNORE_ERROR
+ a| 
+(O ou N) cela entraîne la fermeture ou l'arrêt de SnapCenter en cas d'erreur d'application. Cette fonction est utile lorsque vous sauvegardez plusieurs bases de données et ne souhaitez pas que l'opération de sauvegarde soit effectuée en cas d'échec unique.
+
+
+
+ a| 
+<RESOURCE_NAME>__APP_INSTANCE_USERNAME
+ a| 
+Les informations d'identification SnapCenter sont définies pour la ressource.
+
+
+
+ a| 
+<NOM_RESSOURCE>_APP_INSTANCE_PASSWORD
+ a| 
+Les informations d'identification SnapCenter sont définies pour la ressource.
+
+
+
+ a| 
+<NOM_RESSOURCE>_<PARAM_PERSONNALISÉE>
+ a| 
+Chaque valeur de clé personnalisée au niveau des ressources est disponible pour les plug-ins préfixés avec «<NOM_RESSOURCE>_ ». Par exemple, si une clé personnalisée est “MASTER_SLAVE” pour une ressource nommée “MySQLDB”, elle sera disponible en tant que MySQLDB_MASTER_SLAVE
+
+|===
+
+
+=== Utiliser les codes de sortie
+
+Le plug-in renvoie l'état de l'opération à l'hôte au moyen de codes de sortie. Chaque code a une signification spécifique et le plug-in utilise le code de sortie droit pour indiquer la même chose.
+
+Le tableau suivant décrit les codes d'erreur et leur signification.
+
+|===
+| Code de sortie | Objectif 
+
+
+ a| 
+0
+ a| 
+Opération réussie.
+
+
+
+ a| 
+99
+ a| 
+L'opération demandée n'est pas prise en charge ou mise en œuvre.
+
+
+
+ a| 
+100
+ a| 
+Échec de l'opération, ignorer la mise en veille et quitter. La mise en attente est par défaut.
+
+
+
+ a| 
+101
+ a| 
+Échec de l'opération, poursuivre l'opération de sauvegarde.
+
+
+
+ a| 
+autre
+ a| 
+Échec de l'opération, exécution sans mise en veille et fermeture.
+
+|===
+
+
+=== Consigner les messages d'erreur
+
+Les messages d'erreur sont transmis du plug-in au serveur SnapCenter. Le message inclut le message, le niveau du journal et l'horodatage.
+
+Le tableau suivant répertorie les niveaux et leurs objectifs.
+
+|===
+| Paramètre | Objectif 
+
+
+ a| 
+INFO
+ a| 
+message informatif
+
+
+
+ a| 
+AVERTISSEMENT
+ a| 
+message d'avertissement
+
+
+
+ a| 
+ERREUR
+ a| 
+message d'erreur
+
+
+
+ a| 
+DÉBOGAGE
+ a| 
+message de débogage
+
+
+
+ a| 
+TRACÉ
+ a| 
+message de trace
+
+|===
+
+
+=== Préservez la cohérence des données
+
+Les plug-ins personnalisés préservent les données entre les opérations liées à la même exécution du flux de travail. Par exemple, un plug-in peut stocker des données à la fin de la mise en veille, qui peuvent être utilisées pendant l'opération de mise en veille.
+
+Les données à préserver sont définies dans le cadre de l'objet résultat par le plug-in. Il suit un format spécifique et est décrit en détail sous chaque style de développement de plug-in.

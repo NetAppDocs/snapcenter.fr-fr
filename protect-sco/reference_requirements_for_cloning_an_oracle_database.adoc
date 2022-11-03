@@ -1,0 +1,89 @@
+---
+permalink: protect-sco/reference_requirements_for_cloning_an_oracle_database.html 
+sidebar: sidebar 
+keywords:  
+summary: Avant de cloner une base de données Oracle, vous devez vous assurer que les prérequis sont terminés. 
+---
+= Conditions requises pour le clonage d'une base de données Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de cloner une base de données Oracle, vous devez vous assurer que les prérequis sont terminés.
+
+* Vous devez avoir créé une sauvegarde de la base de données à l'aide de SnapCenter.
++
+Vous devez avoir créé avec succès les sauvegardes de journaux et de données en ligne ou les sauvegardes hors ligne (montage ou arrêt) pour que l'opération de clonage puisse réussir.
+
+* Si vous souhaitez personnaliser les chemins du fichier de contrôle ou du fichier journal de reprise, vous devez avoir préprovisionné le système de fichiers requis ou le groupe de disques ASM (Automatic Storage Management).
++
+Par défaut, les fichiers de reprise et de contrôle de la base de données clonée sont créés sur le groupe de disques ASM ou le système de fichiers provisionné par SnapCenter pour les fichiers de données de la base de données clone.
+
+* Si vous utilisez ASM sur NFS, vous devez ajouter _/var/opt/snapcenter/scu/clones/*/*_ au chemin existant défini dans le paramètre asm_diskstring.
+* Dans le paramètre asm_diskstring, vous devez configurer _AFD:*_ si vous utilisez ASMFD ou _ORCL:*_ si vous utilisez ASMLIB.
++
+Pour plus d'informations sur la modification du paramètre asm_diskstring, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["Comment ajouter des chemins de disque à asm_diskstring"^].
+
+* Si vous créez le clone sur un autre hôte, celui-ci doit répondre aux exigences suivantes :
++
+** Le plug-in SnapCenter pour base de données Oracle doit être installé sur l'hôte secondaire.
+** L'hôte clone doit pouvoir détecter les LUN à partir du stockage primaire ou secondaire.
++
+*** Si vous effectuez le clonage depuis le stockage primaire ou le stockage secondaire (Vault ou Mirror) vers un autre hôte, assurez-vous qu'une session iSCSI est soit établie entre le stockage secondaire et l'hôte secondaire, ou bien zonée correctement pour FC.
++
+**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Guide d'installation et de configuration des utilitaires d'hôtes Linux"^]
+**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["Guide d'installation et de configuration des utilitaires hôtes AIX"^]
+
+
+*** Si vous effectuez un clonage depuis le stockage Vault ou Mirror vers le même hôte, assurez-vous qu'une session iSCSI est soit établie entre le stockage Vault ou Mirror et l'hôte, soit zonée correctement pour FC.
+*** Si vous effectuez le clonage dans un environnement virtualisé, assurez-vous qu'une session iSCSI est soit établie entre le stockage primaire ou secondaire et le serveur ESX qui héberge l'hôte secondaire, ou bien zonée correctement pour FC.
+
+
+** Si la base de données source est une base de données ASM :
++
+*** L'instance ASM doit être active sur l'hôte sur lequel le clone sera exécuté.
+*** Le groupe de disques ASM doit être provisionné avant l'opération de clonage si vous souhaitez placer les fichiers journaux d'archive de la base de données clonée dans un groupe de disques ASM dédié.
+*** Le nom du groupe de disques de données peut être configuré, mais assurez-vous que le nom n'est pas utilisé par tout autre groupe de disques ASM sur l'hôte où le clone sera effectué.
++
+Les fichiers de données résidant sur le groupe de disques ASM sont provisionnés dans le cadre du workflow de clonage SnapCenter.
+
+
+
+** Pour NVMe, vous devez installer NVMe util
+
+
+* Le type de protection de la LUN de données et de la LUN de journal, tel que miroir, coffre-fort ou miroir-vault, doit être le même pour détecter les dispositifs de localisation secondaires lors du clonage sur un autre hôte à l'aide des sauvegardes de journaux.
+* Vous devez définir LA valeur exclude_seed_cdb_View sur FALSE dans le fichier de paramètres de la base de données source pour récupérer les informations relatives au PDB de départ pour cloner une sauvegarde de la base de données 12_c_.
++
+Le PDB de semences est un modèle fourni par le système que le CDB peut utiliser pour créer des PDB. Le PDB de semences est nommé PDB$SEED. Pour plus d'informations sur PDB$SEED, consultez le document Oracle Doc ID 1940806.1.
+
++
+
+NOTE: Vous devez définir la valeur avant de sauvegarder la base de données 12_c_.
+
+* SnapCenter prend en charge la sauvegarde des systèmes de fichiers gérés par le sous-système autofs. Si vous procédez au clonage de la base de données, assurez-vous que les points de montage de données ne sont pas sous la racine du point de montage de l'autofs car l'utilisateur racine de l'hôte du plug-in n'est pas autorisé à créer des répertoires sous la racine du point de montage de l'autofs.
++
+Si les fichiers journaux de contrôle et de reprise sont sous le point de montage des données, modifiez le chemin du fichier de contrôle, puis refaites le chemin du fichier journal en conséquence.
+
++
+
+NOTE: Vous pouvez enregistrer manuellement les nouveaux points de montage clonés avec le sous-système autofs. Les nouveaux points de montage clonés ne seront pas enregistrés automatiquement.
+
+* Si vous avez un TDE (connexion automatique) et que vous souhaitez cloner la base de données sur le même hôte ou un autre hôte, vous devez copier le porte-monnaie (fichiers clés) sous _/etc/ORACLE/PORTEFEUILLE/$ORACLE_SID_ de la base de données source vers la base de données clonée.
+* Vous devez définir la valeur de use_lvmetad = 0 dans _/etc/lvm/lvm.conf_ et arrêter le service lvm2-lvmetad pour effectuer le clonage dans les environnements SAN sous Oracle Linux 7 ou version ultérieure ou Red Hat Enterprise Linux (RHEL) 7 ou version ultérieure.
+* Vous devez installer le correctif Oracle 13366202 si vous utilisez la base de données Oracle 11.2.0.3 ou une version ultérieure et si l'ID de base de données de l'instance auxiliaire est modifié à l'aide d'un script NID.
+* Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
+* Pour NVMe, si un port cible doit être exclu de la connexion, vous devez ajouter le nom du nœud cible et le nom du port dans le fichier /var/opt/snapcenter/scu/etc/nvme.conf.
++
+Si le fichier n'existe pas, vous devez créer le fichier comme indiqué dans l'exemple ci-dessous :
+
++
+....
+blacklist {
+nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
+nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
+}
+....
+

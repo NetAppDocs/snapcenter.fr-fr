@@ -1,0 +1,324 @@
+---
+permalink: protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 'Le fournit des instructions d"installation du serveur SnapCenter et du plug-in SnapCenter pour Microsoft SQL Server.' 
+---
+= Démarrage rapide pour installer le plug-in SnapCenter pour SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le fournit un ensemble condensé d'instructions d'installation pour installer le serveur SnapCenter et le plug-in SnapCenter pour Microsoft SQL Server.
+
+
+
+== Avant l'installation
+
+*Exigences relatives au domaine et au groupe de travail*
+
+SnapCenter Server peut être installé sur des systèmes se trouvant dans un domaine ou dans un groupe de travail.
+
+Si vous utilisez un domaine Active Directory, vous devez utiliser un utilisateur de domaine avec des droits d'administrateur local. L'utilisateur de domaine doit être membre du groupe Administrateur local sur l'hôte Windows.
+
+Si vous utilisez des groupes de travail, vous devez utiliser un compte local disposant des droits d'administrateur local.
+
+*Exigences de licence*
+
+Le type de licence que vous installez dépend de votre environnement.
+
+|===
+| Licence | Si nécessaire 
+
+
+ a| 
+Contrôleur SnapCenter standard
+ a| 
+Requis pour les contrôleurs de stockage FAS ou AFF
+
+La licence SnapCenter Standard est basée sur le contrôleur et incluse dans le bundle Premium. Si vous disposez de la licence SnapManager Suite, vous bénéficiez également des droits de licence SnapCenter Standard. Si vous souhaitez installer SnapCenter sous forme d'essai avec les systèmes de stockage FAS ou AFF, vous pouvez obtenir une licence d'évaluation Premium Bundle en contactant l'ingénieur commercial.
+
+
+
+ a| 
+SnapCenter Standard basé sur la capacité
+ a| 
+Requis avec ONTAP Select et Cloud Volumes ONTAP
+
+Si vous êtes un client Cloud Volumes ONTAP ou ONTAP Select, vous devez obtenir une licence basée sur la capacité par To en fonction des données gérées par SnapCenter. Par défaut, SnapCenter propose une licence d'évaluation standard basée sur la capacité SnapCenter 90 jours intégrée, avec une capacité de 100 To. Pour plus d'informations, contactez l'ingénieur commercial.
+
+
+
+ a| 
+SnapMirror ou SnapVault
+ a| 
+ONTAP
+
+Une licence SnapMirror ou SnapVault est requise si la réplication est activée dans SnapCenter.
+
+
+
+ a| 
+Licences supplémentaires (en option)
+ a| 
+Voir link:../install/concept_snapcenter_licenses.html["Licences SnapCenter"^].
+
+
+
+ a| 
+Licences SnapCenter Standard (en option)
+ a| 
+Destinations secondaires
+
+
+NOTE: Il est recommandé, mais pas obligatoire, d'ajouter des licences SnapCenter Standard aux destinations secondaires. Si les licences SnapCenter Standard ne sont pas activées sur les destinations secondaires, vous ne pouvez pas utiliser SnapCenter pour sauvegarder les ressources sur la destination secondaire après avoir effectué une opération de basculement. Une licence FlexClone est toutefois requise sur les destinations secondaires pour effectuer les opérations de clonage et de vérification.
+
+|===
+* Exigences supplémentaires*
+
+Pour connaître la configuration minimale requise pour les plug-ins ONTAP et applicatifs, consultez https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^]
+
+|===
+| Hôtes | Configuration minimale requise 
+
+
+ a| 
+Système d'exploitation (64 bits)
+ a| 
+Voir https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^]
+
+
+
+ a| 
+CPU
+ a| 
+* Hôte du serveur : 4 cœurs
+* Plug-in hôte : 1 cœur
+
+
+
+
+ a| 
+RAM
+ a| 
+* Hôte du serveur : 8 Go
+* Plug-in hôte : 1 Go
+
+
+
+
+ a| 
+Espace disque dur
+ a| 
+Hôte serveur :
+
+* 4 Go pour le logiciel SnapCenter Server et les journaux
+* 6 Go pour le référentiel SnapCenter
+* Chaque hôte de plug-in : 2 Go pour l'installation et les journaux, cette opération est requise uniquement si le plug-in est installé sur un hôte dédié.
+
+
+
+
+ a| 
+Bibliothèques tierces
+ a| 
+Requis sur l'hôte SnapCenter Server et l'hôte du plug-in :
+
+* Microsoft .NET Framework 4.7.2 ou version ultérieure
+* Windows Management Framework (WMF) 4.0 ou version ultérieure
+* PowerShell 4.0 ou version ultérieure
+
+
+
+
+ a| 
+Navigateurs
+ a| 
+Chrome, Internet Explorer et Microsoft Edge
+
+|===
+|===
+| Type de port | Port par défaut 
+
+
+ a| 
+Port SnapCenter
+ a| 
+8146 (HTTPS), bidirectionnel, personnalisable, comme dans l'URL _\https://server:8146_
+
+
+
+ a| 
+Port de communication SMCore de SnapCenter
+ a| 
+8145 (HTTPS), bidirectionnel, personnalisable
+
+
+
+ a| 
+Base de données de référentiel
+ a| 
+3306 (HTTPS), bidirectionnel
+
+
+
+ a| 
+Hôtes du plug-in Windows
+ a| 
+135, 445 (TCP)
+
+En plus des ports 135 et 445, la plage de ports dynamiques spécifiée par Microsoft doit également être ouverte. Les opérations d'installation à distance utilisent le service Windows Management Instrumentation (WMI), qui recherche dynamiquement cette plage de ports.
+
+Pour plus d'informations sur la plage de ports dynamiques prise en charge, reportez-vous à la section https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Présentation du service et configuration requise du port réseau pour Windows"^].
+
+
+
+ a| 
+Plug-in SnapCenter pour Windows
+ a| 
+8145 (HTTPS), bidirectionnel, personnalisable
+
+
+
+ a| 
+Cluster ONTAP ou port de communication SVM
+ a| 
+443 (HTTPS), bidirectionnel ; 80 (HTTP), bidirectionnel
+
+Le port est utilisé pour la communication entre l'hôte du serveur SnapCenter, l'hôte du plug-in et le cluster SVM ou ONTAP.
+
+|===
+*Plug-in SnapCenter pour Microsoft SQL Server requis*
+
+Vous devez disposer d'un utilisateur disposant de privilèges d'administrateur local avec des autorisations de connexion locales sur l'hôte distant. Si vous gérez des nœuds de cluster, vous devez disposer d'un utilisateur disposant des privilèges d'administration pour tous les nœuds du cluster.
+
+Vous devez disposer d'un utilisateur avec des autorisations sysadmin sur le serveur SQL. Le plug-in utilise la structure Microsoft VDI, qui requiert l'accès sysadmin.
+
+Si vous utilisiez SnapManager pour Microsoft SQL Server et que vous souhaitez importer des données de SnapManager pour Microsoft SQL Server vers SnapCenter, reportez-vous à la section link:../protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["Importer les sauvegardes archivées"^]
+
+
+
+== Installez le serveur SnapCenter
+
+*Télécharger et installer SnapCenter Server*
+
+*Étapes*
+
+. Téléchargez le package d'installation du serveur SnapCenter à partir du https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["Site de support NetApp"^] puis double-cliquez sur l'exe.
++
+Une fois l'installation lancée, tous les contrôles préalables sont effectués et si les exigences minimales ne sont pas remplies, des messages d'erreur ou d'avertissement appropriés s'affichent. Vous pouvez ignorer les messages d'avertissement et poursuivre l'installation ; cependant, les erreurs doivent être résolues.
+
+. Vérifiez les valeurs pré-remplies requises pour l'installation du serveur SnapCenter et modifiez-les si nécessaire.
++
+Vous n'avez pas besoin de spécifier le mot de passe pour la base de données du référentiel MySQL Server. Lors de l'installation du serveur SnapCenter, le mot de passe est généré automatiquement.
+
++
+
+NOTE: Le caractère spécial "%" n'est pas pris en charge dans le chemin d'accès personnalisé pour l'installation. Si vous incluez " %" dans le chemin, l'installation échoue.
+
+. Cliquez sur *installer maintenant*.
+
+
+*Connectez-vous à SnapCenter*
+
+*Étapes*
+
+. Lancez SnapCenter à partir d'un raccourci sur le bureau hôte ou à partir de l'URL fournie par l'installation (_\https://server:8146_ pour le port par défaut 8146 sur lequel SnapCenter Server est installé).
+. Entrez les informations d'identification.
++
+Pour un format de nom d'utilisateur d'administration de domaine intégré, utilisez : _NetBIOS\<nom d'utilisateur>_ ou _<nom d'utilisateur>@<domaine>_ ou _<domaine FQDN>\<nom d'utilisateur>_.
+
++
+Pour un format de nom d'utilisateur d'administration local intégré, utilisez _<nom d'utilisateur>_.
+
+. Cliquez sur *connexion*.
+
+
+*Ajouter une licence standard de contrôleur SnapCenter*
+
+*Étapes*
+
+. Connectez-vous au contrôleur à l'aide de la ligne de commande ONTAP et entrez :
++
+`system license add -license-code <license_key>`
+
+. Vérifiez la licence :
++
+`license show`
+
+
+
+*Ajouter une licence SnapCenter basée sur la capacité*
+
+*Étapes*
+
+. Dans le volet gauche de l'interface graphique SnapCenter, cliquez sur *Paramètres > logiciel*, puis dans la section Licence, cliquez sur *+*.
+. Sélectionnez l'une des deux méthodes d'obtention de la licence :
++
+** Entrez vos identifiants de connexion au site du support NetApp pour importer les licences.
+** Parcourez l'emplacement du fichier de licence NetApp et cliquez sur *Open*.
+
+
+. Dans la page Notifications de l'assistant, utilisez le seuil de capacité par défaut de 90 %.
+. Cliquez sur *Terminer*.
+
+
+*Configurer les connexions du système de stockage*
+
+*Étapes*
+
+. Dans le volet de gauche, cliquez sur *Storage Systems > Nouveau*.
+. Sur la page Add Storage System, effectuez les opérations suivantes :
++
+.. Entrez le nom ou l'adresse IP du système de stockage.
+.. Entrez les informations d'identification utilisées pour accéder au système de stockage.
+.. Cochez les cases pour activer le système de gestion des événements (EMS) et AutoSupport.
+
+
+. Cliquez sur *plus d'options* si vous souhaitez modifier les valeurs par défaut attribuées à la plate-forme, au protocole, au port et au délai d'attente.
+. Cliquez sur *soumettre*.
+
+
+
+
+== Installez le plug-in pour Microsoft SQL Server
+
+*Configurer Exécuter en tant qu'informations d'identification pour installer le plug-in pour Microsoft SQL Server*
+
+*Étapes*
+
+. Dans le volet de gauche, cliquez sur *Paramètres > informations d'identification > Nouveau*.
+. Entrez les informations d'identification.
++
+Pour un format de nom d'utilisateur d'administration de domaine intégré, utilisez : _NetBIOS\<nom d'utilisateur>_ ou _<nom d'utilisateur>@<domaine>_ ou _<domaine FQDN>\<nom d'utilisateur>_.
+
++
+Pour un format de nom d'utilisateur d'administration local intégré, utilisez _<nom d'utilisateur>_.
+
+
+
+*Ajouter un hôte et installer le plug-in pour Microsoft SQL Server*
+
+*Étapes*
+
+. Dans le volet gauche de l'interface graphique SnapCenter, cliquez sur *hôtes > hôtes gérés > Ajouter*.
+. Dans la page hosts de l'assistant, effectuez les opérations suivantes :
++
+.. Type d'hôte : sélectionnez le type d'hôte Windows.
+.. Nom d'hôte : utilisez l'hôte SQL ou spécifiez le FQDN d'un hôte Windows dédié.
+.. Informations d'identification : sélectionnez le nom d'identification valide de l'hôte que vous avez créé ou créez de nouvelles informations d'identification.
+
+
+. Dans la section Sélectionner les plug-ins à installer, sélectionnez *Microsoft SQL Server*.
+. Cliquez sur *plus d'options* pour spécifier les détails suivants :
++
+.. Port : conservez le numéro de port par défaut ou spécifiez le numéro de port.
+.. Chemin d'installation : le chemin par défaut est _C:\Program Files\NetApp\SnapCenter_. Vous pouvez éventuellement personnaliser le chemin.
+.. Ajouter tous les hôtes du cluster : cochez cette case si vous utilisez SQL dans WSFC.
+.. Ignorer les vérifications de préinstallation : cochez cette case si vous avez déjà installé les plug-ins manuellement ou si vous ne souhaitez pas vérifier si l'hôte répond aux exigences d'installation du plug-in.
+
+
+. Cliquez sur *soumettre*.
+

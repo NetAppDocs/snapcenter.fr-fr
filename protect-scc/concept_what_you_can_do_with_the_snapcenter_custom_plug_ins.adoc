@@ -1,0 +1,47 @@
+---
+permalink: protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez utiliser les plug-ins personnalisés SnapCenter pour les opérations de protection des données. 
+---
+= Avantages des plug-ins personnalisés et du plug-in de stockage SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser les plug-ins personnalisés SnapCenter pour les opérations de protection des données.
+
+*Module d'extension personnalisé*
+
+* Ajoutez des ressources telles que les bases de données, les instances, les documents ou les espaces de stockage.
+* Création de sauvegardes.
+* Effectuez des restaurations à partir des sauvegardes.
+* Sauvegardes clones.
+* Planifiez les opérations de sauvegarde.
+* Contrôle des opérations de sauvegarde, de restauration et de clonage
+* Afficher les rapports relatifs aux opérations de sauvegarde, de restauration et de clonage.
+
+
+*Module de stockage*
+
+Vous pouvez utiliser le plug-in de stockage pour assurer la protection des données.
+
+* Copies Snapshot de groupes de cohérence des volumes de stockage sur les clusters ONTAP
+* Sauvegardez des applications personnalisées à l'aide de l'infrastructure intégrée de pré et post-script
++
+La sauvegarde d'un volume ONTAP, d'une LUN ou d'un qtree peut être effectuée.
+
+* Mettre à jour les copies Snapshot du système primaire sur un système ONTAP secondaire, en tirant parti de la relation de réplication existante (réplication SnapVault/SnapMirror/unifiée) à l'aide de la règle SnapCenter
++
+ONTAP FAS, AFF, Select ou Cloud ONTAP peuvent être les systèmes primaires et secondaires ONTAP.
+
+* Restaurez l'intégralité de votre volume ONTAP, LUN ou fichiers.
++
+Vous devez fournir manuellement le chemin de fichier correspondant, car les fonctions de navigation ou d'indexation ne sont pas intégrées au produit.
+
++
+La restauration des qtrees ou des répertoires n'est pas prise en charge, mais vous pouvez cloner et exporter uniquement le qtree si l'étendue de la sauvegarde est définie au niveau qtree.
+
+

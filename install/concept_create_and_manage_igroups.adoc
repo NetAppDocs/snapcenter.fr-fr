@@ -1,0 +1,120 @@
+---
+permalink: install/concept_create_and_manage_igroups.html 
+sidebar: sidebar 
+keywords: igroup 
+summary: Vous créez des groupes initiateurs pour spécifier les hôtes pouvant accéder à une LUN donnée sur le système de stockage. SnapCenter permet de créer, renommer, modifier ou supprimer un groupe initiateur sur un hôte Windows. 
+---
+= Création et gestion des igroups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous créez des groupes initiateurs pour spécifier les hôtes pouvant accéder à une LUN donnée sur le système de stockage. SnapCenter permet de créer, renommer, modifier ou supprimer un groupe initiateur sur un hôte Windows.
+
+
+
+== Créer un groupe initiateur
+
+Vous pouvez utiliser SnapCenter pour créer un groupe initiateur sur un hôte Windows. Le groupe initiateur sera disponible dans l'assistant de création de disque ou de connexion de disque lorsque vous mappez le groupe initiateur sur une LUN.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Dans la page hôtes, cliquez sur *igroup*.
+. Dans la page groupes d'initiateurs, cliquez sur *Nouveau*.
+. Dans la boîte de dialogue Créer un iGroup, définissez le groupe initiateur :
++
+|===
+| Dans ce champ... | Procédez comme ça... 
+
+
+ a| 
+System de stockage
+ a| 
+Sélectionnez le SVM pour la LUN que vous allez mapper sur le groupe initiateur.
+
+
+
+ a| 
+Hôte
+ a| 
+Sélectionnez l'hôte sur lequel vous souhaitez créer le groupe initiateur.
+
+
+
+ a| 
+Nom d'igroup
+ a| 
+Indiquez le nom du groupe initiateur.
+
+
+
+ a| 
+Initiateurs
+ a| 
+Sélectionnez l'initiateur.
+
+
+
+ a| 
+Type
+ a| 
+Sélectionnez le type d'initiateur, iSCSI, FCP ou mixte (FCP et iSCSI).
+
+|===
+. Lorsque vous êtes satisfait de vos entrées, cliquez sur *OK*.
++
+SnapCenter crée le groupe initiateur sur le système de stockage.
+
+
+
+
+
+== Renommer un groupe initiateur
+
+Vous pouvez utiliser SnapCenter pour renommer un groupe initiateur existant.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Dans la page hôtes, cliquez sur *igroup*.
+. Sur la page groupes initiateurs, cliquez dans le champ *Storage Virtual machine* pour afficher la liste des SVM disponibles, puis sélectionnez la SVM du groupe initiateur que vous souhaitez renommer.
+. Dans la liste des igroups pour la SVM, sélectionnez le groupe initiateur que vous souhaitez renommer, puis cliquez sur *Renommer*.
+. Dans la boîte de dialogue Renommer le groupe initiateur, saisissez le nouveau nom du groupe initiateur, puis cliquez sur *Renommer*.
+
+
+
+
+== Modifier un groupe initiateur
+
+Vous pouvez utiliser SnapCenter pour ajouter des initiateurs à un groupe initiateur existant. Lors de la création d'un groupe initiateur, vous ne pouvez ajouter qu'un seul hôte. Si vous souhaitez créer un groupe initiateur pour un cluster, vous pouvez le modifier pour ajouter d'autres nœuds à ce groupe initiateur.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Dans la page hôtes, cliquez sur *igroup*.
+. Sur la page groupes initiateurs, cliquez dans le champ *Storage Virtual machine* pour afficher la liste déroulante des SVM disponibles, puis sélectionnez le SVM du groupe initiateur que vous souhaitez modifier.
+. Dans la liste des groupes initiateurs, sélectionnez un groupe initiateur, puis cliquez sur *Ajouter un initiateur au groupe initiateur*.
+. Sélectionnez un hôte.
+. Sélectionnez les initiateurs et cliquez sur *OK*.
+
+
+
+
+== Supprimez un groupe initiateur
+
+Lorsque vous n'en avez plus besoin, vous pouvez utiliser SnapCenter pour supprimer un groupe initiateur.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Dans la page hôtes, cliquez sur *igroup*.
+. Sur la page groupes initiateurs, cliquez dans le champ *Storage Virtual machine* pour afficher la liste déroulante des SVM disponibles, puis sélectionnez le SVM du groupe initiateur que vous souhaitez supprimer.
+. Dans la liste des igroups pour la SVM, sélectionnez le groupe initiateur que vous souhaitez supprimer, puis cliquez sur *Delete*.
+. Dans la boîte de dialogue Supprimer un groupe initiateur, cliquez sur *OK*.
++
+SnapCenter supprime le groupe initiateur.
+
+

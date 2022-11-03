@@ -1,0 +1,168 @@
+---
+permalink: protect-hana/task_create_backup_policies_for_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'Avant d"utiliser SnapCenter pour sauvegarder les ressources de base de données SAP HANA, vous devez créer une règle de sauvegarde pour la ressource ou le groupe de ressources à sauvegarder. Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes.' 
+---
+= Créez des règles de sauvegarde pour les bases de données SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser SnapCenter pour sauvegarder les ressources de base de données SAP HANA, vous devez créer une règle de sauvegarde pour la ressource ou le groupe de ressources à sauvegarder. Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir défini votre stratégie de sauvegarde.
++
+Pour en savoir plus, découvrez comment définir une stratégie de protection des données pour les bases de données SAP HANA.
+
+* Vous devez vous préparer à la protection des données en effectuant des tâches telles que l'installation de SnapCenter, l'ajout d'hôtes, la configuration des connexions du système de stockage et l'ajout de ressources.
+* L'administrateur SnapCenter doit avoir attribué les SVM aux volumes source et de destination, si vous répliquez les copies Snapshot sur un miroir ou un coffre-fort.
++
+En outre, vous pouvez spécifier des paramètres de réplication, de script et d'application dans la stratégie. Ces options vous permettent de gagner du temps lorsque vous souhaitez réutiliser la stratégie d'un autre groupe de ressources.
+
+
+
+*À propos de cette tâche*
+
+* Réplication système SAP HANA
++
+** Vous pouvez protéger le système SAP HANA principal et toutes les opérations de protection des données peuvent être effectuées.
+** Vous pouvez protéger le système SAP HANA secondaire, mais les sauvegardes ne peuvent pas être créées.
++
+Après le basculement, toutes les opérations de protection des données peuvent être effectuées lorsque le système SAP HANA secondaire devient le système SAP HANA principal.
+
++
+Vous ne pouvez pas créer de sauvegarde pour le volume de données SAP HANA, mais SnapCenter continue à protéger les volumes non-data.
+
+
+
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *stratégies*.
+. Cliquez sur *Nouveau*.
+. Dans la page Nom, entrez le nom et la description de la stratégie.
+. Dans la page Paramètres, effectuez les opérations suivantes :
++
+** Choisissez un type de sauvegarde :
++
+|===
+| Les fonctions que vous recherchez... | Procédez comme ça... 
+
+
+ a| 
+Effectuer un contrôle d'intégrité de la base de données
+ a| 
+Sélectionnez *sauvegarde basée sur fichier*. Seuls les locataires actifs sont sauvegardés.
+
+
+
+ a| 
+Créer une sauvegarde à l'aide de la technologie de copie Snapshot
+ a| 
+Sélectionnez *basé sur les instantanés*.
+
+|===
+** Spécifiez le type d'horaire en sélectionnant *On Demand*, *Hourly*, *Daily*, *Weekly* ou *Monthly*.
++
+
+NOTE: Vous pouvez spécifier la planification (date de début, date de fin et fréquence) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais aussi d'affecter des programmes de sauvegarde différents à chaque stratégie.
+
++
+image::../media/backup_settings.gif[sauvegarder les paramètres]
+
++
+
+NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
+
+** Dans la section *Paramètres de sauvegarde personnalisés*, indiquez tous les paramètres de sauvegarde spécifiques qui doivent être transmis au plug-in au format clé-valeur.
++
+Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
+
+
+
+. Dans la page Retention, spécifiez les paramètres de conservation pour le type de sauvegarde et le type de programme sélectionné dans la page Type de sauvegarde :
++
+|===
+| Les fonctions que vous recherchez... | Alors... 
+
+
+ a| 
+Conserver un certain nombre de copies Snapshot
+ a| 
+Sélectionnez *nombre total de copies Snapshot à conserver*, puis spécifiez le nombre de copies Snapshot que vous souhaitez conserver.
+
+Si le nombre de copies Snapshot dépasse le nombre spécifié, les copies Snapshot sont supprimées par les plus anciennes copies supprimées en premier.
+
+
+NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+
+
+IMPORTANT: Dans le cas des sauvegardes basées sur des copies Snapshot, vous devez définir le nombre de rétention à 2 ou plus si vous prévoyez d'activer la réplication SnapVault. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+
+
+NOTE: Pour la réplication des systèmes SAP HANA, il est recommandé d'ajouter toutes les ressources du système SAP HANA dans un groupe de ressources unique. Cela permet de conserver le nombre adéquat de sauvegardes.
+
+
+NOTE: Pour la réplication système SAP HANA, le total des copies Snapshot prises sera égal à la conservation définie pour le groupe de ressources. La suppression de la copie Snapshot la plus ancienne est basée sur le nœud sur lequel se trouve la copie Snapshot la plus ancienne. Par exemple, la conservation est définie sur 7 pour un groupe de ressources avec réplication système primaire SAP HANA et réplication système secondaire SAP HANA. Vous pouvez prendre jusqu'à 7 copies Snapshot à la fois, y compris la réplication système primaire SAP HANA et le stockage secondaire de réplication système SAP HANA.
+
+
+
+ a| 
+Conservez les copies Snapshot pendant un certain nombre de jours
+ a| 
+Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer.
+
+|===
+. Pour les sauvegardes basées sur des copies Snapshot, spécifiez les paramètres de réplication sur la page réplication :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+*Mettre à jour SnapMirror après avoir créé une copie Snapshot locale*
+ a| 
+Sélectionnez ce champ pour créer des copies en miroir des jeux de sauvegarde sur un autre volume (réplication SnapMirror).
+
+Si la relation de protection dans ONTAP est de type miroir et coffre-fort et si vous sélectionnez uniquement cette option, la copie Snapshot créée sur le système primaire ne sera pas transférée vers la destination, mais elle sera répertoriée dans le système de destination. Si cette copie Snapshot est sélectionnée à partir de la destination pour effectuer une opération de restauration, le message d'erreur emplacement secondaire n'est pas disponible pour la sauvegarde en copie/miroir sélectionnée s'affiche.
+
+
+
+ a| 
+*Mettre à jour SnapVault après avoir créé une copie Snapshot locale*
+ a| 
+Sélectionnez cette option pour effectuer la réplication de sauvegarde disque à disque (sauvegardes SnapVault).
+
+
+
+ a| 
+*Étiquette de politique secondaire*
+ a| 
+Sélectionnez une étiquette Snapshot.
+
+En fonction de l'étiquette de copie Snapshot que vous sélectionnez, ONTAP applique la règle de conservation des copies Snapshot secondaires correspondant à l'étiquette.
+
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+
+
+ a| 
+*Nombre de tentatives d'erreur*
+ a| 
+Saisissez le nombre maximal de tentatives de réplication pouvant être autorisées avant l'arrêt de l'opération.
+
+|===
++
+
+NOTE: Il est recommandé de configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter la limite maximale des copies Snapshot sur le stockage secondaire.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

@@ -1,0 +1,298 @@
+---
+permalink: admin/concept_manage_hosts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez ajouter des hôtes et installer des packages plug-in SnapCenter, ajouter un serveur de vérification, supprimer des hôtes, migrer des tâches de sauvegarde et mettre à jour l"hôte pour mettre à niveau des modules plug-in ou ajouter de nouveaux modules plug-in. Selon le plug-in que vous utilisez, vous pouvez également provisionner des disques, gérer des partages SMB, gérer les groupes initiateurs \(igroups\), gérer des sessions iSCSI et migrer des données.' 
+---
+= Gérer les hôtes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter des hôtes et installer des packages plug-in SnapCenter, ajouter un serveur de vérification, supprimer des hôtes, migrer des tâches de sauvegarde et mettre à jour l'hôte pour mettre à niveau des modules plug-in ou ajouter de nouveaux modules plug-in. Selon le plug-in que vous utilisez, vous pouvez également provisionner des disques, gérer des partages SMB, gérer des groupes initiateurs (igroups), gérer des sessions iSCSI et migrer des données.
+
+|===
+| Vous pouvez effectuer ces tâches... | Pour Microsoft Exchange Server | Pour Microsoft SQL Server | Pour Microsoft Windows | Pour Oracle Database | Pour les bases de données SAP HANA | Pour les plug-ins personnalisés 
+
+
+ a| 
+Ajoutez des hôtes et installez le package de plug-in
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Mettre à jour les informations ESXi pour un hôte
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Suspendre les plannings et placer les hôtes en mode de maintenance
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Modifiez les hôtes en ajoutant, mettant à niveau ou supprimant des plug-ins
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Supprimer des hôtes de SnapCenter
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Démarrage des services plug-in
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Provisionner les disques
+ a| 
+Non
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Gérer les partages SMB
+ a| 
+Non
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Gestion des iGroups
+ a| 
+Non
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Gérez les sessions iSCSI
+ a| 
+Non
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+ a| 
+
+|===
+
+
+== Actualiser les informations de la machine virtuelle
+
+Vous devez actualiser les informations de votre machine virtuelle lorsque les informations d'identification de VMware vCenter changent ou que l'hôte de la base de données ou du système de fichiers redémarre. La mise à jour des informations de votre machine virtuelle dans SnapCenter établit la communication avec VMware vSphere vCenter et obtient les informations d'identification vCenter.
+
+
+NOTE: Les disques RDM sont gérés par le plug-in SnapCenter pour Microsoft Windows, installé sur l'hôte de base de données. Pour gérer RDM, le plug-in SnapCenter pour Microsoft Windows communique avec le serveur vCenter qui gère l'hôte de base de données.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche de SnapCenter, cliquez sur *hosts*.
+. Dans la page hôtes, cliquez sur *Managed Hosts*.
+. Dans la page hôtes gérés, sélectionnez l'hôte à mettre à jour.
+. Cliquez sur *Actualiser VM*.
+
+
+
+
+== Modifier les hôtes du plug-in
+
+Après l'installation d'un plug-in, vous pouvez modifier les détails sur les hôtes du plug-in, le cas échéant. Vous pouvez modifier les informations d'identification, le chemin d'installation, les plug-ins, les détails du répertoire des journaux du plug-in SnapCenter pour Microsoft SQL Server, le compte de service géré de groupe (GMSA) et le port du plug-in.
+
+
+NOTE: Vérifiez que la version du plug-in est identique à celle de la version du serveur SnapCenter.
+
+*À propos de cette tâche*
+
+* Vous ne pouvez modifier un port de plug-in qu'après l'installation du plug-in.
++
+Vous ne pouvez pas modifier le port du plug-in lorsque les opérations de mise à niveau sont en cours.
+
+* Lors de la modification d'un port de plug-in, vous devez prendre en compte les scénarios de restauration de port suivants :
++
+** Dans une configuration autonome, si SnapCenter ne change pas le port d'un des composants, l'opération échoue et l'ancien port est conservé pour tous les composants.
++
+Si le port a été modifié pour tous les composants mais que l'un des composants ne parvient pas à démarrer avec le nouveau port, alors l'ancien port est conservé pour tous les composants. Par exemple, si vous souhaitez modifier le port pour deux plug-ins sur l'hôte autonome et que SnapCenter ne parvient pas à appliquer le nouveau port à l'un des plug-ins, l'opération échoue (avec un message d'erreur approprié) et l'ancien port est conservé pour les deux plug-ins.
+
+** Dans une configuration en cluster, si SnapCenter ne change pas le port du plug-in installé sur l'un des nœuds, l'opération échoue et l'ancien port est conservé pour tous les nœuds.
++
+Par exemple, si le plug-in est installé sur quatre nœuds dans une configuration en cluster, et si le port n'est pas modifié pour l'un des nœuds, l'ancien port est conservé pour tous les nœuds.
+
+
+
+
+
+Lorsque les plug-ins sont installés avec GMSA, vous pouvez modifier dans les fenêtres *plus d'options*. Lorsque les plug-ins sont installés sans GMSA, vous pouvez spécifier le compte GMSA pour l'utiliser comme compte de service de plug-in.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Vérifiez que *Managed Hosts* est sélectionné en haut.
+. Sélectionnez l'hôte pour lequel vous souhaitez modifier un champ.
++
+Un seul champ peut être modifié à la fois.
+
+. Cliquez sur *soumettre*.
+
+
+*Résultats*
+
+L'hôte est validé et ajouté au serveur SnapCenter.
+
+
+
+== Démarrez ou redémarrez les services du plug-in
+
+Le démarrage des services du plug-in SnapCenter vous permet de démarrer les services s'ils ne sont pas en cours d'exécution ou de les redémarrer s'ils sont en cours d'exécution. Il se peut que vous souhaitiez redémarrer les services une fois la maintenance effectuée.
+
+Vous devez vous assurer qu'aucun travail n'est en cours d'exécution lors du redémarrage des services.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Dans la page hôtes, cliquez sur *Managed Hosts*.
+. Dans la page hôtes gérés, sélectionnez l'hôte que vous souhaitez démarrer.
+. Cliquez sur image:../media/more_icon.gif[""] Et cliquez sur *Démarrer le service* ou *redémarrer le service*.
++
+Vous pouvez démarrer ou redémarrer le service de plusieurs hôtes simultanément.
+
+
+
+
+
+== Suspendre les planifications pour la maintenance de l'hôte
+
+Lorsque vous souhaitez empêcher l'hôte d'exécuter des tâches SnapCenter planifiées, vous pouvez placer votre hôte en mode maintenance. Avant de mettre à niveau les plug-ins ou si vous effectuez des tâches de maintenance sur les hôtes,
+
+
+NOTE: Vous ne pouvez pas suspendre les planifications d'un hôte qui est arrêté car SnapCenter ne peut pas communiquer avec cet hôte.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Dans la page hôtes, cliquez sur *Managed Hosts*.
+. Dans la page hôtes gérés, sélectionnez l'hôte que vous souhaitez suspendre.
+. Cliquez sur le bouton image:../media/more_icon.gif[""] Puis cliquez sur *suspendre le calendrier* pour placer l'hôte de ce plug-in en mode maintenance.
++
+Vous pouvez interrompre la planification de plusieurs hôtes simultanément.
+
++
+
+NOTE: Vous n'avez pas besoin d'arrêter le service de plug-in en premier. Le service du plug-in peut être en cours d'exécution ou arrêté.
+
+
+
+*Résultats*
+
+Une fois les planifications suspendues sur l'hôte, la page hôtes gérés affiche *suspendu* dans le champ d'état global de l'hôte.
+
+Une fois la maintenance de l'hôte terminée, vous pouvez mettre l'hôte hors mode maintenance en cliquant sur *Activer le programme*. Vous pouvez activer la planification de plusieurs hôtes simultanément.

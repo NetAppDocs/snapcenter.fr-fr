@@ -1,0 +1,73 @@
+---
+permalink: admin/task_manage_resource_groups.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez effectuer diverses opérations sur des groupes de ressources. 
+---
+= Gérer les groupes de ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer diverses opérations sur des groupes de ressources.
+
+Vous pouvez effectuer les tâches suivantes associées aux groupes de ressources :
+
+* Modifiez un groupe de ressources en sélectionnant le groupe de ressources et en cliquant sur *Modifier le groupe de ressources* pour modifier les informations fournies lors de la création du groupe de ressources.
++
+
+NOTE: Vous pouvez modifier le planning lors de la modification du groupe de ressources. Toutefois, pour modifier le type de planification, vous devez modifier la stratégie.
+
++
+
+NOTE: Si vous supprimez des ressources d'un groupe de ressources, les paramètres de conservation de sauvegarde définis dans les stratégies actuellement associées au groupe de ressources continueront d'être appliqués aux ressources supprimées.
+
+* Créez une sauvegarde d'un groupe de ressources.
+* Créer un clone d'une sauvegarde.
++
+Vous pouvez cloner à partir des sauvegardes existantes de SQL, Oracle, des systèmes de fichiers Windows, des applications personnalisées et des ressources de base de données SAP HANA ou des groupes de ressources.
+
+* Créer un clone d'un groupe de ressources.
++
+Cette opération n'est prise en charge que pour les groupes de ressources SQL (qui ne contiennent que des bases de données). Vous pouvez configurer une planification de clonage d'un groupe de ressources (cycle de vie du clone).
+
+* Empêcher le démarrage des opérations planifiées sur les groupes de ressources.
+* Supprimer un groupe de ressources.
+
+
+
+
+== Arrêter et reprendre les opérations sur les groupes de ressources
+
+Vous pouvez désactiver temporairement les opérations planifiées de démarrer sur un groupe de ressources. Vous pouvez activer ces opérations plus tard que vous le souhaitez.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
+. Sélectionnez le groupe de ressources et cliquez sur *Maintenance*.
+. Cliquez sur *OK*.
+
+
+Si vous souhaitez reprendre les opérations sur le groupe de ressources que vous avez mis en mode maintenance, sélectionnez le groupe de ressources et cliquez sur *production*.
+
+
+
+== Supprimer des groupes de ressources
+
+Vous pouvez supprimer un groupe de ressources si vous n'avez plus besoin de protéger les ressources du groupe de ressources. Vous devez vous assurer que les groupes de ressources sont supprimés avant de supprimer des plug-ins de SnapCenter.
+
+*À propos de cette tâche*
+
+Vous devez supprimer manuellement tous les clones créés pour l'une des ressources du groupe de ressources. Vous pouvez également forcer la suppression de toutes les sauvegardes, métadonnées, règles et copies Snapshot associées au groupe de ressources.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
+. Sélectionnez le groupe de ressources, puis cliquez sur *Supprimer*.
+. Facultatif : cochez la case *Supprimer les sauvegardes et détacher les stratégies associées à ce groupe de ressources* pour supprimer toutes les sauvegardes, métadonnées, stratégies et copies Snapshot associées au groupe de ressources.
+. Cliquez sur *OK*.
+

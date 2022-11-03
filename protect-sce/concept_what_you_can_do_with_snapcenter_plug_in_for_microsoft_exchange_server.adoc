@@ -1,0 +1,22 @@
+---
+permalink: protect-sce/concept_what_you_can_do_with_snapcenter_plug_in_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez utiliser le plug-in pour Exchange pour sauvegarder et restaurer les bases de données Exchange Server. 
+---
+= Avantages du plug-in SnapCenter pour Microsoft Exchange Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le plug-in pour Exchange pour sauvegarder et restaurer les bases de données Exchange Server.
+
+* Afficher et gérer un inventaire actif des groupes de disponibilité de base de données Exchange (DAG), des bases de données et des ensembles de répliques
+* Définissez des règles fournissant les paramètres de protection pour l'automatisation des sauvegardes
+* Affecter des stratégies à des groupes de ressources
+* Protéger les fichiers DAG et les bases de données individuelles
+* Sauvegarder les bases de données primaires et secondaires des boîtes aux lettres Exchange
+* Restaurer des bases de données à partir de sauvegardes primaires et secondaires
+

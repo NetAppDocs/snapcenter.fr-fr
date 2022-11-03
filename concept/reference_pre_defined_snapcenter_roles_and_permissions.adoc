@@ -1,0 +1,824 @@
+---
+permalink: concept/reference_pre_defined_snapcenter_roles_and_permissions.html 
+sidebar: sidebar 
+keywords: RBAC, role, permission, pre-defined role 
+summary: 'SnapCenter propose des rôles prédéfinis, chacun avec un ensemble d"autorisations déjà activé. Lors de la configuration et de l"administration du contrôle d"accès basé sur des rôles \(RBAC\), vous pouvez utiliser ces rôles prédéfinis ou en créer de nouveaux.' 
+---
+= Rôles et autorisations SnapCenter prédéfinis
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter propose des rôles prédéfinis, chacun avec un ensemble d'autorisations déjà activé. Lors de la configuration et de l'administration du contrôle d'accès basé sur des rôles (RBAC), vous pouvez utiliser ces rôles prédéfinis ou en créer de nouveaux.
+
+SnapCenter inclut les rôles prédéfinis suivants :
+
+* Rôle d'administrateur SnapCenter
+* Rôle d'administrateur de clones et de sauvegarde des applications
+* Rôle Backup and Clone Viewer
+* Rôle d'administrateur de l'infrastructure
+
+
+Lorsque vous ajoutez un utilisateur à un rôle, vous devez attribuer l'autorisation StorageConnection pour activer la communication SVM (Storage Virtual machine) ou affecter un SVM à l'utilisateur pour permettre l'utilisation de la SVM. L'autorisation Storage Connection permet aux utilisateurs de créer des connexions SVM.
+
+Par exemple, un utilisateur avec le rôle administrateur SnapCenter peut créer des connexions SVM et les affecter à un utilisateur avec le rôle Administrateur App Backup and Clone, qui par défaut n'a pas la permission de créer ou de modifier des connexions SVM. Sans connexion SVM, les utilisateurs ne peuvent pas mener à bien les opérations de sauvegarde, de clonage ou de restauration.
+
+
+
+== Rôle d'administrateur SnapCenter
+
+Toutes les autorisations sont activées pour le rôle d'administrateur SnapCenter. Vous ne pouvez pas modifier les autorisations pour ce rôle. Vous pouvez ajouter des utilisateurs et des groupes au rôle ou les supprimer.
+
+
+
+== Rôle d'administrateur de clones et de sauvegarde des applications
+
+Le rôle d'administrateur d'applications et de clones dispose des autorisations nécessaires pour effectuer des actions administratives pour les sauvegardes d'applications et les tâches liées au clonage. Ce rôle ne dispose pas des autorisations nécessaires pour la gestion des hôtes, le provisionnement, la gestion des connexions de stockage ou l'installation à distance.
+
+|===
+| Autorisations | Activé | Création | Lecture | Mise à jour | Supprimer 
+
+
+ a| 
+Groupe de ressources
+ a| 
+Sans objet
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Politique
+ a| 
+Sans objet
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Sauvegarde
+ a| 
+Sans objet
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Hôte
+ a| 
+Sans objet
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Connexion de stockage
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Clonage
+ a| 
+Sans objet
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Provisionnement
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Tableau de bord
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Rapports
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Restaurer
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Ressource
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Installation/désinstallation du plug-in
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Migration
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Montage
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Démonter
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Restauration complète du volume
+ a| 
+Non
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Moniteur de tâche
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+|===
+
+
+== Rôle Backup and Clone Viewer
+
+Le rôle de la visionneuse de sauvegarde et de clonage dispose d'une vue en lecture seule de toutes les autorisations. Ce rôle est également doté d'autorisations pour la découverte, le reporting et l'accès au Tableau de bord.
+
+|===
+| Autorisations | Activé | Création | Lecture | Mise à jour | Supprimer 
+
+
+ a| 
+Groupe de ressources
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Politique
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Sauvegarde
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Hôte
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Connexion de stockage
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Clonage
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Provisionnement
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Tableau de bord
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Rapports
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Restaurer
+ a| 
+Non
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Ressource
+ a| 
+Non
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Installation/désinstallation du plug-in
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Migration
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Montage
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Démonter
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Restauration complète du volume
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Moniteur de tâche
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+|===
+
+
+== Rôle d'administrateur de l'infrastructure
+
+Le rôle d'administrateur de l'infrastructure possède des autorisations pour la gestion des hôtes, la gestion du stockage, le provisionnement, les groupes de ressources, les rapports d'installation à distance, Et l'accès au Tableau de bord.
+
+|===
+| Autorisations | Activé | Création | Lecture | Mise à jour | Supprimer 
+
+
+ a| 
+Groupe de ressources
+ a| 
+Sans objet
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Politique
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Sauvegarde
+ a| 
+Sans objet
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Hôte
+ a| 
+Sans objet
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Connexion de stockage
+ a| 
+Sans objet
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Clonage
+ a| 
+Sans objet
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Provisionnement
+ a| 
+Sans objet
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Tableau de bord
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Rapports
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Restaurer
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Ressource
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Installation/désinstallation du plug-in
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Migration
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Montage
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Démonter
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Restauration complète du volume
+ a| 
+Non
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Moniteur de tâche
+ a| 
+Oui.
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+|===

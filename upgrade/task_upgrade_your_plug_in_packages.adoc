@@ -1,0 +1,67 @@
+---
+permalink: upgrade/task_upgrade_your_plug_in_packages.html 
+sidebar: sidebar 
+keywords: upgrade, upgrade plug-in packages 
+summary: 'Les modules d"extension sont distribués dans le cadre de la mise à niveau de SnapCenter.' 
+---
+= Mettez à niveau vos modules d'extension
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les modules d'extension sont distribués dans le cadre de la mise à niveau de SnapCenter.
+
+La procédure de mise à niveau place votre hôte Windows, Linux ou AIX en mode « Maintenance », ce qui empêche l'hôte d'exécuter des tâches planifiées.
+
+*Ce dont vous aurez besoin*
+
+* Si vous êtes un utilisateur non-root disposant d'un accès aux machines Linux, vous devez mettre à jour le fichier _/etc/sudoers_ avec les dernières valeurs de somme de contrôle avant d'effectuer l'opération de mise à niveau.
+* Par défaut, SnapCenter détecte JAVA_HOME à partir de l'environnement. Si vous souhaitez utiliser un JAVA_HOME fixe et si vous mettez à niveau les plug-ins sur un hôte Linux, vous devez ajouter manuellement le paramètre SKIP_JAVAHOME_UPDATE dans le fichier _spl.properties_ situé à _/var/opt/snapcenter/spl/etc/_ et définir la valeur SUR TRUE.
++
+La valeur de JAVA_HOME est mise à jour lorsque le plug-in est mis à niveau ou lorsque le service SnapCenter Plug-in Loader (SPL) redémarre. Avant de mettre à niveau ou de redémarrer la SPL, si vous ajoutez le paramètre SKIP_JAVAHOME_UPDATE et définissez la valeur SUR TRUE, la valeur de JAVA_HOME n'est pas mise à jour.
+
+* Vous devez avoir sauvegardé tous les fichiers de configuration SnapCenter que vous avez modifiés sur l'hôte du serveur SnapCenter ou sur l'hôte du plug-in.
++
+Exemples de fichiers de configuration SnapCenter : SnapDriveService.exe.config, SMCoreServiceHost.exe.config, etc.
+
+
+
+*À propos de cette tâche*
+
+* La procédure de mise à niveau place votre hôte Windows, Linux ou AIX en mode « Maintenance », ce qui empêche l'hôte d'exécuter des tâches planifiées.
+* Pour le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server et le plug-in SnapCenter pour Microsoft Windows, il est recommandé de mettre à niveau le serveur et les hôtes du plug-in vers la version 4.7 pour que LE CHEMIN_SCRIPTS s'exécute.
++
+Pour les programmes de sauvegarde et de vérification existants avec les prescripteurs et les postscripts activés dans la stratégie, les opérations de sauvegarde continueront de fonctionner après la mise à niveau.
+
++
+Dans la page *Détails du travail*, un message d'avertissement recommande au client de copier les scripts dans LE CHEMIN_SCRIPTS et de modifier la stratégie pour fournir un chemin relatif au CHEMIN_SCRIPTS. Pour le travail de cycle de vie du clone, un message d'avertissement s'affiche au niveau du sous-travail.
+
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts* > *Managed Hosts*.
+. Mettez à niveau les hôtes en effectuant l'une des tâches suivantes :
++
+** Si la colonne État général affiche « mise à niveau disponible » pour l'un des hôtes, cliquez sur le nom d'hôte et effectuez les opérations suivantes :
++
+... Cliquez sur *plus d'options*.
+... Sélectionnez *Ignorer les contrôles préalables* si vous ne voulez pas vérifier si l'hôte répond aux exigences de mise à niveau du plug-in.
+... Cliquez sur *Upgrade*.
+
+
+** Si vous souhaitez mettre à niveau plusieurs hôtes, sélectionnez tous les hôtes, cliquez sur image:../media/more_icon.gif[""], Puis cliquez sur *Upgrade* > *OK*.
++
+
+NOTE: Tous les plug-ins du package sont sélectionnés. Seuls les plug-ins installés avec la version précédente de SnapCenter sont mis à niveau et les plug-ins restants ne sont pas installés. Vous devez utiliser l'option *Ajouter des plug-ins* pour installer un nouveau plug-in.
+
+
+
+
+
+Si vous n'avez pas coché la case *Skip précontrôles*, l'hôte est validé pour voir s'il répond aux exigences d'installation du plug-in. Si la configuration minimale requise n'est pas respectée, des messages d'erreur ou d'avertissement appropriés s'affichent. Après avoir résolu le problème, cliquez sur *Upgrade*.
+
+
+NOTE: Si l'erreur est liée à l'espace disque ou à la mémoire RAM, vous pouvez mettre à jour le fichier web.config situé à C:\Program Files\NetApp\SnapCenter WebApp, ou les fichiers de configuration PowerShell situés à C:\Windows\System32\PowerShell\Windowsv1.0\modules\SnapCenter\ pour modifier les valeurs par défaut. Si l'erreur est liée aux paramètres restants, vous devez corriger le problème, puis valider à nouveau les exigences.

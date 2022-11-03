@@ -1,0 +1,45 @@
+---
+permalink: protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html 
+sidebar: sidebar 
+keywords:  
+summary: Une fois le stockage primaire du plug-in SnapCenter pour SQL Server de nouveau en ligne, il est préférable de revenir au stockage primaire. 
+---
+= Rétablissement du plug-in SnapCenter pour le stockage secondaire SQL Server vers le stockage primaire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois le stockage primaire du plug-in SnapCenter pour SQL Server de nouveau en ligne, il est préférable de revenir au stockage primaire.
+
+*Ce dont vous aurez besoin*
+
+* Placez le plug-in SnapCenter pour SQL Server en mode *Maintenance* à partir de la page hôtes gérés.
+* Déconnectez le stockage secondaire de l'hôte et connectez-le au stockage principal.
+* Pour revenir au stockage primaire, assurez-vous que la direction de la relation reste identique avant le basculement en effectuant l'opération de resynchronisation inverse.
++
+Pour conserver les rôles de stockage primaire et secondaire après l'opération de resynchronisation inverse, effectuez à nouveau l'opération de resynchronisation inverse.
+
++
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/ontap-sm-classic/online-help-96-97/task_reverse_resynchronizing_snapmirror_relationships.html["Resynchronisation inverse des relations du miroir"]
+
+* Redémarrez le service serveur MSSQL.
+* Assurez-vous que les ressources SQL sont de nouveau en ligne.
+
+
+
+NOTE: Lors du basculement ou de la restauration du plug-in, l'état global du plug-in n'est pas immédiatement actualisé. L'état global des hôtes et des plug-ins est mis à jour lors de l'opération de mise à jour suivante.
+
+*Étapes*
+
+. Dans la page Paramètres, accédez à *Paramètres* > *Paramètres globaux* > *reprise après sinistre*.
+. Désélectionnez *Activer la reprise après sinistre*.
+. Cliquez sur *appliquer*.
+. Vérifiez si le travail DR est activé ou non en cliquant sur *Monitor* > *Jobs*.
+
+
+*Après la fin*
+
+* Vous pouvez supprimer le plug-in SnapCenter pour les sauvegardes SQL Server créées lors du basculement à l'aide de l'interface utilisateur ou de l'applet de commande suivante : `Remove-SmDRFailoverBackups`
+

@@ -1,0 +1,81 @@
+---
+permalink: concept/concept_prescripts_and_postscripts.html 
+sidebar: sidebar 
+keywords: prescript, postscript, script path, script timeout, script types supported 
+summary: 'Vous pouvez utiliser des prescripteurs et des postscripts personnalisés dans le cadre de vos opérations de protection des données. Ces scripts permettent l"automatisation avant ou après votre tâche de protection des données. Vous pouvez, par exemple, inclure un script qui vous informe automatiquement des échecs ou des avertissements liés aux tâches de protection des données. Avant de configurer vos prescripteurs et vos postscripts, vous devez comprendre certaines des conditions requises pour la création de ces scripts.' 
+---
+= Préscripts et postscripts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser des prescripteurs et des postscripts personnalisés dans le cadre de vos opérations de protection des données. Ces scripts permettent l'automatisation avant ou après votre tâche de protection des données. Vous pouvez, par exemple, inclure un script qui vous informe automatiquement des échecs ou des avertissements liés aux tâches de protection des données. Avant de configurer vos prescripteurs et vos postscripts, vous devez comprendre certaines des conditions requises pour la création de ces scripts.
+
+
+
+== Types de script pris en charge
+
+Les types de scripts suivants sont pris en charge pour Windows :
+
+* Fichiers de traitement par lots
+* Scripts PowerShell
+* Scripts Perl
+
+
+Les types de scripts suivants sont pris en charge pour UNIX :
+
+* Scripts Perl
+* Scripts Python
+* Scripts de shell
++
+
+NOTE: Outre le shell bash par défaut, d'autres shells comme sh-shell, k-shell et c-shell sont également pris en charge.
+
+
+
+
+
+== Chemin du script
+
+Tous les scripts prescripteurs et post-scripts exécutés dans le cadre des opérations SnapCenter, sur les systèmes de stockage virtualisés et non virtualisés, sont exécutés sur l'hôte du plug-in.
+
+* Les scripts Windows doivent se trouver sur l'hôte du plug-in.
+
+
+
+NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou de partages. Le chemin doit être relatif au CHEMIN_SCRIPTS.
+
+* Les scripts UNIX doivent se trouver sur l'hôte du plug-in.
+
+
+
+NOTE: Le chemin du script est validé au moment de l'exécution.
+
+
+
+== Où spécifier des scripts
+
+Les scripts sont spécifiés dans les politiques de sauvegarde. Lorsqu'une tâche de sauvegarde est lancée, la stratégie associe automatiquement le script aux ressources sauvegardées. Lorsque vous créez une stratégie de sauvegarde, vous pouvez spécifier les arguments prescripteurs et PostScript.
+
+Uniquement pour Windows, vous pouvez spécifier plusieurs scripts. Vous devez appuyer sur *entrée* après chaque chemin de script pour répertorier chaque script sur une ligne distincte. Les points-virgules (;) ne sont pas autorisés. Vous pouvez spécifier plusieurs prescripteurs et plusieurs postscripts. Un seul script peut être codé en tant que prescripteur et PostScript et peut appeler d'autres scripts.
+
+
+NOTE: Sous UNIX, vous ne pouvez pas spécifier plusieurs scripts.
+
+
+
+== Délais d'expiration du script
+
+Pour Windows, le délai est défini sur 15 minutes et ne peut pas être modifié.
+
+Pour UNIX, le délai est défini sur 60 secondes, par défaut. Vous pouvez modifier la valeur de temporisation.
+
+
+
+== Sortie du script
+
+Le répertoire par défaut des fichiers de sortie Windows prescripts et postscripts est Windows\System32.
+
+Il n'existe pas d'emplacement par défaut pour les prescripteurs et les postscripts UNIX. Vous pouvez rediriger le fichier de sortie vers n'importe quel emplacement préféré.

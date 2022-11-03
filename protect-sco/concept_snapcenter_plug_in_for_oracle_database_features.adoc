@@ -1,0 +1,78 @@
+---
+permalink: protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html 
+sidebar: sidebar 
+keywords: plug-in for Oracle features 
+summary: 'Le plug-in pour base de données Oracle s"intègre à la base de données Oracle sur l"hôte Linux ou AIX et aux technologies NetApp sur le système de stockage.' 
+---
+= Fonctionnalités du plug-in pour Oracle Database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in pour base de données Oracle s'intègre à la base de données Oracle sur l'hôte Linux ou AIX et aux technologies NetApp sur le système de stockage.
+
+* Interface utilisateur graphique unifiée
++
+L'interface SnapCenter assure la standardisation et la cohérence dans l'ensemble des plug-ins et des environnements. L'interface SnapCenter vous permet d'effectuer toutes les opérations de sauvegarde, de restauration et de clonage cohérentes sur l'ensemble des plug-ins, d'utiliser le reporting centralisé, d'utiliser des vues de tableau de bord d'un coup d'œil, de configurer le contrôle d'accès basé sur des rôles (RBAC) et de surveiller les tâches dans l'ensemble des plug-ins.
+
+* Administration centralisée automatisée
++
+Vous pouvez planifier des opérations de sauvegarde et de clonage, configurer la conservation des sauvegardes à l'aide de règles et effectuer des opérations de restauration. Vous pouvez également surveiller votre environnement de manière proactive en configurant SnapCenter pour envoyer des alertes par e-mail.
+
+* Technologie de copie NetApp Snapshot non disruptive
++
+SnapCenter utilise la technologie de copie NetApp Snapshot avec le plug-in pour bases de données Oracle et le plug-in pour UNIX pour sauvegarder des bases de données. Les copies Snapshot requièrent un espace de stockage minimal.
+
+
+
+Le plug-in pour base de données Oracle offre également les avantages suivants :
+
+* Prise en charge de la sauvegarde, de la restauration, du clonage, du montage, du démontage, et de vérification des workflows
+* Découverte automatique des bases de données Oracle configurées sur l'hôte
+* Prise en charge du catalogage et du non-catalogage à l'aide d'Oracle Recovery Manager (RMAN)
+* Sécurité prise en charge par le RBAC et délégation centralisée des rôles
++
+Vous pouvez également définir les informations d'identification de sorte que les utilisateurs SnapCenter autorisés disposent de droits d'accès au niveau de l'application.
+
+* Prise en charge de la gestion des journaux d'archivage (ALM) pour les opérations de restauration et de clonage
+* Création de copies instantanées et compactes de bases de données de production à des fins de test ou d'extraction de données grâce à la technologie NetApp FlexClone
++
+Une licence FlexClone est requise sur le système de stockage dans lequel vous souhaitez créer le clone.
+
+* Prise en charge de la fonction Groupe de cohérence de ONTAP dans le cadre de la création de sauvegardes dans les environnements SAN et ASM
+* Vérification automatisée et sans interruption des sauvegardes
+* Possibilité d'exécuter plusieurs sauvegardes simultanément sur plusieurs hôtes de base de données
++
+En une seule opération, les copies Snapshot sont consolidées lorsque les bases de données sur un hôte unique partagent le même volume.
+
+* Prise en charge des infrastructures physiques et virtualisées
+* Prise en charge de NFS, iSCSI, Fibre Channel (FC), RDM, VMDK over NFS et VMFS et ASM sur NFS, SAN, RDM et VMDK
+* Prise en charge de la fonctionnalité SLM (Selective LUN Map) de ONTAP
++
+Activé par défaut, la fonction SLM détecte régulièrement les LUN qui ne disposent pas de chemins optimisés et les corrige. Vous pouvez configurer SLM en modifiant les paramètres dans le fichier scu.properties situé dans /var/opt/snapcenter/scu/etc
+
++
+** Vous pouvez le désactiver en définissant la valeur DU paramètre ENABLE_LUNPATH_MONITORING sur FALSE.
+** Vous pouvez spécifier la fréquence de correction automatique des chemins de LUN en attribuant la valeur (en heures) au paramètre LUNPATH_MONITORING_INTERVAL. Pour plus d'informations sur SLM, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["Guide d'administration du SAN ONTAP 9"^].
+
+
+* Prise en charge de NVMe (non-volatile Memory Express) sur Linux
++
+** Le util NVMe doit être installé sur l'hôte.
++
+Vous devez installer NVMe util sur cloner ou monter sur un autre hôte.
+
+** Sauvegarde, restauration, clonage, montage, démontage, Les opérations de catalogage, de catalogage et de vérification sont prises en charge sur le matériel NVMe, à l'exception des environnements virtualisés tels que VMDK et RDM.
++
+Les opérations ci-dessus sont prises en charge sur les périphériques sans partitions ou avec une seule partition.
+
+
+
+
+
+
+NOTE: Vous pouvez configurer la solution de chemins d'accès multiples pour les périphériques NVMe en définissant l'option de chemins d'accès multiples natifs dans le noyau. Les chemins d'accès multiples de Device Mapper (DM) ne sont pas pris en charge.
+
++ pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].

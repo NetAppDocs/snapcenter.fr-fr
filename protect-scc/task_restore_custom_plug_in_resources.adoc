@@ -1,0 +1,22 @@
+---
+permalink: protect-scc/task_restore_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations. 
+---
+= Restauration de ressources de plug-ins personnalisées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations.
+
+*À propos de cette tâche*
+
+Le flux de travail suivant montre l'ordre dans lequel vous devez effectuer l'opération de restauration :
+
+image::../media/restore_workflow.gif[Restaurer le flux de travail]
+
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"].

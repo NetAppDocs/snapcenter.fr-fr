@@ -1,0 +1,18 @@
+---
+permalink: protect-scsql/concept_how_long_to_retain_transaction_log_backups_on_the_source_storage_system.html 
+sidebar: sidebar 
+keywords:  
+summary: Le plug-in SnapCenter pour Microsoft SQL Server requiert des sauvegardes de journal des transactions pour effectuer des opérations de restauration à chaud, qui restaurent votre base de données à un moment donné entre deux sauvegardes complètes. 
+---
+= Durée de conservation des sauvegardes du journal des transactions sur le système de stockage source
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in SnapCenter pour Microsoft SQL Server requiert des sauvegardes de journal des transactions pour effectuer des opérations de restauration à chaud, qui restaurent votre base de données à un moment donné entre deux sauvegardes complètes.
+
+Par exemple, si le plug-in pour SQL Server a pris une sauvegarde complète à 8:00 et une autre sauvegarde complète à 5:00, elle peut utiliser la dernière sauvegarde du journal de transactions pour restaurer la base de données à tout moment entre 8:00 et 5:00 Si les journaux de transactions ne sont pas disponibles, le plug-in pour SQL Server peut effectuer des opérations de restauration ponctuelles uniquement, ce qui permet de restaurer une base de données au moment où le plug-in pour SQL Server a terminé une sauvegarde complète.
+
+En règle générale, les opérations de restauration sont réalisées en moins d'une journée ou deux. Par défaut, SnapCenter conserve un minimum de deux jours.

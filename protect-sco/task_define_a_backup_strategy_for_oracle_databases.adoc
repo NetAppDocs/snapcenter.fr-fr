@@ -1,0 +1,299 @@
+---
+permalink: protect-sco/task_define_a_backup_strategy_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
+summary: 'La définition d"une stratégie de sauvegarde avant de créer vos tâches de sauvegarde permet de vérifier que vous disposez des sauvegardes nécessaires pour restaurer ou cloner correctement vos bases de données. Votre contrat de niveau de service (SLA), votre objectif de délai de restauration (RTO) et votre objectif de point de restauration (RPO) déterminent largement votre stratégie de sauvegarde.' 
+---
+= Définir une stratégie de sauvegarde pour les bases de données Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La définition d'une stratégie de sauvegarde avant de créer vos tâches de sauvegarde permet de vérifier que vous disposez des sauvegardes nécessaires pour restaurer ou cloner correctement vos bases de données. Votre contrat de niveau de service (SLA), votre objectif de délai de restauration (RTO) et votre objectif de point de restauration (RPO) déterminent largement votre stratégie de sauvegarde.
+
+Un SLA définit le niveau de service attendu et traite de nombreux problèmes liés à la prestation, notamment la disponibilité et les performances du service. Le RTO est le moment par lequel un processus métier doit être restauré suite à une interruption de service. L'objectif RPO définit la stratégie selon laquelle les fichiers doivent être récupérés depuis le stockage de sauvegarde afin que les opérations régulières puissent reprendre après une défaillance. Les niveaux de service, RTO et RPO contribuent à la stratégie de protection des données.
+
+
+
+== Configurations de base de données Oracle prises en charge pour les sauvegardes
+
+SnapCenter prend en charge la sauvegarde de différentes configurations de bases de données Oracle.
+
+* Oracle autonome
+* Oracle Real application clusters (RAC)
+* Oracle autonome existant
+* Base de données de conteneur autonome Oracle (CDB)
+* Veille Oracle Data Guard
++
+Vous ne pouvez créer que des sauvegardes de bases de données de secours Data Guard à montage hors ligne. La sauvegarde hors ligne, la sauvegarde du journal d'archivage uniquement et la sauvegarde complète ne sont pas prises en charge.
+
+* Veille Oracle Active Data Guard
++
+Vous pouvez uniquement créer des sauvegardes en ligne des bases de données de secours Active Data Guard. La sauvegarde et la sauvegarde complète du journal d'archivage uniquement ne sont pas prises en charge.
+
++
+
+NOTE: Avant de créer une sauvegarde de la base de données de secours Data Guard ou Active Data Guard, le processus de restauration géré (MRP) est arrêté et une fois la sauvegarde créée, le MRP est démarré.
+
+* Gestion automatique du stockage (ASM)
++
+** ASM autonome et ASM RAC sur Virtual machine Disk (VMDK)
++
+
+NOTE: Parmi toutes les méthodes de restauration prises en charge pour les bases de données Oracle, vous pouvez effectuer uniquement la restauration de connexion et de copie des bases de données ASM RAC sur VMDK.
+
+** ASM autonome et ASM RAC sur Raw Device Mapping (RDM) vous pouvez effectuer des opérations de sauvegarde, de restauration et de clonage dans les bases de données Oracle sur ASM, avec ou sans ASMLib.
+** Pilote de filtre Oracle ASM (ASMFD)
++
+
+NOTE: Les opérations de migration PDB et de clonage PDB ne sont pas prises en charge.
+
+** Oracle Flex ASM
+
+
+
+
+Pour obtenir les dernières informations sur les versions Oracle prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=105283;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+
+
+
+== Types de sauvegarde pris en charge pour les bases de données Oracle
+
+Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer. SnapCenter prend en charge les types de sauvegarde en ligne et hors ligne pour les bases de données Oracle.
+
+
+
+=== Sauvegarde en ligne
+
+Une sauvegarde créée lorsque la base de données est en ligne est appelée sauvegarde en ligne. Également appelée sauvegarde à chaud, une sauvegarde en ligne vous permet de créer une sauvegarde de la base de données sans l'arrêter.
+
+Dans le cadre de la sauvegarde en ligne, vous pouvez créer une sauvegarde des fichiers suivants :
+
+* Fichiers de données et fichiers de contrôle uniquement
+* Fichiers journaux d'archive uniquement (la base de données n'est pas mise en mode de sauvegarde dans ce scénario)
+* Base de données complète qui inclut les fichiers de données, les fichiers de contrôle et les fichiers journaux d'archivage
+
+
+
+
+=== Sauvegarde hors ligne
+
+Une sauvegarde créée lorsque la base de données est à l'état monté ou arrêté est appelée sauvegarde hors ligne. Une sauvegarde hors ligne est également appelée sauvegarde à froid. Vous pouvez inclure uniquement les fichiers de données et les fichiers de contrôle dans les sauvegardes hors ligne. Vous pouvez créer une sauvegarde de montage hors ligne ou d'arrêt hors ligne.
+
+* Lors de la création d'une sauvegarde de montage hors ligne, vous devez vous assurer que la base de données est à l'état monté.
++
+Si la base de données est dans un autre état, l'opération de sauvegarde échoue.
+
+* Lors de la création d'une sauvegarde d'arrêt hors ligne, la base de données peut être dans n'importe quel état.
++
+L'état de la base de données passe à l'état requis pour créer une sauvegarde. Après avoir créé la sauvegarde, l'état de la base de données est rétabli à son état d'origine.
+
+
+
+
+
+== Comment SnapCenter détecte les bases de données Oracle
+
+Les « ressources » sont des bases de données Oracle sur l'hôte gérées par SnapCenter. Vous pouvez ajouter ces bases de données à des groupes de ressources pour exécuter des opérations de protection des données après avoir découvert les bases de données disponibles. Il est important de noter que le processus suivi par SnapCenter permet de découvrir différents types et versions des bases de données Oracle.
+
+|===
+| Pour Oracle versions 11__g__ à 12__c__R1 | Pour Oracle versions 12__c__R2 à 18__c__ 
+
+
+ a| 
+*Base de données RAC* : les bases de données RAC ne sont découvertes que sur la base des entrées /etc/oratab.
+
+Vous devez avoir les entrées de la base de données dans le fichier /etc/oratab.
+ a| 
+*Base de données RAC* : les bases de données RAC sont découvertes à l'aide de la commande srvctl config.
+
+
+
+ a| 
+*Standalone*: Les bases de données autonomes ne sont découvertes que sur la base des entrées /etc/oratab.
+
+Vous devez avoir les entrées de la base de données dans le fichier /etc/oratab.
+ a| 
+*Standalone* : les bases de données autonomes sont découvertes à partir des entrées du fichier /etc/oratab et de la sortie de la commande srvctl config.
+
+
+
+ a| 
+*ASM* : l'entrée de l'instance ASM doit être disponible dans le fichier /etc/oratab.
+ a| 
+*ASM* : l'entrée de l'instance ASM ne doit pas se trouver dans le fichier /etc/oratab.
+
+
+
+ a| 
+*RAC One Node* : les bases de données RAC One Node ne sont découvertes que sur la base des entrées /etc/oratab.
+
+Les bases de données doivent être à l'état _nomount_, _mount_ ou _open_. Vous devez avoir les entrées de la base de données dans le fichier /etc/oratab.
+
+L'état de la base de données RAC One Node sera marqué comme renommé ou supprimé si la base de données est déjà découverte et que les sauvegardes sont associées à la base de données.
+
+Si la base de données est déplacée, procédez comme suit :
+
+. Ajoutez manuellement l'entrée de base de données déplacée dans le fichier /etc/oratab sur le nœud RAC défaillant.
+. Actualisez manuellement les ressources.
+. Sélectionnez la base de données RAC One Node dans la page de ressources, puis cliquez sur *Paramètres de base de données*.
+. Configurez la base de données pour définir les nœuds de cluster préférés sur le nœud RAC qui héberge actuellement la base de données.
+. Effectuer les opérations SnapCenter.
+
+
+
+NOTE: Si vous avez déplacé une base de données d'un nœud vers un autre et si l'entrée oratab du nœud précédent n'est pas supprimée, vous devez supprimer manuellement l'entrée oratab pour éviter que la même base de données ne s'affiche deux fois.
+ a| 
+*RAC One Node* : les bases de données RAC One Node sont découvertes à l'aide de la commande srvctl config uniquement.
+
+Les bases de données doivent être à l'état _nomount_, _mount_ ou _open_. L'état de la base de données RAC One Node sera marqué comme renommé ou supprimé si la base de données est déjà découverte et que les sauvegardes sont associées à la base de données.
+
+Si la base de données est déplacée, procédez comme suit :
+
+. Actualisez manuellement les ressources.
+. Sélectionnez la base de données RAC One Node à partir de la page de ressources, puis cliquez sur **Paramètres de base de données**.
+. Configurez la base de données pour définir les nœuds de cluster préférés sur le nœud RAC qui héberge actuellement la base de données.
+. Effectuer les opérations SnapCenter.
+
+
+|===
+
+NOTE: S'il y a des entrées de base de données Oracle 12__c__R2 et 18__c__ dans le fichier /etc/oratab et que la même base de données est enregistrée avec la commande srvctl config, SnapCenter éliminera les entrées de base de données dupliquées. Si des entrées de base de données obsolètes sont présentes, la base de données sera découverte mais la base de données sera inaccessible et son statut sera déconnecté.
+
+
+
+== Nœuds préférés dans la configuration RAC
+
+Dans la configuration Oracle Real application clusters (RAC), vous pouvez spécifier les noeuds préférés sur lesquels l'opération de sauvegarde sera effectuée. Si vous ne spécifiez pas le nœud préféré, SnapCenter attribue automatiquement un nœud en tant que nœud préféré et la sauvegarde est créée sur ce nœud.
+
+Les noeuds préférés peuvent être un ou tous les noeuds du cluster où les instances de base de données RAC sont présentes. L'opération de sauvegarde sera déclenchée uniquement sur les nœuds préférés dans l'ordre de préférence.
+
+Exemple : la base de données RAC cdbrac a trois instances : cdbrac1 sur node1, cdbrac2 sur node2 et cdbrac3 sur node3. Les instances node1 et node2 sont configurées pour être les nœuds préférés, avec le nœud2 comme première préférence et le nœud1 comme seconde préférence. Lorsque vous effectuez une opération de sauvegarde, l'opération est d'abord tentée sur le noeud 2 car il s'agit du premier noeud préféré. Si le noeud 2 n'est pas dans l'état de sauvegarde, ce qui peut être dû à plusieurs raisons, par exemple l'agent du plug-in ne s'exécute pas sur l'hôte, l'instance de base de données sur l'hôte n'est pas à l'état requis pour le type de sauvegarde spécifié, Ou l'instance de base de données sur node2 dans une configuration FlexASM n'est pas traitée par l'instance ASM locale ; l'opération est alors tentée sur le noeud 1. Le nœud 3 ne sera pas utilisé pour la sauvegarde, car il ne figure pas dans la liste des nœuds préférés.
+
+Dans une configuration Flex ASM, les nœuds Leaf ne seront pas répertoriés comme nœuds préférés si la cardinalité est inférieure au nombre de nœuds du cluster RAC. En cas de modification des rôles de nœud de cluster Flex ASM, vous devez découvrir manuellement afin que les nœuds préférés soient actualisés.
+
+
+
+=== État requis de la base de données
+
+Les instances de base de données RAC sur les nœuds préférés doivent être dans l'état requis pour que la sauvegarde puisse se terminer correctement :
+
+* L'une des instances de base de données RAC des nœuds préférés configurés doit être en état ouvert pour créer une sauvegarde en ligne.
+* L'une des instances de base de données RAC des nœuds préférés configurés doit être en état de montage, et toutes les autres instances, y compris les autres nœuds préférés, doivent être en état de montage ou inférieures pour créer une sauvegarde de montage hors ligne.
+* Les instances de base de données RAC peuvent être dans n'importe quel état, mais vous devez spécifier les nœuds préférés pour créer une sauvegarde d'arrêt hors ligne.
+
+
+
+
+== Comment cataloguer les sauvegardes avec Oracle Recovery Manager
+
+Les sauvegardes des bases de données Oracle peuvent être cataloguées à l'aide d'Oracle Recovery Manager (RMAN) pour stocker les informations de sauvegarde dans le référentiel Oracle RMAN.
+
+Les sauvegardes cataloguées peuvent être utilisées ultérieurement pour les opérations de restauration au niveau des blocs ou de restauration à un point dans le temps de l'espace de stockage. Lorsque vous n'avez pas besoin de ces sauvegardes cataloguées, vous pouvez supprimer les informations du catalogue.
+
+La base de données doit être montée ou supérieure pour le catalogage. Vous pouvez catalogage des sauvegardes de données, des sauvegardes de journaux d'archivage et des sauvegardes complètes. Si le catalogage est activé pour une sauvegarde d'un groupe de ressources possédant plusieurs bases de données, le catalogage est effectué pour chaque base de données. Pour les bases de données Oracle RAC, le catalogage s'effectue sur le nœud préféré où la base de données est au moins à l'état montée.
+
+
+NOTE: Si vous souhaitez cataloguer les sauvegardes d'une base de données RAC, assurez-vous qu'aucune autre tâche n'est en cours d'exécution pour cette base de données. Si un autre travail est en cours d'exécution, l'opération de catalogage échoue au lieu d'être mise en file d'attente.
+
+Par défaut, le fichier de contrôle de la base de données cible est utilisé pour le catalogage. Si vous souhaitez ajouter une base de données de catalogue externe, vous pouvez la configurer en spécifiant les informations d'identification et le nom de support réseau transparent (TNS) du catalogue externe à l'aide de l'assistant Paramètres de base de données de l'interface utilisateur graphique de SnapCenter. Vous pouvez également configurer la base de données du catalogue externe à partir de l'interface CLI en exécutant la commande Configure-SmOracleDatabase avec les options -OracleRmanCatalCredentialName et -OracleRmanCatalTnsName.
+
+Si vous avez activé l'option de catalogage lors de la création d'une stratégie de sauvegarde Oracle à partir de l'interface utilisateur graphique SnapCenter, les sauvegardes sont cataloguées à l'aide d'Oracle RMAN dans le cadre de l'opération de sauvegarde. Vous pouvez également effectuer un catalogage différé des sauvegardes en exécutant la commande Catalog-SmBackupWithOracleRMAN. Après avoir catalogué les sauvegardes, vous pouvez exécuter la commande get-SmBackupDetails pour obtenir les informations de sauvegarde cataloguées telles que la balise pour les fichiers de données catalogués, le chemin du catalogue de fichiers de contrôle et les emplacements du journal d'archives catalogués.
+
+Si le nom du groupe de disques ASM est supérieur ou égal à 16 caractères, à partir de SnapCenter 3.0, le format de nommage utilisé pour la sauvegarde est SC_HASHCODEofDISKGROUP_DBSID_BACKUPID. Cependant, si le nom du groupe de disques est inférieur à 16 caractères, le format de nommage utilisé pour la sauvegarde est DISKGROUPNAME_DBSID_BACKUPID, qui est le même format que celui utilisé dans SnapCenter 2.0.
+
+
+NOTE: Le HASHCODEofDISKGROUP est un nombre généré automatiquement (2 à 10 chiffres) unique pour chaque groupe de disques ASM.
+
+Vous pouvez effectuer des vérifications croisées pour mettre à jour les informations de référentiel RMAN obsolètes concernant les sauvegardes dont les enregistrements de référentiel ne correspondent pas à leur état physique. Par exemple, si un utilisateur supprime les journaux archivés du disque à l'aide d'une commande du système d'exploitation, le fichier de contrôle indique toujours que les journaux sont sur le disque, alors qu'en fait ils ne le sont pas. L'opération crosscheck vous permet de mettre à jour le fichier de contrôle avec les informations. Vous pouvez activer la fonction crosscheck en exécutant la commande set-SmConfigSettings et en attribuant la valeur TRUE au paramètre ENABLE_CROSSCHECK. La valeur par défaut est FALSE.
+
+`sccli Set-SmConfigSettings-ConfigSettingsTypePlugin-PluginCodeSCO-ConfigSettings "KEY=ENABLE_CROSSCHECK, VALUE=TRUE"`
+
+Vous pouvez supprimer les informations de catalogue en exécutant la commande uncatalog-SmBackupWithOracleRMAN. Vous ne pouvez pas supprimer les informations du catalogue à l'aide de l'interface graphique de SnapCenter. Toutefois, les informations d'une sauvegarde cataloguée sont supprimées lors de la suppression de la sauvegarde ou lors de la suppression de la rétention et du groupe de ressources associés à cette sauvegarde cataloguée.
+
+
+NOTE: Lorsque vous forcez la suppression de l'hôte SnapCenter, les informations des sauvegardes cataloguées associées à cet hôte ne sont pas supprimées. Vous devez supprimer les informations de toutes les sauvegardes cataloguées de cet hôte avant de forcer la suppression de l'hôte.
+
+Si le catalogage et le décatalogage échoue parce que le temps d'opération a dépassé la valeur de temporisation spécifiée pour le paramètre ORACLE_PLUGIN_RMAN_CATALOG_TIMEOUT, vous devez modifier la valeur du paramètre en exécutant la commande suivante :
+
+`/opt/Netapp/snapcenter/spl/bin/sccli Set-SmConfigSettings-ConfigSettingsType Plugin -PluginCode SCO-ConfigSettings "KEY=ORACLE_PLUGIN_RMAN_CATALOG_TIMEOUT,VALUE=user_defined_value"`
+
+Après avoir modifié la valeur du paramètre, redémarrer le service SnapCenter Plug-in Loader (SPL) en exécutant la commande suivante :
+
+`/opt/NetApp/snapcenter/spl/bin/spl restart`
+
+Les informations concernant les paramètres qui peuvent être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help nom_commande. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["Guide de référence sur les commandes du logiciel SnapCenter"^].
+
+
+
+== Planifications de sauvegarde
+
+La fréquence de sauvegarde (type de planification) est spécifiée dans les stratégies ; un planning de sauvegarde est spécifié dans la configuration du groupe de ressources. Le facteur le plus important dans la détermination d'une fréquence ou d'un planning de sauvegarde est le taux de changement pour la ressource et l'importance des données. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. Parmi les autres facteurs figurent l'importance de la ressource pour votre organisation, votre contrat de niveau de service (SLA) et votre objectif de point de récupération (RPO).
+
+Un SLA définit le niveau de service attendu et traite de nombreux problèmes liés au service, notamment la disponibilité et les performances de celui-ci. Un RPO définit la stratégie selon laquelle les fichiers doivent être récupérés à partir du stockage de sauvegarde afin que des opérations régulières puissent reprendre après une défaillance. Les SLA et RPO contribuent à la stratégie de protection des données.
+
+Même avec une ressource largement utilisée, il n'est pas nécessaire d'exécuter une sauvegarde complète plus d'une fois ou deux fois par jour. Par exemple, des sauvegardes régulières du journal de transactions peuvent suffire pour vous assurer que vous disposez des sauvegardes dont vous avez besoin. Plus vous sauvegardez des bases de données, plus le nombre de journaux de transaction que SnapCenter doit utiliser au moment de la restauration est élevé, ce qui accélère les opérations de restauration.
+
+Les planifications de sauvegarde ont deux parties, comme suit :
+
+* Fréquence des sauvegardes
++
+La fréquence de sauvegarde (fréquence d'exécution des sauvegardes), appelée _schedule type_ pour certains plug-ins, fait partie d'une configuration de stratégie. Vous pouvez sélectionner la fréquence de sauvegarde horaire, quotidienne, hebdomadaire ou mensuelle de la police. Si vous ne sélectionnez aucune de ces fréquences, la règle créée est une stratégie à la demande uniquement. Vous pouvez accéder aux stratégies en cliquant sur *Paramètres* > *stratégies*.
+
+* Planifications de sauvegarde
++
+Les planifications de sauvegarde (exactement quand les sauvegardes doivent être effectuées) font partie d'une configuration de groupe de ressources. Par exemple, si un groupe de ressources dispose d'une stratégie configurée pour les sauvegardes hebdomadaires, vous pouvez configurer la planification pour sauvegarder chaque jeudi à 10 h 00. Vous pouvez accéder aux planifications de groupes de ressources en cliquant sur *Ressources* > *groupes de ressources*.
+
+
+
+
+
+== Nomenclature établie des sauvegardes
+
+Vous pouvez utiliser la convention d'appellation de copie Snapshot par défaut ou la convention de nom personnalisée. la convention de nommage des sauvegardes par défaut ajoute un horodatage aux noms de copie Snapshot qui vous aide à identifier le moment de la création des copies.
+
+La copie Snapshot utilise la convention de nom par défaut suivante :
+
+`resourcegroupname_hostname_timestamp`
+
+Vous devez nommer vos groupes de ressources de sauvegarde de manière logique, comme dans l'exemple suivant :
+
+[listing]
+----
+dts1_mach1x88_03-12-2015_23.17.26
+----
+Dans cet exemple, les éléments de syntaxe ont la signification suivante :
+
+* _dts1_ est le nom du groupe de ressources.
+* _mach1x88_ est le nom d'hôte.
+* _03-12-2015_23.17.26_ est la date et l'horodatage.
+
+
+Vous pouvez également spécifier le format du nom de la copie Snapshot tout en protégeant les ressources ou les groupes de ressources en sélectionnant *utiliser le format de nom personnalisé pour la copie Snapshot*. Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, le suffixe numérique est ajouté au nom de la copie Snapshot.
+
+
+
+== Options de conservation des sauvegardes
+
+Vous pouvez choisir le nombre de jours pendant lesquels vous souhaitez conserver les copies de sauvegarde ou spécifier le nombre de copies de sauvegarde à conserver, dans un maximum de 255 copies ONTAP. Par exemple, votre entreprise peut avoir besoin de conserver 10 jours de copies de sauvegarde ou 130 copies de sauvegarde.
+
+Lors de la création d'une stratégie, vous pouvez spécifier les options de rétention pour le type de sauvegarde et le type de planification.
+
+Si vous configurez la réplication SnapMirror, la règle de conservation est mise en miroir sur le volume de destination.
+
+SnapCenter supprime les sauvegardes conservées dont les étiquettes de conservation correspondent au type de planification. Si le type de planification a été modifié pour la ressource ou le groupe de ressources, les sauvegardes avec l'ancienne étiquette de type de planification peuvent rester sur le système.
+
+
+NOTE: Pour la conservation à long terme des copies de sauvegarde, nous vous recommandons d'utiliser la sauvegarde SnapVault.
+
+
+
+== Vérifiez la copie de sauvegarde à l'aide du volume de stockage primaire ou secondaire
+
+Vous pouvez vérifier les copies de sauvegarde sur le volume de stockage primaire ou sur le volume de stockage secondaire SnapMirror ou SnapVault. La vérification à l'aide d'un volume de stockage secondaire réduit la charge sur le volume de stockage primaire.
+
+Lorsque vous vérifiez une sauvegarde sur le volume de stockage primaire ou secondaire, toutes les copies Snapshot primaires et secondaires sont marquées comme vérifiées.
+
+Une licence SnapRestore est requise pour vérifier les copies de sauvegarde sur les volumes de stockage secondaire SnapMirror et SnapVault.

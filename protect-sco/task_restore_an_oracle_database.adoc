@@ -1,0 +1,232 @@
+---
+permalink: protect-sco/task_restore_an_oracle_database.html 
+sidebar: sidebar 
+keywords: restore, recover, Oracle 
+summary: 'En cas de perte de données, vous pouvez utiliser SnapCenter pour restaurer les données d"une ou plusieurs sauvegardes sur votre système de fichiers actif, puis restaurer la base de données.' 
+---
+= Restaurez et récupérez la base de données Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En cas de perte de données, vous pouvez utiliser SnapCenter pour restaurer les données d'une ou plusieurs sauvegardes sur votre système de fichiers actif, puis restaurer la base de données.
+
+*À propos de cette tâche*
+
+La récupération est effectuée à l'aide des journaux d'archivage disponibles à l'emplacement configuré du journal d'archivage. Si la base de données est exécutée en mode ARCHIVELOG, la base de données Oracle enregistre les groupes remplis de fichiers journaux de reprise vers une ou plusieurs destinations hors ligne, appelées collectivement le journal de reprise archivé. SnapCenter identifie et monte le nombre optimal de sauvegardes de journaux en fonction du SCN spécifié, de la date et de l'heure sélectionnées ou de tous les journaux. Si les journaux d'archivage requis pour la restauration ne sont pas disponibles à l'emplacement configuré, vous devez monter la copie Snapshot contenant les journaux et spécifier le chemin en tant que journaux d'archivage externes.
+
+Si vous migrez la base de données ASM d'ASMLIB vers ASMFD, les sauvegardes créées avec ASMLIB ne peuvent pas être utilisées pour restaurer la base de données. Vous devez créer des sauvegardes dans la configuration ASMFD et utiliser ces sauvegardes pour les restaurer. De même, si la base de données ASM est migrée d'ASMFD vers ASMLIB, vous devez créer des sauvegardes dans la configuration ASMLIB pour restaurer.
+
+Lors de la restauration d'une base de données, un fichier de verrouillage opérationnel (.sm_lock_dbsid) est créé sur l'hôte de la base de données Oracle dans le répertoire $ORACLE_HOME/dbs afin d'éviter l'exécution de plusieurs opérations sur la base de données. Une fois la base de données restaurée, le fichier de verrouillage opérationnel est automatiquement supprimé.
+
+
+NOTE: La restauration des fichiers SPFILE et Password n'est pas prise en charge.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Database* ou *Resource Group* dans la liste *View*.
+. Sélectionnez la base de données dans la vue Détails de la base de données ou dans la vue Détails du groupe de ressources.
++
+La page topologie de la base de données s'affiche.
+
+. Dans la vue gestion des copies, sélectionnez *backups* dans les systèmes de stockage principal ou secondaire (mis en miroir ou répliqué).
+. Sélectionnez la sauvegarde dans le tableau, puis cliquez sur *image:../media/restore_icon.gif["icône restaurer"]*.
+. Dans la page objectif de restauration, effectuez les tâches suivantes :
++
+.. Si vous avez sélectionné une sauvegarde d'une base de données dans un environnement RAC (Real application clusters), sélectionnez le nœud RAC.
+.. Lorsque vous sélectionnez des données mises en miroir ou de coffre-fort:
++
+*** s'il n'y a pas de sauvegarde de journaux sur le miroir ou le coffre-fort, rien n'est sélectionné et les localisateurs sont vides.
+*** si des sauvegardes de journaux existent dans le miroir ou le coffre-fort, la dernière sauvegarde du journal est sélectionnée et le localisateur correspondant s'affiche.
++
+
+NOTE: Si la sauvegarde du journal sélectionné existe à la fois à l'emplacement miroir et à l'emplacement du coffre-fort, les deux localisateurs sont affichés.
+
+
+
+.. Effectuez les opérations suivantes :
++
+|===
+| Si vous voulez restaurer... | Procédez comme ça... 
+
+
+ a| 
+Tous les fichiers de données de la base de données
+ a| 
+Sélectionnez *tous les fichiers de données*.
+
+Seuls les fichiers de données de la base de données sont restaurés. Les fichiers de contrôle, les journaux d'archivage ou les fichiers journaux de reprise ne sont pas restaurés.
+
+
+
+ a| 
+Espaces de stockage
+ a| 
+Sélectionnez *tablespaces*.
+
+Vous pouvez indiquer les espaces de stockage à restaurer.
+
+
+
+ a| 
+Fichiers de contrôle
+ a| 
+Sélectionnez *fichiers de contrôle*.
+
+
+
+ a| 
+Rétablir les fichiers journaux
+ a| 
+Sélectionnez *Redo log files*.
+
+Cette option est disponible uniquement pour les bases de données de secours Data Guard ou Active Data Guard.
+
+
+NOTE: Les fichiers journaux de reprise ne sont pas sauvegardés pour les bases de données non Data Guard. Pour les bases de données non Data Guard, la récupération est effectuée à l'aide de journaux d'archivage.
+
+
+
+ a| 
+Bases de données enfichables (BDD)
+ a| 
+Sélectionnez *Pluggable Databases*, puis spécifiez les PDB que vous souhaitez restaurer.
+
+
+
+ a| 
+Espaces de stockage de base de données enfichables (PDB)
+ a| 
+Sélectionnez *Pluggable database (PDB) tablespaces*, puis spécifiez le PDB et les espaces de stockage de ce PDB que vous souhaitez restaurer.
+
+Cette option n'est disponible que si vous avez sélectionné un PDB à restaurer.
+
+|===
+.. Sélectionnez *changer l'état de la base de données si nécessaire pour restaurer et restaurer* pour changer l'état de la base de données à l'état requis pour effectuer les opérations de restauration et de reprise.
++
+Les différents États d'une base de données de niveau supérieur à inférieur sont ouverts, montés, démarrés et shutdown. Vous devez cocher cette case si la base de données est dans un état plus élevé mais que l'état doit être inférieur pour effectuer une opération de restauration. Si la base de données est dans un état inférieur mais que l'état doit être supérieur pour effectuer l'opération de restauration, l'état de la base de données est automatiquement modifié, même si vous ne cochez pas la case.
+
++
+Si une base de données est à l'état ouvert et que pour restaurer la base de données doit être à l'état monté, l'état de la base de données n'est modifié que si vous cochez cette case.
+
+.. Sélectionnez *forcer la restauration sur place* si vous souhaitez effectuer une restauration sur place dans les scénarios où de nouveaux fichiers de données sont ajoutés après la sauvegarde ou lorsque des LUN sont ajoutées, supprimés ou recréées à un groupe de disques LVM.
+
+
+. Dans la page étendue de la récupération, effectuez les opérations suivantes :
++
+|===
+| Si... | Procédez comme ça... 
+
+
+ a| 
+Que vous souhaitez restaurer à la dernière transaction
+ a| 
+Sélectionnez *tous les journaux*.
+
+
+
+ a| 
+Que vous souhaitez récupérer à un numéro de changement de système (SCN) spécifique
+ a| 
+Sélectionnez *jusqu'à ce que SCN (numéro de changement du système)*.
+
+
+
+ a| 
+Veulent restaurer des données et un temps spécifique
+ a| 
+Sélectionnez *Date et heure*.
+
+Vous devez spécifier la date et l'heure du fuseau horaire de l'hôte de la base de données.
+
+
+
+ a| 
+Ne pas récupérer
+ a| 
+Sélectionnez *pas de récupération*.
+
+
+
+ a| 
+Vous souhaitez spécifier les emplacements de journaux d'archives externes
+ a| 
+Si la base de données est exécutée en mode ARCHIVELOG, SnapCenter identifie et monte le nombre optimal de sauvegardes de journaux en fonction du SCN spécifié, de la date et de l'heure sélectionnées, ou de tous les journaux.
+
+Si vous voulez toujours spécifier l'emplacement des fichiers journaux d'archives externes, sélectionnez *spécifier les emplacements des journaux d'archives externes*.
+
+Si les journaux d'archives sont élagués dans le cadre de la sauvegarde et que vous avez monté manuellement les sauvegardes de journaux d'archives requises, vous devez spécifier le chemin de sauvegarde monté comme emplacement de journal d'archivage externe pour la restauration.
+
+
+NOTE: Vous devez vérifier le chemin et le contenu du chemin de montage avant de le répertorier en tant qu'emplacement de journal externe.
+
+** http://www.netapp.com/us/media/tr-4591.pdf["Rapport technique NetApp 4591 : sauvegarde, restauration, réplication et reprise sur incident dans les bases de données"^]
+** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["L'opération échoue avec l'erreur ORA-00308"^]
+
+
+|===
++
+Vous ne pouvez pas effectuer une restauration avec restauration à partir de sauvegardes secondaires si les volumes du journal d'archivage ne sont pas protégés, mais si les volumes de données sont protégés. Vous ne pouvez restaurer que si vous sélectionnez *pas de récupération*.
+
++
+Si vous restaurez une base de données RAC avec l'option ouvrir base de données sélectionnée, seule l'instance RAC sur laquelle l'opération de restauration a été lancée est remise à l'état ouvert.
+
++
+
+NOTE: La récupération n'est pas prise en charge pour les bases de données de secours Data Guard et Active Data Guard.
+
+. Dans la page PreOps, entrez le chemin d'accès et les arguments du prescripteur que vous voulez exécuter avant l'opération de restauration.
++
+Vous devez stocker les prescripteurs dans le chemin _/var/opt/snapcenter/spl/scripts_ ou dans n'importe quel dossier de ce chemin. Par défaut, le chemin _/var/opt/snapcenter/spl/scripts_ est renseigné. Si vous avez créé des dossiers dans ce chemin pour stocker les scripts, vous devez spécifier ces dossiers dans le chemin d'accès.
+
++
+Vous pouvez également spécifier la valeur du délai d'expiration du script. La valeur par défaut est 60 secondes.
+
++
+SnapCenter vous permet d'utiliser les variables d'environnement prédéfinies lorsque vous exécutez le prescripteur et le PostScript. link:../protect-sco/predefined-environment-variables-prescript-postscript-restore.html["En savoir plus >>"^]
+
+. Dans la page PostOps, effectuez les opérations suivantes :
++
+.. Entrez le chemin d'accès et les arguments du script PostScript que vous souhaitez exécuter après l'opération de restauration.
++
+Vous devez stocker les scripts dans _/var/opt/snapcenter/spl/scripts_ ou dans n'importe quel dossier de ce chemin. Par défaut, le chemin _/var/opt/snapcenter/spl/scripts_ est renseigné. Si vous avez créé des dossiers dans ce chemin pour stocker les scripts, vous devez spécifier ces dossiers dans le chemin d'accès.
+
++
+
+NOTE: Si l'opération de restauration échoue, les postscripts ne seront pas exécutés et les activités de nettoyage seront déclenchées directement.
+
+.. Cochez la case si vous souhaitez ouvrir la base de données après la récupération.
++
+Après la restauration d'une base de données de conteneur (CDB) avec ou sans fichiers de contrôle, ou après la restauration des fichiers de contrôle CDB uniquement, si vous spécifiez d'ouvrir la base de données après la récupération, seul le CDB est ouvert et non les bases de données enfichables (PDB) dans ce CDB.
+
++
+Dans une configuration RAC, seule l'instance RAC utilisée pour la restauration s'ouvre après une restauration.
+
++
+
+NOTE: Après la restauration d'un espace table utilisateur avec des fichiers de contrôle, d'un espace table système avec ou sans fichiers de contrôle, ou d'un PDB avec ou sans fichiers de contrôle, seul l'état du PDB associé à l'opération de restauration est modifié à l'état d'origine. L'état des autres PDB qui n'ont pas été utilisés pour la restauration n'est pas modifié à l'état d'origine car l'état de ces PDB n'a pas été enregistré. Vous devez modifier manuellement l'état des PDB qui n'ont pas été utilisés pour la restauration.
+
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les notifications par e-mail.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Si vous souhaitez joindre le rapport de l'opération de restauration effectuée, vous devez sélectionner *attacher un rapport de travail*.
+
++
+
+NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface utilisateur graphique ou de la commande PowerShell set-SmtpServer.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+
+
+*Pour plus d'informations*
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["La base de données Oracle RAC One Node est ignorée pour effectuer les opérations SnapCenter"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_from_a_secondary_SnapMirror_or_SnapVault_location["Impossible de restaurer le système à partir d'un emplacement SnapMirror ou SnapVault secondaire"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_when_a_backup_of_an_orphan_incarnation_is_selected["Échec de la restauration à partir d'une sauvegarde d'une incarnation orpheline"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Paramètres personnalisables pour les opérations de sauvegarde, de restauration et de clonage sur les systèmes AIX"^]
+

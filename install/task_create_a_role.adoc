@@ -1,0 +1,38 @@
+---
+permalink: install/task_create_a_role.html 
+sidebar: sidebar 
+keywords: role, create, permission 
+summary: 'En plus d"utiliser les rôles SnapCenter existants, vous pouvez créer vos propres rôles et personnaliser les autorisations.' 
+---
+= Créer un rôle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En plus d'utiliser les rôles SnapCenter existants, vous pouvez créer vos propres rôles et personnaliser les autorisations.
+
+Vous devriez avoir ouvert une session en tant que rôle « SnapCenterAdmin ».
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *rôles*.
+. Cliquez sur image:../media/add_icon_configure_database.gif["icône ajouter dans l'écran configurer la base de données"].
+. Dans la page Ajouter un rôle, spécifiez un nom et une description pour le nouveau rôle.
++
+
+NOTE: À partir de SnapCenter 4.5, vous ne pouvez inclure que les caractères spéciaux suivants dans les noms d'utilisateur et de groupe : espace ( ), tiret (-), trait de soulignement (_) et deux-points (:). Si vous souhaitez utiliser un rôle que vous avez créé dans une version antérieure de SnapCenter avec ces caractères spéciaux, vous pouvez désactiver la validation du nom de rôle en changeant la valeur du paramètre 'disableSQLInjectionvalidation' à true dans le fichier web.config situé dans lequel se trouve la WebApp SnapCenter. Après avoir modifié la valeur, vous n'avez pas besoin de redémarrer le service.
+
+. Select *tous les membres de ce rôle peuvent voir les objets d'autres membres* pour permettre aux autres membres du rôle d'afficher les ressources telles que les volumes et les hôtes après avoir actualisé la liste des ressources.
++
+Vous devez désélectionner cette option si vous ne souhaitez pas que les membres de ce rôle voient les objets auxquels les autres membres sont affectés.
+
++
+
+NOTE: Lorsque cette option est activée, il n'est pas nécessaire d'attribuer aux utilisateurs un accès aux objets ou aux ressources si les utilisateurs appartiennent au même rôle que l'utilisateur qui a créé les objets ou les ressources.
+
+. Dans la page autorisations, sélectionnez les autorisations que vous souhaitez attribuer au rôle ou cliquez sur *Sélectionner tout* pour accorder toutes les autorisations au rôle.
+. Cliquez sur *soumettre*.
+

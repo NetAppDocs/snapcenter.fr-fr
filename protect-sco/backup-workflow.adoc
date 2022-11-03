@@ -1,0 +1,26 @@
+---
+permalink: protect-sco/backup-workflow.html 
+sidebar: sidebar 
+keywords: backup, workflow 
+summary: 'Vous pouvez créer une sauvegarde d"une ressource (base de données) ou d"un groupe de ressources.' 
+---
+= Workflow de sauvegarde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer une sauvegarde d'une ressource (base de données) ou d'un groupe de ressources. Le workflow de sauvegarde comprend la planification, l'identification des ressources de sauvegarde, la création de stratégies de sauvegarde, la création de groupes de ressources et la connexion de stratégies, la création de sauvegardes et le contrôle des opérations.
+
+Le workflow suivant montre la séquence dans laquelle vous devez effectuer l'opération de sauvegarde :
+
+image::../media/sco_backup_workflow.png[Workflow de sauvegarde pour Oracle]
+
+Lors de la création d'une sauvegarde pour les bases de données Oracle, un fichier de verrouillage opérationnel (_.sm_lock_dbsid_) est créé sur l'hôte de la base de données Oracle dans le répertoire _$ORACLE_HOME/dbs_ pour éviter l'exécution de plusieurs opérations sur la base de données. Une fois la base de données sauvegardée, le fichier de verrouillage opérationnel est automatiquement supprimé.
+
+Cependant, si la sauvegarde précédente a été terminée avec un avertissement, le fichier de verrouillage opérationnel peut ne pas être supprimé et l'opération de sauvegarde suivante est entrée dans la file d'attente. Il peut être annulé si le fichier *.sm_lock_dbsid* n'est pas supprimé. Dans ce cas, vous devez supprimer manuellement le fichier de verrouillage opérationnel en gelant les étapes suivantes :
+
+. À l'invite de commande, accédez à $ORACLE_HOME/dbs.
+. Supprimez le verrouillage opérationnel :``rm -rf .sm_lock_dbsid.``
+

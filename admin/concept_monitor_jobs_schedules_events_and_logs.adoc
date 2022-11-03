@@ -1,0 +1,140 @@
+---
+permalink: admin/concept_monitor_jobs_schedules_events_and_logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez surveiller la progression de vos travaux, obtenir des informations sur les tâches planifiées et vérifier les événements et les journaux à partir de la page Monitor. 
+---
+= Surveillez les tâches, les plannings, les événements et les journaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez surveiller la progression de vos travaux, obtenir des informations sur les tâches planifiées et vérifier les événements et les journaux à partir de la page Monitor.
+
+
+
+== Surveiller les tâches
+
+Vous pouvez afficher des informations sur les tâches de sauvegarde, de clonage, de restauration et de vérification SnapCenter. Vous pouvez filtrer cette vue en fonction de la date de début et de fin, du type de tâche, du groupe de ressources, de la stratégie ou du plug-in SnapCenter. Vous pouvez également obtenir des détails supplémentaires et des fichiers journaux pour les travaux spécifiés.
+
+Vous pouvez également surveiller les tâches liées aux opérations SnapMirror et SnapVault.
+
+
+NOTE: Vous ne pouvez contrôler que les travaux que vous avez créés et qui sont pertinents pour vous, sauf si vous avez reçu un rôle d'administrateur SnapCenter ou un autre super utilisateur.
+
+Vous pouvez effectuer les tâches suivantes associées aux tâches de surveillance :
+
+* Surveillance des opérations de sauvegarde, de clonage, de restauration et de vérification
+* Afficher les détails du travail et les rapports.
+* Arrêter une tâche planifiée.
+
+
+
+
+== Surveiller les plannings
+
+Vous pouvez afficher les horaires actuels pour déterminer le moment où l'opération démarre, le moment où elle a été exécutée pour la dernière fois et le moment où elle s'exécute ensuite. Vous pouvez également déterminer l'hôte sur lequel l'opération s'exécute, ainsi que le groupe de ressources et les informations de stratégie de l'opération.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *moniteur*.
+. Dans la page moniteur, cliquez sur *plannings*.
+. Sélectionnez le groupe de ressources et le type de planification.
+. Afficher la liste des opérations planifiées.
+
+
+
+
+== Contrôle des événements
+
+Vous pouvez afficher la liste des événements SnapCenter dans le système, par exemple lorsqu'un utilisateur crée un groupe de ressources ou lorsqu'il lance des activités, comme par exemple lors de la création d'une sauvegarde planifiée. Vous pouvez afficher les événements pour déterminer si une opération telle qu'une sauvegarde ou une restauration est en cours.
+
+*À propos de cette tâche*
+
+Toutes les informations sur le travail s'affichent sur la page événements. Par exemple, lorsqu'une tâche de sauvegarde démarre, un événement « démarrage de sauvegarde » s'affiche. À la fin de la sauvegarde, un événement « sauvegarde terminée » s'affiche.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *moniteur*.
+. Dans la page moniteur, cliquez sur *Evénements*.
+. (Facultatif) dans la zone filtre, entrez la date de début ou de fin, la catégorie d'événement (comme la sauvegarde, le groupe de ressources ou la stratégie) et le niveau de gravité, puis cliquez sur *appliquer*. Vous pouvez également saisir des caractères dans la zone de recherche.
+. Afficher la liste des événements.
+
+
+
+
+== Surveiller les journaux
+
+Vous pouvez afficher et télécharger les journaux du serveur SnapCenter, les journaux des agents de l'hôte SnapCenter et les journaux des plug-ins. Vous pouvez afficher les journaux pour faciliter le dépannage.
+
+*À propos de cette tâche*
+
+Vous pouvez filtrer les journaux pour afficher uniquement un niveau de sévérité spécifique du journal :
+
+* Débogage
+* Info
+* Avertissement
+* Erreur
+* Mortel
+
+
+Vous pouvez également obtenir des journaux au niveau des tâches, par exemple des journaux qui vous aident à résoudre le problème d'échec d'une tâche de sauvegarde. Pour les journaux au niveau des travaux, utilisez l'option *moniteur* > *travaux*.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *moniteur*.
+. Dans la page travaux, sélectionnez un travail et cliquez sur Télécharger les journaux.
++
+Le dossier compressé téléchargé contient les journaux des travaux et les journaux courants. Le nom du dossier compressé contient l'ID du travail et le type de travail sélectionnés.
+
+. Dans la page moniteur, cliquez sur *Logs*.
+. Sélectionnez le type de journal, l'hôte et l'instance.
++
+Si vous sélectionnez le type de journal comme *plugin*, vous pouvez sélectionner un hôte ou un plug-in SnapCenter. Vous ne pouvez pas le faire si le type de journal est *Server*.
+
+. Pour filtrer les journaux par source, message ou niveau de journal spécifique, cliquez sur l'icône de filtre située en haut de l'en-tête de colonne.
++
+Pour afficher tous les journaux, choisissez *supérieur ou égal à* comme `Debug` niveau.
+
+. Cliquez sur *Actualiser*.
+. Afficher la liste des journaux
+. Cliquez sur *Télécharger* pour télécharger les journaux.
++
+Le dossier compressé téléchargé contient les journaux des travaux et les journaux courants. Le nom du dossier compressé contient l'ID du travail et le type de travail sélectionnés.
+
+
+
+Dans les grandes configurations pour des performances optimales, vous devez définir au niveau minimal les paramètres de journalisation de SnapCenter en utilisant la cmdlet PowerShell.
+
+`Set-SmLogSettings -LogLevel All -MaxFileSize 10MB -MaxSizeRollBackups 10 -JobLogsMaxFileSize 10MB -Server`
+
+
+NOTE: Pour accéder aux informations d'intégrité ou de configuration après la fin d'un travail de basculement, exécutez l'applet de commande `Get-SmRepositoryConfig`.
+
+
+
+== Supprimer les travaux et les journaux de SnapCenter
+
+Vous pouvez supprimer des tâches de sauvegarde, de restauration, de clonage et de vérification ainsi que des journaux de SnapCenter. SnapCenter stocke les journaux des tâches qui ont réussi et échoué indéfiniment, sauf si vous les supprimez. Il se peut que vous souhaitiez les supprimer pour réapprovisionner le stockage.
+
+*À propos de cette tâche*
+
+Aucun travail ne doit être en cours d'exécution. Vous pouvez supprimer un travail spécifique en fournissant un ID de travail ou en supprimant des travaux au cours d'une période donnée.
+
+Il n'est pas nécessaire de placer l'hôte en mode de maintenance pour supprimer des travaux.
+
+*Étapes*
+
+. Lancer PowerShell.
+. Dans l'invite de commande, entrez : `Open-SMConnection`
+. Dans l'invite de commande, entrez : `Remove-SmJobs`
+. Dans le volet de navigation de gauche, cliquez sur *moniteur*.
+. Dans la page moniteur, cliquez sur *travaux*.
+. Dans la page travaux, vérifiez l'état du travail.
+
+
+*Plus d'informations*
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

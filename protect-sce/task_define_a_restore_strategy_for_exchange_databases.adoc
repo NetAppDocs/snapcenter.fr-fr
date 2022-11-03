@@ -1,0 +1,73 @@
+---
+permalink: protect-sce/task_define_a_restore_strategy_for_exchange_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La définition d"une stratégie de restauration pour Exchange Server vous permet de restaurer votre base de données avec succès.' 
+---
+= Définir une stratégie de restauration pour les bases de données Exchange
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La définition d'une stratégie de restauration pour Exchange Server vous permet de restaurer votre base de données avec succès.
+
+
+
+== Sources pour une opération de restauration dans Exchange Server
+
+Vous pouvez restaurer une base de données Exchange Server à partir d'une copie de sauvegarde sur le stockage primaire.
+
+Les bases de données ne peuvent être restaurées qu'à partir d'un système de stockage primaire.
+
+
+
+== Types d'opérations de restauration pris en charge pour Exchange Server
+
+Vous pouvez utiliser SnapCenter pour effectuer différents types d'opérations de restauration sur les ressources Exchange.
+
+* Restaurez vos données en moins d'une minute
+* Restauration à un point précédent dans le temps
+
+
+
+
+=== Restaurez vos données en quelques minutes
+
+Dans le cadre d'une opération de restauration en moins d'une minute, les bases de données sont récupérées jusqu'au point de défaillance. Pour cela, SnapCenter effectue la séquence suivante :
+
+. Restaure les bases de données à partir de la sauvegarde de base de données complète que vous sélectionnez.
+. Applique tous les journaux de transactions sauvegardés, ainsi que tous les nouveaux journaux créés depuis la sauvegarde la plus récente.
++
+Les journaux de transactions sont déplacés vers l'avant et appliqués à toute base de données sélectionnée.
+
++
+Exchange crée une nouvelle chaîne de journaux une fois la restauration terminée.
+
++
+|===
+
+
+| *Meilleure pratique:* il est recommandé d'effectuer une nouvelle sauvegarde complète et du journal une fois la restauration terminée. 
+|===
++
+Une opération de restauration en moins d'une minute nécessite un ensemble contigu de journaux de transaction.
+
++
+Après avoir effectué une restauration en moins d'une minute, la sauvegarde que vous avez utilisée pour la restauration n'est disponible que pour les opérations de restauration à un point dans le temps.
+
++
+Si vous n'avez pas besoin de conserver une capacité de restauration à la minute pour toutes les sauvegardes, vous pouvez configurer la conservation de la sauvegarde du journal des transactions de votre système à l'aide des stratégies de sauvegarde.
+
+
+
+
+
+=== Restauration à un point précédent dans le temps
+
+Dans le cadre d'une opération de restauration instantanée, les bases de données ne sont restaurées qu'à une heure spécifique par le passé. Une opération de restauration à un point dans le temps se produit dans les situations de restauration suivantes :
+
+* La base de données est restaurée à une heure donnée dans un journal de transactions sauvegardé.
+* La base de données est restaurée et seul un sous-ensemble des journaux de transactions sauvegardés y est appliqué.
+

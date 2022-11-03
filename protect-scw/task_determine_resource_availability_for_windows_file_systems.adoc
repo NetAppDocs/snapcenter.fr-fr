@@ -1,0 +1,34 @@
+---
+permalink: protect-scw/task_determine_resource_availability_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords: availability 
+summary: 'Les ressources sont les LUN et les composants similaires de votre système de fichiers gérés par les plug-ins que vous avez installés. Vous pouvez ajouter ces ressources aux groupes de ressources de sorte que vous puissiez effectuer des tâches de protection des données sur plusieurs ressources. Toutefois, vous devez d"abord identifier les ressources disponibles. La détection des ressources disponibles permet également de vérifier que l"installation du plug-in a bien été effectuée.' 
+---
+= Déterminez la disponibilité des ressources pour les systèmes de fichiers Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les ressources sont les LUN et les composants similaires de votre système de fichiers gérés par les plug-ins que vous avez installés. Vous pouvez ajouter ces ressources aux groupes de ressources de sorte que vous puissiez effectuer des tâches de protection des données sur plusieurs ressources. Toutefois, vous devez d'abord identifier les ressources disponibles. La détection des ressources disponibles permet également de vérifier que l'installation du plug-in a bien été effectuée.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez déjà avoir terminé certaines tâches, telles que l'installation d'SnapCenter Server, l'ajout d'hôtes, la création de connexions SVM et l'ajout d'identifiants.
+* Si les fichiers résident sur des LUN RDM ou des VMDK VMware, vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter. Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["Documentation du plug-in SnapCenter pour VMware vSphere"^].
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *systèmes de fichiers* dans la liste.
+. Sélectionnez l'hôte pour filtrer la liste des ressources, puis cliquez sur *Actualiser les ressources*.
++
+Les systèmes de fichiers récemment ajoutés, renommés ou supprimés sont mis à jour dans l'inventaire du serveur SnapCenter.
+
++
+
+IMPORTANT: Vous devez actualiser les ressources si les bases de données sont renommées en dehors de SnapCenter.
+
+

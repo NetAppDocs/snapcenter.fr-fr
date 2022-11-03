@@ -1,0 +1,21 @@
+= Déployer le certificat d'autorité de certification
+:allow-uri-read: 
+
+
+Si votre base de données est stockée sur des machines virtuelles (VM) ou si vous souhaitez protéger des machines virtuelles et des datastores, vous devez déployer le plug-in SnapCenter pour l'appliance virtuelle VMware vSphere.
+
+Pour plus d'informations sur le déploiement, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["Présentation du déploiement"^].
+
+
+
+== Déployer le certificat d'autorité de certification
+
+Pour configurer le certificat d'autorité de certification avec le plug-in SnapCenter pour VMware vSphere, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["Créez ou importez un certificat SSL"^].
+
+
+
+== Configurez le fichier CRL
+
+Le plug-in SnapCenter pour VMware vSphere recherche les fichiers CRL dans un répertoire préconfiguré. Le répertoire par défaut des fichiers CRL pour le plug-in SnapCenter pour VMware vSphere est _/opt/netapp/config/crl_.
+
+Vous pouvez placer plusieurs fichiers CRL dans ce répertoire. Les certificats entrants seront vérifiés pour chaque CRL.

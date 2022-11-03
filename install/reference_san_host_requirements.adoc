@@ -1,0 +1,33 @@
+---
+permalink: install/reference_san_host_requirements.html 
+sidebar: sidebar 
+keywords: host utilities, Microsoft DSM, Windows MPIO 
+summary: 'Si votre hôte SnapCenter fait partie d"un environnement FC/iSCSI, vous devrez peut-être installer des logiciels supplémentaires sur le système pour autoriser l"accès au stockage ONTAP.' 
+---
+= Exigences relatives à l'hôte SAN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si votre hôte SnapCenter fait partie d'un environnement FC/iSCSI, vous devrez peut-être installer des logiciels supplémentaires sur le système pour autoriser l'accès au stockage ONTAP.
+
+SnapCenter n'inclut pas les utilitaires hôtes ou un DSM. Si votre hôte SnapCenter fait partie d'un environnement SAN, vous devrez peut-être installer et configurer les logiciels suivants :
+
+* Utilitaires hôtes
++
+Les utilitaires hôtes prennent en charge les protocoles FC et iSCSI, et il vous permet d'utiliser MPIO sur vos serveurs Windows. Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/ontap-sanhost/["Documentation Host Utilities"^].
+
+* Microsoft DSM pour Windows MPIO
++
+Ce logiciel fonctionne avec des pilotes Windows MPIO pour gérer plusieurs chemins d'accès entre les ordinateurs hôtes NetApp et Windows.
+
++
+Un DSM est nécessaire pour les configurations haute disponibilité.
+
++
+
+NOTE: Si vous utilisiez ONTAP DSM, vous devez migrer vers Microsoft DSM. Pour plus d'informations, voir https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Data_ONTAP_DSM_for_Windows_MPIO/How_to_migrate_from_Data_ONTAP_DSM_4.1p1_to_Microsoft_native_DSM["Comment migrer de ONTAP DSM vers Microsoft DSM"^].
+
+

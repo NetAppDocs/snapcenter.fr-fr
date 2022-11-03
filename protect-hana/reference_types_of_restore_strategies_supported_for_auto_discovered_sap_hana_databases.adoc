@@ -1,0 +1,38 @@
+---
+permalink: protect-hana/reference_types_of_restore_strategies_supported_for_auto_discovered_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Databases 
+summary: 'Vous devez définir une stratégie pour pouvoir effectuer les opérations de restauration à l"aide de SnapCenter. Il existe deux types de stratégies de restauration pour les bases de données SAP HANA automatiquement découvertes.' 
+---
+= Types de stratégies de restauration pris en charge pour les bases de données SAP HANA automatiquement découvertes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez définir une stratégie pour pouvoir effectuer les opérations de restauration à l'aide de SnapCenter. Il existe deux types de stratégies de restauration pour les bases de données SAP HANA automatiquement découvertes.
+
+
+
+== Restauration des ressources terminée
+
+* Restauration de tous les volumes, qtrees et LUN d'une ressource
++
+** L'option *Volume Revert* doit être sélectionnée pour restaurer l'intégralité du volume.
++
+
+NOTE: Si la ressource contient des volumes ou des qtrees, les copies Snapshot sont supprimées après la copie Snapshot sélectionnée pour être restaurées sur de tels volumes ou qtrees et ne peuvent pas être restaurées. De même, si une autre ressource est hébergée sur les mêmes volumes ou qtrees, cette ressource est également supprimée.
+
+
+
+
+
+
+
+== Base de données des locataires
+
+* Restaure la base de données des locataires
+
+
+Si l'option *tenant Database* est sélectionnée, vous devez utiliser des scripts de reprise HANA Studio ou HANA externes à SnapCenter pour effectuer l'opération de reprise.

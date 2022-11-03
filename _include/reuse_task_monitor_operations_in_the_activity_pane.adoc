@@ -1,0 +1,16 @@
+= 
+:allow-uri-read: 
+
+
+Le volet activité affiche les cinq opérations les plus récentes effectuées. Le volet activité s'affiche également lorsque l'opération a été lancée et que l'état de l'opération a été défini.
+
+Le volet activité affiche des informations concernant les opérations de sauvegarde, de restauration, de clonage et de sauvegarde planifiée. Si vous utilisez le plug-in pour SQL Server ou le plug-in pour Exchange Server, le volet activité affiche également des informations sur l'opération de réamorçage.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Cliquez sur image:../media/activity_pane_icon.gif[""] Dans le volet activité pour afficher les cinq opérations les plus récentes.
++
+Lorsque vous cliquez sur l'une des opérations, les détails de l'opération sont répertoriés dans la page Détails du travail.
+
+

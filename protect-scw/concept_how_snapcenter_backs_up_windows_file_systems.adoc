@@ -1,0 +1,23 @@
+---
+permalink: protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 'SnapCenter utilise la technologie de copie Snapshot pour sauvegarder les ressources du système de fichiers Windows résidant sur des LUN, des CSV (Cluster Shared volumes), des volumes RDM (Raw Device Mapping), ALM (Asymmetric LUN mapping) dans des clusters Windows, et des VMDK basés sur VMFS/NFS (VMware Virtual machine File System à l"aide de NFS).' 
+---
+= Sauvegarde des systèmes de fichiers Windows par SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter utilise la technologie de copie Snapshot pour sauvegarder les ressources du système de fichiers Windows résidant sur des LUN, des CSV (Cluster Shared volumes), des volumes RDM (Raw Device Mapping), ALM (Asymmetric LUN mapping) dans des clusters Windows, et des VMDK basés sur VMFS/NFS (VMware Virtual machine File System à l'aide de NFS).
+
+SnapCenter crée des sauvegardes en créant des copies Snapshot des systèmes de fichiers. Les sauvegardes fédérées, dans lesquelles un volume contient des LUN provenant de plusieurs hôtes, sont plus rapides et plus efficaces que les sauvegardes de chaque LUN individuelle. En effet, une seule copie Snapshot du volume est créée par rapport aux snapshots individuels de chaque système de fichiers.
+
+Lors de la création d'une copie Snapshot par SnapCenter, l'intégralité du volume du système de stockage est capturée dans la copie Snapshot. Cependant, la sauvegarde n'est valide que pour le serveur hôte pour lequel la sauvegarde a été créée.
+
+Si les données d'autres serveurs hôtes se trouvent sur le même volume, ces données ne peuvent pas être restaurées à partir de la copie Snapshot.
+
+
+NOTE: Si un système de fichiers Windows contient une base de données, la sauvegarde du système de fichiers n'est pas la même que la sauvegarde de la base de données. Pour sauvegarder une base de données, vous devez utiliser l'un des plug-ins de base de données.

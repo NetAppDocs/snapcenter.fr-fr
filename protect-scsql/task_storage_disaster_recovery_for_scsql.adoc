@@ -1,0 +1,54 @@
+---
+permalink: protect-scsql/task_storage_disaster_recovery_for_scsql.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez restaurer le plug-in SnapCenter pour stockage SQL Server en activant le mode DR pour le stockage sur la page Paramètres globaux. 
+---
+= Stockage de reprise après incident pour le plug-in SnapCenter pour SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez restaurer le plug-in SnapCenter pour stockage SQL Server en activant le mode DR pour le stockage sur la page Paramètres globaux.
+
+*Ce dont vous aurez besoin*
+
+* Assurez-vous que les plug-ins sont en mode de maintenance.
+* Interrompre la relation SnapMirror/SnapVaultlink:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-950/GUID-8A3F828F-CD3D-48E8-A171-393581FEB2ED.html["Repousser les relations SnapMirror"]
+* Reliez le LUN du système secondaire à l'ordinateur hôte avec la même lettre de lecteur.
+* Assurez-vous que tous les disques sont connectés à l'aide des mêmes lettres que celles utilisées avant le DR.
+* Redémarrez le service serveur MSSQL.
+* Assurez-vous que les ressources SQL sont de nouveau en ligne.
+
+
+*À propos de cette tâche*
+
+La reprise après incident n'est pas prise en charge sur les configurations VMDK et RDM.
+
+*Étapes*
+
+. Dans la page Paramètres, accédez à *Paramètres* > *Paramètres globaux* > *reprise après sinistre*.
+. Sélectionnez *Activer la récupération après sinistre*.
+. Cliquez sur *appliquer*.
+. Vérifiez si le travail DR est activé ou non en cliquant sur *Monitor* > *Jobs*.
+
+
+*Après la fin*
+
+* Si de nouvelles bases de données sont créées après le basculement, celles-ci seront en mode non-DR.
++
+Les nouvelles bases de données continueront à fonctionner comme elles l'ont fait avant le basculement.
+
+* Les nouvelles sauvegardes créées en mode DR seront répertoriées sous SnapMirror ou SnapVault (secondaire) sur la page topologie.
++
+Une icône « i » s'affiche en regard des nouvelles sauvegardes pour indiquer que ces sauvegardes ont été créées en mode DR.
+
+* Vous pouvez supprimer le plug-in SnapCenter pour les sauvegardes SQL Server créées lors du basculement à l'aide de l'interface utilisateur ou de l'applet de commande suivante : `Remove-SmBackup`
+* Après le basculement, si vous souhaitez que certaines ressources soient en mode non-DR, utilisez l'applet de commande suivante : `Remove-SmResourceDRMode`
++
+Pour plus d'informations, reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+* Le serveur SnapCenter gère les ressources de stockage individuelles (bases de données SQL) en mode reprise après incident ou autre, mais pas le groupe de ressources avec les ressources de stockage en mode DR ou non.
+

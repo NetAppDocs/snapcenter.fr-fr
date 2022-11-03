@@ -1,0 +1,20 @@
+---
+permalink: install/reference_provision_storage_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous ne souhaitez pas utiliser l"interface graphique de SnapCenter pour effectuer des tâches de provisionnement d"hôtes et de récupération d"espace, vous pouvez utiliser les applets de commande PowerShell fournies par le plug-in SnapCenter pour Microsoft Windows. Vous pouvez utiliser les applets de commande directement ou les ajouter aux scripts.' 
+---
+= Provisionnement du stockage avec les applets de commande PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous ne souhaitez pas utiliser l'interface graphique de SnapCenter pour effectuer des tâches de provisionnement d'hôtes et de récupération d'espace, vous pouvez utiliser les applets de commande PowerShell fournies par le plug-in SnapCenter pour Microsoft Windows. Vous pouvez utiliser les applets de commande directement ou les ajouter aux scripts.
+
+Si vous exécutez les applets de commande sur un hôte de plug-in distant, vous devez exécuter l'applet de commande SnapCenter Open-SMConnection pour ouvrir une connexion au serveur SnapCenter.
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+Si les applets de commande SnapCenter PowerShell sont cassés afin de supprimer SnapDrive pour Windows du serveur, reportez-vous à https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_cmdlets_broken_when_SnapDrive_for_Windows_is_uninstalled["Les applets de commande SnapCenter sont cassés lors de la désinstallation de SnapDrive pour Windows"^].

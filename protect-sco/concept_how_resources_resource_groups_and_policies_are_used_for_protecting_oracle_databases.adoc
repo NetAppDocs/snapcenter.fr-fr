@@ -1,0 +1,36 @@
+---
+permalink: protect-sco/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_oracle_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Database 
+summary: 'Avant d"utiliser SnapCenter, il est utile de maîtriser les concepts de base associés aux opérations de sauvegarde, de clonage et de restauration que vous souhaitez effectuer.' 
+---
+= Mode d'utilisation des ressources, des groupes de ressources et des règles pour la protection des bases de données Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser SnapCenter, il est utile de maîtriser les concepts de base associés aux opérations de sauvegarde, de clonage et de restauration que vous souhaitez effectuer.
+
+* Les ressources sont généralement les bases de données Oracle dans le SnapCenter.
+* Un groupe SnapCenterResource group est une collection de ressources sur un hôte ou un cluster.
++
+Lorsque vous effectuez une opération sur un groupe de ressources, vous effectuez cette opération sur les ressources définies dans le groupe de ressources.
+
++
+Les groupes de ressources étaient auparavant appelés ensembles de données.
+
+* Ces règles précisent la fréquence des sauvegardes, la conservation des copies, la réplication, les scripts et d'autres caractéristiques des opérations de protection des données.
++
+Lorsque vous créez un groupe de ressources, vous sélectionnez une ou plusieurs stratégies pour ce groupe. Vous pouvez également sélectionner une stratégie lorsque vous effectuez une sauvegarde à la demande pour une seule ressource. Vous pouvez également effectuer des sauvegardes planifiées pour des ressources et des groupes de ressources uniques.
+
+
+
+Pensez à un groupe de ressources comme définissant _quoi_ vous voulez protéger et quand vous voulez le protéger en termes de jour et de temps. Pensez à une stratégie comme définir _comment_ vous voulez la protéger.
+
+Si vous sauvegardez toutes les bases de données d'un hôte, par exemple, vous pouvez créer un groupe de ressources qui inclut toutes les bases de données de l'hôte. Vous pouvez ensuite associer deux stratégies au groupe de ressources : une stratégie quotidienne et une stratégie horaire. Lorsque vous créez le groupe de ressources et joignez les stratégies, vous pouvez configurer le groupe de ressources pour effectuer une sauvegarde complète tous les jours et un autre programme qui effectue des sauvegardes de journaux toutes les heures.
+
+L'image suivante illustre la relation entre les ressources, les groupes de ressources et les politiques des bases de données :
+
+image::../media/sco_resourcegroup_policy.gif[stratégie de groupe de ressources sco]

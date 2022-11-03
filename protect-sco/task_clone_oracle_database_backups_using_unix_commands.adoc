@@ -1,0 +1,43 @@
+---
+permalink: protect-sco/task_clone_oracle_database_backups_using_unix_commands.html 
+sidebar: sidebar 
+keywords: clone, CLI, commands 
+summary: 'Le workflow de clonage inclut la planification, la réalisation de l"opération de clonage et le contrôle de l"opération.' 
+---
+= Cloner les sauvegardes de bases de données Oracle à l'aide des commandes UNIX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le workflow de clonage inclut la planification, la réalisation de l'opération de clonage et le contrôle de l'opération.
+
+*À propos de cette tâche*
+
+Vous devez exécuter les commandes suivantes pour créer le fichier de spécification du clone de base de données Oracle et lancer l'opération de clonage.
+
+Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["Guide de référence sur les commandes du logiciel SnapCenter"^].
+
+*Étapes*
+
+. Créez une spécification de clone de base de données Oracle à partir d'une sauvegarde spécifiée : _New-SmOracleCloneSpecification_
++
+
+NOTE: Si la règle de protection des données secondaire est unifiée mirror-vault, spécifiez uniquement -IncludeAppuyDetails. Vous n'avez pas besoin de spécifier -Deuxièmement.StorageType.
+
++
+Cette commande crée automatiquement un fichier de spécification de clone de base de données Oracle pour la base de données source spécifiée et sa sauvegarde. Vous devez également fournir un SID de base de données clone afin que le fichier de spécifications créé ait les valeurs générées automatiquement pour la base de données clone que vous allez créer.
+
++
+
+NOTE: Le fichier de spécifications du clone est créé à l'adresse _/var/opt/snapcenter/sco/clone_specs_.
+
+. Lancez une opération de clonage à partir d'un groupe de ressources clone ou d'une sauvegarde existante : _New-SmClone_
++
+Cette commande démarre une opération de clonage. Vous devez également fournir un chemin d'accès au fichier de spécification de clone Oracle pour l'opération de clonage. Vous pouvez également spécifier les options de récupération, l'hôte où l'opération de clonage doit être effectuée, les prescripteurs, les postscripts et d'autres détails.
+
++
+Par défaut, le fichier de destination du journal d'archivage de la base de données clone est automatiquement renseigné à _$ORACLE_HOME/CLONE_SID_.
+
+

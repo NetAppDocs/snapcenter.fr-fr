@@ -1,0 +1,30 @@
+---
+permalink: upgrade/task_configure_snapcenter_to_check_for_available_updates.html 
+sidebar: sidebar 
+keywords: configure, snapcenter server, updates, software updates 
+summary: 'SnapCenter communique régulièrement avec le site de support NetApp pour vous informer des mises à jour logicielles disponibles. Vous pouvez également créer un planning pour spécifier l"intervalle dans lequel vous souhaitez recevoir des informations sur les mises à jour disponibles.' 
+---
+= Configurer SnapCenter pour vérifier les mises à jour disponibles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter communique régulièrement avec le site de support NetApp pour vous informer des mises à jour logicielles disponibles. Vous pouvez également créer un planning pour spécifier l'intervalle dans lequel vous souhaitez recevoir des informations sur les mises à jour disponibles.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *logiciel*.
++
+La page logiciels disponibles affiche les modules d'extension disponibles, les versions disponibles et leur état d'installation.
+
+. Cliquez sur *Rechercher les mises à jour* pour voir si des versions plus récentes de modules enfichables sont disponibles.
+. Cliquez sur *Programmer les mises à jour* pour créer un programme afin de spécifier l'intervalle dans lequel vous souhaitez recevoir des informations sur les mises à jour disponibles :
++
+.. Sélectionnez l'intervalle dans *Rechercher les mises à jour*.
+.. Sélectionnez les informations d'identification Windows pour l'administration du serveur SnapCenter et cliquez sur *OK*.
+
+
+

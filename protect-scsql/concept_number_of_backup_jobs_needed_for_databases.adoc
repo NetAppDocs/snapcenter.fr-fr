@@ -1,0 +1,16 @@
+---
+permalink: protect-scsql/concept_number_of_backup_jobs_needed_for_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les facteurs déterminant le nombre de tâches de sauvegarde dont vous avez besoin incluent la taille de la base de données, le nombre de volumes utilisés, le taux de changement de la base de données et votre contrat de niveau de service \(SLA\).' 
+---
+= Nombre de tâches de sauvegarde nécessaires pour les bases de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les facteurs déterminant le nombre de tâches de sauvegarde dont vous avez besoin incluent la taille de la base de données, le nombre de volumes utilisés, le taux de changement de la base de données et votre contrat de niveau de service.
+
+Pour les sauvegardes de bases de données, le nombre de tâches de sauvegarde que vous choisissez dépend généralement du nombre de volumes sur lesquels vous avez placé vos bases de données. Par exemple, si vous placez un groupe de petites bases de données sur un volume et une grande base de données sur un autre volume, vous pouvez créer une tâche de sauvegarde pour les petites bases de données et une tâche de sauvegarde pour la grande base de données.

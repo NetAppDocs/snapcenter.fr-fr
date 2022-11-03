@@ -1,0 +1,148 @@
+---
+permalink: protect-scc/reference_native.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Développez le plug-in à l"aide d"UN style NATIF.' 
+---
+= Style NATIF
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter prend en charge les langages de programmation ou de script non PERL pour créer des plug-ins. Il s'agit d'une programmation DE type NATIF, qui peut être un fichier script ou BATCH.
+
+Les plug-ins DE style NATIF doivent respecter certaines conventions ci-dessous :
+
+Le plug-in doit être exécutable
+
+* Pour les systèmes Unix, l'utilisateur qui exécute l'agent doit disposer de privilèges d'exécution sur le plug-in
+* Pour les systèmes Windows, les plug-ins PowerShell doivent avoir le suffixe .ps1, les autres scripts Windows doivent avoir le suffixe .cmd ou .bat et doivent être exécutables par l'utilisateur
+* Les plug-ins doivent réagir à l'argument de ligne de commande comme «-quiesce », «-unquiesce »
+* Les plug-ins doivent renvoyer le code de sortie 99 si une opération ou une fonction n'est pas implémentée
+* Les plug-ins doivent utiliser une syntaxe spécifique pour renvoyer les résultats au serveur
+
+
+
+
+== Manipulation générale du plug-in
+
+
+
+=== Journalisation des messages d'erreur
+
+Chaque opération peut renvoyer des messages au serveur, qui affiche et stocke le contenu. Un message contient le niveau du message, un horodatage et un texte de message. Les messages multilignes sont pris en charge.
+
+Format :
+
+....
+SC_MSG#<level>#<timestamp>#<message>
+SC_MESSAGE#<level>#<timestamp>#<message>
+....
+
+
+=== Utilisation de stubs enfichables
+
+Les plug-ins SnapCenter doivent être en place avec des stubs plug-in. Ce sont des méthodes que le serveur SnapCenter appelle en fonction d'un flux de travail spécifique.
+
+|===
+| Embout enfichable | Facultatif/requis | Objectif 
+
+
+ a| 
+mise au repos
+ a| 
+obligatoire
+ a| 
+Ce segment d'accroche est responsable de l'exécution d'une mise en veille. Elle place l'application dans un état où nous pouvons créer une copie Snapshot. Il s'agit de l'opération de copie Snapshot du stockage.
+
+
+
+ a| 
+mise au repos
+ a| 
+obligatoire
+ a| 
+Ce segment d'accroche est responsable de l'exécution d'une mise au repos. Elle place l'application dans un état normal. Il s'agit de l'opération de copie Snapshot du stockage.
+
+
+
+ a| 
+clone_pre
+ a| 
+facultatif
+ a| 
+Ce stub est responsable de l'exécution des tâches de pré-clonage. Cela suppose que vous utilisez l'interface intégrée de clonage SnapCenter et que vous êtes également déclenché uniquement lors de l'exécution de l'action clone_vol ou clone_lun.
+
+
+
+ a| 
+clone_post
+ a| 
+Facultatif
+ a| 
+Ce stub est responsable de l'exécution des tâches post-clone. Cela suppose que vous utilisez l'interface intégrée de clonage SnapCenter et que vous êtes uniquement déclenché lors des opérations clone_vol ou clone_lun.
+
+
+
+ a| 
+restore_pre
+ a| 
+Facultatif
+ a| 
+Ce stub est responsable de l'exécution des tâches de pré-restauration. Cela suppose que vous utilisez l'interface intégrée de restauration SnapCenter et qu'elle n'est déclenchée que lorsque vous effectuez l'opération de restauration.
+
+
+
+ a| 
+restaurer
+ a| 
+facultatif
+ a| 
+Ce stub est chargé d'effectuer toutes les actions de restauration. Cela suppose que vous n'utilisez pas l'interface de restauration intégrée. Il est déclenché lors de l'opération de restauration.
+
+|===
+
+
+=== Exemples
+
+
+
+==== Windows PowerShell
+
+Vérifiez si le script peut être exécuté sur votre système. Si vous ne pouvez pas exécuter le script, définissez le contournement Set-ExecutionPolicy pour le script et relancez l'opération.
+
+....
+if ($args.length -ne 1) {
+  write-warning "You must specify a method";
+  break;
+}
+function log ($level, $message) {
+  $d = get-date
+  echo "SC_MSG#$level#$d#$message"
+}
+function quiesce {
+  $app_name = (get-item env:APP_NAME).value
+  log "INFO" "Quiescing application using script $app_name";
+  log "INFO" "Quiescing application finished successfully"
+}
+function unquiesce {
+  $app_name = (get-item env:APP_NAME).value
+  log "INFO" "Unquiescing application using script $app_name";
+  log "INFO" "Unquiescing application finished successfully"
+}
+  switch ($args[0]) {
+    "-quiesce" {
+    quiesce;
+}
+"-unquiesce" {
+    unquiesce;
+}
+default {
+    write-error "Function $args[0] is not implemented";
+    exit 99;
+  }
+}
+exit 0;
+....

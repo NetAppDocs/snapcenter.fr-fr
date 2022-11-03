@@ -1,0 +1,20 @@
+---
+permalink: protect-hana/task_back_up_sap_hana_resources.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'Vous pouvez créer une sauvegarde d"une ressource \(base de données\) ou d"un groupe de ressources. Le workflow de sauvegarde inclut la planification, l"identification des bases de données pour la sauvegarde, la gestion des stratégies de sauvegarde, la création de groupes de ressources et la connexion de stratégies, la création de sauvegardes et le contrôle des opérations.' 
+---
+= Sauvegarde des ressources SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer une sauvegarde d'une ressource (base de données) ou d'un groupe de ressources. Le workflow de sauvegarde inclut la planification, l'identification des bases de données pour la sauvegarde, la gestion des stratégies de sauvegarde, la création de groupes de ressources et la connexion de stratégies, la création de sauvegardes et le contrôle des opérations.
+
+Le workflow suivant montre la séquence dans laquelle vous devez effectuer l'opération de sauvegarde :
+
+image::../media/sap_hana_backup_workflow.png[Workflow de sauvegarde SAP_HANA]
+
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. L'aide de la cmdlet de SnapCenter et les informations de référence de la cmdlet contiennent plus d'informations sur les applets de commande PowerShell.https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

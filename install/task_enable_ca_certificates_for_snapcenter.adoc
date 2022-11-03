@@ -1,0 +1,42 @@
+---
+permalink: install/task_enable_ca_certificates_for_snapcenter.html 
+sidebar: sidebar 
+keywords: SnapCenter, enable CA, certificate 
+summary: 'Vous devez configurer les certificats d"autorité de certification et activer la validation du certificat d"autorité de certification pour le serveur SnapCenter.' 
+---
+= Activez les certificats CA pour SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez configurer les certificats d'autorité de certification et activer la validation du certificat d'autorité de certification pour le serveur SnapCenter.
+
+*Ce dont vous aurez besoin*
+
+* Vous pouvez activer ou désactiver les certificats CA à l'aide de l'applet de commande set-SmCertificateSettings.
+* Vous pouvez afficher l'état du certificat pour le serveur SnapCenter à l'aide de l'applet de commande Get-SmCertificateSettings.
+
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+*Étapes*
+
+. Dans la page Paramètres, accédez à *Paramètres* > *Paramètres globaux* > *Paramètres de certificat CA*.
+. Sélectionnez *Activer la validation de certificat*.
+. Cliquez sur *appliquer*.
+
+
+*Après la fin*
+
+L'hôte de l'onglet hôtes gérés affiche un cadenas et la couleur du cadenas indique l'état de la connexion entre le serveur SnapCenter et l'hôte du plug-in.
+
+* *image:../media/enable_ca_issues_icon.png[""]* Indique qu'aucun certificat d'autorité de certification n'est activé ou affecté à l'hôte du plug-in.
+* *image:../media/enable_ca_good_icon.png[""]* Indique que le certificat CA a été validé avec succès.
+* *image:../media/enable_ca_failed_icon.png[""]* Indique que le certificat CA n'a pas pu être validé.
+* *image:../media/enable_ca_undefined_icon.png[""]* indique que les informations de connexion n'ont pas pu être récupérées.
+
+
+
+NOTE: Lorsque l'état est jaune ou vert, les opérations de protection des données s'achève correctement.

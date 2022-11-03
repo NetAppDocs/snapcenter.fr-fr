@@ -1,0 +1,60 @@
+---
+permalink: protect-scsql/task_install_the_snapcenter_plug_in_for_sql_server_silently.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez installer le plug-in SnapCenter pour Microsoft SQL Server à partir de l"interface utilisateur SnapCenter. Cependant, si vous ne pouvez pas pour une raison quelconque, vous pouvez exécuter le programme d"installation du plug-in pour SQL Server sans surveillance en mode silencieux à partir de la ligne de commande Windows.' 
+---
+= Installez le plug-in SnapCenter pour Microsoft SQL Server silencieusement à partir de la ligne de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez installer le plug-in SnapCenter pour Microsoft SQL Server à partir de l'interface utilisateur SnapCenter. Cependant, si vous ne pouvez pas pour une raison quelconque, vous pouvez exécuter le programme d'installation du plug-in pour SQL Server sans surveillance en mode silencieux à partir de la ligne de commande Windows.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez supprimer la version antérieure du plug-in SnapCenter pour Microsoft SQL Server avant de procéder à l'installation.
++
+Pour plus d'informations, voir https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Install_a_SnapCenter_Plug-In_manually_and_directly_from_thePlug-In_Host["Comment installer un plug-in SnapCenter manuellement et directement à partir de l'hôte du plug-in"^].
+
+
+
+*Étapes*
+
+. Vérifiez si le dossier C:\temp existe sur l'hôte du plug-in et que l'utilisateur connecté dispose d'un accès complet.
+. Téléchargez le logiciel du plug-in pour SQL Server depuis C:\ProgramData\NetApp\SnapCenter\Package Repository.
++
+Ce chemin est accessible à partir de l'hôte sur lequel le serveur SnapCenter est installé.
+
+. Copiez le fichier d'installation sur l'hôte sur lequel vous souhaitez installer le plug-in.
+. À partir d'une invite de commande Windows sur l'hôte local, accédez au répertoire dans lequel vous avez enregistré les fichiers d'installation du plug-in.
+. Installez le plug-in pour le logiciel SQL Server :
++
+`"snapcenter_windows_host_plugin.exe"/silent /debuglog"Debug_Log_Path" /log"Log_Path" BI_SNAPCENTER_PORT=Num SUITE_INSTALLDIR="Install_Directory_Path" BI_SERVICEACCOUNT=domain\\administrator BI_SERVICEPWD=password ISFeatureInstall=SCW,SCSQL`
+
++
+Remplacez les valeurs de paramètre fictif par vos données
+
++
+** Debug_Log_Path est le nom et l'emplacement du fichier journal du programme d'installation de la suite.
+** Log_Path est l'emplacement des journaux d'installation des composants du plug-in (SCW, SCSQL et SMCore).
+** Num est le port sur lequel SnapCenter communique avec SMCore
+** Install_Directory_Path est le répertoire d'installation du module d'extension hôte.
+** Domaine\Administrator est le compte de service Web SnapCenter Plug-in pour Microsoft Windows.
+** Mot de passe est le mot de passe du compte de service Web SnapCenter Plug-in pour Microsoft Windows. +
+`"snapcenter_windows_host_plugin.exe"/silent /debuglog"C:\HPPW_SCSQL_Install.log" /log"C:\" BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR="C:\Program Files\NetApp\SnapCenter" BI_SERVICEACCOUNT=domain\administrator BI_SERVICEPWD=password ISFeatureInstall=SCW,SCSQL`
+
+
++
+
+NOTE: Tous les paramètres transmis lors de l'installation de Plug-in pour SQL Server sont sensibles à la casse.
+
+. Surveillez le planificateur de tâches Windows, le fichier journal d'installation principal C:\Installdebug.log et les fichiers d'installation supplémentaires dans C:\Temp.
+. Surveillez le répertoire %temp% pour vérifier que les programmes d'installation msiexe.exe installent le logiciel sans erreur.
++
+
+NOTE: L'installation du plug-in pour SQL Server enregistre le plug-in sur l'hôte et non sur le serveur SnapCenter. Vous pouvez enregistrer le plug-in sur le serveur SnapCenter en ajoutant l'hôte à l'aide de l'interface graphique de SnapCenter ou de l'applet de commande PowerShell. Une fois l'hôte ajouté, le plug-in est automatiquement découvert.
+
+

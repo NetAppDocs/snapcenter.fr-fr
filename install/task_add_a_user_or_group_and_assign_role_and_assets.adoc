@@ -1,0 +1,168 @@
+---
+permalink: install/task_add_a_user_or_group_and_assign_role_and_assets.html 
+sidebar: sidebar 
+keywords: RBAC, add user, add group, assign role, assign assets 
+summary: 'Pour configurer le contrôle d"accès basé sur des rôles pour les utilisateurs SnapCenter, vous pouvez ajouter des utilisateurs ou des groupes et attribuer un rôle. Le rôle détermine les options auxquelles les utilisateurs de SnapCenter peuvent accéder.' 
+---
+= Ajoutez un utilisateur ou un groupe et attribuez un rôle et des ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour configurer le contrôle d'accès basé sur des rôles pour les utilisateurs SnapCenter, vous pouvez ajouter des utilisateurs ou des groupes et attribuer un rôle. Le rôle détermine les options auxquelles les utilisateurs de SnapCenter peuvent accéder.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir ouvert une session en tant que rôle « SnapCenterAdmin ».
+* Vous devez avoir créé les comptes utilisateur ou groupe dans Active Directory dans le système d'exploitation ou la base de données. Vous ne pouvez pas utiliser SnapCenter pour créer ces comptes.
++
+
+NOTE: À partir de SnapCenter 4.5, vous ne pouvez inclure que les caractères spéciaux suivants dans les noms d'utilisateur et de groupe : espace ( ), tiret (-), trait de soulignement (_) et deux-points (:). Si vous souhaitez utiliser un rôle que vous avez créé dans une version antérieure de SnapCenter avec ces caractères spéciaux, vous pouvez désactiver la validation du nom de rôle en changeant la valeur du paramètre 'disableSQLInjectionvalidation' à true dans le fichier web.config situé dans lequel se trouve la WebApp SnapCenter. Après avoir modifié la valeur, vous n'avez pas besoin de redémarrer le service.
+
+* SnapCenter inclut plusieurs rôles prédéfinis.
++
+Vous pouvez soit attribuer ces rôles à l'utilisateur, soit créer de nouveaux rôles.
+
+* Les utilisateurs AD et les groupes AD qui sont ajoutés au RBAC SnapCenter doivent disposer de l'autorisation DE LECTURE sur le conteneur d'utilisateurs et le conteneur d'ordinateurs dans Active Directory.
+* Après avoir affecté un rôle à un utilisateur ou à un groupe qui contient les autorisations appropriées, vous devez attribuer l'accès de l'utilisateur aux ressources SnapCenter, telles que les hôtes et les connexions de stockage.
++
+Cela permet aux utilisateurs d'effectuer les actions pour lesquelles ils ont des autorisations sur les ressources qui leur sont assignées.
+
+* Vous devez à un moment ou à un autre attribuer un rôle à l'utilisateur ou au groupe afin de tirer profit des autorisations et des fonctionnalités d'efficacité RBAC.
+* Vous pouvez affecter des ressources comme hôte, groupes de ressources, stratégie, connexion au stockage, plug-in, et les informations d'identification à l'utilisateur lors de la création de l'utilisateur ou du groupe.
+* Les ressources minimales que vous devez affecter à un utilisateur pour effectuer certaines opérations sont les suivantes :
++
+|===
+| Fonctionnement | Affectation des ressources 
+
+
+ a| 
+Protéger les ressources
+ a| 
+hôte, règle
+
+
+
+ a| 
+Sauvegarde
+ a| 
+hôte, groupe de ressources, stratégie
+
+
+
+ a| 
+Restaurer
+ a| 
+hôte, groupe de ressources
+
+
+
+ a| 
+Clonage
+ a| 
+hôte, groupe de ressources, stratégie
+
+
+
+ a| 
+Cycle de vie des clones
+ a| 
+hôte
+
+
+
+ a| 
+Créer un groupe de ressources
+ a| 
+hôte
+
+|===
+* Lorsqu'un nouveau nœud est ajouté à un cluster Windows ou à un actif DAG (Groupe de disponibilité de la base de données Exchange Server) et si ce nouveau nœud est affecté à un utilisateur, vous devez réassigner le bien à l'utilisateur ou au groupe pour inclure le nouveau nœud à l'utilisateur ou au groupe.
++
+Vous devez réassigner l'utilisateur ou le groupe RBAC au cluster ou au DAG pour inclure le nouveau nœud à l'utilisateur ou au groupe RBAC. Par exemple, vous avez un cluster à deux nœuds et avez affecté un utilisateur ou un groupe RBAC au cluster. Lorsque vous ajoutez un autre nœud au cluster, vous devez réattribuer l'utilisateur ou le groupe RBAC au cluster afin d'inclure le nouveau nœud pour l'utilisateur ou le groupe RBAC.
+
+* Si vous prévoyez de répliquer des copies Snapshot, vous devez attribuer la connexion de stockage aux volumes source et de destination à l'utilisateur effectuant l'opération.
++
+Vous devez ajouter des ressources avant d'attribuer l'accès aux utilisateurs.
+
+
+
+
+IMPORTANT: Si vous utilisez le plug-in SnapCenter pour les fonctions VMware vSphere pour protéger les machines virtuelles, les VMDK ou les datastores, vous devez utiliser l'interface graphique de VMware vSphere pour ajouter un utilisateur vCenter à un rôle de plug-in SnapCenter pour VMware vSphere. Pour plus d'informations sur les rôles VMware vSphere, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html["Rôles prédéfinis avec le plug-in SnapCenter pour VMware vSphere"^].
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *utilisateurs et accès* > *image:../media/add_icon_configure_database.gif["icône ajouter dans l'écran configurer la base de données"]*.
+. Dans la page Ajouter des utilisateurs/groupes à partir d'Active Directory ou Workgroup :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Type d'accès
+ a| 
+Sélectionnez domaine ou groupe de travail
+
+Pour le type d'authentification de domaine, vous devez spécifier le nom de domaine de l'utilisateur ou du groupe auquel vous souhaitez ajouter l'utilisateur à un rôle.
+
+Par défaut, il est pré-rempli avec le nom de domaine connecté.
+
+
+NOTE: Vous devez enregistrer le domaine non approuvé dans la page *Paramètres* > *Paramètres globaux* > *Paramètres de domaine*.
+
+
+
+ a| 
+Type
+ a| 
+Sélectionnez utilisateur ou Groupe
+
+
+NOTE: SnapCenter prend uniquement en charge le groupe de sécurité, et non le groupe de distribution.
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+.. Saisissez le nom d'utilisateur partiel, puis cliquez sur *Ajouter*.
++
+
+NOTE: Le nom d'utilisateur est sensible à la casse.
+
+.. Sélectionnez le nom d'utilisateur dans la liste de recherche.
+
+
+
+NOTE: Lorsque vous ajoutez des utilisateurs d'un domaine différent ou d'un domaine non fiable, vous devez saisir le nom d'utilisateur entièrement car il n'existe aucune liste de recherche pour les utilisateurs d'un domaine à l'autre.
+
+Répétez cette étape pour ajouter d'autres utilisateurs ou groupes au rôle sélectionné.
+
+
+
+ a| 
+Rôles
+ a| 
+Sélectionnez le rôle auquel vous souhaitez ajouter l'utilisateur.
+
+|===
+. Cliquez sur *attribuer*, puis sur la page affecter des ressources :
++
+.. Sélectionnez le type de ressource dans la liste déroulante *Asset*.
+.. Dans le tableau actif, sélectionnez l'actif.
++
+Les ressources sont répertoriées uniquement si l'utilisateur a ajouté les ressources à SnapCenter.
+
+.. Répétez cette procédure pour tous les actifs requis.
+.. Cliquez sur *Enregistrer*.
+
+
+. Cliquez sur *soumettre*.
++
+Après avoir ajouté des utilisateurs ou des groupes et affecté des rôles, actualisez la liste des ressources.
+
+

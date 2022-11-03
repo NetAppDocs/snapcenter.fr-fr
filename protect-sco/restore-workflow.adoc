@@ -1,0 +1,18 @@
+---
+permalink: protect-sco/restore-workflow.html 
+sidebar: sidebar 
+keywords: restore, workflow 
+summary: 'Le workflow de restauration inclut la planification, l"exécution des opérations de restauration et le contrôle des opérations.' 
+---
+= Restaurer le flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le workflow de restauration inclut la planification, l'exécution des opérations de restauration et le contrôle des opérations.
+
+Le flux de travail suivant montre l'ordre dans lequel vous devez effectuer l'opération de restauration :
+
+image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_workflow]

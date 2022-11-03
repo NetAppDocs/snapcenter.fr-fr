@@ -1,0 +1,47 @@
+---
+permalink: protect-hana/task_configure_CA_certificate_with_Windows_host_plug-in_services.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 'Configurez le certificat d"autorité de certification avec les services de plug-in d"hôte Windows' 
+---
+= Configurez le certificat d'autorité de certification avec les services de plug-in d'hôte Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Vous devez configurer le certificat d'autorité de certification avec les services de plug-in d'hôte Windows pour activer le certificat numérique installé.
+
+Effectuez les étapes suivantes sur le serveur SnapCenter et sur tous les hôtes du plug-in où les certificats CA sont déjà déployés.
+
+*Étapes*
+
+. Supprimez la liaison du certificat existant avec le port par défaut SMCore 8145 en exécutant la commande suivante :
++
+`> netsh http delete sslcert ipport=0.0.0.0:_<SMCore Port>`
+
++
+Par exemple :
+
++
+ > netsh http delete sslcert ipport=0.0.0.0:8145
+. Associez le certificat récemment installé aux services du plug-in hôte Windows, en exécutant les commandes suivantes :
++
+`> $cert = “_<certificate thumbprint>_”`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"`
+
++
+Par exemple :
+
++
+....
+> $cert = “a909502dd82ae41433e6f83886b00d4277a32a7b”
+> $guid = [guid]::NewGuid().ToString("B")
+> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"
+....
+

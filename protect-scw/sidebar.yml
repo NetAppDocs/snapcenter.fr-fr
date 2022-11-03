@@ -1,0 +1,114 @@
+---
+section: protect-scw
+title: Protection des systèmes de fichiers Windows
+entries:
+- title: Le plug-in SnapCenter pour Microsoft Windows concepts
+  entries:
+  - title: Présentation du plug-in SnapCenter pour Microsoft Windows
+    url: "/protect-scw/concept_snapcenter_plug_in_for_microsoft_windows_overview.html"
+  - title: Ce que vous pouvez faire avec le plug-in SnapCenter pour Microsoft Windows
+    url: "/protect-scw/reference_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_windows.html"
+  - title: Le plug-in SnapCenter pour Windows
+    url: "/protect-scw/concept_snapcenter_plug_in_for_windows_features.html"
+  - title: Sauvegarde des systèmes de fichiers Windows par SnapCenter
+    url: "/protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html"
+  - title: Types de stockage pris en charge par les plug-ins SnapCenter pour Microsoft
+      Windows
+    url: "/protect-scw/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows.html"
+  - title: Privilèges ONTAP minimum requis pour le plug-in Windows
+    url: "/protect-scw/reference_minimum_ontap_privileges_required_for_windows_plug_in.html"
+  - title: Préparez les systèmes de stockage pour la réplication SnapMirror et SnapVault
+    url: "/protect-scw/reference_prepare_storage_system_for_snapmirror_and_snapvault.html"
+  - title: Définir une stratégie de sauvegarde pour les systèmes de fichiers Windows
+    url: "/protect-scw/task_define_a_backup_strategy_for_windows_file_systems.html"
+  - title: Sources et destinations des clones pour les systèmes de fichiers Windows
+    url: "/protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html"
+- title: Installez le plug-in SnapCenter pour Microsoft Windows
+  entries:
+  - title: Workflow d'installation du plug-in SnapCenter pour Microsoft Windows
+    url: "/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html"
+  - title: Conditions d'installation requises pour le plug-in SnapCenter pour Microsoft
+      Windows
+    url: "/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html"
+  - title: Configurez GMSA sur Windows Server 2012 ou version ultérieure
+    url: "/protect-scw/task_configure_gMSA_on_windows_server_2012_or_later.html"
+  - title: Ajoutez des hôtes et installez le plug-in SnapCenter pour Microsoft Windows
+    url: "/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html"
+  - title: Installation du plug-in SnapCenter pour Microsoft Windows sur plusieurs
+      hôtes distants à l'aide d'applets de commande PowerShell
+    url: "/protect-scw/task_install_on_multiple_remote_hosts_using_powershell_cmdlets.html"
+  - title: Installez le plug-in SnapCenter pour Microsoft Windows silencieusement
+      à partir de la ligne de commande
+    url: "/protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html"
+  - title: Contrôler l'état d'installation du module d'extension SnapCenter
+    url: "/protect-scw/task_monitor_snapcenter_plug_in_package_installation_status.html"
+  - title: Configurer le certificat CA
+    entries:
+    - title: Générer le fichier CSR de certificat CA
+      url: "/protect-scw/reference_generate_CA_certificate_CSR_file.html"
+    - title: Importer des certificats CA
+      url: "/protect-scw/task_import_CA_certificates.html"
+    - title: Obtenez le certificat CA imprimé
+      url: "/protect-scw/task_get_the_CA_certificate_thumbprint.html"
+    - title: Configurez le certificat d'autorité de certification avec les services
+        de plug-in d'hôte Windows
+      url: "/protect-scw/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
+    - title: Activez les certificats CA pour les plug-ins
+      url: "/protect-scw/task_enable_ca_certificates_for_plug-ins.html"
+- title: Installation du plug-in SnapCenter pour VMware vSphere
+  url: "/protect-scw/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
+- title: Sauvegarder les systèmes de fichiers Windows
+  entries:
+  - title: Workflow de sauvegarde
+    url: "/protect-scw/reference_back_up_windows_file_systems.html"
+  - title: Déterminez la disponibilité des ressources pour les systèmes de fichiers
+      Windows
+    url: "/protect-scw/task_determine_resource_availability_for_windows_file_systems.html"
+  - title: Créez des stratégies de sauvegarde pour les systèmes de fichiers Windows
+    url: "/protect-scw/task_create_backup_policies_for_windows_file_systems.html"
+  - title: Créez des groupes de ressources pour les systèmes de fichiers Windows
+    url: "/protect-scw/task_create_resource_groups_for_windows_file_systems.html"
+  - title: Sauvegarder une seule ressource à la demande pour les systèmes de fichiers
+      Windows
+    url: "/protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html"
+  - title: Sauvegarder des groupes de ressources pour les systèmes de fichiers Windows
+    url: "/protect-scw/task_back_up_resource_groups_for_windows_file_systems.html"
+  - title: Créer une connexion au système de stockage et une autorisation d'accès
+      à l'aide des applets de commande PowerShell
+    url: "/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html"
+  - title: Sauvegarde des ressources avec les applets de commande PowerShell
+    url: "/protect-scw/task_back_up_resources_using_powershell_cmdlets_for_windows.html"
+  - title: Surveiller les opérations de sauvegarde
+    url: "/protect-scw/task_monitor_backup_operations.html"
+  - title: Annuler les opérations de sauvegarde
+    url: "/protect-scw/task_cancel_backup_operations_for_windows_file_system.html"
+  - title: Afficher les sauvegardes et clones associés sur la page topologie
+    url: "/protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html"
+  - title: Suppression des sauvegardes à l'aide des applets de commande PowerShell
+    url: "/protect-scw/task_remove_backups_using_powershell_cmdlets_for_windows.html"
+  - title: Nettoyez le nombre de sauvegardes secondaires à l'aide des applets de commande
+      PowerShell
+    url: "/protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html"
+- title: Restauration des systèmes de fichiers Windows
+  entries:
+  - title: Restaurez les sauvegardes du système de fichiers Windows
+    url: "/protect-scw/task_restore_windows_file_system_backups.html"
+  - title: Restauration et restauration des ressources via les applets de commande
+      PowerShell
+    url: "/protect-scw/task_restore_and_recover_resources_using_powershell_cmdlets_for_windows.html"
+  - title: Surveiller les opérations de restauration
+    url: "/protect-scw/task_monitor_restore_operations.html"
+  - title: Annuler les opérations de restauration
+    url: "/protect-scw/task_cancel_restore_operations.html"
+- title: Clonage des systèmes de fichiers Windows
+  entries:
+  - title: Clonage à partir d'une sauvegarde du système de fichiers Windows
+    url: "/protect-scw/task_clone_from_a_windows_file_system_backup.html"
+  - title: Clonage des sauvegardes avec les applets de commande PowerShell
+    url: "/protect-scw/task_clone_backups_using_powershell_cmdlets_for_windows.html"
+  - title: Surveillance des opérations de clonage
+    url: "/protect-scw/task_monitor_clone_operations.html"
+  - title: Annuler les opérations de clonage
+    url: "/protect-scw/task_cancel_clone_operations.html"
+  - title: Séparer un clone
+    url: "/protect-scw/task_split_a_clone_for_windows.html"

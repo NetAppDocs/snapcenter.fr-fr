@@ -1,0 +1,60 @@
+---
+permalink: protect-sco/add-application-volume.html 
+sidebar: sidebar 
+keywords: application volume, overview, add, modify, delete 
+summary: 'Vous devez ajouter manuellement les volumes d"application.' 
+---
+= Ajout de volumes d'application
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter prend en charge la sauvegarde et le clonage des volumes d'applications de base de données Oracle. Vous devez ajouter manuellement les volumes d'application. La découverte automatique des volumes d'application n'est pas prise en charge.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Oracle Database dans la liste.
+. Cliquez sur *Ajouter un volume d'application*.
+. Dans la page Nom, effectuez les opérations suivantes :
++
+** Dans le champ Nom, entrez le nom du volume de l'application.
+** Dans le champ Nom d'hôte, entrez le nom de l'hôte.
+
+
+. Dans la page Storage Footprint, entrez le nom du système de stockage, sélectionnez un ou plusieurs volumes, puis spécifiez les LUN ou qtrees associés.
++
+Vous pouvez ajouter plusieurs systèmes de stockage.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Dans la page Ressources, sélectionnez *Volume d'application* dans la liste *Affichage* pour afficher tous les volumes d'application que vous avez ajoutés.
+
+
+
+
+== Modifier le volume de l'application
+
+Vous pouvez modifier toutes les valeurs que vous avez spécifiées lors de l'ajout du volume d'application, si aucune sauvegarde n'est créée. Si la sauvegarde est créée, vous ne pouvez modifier que les détails du système de stockage.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Oracle Database dans la liste.
+. Dans la page Ressources, sélectionnez *Volume d'application* dans la liste *Affichage*.
+. Cliquez sur image:../media/edit_icon.gif[""] pour modifier les valeurs.
+
+
+
+
+== Supprimer le volume de l'application
+
+Lorsque vous supprimez un volume d'application, en cas de sauvegardes associées au volume d'application, le volume d'application est mis en mode maintenance. Aucune sauvegarde nouvelle n'est créée et aucune sauvegarde antérieure n'est conservée. Si aucune sauvegarde n'est associée, toutes les métadonnées seront supprimées.
+
+Si nécessaire, SnapCenter vous permet d'annuler l'opération de suppression.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Oracle Database dans la liste.
+. Dans la page Ressources, sélectionnez *Volume d'application* dans la liste *Affichage*.
+. Cliquez sur image:../media/delete_icon.gif[""] pour modifier les valeurs.
+

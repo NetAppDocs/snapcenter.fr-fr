@@ -1,0 +1,92 @@
+---
+permalink: protect-sce/reference_storage_types_supported_by_snapcenter_plug_in_for_microsoft_windows_and_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 'SnapCenter prend en charge un large éventail de types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier si la prise en charge de votre type de stockage est disponible avant d"installer le package pour votre hôte.' 
+---
+= Types de stockage pris en charge par le plug-in SnapCenter pour Microsoft Windows et pour Microsoft Exchange Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter prend en charge un large éventail de types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier si la prise en charge de votre type de stockage est disponible avant d'installer le package pour votre hôte.
+
+Le provisionnement et la protection des données SnapCenter sont pris en charge par Windows Server. Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+
+|===
+| Machine | Type de stockage | Provisionnement avec | Notes de support 
+
+
+ a| 
+Serveur physique
+ a| 
+LUN connectés via FC
+ a| 
+Interface graphique SnapCenter ou applets de commande PowerShell
+ a| 
+
+
+
+ a| 
+Serveur physique
+ a| 
+LUN connectées à l'iSCSI
+ a| 
+Interface graphique SnapCenter ou applets de commande PowerShell
+ a| 
+
+
+
+ a| 
+VM VMware
+ a| 
+LUN RDM connectés par un HBA FC ou iSCSI
+ a| 
+Applets de commande PowerShell
+ a| 
+Compatibilité physique uniquement
+
+
+NOTE: Les VMDK ne sont pas pris en charge.
+
+
+
+ a| 
+VM VMware
+ a| 
+LUN iSCSI connectés directement au système invité par l'initiateur iSCSI
+ a| 
+Interface graphique SnapCenter ou applets de commande PowerShell
+ a| 
+
+NOTE: Les VMDK ne sont pas pris en charge.
+
+
+
+ a| 
+Serveur virtuel Hyper-V.
+ a| 
+LUN FC virtuels (VFC) connectés par un commutateur Fibre Channel virtuel
+ a| 
+Interface graphique SnapCenter ou applets de commande PowerShell
+ a| 
+Vous devez utiliser Hyper-V Manager pour provisionner les LUN FC virtuels (VFC) connectés par un commutateur Fibre Channel virtuel.
+
+
+NOTE: Hyper-V ne prend pas en charge les disques pass-through et les bases de données sauvegardées sur les disques VHD(x) provisionnés sur le stockage NetApp.
+
+
+
+ a| 
+Serveur virtuel Hyper-V.
+ a| 
+LUN iSCSI connectés directement au système invité par l'initiateur iSCSI
+ a| 
+Interface graphique SnapCenter ou applets de commande PowerShell
+ a| 
+
+NOTE: Hyper-V ne prend pas en charge les disques pass-through et les bases de données sauvegardées sur les disques VHD(x) provisionnés sur le stockage NetApp.
+
+|===

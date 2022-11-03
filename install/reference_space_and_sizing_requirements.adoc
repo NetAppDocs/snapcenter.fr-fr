@@ -1,0 +1,80 @@
+---
+permalink: install/reference_space_and_sizing_requirements.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 'Avant d"installer le serveur SnapCenter, vous devez connaître les exigences en matière d"espace et de dimensionnement. Vous devez également appliquer les mises à jour système et de sécurité disponibles.' 
+---
+= Les besoins en termes d'espace et de dimensionnement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer le serveur SnapCenter, vous devez connaître les exigences en matière d'espace et de dimensionnement. Vous devez également appliquer les mises à jour système et de sécurité disponibles.
+
+|===
+| Élément | De formation 
+
+
+ a| 
+Systèmes d'exploitation
+ a| 
+Microsoft Windows
+
+Seules les versions anglaise, allemande, japonaise et chinoise simplifiée des systèmes d'exploitation sont prises en charge.
+
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+
+
+
+ a| 
+Nombre minimal de processeurs
+ a| 
+4 cœurs
+
+
+
+ a| 
+RAM minimale
+ a| 
+8 Go
+
+
+NOTE: Le pool de mémoire tampon du serveur MySQL utilise 20 % de la RAM totale.
+
+
+
+ a| 
+Espace minimal sur le disque dur pour le logiciel et les journaux du serveur SnapCenter
+ a| 
+4 Go
+
+
+NOTE: Si le référentiel SnapCenter se trouve sur le même lecteur sur lequel SnapCenter Server est installé, il est recommandé d'avoir 10 Go.
+
+
+
+ a| 
+Espace disque minimum pour le référentiel SnapCenter
+ a| 
+6 GO
+
+
+NOTE: REMARQUE : si le serveur SnapCenter se trouve sur le même lecteur où le référentiel SnapCenter est installé, il est recommandé d'avoir 10 Go.
+
+
+
+ a| 
+Packs logiciels requis
+ a| 
+* Microsoft .NET Framework 4.7.2 ou version ultérieure
+* Windows Management Framework (WMF) 4.0 ou version ultérieure
+* PowerShell 4.0 ou version ultérieure
+
+
+Pour plus d'informations sur le dépannage de .NET, voir, link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]
+
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+
+|===

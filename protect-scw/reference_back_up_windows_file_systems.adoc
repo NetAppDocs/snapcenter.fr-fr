@@ -1,0 +1,22 @@
+---
+permalink: protect-scw/reference_back_up_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: Lorsque vous installez le plug-in SnapCenter pour Microsoft Windows dans votre environnement, vous pouvez utiliser SnapCenter pour sauvegarder les systèmes de fichiers Windows. Vous pouvez sauvegarder un seul système de fichiers ou un groupe de ressources contenant plusieurs systèmes de fichiers. Vous pouvez effectuer des sauvegardes à la demande ou selon un planning de protection défini. 
+---
+= Sauvegarder les systèmes de fichiers Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous installez le plug-in SnapCenter pour Microsoft Windows dans votre environnement, vous pouvez utiliser SnapCenter pour sauvegarder les systèmes de fichiers Windows. Vous pouvez sauvegarder un seul système de fichiers ou un groupe de ressources contenant plusieurs systèmes de fichiers. Vous pouvez effectuer des sauvegardes à la demande ou selon un planning de protection défini.
+
+Vous pouvez planifier plusieurs sauvegardes pour les exécuter simultanément sur plusieurs serveurs. Les opérations de sauvegarde et de restauration ne peuvent pas être effectuées simultanément sur la même ressource.
+
+Le workflow suivant montre l'ordre dans lequel vous devez effectuer les opérations de sauvegarde :
+
+image::../media/sce_backup_workflow.gif[workflow de sauvegarde sce]
+
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. L'aide de la cmdlet SnapCenter ou le https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^] Contient des informations détaillées sur les applets de commande PowerShell.

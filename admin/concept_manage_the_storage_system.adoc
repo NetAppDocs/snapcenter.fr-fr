@@ -1,0 +1,101 @@
+---
+permalink: admin/concept_manage_the_storage_system.html 
+sidebar: sidebar 
+keywords:  
+summary: Après avoir ajouté le système de stockage, vous pouvez modifier la configuration et les connexions du système de stockage ou supprimer le système de stockage. 
+---
+= Gestion du système de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir ajouté le système de stockage, vous pouvez modifier la configuration et les connexions du système de stockage ou supprimer le système de stockage.
+
+
+
+== Modifier la configuration du système de stockage
+
+Vous pouvez utiliser SnapCenter pour modifier la configuration de votre système de stockage si vous souhaitez modifier le nom d'utilisateur, le mot de passe, la plate-forme, le port, le protocole, Délai d'expiration, adresse IP préférée ou options de messagerie.
+
+*À propos de cette tâche*
+
+Vous pouvez modifier les connexions de stockage d'un utilisateur individuel ou d'un groupe. Si vous appartenez à un ou plusieurs groupes disposant de l'autorisation d'utiliser le même système de stockage, le nom de la connexion de stockage s'affiche plusieurs fois dans la liste des connexions de stockage, une fois pour chaque groupe ayant l'autorisation d'accéder au système de stockage.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Storage Systems*.
+. Dans la page Storage Systems (systèmes de stockage), dans la liste déroulante *Type*, effectuez l'une des opérations suivantes :
++
+|===
+| Sélectionner... | Étapes... 
+
+
+ a| 
+SVM ONTAP
+ a| 
+Pour afficher tous les SVM (Storage Virtual machines) qui ont été ajoutés et modifier la configuration requise des SVM.
+
+.. Dans la page Storage Connections, cliquez sur le nom du SVM approprié.
+.. Effectuez l'une des opérations suivantes :
++
+*** Si le SVM ne fait pas partie d'un cluster, sur la page Modifier un système de stockage, modifier les configurations telles que nom d'utilisateur, mot de passe, paramètres EMS et AutoSupport, plateforme, protocole, port, timeout, Et IP préférée.
+*** Si le SVM fait partie d'un cluster, dans la page Modifier un système de stockage, sélectionnez *gérer SVM indépendamment* et modifiez les configurations comme nom d'utilisateur, mot de passe, EMS et AutoSupport, plateforme, protocole, port, timeout, Et IP préférée.
++
+Après avoir modifié le SVM pour être géré de façon indépendante, si vous décidez de le gérer via un cluster, supprimez le SVM et cliquez sur *redécouvrir*. Le SVM sera ajouté au cluster ONTAP.
+
++
+
+NOTE: Lorsqu'un mot de passe du système de stockage est mis à jour dans l'interface utilisateur graphique SnapCenter, redémarrez les services SMCore de chaque plug-in ou hôte serveur car le mot de passe mis à jour ne reflète pas SMCore et les tâches de sauvegarde échoueront avec une erreur d'identification incorrecte.
+
+
+
+
+
+
+
+ a| 
+Clusters ONTAP
+ a| 
+Pour afficher tous les clusters qui ont été ajoutés et modifier la configuration de cluster requise.
+
+.. Dans la page connexions de stockage, cliquez sur le nom du cluster.
+.. Dans la page Modifier le système de stockage, cliquez sur l'icône Modifier en regard de Nom d'utilisateur et modifiez le nom d'utilisateur et le mot de passe.
+.. Sélectionnez ou effacez les paramètres EMS et AutoSupport.
+.. Cliquez sur *plus d'options* et modifiez d'autres configurations telles que la plate-forme, le protocole, le port, le délai d'attente et l'adresse IP préférée.
+
+
+|===
+. Cliquez sur *soumettre*.
+
+
+
+
+== Supprimez le système de stockage
+
+Vous pouvez utiliser SnapCenter pour supprimer tout système de stockage inutilisé.
+
+*À propos de cette tâche*
+
+Vous pouvez supprimer des connexions de stockage pour un utilisateur individuel ou pour un groupe. Si vous appartenez à un ou plusieurs groupes avec l'autorisation d'utiliser le même système de stockage, le nom du système de stockage s'affiche plusieurs fois dans la liste des connexions de stockage, une fois pour chaque groupe avec l'autorisation du système de stockage.
+
+
+IMPORTANT: Lorsque vous supprimez un système de stockage, toutes les opérations qui sont en cours d'exécution sur ce système échouent.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Storage Systems*.
+. Dans la page systèmes de stockage, dans la liste déroulante *Type*, sélectionnez *SVM ONTAP* ou *clusters ONTAP*.
+. Sur la page Storage Connections, cochez la case en regard du SVM, ou du cluster que vous souhaitez supprimer.
++
+
+NOTE: On ne peut pas sélectionner le SVM qui fait partie d'un cluster.
+
+. Cliquez sur *Supprimer*.
+. Dans la page Supprimer les paramètres de connexion du système de stockage, cliquez sur *OK*.
++
+
+NOTE: Si un SVM est supprimé du cluster ONTAP à l'aide de l'interface graphique de ONTAP, dans l'interface graphique de SnapCenter, cliquez sur *redécouvrez* pour mettre à jour la liste des SVM.
+
+

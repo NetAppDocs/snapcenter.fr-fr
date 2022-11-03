@@ -1,0 +1,41 @@
+---
+permalink: protect-scsql/task_monitor_the_status_of_installing_plugin_for_sql.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez contrôler la progression de l"installation du module d"extension SnapCenter à l"aide de la page travaux. Vous pouvez vérifier la progression de l"installation pour déterminer quand elle est terminée ou s"il y a un problème.' 
+---
+= Contrôler l'état de l'installation du plug-in pour SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Vous pouvez contrôler la progression de l'installation du module d'extension SnapCenter à l'aide de la page travaux. Vous pouvez vérifier la progression de l'installation pour déterminer quand elle est terminée ou s'il y a un problème.
+
+*À propos de cette tâche*
+
+Les icônes suivantes apparaissent sur la page travaux et indiquent l'état de l'opération :
+
+* image:../media/progress_icon.gif["Icône en cours"] En cours
+* image:../media/success_icon.gif["Icône terminé"] Terminé avec succès
+* image:../media/failed_icon.gif["Icône échec"] Échec
+* image:../media/warning_icon.gif["Terminé avec l'icône d'avertissement"] Terminé avec des avertissements ou impossible de démarrer en raison d'avertissements
+* image:../media/verification_job_in_queue.gif["La tâche de vérification est mise en file d'attente"] En file d'attente
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *moniteur*.
+. Dans la page moniteur, cliquez sur *travaux*.
+. Dans la page travaux, pour filtrer la liste de manière à ce que seules les opérations d'installation du plug-in soient répertoriées, procédez comme suit :
++
+.. Cliquez sur *Filtrer*.
+.. Facultatif : spécifiez les dates de début et de fin.
+.. Dans le menu déroulant Type, sélectionnez *installation du plug-in*.
+.. Dans le menu déroulant État, sélectionnez l'état de l'installation.
+.. Cliquez sur *appliquer*.
+
+
+. Sélectionnez le travail d'installation et cliquez sur *Détails* pour afficher les détails du travail.
+. Dans la page Détails du travail, cliquez sur *Afficher les journaux*.
+

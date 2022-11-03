@@ -1,0 +1,134 @@
+---
+permalink: protect-scc/task_create_policies_for_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Avant d"utiliser SnapCenter pour sauvegarder des ressources spécifiques à un plug-in personnalisé, vous devez créer une stratégie de sauvegarde pour les ressources ou le groupe de ressources à sauvegarder.' 
+---
+= Créez des règles pour les ressources de plug-in personnalisées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser SnapCenter pour sauvegarder des ressources spécifiques à un plug-in personnalisé, vous devez créer une stratégie de sauvegarde pour les ressources ou le groupe de ressources à sauvegarder.
+
+*Ce dont vous aurez besoin*
+
+* Vous devriez avoir défini votre stratégie de sauvegarde.
++
+Pour en savoir plus, découvrez comment définir une stratégie de protection des données pour les plug-ins personnalisés.
+
+* Vous devriez avoir préparé pour la protection des données.
++
+La préparation à la protection des données comprend des tâches telles que l'installation de SnapCenter, l'ajout d'hôtes, la création de connexions au système de stockage et l'ajout de ressources.
+
+* Les serveurs virtuels de stockage (SVM) doivent vous être affectés pour les opérations de mise en miroir ou de copie sécurisée.
++
+L'administrateur SnapCenter doit avoir attribué les SVM aux volumes source et de destination, si vous répliquez les copies Snapshot sur un miroir ou un coffre-fort.
+
+* Vous devez avoir ajouté manuellement les ressources que vous voulez protéger.
+
+
+*À propos de cette tâche*
+
+* Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes. En outre, vous pouvez spécifier les paramètres de réplication, de script et d'application.
+* La définition d'options dans une stratégie permet de gagner du temps lorsque vous souhaitez réutiliser la stratégie pour un autre groupe de ressources.
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *stratégies*.
+. Cliquez sur *Nouveau*.
+. Dans la page Nom, entrez le nom et la description de la stratégie.
+. Dans la page Paramètres, effectuez les opérations suivantes :
++
+** Spécifiez le type d'horaire en sélectionnant *On Demand*, *Hourly*, *Daily*, *Weekly* ou *Monthly*.
++
+
+NOTE: Vous pouvez spécifier la planification (date de début, date de fin et fréquence) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais vous permet d'affecter des programmes de sauvegarde différents à chaque stratégie.
+
++
+image::../media/backup_settings.gif[sauvegarder les paramètres]
+
++
+
+NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
+
+** Dans la section Paramètres de sauvegarde personnalisés, fournissez tous les paramètres de sauvegarde spécifiques qui doivent être transmis au plug-in au format clé-valeur. Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
+
+
+. Dans la page Retention, spécifiez les paramètres de conservation pour le type de sauvegarde et le type de programme sélectionné dans la page Type de sauvegarde :
++
+|===
+| Les fonctions que vous recherchez... | Alors... 
+
+
+ a| 
+Conserver un certain nombre de copies Snapshot
+ a| 
+Sélectionnez *nombre total de copies Snapshot à conserver*, puis spécifiez le nombre de copies Snapshot que vous souhaitez conserver.
+
+Si le nombre de copies Snapshot dépasse le nombre spécifié, les copies Snapshot sont supprimées par les plus anciennes copies supprimées en premier.
+
+
+NOTE: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+
+
+NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+
+
+
+ a| 
+Conservez les copies Snapshot pendant un certain nombre de jours
+ a| 
+Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer.
+
+|===
+. Dans la page réplication, spécifiez les paramètres de réplication :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+*Mettre à jour SnapMirror après avoir créé une copie Snapshot locale*
+ a| 
+Sélectionnez ce champ pour créer des copies en miroir des jeux de sauvegarde sur un autre volume (réplication SnapMirror).
+
+Si la relation de protection dans ONTAP est de type miroir et coffre-fort et si vous sélectionnez uniquement cette option, la copie Snapshot créée sur le système primaire n'est pas transférée vers la destination, mais elle sera répertoriée dans le système de destination. Si cette copie Snapshot est sélectionnée à partir de la destination pour effectuer une opération de restauration, le message d'erreur suivant s'affiche : emplacement secondaire non disponible pour la sauvegarde voûtée/mise en miroir sélectionnée.
+
+
+
+ a| 
+*Mettre à jour SnapVault après avoir créé une copie Snapshot locale*
+ a| 
+Sélectionnez cette option pour effectuer la réplication de sauvegarde disque à disque (sauvegardes SnapVault).
+
+
+
+ a| 
+*Étiquette de politique secondaire*
+ a| 
+Sélectionnez une étiquette Snapshot.
+
+En fonction de l'étiquette de copie Snapshot que vous sélectionnez, ONTAP applique la règle de conservation des copies Snapshot secondaires correspondant à l'étiquette.
+
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+
+
+ a| 
+*Nombre de tentatives d'erreur*
+ a| 
+Saisissez le nombre maximal de tentatives de réplication pouvant être autorisées avant l'arrêt de l'opération.
+
+|===
++
+
+NOTE: Il est recommandé de configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter la limite maximale des copies Snapshot sur le stockage secondaire.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

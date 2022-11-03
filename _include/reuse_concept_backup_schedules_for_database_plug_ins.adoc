@@ -1,0 +1,21 @@
+= 
+:allow-uri-read: 
+
+
+La fréquence de sauvegarde (type de planification) est spécifiée dans les stratégies ; un planning de sauvegarde est spécifié dans la configuration du groupe de ressources. Le facteur le plus important dans la détermination d'une fréquence ou d'un planning de sauvegarde est le taux de changement pour la ressource et l'importance des données. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. Parmi les autres facteurs figurent l'importance de la ressource pour votre organisation, votre contrat de niveau de service (SLA) et votre objectif de point de récupération (RPO).
+
+Un SLA définit le niveau de service attendu et traite de nombreux problèmes liés au service, notamment la disponibilité et les performances de celui-ci. Un RPO définit la stratégie selon laquelle les fichiers doivent être récupérés à partir du stockage de sauvegarde afin que des opérations régulières puissent reprendre après une défaillance. Les SLA et RPO contribuent à la stratégie de protection des données.
+
+Même avec une ressource largement utilisée, il n'est pas nécessaire d'exécuter une sauvegarde complète plus d'une fois ou deux fois par jour. Par exemple, des sauvegardes régulières du journal de transactions peuvent suffire pour vous assurer que vous disposez des sauvegardes dont vous avez besoin. Plus vous sauvegardez des bases de données, plus le nombre de journaux de transaction que SnapCenter doit utiliser au moment de la restauration est élevé, ce qui accélère les opérations de restauration.
+
+Les planifications de sauvegarde ont deux parties, comme suit :
+
+* Fréquence des sauvegardes
++
+La fréquence de sauvegarde (fréquence d'exécution des sauvegardes), appelée _schedule type_ pour certains plug-ins, fait partie d'une configuration de stratégie. Vous pouvez sélectionner la fréquence de sauvegarde horaire, quotidienne, hebdomadaire ou mensuelle de la police. Si vous ne sélectionnez aucune de ces fréquences, la règle créée est une stratégie à la demande uniquement. Vous pouvez accéder aux stratégies en cliquant sur *Paramètres* > *stratégies*.
+
+* Planifications de sauvegarde
++
+Les planifications de sauvegarde (exactement quand les sauvegardes doivent être effectuées) font partie d'une configuration de groupe de ressources. Par exemple, si un groupe de ressources dispose d'une stratégie configurée pour les sauvegardes hebdomadaires, vous pouvez configurer la planification pour sauvegarder chaque jeudi à 10 h 00. Vous pouvez accéder aux planifications de groupes de ressources en cliquant sur *Ressources* > *groupes de ressources*.
+
+

@@ -1,0 +1,52 @@
+---
+permalink: protect-sco/task_cancel_oracle_database_restore_operations.html 
+sidebar: sidebar 
+keywords: cancel, restore 
+summary: 'Vous pouvez annuler les travaux de restauration mis en file d"attente.' 
+---
+= Annuler les opérations de restauration de la base de données Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez annuler les travaux de restauration mis en file d'attente.
+
+Vous devez être connecté en tant qu'administrateur SnapCenter ou propriétaire de tâche pour annuler les opérations de restauration.
+
+*À propos de cette tâche*
+
+* Vous pouvez annuler une opération de restauration en file d'attente à partir de la page *Monitor* ou du volet *Activity*.
+* Vous ne pouvez pas annuler une opération de restauration en cours.
+* Vous pouvez utiliser l'interface graphique SnapCenter, les applets de commande PowerShell ou les commandes de l'interface de ligne de commande pour annuler les opérations de restauration en attente.
+* Le bouton *Annuler tâche* est désactivé pour les opérations de restauration qui ne peuvent pas être annulées.
+* Si vous avez sélectionné *tous les membres de ce rôle peuvent voir et fonctionner sur d'autres objets membres* dans la page utilisateurs\groupes lors de la création d'un rôle, vous pouvez annuler les opérations de restauration en file d'attente d'autres membres tout en utilisant ce rôle.
+
+
+*Étape*
+
+Effectuez l'une des opérations suivantes :
+
+|===
+| Du... | Action 
+
+
+ a| 
+Page moniteur
+ a| 
+. Dans le volet de navigation de gauche, cliquez sur *moniteur* > *travaux*.
+. Sélectionnez le travail et cliquez sur *Annuler le travail*.
+
+
+
+
+ a| 
+Volet activité
+ a| 
+. Après avoir lancé l'opération de restauration, cliquez sur image:../media/activity_pane_icon.gif[""] Dans le volet activité pour afficher les cinq opérations les plus récentes.
+. Sélectionner l'opération.
+. Dans la page Détails du travail, cliquez sur *Annuler le travail*.
+
+
+|===

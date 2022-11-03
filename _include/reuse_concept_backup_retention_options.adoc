@@ -1,0 +1,14 @@
+= 
+:allow-uri-read: 
+
+
+Vous pouvez choisir le nombre de jours pendant lesquels vous souhaitez conserver les copies de sauvegarde ou spécifier le nombre de copies de sauvegarde à conserver, dans un maximum de 255 copies ONTAP. Par exemple, votre entreprise peut avoir besoin de conserver 10 jours de copies de sauvegarde ou 130 copies de sauvegarde.
+
+Lors de la création d'une stratégie, vous pouvez spécifier les options de rétention pour le type de sauvegarde et le type de planification.
+
+Si vous configurez la réplication SnapMirror, la règle de conservation est mise en miroir sur le volume de destination.
+
+SnapCenter supprime les sauvegardes conservées dont les étiquettes de conservation correspondent au type de planification. Si le type de planification a été modifié pour la ressource ou le groupe de ressources, les sauvegardes avec l'ancienne étiquette de type de planification peuvent rester sur le système.
+
+
+NOTE: Pour la conservation à long terme des copies de sauvegarde, nous vous recommandons d'utiliser la sauvegarde SnapVault.

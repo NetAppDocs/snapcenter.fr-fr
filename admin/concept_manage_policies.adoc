@@ -1,0 +1,91 @@
+---
+permalink: admin/concept_manage_policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez détacher des stratégies d"une ressource ou d"un groupe de ressources, modifier, supprimer, afficher et copier.' 
+---
+= Gestion des règles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez détacher des stratégies d'une ressource ou d'un groupe de ressources, modifier, supprimer, afficher et copier.
+
+
+
+== Modifier des règles
+
+Vous pouvez modifier les options de réplication, les paramètres de conservation des copies Snapshot, le nombre de tentatives d'erreur ou les informations relatives aux scripts lorsqu'une stratégie est associée à une ressource ou à un groupe de ressources. Vous ne pouvez modifier le type de planification (fréquence) qu'après avoir désolidariser une stratégie.
+
+*À propos de cette tâche*
+
+La modification du type de planification dans une stratégie nécessite des étapes supplémentaires car le serveur SnapCenter enregistre le type de planification uniquement au moment où la stratégie est associée à une ressource ou à un groupe de ressources.
+
+|===
+| Les fonctions que vous recherchez... | Alors... 
+
+
+ a| 
+Ajouter un type d'horaire supplémentaire
+ a| 
+Créez une nouvelle stratégie et joignez-la aux ressources ou aux groupes de ressources nécessaires.
+
+Par exemple, si une stratégie de groupe de ressources spécifie uniquement les sauvegardes horaires et que vous souhaitez ajouter également des sauvegardes quotidiennes, vous pouvez créer une stratégie avec un type de planification quotidien et l'ajouter au groupe de ressources. Le groupe de ressources aurait alors deux politiques : horaire et quotidien.
+
+
+
+ a| 
+Supprimer ou modifier un type d'horaire
+ a| 
+Effectuez les opérations suivantes :
+
+. Détachez la stratégie de chaque groupe de ressources et de ressources qui utilise cette stratégie.
+. Modifier le type de planification.
+. Joignez à nouveau la stratégie à toutes les ressources et à tous les groupes de ressources.
+
+
+Par exemple, si une stratégie spécifie des sauvegardes horaires et que vous souhaitez les modifier en sauvegardes quotidiennes, vous devez d'abord détacher la stratégie.
+
+|===
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *stratégies*.
+. Sélectionnez la stratégie, puis cliquez sur *Modifier*.
+. Modifiez les informations, puis cliquez sur *Terminer*.
+
+
+
+
+== Détacher les polices
+
+Vous pouvez détacher des stratégies d'une ressource ou d'un groupe de ressources à chaque fois que vous ne souhaitez plus que ces stratégies régissent la protection des données pour les ressources. Vous devez détacher une stratégie avant de pouvoir la supprimer ou avant de modifier le type de planification.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
+. Sélectionnez le groupe de ressources, puis cliquez sur *Modifier le groupe de ressources*.
+. Dans la page stratégies de l'assistant Modifier le groupe de ressources, décochez la case en regard des stratégies que vous souhaitez détacher.
+. Apportez toute modification supplémentaire au groupe de ressources dans le reste de l'assistant, puis cliquez sur *Terminer*.
+
+
+
+
+== Supprimer des règles
+
+Si vous n'avez plus besoin de règles, vous pouvez les supprimer.
+
+*Ce dont vous aurez besoin*
+
+Vous devez détacher la stratégie des groupes de ressources ou de ressources si la stratégie est associée à des groupes de ressources ou de ressources.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *stratégies*.
+. Sélectionnez la stratégie, puis cliquez sur *Supprimer*.
+. Cliquez sur *Oui*.
+

@@ -1,0 +1,16 @@
+---
+permalink: protect-hana/concept_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'SnapCenter gère l"organisation des sauvegardes des journaux et des données au niveau du système de stockage et des systèmes de fichiers, ainsi que dans le catalogue des sauvegardes SAP HANA.' 
+---
+= SnapCenter gère l'organisation des sauvegardes de journaux et de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter gère l'organisation des sauvegardes des journaux et des données au niveau du système de stockage et des systèmes de fichiers, ainsi que dans le catalogue des sauvegardes SAP HANA.
+
+Les copies Snapshot du stockage primaire ou secondaire et les entrées correspondantes dans le catalogue SAP HANA sont supprimées en fonction des paramètres de conservation. Les entrées du catalogue SAP HANA sont également supprimées lors de la sauvegarde et de la suppression des groupes de ressources.

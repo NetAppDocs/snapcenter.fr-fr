@@ -1,0 +1,121 @@
+---
+permalink: protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords: backup 
+summary: 'La sauvegarde d"une base de données Exchange Server inclut l"établissement d"une connexion avec le serveur SnapCenter, la découverte de la base de données Exchange Server, l"ajout d"une stratégie, la création d"un groupe de ressources de sauvegarde, la sauvegarde et l"affichage de l"état de la sauvegarde.' 
+---
+= Sauvegarde des ressources Exchange à l'aide des applets de commande PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sauvegarde d'une base de données Exchange Server inclut l'établissement d'une connexion avec le serveur SnapCenter, la découverte de la base de données Exchange Server, l'ajout d'une stratégie, la création d'un groupe de ressources de sauvegarde, la sauvegarde et l'affichage de l'état de la sauvegarde.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
+* Vous devez avoir ajouté la connexion au système de stockage et créé une autorisation d'accès.
+* Vous devez avoir ajouté des hôtes et des ressources découvertes.
+
+
+
+NOTE: Le plug-in pour Exchange ne prend pas en charge les opérations de clonage ; par conséquent, le paramètre CloneType de la cmdlet Add-SmPolicy n'est pas pris en charge par le plug-in pour Exchange
+
+*Étapes*
+
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
++
+L'invite du nom d'utilisateur et du mot de passe s'affiche.
+
+. Créez une stratégie de sauvegarde à l'aide de l'applet de commande Add-SmPolicy.
++
+Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde Exchange de sauvegarde complète et de sauvegarde des journaux :
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName SCE_w2k12_Full_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType FullBackupAndLogBackup -BackupActiveCopies
+----
++
+Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde Exchange de sauvegarde complète et de sauvegarde des journaux toutes les heures :
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName SCE_w2k12_Hourly_Full_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType FullBackupAndLogBackup -BackupActiveCopies -ScheduleType Hourly -RetentionSettings @{'BackupType'='DATA';'ScheduleType'='Hourly';'RetentionCount'='10'}
+----
++
+Cet exemple crée une nouvelle stratégie de sauvegarde pour sauvegarder uniquement les journaux Exchange :
+
++
+[listing]
+----
+Add-SmPolicy -PolicyName SCE_w2k12_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType LogBackup -BackupActiveCopies
+----
+. Découvrez les ressources hôte à l'aide de l'applet de commande Get-SmResources.
++
+Cet exemple recherche les ressources du plug-in Microsoft Exchange Server sur l'hôte spécifié :
+
++
+[listing]
+----
+C:\PS> Get-SmResources -HostName vise-f6.sddev.mycompany.com -PluginCode SCE
+----
+. Ajoutez un nouveau groupe de ressources à SnapCenter à l'aide de l'applet de commande Add-SmResourceGroup.
++
+Cet exemple crée un nouveau groupe de ressources de sauvegarde de la base de données Exchange Server avec la stratégie et les ressources spécifiées :
+
++
+[listing]
+----
+C:\PS> Add-SmResourceGroup -ResourceGroupName SCE_w2k12_bkp_RG -Description 'Backup ResourceGroup with Full and Log backup policy' -PluginCode SCE -Policies SCE_w2k12_Full_bkp_Policy,SCE_w2k12_Full_Log_bkp_Policy,SCE_w2k12_Log_bkp_Policy -Resources @{'Host'='sce-w2k12-exch';'Type'='Exchange Database';'Names'='sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_1,sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2'}
+----
++
+Cet exemple crée un nouveau groupe de ressources de sauvegarde DAG (Exchange Database Availability Group) avec la stratégie et les ressources spécifiées :
+
++
+[listing]
+----
+Add-SmResourceGroup -ResourceGroupName SCE_w2k12_bkp_RG -Description 'Backup ResourceGroup with Full and Log backup policy' -PluginCode SCE -Policies SCE_w2k12_Full_bkp_Policy,SCE_w2k12_Full_Log_bkp_Policy,SCE_w2k12_Log_bkp_Policy -Resources @{"Host"="DAGSCE0102";"Type"="Database Availability Group";"Names"="DAGSCE0102"}
+----
+. Lancez une nouvelle tâche de sauvegarde à l'aide de la cmdlet New-SmBackup.
++
+[listing]
+----
+C:\PS> New-SmBackup -ResourceGroupName SCE_w2k12_bkp_RG -Policy SCE_w2k12_Full_Log_bkp_Policy
+----
++
+Dans cet exemple, une nouvelle sauvegarde est créée sur un système de stockage secondaire :
+
++
+[listing]
+----
+New-SMBackup -DatasetName ResourceGroup1 -Policy Secondary_Backup_Policy4
+----
+. Affichez l'état de la tâche de sauvegarde à l'aide de l'applet de commande Get-SmBackupReport.
++
+Cet exemple affiche un rapport récapitulatif de tous les travaux exécutés à la date spécifiée :
+
++
+[listing]
+----
+C:\PS> Get-SmJobSummaryReport -Date ?1/27/2018?
+----
++
+Cet exemple affiche un rapport récapitulatif des travaux pour un ID de travail spécifique :
+
++
+[listing]
+----
+C:\PS> Get-SmJobSummaryReport -JobId 168
+----
+
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également consulter https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

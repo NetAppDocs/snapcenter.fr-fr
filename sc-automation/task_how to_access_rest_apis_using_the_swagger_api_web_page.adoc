@@ -1,0 +1,35 @@
+---
+permalink: sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html 
+sidebar: sidebar 
+keywords: REST API, Swagger 
+summary: 'Les API REST sont exposées via la page Web de swagger. Vous pouvez accéder à la page Web swagger pour afficher les API REST du serveur SnapCenter et pour émettre manuellement un appel d"API. Vous pouvez utiliser des API REST pour gérer votre SnapCenter Server ou effectuer des opérations de protection des données.' 
+---
+= Comment accéder aux API REST à l'aide de la page Web de l'API swagger
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les API REST sont exposées via la page Web de swagger. Vous pouvez accéder à la page Web swagger pour afficher les API REST du serveur SnapCenter et pour émettre manuellement un appel d'API. Vous pouvez utiliser des API REST pour gérer votre SnapCenter Server ou effectuer des opérations de protection des données.
+
+Vous devez connaître l'adresse IP de gestion ou le nom de domaine du serveur SnapCenter sur lequel vous souhaitez exécuter les API REST.
+
+Vous n'avez pas besoin d'autorisations spéciales pour exécuter le client de l'API REST. N'importe quel utilisateur peut accéder à la page Web de swagger. Les autorisations respectives sur les objets accessibles via l'API REST sont basées sur l'utilisateur qui génère le jeton pour se connecter à l'API REST.
+
+*Étapes*
+
+. À partir d'un navigateur, entrez l'URL pour accéder à la page Web swagger au format _\https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_.
++
+
+NOTE: Assurez-vous que l'URL de L'API REST ne comporte pas les caractères suivants : +, ., % et &.
+
+. Dans le champ *swagger Explore*, si la documentation de l'API swagger ne s'affiche pas automatiquement, saisissez : _\https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/Content/swagger/SnapCenter.yaml_
+. Cliquez sur *Explorer*.
++
+Une liste de types ou de catégories de ressources API s'affiche.
+
+. Cliquez sur un type de ressource API pour afficher les API dans ce type de ressource.
+
+
+Si vous rencontrez un comportement inattendu lors de l'exécution d'API REST SnapCenter, vous pouvez utiliser les fichiers journaux pour identifier la cause du problème et le résoudre. Vous pouvez télécharger les fichiers journaux à partir de l'interface utilisateur de SnapCenter en cliquant sur *moniteur* > *journaux* > *Téléchargement*.

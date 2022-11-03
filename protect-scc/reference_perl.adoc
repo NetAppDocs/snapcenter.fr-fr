@@ -1,0 +1,349 @@
+---
+permalink: protect-scc/reference_perl.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Développer le plug-in à l"aide DE PERL.' 
+---
+= Développement BASÉ SUR PERL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez respecter certaines conventions lors du développement du plug-in à l'aide DE PERL.
+
+* Le contenu doit être lisible
+* Doit mettre en œuvre les opérations obligatoires setenv, quiesce et unquiesce
+* Doit utiliser une syntaxe spécifique pour renvoyer les résultats à l'agent
+* Le contenu doit être enregistré sous la forme d'un fichier <PLUGIN_NAME>.pm
+
+
+Les opérations disponibles sont
+
+* Valeur de consigne
+* version
+* mise au repos
+* mise au repos
+* clone_pre, clone_post
+* restore_pre, restaurez
+* nettoyage
+
+
+
+
+== Manipulation générale du plug-in
+
+
+
+=== Utilisation de l'objet de résultats
+
+Chaque opération de plug-in personnalisée doit définir l'objet de résultats. Cet objet envoie des messages, un code de sortie, un stdout et un stderr à l'agent hôte.
+
+Objet Résultats :
+
+ my $result = {
+....
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+};
+....
+Retour de l'objet de résultats :
+
+ return $result;
+
+
+=== Préservation de la cohérence des données
+
+Il est possible de conserver les données entre les opérations (à l'exception du nettoyage) dans le cadre de la même exécution du flux de travail. Pour ce faire, il faut des paires clé-valeur. Les paires de données clé-valeur sont définies comme faisant partie de l'objet résultat et sont conservées et disponibles dans les opérations suivantes du même flux de travail.
+
+L'exemple de code suivant définit les données à conserver :
+
+....
+my $result = {
+  exit_code => 0,
+  stdout => "",
+  stderr => "",
+};
+  $result->{env}->{‘key1’} = ‘value1’;
+  $result->{env}->{‘key2’} = ‘value2’;
+  ….
+  return $result
+....
+Le code ci-dessus définit deux paires clé-valeur, qui sont disponibles comme entrée dans l'opération suivante. Les deux paires clé-valeur sont accessibles à l'aide du code suivant :
+
+....
+sub setENV {
+    my ($self, $config) = @_;
+    my $first_value = $config->{‘key1’};
+    my $second_value = $config->{‘key2’};
+    …
+}
+....
+ === Logging error messages
+Chaque opération peut renvoyer des messages à l'agent hôte, qui affiche et stocke le contenu. Un message contient le niveau du message, un horodatage et un texte de message. Les messages multilignes sont pris en charge.
+
+....
+Load the SnapCreator::Event Class:
+my $msgObj = new SnapCreator::Event();
+my @message_a = ();
+....
+Utilisez msgObj pour capturer un message à l'aide de la méthode de collecte.
+
+....
+$msgObj->collect(\@message_a, INFO, "My INFO Message");
+$msgObj->collect(\@message_a, WARN, "My WARN Message");
+$msgObj->collect(\@message_a, ERROR, "My ERROR Message");
+$msgObj->collect(\@message_a, DEBUG, "My DEBUG Message");
+$msgObj->collect(\@message_a, TRACE, "My TRACE Message");
+....
+Appliquer les messages à l'objet de résultats :
+
+ $result->{message} = \@message_a;
+
+
+=== Utilisation de stubs enfichables
+
+Les plug-ins personnalisés doivent exposer les stubs plug-in. Ce sont des méthodes que le serveur SnapCenter appelle, en fonction d'un flux de travail.
+
+|===
+| Embout enfichable | Facultatif/requis | Objectif 
+
+
+ a| 
+Valeur de consigne
+ a| 
+obligatoire
+ a| 
+Ce stub définit l'environnement et l'objet de configuration.
+
+L'analyse ou la gestion de l'environnement doit être effectuée ici. Chaque fois qu'un stub est appelé, le stub setenv est appelé juste avant. Elle n'est requise que pour LES plug-ins DE type PERL.
+
+
+
+ a| 
+Version
+ a| 
+Facultatif
+ a| 
+Ce segment d'accroche est utilisé pour obtenir la version de l'application.
+
+
+
+ a| 
+Découverte
+ a| 
+Facultatif
+ a| 
+Ce stub permet de découvrir des objets d'application tels que l'instance ou la base de données hébergées sur l'agent ou l'hôte.
+
+Le plug-in devrait renvoyer les objets d'application découverts dans un format spécifique dans le cadre de la réponse. Ce stub n'est utilisé que si l'application est intégrée à SnapDrive pour Unix.
+
+
+NOTE: Le système de fichiers Linux (Linux Flavors) est pris en charge. AIX/Solaris (versions Unix) ne sont pas pris en charge.
+
+
+
+ a| 
+discovery_complete
+ a| 
+Facultatif
+ a| 
+Ce stub permet de découvrir des objets d'application tels que l'instance ou la base de données hébergées sur l'agent ou l'hôte.
+
+Le plug-in devrait renvoyer les objets d'application découverts dans un format spécifique dans le cadre de la réponse. Ce stub n'est utilisé que si l'application est intégrée à SnapDrive pour Unix.
+
+
+NOTE: Le système de fichiers Linux (Linux Flavors) est pris en charge. AIX et Solaris (versions Unix) ne sont pas pris en charge.
+
+
+
+ a| 
+Mise au repos
+ a| 
+obligatoire
+ a| 
+Ce stub est chargé d'effectuer une mise au repos, ce qui signifie que l'application est mise à l'état dans lequel vous pouvez créer une copie Snapshot. Il s'agit de l'opération avant l'opération de copie Snapshot. Les métadonnées de l'application à conserver doivent être définies dans le cadre de la réponse, qui doivent être renvoyées au cours des opérations de clonage suivantes ou de restauration sur la copie Snapshot de stockage correspondante sous la forme de paramètres de configuration.
+
+
+
+ a| 
+Mise au repos
+ a| 
+obligatoire
+ a| 
+Ce segment d'accroche est responsable de l'exécution d'une mise en veille, ce qui signifie que l'application est dans un état normal. Ce processus est appelé après la création d'une copie Snapshot.
+
+
+
+ a| 
+clone_pre
+ a| 
+facultatif
+ a| 
+Ce stub est responsable de l'exécution des tâches de préclonage. Cela suppose que vous utilisez l'interface intégrée de clonage de SnapCenter Server et qu'elle est déclenchée lors de l'opération de clonage.
+
+
+
+ a| 
+clone_post
+ a| 
+facultatif
+ a| 
+Ce stub est responsable de l'exécution des tâches post-clone. Cela suppose que vous utilisez l'interface intégrée de clonage de SnapCenter Server et que vous êtes déclenché uniquement lors de l'opération de clonage.
+
+
+
+ a| 
+restore_pre
+ a| 
+facultatif
+ a| 
+Ce stub est responsable de l'exécution des tâches de préstockage. Cela suppose que vous utilisez l'interface intégrée de restauration du serveur SnapCenter et qu'elle est déclenchée lors de l'opération de restauration.
+
+
+
+ a| 
+Restaurer
+ a| 
+facultatif
+ a| 
+Ce stub est responsable de l'exécution des tâches de restauration de l'application. Cela suppose que vous utilisez l'interface intégrée de restauration du serveur SnapCenter et qu'elle n'est déclenchée que lors de l'opération de restauration.
+
+
+
+ a| 
+Nettoyage
+ a| 
+facultatif
+ a| 
+Ce stub est chargé d'effectuer le nettoyage après les opérations de sauvegarde, de restauration ou de clonage. Le nettoyage peut se faire lors de l'exécution normale du workflow ou en cas d'échec du flux de travail. Vous pouvez déduire le nom du flux de travail sous lequel le nettoyage est appelé en faisant référence à L'ACTION de paramètre de configuration, qui peut être backup, cloneVolAndLun ou fileOrVolRestore. Le paramètre de configuration ERROR_MESSAGE indique s'il y a eu une erreur lors de l'exécution du flux de travail. Si ERROR_MESSAGE est défini et NON NULL, alors le nettoyage est appelé pendant l'exécution de l'échec du workflow.
+
+
+
+ a| 
+version_app
+ a| 
+Facultatif
+ a| 
+Ce stub est utilisé par SnapCenter pour obtenir le détail de la version de l'application géré par le plug-in.
+
+|===
+
+
+=== Informations sur le module enfichable
+
+Chaque plug-in doit disposer des informations suivantes :
+
+....
+package MOCK;
+our @ISA = qw(SnapCreator::Mod);
+=head1 NAME
+MOCK - class which represents a MOCK module.
+=cut
+=head1 DESCRIPTION
+MOCK implements methods which only log requests.
+=cut
+use strict;
+use warnings;
+use diagnostics;
+use SnapCreator::Util::Generic qw ( trim isEmpty );
+use SnapCreator::Util::OS qw ( isWindows isUnix getUid
+createTmpFile );
+use SnapCreator::Event qw ( INFO ERROR WARN DEBUG COMMENT ASUP
+CMD DUMP );
+my $msgObj = new SnapCreator::Event();
+my %config_h = ();
+....
+
+
+=== Exploitation
+
+Vous pouvez encoder diverses opérations telles que setenv, version, Quiesce et unquiesce, qui sont prises en charge par les plug-ins personnalisés.
+
+
+
+==== Opération setenv
+
+L'opération setenv est requise pour les plug-ins créés à l'aide DE PERL. Vous pouvez régler l'ENV et accéder facilement aux paramètres du plug-in.
+
+....
+sub setENV {
+    my ($self, $obj) = @_;
+    %config_h = %{$obj};
+    my $result = {
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+    };
+    return $result;
+}
+....
+
+
+==== Exploitation de version
+
+L'opération de version renvoie les informations de version de l'application.
+
+....
+sub version {
+  my $version_result = {
+    major => 1,
+    minor => 2,
+    patch => 1,
+    build => 0
+  };
+  my @message_a = ();
+  $msgObj->collect(\@message_a, INFO, "VOLUMES
+$config_h{'VOLUMES'}");
+  $msgObj->collect(\@message_a, INFO,
+"$config_h{'APP_NAME'}::quiesce");
+  $version_result->{message} = \@message_a;
+  return $version_result;
+}
+....
+
+
+==== Opérations de mise en veille
+
+L'opération de mise en veille effectue une opération de mise en veille de l'application sur les ressources répertoriées dans le paramètre RESSOURCES.
+
+....
+sub quiesce {
+  my $result = {
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+  };
+  my @message_a = ();
+  $msgObj->collect(\@message_a, INFO, "VOLUMES
+$config_h{'VOLUMES'}");
+  $msgObj->collect(\@message_a, INFO,
+"$config_h{'APP_NAME'}::quiesce");
+  $result->{message} = \@message_a;
+  return $result;
+}
+....
+
+
+==== Opération de mise en veille
+
+Une opération de mise en attente est requise pour arrêter l'application. La liste des ressources est disponible dans le paramètre RESSOURCES.
+
+....
+sub unquiesce {
+  my $result = {
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+  };
+  my @message_a = ();
+  $msgObj->collect(\@message_a, INFO, "VOLUMES
+$config_h{'VOLUMES'}");
+  $msgObj->collect(\@message_a, INFO,
+"$config_h{'APP_NAME'}::unquiesce");
+  $result->{message} = \@message_a;
+  return $result;
+}
+....

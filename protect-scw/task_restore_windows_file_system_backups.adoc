@@ -1,0 +1,88 @@
+---
+permalink: protect-scw/task_restore_windows_file_system_backups.html 
+sidebar: sidebar 
+keywords: restore 
+summary: 'Vous pouvez utiliser SnapCenter pour restaurer les sauvegardes du système de fichiers. La restauration du système de fichiers est un processus en plusieurs phases qui copie toutes les données d"une sauvegarde spécifiée vers l"emplacement d"origine du système de fichiers.' 
+---
+= Restaurez les sauvegardes du système de fichiers Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour restaurer les sauvegardes du système de fichiers. La restauration du système de fichiers est un processus en plusieurs phases qui copie toutes les données d'une sauvegarde spécifiée vers l'emplacement d'origine du système de fichiers.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir sauvegardé le système de fichiers.
+* Si une opération planifiée, telle qu'une opération de sauvegarde, est en cours pour un système de fichiers, cette opération doit être annulée avant de pouvoir lancer une opération de restauration.
+* Vous pouvez uniquement restaurer une sauvegarde du système de fichiers à l'emplacement d'origine, et non à un chemin alternatif.
++
+Vous ne pouvez pas restaurer un seul fichier à partir d'une sauvegarde car le système de fichiers restauré écrase les données à l'emplacement d'origine du système de fichiers. Pour restaurer un seul fichier à partir d'une sauvegarde de système de fichiers, vous devez cloner la sauvegarde et accéder au fichier dans le clone.
+
+* Vous ne pouvez pas restaurer un système ou un volume d'amorçage.
+* SnapCenter peut restaurer des systèmes de fichiers dans un cluster Windows sans mettre le groupe de clusters hors ligne.
+
+
+*À propos de cette tâche*
+
+* Le CHEMIN_SCRIPTS est défini à l'aide de la clé pré-défini WindowsScriptsDirectory située dans le fichier SMCoreServiceHost.exe.Config de l'hôte du plug-in.
++
+Si nécessaire, vous pouvez modifier ce chemin et redémarrer le service SMcore. Il est recommandé d'utiliser le chemin par défaut pour la sécurité.
+
++
+La valeur de la clé peut être affichée à partir de Swagger via l'API : API /4.7/configsettings
+
++
+Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
+
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Pour filtrer la liste des ressources, sélectionnez les options système de fichiers et Groupe de ressources.
+. Sélectionnez un groupe de ressources dans la liste, puis cliquez sur *Restaurer*.
+. Sur la page sauvegardes, sélectionnez si vous souhaitez effectuer une restauration à partir des systèmes de stockage primaire ou secondaire, puis sélectionnez une sauvegarde à restaurer.
+. Sélectionnez vos options dans l'assistant de restauration.
+. Vous pouvez entrer le chemin et les arguments du prescripteur ou du PostScript que vous souhaitez exécuter SnapCenter avant ou après l'opération de restauration, respectivement.
++
+Vous pouvez par exemple exécuter un script pour mettre à jour les interruptions SNMP, automatiser les alertes, envoyer les journaux, etc.
+
++
+
+NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou de partages. Le chemin doit être relatif au CHEMIN_SCRIPTS.
+
+. Dans la page notification, sélectionnez l'une des options suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Consigner les événements du serveur SnapCenter dans le journal système de stockage
+ a| 
+Sélectionnez cette option pour consigner les événements du serveur SnapCenter dans le syslog du système de stockage.
+
+
+
+ a| 
+Envoyez une notification AutoSupport pour les opérations ayant échoué au système de stockage
+ a| 
+Sélectionnez cette option pour envoyer des informations concernant les opérations qui ont échoué à NetApp utilisant AutoSupport.
+
+
+
+ a| 
+Préférence de courrier électronique
+ a| 
+Sélectionnez *toujours*, *en cas d'échec* ou *en cas d'échec ou d'avertissement* pour envoyer des e-mails aux destinataires après la restauration des sauvegardes. Entrez le serveur SMTP, la ligne d'objet de l'e-mail par défaut, ainsi que les adresses e-mail de et à partir.
+
+|===
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+
+
+
+IMPORTANT: Si le système de fichiers restauré contient une base de données, vous devez également restaurer la base de données. Si vous ne restaurez pas la base de données, votre base de données est peut-être dans un état non valide. Pour plus d'informations sur la restauration des bases de données, reportez-vous au Guide de protection des données correspondant à cette base de données.

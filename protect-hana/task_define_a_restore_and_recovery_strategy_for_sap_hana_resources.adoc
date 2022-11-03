@@ -1,0 +1,21 @@
+---
+permalink: protect-hana/task_define_a_restore_and_recovery_strategy_for_sap_hana_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous devez définir une stratégie avant de restaurer et de récupérer votre base de données pour que vous puissiez effectuer correctement les opérations de restauration et de récupération. 
+---
+= Définissez une stratégie de restauration et de reprise pour les ressources SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez définir une stratégie avant de restaurer et de récupérer votre base de données pour que vous puissiez effectuer correctement les opérations de restauration et de récupération.
+
+*Étapes*
+
+. Déterminez les stratégies de restauration prises en charge pour les ressources SAP HANA ajoutées manuellement
+. Déterminez les stratégies de restauration prises en charge pour les bases de données SAP HANA découvertes automatiquement
+. Choisissez le type d'opérations de restauration à effectuer.
+

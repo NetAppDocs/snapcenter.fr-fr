@@ -1,0 +1,22 @@
+---
+permalink: protect-hana/task_restore_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations. 
+---
+= Restaurer le flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations.
+
+Le flux de travail suivant montre l'ordre dans lequel vous devez effectuer l'opération de restauration :
+
+image::../media/restore_workflow.gif[Restaurer le flux de travail]
+
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. L'aide de la cmdlet de SnapCenter et les informations de référence de la cmdlet contiennent des informations détaillées sur les applets de commande PowerShell.
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

@@ -1,0 +1,26 @@
+---
+permalink: protect-hana/concept_type_of_backups_supported.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer. SnapCenter prend en charge la sauvegarde basée sur fichier et les types de sauvegarde basés sur des copies Snapshot pour les bases de données SAP HANA. 
+---
+= Types de sauvegardes pris en charge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer. SnapCenter prend en charge la sauvegarde basée sur fichier et les types de sauvegarde basés sur des copies Snapshot pour les bases de données SAP HANA.
+
+
+
+== Sauvegarde basée sur des fichiers
+
+Les sauvegardes basées sur des fichiers vérifient l'intégrité de la base de données. Vous pouvez planifier l'opération de sauvegarde basée sur des fichiers afin d'effectuer à des intervalles spécifiques. Seuls les locataires actifs sont sauvegardés. Vous ne pouvez ni restaurer ni cloner des sauvegardes basées sur des fichiers à partir de SnapCenter.
+
+
+
+== Sauvegarde basée sur des copies Snapshot
+
+Les sauvegardes basées sur des copies Snapshot exploitent la technologie de copie NetApp Snapshot pour créer des copies en ligne en lecture seule des volumes sur lesquels résident les bases de données SAP HANA.

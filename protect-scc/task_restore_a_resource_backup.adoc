@@ -1,0 +1,101 @@
+---
+permalink: protect-scc/task_restore_a_resource_backup.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez utiliser SnapCenter pour restaurer des ressources. Les fonctionnalités des opérations de restauration dépendent du plug-in utilisé. 
+---
+= Restaurer une sauvegarde de ressource
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour restaurer des ressources. Les fonctionnalités des opérations de restauration dépendent du plug-in utilisé.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir sauvegardé la ressource ou les groupes de ressources.
+* L'administrateur SnapCenter doit vous avoir attribué les serveurs virtuels de stockage pour les volumes source et les volumes de destination si vous répliquez les copies Snapshot dans un miroir ou un coffre-fort.
+* Vous devez avoir annulé toute opération de sauvegarde en cours pour la ressource ou le groupe de ressources à restaurer.
+
+
+*À propos de cette tâche*
+
+L'opération de restauration par défaut restaure uniquement les objets de stockage. Les opérations de restauration au niveau application ne peuvent être effectuées que si le plug-in personnalisé offre cette fonctionnalité.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
++
+Les ressources s'affichent avec des informations telles que le type, le nom de l'hôte ou du cluster, les groupes de ressources et les stratégies associés et l'état.
+
++
+
+NOTE: Bien qu'une sauvegarde soit possible pour un groupe de ressources, lors de la restauration, vous devez sélectionner les ressources individuelles que vous souhaitez restaurer.
+
++
+Si la ressource n'est pas protégée, _non protégé_ s'affiche dans la colonne *Etat général*.
+
++
+L'état _Not Protected_ dans la colonne *Overall Status* peut signifier que la ressource n'est pas protégée ou que la ressource a été sauvegardée par un autre utilisateur.
+
+. Sélectionnez la ressource ou sélectionnez un groupe de ressources, puis sélectionnez une ressource dans ce groupe.
++
+La page topologie de ressources s'affiche.
+
+. Dans la vue *gérer les copies*, sélectionnez *sauvegardes* dans les systèmes de stockage primaire ou secondaire (en miroir ou en stockage).
+. Dans le tableau sauvegarde(s) principale(s), sélectionnez la sauvegarde à restaurer, puis cliquez sur image:../media/restore_icon.gif["icône restaurer"].
++
+image::../media/restoring_resource.gif[restauration des ressources]
+
+. Dans la page objectif de restauration, sélectionnez *ressource complète* ou *niveau de fichier*.
++
+.. Si vous avez sélectionné *Complete Resource*, la sauvegarde de la ressource est restaurée.
++
+Si la ressource contient des volumes ou des qtrees tels que l'empreinte du stockage, des copies Snapshot plus récentes sur ces volumes ou ces qtrees sont supprimées et ne peuvent pas être restaurées. De même, si une autre ressource est hébergée sur les mêmes volumes ou qtrees, cette ressource est également supprimée.
+
+.. Si vous avez sélectionné *File Level*, vous pouvez sélectionner *All*, ou sélectionner des volumes ou des qtrees, puis entrer le chemin d'accès relatif aux volumes ou aux qtrees sélectionnés séparés par des virgules.
++
+*** Vous pouvez sélectionner plusieurs volumes et qtrees.
+*** Si le type de ressource est LUN, la LUN entière est restaurée. Vous pouvez sélectionner plusieurs LUN. + REMARQUE : si vous sélectionnez *tous*, tous les fichiers des volumes, qtrees ou LUN sont restaurés.
+
+
+
+
+. Dans la page Type de récupération, effectuez les opérations suivantes : sélectionnez l'option appliquer les journaux. Assurez-vous que votre plug-in prend en charge tous les journaux et journaux jusqu'à ce que le type de restauration soit restauré avant de le sélectionner.
++
+|===
+| Les fonctions que vous recherchez... | Procédez comme ça... 
+
+
+ a| 
+Restaurez tous les journaux
+ a| 
+Sélectionnez *tous les journaux*. Assurez-vous que le plug-in prend en charge *tous les journaux*.
+
+
+
+ a| 
+Restaurer tous les journaux jusqu'à l'heure spécifiée
+ a| 
+Sélectionnez *Logs jusqu'à*. Assurez-vous que le plug-in prend en charge *Logs jusqu'à*.
+
+
+
+ a| 
+Restaurez la sauvegarde des ressources
+ a| 
+Sélectionnez *aucun*.
+
+|===
+. Dans la page pré-opérations, entrez les commandes de pré-restauration et de démontage à exécuter avant d'effectuer une tâche de restauration.
+. Dans la page Post OPS, entrez les commandes de montage et de post-restauration à exécuter après l'exécution d'une tâche de restauration.
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. SMTP doit également être configuré dans la page *Paramètres* > *Paramètres globaux*.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+

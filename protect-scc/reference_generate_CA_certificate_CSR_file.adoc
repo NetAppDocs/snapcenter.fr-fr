@@ -1,0 +1,20 @@
+---
+permalink: protect-scc/reference_generate_CA_certificate_CSR_file.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 'Vous pouvez générer une requête de signature de certificat (RSC) et importer le certificat.' 
+---
+= Générer le fichier CSR de certificat CA
+:allow-uri-read: 
+
+
+Vous pouvez générer une requête de signature de certificat (CSR) et importer le certificat qui peut être obtenu auprès d'une autorité de certification (CA) à l'aide de la RSC générée. Une clé privée sera associée au certificat.
+
+CSR est un bloc de texte codé donné à un fournisseur de certificats autorisé pour obtenir le certificat d'autorité de certification signé.
+
+Pour plus d'informations sur la génération d'une RSC, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_generate_CA_Certificate_CSR_file["Comment générer un fichier CSR de certificat CA"^].
+
+
+NOTE: Si vous possédez le certificat de l'autorité de certification pour votre domaine (*.domain.company.com) ou votre système (machine1.domain.company.com), vous pouvez ignorer la génération du fichier CSR du certificat de l'autorité de certification. Vous pouvez déployer le certificat d'autorité de certification existant avec SnapCenter.
+
+Pour les configurations de cluster, le nom de cluster (FQDN du cluster virtuel) et les noms d'hôte correspondants doivent être mentionnés dans le certificat de l'autorité de certification. Le certificat peut être mis à jour en remplissant le champ Nom alternatif du sujet (SAN) avant d'obtenir le certificat. Pour un certificat de type Wild card (*.domain.company.com), le certificat contiendra implicitement tous les noms d'hôte du domaine.

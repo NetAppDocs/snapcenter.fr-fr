@@ -1,0 +1,107 @@
+---
+permalink: protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez installer le plug-in SnapCenter pour Microsoft Windows localement sur un hôte Windows si vous ne pouvez pas installer le plug-in à distance à partir de l"interface graphique SnapCenter. Vous pouvez exécuter le programme d"installation du plug-in SnapCenter pour Microsoft Windows sans surveillance, en mode silencieux, à partir de la ligne de commande Windows.' 
+---
+= Installez le plug-in SnapCenter pour Microsoft Windows silencieusement à partir de la ligne de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez installer le plug-in SnapCenter pour Microsoft Windows localement sur un hôte Windows si vous ne pouvez pas installer le plug-in à distance à partir de l'interface graphique SnapCenter. Vous pouvez exécuter le programme d'installation du plug-in SnapCenter pour Microsoft Windows sans surveillance, en mode silencieux, à partir de la ligne de commande Windows.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir installé Microsoft .Net 4.7.2 ou une version ultérieure.
+* Vous devez avoir installé PowerShell 4.0 ou une version ultérieure.
+* Vous devez avoir activé la mise en file d'attente des messages Windows.
+* Vous devez être un administrateur local sur l'hôte.
+
+
+*Étapes*
+
+. Téléchargez le plug-in SnapCenter pour Microsoft Windows à partir de votre emplacement d'installation.
++
+Par exemple, le chemin d'installation par défaut est C:\ProgramData\NetApp\SnapCenter\Package Repository.
+
++
+Ce chemin est accessible à partir de l'hôte sur lequel le serveur SnapCenter est installé.
+
+. Copiez le fichier d'installation sur l'hôte sur lequel vous souhaitez installer le plug-in.
+. À partir de l'invite de commande, accédez au répertoire dans lequel vous avez téléchargé le fichier d'installation.
+. Entrez la commande suivante en remplaçant les variables par vos données :
++
+`"snapcenter_windows_host_plugin.exe"/silent / debuglog"" /log"" BI_SNAPCENTER_PORT= SUITE_INSTALLDIR="" BI_SERVICEACCOUNT= BI_SERVICEPWD= ISFeatureInstall=SCW`
+
++
+Par exemple :
+
++
+ `"C:\ProgramData\NetApp\SnapCenter\Package Repository \snapcenter_windows_host_plugin.exe"/silent /debuglog"C: \HPPW_SCW_Install.log" /log"C:\" BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR="C: \Program Files\NetApp\SnapCenter" BI_SERVICEACCOUNT=domain\administrator BI_SERVICEPWD=password ISFeatureInstall=SCW`
++
+
+NOTE: Tous les paramètres transmis lors de l'installation de Plug-in pour Windows sont sensibles à la casse.
+
++
+Entrez les valeurs des variables suivantes :
+
++
+|===
+| Variable | Valeur 
+
+
+ a| 
+_/debuglog »<Debug_Log_Path>_
+ a| 
+Spécifiez le nom et l'emplacement du fichier journal du programme d'installation de la suite, comme dans l'exemple suivant : setup.exe /debuglog"C:\PathToLog\setupexe.log".
+
+
+
+ a| 
+BI_SNAPCENTER_PORT
+ a| 
+Spécifiez le port sur lequel SnapCenter communique avec SMCore.
+
+
+
+ a| 
+SUITE_INSTALLDIR
+ a| 
+Spécifiez le répertoire d'installation du module de plug-in hôte.
+
+
+
+ a| 
+BI_SERVICEACCOUNT
+ a| 
+Spécifiez le compte de service Web SnapCenter Plug-in pour Microsoft Windows.
+
+
+
+ a| 
+BI_SERVICEPWD
+ a| 
+Spécifiez le mot de passe du compte de service Web SnapCenter Plug-in pour Microsoft Windows.
+
+
+
+ a| 
+Installation de ISFeatureInstall
+ a| 
+Spécifier la solution à déployer par SnapCenter sur un hôte distant
+
+|===
++
+Le paramètre _debulog_ inclut le chemin du fichier journal pour SnapCenter. L'écriture dans ce fichier journal est la méthode recommandée pour obtenir des informations de dépannage, car le fichier contient les résultats des vérifications effectuées par l'installation pour les prérequis du plug-in.
+
++
+Si nécessaire, vous trouverez des informations de dépannage supplémentaires dans le fichier journal du package SnapCenter pour Windows. Les fichiers journaux du package sont répertoriés (le plus ancien d'abord) dans le dossier _%Temp%_, par exemple, _C:\temp\_.
+
++
+
+NOTE: L'installation du plug-in pour Windows enregistre le plug-in sur l'hôte et non sur le serveur SnapCenter. Vous pouvez enregistrer le plug-in sur le serveur SnapCenter en ajoutant l'hôte à l'aide de l'interface graphique de SnapCenter ou de l'applet de commande PowerShell. Une fois l'hôte ajouté, le plug-in est automatiquement découvert.
+
+

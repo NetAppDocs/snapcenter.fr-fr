@@ -1,0 +1,32 @@
+---
+permalink: protect-scc/concept_snapcenter_custom_plug_ins_overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Custom Plug-ins 
+summary: 'Vous pouvez développer des plug-ins personnalisés pour les applications que vous utilisez, puis utiliser SnapCenter pour la sauvegarde, la restauration ou le clonage de ces applications. Comme d"autres plug-ins SnapCenter, vos plug-ins personnalisés font office de composants côté hôte du logiciel NetApp Snap Center, permettant ainsi une protection et une gestion des données intégrant la cohérence applicative.' 
+---
+= Présentation des plug-ins personnalisés SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez développer des plug-ins personnalisés pour les applications que vous utilisez, puis utiliser SnapCenter pour la sauvegarde, la restauration ou le clonage de ces applications. Comme d'autres plug-ins SnapCenter, vos plug-ins personnalisés font office de composants côté hôte du logiciel NetApp SnapCenter, permettant ainsi de protéger et de gérer les données intégrant la cohérence applicative.
+
+Une fois les plug-ins personnalisés installés, vous pouvez utiliser SnapCenter avec la technologie NetApp SnapMirror pour créer des copies en miroir des jeux de sauvegarde sur un autre volume et utiliser la technologie NetApp SnapVault pour effectuer une réplication de sauvegarde disque à disque. Les plug-ins personnalisés peuvent être utilisés dans les environnements Windows et Linux.
+
+
+NOTE: SnapCenter CLI ne prend pas en charge les commandes de plug-ins personnalisés SnapCenter.
+
+NetApp propose le plug-in de stockage qui permet d'effectuer les opérations de protection des données du volume de données sur le stockage ONTAP à l'aide du plug-in personnalisé intégré à SnapCenter.
+
+Vous pouvez installer le plug-in et le plug-in de stockage personnalisés à partir de la page Ajouter un hôte.
+
+link:task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html["Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants."^]
+
+NetApp fournit également MySQL, MAXDB, DB2, SYBASE, DPGLUE, Plug-ins personnalisés MongoDB, ORASCPM et PostgreSQL. Ces plug-ins peuvent être téléchargés depuis le https://automationstore.netapp.com/home.shtml["Stockage NetApp Storage Automation Store"^].
+
+
+NOTE: La politique de support de SnapCenter prendra en charge le framework personnalisé de SnapCenter, le moteur principal et les API associées. Le support ne couvre pas le code source du plug-in et les scripts associés basés sur le framework personnalisé du plug-in.
+
+Vous pouvez créer vos propres plug-ins personnalisés en vous reportant à link:concept_develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"^].

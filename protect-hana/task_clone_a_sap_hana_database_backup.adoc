@@ -1,0 +1,130 @@
+---
+permalink: protect-hana/task_clone_a_sap_hana_database_backup.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database,run as 
+summary: 'Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d"une sauvegarde principale ou secondaire.' 
+---
+= Cloner une sauvegarde de base de données SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d'une sauvegarde principale ou secondaire.
+
+*Ce dont vous aurez besoin*
+
+* Vous devriez avoir sauvegardé les ressources ou le groupe de ressources.
+* Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
+* Vous ne pouvez pas cloner des sauvegardes basées sur des fichiers.
+* Le serveur clone cible doit avoir le même SID d'instance SAP HANA que celui fourni dans le champ SID de clone cible.
+* Pour les commandes pré-clone ou post-clone, vérifiez si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir des chemins suivants :
++
+Pour Windows : _C:\Program Files\NetApp\SnapCenter\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands_list.txt_
+
++
+Pour Linux : _/var/opt/snapcenter/scc/allowed_commands_list.txt_
+
+
+
+
+NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération échoue.
+
+*À propos de cette tâche*
+
+Pour plus d'informations sur les limites des opérations de fractionnement de clonage, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guide de gestion du stockage logique ONTAP 9"^].
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
++
+Les ressources s'affichent avec des informations telles que le type, l'hôte, les groupes de ressources et les stratégies associés et l'état.
+
+. Sélectionnez la ressource ou le groupe de ressources.
++
+Vous devez sélectionner une ressource si vous sélectionnez un groupe de ressources.
+
++
+La page topologie des ressources ou des groupes de ressources s'affiche.
+
+. Dans la vue gestion des copies, sélectionnez *sauvegardes* dans les systèmes de stockage primaire ou secondaire (en miroir ou en stockage).
+. Sélectionnez la sauvegarde des données dans le tableau, puis cliquez sur image:../media/clone_icon.gif["icône cloner"].
+. Dans la page emplacement, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Hôte de plug-in
+ a| 
+Sélectionnez l'hôte sur lequel le clone doit être monté et le plug-in est installé.
+
+
+
+ a| 
+SID de clone cible
+ a| 
+Entrez l'ID d'instance SAP HANA à cloner à partir des sauvegardes existantes.
+
+
+
+ a| 
+Adresse IP d'exportation NFS
+ a| 
+Entrez les adresses IP ou les noms d'hôte sur lesquels les volumes clonés seront exportés.
+
+
+
+ a| 
+Initiateur iSCSI
+ a| 
+Entrez le nom de l'initiateur iSCSI de l'hôte sur lequel les LUN sont exportées. Cette option n'est disponible que si vous avez sélectionné le type de ressource LUN.
+
+
+
+ a| 
+Protocole
+ a| 
+Indiquez le protocole de LUN. Cette option n'est disponible que si vous avez sélectionné le type de ressource LUN.
+
+|===
++
+Si la ressource sélectionnée est une LUN et que vous effectuez un clonage à partir d'une sauvegarde secondaire, les volumes de destination sont répertoriés. Une source unique peut avoir plusieurs volumes de destination.
+
++
+
+NOTE: Avant le clonage, vous devez vous assurer que l'initiateur iSCSI ou le FCP est présent et configuré et connecté aux hôtes secondaires.
+
+. Dans la page scripts, effectuez les opérations suivantes :
++
+
+NOTE: Les scripts sont exécutés sur l'hôte du plug-in.
+
++
+.. Entrez les commandes du pré-clonage ou du post-clonage qui doivent être exécutées avant ou après l'opération de clonage, respectivement.
++
+*** Commande de pré-clonage : permet de supprimer les bases de données existantes portant le même nom
+*** Commande post-clone : vérifiez une base de données ou démarrez une base de données.
+
+
+.. Entrez la commande mount pour monter un système de fichiers sur un hôte.
++
+Commande mount pour un volume ou un qtree sur une machine Linux :
+
++
+Exemple pour NFS :
+
++
+ mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+

@@ -1,0 +1,64 @@
+---
+permalink: protect-sce/task_view_exchange_backups_in_the_topology_page.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lorsque vous préparez à sauvegarder une ressource, il est parfois utile d"afficher une représentation graphique de toutes les sauvegardes des stockages primaire et secondaire.' 
+---
+= Afficher les sauvegardes Exchange sur la page topologie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous préparez à sauvegarder une ressource, il est parfois utile d'afficher une représentation graphique de toutes les sauvegardes des stockages primaire et secondaire.
+
+*À propos de cette tâche*
+
+Dans la page topologie, vous pouvez voir toutes les sauvegardes disponibles pour la ressource ou le groupe de ressources sélectionné. Vous pouvez afficher les détails de ces sauvegardes, puis les sélectionner pour effectuer des opérations de protection des données.
+
+Vous pouvez consulter l'icône suivante dans la vue gérer les copies pour déterminer si les sauvegardes sont disponibles sur le stockage principal ou secondaire (copies miroir ou copies Vault).
+
+* image:../media/topology_primary_storage.gif["icône stockage principal"] affiche le nombre de sauvegardes disponibles sur le stockage principal.
+* image:../media/topology_mirror_secondary_storage.gif["Icône du miroir du stockage secondaire"] Affiche le nombre de sauvegardes mises en miroir sur le système de stockage secondaire à l'aide de la technologie SnapMirror.
+* image:../media/topology_vault_secondary_storage.gif["icône de coffre-fort secondaire"] Affiche le nombre de sauvegardes répliquées sur le système de stockage secondaire à l'aide de la technologie SnapVault.
++
+** Le nombre de sauvegardes affichées inclut les sauvegardes supprimées du stockage secondaire.
++
+Par exemple, si vous avez créé 6 sauvegardes à l'aide d'une stratégie de conservation de 4 sauvegardes seulement, le nombre de sauvegardes affichées est 6.
+
+
+
++
+|===
+
+
+| *Meilleure pratique :* pour vous assurer que le nombre correct de sauvegardes répliquées est affiché, nous vous recommandons d'actualiser la topologie. 
+|===
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez la base de données, la ressource ou le groupe de ressources dans la liste déroulante *View*.
+. Sélectionnez la ressource dans la vue Détails de la base de données ou dans la vue Détails du groupe de ressources.
++
+Si la ressource est protégée, la page topologie de la ressource sélectionnée s'affiche.
+
+. Consultez la section « Récapitulatif » pour afficher un récapitulatif du nombre de sauvegardes disponibles sur les stockages primaire et secondaire.
++
+La section carte récapitulative affiche le nombre total de sauvegardes et le nombre total de sauvegardes de journaux.
+
++
+Cliquez sur le bouton *Actualiser* pour lancer une requête sur le stockage afin d'afficher un décompte précis.
+
+. Dans la vue gérer les copies, cliquez sur *sauvegardes* dans le stockage principal ou secondaire pour afficher les détails d'une sauvegarde.
++
+Les détails des sauvegardes s'affichent sous forme de tableau.
+
+. Sélectionnez la sauvegarde dans le tableau, puis cliquez sur les icônes de protection des données pour effectuer des opérations de restauration, de renommage et de suppression.
++
+
+NOTE: Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent sur le stockage secondaire. La suppression des copies Snapshot est gérée par les paramètres de conservation ONTAP.
+
+

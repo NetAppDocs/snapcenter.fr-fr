@@ -1,0 +1,62 @@
+---
+permalink: protect-hana/task_discover_the_databases_automatically.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 'Les ressources sont les bases de données SAP HANA et les volumes non data sur l"hôte Linux gérés par SnapCenter. Vous pouvez ajouter ces ressources aux groupes de ressources pour effectuer des opérations de protection des données après avoir découvert les bases de données SAP HANA disponibles.' 
+---
+= Découvrir les bases de données automatiquement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les ressources sont les bases de données SAP HANA et les volumes non data sur l'hôte Linux gérés par SnapCenter. Vous pouvez ajouter ces ressources aux groupes de ressources pour effectuer des opérations de protection des données après avoir découvert les bases de données SAP HANA disponibles.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir déjà terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'une clé de stockage utilisateur HDB, l'ajout d'hôtes et la configuration des connexions du système de stockage.
+* Vous devez avoir configuré la clé de stockage utilisateur sécurisée HDB et l'utilisateur HDB SQL OS sur l'hôte Linux.
++
+** Vous devez configurer la clé de stockage utilisateur HDB avec l'utilisateur adm SID. Par exemple, pour un système HANA avec A22 comme SID, la clé de stockage utilisateur HDB doit être configurée avec a22adm.
+
+
+* Le plug-in SnapCenter pour base de données SAP HANA ne prend pas en charge la découverte automatique des ressources résidant dans des environnements virtuels RDM/VMDK. Vous devez fournir les informations de stockage pour les environnements virtuels tout en ajoutant les bases de données manuellement.
+
+
+*À propos de cette tâche*
+
+Après l'installation du plug-in, toutes les ressources de cet hôte Linux sont automatiquement découvertes et affichées sur la page Ressources.
+
+Les ressources détectées automatiquement ne peuvent pas être modifiées ou supprimées.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in pour la base de données SAP HANA dans la liste.
+. Dans la page Ressources, sélectionnez le type de ressource dans la liste vue.
+. (Facultatif) cliquez sur *image:../media/filter_icon.gif[""]*, puis sélectionnez le nom d'hôte.
++
+Vous pouvez ensuite cliquer sur *image:../media/filter_icon.gif[""]* pour fermer le volet de filtre.
+
+. Cliquez sur *Actualiser les ressources* pour découvrir les ressources disponibles sur l'hôte.
++
+Les ressources s'affichent avec des informations telles que le type de ressource, le nom d'hôte, les groupes de ressources associés, le type de sauvegarde, les stratégies et l'état global.
+
++
+** Si la base de données se trouve sur un système de stockage NetApp et qu'elle n'est pas protégée, elle s'affiche dans la colonne État global.
+** Si la base de données se trouve sur un système de stockage NetApp et est protégée, et si aucune opération de sauvegarde n'est effectuée, alors l'option sauvegarde non exécutée s'affiche dans la colonne État global. Dans le cas contraire, l'état passe en échec de la sauvegarde ou la sauvegarde a réussi en fonction de l'état de la dernière sauvegarde.
+
+
+
+
+
+NOTE: Si une clé de stockage HDB Secure User Store n'est pas configurée dans la base de données SAP HANA, une icône de cadenas rouge apparaît à côté de la ressource. Si, au cours d'une opération de découverte ultérieure, la clé de stockage sécurisée HDB configurée a été détectée comme incorrecte ou n'a pas fourni d'accès à la base de données elle-même, l'icône rouge du cadenas réapparaîtra.
+
+
+IMPORTANT: Vous devez actualiser les ressources si les bases de données sont renommées en dehors de SnapCenter.
+
+*Après la fin*
+
+Vous devez configurer la clé du magasin d'utilisateurs sécurisé HDB et l'utilisateur HDBSQL pour pouvoir protéger la base de données ou l'ajouter au groupe de ressources pour effectuer des opérations de protection des données.
+
+link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["Configurez la clé HDB User Store et l'utilisateur HDBSQL OS pour la base de données SAP HANA"]

@@ -1,0 +1,50 @@
+---
+permalink: protect-scsql/reference_back_up_sql_server_database_or_instance_or_availability_group.html 
+sidebar: sidebar 
+keywords:  
+summary: Lorsque vous installez le plug-in SnapCenter pour Microsoft SQL Server dans votre environnement, vous pouvez utiliser SnapCenter pour sauvegarder les ressources SQL Server. 
+---
+= Workflow de sauvegarde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous installez le plug-in SnapCenter pour Microsoft SQL Server dans votre environnement, vous pouvez utiliser SnapCenter pour sauvegarder les ressources SQL Server.
+
+Vous pouvez planifier plusieurs sauvegardes pour les exécuter simultanément sur plusieurs serveurs.
+
+Les opérations de sauvegarde et de restauration ne peuvent pas être effectuées simultanément sur la même ressource.
+
+Le workflow suivant montre l'ordre dans lequel vous devez effectuer les opérations de sauvegarde :
+
+image::../media/scsql_backup_workflow.png[Flux de travail de sauvegarde SCSQL]
+
+
+NOTE: Les options sauvegarde immédiate, restauration, gestion des sauvegardes et clonage de la page Ressources sont désactivées si vous sélectionnez un LUN non NetApp, une base de données corrompue ou une base de données en cours de restauration.
+
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration, de restauration, de vérification et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"]
+
+
+
+== Sauvegarde des bases de données par SnapCenter
+
+SnapCenter utilise la technologie de copie Snapshot pour sauvegarder les bases de données SQL Server qui résident sur des LUN ou des VMDK. SnapCenter crée la sauvegarde en créant des copies Snapshot des bases de données.
+
+Lorsque vous sélectionnez une base de données pour une sauvegarde complète de base de données dans la page Ressources, SnapCenter sélectionne automatiquement toutes les autres bases de données qui résident sur le même volume de stockage. Si le LUN ou VMDK ne stocke qu'une seule base de données, vous pouvez effacer ou resélectionner la base de données individuellement. Si le LUN ou VMDK contient plusieurs bases de données, vous devez effacer ou resélectionner les bases de données en tant que groupe.
+
+Toutes les bases de données qui résident sur un volume unique sont sauvegardées simultanément à l'aide de copies Snapshot. Si le nombre maximal de bases de données de sauvegarde simultanées est de 35 et que plus de 35 bases de données résident dans un volume de stockage, le nombre total de copies Snapshot créées équivaut au nombre de bases de données divisé par 35.
+
+
+NOTE: Vous pouvez configurer le nombre maximal de bases de données pour chaque copie Snapshot dans la règle de sauvegarde.
+
+Lors de la création d'une copie Snapshot par SnapCenter, l'intégralité du volume du système de stockage est capturée dans la copie Snapshot. Cependant, la sauvegarde n'est valide que pour le serveur hôte SQL pour lequel la sauvegarde a été créée.
+
+Si les données d'autres serveurs hôtes SQL résident sur le même volume, ces données ne peuvent pas être restaurées à partir de la copie Snapshot.
+
+*Plus d'informations*
+
+link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["Sauvegarde des ressources avec les applets de commande PowerShell"]
+
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["Les opérations de mise en attente ou de regroupement des ressources échouent"]

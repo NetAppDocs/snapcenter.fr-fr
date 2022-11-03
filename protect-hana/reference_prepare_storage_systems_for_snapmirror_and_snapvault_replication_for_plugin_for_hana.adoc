@@ -1,0 +1,28 @@
+---
+permalink: protect-hana/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_hana.html 
+sidebar: sidebar 
+keywords: snapmirror, snapvault, storage system, replication 
+summary: Vous pouvez utiliser un plug-in SnapCenter avec les technologies ONTAP SnapMirror et SnapVault 
+---
+= Préparez les systèmes de stockage pour la réplication SnapMirror et SnapVault pour les bases de données SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Vous pouvez utiliser un plug-in SnapCenter avec la technologie ONTAP SnapMirror pour créer des copies en miroir des jeux de sauvegarde sur un autre volume. Avec la technologie ONTAP SnapVault, vous pouvez effectuer une réplication de sauvegarde disque à disque afin d'assurer la conformité aux normes et d'autres objectifs de gouvernance. Avant d'effectuer ces tâches, vous devez configurer une relation de protection des données entre les volumes source et destination, et initialiser la relation.
+
+SnapCenter effectue les mises à jour vers SnapMirror et SnapVault une fois l'opération de copie Snapshot terminée. Les mises à jour SnapMirror et SnapVault sont effectuées dans le cadre de la tâche SnapCenter ; ne créez pas de planification ONTAP distincte.
+
+
+NOTE: Si vous pensez arriver à SnapCenter d'un produit NetApp SnapManager et que vous êtes satisfait des relations de protection des données que vous avez configurées, vous pouvez ignorer cette section.
+
+Une relation de protection des données réplique les données du système de stockage primaire (volume source) vers le stockage secondaire (volume de destination). Lorsque vous initialisez la relation, ONTAP transfère ainsi les blocs de données référencés sur le volume source vers le volume de destination.
+
+
+NOTE: SnapCenter ne prend pas en charge les relations en cascade entre SnapMirror et les volumes SnapVault (*primaire* > *miroir* > *coffre-fort*). Vous devez utiliser des relations de fanout.
+
+SnapCenter prend en charge la gestion des relations SnapMirror flexibles de version. Pour plus d'informations sur les relations SnapMirror flexibles de la version et sur la configuration de ces relations, consultez le http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.ic-base%2Fresources%2Fhome.html["Documentation ONTAP"^].
+
+
+NOTE: SnapCenter ne prend pas en charge la réplication *sync_mirror*.

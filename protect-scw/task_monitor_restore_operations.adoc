@@ -1,0 +1,51 @@
+---
+permalink: protect-scw/task_monitor_restore_operations.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Exchange Server 
+summary: 'Vous pouvez contrôler la progression des différentes opérations de restauration SnapCenter à l"aide de la page travaux. Vous pouvez vérifier la progression d"une opération pour déterminer quand elle est terminée ou s"il y a un problème.' 
+---
+= Surveiller les opérations de restauration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Vous pouvez contrôler la progression des différentes opérations de restauration SnapCenter à l'aide de la page travaux. Vous pouvez vérifier la progression d'une opération pour déterminer quand elle est terminée ou s'il y a un problème.
+
+*À propos de cette tâche*
+
+Les États post-restauration décrivent les conditions de la ressource après une opération de restauration et toutes les autres actions de restauration que vous pouvez effectuer.
+
+Les icônes suivantes apparaissent sur la page travaux et indiquent l'état de l'opération :
+
+* image:../media/progress_icon.gif["Icône en cours"] En cours
+* image:../media/success_icon.gif["Icône terminé"] Terminé avec succès
+* image:../media/failed_icon.gif["Icône échec"] Échec
+* image:../media/warning_icon.gif["Terminé avec l'icône d'avertissement"] Terminé avec des avertissements ou impossible de démarrer en raison d'avertissements
+* image:../media/verification_job_in_queue.gif["La tâche de vérification est mise en file d'attente"] En file d'attente
+* image:../media/cancel_icon.gif[""] Annulée
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *moniteur*.
+. Dans la page moniteur, cliquez sur *travaux*.
+. Dans la page travaux, effectuez les opérations suivantes :
++
+.. Cliquez sur image:../media/filter_icon.gif[""] pour filtrer la liste afin que seules les opérations de restauration soient répertoriées.
+.. Spécifiez les dates de début et de fin.
+.. Dans la liste déroulante *Type*, sélectionnez *Restaurer*.
+.. Dans la liste déroulante *Status*, sélectionnez l'état de restauration.
+.. Cliquez sur *appliquer* pour afficher les opérations qui ont été effectuées avec succès.
+
+
+. Sélectionnez le travail de restauration, puis cliquez sur *Détails* pour afficher les détails du travail.
+. Dans la page Détails du travail, cliquez sur *Afficher les journaux*.
++
+Le bouton *Afficher les journaux* affiche les journaux détaillés de l'opération sélectionnée.
+
++
+
+IMPORTANT: Une fois l'opération de restauration basée sur le volume effectuée, les métadonnées de sauvegarde sont supprimées du référentiel SnapCenter, mais les entrées du catalogue de sauvegardes restent dans le catalogue SAP HANA. Bien que l'état de la tâche de restauration s'affiche image:../media/success_icon.gif["Icône terminé"], cliquez sur les détails du travail pour afficher le signe d'avertissement de certaines tâches enfants. Cliquez sur le signe d'avertissement et supprimez les entrées du catalogue de sauvegarde indiquées.
+
+

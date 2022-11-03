@@ -1,0 +1,35 @@
+---
+permalink: protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_custom_plugin_resources.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 'Vous devez définir une stratégie pour pouvoir effectuer les opérations de restauration à l"aide de SnapCenter. Il existe deux types de stratégies de restauration pour les ressources de plug-in personnalisées ajoutées manuellement. Vous ne pouvez pas restaurer manuellement les ressources de plug-in personnalisées ajoutées.' 
+---
+= Types de stratégies de restauration pris en charge pour des ressources de plug-in personnalisées ajoutées manuellement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez définir une stratégie pour pouvoir effectuer les opérations de restauration à l'aide de SnapCenter. Il existe deux types de stratégies de restauration pour les ressources de plug-in personnalisées ajoutées manuellement.
+
+
+NOTE: Vous ne pouvez pas restaurer manuellement les ressources de plug-in personnalisées ajoutées.
+
+
+
+== Restauration des ressources terminée
+
+* Restauration de tous les volumes, qtrees et LUN d'une ressource
+
+
+
+NOTE: Si la ressource contient des volumes ou des qtrees, les copies Snapshot sont supprimées après la copie Snapshot sélectionnée pour être restaurées sur de tels volumes ou qtrees et ne peuvent pas être restaurées. De même, si une autre ressource est hébergée sur les mêmes volumes ou qtrees, cette ressource est également supprimée.
+
+
+
+== Restauration au niveau des fichiers
+
+* Restaure les fichiers à partir de volumes, de qtrees ou de répertoires
+* Restaure uniquement les LUN sélectionnées
+

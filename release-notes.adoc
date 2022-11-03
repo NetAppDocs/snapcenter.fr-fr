@@ -1,0 +1,16 @@
+---
+permalink: release-notes.html 
+sidebar: sidebar 
+keywords: release notes, snapcenter 
+summary: Fournit des informations importantes sur cette version de SnapCenter Server et des modules de plug-in SnapCenter, y compris les problèmes résolus, les problèmes connus, les mises en garde et les limites. 
+---
+= Notes de mise à jour
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fournit des informations importantes sur cette version de SnapCenter Server et des modules de plug-in SnapCenter, y compris les problèmes résolus, les problèmes connus, les mises en garde et les limites.
+
+Pour plus d'informations, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMLP2883299["Notes de version du logiciel SnapCenter 4.7"^].

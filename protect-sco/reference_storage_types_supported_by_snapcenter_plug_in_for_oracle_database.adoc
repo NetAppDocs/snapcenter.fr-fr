@@ -1,0 +1,79 @@
+---
+permalink: protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html 
+sidebar: sidebar 
+keywords: storage types, iSCSI, NFS, RDM, VMDK, NFS, LVM, ASM, SAN filesystem 
+summary: 'SnapCenter prend en charge un large éventail de types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier la prise en charge de votre type de stockage avant d"installer SnapCenter Plug-ins Package pour Linux ou SnapCenter Plug-ins Package pour AIX.' 
+---
+= Types de stockage pris en charge par le plug-in pour Oracle Database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter prend en charge un large éventail de types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier la prise en charge de votre type de stockage avant d'installer SnapCenter Plug-ins Package pour Linux ou SnapCenter Plug-ins Package pour AIX.
+
+SnapCenter ne prend pas en charge le provisionnement du stockage pour Linux et AIX.
+
+
+
+== Types de stockage pris en charge sous Linux
+
+Le tableau suivant répertorie les types de stockage pris en charge par Linux.
+
+|===
+| Machine | Type de stockage 
+
+
+ a| 
+Serveur physique
+ a| 
+* LUN connectés via FC
+* LUN connectées à l'iSCSI
+* Volumes connectés par NFS
+
+
+
+
+ a| 
+VMware ESXi
+ a| 
+* L'exécution des LUN RDM connectés par un HBA FC ou iSCSI ESXi peut prendre du temps car SnapCenter analyse tous les adaptateurs de bus hôte présents dans l'hôte.
++
+Vous pouvez modifier le fichier *LinuxConfig.pm* situé à _/opt/NetApp/snapcenter/spl/plugins/scu/scucore/modules/SCU/Config_ pour définir la valeur du paramètre *SCSI_HOSTS_OPTIMIZED_RESCAN* à 1 pour analyser uniquement les HBA répertoriés dans les NOMS de PILOTE HBA.
+
+* LUN iSCSI connectés directement au système invité par l'initiateur iSCSI
+* VMDK sur des datastores VMFS ou NFS
+* Volumes NFS connectés directement au système invité
+
+
+|===
+
+
+== Types de stockage pris en charge sous AIX
+
+Le tableau suivant répertorie les types de stockage pris en charge sous AIX.
+
+|===
+| Machine | Type de stockage 
+
+
+ a| 
+Serveur physique
+ a| 
+* LUN connectés via FC et iSCSI.
++
+Dans un environnement SAN, les systèmes de fichiers ASM, LVM et SAN sont pris en charge.
+
++
+
+NOTE: NFS sous AIX et le système de fichiers n'est pas pris en charge.
+
+* Système de fichiers journalisé amélioré (JFS2)
++
+Prend en charge la connexion en ligne sur les systèmes de fichiers SAN et la disposition LVM.
+
+
+
+|===
+Le https://imt.netapp.com/matrix/imt.jsp?components=105283;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"] contient les dernières informations sur les versions prises en charge.

@@ -184,9 +184,6 @@ vserver iscsi connection show
 
 vserver show
 
-|===
-|===
-| Commandes en lecture seule : privilèges minimum requis pour ONTAP 8.3.0 et versions ultérieures 
 
 
  a| 
@@ -195,5 +192,7 @@ interface réseau
 interface réseau affiche
 
 un vserver
+
+montrer MetroCluster
 
 |===

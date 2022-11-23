@@ -1,14 +1,9 @@
----
-permalink: protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html 
-sidebar: sidebar 
-keywords: clone 
-summary: 'Le workflow de clonage inclut la planification, la réalisation de l"opération de clonage et le contrôle de l"opération.' 
----
-= Clonage des sauvegardes avec les applets de commande PowerShell
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
+
+'''
+Permalink: Protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html encadré: Mots-clés de la barre latérale: Résumé du clone: 'Le flux de travail du clone comprend la planification, l'exécution de l'opération de clonage et la surveillance de l'opération.' --- = clonage de sauvegardes à l'aide des applets de commande PowerShell :icons: Font :imagesdir: ../media/
 
 Le workflow de clonage inclut la planification, la réalisation de l'opération de clonage et le contrôle de l'opération.
 

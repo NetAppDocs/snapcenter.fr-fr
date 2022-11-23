@@ -55,7 +55,7 @@ Vérifiez le résumé, puis cliquez sur *Terminer* pour lancer l'importation.
 |===
 +
 
-NOTE: L'importation du certificat doit être groupée avec la clé privée (les formats pris en charge sont : *.pfx, * p12, *.p7b).
+NOTE: Le certificat d'importation doit être fourni avec la clé privée (les formats pris en charge sont : *.pfx, *.p12 et *.p7b).
 
 . Répétez l'étape 5 pour le dossier « personnel ».
 

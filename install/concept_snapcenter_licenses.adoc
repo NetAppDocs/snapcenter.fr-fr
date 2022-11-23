@@ -20,7 +20,7 @@ SnapCenter nécessite plusieurs licences pour permettre la protection des donné
  a| 
 Contrôleur SnapCenter standard
  a| 
-Requis pour FAS, AFF et Amazon FSX
+Requis pour FAS et AFF
 
 La licence SnapCenter Standard est basée sur le contrôleur et incluse dans le bundle Premium. Si vous disposez de la licence SnapManager Suite, vous bénéficiez également des droits de licence SnapCenter Standard. Si vous souhaitez installer SnapCenter sous forme d'essai avec les systèmes de stockage FAS ou AFF, vous pouvez obtenir une licence d'évaluation Premium Bundle en contactant l'ingénieur commercial.
 

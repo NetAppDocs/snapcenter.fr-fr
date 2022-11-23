@@ -229,7 +229,6 @@
   <block id="91817a3c4feab4788ad5f16317cd2b5e" category="paragraph">Spécifiez le nouveau mot de passe à utiliser pour le certificat exporté, puis cliquez sur *Suivant*.</block>
   <block id="262ae19666f55b8c3fbe02b43c8f93b8" category="paragraph">Exécution de l'assistant d'importation de certificat</block>
   <block id="addd3f74b675e28bf71a9fb679c0fac1" category="paragraph">Vérifiez le résumé, puis cliquez sur *Terminer* pour lancer l'importation.</block>
-  <block id="00f1ae92d58286283bc965b1952157af" category="admonition">L'importation du certificat doit être groupée avec la clé privée (les formats pris en charge sont : *.pfx, * p12, *.p7b).</block>
   <block id="104bdf61dc45d8330dd81b72891ea1ad" category="list-text">Répétez l'étape 5 pour le dossier « personnel ».</block>
   <block id="09b368e7a40c6562c6eb5235c4eda0ba" category="summary">Vous devez vous assurer que l'hôte répond à la configuration requise avant d'installer le module de plug-ins SnapCenter pour Linux.</block>
   <block id="ac33edef4526164e3c7c9a4df9986310" category="doc">Configuration requise pour l'installation du module de plug-ins SnapCenter pour Linux</block>
@@ -1361,7 +1360,6 @@
   <block id="794df3791a8c800841516007427a2aa3" category="cell">Licence</block>
   <block id="b428bd66304bced88a8f85c2e42e2a8d" category="cell">Si nécessaire</block>
   <block id="932a86c21601cea5fd4dd8e8496f1347" category="paragraph">Contrôleur SnapCenter standard</block>
-  <block id="699f1c0496b9360a6686498114b0be37" category="paragraph">Requis pour FAS, AFF et Amazon FSX</block>
   <block id="fd1eaac7fcf946084f0e116a9bbd7697" category="paragraph">La licence SnapCenter Standard est basée sur le contrôleur et incluse dans le bundle Premium. Si vous disposez de la licence SnapManager Suite, vous bénéficiez également des droits de licence SnapCenter Standard. Si vous souhaitez installer SnapCenter sous forme d'essai avec les systèmes de stockage FAS ou AFF, vous pouvez obtenir une licence d'évaluation Premium Bundle en contactant l'ingénieur commercial.</block>
   <block id="54e6e66bc0a69ef86d9bb0b63900793e" category="admonition">SnapCenter fait également partie du pack de protection des données. Si vous avez acheté A400 ou une version ultérieure, vous devez acheter le pack de protection des données.</block>
   <block id="0bc041414fb0e08ee535e7a621899918" category="paragraph">SnapCenter Standard basé sur la capacité</block>
@@ -1970,12 +1968,6 @@
   <block id="e36c8512e3778b0a83d27f616b9ba1ff" category="paragraph"><block ref="ddc74c1b972d1817ec49e31cd8f40007" prefix="" category="inline-code"></block></block>
   <block id="d96a08e21a2a6f654ce7bfb34d9c3bf4" category="section-title">Commandes CLI ONTAP permettant de créer des rôles de cluster et d'attribuer des autorisations</block>
   <block id="166504d6fb19fa3fcbbf622275eef589" category="paragraph">Vous devez exécuter plusieurs commandes CLI ONTAP pour créer des rôles de cluster et attribuer des autorisations.</block>
-  <block id="41d7ade3381c454a1329620f9f658b8b" category="list-text"><block ref="23c96ef89d1178bb24460cf1c19dac49" prefix="" category="inline-code"></block></block>
-  <block id="6fb89d73c4a5ac47fffbb74dfa2e83f1" category="list-text"><block ref="a315d4bcc84e15ea2af08b1f2d504bde" prefix="" category="inline-code"></block></block>
-  <block id="065992cd0013f37f03b4e13303b9ba92" category="list-text"><block ref="824a11caaf668914152e5f99ef78a996" prefix="" category="inline-code"></block></block>
-  <block id="6cf57dddc7246be83fead826cd2d488b" category="list-text"><block ref="1aa4d6379e9a4015d5a49a8db070eeac" prefix="" category="inline-code"></block></block>
-  <block id="09835700a8ab8639649722dc18579f0c" category="list-text"><block ref="1612a5a71d04b19900a9de7622f3bd48" prefix="" category="inline-code"></block></block>
-  <block id="9d566854ec7ef14de553dc0b2222fae0" category="list-text"><block ref="5ff28c6492f9a44c088a48d3e9f272ee" prefix="" category="inline-code"></block></block>
   <block id="cd2a321672946fd6e39976559e1e72a9" category="list-text"><block ref="b7e7b2509453e62631a9da1bda142854" prefix="" category="inline-code"></block></block>
   <block id="bb513c5a705eb742be0e75eb7c864f5b" category="list-text"><block ref="7cc159d9fe92113f10234653b0ec624b" prefix="" category="inline-code"></block></block>
   <block id="6435842f20dddcddfd00a9e7ec2f3111" category="list-text"><block ref="a3deb12a2dfb48c4e86445fab15926a6" prefix="" category="inline-code"></block></block>
@@ -3476,7 +3468,6 @@
   <block id="cbfd371962913d0f1e68d6d08d139762" category="list-text">Lecture du catalogue</block>
   <block id="f9ea96179a0c3f142da2c30a6ee04164" category="list-text">Administrateur de sauvegarde de base de données</block>
   <block id="9e7e3b470f2241f5dddd9cc056481b28" category="list-text">Opérateur de récupération de base de données</block>
-  <block id="ffaafcbad8fa7abfb6f9166b4bc76388" category="doc">Annuler les opérations de sauvegarde pour SAP HANA</block>
   <block id="f70451089f1e1bfca806390a988a70f9" category="summary">La détection automatique n'est pas prise en charge pour certaines instances HANA. Vous devez ajouter ces ressources manuellement.</block>
   <block id="b39d1e4f73b157bb2f5b3a972e89eeb6" category="doc">Ajoutez des ressources manuellement au plug-in hôte</block>
   <block id="529693f008bf73338af648fe1d20d733" category="list-text">Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la configuration des connexions du système de stockage et l'ajout d'une clé de stockage utilisateur HDB.</block>
@@ -7797,25 +7788,12 @@
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">Les mentions légales donnent accès aux déclarations de copyright, aux marques, aux brevets, etc.</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Mentions légales</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Droits d'auteur</block>
-  <block id="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link"><block ref="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link-rx"></block></block>
-  <block id="bb66384fc72d3c628df8a5f0f82af691" category="paragraph"><block ref="bb66384fc72d3c628df8a5f0f82af691" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marques déposées</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp, le logo NETAPP et les marques mentionnées sur la page des marques commerciales NetApp sont des marques commerciales de NetApp, Inc. Les autres noms de sociétés et de produits peuvent être des marques commerciales de leurs propriétaires respectifs.</block>
-  <block id="a93bc0a57623c2facaa010825c808507" category="inline-link"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
-  <block id="e895a12067be0bbd74a4e8b2b0aa1151" category="paragraph"><block ref="e895a12067be0bbd74a4e8b2b0aa1151" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Brevets</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Vous trouverez une liste actuelle des brevets appartenant à NetApp à l'adresse suivante :</block>
-  <block id="547ea2e305891e64d8e744949b0aca2c" category="inline-link"><block ref="547ea2e305891e64d8e744949b0aca2c" category="inline-link-rx"></block></block>
-  <block id="f48d97bbf0d920d837c970ab54fcbf14" category="paragraph"><block ref="f48d97bbf0d920d837c970ab54fcbf14" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Politique de confidentialité</block>
-  <block id="50921fca0d376fca62102a5e608994e2" category="inline-link"><block ref="50921fca0d376fca62102a5e608994e2" category="inline-link-rx"></block></block>
-  <block id="3440f69304b6f0194e5502be93aede3f" category="paragraph"><block ref="3440f69304b6f0194e5502be93aede3f" category="inline-link-rx"></block></block>
-  <block id="b4de17ead867a3cf0b9d11e57e562672" category="section-title">Traduction automatique</block>
-  <block id="19d4bd8b5bc76a91b74c1aa69ecea894" category="paragraph">Informations importantes concernant le contenu localisé.</block>
-  <block id="db9bfd81e26275c9db26e2db3ac172c3" category="inline-link"><block ref="db9bfd81e26275c9db26e2db3ac172c3" category="inline-link-rx"></block></block>
-  <block id="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="paragraph"><block ref="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Source ouverte</block>
-  <block id="0d06100a9c9a8a7758a0d58988e99d2f" category="paragraph">Fournit des informations sur les droits d'auteur tiers et les licences utilisées dans ce produit. Votre produit n'utilise pas nécessairement tous les composants logiciels mentionnés ci-dessous.</block>
   <block id="c70464b7e0f2ad9d136a0cce124b524e" category="inline-link">Notification relative à SnapCenter 4.7</block>
   <block id="4be462fcf740489c25950b8da5069ee8" category="paragraph"><block ref="4be462fcf740489c25950b8da5069ee8" category="inline-link-rx"></block></block>
   <block id="d7b3c4517cc189c6cdd986195fa3f33f" category="sidebar">Documentation sur le logiciel SnapCenter 4.7</block>
@@ -7921,4 +7899,21 @@
   <block id="7aac9b3cc279350b75cfbec4a3feabe4" category="sidebar">Sauvegarder les volumes d'applications</block>
   <block id="b3121ceac9c3b1c097a1f53db3eff2a7" category="sidebar">Gestion de SnapCenter Server et des plug-ins</block>
   <block id="fea84990764109b117844dae6e7232a7" category="sidebar">Voir le tableau de bord</block>
+  <block id="0d51371cbb850772d2130a36f4368df4" category="list-text">montrer MetroCluster</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Les fichiers de notification fournissent des informations sur les droits d'auteur et les licences de tiers utilisés dans le logiciel NetApp.</block>
+  <block id="1dee04b6f048297be6da9f8740c99b6d" category="admonition">Le certificat d'importation doit être fourni avec la clé privée (les formats pris en charge sont : *.pfx, *.p12 et *.p7b).</block>
+  <block id="ad6e610d08a861e343805ef4cb444552" category="paragraph">Permalink: Protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html encadré: Mots-clés de la barre latérale: Résumé du clone: 'Le flux de travail du clone comprend la planification, l'exécution de l'opération de clonage et la surveillance de l'opération.' --- = clonage de sauvegardes à l'aide des applets de commande PowerShell :icons: Font :imagesdir: ../media/</block>
+  <block id="bd259d74a88fa9ae4cdb9c027643d76a" category="paragraph">Requis pour FAS et AFF</block>
+  <block id="56b5155701c0c0dd57595a6dd3daf917" category="list-text"><block ref="336b55519098bef0384fc43c7f43f47b" prefix="" category="inline-code"></block></block>
+  <block id="eda6105c4f159883b951dcd044964c6f" category="list-text"><block ref="2c9674954a47108e373e077d3bcb8357" prefix="" category="inline-code"></block></block>
+  <block id="4cf7cdb80a69806b961d32bc57f3ac26" category="list-text"><block ref="ad3921143a52d77fc513fd3dae33e149" prefix="" category="inline-code"></block></block>
+  <block id="7b7a10c598084df58b9da02c47af7a60" category="list-text"><block ref="f6adba9e3b22137c40b1d75ee2b37e75" prefix="" category="inline-code"></block></block>
+  <block id="d8135ce9a2bd17b9c659e4605801a778" category="list-text"><block ref="f659aa294fff6eaecdf95876c173adf6" prefix="" category="inline-code"></block></block>
+  <block id="dde541c94f2b033571de6bfe76fcf3c3" category="list-text"><block ref="234efccf9d477e939eeae95c37c1803f" prefix="" category="inline-code"></block></block>
+  <block id="e2bb7a9783ce9c6c02e6001911562e16" category="list-text"><block ref="2e72f8b3689961923dec66f94cdf620f" prefix="" category="inline-code"></block></block>
+  <block id="91ae9720ac69723481c4de57234c575e" category="paragraph">Permalink: Protect-hana/task_cancel_backup_operations_for_sap_hana.html encadré: Mots-clés de l'encadré: résumé: 'Vous pouvez annuler les opérations de sauvegarde en file d'attente.' --- = Annuler les opérations de sauvegarde pour SAP HANA :icons: Font :imagesdir: ../media/</block>
 </blocks>

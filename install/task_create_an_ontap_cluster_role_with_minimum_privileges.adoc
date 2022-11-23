@@ -39,12 +39,13 @@ NOTE: Vous devez répéter cette commande pour chaque autorisation.
 
 Vous devez exécuter plusieurs commandes CLI ONTAP pour créer des rôles de cluster et attribuer des autorisations.
 
-* `security login role create -role Role_Name -cmddirname "cluster identity modify" -vserver Cluster_name or cluster_name -access all`
-* `security login role create -role Role_Name -cmddirname "cluster identity show" -vserver Cluster_name -access all`
-* `security login role create -role Role_Name -cmddirname "cluster modify" -vserver Cluster_name -access all`
-* `security login role create -role Role_Name -cmddirname "cluster peer show" -vserver Cluster_name -access all`
-* `security login role create -role Role_Name -cmddirname "cluster show" -vserver Cluster_name -access all`
-* `security login role create -role Role_Name -cmddirname "event generate-autosupport-log" -vserver Cluster_name -access all`
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster identity show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster peer show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "job history show" -access all`
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "job stop" -access all`
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun" -access all`

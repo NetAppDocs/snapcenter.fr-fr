@@ -123,4 +123,10 @@ Les privilèges minimum ONTAP requis varient en fonction des plug-ins SnapCenter
 * interface réseau affiche
 
 
+
+
+ a| 
+* montrer MetroCluster
+
+
 |===

@@ -314,7 +314,7 @@ SnapCenter utilise des identifiants pour authentifier les utilisateurs pour les 
 
 Les informations d'identification sont créées pour l'utilisateur root ou pour un utilisateur non-root disposant de privilèges sudo pour installer et démarrer le processus de plug-in.
 
-Pour plus d'informations, voir :  sudo privileges for non-root users for Linux host ou  sudo privileges for non-root users for AIX host
+Pour plus d'informations, voir : <<Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte Linux>> ou <<Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte AIX>>
 
 |===
 

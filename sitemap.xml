@@ -601,14 +601,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/concept_type_of_backups_supported.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-hana/concept_type_of_backups_supported.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-hana/concept_type_of_backups_supported.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/concept_type_of_backups_supported.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
@@ -825,27 +825,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/reference_generate_CA_certificate_CSR_file.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scw/reference_generate_CA_certificate_CSR_file.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/reference_generate_CA_certificate_CSR_file.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/install/reference_generate_CA_certificate_CSR_file.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
@@ -860,7 +839,28 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scw/reference_generate_CA_certificate_CSR_file.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-hana/reference_generate_CA_certificate_CSR_file.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/reference_generate_CA_certificate_CSR_file.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/reference_generate_CA_certificate_CSR_file.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
@@ -1289,7 +1289,7 @@
     <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter//search.html</loc>
       
-      <lastmod>2022-12-06T16:35:40+00:00</lastmod>
+      <lastmod>2022-12-15T12:19:43+00:00</lastmod>
       
     </url>
   
@@ -1735,27 +1735,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_configure_CA_certificate_with_Windows_host_plug-in_services.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scw/task_configure_CA_certificate_with_Windows_host_plug-in_services.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_configure_CA_certificate_with_Windows_host_plug-in_services.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/install/task_configure_CA_certificate_with_Windows_host_plug-in_services.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
@@ -1770,7 +1749,28 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scw/task_configure_CA_certificate_with_Windows_host_plug-in_services.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-hana/task_configure_CA_certificate_with_Windows_host_plug-in_services.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_configure_CA_certificate_with_Windows_host_plug-in_services.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_configure_CA_certificate_with_Windows_host_plug-in_services.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
@@ -1798,7 +1798,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_configure_gMSA_on_windows_server_2012_or_later.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scc/task_configure_gMSA_on_windows_server_2012_or_later.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
@@ -1812,21 +1812,21 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_configure_gMSA_on_windows_server_2012_or_later.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scc/task_configure_gMSA_on_windows_server_2012_or_later.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_configure_gMSA_on_windows_server_2012_or_later.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_configure_gMSA_on_windows_server_2012_or_later.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
@@ -2155,14 +2155,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sco/task_enable_ca_certificates_for_plug-ins.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_enable_ca_certificates_for_plug-ins.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scc/task_enable_ca_certificates_for_plug-ins.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
@@ -2176,14 +2169,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_enable_ca_certificates_for_plug-ins.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scc/task_enable_ca_certificates_for_plug-ins.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sco/task_enable_ca_certificates_for_plug-ins.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
@@ -2191,6 +2177,20 @@
   
     <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-hana/task_enable_ca_certificates_for_plug-ins.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_enable_ca_certificates_for_plug-ins.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_enable_ca_certificates_for_plug-ins.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
@@ -2225,27 +2225,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_get_the_CA_certificate_thumbprint.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scw/task_get_the_CA_certificate_thumbprint.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_get_the_CA_certificate_thumbprint.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/install/task_get_the_CA_certificate_thumbprint.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
@@ -2260,7 +2239,28 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scw/task_get_the_CA_certificate_thumbprint.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-hana/task_get_the_CA_certificate_thumbprint.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_get_the_CA_certificate_thumbprint.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_get_the_CA_certificate_thumbprint.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
@@ -2281,27 +2281,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_import_CA_certificates.html</loc>
-      
-      <lastmod>2022-11-23T16:49:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scw/task_import_CA_certificates.html</loc>
-      
-      <lastmod>2022-11-23T16:49:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_import_CA_certificates.html</loc>
-      
-      <lastmod>2022-11-23T16:49:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/install/task_import_CA_certificates.html</loc>
       
       <lastmod>2022-11-23T16:49:46+00:00</lastmod>
@@ -2316,7 +2295,28 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scw/task_import_CA_certificates.html</loc>
+      
+      <lastmod>2022-11-23T16:49:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-hana/task_import_CA_certificates.html</loc>
+      
+      <lastmod>2022-11-23T16:49:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_import_CA_certificates.html</loc>
+      
+      <lastmod>2022-11-23T16:49:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_import_CA_certificates.html</loc>
       
       <lastmod>2022-11-23T16:49:46+00:00</lastmod>
       
@@ -2358,13 +2358,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_install_snapcenter_plug_in_for_vmware_vsphere.html</loc>
-      
-      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scw/task_install_snapcenter_plug_in_for_vmware_vsphere.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
@@ -2372,14 +2365,21 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_install_snapcenter_plug_in_for_vmware_vsphere.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-hana/task_install_snapcenter_plug_in_for_vmware_vsphere.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-hana/task_install_snapcenter_plug_in_for_vmware_vsphere.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-scsql/task_install_snapcenter_plug_in_for_vmware_vsphere.html</loc>
+      
+      <lastmod>2022-11-16T16:44:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snapcenter/protect-sce/task_install_snapcenter_plug_in_for_vmware_vsphere.html</loc>
       
       <lastmod>2022-11-16T16:44:57+00:00</lastmod>
       

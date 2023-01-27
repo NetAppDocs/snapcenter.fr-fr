@@ -59,18 +59,14 @@ NOTE: Le chemin du script est validé au moment de l'exécution.
 
 Les scripts sont spécifiés dans les politiques de sauvegarde. Lorsqu'une tâche de sauvegarde est lancée, la stratégie associe automatiquement le script aux ressources sauvegardées. Lorsque vous créez une stratégie de sauvegarde, vous pouvez spécifier les arguments prescripteurs et PostScript.
 
-Uniquement pour Windows, vous pouvez spécifier plusieurs scripts. Vous devez appuyer sur *entrée* après chaque chemin de script pour répertorier chaque script sur une ligne distincte. Les points-virgules (;) ne sont pas autorisés. Vous pouvez spécifier plusieurs prescripteurs et plusieurs postscripts. Un seul script peut être codé en tant que prescripteur et PostScript et peut appeler d'autres scripts.
 
-
-NOTE: Sous UNIX, vous ne pouvez pas spécifier plusieurs scripts.
+NOTE: Vous ne pouvez pas spécifier plusieurs scripts.
 
 
 
 == Délais d'expiration du script
 
-Pour Windows, le délai est défini sur 15 minutes et ne peut pas être modifié.
-
-Pour UNIX, le délai est défini sur 60 secondes, par défaut. Vous pouvez modifier la valeur de temporisation.
+Le délai est défini sur 60 secondes, par défaut. Vous pouvez modifier la valeur de temporisation.
 
 
 

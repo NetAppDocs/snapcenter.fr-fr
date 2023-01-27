@@ -19,7 +19,7 @@ La récupération est effectuée à l'aide des journaux d'archivage disponibles 
 
 Si vous migrez la base de données ASM d'ASMLIB vers ASMFD, les sauvegardes créées avec ASMLIB ne peuvent pas être utilisées pour restaurer la base de données. Vous devez créer des sauvegardes dans la configuration ASMFD et utiliser ces sauvegardes pour les restaurer. De même, si la base de données ASM est migrée d'ASMFD vers ASMLIB, vous devez créer des sauvegardes dans la configuration ASMLIB pour restaurer.
 
-Lors de la restauration d'une base de données, un fichier de verrouillage opérationnel (.sm_lock_dbsid) est créé sur l'hôte de la base de données Oracle dans le répertoire $ORACLE_HOME/dbs afin d'éviter l'exécution de plusieurs opérations sur la base de données. Une fois la base de données restaurée, le fichier de verrouillage opérationnel est automatiquement supprimé.
+Lors de la restauration d'une base de données, un fichier de verrouillage opérationnel (.sm_lock_dbsid) est créé sur l'hôte de la base de données Oracle dans le répertoire _/var/opt/snapcenter/sco/lock_ pour éviter l'exécution de plusieurs opérations sur la base de données. Une fois la base de données restaurée, le fichier de verrouillage opérationnel est automatiquement supprimé.
 
 
 NOTE: La restauration des fichiers SPFILE et Password n'est pas prise en charge.

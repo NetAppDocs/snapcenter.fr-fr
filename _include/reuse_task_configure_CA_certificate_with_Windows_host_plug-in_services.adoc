@@ -19,14 +19,11 @@ Par exemple :
  > netsh http delete sslcert ipport=0.0.0.0:8145
 . Associez le certificat récemment installé aux services du plug-in hôte Windows, en exécutant les commandes suivantes :
 +
-`> $cert = “_<certificate thumbprint>_”`
-
-+
-`> $guid = [guid]::NewGuid().ToString("B")`
-
-+
-`> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"`
-
+....
+> $cert = “_<certificate thumbprint>_”
+> $guid = [guid]::NewGuid().ToString("B")
+> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
+....
 +
 Par exemple :
 
@@ -34,6 +31,6 @@ Par exemple :
 ....
 > $cert = “a909502dd82ae41433e6f83886b00d4277a32a7b”
 > $guid = [guid]::NewGuid().ToString("B")
-> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"
+> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
 ....
 

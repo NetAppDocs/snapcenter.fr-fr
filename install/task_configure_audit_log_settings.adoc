@@ -1,0 +1,72 @@
+---
+permalink: install/task_configure_audit_log_settings.html 
+sidebar: sidebar 
+keywords: audit, log, configure 
+summary: 'Vous pouvez configurer pour consigner les événements de sécurité des plates-formes logicielles et de tous les logiciels qui s"exécutent sur ces plates-formes.' 
+---
+= Configurer les paramètres du journal d'audit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Des journaux d'audit sont générés pour chaque activité du serveur SnapCenter. Par défaut, les journaux d'audit sont sécurisés à l'emplacement d'installation par défaut _C:\Program Files\NetApp\SnapCenter WebApp\audit\_.
+
+Les journaux d'audit sont sécurisés par la génération d'un résumé signé numériquement pour chaque événement d'audit afin de les protéger contre les modifications non autorisées. Les données de résumé générées sont conservées dans le fichier de somme de contrôle d'audit distinct et l'intégrité est soumise à des contrôles périodiques pour assurer l'intégrité du contenu.
+
+Vous devriez avoir ouvert une session en tant que rôle « SnapCenterAdmin ».
+
+*À propos de cette tâche*
+
+* Les alertes sont envoyées dans les scénarios suivants :
++
+** Le programme de vérification de l'intégrité du journal d'audit ou le serveur Syslog est activé ou désactivé
+** Vérification de l'intégrité du journal d'audit, journal d'audit ou échec du journal du serveur Syslog
+** Espace disque faible
+
+
+* L'e-mail est envoyé uniquement en cas d'échec du contrôle d'intégrité.
+* Vous devez modifier les chemins d'accès du répertoire du journal d'audit et du répertoire du journal de la somme de contrôle d'audit ensemble. Vous ne pouvez modifier qu'une seule d'entre elles.
+* Lorsque les chemins du répertoire du journal d'audit et du répertoire du journal de la somme de contrôle d'audit sont modifiés, la vérification d'intégrité ne peut pas être effectuée sur les journaux d'audit présents à l'emplacement précédent.
+* Les chemins du répertoire du journal d'audit et du répertoire du journal de la somme de contrôle d'audit doivent se trouver sur le disque local du serveur SnapCenter.
++
+Les lecteurs partagés ou montés sur le réseau ne sont pas pris en charge.
+
+* Si le protocole UDP est utilisé dans les paramètres du serveur Syslog, les erreurs dues au port sont en panne ou ne peuvent pas être capturées comme une erreur ou une alerte dans SnapCenter.
+* Vous pouvez utiliser les commandes set-SmAuditSettings et Get-SmAuditSettings pour configurer les journaux d'audit.
++
+Les informations concernant les paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant Get-Help nom_commande. Vous pouvez également consulter le https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+
+
+*Étapes*
+
+. Dans la page *Paramètres*, accédez à *Paramètres* > *Paramètres globaux* > *Paramètres du journal d'audit*.
+. Dans la section Journal d'audit, entrez les détails.
+. Entrez le répertoire *Audit log* et le répertoire *Audit checksum log*
++
+.. Entrez la taille maximale du fichier
+.. Entrez le nombre maximal de fichiers journaux
+.. Entrez le pourcentage d'utilisation de l'espace disque pour envoyer une alerte
+
+
+. (Facultatif) Activer *Log UTC Time*.
+. (Facultatif) activez *Audit Log Integrity Check Schedule* et cliquez sur *Start Integrity Check* pour vérifier l'intégrité à la demande.
++
+Vous pouvez également exécuter la commande *Start-SmAuditIntegrityCheck* pour lancer le contrôle d'intégrité à la demande.
+
+. (Facultatif) activez les journaux d'audit transmis au serveur syslog distant et entrez les détails du serveur Syslog.
++
+Vous devez importer le certificat depuis le serveur Syslog vers la racine de confiance pour le protocole TLS 1.2.
+
++
+.. Entrez l'hôte du serveur Syslog
+.. Entrez le port du serveur Syslog
+.. Entrez le protocole du serveur Syslog
+.. Entrez le format RFC
+
+
+. Cliquez sur *Enregistrer*.
+. Vous pouvez voir les vérifications d'intégrité des audits et les vérifications de l'espace disque en cliquant sur *Monitor* > *Jobs*.
+

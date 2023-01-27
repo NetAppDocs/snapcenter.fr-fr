@@ -115,7 +115,7 @@ Dans une configuration Flex ASM, tous les nœuds, qu'il s'agisse d'un nœud Hub 
 
 
  a| 
-Ignorer les vérifications de préinstallation
+Ignorer les vérifications de préinstallation facultatives
  a| 
 Cochez cette case si vous avez déjà installé les plug-ins manuellement et que vous ne souhaitez pas vérifier si l'hôte répond aux exigences d'installation du plug-in.
 

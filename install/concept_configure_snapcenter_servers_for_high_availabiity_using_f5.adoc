@@ -26,7 +26,7 @@ Vous devez être membre du groupe administrateurs locaux sur les serveurs SnapCe
 * Add-SmServer
 * Remove-SmServerCluster
 +
-Pour plus d'informations, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Pour plus d'informations, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 
 
@@ -38,4 +38,5 @@ Pour plus d'informations, voir https://library.netapp.com/ecm/ecm_download_file/
 * Si un basculement se produit entre les serveurs SnapCenter et s'il existe également une session SnapCenter existante, vous devez fermer le navigateur et vous reconnecter à SnapCenter.
 * Dans la configuration de l'équilibreur de charge (NLB ou F5), si vous ajoutez un nœud partiellement résolu par le nœud NLB ou F5 et si le nœud SnapCenter n'est pas en mesure d'atteindre ce nœud, la page hôte SnapCenter bascule fréquemment entre les hôtes et l'état d'exécution. Pour résoudre ce problème, assurez-vous que les deux nœuds SnapCenter peuvent résoudre l'hôte dans le nœud NLB ou F5.
 * Les commandes SnapCenter pour les paramètres MFA doivent être exécutées sur tous les nœuds. La configuration des parties utilisatrices doit être effectuée dans le serveur Active Directory Federation Services (AD FS) à l'aide des détails du cluster F5. L'accès à l'interface utilisateur SnapCenter au niveau du nœud sera bloqué après l'activation de l'authentification multifacteur.
+* En cas de basculement, les paramètres du journal d'audit ne sont pas refléteront sur le second nœud. Par conséquent, vous devez répéter manuellement les paramètres du journal d'audit sur le nœud passif F5 lorsqu'il devient actif.
 

@@ -75,4 +75,18 @@ Les opérations ci-dessus sont prises en charge sur les périphériques sans par
 
 NOTE: Vous pouvez configurer la solution de chemins d'accès multiples pour les périphériques NVMe en définissant l'option de chemins d'accès multiples natifs dans le noyau. Les chemins d'accès multiples de Device Mapper (DM) ne sont pas pris en charge.
 
-+ pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+* Prise en charge des utilisateurs non par défaut au lieu d'oracle et de Grid.
++
+Pour prendre en charge les utilisateurs non par défaut, vous devez définir les utilisateurs non par défaut en modifiant les valeurs des paramètres dans le fichier *sco.properties* situé dans _file /var/opt/snapcenter/sco/etc/_.
+
++
+Les valeurs par défaut des paramètres sont définies comme oracle et Grid.
+
++
+** DB_USER=oracle
+** DB_GROUP=oinstall
+** GI_USER=grille
+** GI_GROUP=oinstall
+
+
+

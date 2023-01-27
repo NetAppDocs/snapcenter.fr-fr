@@ -33,6 +33,9 @@ La fonctionnalité de reprise après incident SnapCenter utilise les API REST po
 +
 link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["Workflows d'API REST pour la reprise après incident d'un serveur SnapCenter"]
 
++
+Le fichier de configuration associé aux paramètres d'audit n'est pas sauvegardé dans la sauvegarde de reprise sur incident ni sur le serveur DR après l'opération de restauration. Vous devez répéter manuellement les paramètres du journal d'audit.
+
 * *Plug-in SnapCenter et reprise après incident de stockage*
 +
 La reprise après incident est uniquement prise en charge pour le plug-in SnapCenter pour SQL Server. Lorsque le plug-in SnapCenter pour SQL Server est en panne, basculez vers un autre hôte SQL et restaurez les données en suivant quelques étapes.

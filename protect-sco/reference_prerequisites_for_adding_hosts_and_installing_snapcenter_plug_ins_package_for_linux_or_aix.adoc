@@ -16,14 +16,18 @@ Avant d'ajouter un hôte et d'installer les packages de plug-ins, vous devez res
 * Si vous utilisez iSCSI, le service iSCSI doit être en cours d'exécution.
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
 +
-Le plug-in SnapCenter pour base de données Oracle peut être installé par un utilisateur non root. Cependant, vous devez configurer les privilèges sudo pour que l'utilisateur non-root installe et démarre le processus de plug-in. Après avoir installé le plug-in, les processus s'exécutent en tant qu'utilisateur root efficace.
+Le plug-in SnapCenter pour base de données Oracle peut être installé par un utilisateur non root. Cependant, vous devez configurer les privilèges sudo pour que l'utilisateur non-root installe et démarre le processus de plug-in. Après l'installation du plug-in, les processus s'exécutent en tant qu'utilisateur non-racine efficace.
 
 * Si vous installez le module de plug-ins SnapCenter pour AIX sur un hôte AIX, vous devez avoir résolu manuellement les liens symboliques au niveau du répertoire.
 +
 Le module de plug-ins SnapCenter pour AIX résout automatiquement le lien symbolique au niveau du fichier, mais pas les liens symboliques au niveau du répertoire pour obtenir le chemin absolu JAVA_HOME.
 
 * Créez des informations d'identification avec le mode d'authentification sous Linux ou AIX pour l'utilisateur d'installation.
-* Vous devez avoir installé Java 1.8.x, 64 bits, sur votre hôte Linux ou AIX.
+* Vous devez avoir installé Java 1.8.x ou Java 11, 64 bits, sur votre hôte Linux ou AIX.
++
+
+NOTE: Assurez-vous que vous avez installé uniquement l'édition certifiée DE JAVA 11 sur l'hôte Linux.
+
 +
 Pour plus d'informations sur le téléchargement DE JAVA, voir :
 
@@ -87,7 +91,12 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-Java 1.8.x (64 bits)Java Oracle et OpenJDK Flavors
+* Java 1.8.x (64 bits) Oracle Java et OpenJDK Flavors
+* Java 11 (64 bits) Oracle Java et OpenJDK Flavors
+
+
+
+NOTE: Assurez-vous que vous avez installé uniquement l'édition certifiée DE JAVA 11 sur l'hôte Linux.
 
 Si vous avez mis à niveau JAVA vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version JAVA correcte et le chemin correct.
 
@@ -98,12 +107,11 @@ Pour obtenir les dernières informations sur les versions prises en charge, repo
 
 === Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte Linux
 
-Les versions SnapCenter 2.0 et ultérieures permettent à un utilisateur non-root d'installer le package de plug-ins SnapCenter pour Linux et de démarrer le processus de plug-in. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.
+Les versions SnapCenter 2.0 et ultérieures permettent à un utilisateur non-root d'installer le package de plug-ins SnapCenter pour Linux et de démarrer le processus de plug-in. Les processus de plug-in s'exécutent en tant qu'utilisateur non racine efficace. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.
 
 *Ce dont vous aurez besoin*
 
-* Version sudo entre 1.8.7 et 1.8.19P2.
-* Assurez-vous que l'utilisateur non-root fait partie du groupe d'installation Oracle.
+* Sudo version 1.8.7 ou ultérieure.
 * Modifiez le fichier _/etc/ssh/sshd_config_ pour configurer les algorithmes de code d'authentification de message : Mac hmac-sha2-256 et MAC hmac-sha2-512.
 +
 Redémarrez le service sshd après la mise à jour du fichier de configuration.
@@ -132,13 +140,10 @@ MACs hmac-sha2-256
 
 Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder aux chemins suivants :
 
-* /Home/_SUDO_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin
+* /Home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin
 * /Custom_location/NetApp/snapcenter/spl/installation/plugins/désinstaller
 * /Custom_location/NetApp/snapcenter/spl/bin/spl
 
-
-
-NOTE: Si vous gérez une configuration RAC, l'utilisateur non-root doit être un utilisateur Oracle et il ne peut pas être uniquement un utilisateur non-root du système d'exploitation.
 
 *Étapes*
 
@@ -147,35 +152,32 @@ NOTE: Si vous gérez une configuration RAC, l'utilisateur non-root doit être un
 +
 [listing, subs="+quotes"]
 ----
-Cmnd_Alias SCCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin,
-/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
-/opt/NetApp/snapcenter/spl/bin/spl
-Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/Linux_Prechecks.sh
-_SUDO_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
-Defaults: _SUDO_USER_ env_keep=JAVA_HOME
-Defaults: _SUDO_USER_ !visiblepw
-Defaults: _SUDO_USER_ !requiretty
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
 ----
 +
-_SUDO_USER_ est le nom de l'utilisateur non-root que vous avez créé.
 
-+
-Vous pouvez obtenir la valeur de somme de contrôle à partir du fichier *oracle_checksum.txt*, qui se trouve à la page _C:\ProgramData\NetApp\SnapCenter\Package Repository_.
+NOTE: Si vous avez une configuration RAC, avec les autres commandes autorisées, vous devez ajouter ce qui suit au fichier /etc/sudoers : '/<crs_home>/bin/olsnodes'
 
-+
+
+
+Vous pouvez obtenir la valeur de _crs_Home_ à partir du fichier _/etc/oracle/olr.loc_.
+
+_LINUX_USER_ est le nom de l'utilisateur non-root que vous avez créé.
+
+Vous pouvez obtenir le _checksum_Value_ à partir du fichier *oracle_checksum.txt*, qui se trouve dans la page _C:\ProgramData\NetApp\SnapCenter\Package Repository_.
+
 Si vous avez spécifié un emplacement personnalisé, l'emplacement sera _Custom_path\NetApp\SnapCenter\Package Repository_.
 
-+
 
 IMPORTANT: Cet exemple ne doit être utilisé que comme référence pour la création de vos propres données.
 
-
-
-|===
-
-
-| *Meilleure pratique:* pour des raisons de sécurité, vous devez supprimer l'entrée sudo après avoir terminé chaque installation ou mise à niveau. 
-|===
 
 
 == Configuration requise pour l'hôte AIX
@@ -216,7 +218,9 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-Java 1.8.x (64 bits)IBM Java
+* Java 1.8.x (64 bits) IBM Java
+* Java 11 (64 bits) IBM Java
+
 
 Si vous avez mis à niveau JAVA vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version JAVA correcte et le chemin correct.
 
@@ -227,12 +231,11 @@ Pour obtenir les dernières informations sur les versions prises en charge, repo
 
 === Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte AIX
 
-SnapCenter 4.4 et version ultérieure permet à un utilisateur non-root d'installer le module de plug-ins SnapCenter pour AIX et de démarrer le processus de plug-in. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.
+SnapCenter 4.4 et version ultérieure permet à un utilisateur non-root d'installer le module de plug-ins SnapCenter pour AIX et de démarrer le processus de plug-in. Les processus de plug-in s'exécutent en tant qu'utilisateur non racine efficace. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.
 
 *Ce dont vous aurez besoin*
 
-* Version sudo entre 1.8.7 et 1.8.19P2.
-* Assurez-vous que l'utilisateur non-root fait partie du groupe d'installation Oracle.
+* Sudo version 1.8.7 ou ultérieure.
 * Modifiez le fichier _/etc/ssh/sshd_config_ pour configurer les algorithmes de code d'authentification de message : Mac hmac-sha2-256 et MAC hmac-sha2-512.
 +
 Redémarrez le service sshd après la mise à jour du fichier de configuration.
@@ -266,9 +269,6 @@ Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puiss
 * /Custom_location/NetApp/snapcenter/spl/bin/spl
 
 
-
-NOTE: Si vous gérez une configuration RAC, l'utilisateur non-root doit être un utilisateur Oracle et il ne peut pas être uniquement un utilisateur non-root du système d'exploitation.
-
 *Étapes*
 
 . Connectez-vous à l'hôte AIX sur lequel vous souhaitez installer SnapCenter Plug-ins Package pour AIX.
@@ -276,34 +276,32 @@ NOTE: Si vous gérez une configuration RAC, l'utilisateur non-root doit être un
 +
 [listing, subs="+quotes"]
 ----
-Cmnd_Alias SCCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
-/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
-/opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias HPPACMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl
 Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/AIX_Prechecks.sh
-_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPACMD, PRECHECKCMD, CONFIGCHECKCMD, SCCMD
 Defaults: _AIX_USER_ !visiblepw
 Defaults: _AIX_USER_ !requiretty
 ----
 +
+
+NOTE: Si vous avez une configuration RAC, avec les autres commandes autorisées, vous devez ajouter ce qui suit au fichier /etc/sudoers : '/<crs_home>/bin/olsnodes'
+
+
+
+Vous pouvez obtenir la valeur de _crs_Home_ à partir du fichier _/etc/oracle/olr.loc_.
+
 _AIX_USER_ est le nom de l'utilisateur non-root que vous avez créé.
 
-+
-Vous pouvez obtenir la valeur de somme de contrôle à partir du fichier *oracle_checksum.txt*, qui se trouve à la page _C:\ProgramData\NetApp\SnapCenter\Package Repository_.
+Vous pouvez obtenir le _checksum_Value_ à partir du fichier *oracle_checksum.txt*, qui se trouve dans la page _C:\ProgramData\NetApp\SnapCenter\Package Repository_.
 
-+
 Si vous avez spécifié un emplacement personnalisé, l'emplacement sera _Custom_path\NetApp\SnapCenter\Package Repository_.
 
-+
 
 IMPORTANT: Cet exemple ne doit être utilisé que comme référence pour la création de vos propres données.
 
-
-
-|===
-
-
-| *Meilleure pratique:* pour des raisons de sécurité, vous devez supprimer l'entrée sudo après avoir terminé chaque installation ou mise à niveau. 
-|===
 
 
 == Configurez les informations d'identification

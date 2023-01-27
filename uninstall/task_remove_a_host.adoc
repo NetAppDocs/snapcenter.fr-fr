@@ -20,7 +20,7 @@ Lorsque le serveur SnapCenter supprime un hôte, il supprime d'abord la sauvegar
 * Si l'hôte dispose d'un groupe de ressources partagé avec un autre hôte et que vous supprimez l'hôte, le groupe de ressources est également supprimé.
 * Vous devez utiliser la cmdlet _Remove-SmHost_ pour supprimer les hôtes du plug-in désaffectés ou inaccessibles.
 +
-Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["Guide de référence de l'applet de commande du logiciel SnapCenter"^]
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^]
 
 * Le temps nécessaire pour supprimer un hôte dépend du nombre de sauvegardes et des paramètres de rétention. En effet, les copies Snapshot sont supprimées de chaque contrôleur et les métadonnées sont nettoyées.
 

@@ -18,7 +18,7 @@ Avant d'ajouter un hôte et d'installer les packages de plug-ins, vous devez res
 link:concept_develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
 
 * Pour gérer des applications MySQL ou DB2, vous devez avoir téléchargé les plug-ins personnalisés MySQL et DB2 fournis par NetApp.
-* Vous devez avoir installé Java 1.8, 64 bits sur votre hôte Linux ou Windows.
+* Vous devez avoir installé Java 1.8 ou Java 11 (64 bits) sur votre hôte Linux ou Windows.
 * Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré ou si l'utilisateur appartient à un utilisateur de groupe de travail local, vous devez désactiver l'UAC sur l'hôte.
 * Les plug-ins personnalisés doivent être disponibles sur l'hôte client à partir duquel l'opération d'ajout d'hôte est effectuée.
 
@@ -80,9 +80,9 @@ Voici un exemple d'entrée de hachage SHA512 dans le fichier de somme de contrô
 == Hôtes Linux
 
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
-* Vous devez avoir installé Java 1.8 64 bits sur votre hôte Linux.
+* Vous devez avoir installé Java 1.8 ou Java 11 (64 bits) sur votre hôte Linux.
 +
-Si vous utilisez Windows 2019 ou Windows 2016 pour l'hôte SnapCenter Server, vous devez installer Java 1.8, 64 bits. La matrice d'interopérabilité (IMT) contient les dernières informations sur les conditions requises.
+Si vous utilisez Windows Server 2019 ou Windows Server 2016 pour l'hôte SnapCenter Server, vous devez installer Java 1.8 ou Java 11 (64 bits). La matrice d'interopérabilité (IMT) contient les dernières informations sur les conditions requises.
 
 +
 http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
@@ -90,13 +90,31 @@ http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les
 +
 https://imt.netapp.com/matrix/imt.jsp?components=105308;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
 
-* Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins. Ajoutez les lignes suivantes au fichier /etc/sudoers à l'aide de l'utilitaire visudo Linux. Par exemple :
+* Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins. Ajoutez les lignes suivantes au fichier /etc/sudoers à l'aide de l'utilitaire visudo Linux.
 +
-[listing]
+
+NOTE: Assurez-vous que vous utilisez la version 1.8.7 ou ultérieure de sudo.
+
++
+[listing, subs="+quotes"]
 ----
-Cmnd_Alias SCCMD = /opt/NetApp/snapcenter/scc/bin/scc <non_root_user> ALL=(ALL) NOPASSWD:SETENV: SCCMD
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
 ----
 +
-non_root_user est le nom de l'utilisateur non-root que vous avez créé.
+_LINUX_USER_ est le nom de l'utilisateur non-root que vous avez créé.
+
++
+Vous pouvez obtenir le _checksum_Value_ à partir du fichier *oracle_checksum.txt*, qui se trouve dans la page _C:\ProgramData\NetApp\SnapCenter\Package Repository_.
+
++
+
+IMPORTANT: Cet exemple ne doit être utilisé que comme référence pour la création de vos propres données.
 
 

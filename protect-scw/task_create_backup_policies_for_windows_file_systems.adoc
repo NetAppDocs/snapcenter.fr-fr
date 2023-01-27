@@ -109,7 +109,7 @@ Sélectionnez cette option si vous souhaitez spécifier le nombre de jours penda
 |===
 +
 
-IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, définissez le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de réplications sur 1, l'opération de conservation peut échouer. En effet, la première copie Snapshot de référence est la copie Snapshot de référence de la relation SnapVault jusqu'à ce que la nouvelle copie Snapshot soit répliquée sur la cible.
+IMPORTANT: Vous devez définir le nombre de rétention sur 2 ou plus. La valeur minimale pour le nombre de rétention est 2.
 
 +
 

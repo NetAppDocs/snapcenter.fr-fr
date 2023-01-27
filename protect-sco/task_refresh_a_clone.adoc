@@ -59,6 +59,6 @@ NOTE: Le fichier de spécifications du clone est créé à l'adresse _/var/opt/s
 Si l'opération échoue avec les messages d'erreur "PL-SCO-20032: CanExecute a échoué avec l'erreur: PL-SCO-30031: Redo log file +SC_2959770772_clmdb/clmdb/redlog/redo01_01.log existe", spécifiez une valeur plus élevée pour _-WaitToTriggerClone_.
 
 +
-Pour plus d'informations sur les commandes UNIX, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["Guide de référence sur les commandes du logiciel SnapCenter"^].
+Pour plus d'informations sur les commandes UNIX, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["Guide de référence sur les commandes du logiciel SnapCenter"^].
 
 

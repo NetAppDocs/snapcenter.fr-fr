@@ -79,6 +79,8 @@ entries:
   - title: Configurez les pools d'applications IIS pour activer les autorisations
       de lecture d'Active Directory
     url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
+- title: Configurer les paramètres du journal d'audit
+  url: "/install/task_configure_audit_log_settings.html"
 - title: Ajout de systèmes de stockage
   url: "/install/task_add_storage_systems.html"
 - title: Ajout de licences SnapCenter standard basées sur le contrôleur

@@ -50,4 +50,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 Les fichiers de notification fournissent des informations sur les droits d'auteur et les licences de tiers utilisés dans le logiciel NetApp.
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2883298["Notification relative à SnapCenter 4.7"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2884814["Notification relative à SnapCenter 4.8"^]

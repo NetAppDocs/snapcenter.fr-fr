@@ -19,7 +19,7 @@ settings:
   - name: Logiciel SnapCenter
     url: "/snapcenter-45"
     version-number: '4.5'
-  langs: fr-fr,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de
+  langs: fr-fr,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es
 sidebar:
   entries:
   - title: Documentation relative au logiciel SnapCenter 4.8

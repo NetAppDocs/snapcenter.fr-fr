@@ -10,6 +10,7 @@ summary: Vous pouvez choisir le nombre de jours pendant lesquels vous souhaitez 
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous pouvez choisir le nombre de jours pendant lesquels vous souhaitez conserver les copies de sauvegarde ou spécifier le nombre de copies de sauvegarde à conserver, dans un maximum de 255 copies ONTAP. Par exemple, votre entreprise peut avoir besoin de conserver 10 jours de copies de sauvegarde ou 130 copies de sauvegarde.
 
 Lors de la création d'une stratégie, vous pouvez spécifier les options de rétention pour le type de sauvegarde et le type de planification.

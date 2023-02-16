@@ -10,6 +10,7 @@ summary: 'Vous pouvez annuler les opérations de clonage mises en file d"attente
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous pouvez annuler les opérations de clonage mises en file d'attente.
 
 Pour annuler les opérations de clonage, vous devez être connecté en tant qu'administrateur SnapCenter ou propriétaire de tâches.

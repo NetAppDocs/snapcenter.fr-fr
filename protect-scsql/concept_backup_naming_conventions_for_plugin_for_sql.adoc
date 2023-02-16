@@ -10,6 +10,7 @@ summary: 'Vous pouvez utiliser la convention d"appellation de copie Snapshot par
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous pouvez utiliser la convention d'appellation de copie Snapshot par défaut ou la convention de nom personnalisée. la convention de nommage des sauvegardes par défaut ajoute un horodatage aux noms de copie Snapshot qui vous aide à identifier le moment de la création des copies.
 
 La copie Snapshot utilise la convention de nom par défaut suivante :

@@ -10,6 +10,7 @@ summary: 'Importez les certificats d"autorité de certification du serveur SnapC
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous devez importer les certificats d'autorité de certification sur le serveur SnapCenter et les plug-ins hôtes Windows à l'aide de la console de gestion Microsoft (MMC).
 
 *Étapes*

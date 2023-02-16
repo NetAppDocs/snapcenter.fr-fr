@@ -10,6 +10,7 @@ summary: 'Configurez le certificat d"autorité de certification pour le service 
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous devez gérer le mot de passe du magasin de clés de plug-ins personnalisé et de son certificat, configurer le certificat de l'autorité de certification, configurer les certificats racine ou intermédiaires sur le magasin de confiance des plug-ins personnalisés et configurer la paire de clés signée par l'autorité de certification sur le magasin de confiance des plug-ins personnalisés avec le service des plug-ins personnalisés SnapCenter pour activer le certificat numérique installé.
 
 Les plug-ins personnalisés utilisent le fichier « keystore.jks », qui se trouve à l'adresse _/opt/NetApp/snapcenter/scc/etc_ comme magasin de confiance et comme magasin de clés.

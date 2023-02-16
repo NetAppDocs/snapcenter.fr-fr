@@ -2,7 +2,7 @@
 permalink: protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: 'Vous devez créer une connexion de machine virtuelle de stockage \(SVM\) et des identifiants avant d"utiliser les applets de commande PowerShell pour sauvegarder, restaurer ou cloner les bases de données SAP HANA.' 
+summary: 'Vous devez créer une connexion SVM (Storage Virtual machine) et une identifiant d"identification avant d"utiliser les applets de commande PowerShell pour sauvegarder, restaurer ou cloner les bases de données SAP HANA.' 
 ---
 = Créer une connexion au système de stockage et une certification à l'aide des applets de commande PowerShell pour la base de données SAP HANA
 :allow-uri-read: 

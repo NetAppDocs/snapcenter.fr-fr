@@ -13,6 +13,9 @@ summary: 'Vous devez ajouter manuellement les volumes d"application.'
 [role="lead"]
 SnapCenter prend en charge la sauvegarde et le clonage des volumes d'applications de base de données Oracle. Vous devez ajouter manuellement les volumes d'application. La découverte automatique des volumes d'application n'est pas prise en charge.
 
+
+NOTE: Les volumes d'application ne prennent en charge que les connexions NFS directes et iSCSI.
+
 *Étapes*
 
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Oracle Database dans la liste.

@@ -10,6 +10,7 @@ summary: 'Vous pouvez utiliser l"applet de commande Remove-SmBackup pour supprim
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous pouvez utiliser l'applet de commande Remove-SmBackup pour supprimer des sauvegardes si vous n'en avez plus besoin pour d'autres opérations de protection des données.
 
 Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.

@@ -10,6 +10,7 @@ summary: Obtenez le certificat CA imprimé.
 :imagesdir: ../media/
 
 
+[role="lead"]
 Une empreinte de certificat est une chaîne hexadécimale qui identifie un certificat. Une empreinte est calculée à partir du contenu du certificat à l'aide d'un algorithme d'empreinte.
 
 *Étapes*

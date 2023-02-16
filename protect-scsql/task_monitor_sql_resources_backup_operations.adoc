@@ -10,6 +10,7 @@ summary: 'Vous pouvez contrôler la progression des différentes opérations de 
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous pouvez surveiller la progression des différentes opérations de sauvegarde à l'aide de la page SnapCenterJobs. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s'il y a un problème.
 
 *À propos de cette tâche*

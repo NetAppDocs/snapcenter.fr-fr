@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="80e29bd8c63d2e1543e65e2db033a6a4" category="summary">Le logiciel SnapCenter est une plateforme simple, centralisée et évolutive qui protège les données de vos applications, bases de données, systèmes de fichiers hôtes et machines virtuelles qui s'exécutent sur les systèmes ONTAP à partir de n'importe quel point du cloud hybride.</block>
   <block id="7608e75619cff3eeb4e8bce40481b456" category="doc">Documentation du logiciel SnapCenter</block>
   <block id="b880dba5b80385d6a4d3f5ff54d8ef78" category="summary">Vous devez utiliser la page hôte SnapCenterAdd pour ajouter des hôtes, puis installer les modules de plug-in. Les plug-ins sont automatiquement installés sur les hôtes distants. Vous pouvez ajouter un hôte et installer les modules d'extension pour un hôte individuel ou pour un cluster.</block>
   <block id="d959bbdfecd7dd6a3f75f5a871cbbe02" category="doc">Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants</block>
@@ -166,7 +165,6 @@
   <block id="aab338915e32b60e92c8de3a23aa5c5d" category="paragraph">Systèmes d'exploitation</block>
   <block id="bb79f96acbff544ded541446c9c7c894" category="paragraph">Microsoft Windows</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">Matrice d'interopérabilité NetApp</block>
-  <block id="6550bb9a1ccfa490eafbe428de0a4d91" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>.</block>
   <block id="97d747ad5d4878c60364b9ba961fd5a4" category="paragraph">RAM minimale pour le plug-in SnapCenter sur l'hôte</block>
   <block id="0d642755e7f12f7563e3db33bd0c39cb" category="paragraph">1 GO</block>
   <block id="94ca5bd1fc6971f402b85442105f093f" category="paragraph">Espace minimal d'installation et de journalisation pour le plug-in SnapCenter sur l'hôte</block>
@@ -237,7 +235,6 @@
   <block id="083ad21990802d20fc5fdefdb7255565" category="paragraph">2 GO</block>
   <block id="e1c05a94a3712659051eb07eafa04bd4" category="paragraph">Java 1.8 (64 bits)Oracle Java ou OpenJDK Flavors</block>
   <block id="bac8e3a852c936b4db89afd35d4d962a" category="paragraph">Si vous avez mis à niveau JAVA vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version JAVA correcte et le chemin correct.</block>
-  <block id="ad2df38df99c722f88cf142744758e07" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="f05f98f17d4e0568e31244784ca320bd" category="inline-link-rx"></block></block>
   <block id="1f8ca173b65dfa4ec89689efd778bdb1" category="summary">Configurez le certificat d'autorité de certification avec les services de plug-in d'hôte Windows</block>
   <block id="1067e8b574748bfd5d0147a621c7ca24" category="doc">Configurez le certificat d'autorité de certification avec les services de plug-in d'hôte Windows</block>
   <block id="d4d451fe9bcfe7f834b0f3648f4a43d2" category="paragraph">Vous devez configurer le certificat d'autorité de certification avec les services de plug-in d'hôte Windows pour activer le certificat numérique installé.</block>
@@ -852,7 +849,6 @@
   <block id="92f854eabda8c2aa761e01fba1c6ffd4" category="list-text">Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.</block>
   <block id="6919c26b69875a76335f5a1dd643e508" category="inline-link">Téléchargements Java pour tous les systèmes d'exploitation</block>
   <block id="9226092112d9484949841b47e3b0500e" category="paragraph"><block ref="9226092112d9484949841b47e3b0500e" category="inline-link-rx"></block></block>
-  <block id="d91808c8a4d610ed99302113da2f85d2" category="paragraph"><block ref="0eee65cb82c15fd964b7785d5f117a10" category="inline-link-rx"></block></block>
   <block id="caef6d3f9e7cdd9ed1d3eaabe29db549" category="summary">Vous devez installer et configurer les plug-ins personnalisés SnapCenter pour protéger les ressources des plug-ins personnalisés.</block>
   <block id="d9ac41630ae6a20177466403e2d328d8" category="doc">Workflow d'installation des plug-ins personnalisés SnapCenter</block>
   <block id="86f7f637d3819a7b4814644b7f8d8972" category="image-alt">installer scc configurer le workflow</block>
@@ -999,7 +995,6 @@
   <block id="e37834b366fe18c5fb046fc886e65b1f" category="paragraph">La page topologie des ressources s'affiche.</block>
   <block id="2473f0a75a438700af9cf3aca0761dd5" category="list-text">Cliquez sur *Sauvegarder maintenant*.</block>
   <block id="6b4dbd62846fc1dc78b9f63f11af9c78" category="list-text">Si vous avez appliqué plusieurs stratégies à la ressource, dans la liste déroulante *Stratégie*, sélectionnez la stratégie que vous souhaitez utiliser pour la sauvegarde.</block>
-  <block id="0f86a1aee795e1b2600e86eb6b2722ec" category="summary">Vous devez installer les plug-ins personnalisés SnapCenter à l'aide de l'interface utilisateur SnapCenter. Si votre environnement ne permet pas l'installation à distance du plug-in à partir de l'interface utilisateur SnapCenter, vous pouvez installer le plug-in personnalisé en mode console ou en mode silencieux à l'aide de l'interface de ligne de commande \(CLI\).</block>
   <block id="b5c24629ead5c583e2208216205af10a" category="doc">Installez les plug-ins personnalisés SnapCenter sur les hôtes Linux à l'aide de l'interface de ligne de commande</block>
   <block id="0f18e8aaa7478aae88b697e6b89d15f0" category="paragraph">Vous devez installer les plug-ins personnalisés SnapCenter à l'aide de l'interface utilisateur SnapCenter. Si votre environnement ne permet pas l'installation à distance du plug-in à partir de l'interface utilisateur SnapCenter, vous pouvez installer les plug-ins personnalisés en mode console ou en mode silencieux à l'aide de l'interface de ligne de commande (CLI).</block>
   <block id="ef5b54514d2bc2cec099dbe31b43d400" category="list-text">Copiez le fichier d'installation du package de plug-ins SnapCenter pour Linux (snapcenter_linux_host_plugin.bin) depuis C:\ProgramData\NetApp\SnapCenter\Package Repository vers l'hôte où vous souhaitez installer les plug-ins personnalisés.</block>
@@ -1941,7 +1936,6 @@
   <block id="cc788b7e72b2a734dd0985bd1e0e9fe3" category="inline-link">Documentation Amazon FSX pour NetApp ONTAP</block>
   <block id="6ae4072dd3f83211384c8e5499a7935c" category="paragraph">Pour plus d'informations sur Amazon FSX pour NetApp ONTAP, consultez<block ref="6acd76e3ffef3be13d939109e0593e26" category="inline-link-rx"></block>.</block>
   <block id="cf12f1baaed2b3c195374322d8d857bc" category="list-text">SnapCenter prend en charge la protection de différentes applications et bases de données.</block>
-  <block id="9ed4d117d7b8f3381a2011b69e6dfef2" category="paragraph">Pour plus d'informations sur les applications et bases de données prises en charge, reportez-vous à la section<block ref="4d75397e7ff03528228bfd2c042ee164" category="inline-link-rx"></block>.</block>
   <block id="3375e2b7dd26ec739f41b8bcc986e140" category="summary">Vous devez créer un rôle de cluster ONTAP avec des privilèges minimaux afin de ne pas avoir à utiliser le rôle d'administrateur ONTAP pour effectuer des opérations dans SnapCenter.</block>
   <block id="822239f41b07c86cff067dac38fab7f4" category="doc">Créez des rôles de cluster ONTAP avec des privilèges minimaux</block>
   <block id="f0f84683ce75bc63984c13f94c8f8c3d" category="paragraph">Vous devez créer un rôle de cluster ONTAP avec des privilèges minimaux afin de ne pas avoir à utiliser le rôle d'administrateur ONTAP pour effectuer des opérations dans SnapCenter. Vous pouvez exécuter plusieurs commandes de l'interface de ligne de commandes ONTAP pour créer le rôle de cluster ONTAP et attribuer des privilèges minimaux.</block>
@@ -2051,7 +2045,6 @@
   <block id="5fd3d0b8e71c4f64cfbad31e3fde1863" category="summary">Avant d'installer le serveur SnapCenter, vous devez connaître les exigences en matière d'espace et de dimensionnement. Vous devez également appliquer les mises à jour système et de sécurité disponibles.</block>
   <block id="18cd7192921dd5ac27a1a7c5ef795c20" category="doc">Les besoins en termes d'espace et de dimensionnement</block>
   <block id="3dbe205a1db3f8f677f2e971edc8976d" category="paragraph">Seules les versions anglaise, allemande, japonaise et chinoise simplifiée des systèmes d'exploitation sont prises en charge.</block>
-  <block id="bf14f1703af6af8b51300dc61dc1594c" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="4d75397e7ff03528228bfd2c042ee164" category="inline-link-rx"></block>.</block>
   <block id="44e5a606cb3fbfaed79ce8eb853ed886" category="paragraph">Nombre minimal de processeurs</block>
   <block id="39d305d656d2efca941f50ce8253a426" category="paragraph">4 cœurs</block>
   <block id="a88605ea0ad2e6919ae06fa5bb9e26d2" category="paragraph">RAM minimale</block>
@@ -2188,7 +2181,6 @@
   <block id="f1a7b77dc434e17fd514506c2a6cd80c" category="list-text">LUN RDM</block>
   <block id="daa9730f0908f333879829d0ff58fd7a" category="paragraph">Prise en charge d'un maximum de 56 LUN RDM avec quatre contrôleurs SCSI LSI Logic pour RDMS normal, ou 42 LUN RDM avec trois contrôleurs SCSI LSI Logic sur un plug-in VMware VM MSCS Box-to-box pour configuration Windows</block>
   <block id="257e035b7b2d20fe54a290ea90cfbda5" category="paragraph">Prend en charge le contrôleur SCSI paravirtuel VMware. 256 disques peuvent être pris en charge sur des disques RDM.</block>
-  <block id="dbe4caa8e0aee7f310fe50e7cb384a50" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>.</block>
   <block id="899fb38056bfa55fefa31d639ef3150e" category="section-title">Limitations liées au serveur VMware ESXi</block>
   <block id="58e3ee800c9ab06146240fd2ed8a77e4" category="list-text">L'installation du plug-in pour Windows sur un cluster Microsoft sur des machines virtuelles utilisant des informations d'identification ESXi n'est pas prise en charge.</block>
   <block id="c48b48a89f105c0bc451692ba3bc8f90" category="paragraph">Vous devez utiliser vos informations d'identification vCenter lors de l'installation du plug-in pour Windows sur des machines virtuelles en cluster.</block>
@@ -2388,7 +2380,6 @@
   <block id="8c39fdaac8e8c7ec5824fd1acda14c9a" category="paragraph">Les modifications apportées aux paramètres de sécurité d'Internet Explorer entraînent d'importants problèmes d'affichage du navigateur.</block>
   <block id="c5c74f2a0046f37ca93f6d8e3c775364" category="list-text">L'affichage de compatibilité d'Internet Explorer doit être désactivé.</block>
   <block id="a5c41f715c1b8a880253846c025624e9" category="list-text">Microsoft Edge</block>
-  <block id="097869dcfdfea94a43eab778d57a4e83" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="102c8b4f5323d57ed48904a1ba94c2de" category="inline-link-rx"></block>.</block>
   <block id="cf3152e36e70eecd5ed2d294f623eb90" category="summary">Si votre hôte SnapCenter fait partie d'un environnement FC/iSCSI, vous devrez peut-être installer des logiciels supplémentaires sur le système pour autoriser l'accès au stockage ONTAP.</block>
   <block id="8e9816159074c93c5490453d542c7149" category="doc">Exigences relatives à l'hôte SAN</block>
   <block id="f3409d8331123dc5c92af0a575ad2b93" category="paragraph">SnapCenter n'inclut pas les utilitaires hôtes ou un DSM. Si votre hôte SnapCenter fait partie d'un environnement SAN, vous devrez peut-être installer et configurer les logiciels suivants :</block>
@@ -2842,7 +2833,6 @@
   <block id="9fa4e15a7c52779b0b728e143fd56a21" category="list-text">Après avoir lancé l'opération de restauration, cliquez sur <block ref="f176a951032bbb2fc179630a5e58fad8" category="inline-image-macro-rx" type="image"></block> Dans le volet activité pour afficher les cinq opérations les plus récentes.</block>
   <block id="a418089089559a000c49aa3b9a686667" category="summary">SnapCenter prend en charge un large éventail de types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier si la prise en charge de votre type de stockage est disponible avant d'installer le package pour votre hôte.</block>
   <block id="a870891a6e4f46d7a397baf010acf81b" category="doc">Types de stockage pris en charge par les plug-ins SnapCenter pour Microsoft Windows</block>
-  <block id="e306f8020786d4a39801b24a0c26a65d" category="paragraph">Le provisionnement et la protection des données SnapCenter sont pris en charge par Windows Server. Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="26d76f2e486b882ba3b23e9b38f63829" category="inline-link-rx"></block>.</block>
   <block id="2bfe08a4f62392e52d13ca1c380c81d4" category="cell">Provisionnement avec</block>
   <block id="df6a8597815322c8f7bb6463d78f2f2c" category="cell">Notes de support</block>
   <block id="e042e676706d93b3b14ce12e4d00a002" category="paragraph">Serveur physique</block>
@@ -3190,13 +3180,11 @@
   <block id="6ba5594c01f0e8734610d7df124641ef" category="list-text">Surveillez l'état du travail (en cours d'exécution, terminé ou en échec) à l'aide de l'applet de commande Get-smJobSummaryReport.</block>
   <block id="dcda47f958f8a194233c8913b74e1781" category="list-text">Surveillez les détails de la tâche de sauvegarde comme ID de sauvegarde, nom de sauvegarde pour effectuer une opération de restauration ou de clonage à l'aide de l'applet de commande Get-SmBackupReport.</block>
   <block id="6fee97e44353ed8e1ca5358c6abe1798" category="doc">Surveillez les opérations de sauvegarde des bases de données SAP HANA</block>
-  <block id="f278e708e20d1033739d8d371741422d" category="summary">Vous devez installer le plug-in SnapCenter pour la base de données SAP HANA à l'aide de l'interface utilisateur de SnapCenter. Si votre environnement n'autorise pas l'installation à distance du plug-in à partir de l'interface utilisateur SnapCenter, vous pouvez installer le plug-in pour base de données SAP HANA en mode console ou en mode silencieux à l'aide de l'interface de ligne de commandes \(CLI\).</block>
   <block id="2577ba74b42ec952e03432cac7d57a04" category="doc">Installez le plug-in SnapCenter pour SAP HANA Database sur des hôtes Linux à l'aide de l'interface de ligne de commandes</block>
   <block id="d444fb67779b9c8a26850d1ce6c0e031" category="paragraph">Vous devez installer le plug-in SnapCenter pour la base de données SAP HANA à l'aide de l'interface utilisateur de SnapCenter. Si votre environnement n'autorise pas l'installation à distance du plug-in à partir de l'interface utilisateur SnapCenter, vous pouvez installer le plug-in pour base de données SAP HANA en mode console ou en mode silencieux à l'aide de l'interface de ligne de commandes.</block>
   <block id="c20d8d729a2cb1909e6c92aa4b0635a1" category="list-text">Vous devez installer le plug-in pour la base de données SAP HANA sur chacun des hôtes Linux sur lesquels réside le client HDBSQL.</block>
   <block id="9638dcdc640dbf6662834e293cbc12b3" category="list-text">L'hôte Linux sur lequel vous installez le plug-in SnapCenter pour la base de données SAP HANA doit répondre aux exigences des logiciels, bases de données et systèmes d'exploitation qui en dépendent.</block>
   <block id="9e8c841a17bd4c0ec7d85ab94b954bca" category="paragraph">La matrice d'interopérabilité (IMT) contient les dernières informations sur les configurations prises en charge.</block>
-  <block id="02f8c9fac34de290666ccfe51e19b761" category="paragraph"><block ref="c86a29400a88b8541473f7e26922bd2f" category="inline-link-rx"></block></block>
   <block id="33a8f9c4fe2c0cd8ae505b8d4831fe28" category="list-text">Le plug-in SnapCenter pour base de données SAP HANA fait partie du package de plug-ins SnapCenter pour Linux. Avant d'installer SnapCenter Plug-ins Package pour Linux, vous devez avoir déjà installé SnapCenter sur un hôte Windows.</block>
   <block id="14121664b691a3085947fb503ee4883e" category="list-text">Copiez le fichier d'installation du package de plug-ins SnapCenter pour Linux (snapcenter_linux_host_plugin.bin) depuis C:\ProgramData\NetApp\SnapCenter\Package Repository vers l'hôte où vous souhaitez installer le plug-in pour la base de données SAP HANA.</block>
   <block id="b3f72639442ac8dbec9806a234d5e8db" category="list-text">Modifiez le fichier /&lt;répertoire d'installation&gt;/NetApp/snapcenter/scc/etc/SC_SMS_Services.properties, puis ajoutez le paramètre PLUGINS_ENABLED = hana:3.0.</block>
@@ -3367,7 +3355,6 @@
   <block id="7c221f1777123603eacf6f596630737a" category="paragraph">Les planifications configurées sont répertoriées dans la colonne *programmes appliqués*.</block>
   <block id="eecd36c568b40385bb729410ba711a64" category="paragraph">Les planifications de sauvegardes tierces ne sont pas prises en charge lorsqu'elles se chevauchent avec les planifications de sauvegarde SnapCenter.</block>
   <block id="47d403518b5a7a92c3f199666b9bade9" category="summary">Avant d'installer le module de plug-ins SnapCenter pour Linux, vous devez connaître certains besoins en espace système hôte de base et en dimensionnement.</block>
-  <block id="56dd6d218b0a2db6d61393ca74894094" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="1b419d76cc3163a36d36ff494ed65b44" category="inline-link-rx"></block>.</block>
   <block id="1ec72ff98c807b748e55dd0ff1dbf757" category="admonition">Vous devez allouer suffisamment d'espace disque et surveiller la consommation de stockage par le dossier des journaux. L'espace de journalisation requis varie en fonction du nombre d'entités à protéger et de la fréquence des opérations de protection des données. S'il n'y a pas suffisamment d'espace disque, les journaux ne seront pas créés pour les opérations récentes.</block>
   <block id="3a955e6f54e73fa288537f456087e118" category="paragraph">Java 1.8.x (64 bits)Java Oracle et OpenJDK Flavors</block>
   <block id="29921091f69f41a95339ffb3d8dc4dc8" category="summary">Ce plug-in permet de créer des copies Snapshot de groupe de cohérence pour les groupes de ressources. Un groupe de cohérence est un conteneur qui peut héberger plusieurs volumes, de sorte que vous puissiez les gérer comme une entité unique. Un groupe de cohérence est constitué de copies Snapshot simultanées de plusieurs volumes, ce qui permet d'obtenir des copies cohérentes d'un groupe de volumes.</block>
@@ -3556,7 +3543,6 @@
   <block id="6f52ab5eb8ac5cf70bdcac9134b36a7c" category="list-text">Prise en charge des sauvegardes basées sur des fichiers.</block>
   <block id="691f9dff16ebd5da65b5dbbe0c978b53" category="list-text">Prise en charge de Linux LVM sur le système de fichiers XFS.</block>
   <block id="6caa4afe72478c59bf8ac3860bb47274" category="doc">Surveillez les opérations de protection des données des bases de données SAP HANA dans le volet activité</block>
-  <block id="be01d3c0f38b7c272a7bcc851764b821" category="summary">Vous devez créer une connexion de machine virtuelle de stockage \(SVM\) et des identifiants avant d'utiliser les applets de commande PowerShell pour sauvegarder, restaurer ou cloner les bases de données SAP HANA.</block>
   <block id="cc33ddff1a25485bc2416a9b57a9f8c5" category="doc">Créer une connexion au système de stockage et une certification à l'aide des applets de commande PowerShell pour la base de données SAP HANA</block>
   <block id="391b68bcb3d6f9d643ee0cb78ff1dfde" category="paragraph">Vous devez créer une connexion SVM (Storage Virtual machine) et une identifiant d'identification avant d'utiliser les applets de commande PowerShell pour sauvegarder, restaurer ou cloner les bases de données SAP HANA.</block>
   <block id="e31df119bb2635e68229d174653ee578" category="paragraph">Cet exemple montre comment créer un nouvel identifiant nommé FinancieAdmin avec les informations d'identification Windows :</block>
@@ -3579,7 +3565,6 @@
   <block id="57235293b58bcee8f885f03c7cc2bf98" category="list-text">Si le type de ressource est LUN, l'ensemble de la LUN est restauré.</block>
   <block id="e57982197dd9cb2dade8d5ebc3ffa4ab" category="paragraph">Vous pouvez sélectionner plusieurs LUN.</block>
   <block id="5c18d7aa6631fa3200cd47964b878e6b" category="admonition">Si vous sélectionnez *tous*, tous les fichiers des volumes, qtrees ou LUN sont restaurés.</block>
-  <block id="3983634b494fae1a9edb600d9c4a9292" category="summary">SnapCenter prend en charge un large éventail de types de stockage sur les machines physiques et virtuelles \(VM\). Vous devez vérifier la prise en charge de votre type de stockage avant d'installer le plug-in SnapCenter pour la base de données SAP HANA.</block>
   <block id="0b42d90235dd8ef6ec97a9268c77b113" category="doc">Types de stockage pris en charge par le plug-in SnapCenter pour la base de données SAP HANA</block>
   <block id="478593976233dfc3e57256f78404f939" category="paragraph">SnapCenter prend en charge de nombreux types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier la prise en charge de votre type de stockage avant d'installer le plug-in SnapCenter pour la base de données SAP HANA.</block>
   <block id="faa63149f52ece978423f5b04c274cf6" category="paragraph">Serveurs physiques et virtuels</block>
@@ -3869,11 +3854,9 @@
   <block id="9d09cebdc5095408e7e5f8bc09c08c42" category="paragraph">Voir <block ref="6de8516502145d64739d69762f4898a1" category="inline-link-macro-rx"></block>.</block>
   <block id="89a71adc7ceff2f08a2162d1abfd9de6" category="paragraph">* Exigences supplémentaires*</block>
   <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">Matrice d'interopérabilité</block>
-  <block id="b6353e58a793ffb65b97fb54ed68ff89" category="paragraph">Pour connaître la configuration minimale requise pour les plug-ins ONTAP et applicatifs, consultez<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="cell">Hôtes</block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">Configuration minimale requise</block>
   <block id="a0315547f70da02dc3ae867b333d7a34" category="paragraph">Système d'exploitation (64 bits)</block>
-  <block id="cfcb453ff70ad933cab89769866a7ca8" category="paragraph">Voir<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="paragraph">CPU</block>
   <block id="0e6a971ec5306b612f39cb5f57db7161" category="list-text">Hôte du serveur : 4 cœurs</block>
   <block id="30a4532a5bee2de6dedd7d0dd519c56c" category="list-text">Plug-in hôte : 1 cœur</block>
@@ -4833,11 +4816,9 @@
   <block id="0a5e492d5c20971eb78770aa30946e68" category="list-text">Vous devez supprimer la version antérieure du plug-in SnapCenter pour Microsoft SQL Server avant de procéder à l'installation.</block>
   <block id="952ebe7df95b2b139729838342d9961c" category="list-text">Vérifiez si le dossier _C:\temp_ existe sur l'hôte du plug-in et que l'utilisateur connecté dispose d'un accès complet.</block>
   <block id="3ed46fcd7972b69e881e33d164e0b1d6" category="list-text">Téléchargez le plug-in SnapCenter pour Microsoft Windows depuis le site _C:\ProgramData\NetApp\SnapCenter\Package_ Repository.</block>
-  <block id="b529419e355f9145d46838b39d3dfb36" category="list-text">Entrez la commande suivante pour installer le remplacement des variables par vos données :</block>
   <block id="e96211aaefa5c5acb9e8a5937f5834a6" category="paragraph">_Snapcenter_Windows_host_plugin.exe"/muet /debuglog"&lt;Debug_Log_Path&gt;" /log"&lt;Log_Path&gt;« BI_SNAPCENTER_PORT=&lt;Num&gt; SUITE_INSTALLSCE=« Install_Directory_Path&gt; » EPBI_SEREACCOUNT=&lt;SERVICONTAP__PRODUCT_install_SICMADE&gt;</block>
   <block id="866a71ae8c421f4ad7c84acad9063476" category="paragraph">_C:\ProgramData\NetApp\SnapCenter\Package Repository\snapcenter_Windows_host_plugin.exe »/Silent /debulog« C:\HPPSCSQL_Install.log » /log« C:\temp » BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR=« C:\Program Files\utilisateur_d'installation_de_HP_SICentrer=ISPs_SICentrer_SICentrer=s_SICentrer_SICentrer_SICentrer=s_SICentrer_SICentrer_SICentrer=s_SICentrer_SICentrer=s</block>
   <block id="f9921358f0106db02cf91d4489d50754" category="admonition">Tous les paramètres transmis lors de l'installation du plug-in pour Exchange sont sensibles à la casse.</block>
-  <block id="dcc26f618fea2daac13c09181df79902" category="list-text">_/muet /debuglog"C:\Installdebug.log" /log"C:\temp" BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR="C:\Program Files" BI_SERVICEACCOUNT=DEMO\Administrator BI_SERVICEPWD=Netapp1! ISFeatureInstall=HPPW,SCW_</block>
   <block id="25139d942390294a2d96f47497ee4155" category="paragraph">Entrez les valeurs suivantes pour les variables :</block>
   <block id="a6baabe81eec998dd78e4ca7135610ce" category="paragraph">Spécifiez le nom et l'emplacement du fichier journal du programme d'installation de la suite, comme dans l'exemple suivant :</block>
   <block id="9e350ce19397dc6ced2b7c678ed49657" category="paragraph">_Setup.exe /debuglog"C:\PathToLog\setupexe.log_</block>
@@ -4987,7 +4968,6 @@
   <block id="c37b0bdb3c7a24db287508745921aed4" category="paragraph">Le flux de travail suivant montre l'ordre dans lequel vous devez effectuer les opérations de restauration de la base de données Exchange :</block>
   <block id="2d1eae8ec36b7998c11e835920d1606c" category="paragraph"><block ref="2d1eae8ec36b7998c11e835920d1606c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4ca48d63db1547d2aa6b271f22219b7b" category="doc">Types de stockage pris en charge par le plug-in SnapCenter pour Microsoft Windows et pour Microsoft Exchange Server</block>
-  <block id="32c108c9b7cfa56c6dc0cc4e31e083d6" category="paragraph">Le provisionnement et la protection des données SnapCenter sont pris en charge par Windows Server. Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>.</block>
   <block id="ea29cdcae37307c1c67337a9e8dca9ea" category="paragraph">Compatibilité physique uniquement</block>
   <block id="9bcf17f4427582cfbb783f46971b1eb0" category="summary">La définition d'une stratégie de sauvegarde avant de créer vos tâches de sauvegarde vous permet de vous assurer que vous disposez des sauvegardes dont vous avez besoin pour restaurer correctement vos bases de données. Votre contrat de niveau de service (SLA), votre objectif de délai de restauration (RTO) et votre objectif de point de restauration (RPO) déterminent largement votre stratégie de sauvegarde.</block>
   <block id="7fc686e60d66e170f709548904c946f0" category="doc">Définir une stratégie de sauvegarde pour les ressources Exchange Server</block>
@@ -5873,7 +5853,6 @@
   <block id="db92e82cf9323a4bf5e79b2df0216f85" category="admonition">NFS sous AIX et le système de fichiers n'est pas pris en charge.</block>
   <block id="e2b3d28069205cc6f75b17751511da77" category="list-text">Système de fichiers journalisé amélioré (JFS2)</block>
   <block id="41732556fe47d0ec2b02e18e88410f6b" category="paragraph">Prend en charge la connexion en ligne sur les systèmes de fichiers SAN et la disposition LVM.</block>
-  <block id="a0b646a3488d81d565a66dfa155ab64f" category="paragraph">Le<block ref="acbd4d43b54b8ece885d46b425b04ecf" category="inline-link-rx"></block> contient les dernières informations sur les versions prises en charge.</block>
   <block id="885cd4474b28773615b3d0698f1c9dc2" category="doc">Annuler les opérations de restauration de la base de données Oracle</block>
   <block id="7a617b0be4f39d4aa3728e5b589f610a" category="doc">Cloner les sauvegardes de bases de données Oracle à l'aide des commandes UNIX</block>
   <block id="ea8127768d4129b7c37a087dcade33cf" category="paragraph">Vous devez exécuter les commandes suivantes pour créer le fichier de spécification du clone de base de données Oracle et lancer l'opération de clonage.</block>
@@ -6187,7 +6166,6 @@
   <block id="06efaedb12cf6d7a7aa6bcea7d53a166" category="paragraph">SnapCenter ne prend pas en charge Data ONTAP fonctionnant en 7-mode. Vous pouvez utiliser l'outil 7-mode transition Tool pour migrer vers un système ONTAP les données et les configurations stockées sur un système exécutant Data ONTAP 7-mode.</block>
   <block id="91048ee9b28431a0b8417fc6aca22a53" category="section-title">Configurations prises en charge pour l'importation de données</block>
   <block id="b136948fc75470b29a82776a9d289413" category="paragraph">Avant d'importer les données de SnapManager 3.4.x pour Oracle et de SnapManager 3.4.x pour SAP vers SnapCenter, nous vous recommandons de connaître les configurations prises en charge par le plug-in SnapCenter pour base de données Oracle.</block>
-  <block id="f774d1f4e0076ce76f72417458eea1a5" category="paragraph">Les configurations prises en charge par le plug-in SnapCenter pour base de données Oracle sont répertoriées dans le<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>.</block>
   <block id="c11806b444e73d136144652a83923eba" category="section-title">Ce qui est importé dans SnapCenter</block>
   <block id="d80d91babef4edbe3aa5ac78f57b8cbc" category="paragraph">Vous pouvez importer des profils, des plannings et des opérations effectués à l'aide des profils.</block>
   <block id="e3fde9f3aff3294492c93c044790a79f" category="cell">Grâce à SnapManager for Oracle et SnapManager for SAP</block>
@@ -6312,7 +6290,6 @@
   <block id="c6a05503c268c70227420c852ced4926" category="admonition">Le mappage UUID dans le fichier /etc/fstab n'est pas pris en charge par SnapCenter.</block>
   <block id="8be45a76eb810a7022d2e3f4f9917085" category="section-title">Configuration requise pour l'hôte Linux</block>
   <block id="c2d742e2aecdede3243c86015a588b10" category="admonition">Si vous utilisez une base de données Oracle sur LVM sous Oracle Linux ou Red Hat Enterprise Linux 6.6 ou 7.0, vous devez installer la dernière version de Logical Volume Manager (LVM).</block>
-  <block id="bbba754ddb8dc1ad1e612a5ec76136db" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>.</block>
   <block id="b8be58329edfa59d774ce8216f3afcfe" category="section-title">Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte Linux</block>
   <block id="9fc7e0af2d8808b59624854d31dab1bb" category="list-text">Modifiez le fichier _/etc/ssh/sshd_config_ pour configurer les algorithmes de code d'authentification de message : Mac hmac-sha2-256 et MAC hmac-sha2-512.</block>
   <block id="a522c9aaeab8d877d6b5ee133ac06025" category="paragraph">Redémarrez le service sshd après la mise à jour du fichier de configuration.</block>
@@ -6966,7 +6943,6 @@
   <block id="750b10574c7c5ac05afa7817be89a63e" category="list-text">Pilote de filtre Oracle ASM (ASMFD)</block>
   <block id="da02aa1448f6bd34e97b4d20a7b5bdcf" category="admonition">Les opérations de migration PDB et de clonage PDB ne sont pas prises en charge.</block>
   <block id="0483f292b9712b967df26187e876eb45" category="list-text">Oracle Flex ASM</block>
-  <block id="d9f5c0652a9a0f5a632c2b39950788b1" category="paragraph">Pour obtenir les dernières informations sur les versions Oracle prises en charge, reportez-vous à la section<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>.</block>
   <block id="2e00e783f5f2412a8f09c782c23524f4" category="section-title">Types de sauvegarde pris en charge pour les bases de données Oracle</block>
   <block id="63a9fc894d971ef7a1fef2e8bafbd8d4" category="paragraph">Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer. SnapCenter prend en charge les types de sauvegarde en ligne et hors ligne pour les bases de données Oracle.</block>
   <block id="cd9177f3a112508cd1d4ef7ec5499433" category="section-title">Sauvegarde en ligne</block>
@@ -7084,7 +7060,6 @@
   <block id="ba09c94fed381b580a726fc94531b160" category="list-text">Si vous avez des bases de données Oracle sur LVM sous Oracle Linux ou RHEL, installez la dernière version de Logical Volume Management (LVM).</block>
   <block id="8770246977269a639c8c2818412dc3ac" category="list-text">Si vous utilisez SnapManager pour Oracle et que vous souhaitez migrer vers le plug-in SnapCenter pour Oracle Database, vous pouvez migrer les profils vers des stratégies et des groupes de ressources de SnapCenter à l'aide de la commande sccli sc-migrate.</block>
   <block id="4c893189fecc8b6e5c41ae931ffd7f89" category="list-text">Configurez les fonctionnalités SnapMirror et SnapVault sur ONTAP, si vous souhaitez effectuer une sauvegarde de réplication</block>
-  <block id="0675325e7eaef3f6ab445bb6f63484b1" category="list-text"><block ref="3f0414c37a83af730261bc95d9d01546" category="inline-link-rx"></block></block>
   <block id="50295902d444d01e41805e9bc1b0598e" category="list-text"><block ref="50295902d444d01e41805e9bc1b0598e" category="inline-link-rx"></block></block>
   <block id="a909d5db254f7262bb93275a07812330" category="inline-link">L'opération de protection des données échoue dans un environnement sans chemins d'accès multiples sous RHEL 7 et versions ultérieures</block>
   <block id="637e979b90ef1f6ab2dd922a7436fbec" category="list-text"><block ref="637e979b90ef1f6ab2dd922a7436fbec" category="inline-link-rx"></block></block>
@@ -7831,7 +7806,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Les fichiers de notification fournissent des informations sur les droits d'auteur et les licences de tiers utilisés dans le logiciel NetApp.</block>
   <block id="1dee04b6f048297be6da9f8740c99b6d" category="admonition">Le certificat d'importation doit être fourni avec la clé privée (les formats pris en charge sont : *.pfx, *.p12 et *.p7b).</block>
-  <block id="ad6e610d08a861e343805ef4cb444552" category="paragraph">Permalink: Protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html encadré: Mots-clés de la barre latérale: Résumé du clone: 'Le flux de travail du clone comprend la planification, l'exécution de l'opération de clonage et la surveillance de l'opération.' --- = clonage de sauvegardes à l'aide des applets de commande PowerShell :icons: Font :imagesdir: ../media/</block>
   <block id="bd259d74a88fa9ae4cdb9c027643d76a" category="paragraph">Requis pour FAS et AFF</block>
   <block id="56b5155701c0c0dd57595a6dd3daf917" category="list-text"><block ref="336b55519098bef0384fc43c7f43f47b" prefix="" category="inline-code"></block></block>
   <block id="eda6105c4f159883b951dcd044964c6f" category="list-text"><block ref="2c9674954a47108e373e077d3bcb8357" prefix="" category="inline-code"></block></block>
@@ -7840,7 +7814,6 @@
   <block id="d8135ce9a2bd17b9c659e4605801a778" category="list-text"><block ref="f659aa294fff6eaecdf95876c173adf6" prefix="" category="inline-code"></block></block>
   <block id="dde541c94f2b033571de6bfe76fcf3c3" category="list-text"><block ref="234efccf9d477e939eeae95c37c1803f" prefix="" category="inline-code"></block></block>
   <block id="e2bb7a9783ce9c6c02e6001911562e16" category="list-text"><block ref="2e72f8b3689961923dec66f94cdf620f" prefix="" category="inline-code"></block></block>
-  <block id="91ae9720ac69723481c4de57234c575e" category="paragraph">Permalink: Protect-hana/task_cancel_backup_operations_for_sap_hana.html encadré: Mots-clés de l'encadré: résumé: 'Vous pouvez annuler les opérations de sauvegarde en file d'attente.' --- = Annuler les opérations de sauvegarde pour SAP HANA :icons: Font :imagesdir: ../media/</block>
   <block id="6c27677d6e913bc79948a8f54acbd25c" category="list-text">Les données qui résident dans des systèmes primaires et secondaires ONTAP FAS ou AFF, et qui sont protégées vers le stockage objet StorageGRID local (avec intégration de la sauvegarde dans le cloud NetApp BlueXP)</block>
   <block id="88ff864aa61d80e2b8a79a0f91b36f3b" category="list-text">Les données qui résident dans les systèmes primaires ONTAP FAS ou AFF et qui sont répliquées vers Cloud Volumes ONTAP</block>
   <block id="4715420841b96150a5fff8e31c55eeb2" category="list-text">Les données qui résident dans des systèmes primaires et secondaires ONTAP FAS ou AFF, et qui sont protégées vers le stockage objet et d'archivage dans le cloud (avec l'intégration de NetApp BlueXP Cloud Backup)</block>
@@ -7960,4 +7933,27 @@
   <block id="7a86ee54e2df90d7a4109938e53c1deb" category="list-text">Entrez le format RFC</block>
   <block id="ace31f9e5f442121e5c3914671ec85d3" category="list-text">Vous pouvez voir les vérifications d'intégrité des audits et les vérifications de l'espace disque en cliquant sur *Monitor* &gt; *Jobs*.</block>
   <block id="d251696f5e122ef9209620841c14e519" category="sidebar">Documentation relative au logiciel SnapCenter 4.8</block>
+  <block id="3c07dcecb29c0d53519899b31b85fb61" category="paragraph">Le provisionnement et la protection des données SnapCenter sont pris en charge par Windows Server. Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section <block ref="0777b5ea2405197c6a0ed1eeb8c4cc9a" category="inline-link-rx"></block>.</block>
+  <block id="dfaba282a50c2055e70279d05523fba2" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="0777b5ea2405197c6a0ed1eeb8c4cc9a" category="inline-link-rx"></block>.</block>
+  <block id="775fcd440db131b498769960f53ac310" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="9b2c9c657bf3e52183d3c1f767265001" category="inline-link-rx"></block>.</block>
+  <block id="384ecb62d880a9048cd6ee500f8ffcdb" category="summary">Vous devez installer le plug-in SnapCenter pour la base de données SAP HANA à l'aide de l'interface utilisateur de SnapCenter. Si votre environnement n'autorise pas l'installation à distance du plug-in à partir de l'interface utilisateur SnapCenter, vous pouvez installer le plug-in pour base de données SAP HANA en mode console ou en mode silencieux à l'aide de l'interface de ligne de commandes (CLI1).</block>
+  <block id="23760d8f892e346ebd63fac3623b2dc5" category="paragraph"><block ref="2fc9f2abb842b420f8ecb28df62e8563" category="inline-link-rx"></block></block>
+  <block id="ffaafcbad8fa7abfb6f9166b4bc76388" category="doc">Annuler les opérations de sauvegarde pour SAP HANA</block>
+  <block id="b2e1462cde70f9661bba1f1be6a19b4c" category="admonition">Les volumes d'application ne prennent en charge que les connexions NFS directes et iSCSI.</block>
+  <block id="11b0f8f84dad84d83f62b94ccfa1b29c" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>.</block>
+  <block id="5a796427718586fb90b0404a63c79380" category="list-text"><block ref="fabd53b99023376bd3ff2670d534d874" category="inline-link-rx"></block></block>
+  <block id="d02b4aec015712043efb147f73173ce0" category="paragraph">Les configurations prises en charge par le plug-in SnapCenter pour base de données Oracle sont répertoriées dans le<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>.</block>
+  <block id="8c23b286e970d7aba3f0ba4cac55a3ce" category="paragraph">Le<block ref="1bc5f97517692552b0fc613a6280d44d" category="inline-link-rx"></block> contient les informations les plus récentes sur les versions prises en charge.</block>
+  <block id="b10fc427c86b36d441f4bfabc9179bfd" category="paragraph">Pour obtenir les dernières informations sur les versions Oracle prises en charge, reportez-vous à la section<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>.</block>
+  <block id="afd32bd411643d7b80e9795732fc2190" category="list-text">Entrez la commande suivante pour installer le plug-in.</block>
+  <block id="27881336d2ff10b5a1baa10f7bca34a1" category="list-text">Pour le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server et le plug-in SnapCenter pour Microsoft Windows, il est recommandé de mettre à niveau à la fois le serveur et les hôtes du plug-in vers la dernière version pour que LE CHEMIN_SCRIPTS s'exécute.</block>
+  <block id="8ab368eff7e361869ef717b446f7ec1b" category="paragraph">Tous les services associés sont redémarrés lors de la mise à niveau du plug-in.</block>
+  <block id="07a646d112ec3924e97a5c5bd588d4c2" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="b7a3cb4f690df02dff49048f9cc465b2" category="inline-link-rx"></block></block>
+  <block id="44dcf11fb80178db211421840242c071" category="summary">Vous devez installer les plug-ins personnalisés SnapCenter à l'aide de l'interface utilisateur SnapCenter. Si votre environnement n'autorise pas l'installation à distance du plug-in à partir de l'interface utilisateur SnapCenter, vous pouvez installer le plug-in personnalisé en mode console ou en mode silencieux à l'aide de l'interface de ligne de commande (CLI).</block>
+  <block id="f779fc9eb5facb1b4cb7f109a2d58be2" category="paragraph"><block ref="063c6867f0d5dcf21978239569098f3b" category="inline-link-rx"></block></block>
+  <block id="ed27eadf4ae8e8750cfd2fbc61ad72d7" category="paragraph">Pour connaître la configuration minimale requise pour les plug-ins ONTAP et applicatifs, consultez<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
+  <block id="6128abac450b413be3b6d65797422307" category="paragraph">Voir<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
+  <block id="62daf6a07ef62b5f47d64602451886c4" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>.</block>
+  <block id="8b64c44e24e9cf1c59554cf2c41479bf" category="paragraph">Pour plus d'informations sur les applications et bases de données prises en charge, reportez-vous à la section<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>.</block>
+  <block id="026ab5d2853d1f0c92bc7f3703d62e90" category="sidebar">Le logiciel SnapCenter est une plateforme simple, centralisée et évolutive qui protège les données de vos applications, bases de données, systèmes de fichiers hôtes et machines virtuelles qui s'exécutent sur les systèmes ONTAP à partir de n'importe quel point du cloud hybride. Cette bibliothèque de documentation contient des informations sur la version 4.8.</block>
 </blocks>

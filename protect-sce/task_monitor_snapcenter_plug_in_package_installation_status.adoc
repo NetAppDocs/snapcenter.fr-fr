@@ -10,6 +10,7 @@ summary: 'Vous pouvez contrôler la progression de l"installation du module d"ex
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous pouvez contrôler la progression de l'installation du module d'extension SnapCenter à l'aide de la page travaux. Vous pouvez vérifier la progression de l'installation pour déterminer quand elle est terminée ou s'il y a un problème.
 
 *À propos de cette tâche*

@@ -10,6 +10,7 @@ summary: 'Windows Server 2012 ou version ultérieure vous permet de créer un co
 :imagesdir: ../media/
 
 
+[role="lead"]
 Windows Server 2012 ou version ultérieure vous permet de créer un compte de service géré de groupe (GMSA) qui fournit une gestion automatisée des mots de passe de compte de service à partir d'un compte de domaine géré.
 
 *Ce dont vous aurez besoin*

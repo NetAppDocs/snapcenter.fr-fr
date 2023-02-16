@@ -10,6 +10,7 @@ summary: 'La fréquence de sauvegarde \(type de planification\) est spécifiée 
 :imagesdir: ../media/
 
 
+[role="lead"]
 La fréquence de sauvegarde (type de planification) est spécifiée dans les stratégies ; un planning de sauvegarde est spécifié dans la configuration du groupe de ressources. Le facteur le plus important dans la détermination d'une fréquence ou d'un planning de sauvegarde est le taux de changement pour la ressource et l'importance des données. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. Parmi les autres facteurs figurent l'importance de la ressource pour votre organisation, votre contrat de niveau de service (SLA) et votre objectif de point de récupération (RPO).
 
 Un SLA définit le niveau de service attendu et traite de nombreux problèmes liés au service, notamment la disponibilité et les performances de celui-ci. Un RPO définit la stratégie selon laquelle les fichiers doivent être récupérés à partir du stockage de sauvegarde afin que des opérations régulières puissent reprendre après une défaillance. Les SLA et RPO contribuent à la stratégie de protection des données.

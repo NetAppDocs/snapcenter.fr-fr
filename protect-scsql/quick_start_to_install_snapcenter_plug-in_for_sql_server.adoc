@@ -78,7 +78,7 @@ NOTE: Il est recommandé, mais pas obligatoire, d'ajouter des licences SnapCente
 |===
 * Exigences supplémentaires*
 
-Pour connaître la configuration minimale requise pour les plug-ins ONTAP et applicatifs, consultez https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^]
+Pour connaître la configuration minimale requise pour les plug-ins ONTAP et applicatifs, consultez https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^]
 
 |===
 | Hôtes | Configuration minimale requise 
@@ -87,7 +87,7 @@ Pour connaître la configuration minimale requise pour les plug-ins ONTAP et app
  a| 
 Système d'exploitation (64 bits)
  a| 
-Voir https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^]
+Voir https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^]
 
 
 

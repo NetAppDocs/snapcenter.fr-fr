@@ -32,7 +32,7 @@ Ce chemin est accessible à partir de l'hôte sur lequel le serveur SnapCenter e
 
 . Copiez le fichier d'installation sur l'hôte sur lequel vous souhaitez installer le plug-in.
 . À partir d'une invite de commande Windows sur l'hôte local, accédez au répertoire dans lequel vous avez enregistré les fichiers d'installation du plug-in.
-. Entrez la commande suivante pour installer le remplacement des variables par vos données :
+. Entrez la commande suivante pour installer le plug-in.
 +
 _Snapcenter_Windows_host_plugin.exe"/muet /debuglog"<Debug_Log_Path>" /log"<Log_Path>« BI_SNAPCENTER_PORT=<Num> SUITE_INSTALLSCE=« Install_Directory_Path> » EPBI_SEREACCOUNT=<SERVICONTAP__PRODUCT_install_SICMADE>
 
@@ -46,8 +46,6 @@ _C:\ProgramData\NetApp\SnapCenter\Package Repository\snapcenter_Windows_host_plu
 
 NOTE: Tous les paramètres transmis lors de l'installation du plug-in pour Exchange sont sensibles à la casse.
 
-+
-.. _/muet /debuglog"C:\Installdebug.log" /log"C:\temp" BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR="C:\Program Files" BI_SERVICEACCOUNT=DEMO\Administrator BI_SERVICEPWD=Netapp1! ISFeatureInstall=HPPW,SCW_
 +
 Entrez les valeurs suivantes pour les variables :
 
@@ -99,8 +97,6 @@ Installation de ISFeatureInstall
 Spécifier la solution à déployer par SnapCenter sur un hôte distant
 
 |===
-
-
 . Surveillez le planificateur de tâches Windows, le fichier journal d'installation principal _C:\Installdebug.log_ et les fichiers d'installation supplémentaires dans _C:\Temp_.
 . Surveillez le répertoire _%temp%_ pour vérifier si les programmes d'installation _msiexe.exe_ installent le logiciel sans erreur.
 +

@@ -10,6 +10,7 @@ summary: 'Le workflow de clonage inclut la planification, la réalisation de l"o
 :imagesdir: ../media/
 
 
+[role="lead"]
 Le workflow de clonage inclut la planification, la réalisation de l'opération de clonage et le contrôle de l'opération.
 
 Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.

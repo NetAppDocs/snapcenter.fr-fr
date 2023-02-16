@@ -10,6 +10,7 @@ summary: 'Le volet activité affiche les cinq opérations les plus récentes eff
 :imagesdir: ../media/
 
 
+[role="lead"]
 Le volet activité affiche les cinq opérations les plus récentes effectuées. Le volet activité s'affiche également lorsque l'opération a été lancée et que l'état de l'opération a été défini.
 
 Le volet activité affiche des informations concernant les opérations de sauvegarde, de restauration, de clonage et de sauvegarde planifiée. Si vous utilisez le plug-in pour SQL Server ou le plug-in pour Exchange Server, le volet activité affiche également des informations sur l'opération de réamorçage.

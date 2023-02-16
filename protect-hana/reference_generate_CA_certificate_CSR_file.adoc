@@ -10,6 +10,7 @@ summary: 'Vous pouvez générer une requête de signature de certificat (RSC) et
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous pouvez générer une requête de signature de certificat (CSR) et importer le certificat qui peut être obtenu auprès d'une autorité de certification (CA) à l'aide de la RSC générée. Une clé privée sera associée au certificat.
 
 CSR est un bloc de texte codé donné à un fournisseur de certificats autorisé pour obtenir le certificat d'autorité de certification signé.

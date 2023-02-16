@@ -10,6 +10,7 @@ summary: 'Configurez le certificat d"autorité de certification avec les service
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous devez configurer le certificat d'autorité de certification avec les services de plug-in d'hôte Windows pour activer le certificat numérique installé.
 
 Effectuez les étapes suivantes sur le serveur SnapCenter et sur tous les hôtes du plug-in où les certificats CA sont déjà déployés.

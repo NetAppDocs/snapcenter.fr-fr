@@ -31,7 +31,7 @@ Exemples de fichiers de configuration SnapCenter : SnapDriveService.exe.config, 
 *À propos de cette tâche*
 
 * La procédure de mise à niveau place votre hôte Windows, Linux ou AIX en mode « Maintenance », ce qui empêche l'hôte d'exécuter des tâches planifiées.
-* Pour le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server et le plug-in SnapCenter pour Microsoft Windows, il est recommandé de mettre à niveau le serveur et les hôtes du plug-in vers la version 4.7 pour que LE CHEMIN_SCRIPTS s'exécute.
+* Pour le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server et le plug-in SnapCenter pour Microsoft Windows, il est recommandé de mettre à niveau à la fois le serveur et les hôtes du plug-in vers la dernière version pour que LE CHEMIN_SCRIPTS s'exécute.
 +
 Pour les programmes de sauvegarde et de vérification existants avec les prescripteurs et les postscripts activés dans la stratégie, les opérations de sauvegarde continueront de fonctionner après la mise à niveau.
 
@@ -54,14 +54,19 @@ Dans la page *Détails du travail*, un message d'avertissement recommande au cli
 
 ** Si vous souhaitez mettre à niveau plusieurs hôtes, sélectionnez tous les hôtes, cliquez sur image:../media/more_icon.gif[""], Puis cliquez sur *Upgrade* > *OK*.
 +
+Tous les services associés sont redémarrés lors de la mise à niveau du plug-in.
+
++
 
 NOTE: Tous les plug-ins du package sont sélectionnés. Seuls les plug-ins installés avec la version précédente de SnapCenter sont mis à niveau et les plug-ins restants ne sont pas installés. Vous devez utiliser l'option *Ajouter des plug-ins* pour installer un nouveau plug-in.
 
-
-
-
-
++
 Si vous n'avez pas coché la case *Skip précontrôles*, l'hôte est validé pour voir s'il répond aux exigences d'installation du plug-in. Si la configuration minimale requise n'est pas respectée, des messages d'erreur ou d'avertissement appropriés s'affichent. Après avoir résolu le problème, cliquez sur *Upgrade*.
 
++
 
 NOTE: Si l'erreur est liée à l'espace disque ou à la mémoire RAM, vous pouvez mettre à jour le fichier web.config situé à C:\Program Files\NetApp\SnapCenter WebApp, ou les fichiers de configuration PowerShell situés à C:\Windows\System32\PowerShell\Windowsv1.0\modules\SnapCenter\ pour modifier les valeurs par défaut. Si l'erreur est liée aux paramètres restants, vous devez corriger le problème, puis valider à nouveau les exigences.
+
+
+
+

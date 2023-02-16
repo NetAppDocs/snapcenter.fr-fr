@@ -10,6 +10,7 @@ summary: 'Vous devez configurer les certificats d"autorité de certification et 
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous devez configurer les certificats d'autorité de certification et déployer les certificats d'autorité de certification dans le serveur SnapCenter et les hôtes de plug-in correspondants. Vous devez activer la validation du certificat de l'autorité de certification pour les plug-ins.
 
 *Ce dont vous aurez besoin*

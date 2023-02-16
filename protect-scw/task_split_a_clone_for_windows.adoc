@@ -10,6 +10,7 @@ summary: Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de 
 :imagesdir: ../media/
 
 
+[role="lead"]
 Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent.
 
 *À propos de cette tâche*

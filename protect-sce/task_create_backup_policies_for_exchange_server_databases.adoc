@@ -108,6 +108,10 @@ Toutes les bases de données et tous les journaux sont sauvegardés, et il n'y a
 
 NOTE: Vous devez définir l'espace requis pour les sauvegardes de journaux en fonction de la conservation complète des sauvegardes et non pas en fonction de la conservation à chaud (UTM).
 
++
+
+NOTE: Créez des règles de copie distinctes pour les journaux et les bases de données lors du traitement des volumes Exchange (LUN), et définissez la conservation (conservation) de la règle de journalisation sur deux fois le nombre pour chaque étiquette de la règle de base de données, en utilisant les mêmes étiquettes. Pour plus d'informations, voir https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_for_Exchange_Backups_only_keep_half_the_Snapshots_on_the_Vault_destination_log_volume["Les sauvegardes SnapCenter pour Exchange ne conservent que la moitié des snapshots sur le volume du journal de destination du coffre-fort"^]
+
 .. Dans la section Database Availability Group Settings, sélectionnez une action :
 +
 |===

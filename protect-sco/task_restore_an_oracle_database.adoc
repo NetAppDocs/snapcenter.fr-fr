@@ -77,6 +77,9 @@ Fichiers de contrôle
 Sélectionnez *fichiers de contrôle*.
 
 
+NOTE: Lors de la restauration des fichiers de contrôle, assurez-vous que la structure de répertoires existe ou doit être créée avec les utilisateurs et les groupes appropriés, le cas échéant, pour permettre la copie des fichiers vers l'emplacement cible par le processus de restauration. Si le répertoire n'existe pas, la tâche de restauration échouera.
+
+
 
  a| 
 Rétablir les fichiers journaux

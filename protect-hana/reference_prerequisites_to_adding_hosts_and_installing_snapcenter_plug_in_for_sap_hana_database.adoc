@@ -14,6 +14,10 @@ summary: 'Avant d"ajouter un hôte et d"installer les modules d"extension, vous 
 Avant d'ajouter un hôte et d'installer les modules d'extension, vous devez remplir toutes les conditions requises. Le plug-in SnapCenter pour base de données SAP HANA est disponible dans les environnements Windows et Linux.
 
 * Vous devez avoir installé Java 1.8 64 bits sur votre hôte.
++
+
+NOTE: IBM Java n'est pas pris en charge.
+
 * Vous devez avoir installé le terminal interactif de la base de données SAP HANA (client HDBSQL) sur l'hôte.
 * Pour Windows, Plug-in Creator Service doit être en cours d'exécution à l'aide de l'utilisateur Windows « LocalSystem », ce qui est le comportement par défaut lorsque Plug-in pour SAP HANA Database est installé en tant qu'administrateur de domaine.
 * Pour Windows, les clés de la boutique utilisateur doivent être créées en tant qu'utilisateur SYSTÈME.

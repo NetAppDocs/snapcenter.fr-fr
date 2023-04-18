@@ -196,13 +196,13 @@ Vous devez disposer d'un utilisateur disposant de privilèges d'administrateur l
 
 Vous devez disposer d'un utilisateur avec des autorisations sysadmin sur le serveur SQL. Le plug-in utilise la structure Microsoft VDI, qui requiert l'accès sysadmin.
 
-Si vous utilisiez SnapManager pour Microsoft SQL Server et que vous souhaitez importer des données de SnapManager pour Microsoft SQL Server vers SnapCenter, reportez-vous à la section link:../protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["Importer les sauvegardes archivées"^]
-
 
 
 == Installez le serveur SnapCenter
 
-*Télécharger et installer SnapCenter Server*
+
+
+=== Téléchargez et installez le serveur SnapCenter
 
 *Étapes*
 
@@ -221,7 +221,9 @@ NOTE: Le caractère spécial "%" n'est pas pris en charge dans le chemin d'accè
 . Cliquez sur *installer maintenant*.
 
 
-*Connectez-vous à SnapCenter*
+
+
+=== Connectez-vous à SnapCenter
 
 *Étapes*
 
@@ -236,7 +238,9 @@ Pour un format de nom d'utilisateur d'administration local intégré, utilisez _
 . Cliquez sur *connexion*.
 
 
-*Ajouter une licence standard de contrôleur SnapCenter*
+
+
+=== Ajoutez une licence standard basée sur le contrôleur SnapCenter
 
 *Étapes*
 
@@ -250,7 +254,9 @@ Pour un format de nom d'utilisateur d'administration local intégré, utilisez _
 
 
 
-*Ajouter une licence SnapCenter basée sur la capacité*
+
+
+=== Ajoutez une licence SnapCenter basée sur la capacité
 
 *Étapes*
 
@@ -265,7 +271,9 @@ Pour un format de nom d'utilisateur d'administration local intégré, utilisez _
 . Cliquez sur *Terminer*.
 
 
-*Configurer les connexions du système de stockage*
+
+
+=== Configurez les connexions du système de stockage
 
 *Étapes*
 
@@ -285,7 +293,9 @@ Pour un format de nom d'utilisateur d'administration local intégré, utilisez _
 
 == Installez le plug-in pour Microsoft SQL Server
 
-*Configurer Exécuter en tant qu'informations d'identification pour installer le plug-in pour Microsoft SQL Server*
+
+
+=== Configurez Run as Credentials pour installer le plug-in pour Microsoft SQL Server
 
 *Étapes*
 
@@ -299,7 +309,9 @@ Pour un format de nom d'utilisateur d'administration local intégré, utilisez _
 
 
 
-*Ajouter un hôte et installer le plug-in pour Microsoft SQL Server*
+
+
+=== Ajoutez un hôte et installez le plug-in pour Microsoft SQL Server
 
 *Étapes*
 

@@ -72,7 +72,7 @@ Hôtes du plug-in Windows
 
 En plus des ports 135 et 445, la plage de ports dynamiques spécifiée par Microsoft doit également être ouverte. Les opérations d'installation à distance utilisent le service Windows Management Instrumentation (WMI), qui recherche dynamiquement cette plage de ports.
 
-Pour plus d'informations sur la plage de ports dynamiques prise en charge, reportez-vous à la section https://support.microsoft.com/kb/832017["Présentation du service et configuration requise du port réseau pour Windows"^]
+Pour plus d'informations sur la plage de ports dynamiques prise en charge, reportez-vous à la section https://["Présentation du service et configuration requise du port réseau pour Windows"^]
 
 Les ports sont utilisés pour la communication entre le serveur SnapCenter et l'hôte sur lequel le plug-in est installé. Pour envoyer les binaires de modules enfichables aux hôtes du plug-in Windows, les ports doivent être ouverts uniquement sur l'hôte du plug-in et ils peuvent être fermés après l'installation.
 

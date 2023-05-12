@@ -17,4 +17,4 @@ Le workflow suivant montre la séquence dans laquelle vous devez effectuer l'op�
 
 image::../media/sap_hana_backup_workflow.png[Workflow de sauvegarde SAP_HANA]
 
-Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. L'aide de la cmdlet de SnapCenter et les informations de référence de la cmdlet contiennent plus d'informations sur les applets de commande PowerShell.https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. L'aide de la cmdlet de SnapCenter et les informations de référence de la cmdlet contiennent plus d'informations sur les applets de commande PowerShell.https://["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

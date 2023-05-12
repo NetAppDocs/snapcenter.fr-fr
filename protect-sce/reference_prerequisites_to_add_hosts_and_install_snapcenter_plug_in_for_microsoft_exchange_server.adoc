@@ -22,7 +22,7 @@ Avant d'ajouter un hôte et d'installer les modules d'extension, vous devez remp
 * Si SnapManager pour Microsoft Exchange Server et SnapDrive pour Windows sont déjà installés, vous devez annuler l'enregistrement du fournisseur de matériel VSS utilisé par SnapDrive pour Windows avant d'installer le plug-in pour Exchange sur le même serveur Exchange pour assurer la protection des données à l'aide de SnapCenter.
 * Si SnapManager pour Microsoft Exchange Server et le plug-in pour Exchange sont installés sur le même serveur, vous devez interrompre ou supprimer du planificateur Windows tous les planifications créés par SnapManager pour Microsoft Exchange Server.
 * L'hôte doit être résolu au nom de domaine complet (FQDN) du serveur. Si le fichier hosts est modifié pour le rendre résolu et si le nom abrégé et le FQDN sont spécifiés dans le fichier hosts, créez une entrée dans le fichier hosts SnapCenter au format suivant : _<adresse_ip> <nom_hôte> <nom_hôte>_.
-* Assurez-vous que les ports suivants ne sont pas bloqués dans le pare-feu, sinon l'opération d'ajout d'hôte échoue. Pour résoudre ce problème, vous devez configurer la plage de ports dynamiques. Pour plus d'informations, voir https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Documentation Microsoft"^].
+* Assurez-vous que les ports suivants ne sont pas bloqués dans le pare-feu, sinon l'opération d'ajout d'hôte échoue. Pour résoudre ce problème, vous devez configurer la plage de ports dynamiques. Pour plus d'informations, voir https://["Documentation Microsoft"^].
 +
 ** Plage de ports 50000 - 51000 pour Windows 2016 et Exchange 2016
 ** Plage de ports 6000 - 6500 pour Windows 2012 R2 et Exchange 2013
@@ -57,7 +57,7 @@ Systèmes d'exploitation
  a| 
 Microsoft Windows
 
-Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://["Matrice d'interopérabilité NetApp"^].
 
 
 
@@ -86,9 +86,9 @@ Packs logiciels requis
 * PowerShell 4.0 ou version ultérieure
 
 
-Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://["Matrice d'interopérabilité NetApp"^].
 
-Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]
+Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section https://["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]
 
 |===
 
@@ -128,7 +128,7 @@ Vous devez disposer d'un utilisateur de domaine disposant de privilèges d'admin
 
 
 
-== Configurez GMSA sur Windows Server 2012 ou version ultérieure
+== Configuration requise pour l'hôte pour installer le module de plug-ins SnapCenter pour Windows
 
 Avant d'installer le package de plug-ins SnapCenter pour Windows, vous devez connaître les exigences en matière d'espace système hôte de base et de dimensionnement.
 
@@ -141,7 +141,7 @@ Systèmes d'exploitation
  a| 
 Microsoft Windows
 
-Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://["Matrice d'interopérabilité NetApp"^].
 
 
 
@@ -170,8 +170,8 @@ Packs logiciels requis
 * PowerShell 4.0 ou version ultérieure
 
 
-Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://["Matrice d'interopérabilité NetApp"^].
 
-Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]
+Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section https://["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]
 
 |===

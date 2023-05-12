@@ -32,4 +32,4 @@ Les modifications apportées aux paramètres de sécurité d'Internet Explorer e
 * Microsoft Edge
 
 
-Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://["Matrice d'interopérabilité NetApp"^].

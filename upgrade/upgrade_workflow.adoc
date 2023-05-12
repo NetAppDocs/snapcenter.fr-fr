@@ -65,4 +65,4 @@ image::../media/upgrade_workflow.png[mise à niveau du workflow]
 IMPORTANT: Par exemple, si vous utilisez SnapCenter version 4.4.x et souhaitez passer à 4.7, vous devez d'abord effectuer une mise à niveau vers 4.6.x, puis effectuer une mise à niveau vers 4.7.
 
 
-NOTE: Pour plus d'informations sur la mise à niveau du plug-in SnapCenter pour VMware vSphere, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["Mettez à niveau le plug-in SnapCenter pour VMware vSphere"^].
+NOTE: Pour plus d'informations sur la mise à niveau du plug-in SnapCenter pour VMware vSphere, reportez-vous à la section https://["Mettez à niveau le plug-in SnapCenter pour VMware vSphere"^].

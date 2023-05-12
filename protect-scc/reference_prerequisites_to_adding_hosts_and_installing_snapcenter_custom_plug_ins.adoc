@@ -49,7 +49,7 @@ La Custom_plugin_checksum_list fait partie de l'installation personnalisée du p
 +
 .. Généré le hachage SHA512 du fichier zip du plug-in.
 +
-Vous pouvez utiliser des outils en ligne comme https://emn178.github.io/online-tools/sha512_file_hash.html["Hachage SHA512"^].
+Vous pouvez utiliser des outils en ligne comme https://["Hachage SHA512"^].
 
 .. Ajout du hachage SHA512 généré au fichier Custom_plugin_checksum_list dans une nouvelle ligne.
 +
@@ -85,10 +85,10 @@ Voici un exemple d'entrée de hachage SHA512 dans le fichier de somme de contrô
 Si vous utilisez Windows Server 2019 ou Windows Server 2016 pour l'hôte SnapCenter Server, vous devez installer Java 1.8 ou Java 11 (64 bits). La matrice d'interopérabilité (IMT) contient les dernières informations sur les conditions requises.
 
 +
-http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
+http://["Téléchargements Java pour tous les systèmes d'exploitation"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=108393;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
+https://["Matrice d'interopérabilité NetApp"]
 
 * Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins. Ajoutez les lignes suivantes au fichier /etc/sudoers à l'aide de l'utilitaire visudo Linux.
 +

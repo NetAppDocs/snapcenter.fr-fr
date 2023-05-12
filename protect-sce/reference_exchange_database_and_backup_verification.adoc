@@ -20,4 +20,4 @@ L'outil Microsoft Exchange Eseutil est un utilitaire de ligne de commande inclus
 
 | *Meilleure pratique:* il n'est pas nécessaire d'effectuer des contrôles de cohérence sur les bases de données faisant partie d'une configuration DAG (Database Availability Group) avec au moins deux répliques. 
 |===
-Pour plus d'informations, reportez-vous à la section https://docs.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019["Documentation Microsoft Exchange Server"^].
+Pour plus d'informations, reportez-vous à la section https://["Documentation Microsoft Exchange Server"^].

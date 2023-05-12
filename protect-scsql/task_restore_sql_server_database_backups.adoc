@@ -125,6 +125,8 @@ Utiliser le répertoire de journaux personnalisé
  a| 
 Si vous avez sélectionné *toutes les sauvegardes de journaux*, *par sauvegarde de journaux* ou *par date spécifique jusqu'à* et que les journaux se trouvent à un emplacement personnalisé, sélectionnez *utiliser le répertoire de journaux personnalisé*, puis spécifiez l'emplacement du journal.
 
+L'option *utiliser le répertoire de journaux personnalisé* n'est disponible que si vous avez sélectionné *Restaurer la base de données sur un autre hôte* ou *Restaurer la base de données à l'aide des fichiers de base de données existants*. Vous pouvez également utiliser le chemin partagé mais vous assurer que le chemin est accessible par l'utilisateur SQL.
+
 
 NOTE: Le répertoire des journaux personnalisés n'est pas pris en charge pour la base de données des groupes de disponibilité.
 

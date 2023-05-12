@@ -30,7 +30,7 @@ Les certificats suivants sont générés :
 
 . Configurez les certificats SSL et les fichiers de clé pour les serveurs et les clients MySQL sous Windows à l'aide de la commande openssl.
 +
-Pour plus d'informations, reportez-vous à la section https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL version 5.7 : création de certificats et de clés SSL à l'aide d'openssl"^]
+Pour plus d'informations, reportez-vous à la section https://["MySQL version 5.7 : création de certificats et de clés SSL à l'aide d'openssl"^]
 
 +
 
@@ -146,7 +146,7 @@ Un certificat d'autorité de certification est généré sur l'un des nœuds HA,
 
 . Pour le premier nœud HA, configurez les certificats SSL et les fichiers clés pour les serveurs et les clients MySQL sur Windows à l'aide de la commande openssl.
 +
-Pour plus d'informations, reportez-vous à la section https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL version 5.7 : création de certificats et de clés SSL à l'aide d'openssl"^]
+Pour plus d'informations, reportez-vous à la section https://["MySQL version 5.7 : création de certificats et de clés SSL à l'aide d'openssl"^]
 
 +
 
@@ -221,7 +221,7 @@ NOTE: Vous ne devez pas créer de nouveau un certificat CA. Vous ne devez créer
 
 .. Pour le premier nœud HA, configurez les certificats SSL et les fichiers clés pour les serveurs et les clients MySQL sur Windows à l'aide de la commande openssl.
 +
-https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL version 5.7 : création de certificats et de clés SSL à l'aide d'openssl"]
+https://["MySQL version 5.7 : création de certificats et de clés SSL à l'aide d'openssl"]
 
 +
 

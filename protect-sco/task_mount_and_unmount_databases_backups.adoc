@@ -30,7 +30,7 @@ Vous devez monter manuellement une sauvegarde de base de données si vous souhai
 
 
 
-NOTE: Pour plus d'informations sur la modification du paramètre asm_diskstring, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["Comment ajouter des chemins de disque à asm_diskstring"^].
+NOTE: Pour plus d'informations sur la modification du paramètre asm_diskstring, reportez-vous à la section https://["Comment ajouter des chemins de disque à asm_diskstring"^].
 
 * Vous devez configurer les informations d'identification ASM et le port ASM s'il diffère de l'hôte de la base de données source lors du montage de la sauvegarde.
 * Si vous souhaitez monter sur un autre hôte, vous devez vérifier que l'autre hôte répond aux exigences suivantes :
@@ -78,7 +78,7 @@ Si vous montez la sauvegarde d'une base de données ASM, le chemin de montage +d
 `./sccli Get-Smbackup-BackupNamebackup_name`
 
 +
-Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["Guide de référence sur les commandes du logiciel SnapCenter"^].
+Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://["Guide de référence sur les commandes du logiciel SnapCenter"^].
 
 
 

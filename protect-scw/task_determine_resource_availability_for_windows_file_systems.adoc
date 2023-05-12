@@ -16,7 +16,7 @@ Les ressources sont les LUN et les composants similaires de votre système de fi
 *Ce dont vous aurez besoin*
 
 * Vous devez déjà avoir terminé certaines tâches, telles que l'installation d'SnapCenter Server, l'ajout d'hôtes, la création de connexions SVM et l'ajout d'identifiants.
-* Si les fichiers résident sur des LUN RDM ou des VMDK VMware, vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter. Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["Documentation du plug-in SnapCenter pour VMware vSphere"^].
+* Si les fichiers résident sur des LUN RDM ou des VMDK VMware, vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter. Pour plus d'informations, voir https://["Documentation du plug-in SnapCenter pour VMware vSphere"^].
 
 
 *Étapes*

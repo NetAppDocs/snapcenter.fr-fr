@@ -90,7 +90,7 @@ Vous devez ajouter des ressources avant d'attribuer l'accès aux utilisateurs.
 
 
 
-IMPORTANT: Si vous utilisez le plug-in SnapCenter pour les fonctions VMware vSphere pour protéger les machines virtuelles, les VMDK ou les datastores, vous devez utiliser l'interface graphique de VMware vSphere pour ajouter un utilisateur vCenter à un rôle de plug-in SnapCenter pour VMware vSphere. Pour plus d'informations sur les rôles VMware vSphere, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html["Rôles prédéfinis avec le plug-in SnapCenter pour VMware vSphere"^].
+IMPORTANT: Si vous utilisez le plug-in SnapCenter pour les fonctions VMware vSphere pour protéger les machines virtuelles, les VMDK ou les datastores, vous devez utiliser l'interface graphique de VMware vSphere pour ajouter un utilisateur vCenter à un rôle de plug-in SnapCenter pour VMware vSphere. Pour plus d'informations sur les rôles VMware vSphere, reportez-vous à la section https://["Rôles prédéfinis avec le plug-in SnapCenter pour VMware vSphere"^].
 
 *Étapes*
 

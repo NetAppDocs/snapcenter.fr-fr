@@ -17,7 +17,7 @@ SnapCenter n'inclut pas les utilitaires hôtes ou un DSM. Si votre hôte SnapCen
 
 * Utilitaires hôtes
 +
-Les utilitaires hôtes prennent en charge les protocoles FC et iSCSI, et il vous permet d'utiliser MPIO sur vos serveurs Windows. Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/ontap-sanhost/["Documentation Host Utilities"^].
+Les utilitaires hôtes prennent en charge les protocoles FC et iSCSI, et il vous permet d'utiliser MPIO sur vos serveurs Windows. Pour plus d'informations, reportez-vous à la section https://["Documentation Host Utilities"^].
 
 * Microsoft DSM pour Windows MPIO
 +
@@ -28,6 +28,6 @@ Un DSM est nécessaire pour les configurations haute disponibilité.
 
 +
 
-NOTE: Si vous utilisiez ONTAP DSM, vous devez migrer vers Microsoft DSM. Pour plus d'informations, voir https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Data_ONTAP_DSM_for_Windows_MPIO/How_to_migrate_from_Data_ONTAP_DSM_4.1p1_to_Microsoft_native_DSM["Comment migrer de ONTAP DSM vers Microsoft DSM"^].
+NOTE: Si vous utilisiez ONTAP DSM, vous devez migrer vers Microsoft DSM. Pour plus d'informations, voir https://["Comment migrer de ONTAP DSM vers Microsoft DSM"^].
 
 

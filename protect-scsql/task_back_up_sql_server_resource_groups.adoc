@@ -45,6 +45,6 @@ link:task_create_resource_groups_and_attach_policies_for_sql_server.html["Créez
 
 link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["Sauvegarde des ressources avec les applets de commande PowerShell"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["Les opérations de sauvegarde échouent avec l'erreur de connexion MySQL en raison du délai dans TCP_TIMEOUT"]
+https://["Les opérations de sauvegarde échouent avec l'erreur de connexion MySQL en raison du délai dans TCP_TIMEOUT"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["La sauvegarde échoue en raison d'une erreur du planificateur Windows"]
+https://["La sauvegarde échoue en raison d'une erreur du planificateur Windows"]

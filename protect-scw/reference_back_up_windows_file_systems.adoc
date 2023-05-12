@@ -19,4 +19,4 @@ Le workflow suivant montre l'ordre dans lequel vous devez effectuer les opérati
 
 image::../media/sce_backup_workflow.gif[workflow de sauvegarde sce]
 
-Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. L'aide de la cmdlet SnapCenter ou le https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^] Contient des informations détaillées sur les applets de commande PowerShell.
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. L'aide de la cmdlet SnapCenter ou le https://["Guide de référence de l'applet de commande du logiciel SnapCenter"^] Contient des informations détaillées sur les applets de commande PowerShell.

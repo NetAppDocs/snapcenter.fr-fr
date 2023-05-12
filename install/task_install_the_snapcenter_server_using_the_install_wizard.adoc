@@ -24,7 +24,7 @@ NOTE: L'installation silencieuse du serveur SnapCenter à partir de la ligne de 
 * Vous devez vous assurer que le serveur MySQL n'est pas installé sur l'hôte où vous prévoyez d'installer le serveur SnapCenter.
 * Vous devez avoir activé le débogage du programme d'installation de Windows.
 +
-Consultez le site Web de Microsoft pour plus d'informations sur l'activation https://support.microsoft.com/kb/223300["Consignation du programme d'installation Windows"^].
+Consultez le site Web de Microsoft pour plus d'informations sur l'activation https://["Consignation du programme d'installation Windows"^].
 
 +
 
@@ -34,7 +34,7 @@ NOTE: Vous ne devez pas installer le serveur SnapCenter sur un hôte doté de se
 
 *Étapes*
 
-. Téléchargez le package d'installation du serveur SnapCenter à partir de https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["Site de support NetApp"^].
+. Téléchargez le package d'installation du serveur SnapCenter à partir de https://["Site de support NetApp"^].
 . Lancez l'installation du serveur SnapCenter en double-cliquant sur le fichier .exe téléchargé.
 +
 Une fois l'installation lancée, tous les contrôles préalables sont effectués et si les exigences minimales ne sont pas remplies, des messages d'erreur ou d'avertissement appropriés s'affichent.

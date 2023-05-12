@@ -147,8 +147,8 @@ Pour augmenter la taille du segment de mémoire Java, localisez le fichier de sc
 
 *Plus d'informations*
 
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossible de détecter la relation SnapMirror ou SnapVault après le basculement de MetroCluster"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["La base de données Oracle RAC One Node est ignorée pour effectuer les opérations SnapCenter"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_change_the_state_of_an_Oracle_12c_ASM_database_from_shutdown_to_mount["Impossible de modifier l'état d'une base de données Oracle 12c ASM"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Paramètres personnalisables pour les opérations de sauvegarde, de restauration et de clonage sur les systèmes AIX"^]
+* https://["Impossible de détecter la relation SnapMirror ou SnapVault après le basculement de MetroCluster"^]
+* https://["La base de données Oracle RAC One Node est ignorée pour effectuer les opérations SnapCenter"^]
+* https://["Impossible de modifier l'état d'une base de données Oracle 12c ASM"^]
+* https://["Paramètres personnalisables pour les opérations de sauvegarde, de restauration et de clonage sur les systèmes AIX"^]
 

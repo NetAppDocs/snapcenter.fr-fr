@@ -52,4 +52,4 @@ Java 1.8 (64 bits)Oracle Java ou OpenJDK Flavors
 Si vous avez mis à niveau JAVA vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version JAVA correcte et le chemin correct.
 
 |===
-Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=108393;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://["Matrice d'interopérabilité NetApp"]

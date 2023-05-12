@@ -166,8 +166,8 @@ Si les journaux d'archives sont élagués dans le cadre de la sauvegarde et que 
 
 NOTE: Vous devez vérifier le chemin et le contenu du chemin de montage avant de le répertorier en tant qu'emplacement de journal externe.
 
-** http://www.netapp.com/us/media/tr-4591.pdf["Rapport technique NetApp 4591 : sauvegarde, restauration, réplication et reprise sur incident dans les bases de données"^]
-** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["L'opération échoue avec l'erreur ORA-00308"^]
+** http://["Rapport technique NetApp 4591 : sauvegarde, restauration, réplication et reprise sur incident dans les bases de données"^]
+** https://["L'opération échoue avec l'erreur ORA-00308"^]
 
 
 |===
@@ -228,8 +228,8 @@ NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails 
 
 *Pour plus d'informations*
 
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["La base de données Oracle RAC One Node est ignorée pour effectuer les opérations SnapCenter"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_from_a_secondary_SnapMirror_or_SnapVault_location["Impossible de restaurer le système à partir d'un emplacement SnapMirror ou SnapVault secondaire"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_when_a_backup_of_an_orphan_incarnation_is_selected["Échec de la restauration à partir d'une sauvegarde d'une incarnation orpheline"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Paramètres personnalisables pour les opérations de sauvegarde, de restauration et de clonage sur les systèmes AIX"^]
+* https://["La base de données Oracle RAC One Node est ignorée pour effectuer les opérations SnapCenter"^]
+* https://["Impossible de restaurer le système à partir d'un emplacement SnapMirror ou SnapVault secondaire"^]
+* https://["Échec de la restauration à partir d'une sauvegarde d'une incarnation orpheline"^]
+* https://["Paramètres personnalisables pour les opérations de sauvegarde, de restauration et de clonage sur les systèmes AIX"^]
 

@@ -45,7 +45,7 @@ Dans la page *Détails du travail*, un message d'avertissement recommande au cli
 
 . Téléchargez le pack d'installation du serveur SnapCenter depuis le site de support NetApp.
 +
-https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
+https://[]
 
 . Créez une copie de l'adresse web.config située à l'adresse C:\Program Files\NetApp\SnapCenter WebApp.
 . Exportez les planifications SnapCenter liées à l'hôte de plug-in à partir du planning de tâches Windows afin que vous puissiez l'utiliser pour restaurer les planifications en cas d'échec de la mise à niveau.

@@ -47,4 +47,4 @@ Les objets peuvent être clonés, sauvegarde, groupe de ressources, système de 
 * Vous devez avoir ouvert une session SnapCenter en tant qu'utilisateur RBAC.
 
 
-Pour plus d'informations sur la désinstallation du plug-in SnapCenter pour VMware vSphere, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#remove-snapcenter-plug-in-for-vmware-vsphere["Suppression du plug-in SnapCenter pour VMware vSphere"^].
+Pour plus d'informations sur la désinstallation du plug-in SnapCenter pour VMware vSphere, reportez-vous à la section https://["Suppression du plug-in SnapCenter pour VMware vSphere"^].

@@ -24,7 +24,7 @@ Vous pouvez installer le plug-in et le plug-in de stockage personnalisés à par
 
 link:task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html["Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants."^]
 
-NetApp fournit également MySQL, MAXDB, DB2, SYBASE, DPGLUE, Plug-ins personnalisés MongoDB, ORASCPM et PostgreSQL. Ces plug-ins peuvent être téléchargés depuis le https://automationstore.netapp.com/home.shtml["Stockage NetApp Storage Automation Store"^].
+NetApp fournit également MySQL, MAXDB, DB2, SYBASE, DPGLUE, Plug-ins personnalisés MongoDB, ORASCPM et PostgreSQL. Ces plug-ins peuvent être téléchargés depuis le https://["Stockage NetApp Storage Automation Store"^].
 
 
 NOTE: La politique de support de SnapCenter prendra en charge le framework personnalisé de SnapCenter, le moteur principal et les API associées. Le support ne couvre pas le code source du plug-in et les scripts associés basés sur le framework personnalisé du plug-in.

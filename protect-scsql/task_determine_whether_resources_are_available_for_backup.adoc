@@ -25,7 +25,7 @@ Les ressources sont les bases de données, les instances d'application, les grou
 * Pour découvrir les bases de données Microsoft SQL dans un cluster Windows, vous devez débloquer le port TCP/IP de l'instance de cluster de basculement (FCI).
 * Si les bases de données résident sur des LUN RDM ou des VMDK VMware, vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter.
 +
-Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["Déployez le plug-in SnapCenter pour VMware vSphere"^]
+Pour plus d'informations, voir https://["Déployez le plug-in SnapCenter pour VMware vSphere"^]
 
 * Si l'hôte est ajouté avec GMSA et si le GMSA dispose de privilèges d'ouverture de session et d'administrateur système, le GMSA sera utilisé pour se connecter à l'instance SQL.
 

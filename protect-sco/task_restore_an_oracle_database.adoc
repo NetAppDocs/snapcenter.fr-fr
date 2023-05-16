@@ -13,6 +13,10 @@ summary: 'En cas de perte de données, vous pouvez utiliser SnapCenter pour rest
 [role="lead"]
 En cas de perte de données, vous pouvez utiliser SnapCenter pour restaurer les données d'une ou plusieurs sauvegardes sur votre système de fichiers actif, puis restaurer la base de données.
 
+*Avant de commencer*
+
+Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez attribuer manuellement les autorisations d'exécution aux répertoires prescripteur et postscript.
+
 *À propos de cette tâche*
 
 La récupération est effectuée à l'aide des journaux d'archivage disponibles à l'emplacement configuré du journal d'archivage. Si la base de données est exécutée en mode ARCHIVELOG, la base de données Oracle enregistre les groupes remplis de fichiers journaux de reprise vers une ou plusieurs destinations hors ligne, appelées collectivement le journal de reprise archivé. SnapCenter identifie et monte le nombre optimal de sauvegardes de journaux en fonction du SCN spécifié, de la date et de l'heure sélectionnées ou de tous les journaux. Si les journaux d'archivage requis pour la restauration ne sont pas disponibles à l'emplacement configuré, vous devez monter la copie Snapshot contenant les journaux et spécifier le chemin en tant que journaux d'archivage externes.

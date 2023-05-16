@@ -13,9 +13,11 @@ summary: 'Vous pouvez restaurer un sous-ensemble d"espaces de stockage qui a ét
 [role="lead"]
 Vous pouvez restaurer un sous-ensemble d'espaces de stockage qui a été corrompu ou supprimé sans affecter les autres espaces de stockage de la base de données. SnapCenter utilise RMAN pour effectuer une restauration instantanée (PITR) des tablespaces.
 
-*Ce dont vous aurez besoin*
+*Avant de commencer*
 
-Les sauvegardes requises pour effectuer le PITR des espaces de stockage doivent être cataloguées et montées.
+* Les sauvegardes requises pour effectuer le PITR des espaces de stockage doivent être cataloguées et montées.
+* Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez attribuer manuellement les autorisations d'exécution aux répertoires prescripteur et postscript.
+
 
 *À propos de cette tâche*
 

@@ -13,11 +13,12 @@ summary: 'Avant d"utiliser SnapCenter pour sauvegarder les ressources de la base
 [role="lead"]
 Avant d'utiliser SnapCenter pour sauvegarder les ressources de la base de données Oracle, vous devez créer une stratégie de sauvegarde pour la ressource ou le groupe de ressources à sauvegarder. Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes. Vous pouvez également spécifier les paramètres de réplication, de script et de type de sauvegarde. La création d'une stratégie permet de gagner du temps lorsque vous souhaitez réutiliser la stratégie sur une autre ressource ou un autre groupe de ressources.
 
-*Ce dont vous aurez besoin*
+*Avant de commencer*
 
 * Vous devez avoir défini votre stratégie de sauvegarde.
 * Vous devez être prêt pour la protection des données en exécutant des tâches telles que l'installation d'SnapCenter, l'ajout d'hôtes, la détection de bases de données et la création de connexions du système de stockage.
 * Si vous répliquez des copies Snapshot sur un stockage secondaire miroir ou vault, l'administrateur SnapCenter doit avoir attribué les SVM à vous pour les volumes source et de destination.
+* Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez attribuer manuellement les autorisations d'exécution aux répertoires prescripteur et postscript.
 
 
 *Étapes*

@@ -7963,4 +7963,5 @@
   <block id="158e3fb1c7bf72fb1db969f281a7a097" category="list-text"><block ref="f5ba209e62536d23f7b5fe25e81421e2" prefix="" category="inline-code"></block></block>
   <block id="198803c71459bc222adc91a3d7048f01" category="paragraph">L'option *utiliser le répertoire de journaux personnalisé* n'est disponible que si vous avez sélectionné *Restaurer la base de données sur un autre hôte* ou *Restaurer la base de données à l'aide des fichiers de base de données existants*. Vous pouvez également utiliser le chemin partagé mais vous assurer que le chemin est accessible par l'utilisateur SQL.</block>
   <block id="17049c1cdf73c2b4b41219f99ace3f81" category="list-text">Vous devez avoir *bash* comme shell par défaut pour l'installation du plug-in.</block>
+  <block id="b3fae7a36581789e46e17a83505c11b3" category="paragraph">Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez attribuer manuellement les autorisations d'exécution aux répertoires prescripteur et postscript.</block>
 </blocks>

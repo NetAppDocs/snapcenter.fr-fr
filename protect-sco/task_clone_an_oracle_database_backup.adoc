@@ -13,6 +13,10 @@ summary: 'Vous pouvez utiliser SnapCenter pour cloner une base de données Oracl
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour cloner une base de données Oracle à l'aide de la sauvegarde de la base de données.
 
+*Avant de commencer*
+
+Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez attribuer manuellement les autorisations d'exécution aux répertoires prescripteur et postscript.
+
 *À propos de cette tâche*
 
 L'opération de clonage crée une copie des fichiers de données de la base de données et crée de nouveaux fichiers journaux de reprise en ligne et fichiers de contrôle. La base de données peut être éventuellement restaurée à une heure spécifiée, en fonction des options de restauration spécifiées.

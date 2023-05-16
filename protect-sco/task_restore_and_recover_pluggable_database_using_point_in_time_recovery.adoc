@@ -13,12 +13,15 @@ summary: 'Vous pouvez restaurer et récupérer une base de données enfichable (
 [role="lead"]
 Vous pouvez restaurer et récupérer une base de données enfichable (PDB) qui a été corrompue ou supprimée sans affecter les autres PDB dans la base de données du conteneur (CDB). SnapCenter utilise RMAN pour effectuer une récupération ponctuelle (PITI) du PDB.
 
-*Ce dont vous aurez besoin*
+*Avant de commencer*
 
-Les sauvegardes requises pour effectuer le PITR d'un PDB doivent être cataloguées et montées.
-
+* Les sauvegardes requises pour effectuer le PITR d'un PDB doivent être cataloguées et montées.
++
 
 NOTE: Dans une configuration RAC, vous devez fermer manuellement le boîtier de distribution électrique (en changeant son état sur MONTÉ) sur tous les nœuds de la configuration RAC.
+
+* Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez attribuer manuellement les autorisations d'exécution aux répertoires prescripteur et postscript.
+
 
 *À propos de cette tâche*
 

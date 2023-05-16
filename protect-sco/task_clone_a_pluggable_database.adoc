@@ -13,6 +13,10 @@ summary: 'Vous pouvez cloner une base de données enfichable \(PDB\) sur un CDB 
 [role="lead"]
 Vous pouvez cloner une base de données enfichable (PDB) sur un CDB cible différent ou identique sur le même hôte ou un autre hôte. Vous pouvez également récupérer le PDB cloné sur un SCN ou une date et une heure souhaités.
 
+*Avant de commencer*
+
+Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez attribuer manuellement les autorisations d'exécution aux répertoires prescripteur et postscript.
+
 *Étapes*
 
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.

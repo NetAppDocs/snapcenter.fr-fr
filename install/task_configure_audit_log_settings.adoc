@@ -36,7 +36,7 @@ Les lecteurs partagés ou montés sur le réseau ne sont pas pris en charge.
 * Si le protocole UDP est utilisé dans les paramètres du serveur Syslog, les erreurs dues au port sont en panne ou ne peuvent pas être capturées comme une erreur ou une alerte dans SnapCenter.
 * Vous pouvez utiliser les commandes set-SmAuditSettings et Get-SmAuditSettings pour configurer les journaux d'audit.
 +
-Les informations concernant les paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant Get-Help nom_commande. Vous pouvez également consulter le https://["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Les informations concernant les paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant Get-Help nom_commande. Vous pouvez également consulter le https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 
 

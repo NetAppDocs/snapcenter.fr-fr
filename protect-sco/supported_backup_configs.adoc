@@ -1,0 +1,47 @@
+---
+permalink: protect-sco/supported_backup_configs.html 
+sidebar: sidebar 
+keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
+summary: SnapCenter prend en charge la sauvegarde de différentes configurations de bases de données Oracle. 
+---
+= Configurations de base de données Oracle prises en charge pour les sauvegardes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter prend en charge la sauvegarde de différentes configurations de bases de données Oracle.
+
+* Oracle autonome
+* Oracle Real application clusters (RAC)
+* Oracle autonome existant
+* Base de données de conteneur autonome Oracle (CDB)
+* Veille Oracle Data Guard
++
+Vous ne pouvez créer que des sauvegardes de bases de données de secours Data Guard à montage hors ligne. La sauvegarde hors ligne, la sauvegarde du journal d'archivage uniquement et la sauvegarde complète ne sont pas prises en charge.
+
+* Veille Oracle Active Data Guard
++
+Vous pouvez uniquement créer des sauvegardes en ligne des bases de données de secours Active Data Guard. La sauvegarde et la sauvegarde complète du journal d'archivage uniquement ne sont pas prises en charge.
+
++
+Avant de créer une sauvegarde de la base de données de secours Data Guard ou Active Data Guard, le processus de restauration géré (MRP) est arrêté et une fois la sauvegarde créée, le MRP est démarré.
+
+* Gestion automatique du stockage (ASM)
++
+** ASM autonome et ASM RAC sur Virtual machine Disk (VMDK)
++
+Parmi toutes les méthodes de restauration prises en charge pour les bases de données Oracle, vous pouvez effectuer uniquement la restauration de connexion et de copie des bases de données ASM RAC sur VMDK.
+
+** ASM autonome et ASM RAC sur RDM (Raw Device Mapping) + vous pouvez effectuer des opérations de sauvegarde, de restauration et de clonage sur des bases de données Oracle sur ASM, avec ou sans ASMLib.
+** Pilote de filtre Oracle ASM (ASMFD)
++
+Les opérations de migration PDB et de clonage PDB ne sont pas prises en charge.
+
+** Oracle Flex ASM
+
+
+
+
+Pour obtenir les dernières informations sur les versions Oracle prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=105283;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].

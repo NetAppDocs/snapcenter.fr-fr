@@ -126,7 +126,7 @@ Vous devez également spécifier les adresses e-mail de l'expéditeur et du dest
 Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface graphique ou de la commande PowerShell `Set-SmSmtpServer`.
 
 +
-Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 

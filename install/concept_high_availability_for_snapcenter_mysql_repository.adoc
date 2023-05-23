@@ -19,7 +19,7 @@ Si vous souhaitez utiliser la fonction haute disponibilité MySQL (HA), vous dev
 
 SnapCenter fournit les applets de commande _get-SmRepositoryConfig_ et _set-SmRepositoryConfig_ PowerShell pour gérer la réplication MySQL.
 
-Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 Vous devez connaître les limitations liées à la fonctionnalité MySQL HA :
 
@@ -35,4 +35,4 @@ Si le basculement se produit parce que le serveur MySQL ou SnapCenter est en pan
 
 
 
-Pour plus d'informations sur la configuration de la haute disponibilité, reportez-vous à la section https://["Comment configurer NLB et ARR avec SnapCenter"^].
+Pour plus d'informations sur la configuration de la haute disponibilité, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["Comment configurer NLB et ARR avec SnapCenter"^].

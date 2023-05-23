@@ -17,7 +17,7 @@ Le workflow de clonage inclut la planification, la réalisation de l'opération 
 
 Vous devez exécuter les commandes suivantes pour créer le fichier de spécification du clone de base de données Oracle et lancer l'opération de clonage.
 
-Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://["Guide de référence sur les commandes du logiciel SnapCenter"^].
+Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["Guide de référence sur les commandes du logiciel SnapCenter"^].
 
 *Étapes*
 

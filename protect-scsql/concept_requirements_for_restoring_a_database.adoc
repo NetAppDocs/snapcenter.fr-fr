@@ -31,7 +31,7 @@ La restauration de AG échoue lorsque l'une des conditions suivantes est remplie
 * Si vous restaurez des sauvegardes de répertoire de journaux personnalisés sur un autre hôte, le serveur SnapCenter et l'hôte du plug-in doivent avoir la même version de SnapCenter installée.
 * Vous devez avoir installé le correctif Microsoft KB2887595. Le site de support Microsoft contient des informations supplémentaires sur KB2887595.
 +
-https://["Article 2887595 du support Microsoft : ensemble de mises à jour Windows RT 8.1, Windows 8.1 et Windows Server 2012 R2 : novembre 2013"]
+https://support.microsoft.com/kb/2887595["Article 2887595 du support Microsoft : ensemble de mises à jour Windows RT 8.1, Windows 8.1 et Windows Server 2012 R2 : novembre 2013"]
 
 * Vous devez avoir sauvegardé les groupes de ressources ou la base de données.
 * Si vous répliquez des copies Snapshot dans un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué les serveurs virtuels de stockage (SVM) pour les volumes source et de destination.

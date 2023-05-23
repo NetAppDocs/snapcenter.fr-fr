@@ -4,13 +4,19 @@ sidebar: sidebar
 keywords: SnapCenter Server, monitor, backup, activity pane, data protection 
 summary: 'Vous pouvez contrôler la progression des différentes opérations de sauvegarde à l"aide de la page tâches SnapCenter. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
-= Surveillez les opérations de sauvegarde des bases de données Oracle
+= Surveillez la sauvegarde de la base de données Oracle
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Découvrez comment surveiller la progression des opérations de sauvegarde et de protection des données.
+
+
+
+== Surveillez les opérations de sauvegarde des bases de données Oracle
+
 Vous pouvez surveiller la progression des différentes opérations de sauvegarde à l'aide de la page SnapCenterJobs. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s'il y a un problème.
 
 *À propos de cette tâche*

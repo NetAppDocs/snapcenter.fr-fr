@@ -24,7 +24,7 @@ image::../media/scsql_backup_workflow.png[Flux de travail de sauvegarde SCSQL]
 
 NOTE: Les options sauvegarde immédiate, restauration, gestion des sauvegardes et clonage de la page Ressources sont désactivées si vous sélectionnez un LUN non NetApp, une base de données corrompue ou une base de données en cours de restauration.
 
-Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration, de restauration, de vérification et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la https://["Guide de référence de l'applet de commande du logiciel SnapCenter"]
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration, de restauration, de vérification et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"]
 
 
 

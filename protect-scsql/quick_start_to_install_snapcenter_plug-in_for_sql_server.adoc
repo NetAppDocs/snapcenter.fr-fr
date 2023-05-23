@@ -78,7 +78,7 @@ NOTE: Il est recommandé, mais pas obligatoire, d'ajouter des licences SnapCente
 |===
 * Exigences supplémentaires*
 
-Pour connaître la configuration minimale requise pour les plug-ins ONTAP et applicatifs, consultez https://["Matrice d'interopérabilité"^]
+Pour connaître la configuration minimale requise pour les plug-ins ONTAP et applicatifs, consultez https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^]
 
 |===
 | Hôtes | Configuration minimale requise 
@@ -87,7 +87,7 @@ Pour connaître la configuration minimale requise pour les plug-ins ONTAP et app
  a| 
 Système d'exploitation (64 bits)
  a| 
-Voir https://["Matrice d'interopérabilité"^]
+Voir https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^]
 
 
 
@@ -171,7 +171,7 @@ Hôtes du plug-in Windows
 
 En plus des ports 135 et 445, la plage de ports dynamiques spécifiée par Microsoft doit également être ouverte. Les opérations d'installation à distance utilisent le service Windows Management Instrumentation (WMI), qui recherche dynamiquement cette plage de ports.
 
-Pour plus d'informations sur la plage de ports dynamiques prise en charge, reportez-vous à la section https://["Présentation du service et configuration requise du port réseau pour Windows"^].
+Pour plus d'informations sur la plage de ports dynamiques prise en charge, reportez-vous à la section https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Présentation du service et configuration requise du port réseau pour Windows"^].
 
 
 
@@ -206,7 +206,7 @@ Vous devez disposer d'un utilisateur avec des autorisations sysadmin sur le serv
 
 *Étapes*
 
-. Téléchargez le package d'installation du serveur SnapCenter à partir du https://["Site de support NetApp"^] puis double-cliquez sur l'exe.
+. Téléchargez le package d'installation du serveur SnapCenter à partir du https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["Site de support NetApp"^] puis double-cliquez sur l'exe.
 +
 Une fois l'installation lancée, tous les contrôles préalables sont effectués et si les exigences minimales ne sont pas remplies, des messages d'erreur ou d'avertissement appropriés s'affichent. Vous pouvez ignorer les messages d'avertissement et poursuivre l'installation ; cependant, les erreurs doivent être résolues.
 

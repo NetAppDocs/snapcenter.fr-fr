@@ -106,6 +106,6 @@ Vous devez installer une ou plusieurs licences SnapCenter. Pour plus d'informati
 
 Si vous utilisez le plug-in SnapCenter pour Exchange pour gérer les bases de données Microsoft Exchange Server et SMBR (Single Mailbox Recovery), vous devez disposer d'une licence supplémentaire pour SMBR qui doit être achetée séparément selon la boîte aux lettres des utilisateurs.
 
-Contactez votre ingénieur commercial NetApp pour acheter des licences SMBR disponibles sous forme d'unités de 1000, 5000, 15000 et 25000 boîtes aux lettres. Après l'achat de la référence, vous pouvez obtenir la licence en suivant les instructions de la section https://["Notes de mise à jour de SMBR"^].
+Contactez votre ingénieur commercial NetApp pour acheter des licences SMBR disponibles sous forme d'unités de 1000, 5000, 15000 et 25000 boîtes aux lettres. Après l'achat de la référence, vous pouvez obtenir la licence en suivant les instructions de la section https://library.netapp.com/ecm/ecm_download_file/ECMLP2863893["Notes de mise à jour de SMBR"^].
 
 Lorsque vous soumettez la demande de clé de licence, Kroll Ontrack émet 50 clés de licence de boîte aux lettres. En fonction de vos droits, le Kroll Ontrack mettra à niveau les licences de la boîte aux lettres après vérification.

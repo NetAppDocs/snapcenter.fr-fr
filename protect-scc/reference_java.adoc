@@ -334,7 +334,7 @@ Liste vide
 Cette liste contient tous les messages qu'un plug-in souhaite retourner au serveur. Le serveur SnapCenter affiche ces messages dans l'interface de ligne de commande ou l'interface utilisateur graphique.
 
 |===
-L'agent SnapCenter fournit les constructeurs (https://["Motif de création"]) pour tous ses types de résultats. L'utilisation est donc très simple :
+L'agent SnapCenter fournit les constructeurs (https://en.wikipedia.org/wiki/Builder_pattern["Motif de création"]) pour tous ses types de résultats. L'utilisation est donc très simple :
 
 ....
 Result result = Result.builder()

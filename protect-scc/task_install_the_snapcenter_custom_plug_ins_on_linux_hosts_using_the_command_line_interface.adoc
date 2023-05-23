@@ -36,7 +36,7 @@ Vous pouvez accéder à ce chemin à partir de l'hôte sur lequel le serveur Sna
 ----
 . Ajoutez l'hôte au serveur SnapCenter à l'aide de l'applet de commande Add-Smhost et des paramètres requis.
 +
-Les informations relatives aux paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Les informations relatives aux paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 . Connectez-vous à SnapCenter et téléchargez le plug-in personnalisé depuis l'interface utilisateur ou via les applets de commande PowerShell.
 +
@@ -46,6 +46,6 @@ Vous pouvez télécharger le plug-in personnalisé à partir de l'interface util
 L'aide de la cmdlet de SnapCenter et les informations de référence de la cmdlet contiennent plus d'informations sur les applets de commande PowerShell.
 
 +
-https://["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 

@@ -27,7 +27,7 @@ link:task_back_up_resource_groups_sap_hana.html["Sauvegarder les groupes de ress
 
 * Si vous souhaitez créer une sauvegarde basée sur des fichiers alors qu'une ou plusieurs bases de données de tenant sont en panne, définissez le paramètre ALLOW_FILE_BASED_BACKUP_IFINA_TENANTS_PRESIDENT sur *YES* dans le fichier de propriétés HANA à l'aide de `Set-SmConfigSettings` applet de commande.
 +
-Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://["Guide de référence de l'applet de commande du logiciel SnapCenter"]
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"]
 
 * Pour les commandes pré et post pour les opérations de mise au repos, de copie Snapshot et d'annulation de la mise au repos, vous devez vérifier que les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir des chemins suivants :
 +
@@ -155,7 +155,7 @@ Si la stratégie sélectionnée pour la sauvegarde à la demande est associée �
 +
 ** Dans les configurations MetroCluster, il est possible que SnapCenter ne détecte pas une relation de protection après un basculement.
 +
-Pour plus d'informations, voir : https://["Impossible de détecter la relation SnapMirror ou SnapVault après le basculement de MetroCluster"^]
+Pour plus d'informations, voir : https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossible de détecter la relation SnapMirror ou SnapVault après le basculement de MetroCluster"^]
 
 ** Si vous sauvegardez des données d'application sur des disques VMDK et que la taille du segment de mémoire Java du plug-in SnapCenter pour VMware vSphere n'est pas suffisamment importante, la sauvegarde risque d'échouer.
 +

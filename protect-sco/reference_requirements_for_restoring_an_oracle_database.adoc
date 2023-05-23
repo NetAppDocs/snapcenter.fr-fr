@@ -23,7 +23,7 @@ Avant de restaurer une base de données Oracle, vous devez vous assurer que les 
 * Dans le paramètre asm_diskstring, vous devez configurer _AFD:*_ si vous utilisez ASMFD ou _ORCL:*_ si vous utilisez ASMLIB.
 +
 
-NOTE: Pour plus d'informations sur la modification du paramètre asm_diskstring, reportez-vous à la section https://["Comment ajouter des chemins de disque à asm_diskstring"^]
+NOTE: Pour plus d'informations sur la modification du paramètre asm_diskstring, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["Comment ajouter des chemins de disque à asm_diskstring"^]
 
 * Vous devez configurer l'écouteur statique dans le fichier *listener.ora* disponible à _$ORACLE_HOME/network/admin_ pour les bases de données non ASM et _$GRID_HOME/network/admin_ pour les bases de données ASM si vous avez désactivé l'authentification du système d'exploitation et activé l'authentification de base de données Oracle pour une base de données Oracle, et que vous souhaitez restaurer les fichiers de données et les fichiers de contrôle de cette base de données.
 * Vous devez augmenter la valeur du paramètre SCORestoreTimeout en exécutant la commande set- SmConfigSettings si la taille de la base de données est en téraoctets (To).

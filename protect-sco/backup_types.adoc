@@ -1,0 +1,43 @@
+---
+permalink: protect-sco/backup_types.html 
+sidebar: sidebar 
+keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
+summary: Types de sauvegarde pris en charge pour les bases de données Oracle. 
+---
+= Types de sauvegarde pris en charge pour les bases de données Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer. SnapCenter prend en charge les types de sauvegarde en ligne et hors ligne pour les bases de données Oracle.
+
+
+
+== Sauvegarde en ligne
+
+Une sauvegarde créée lorsque la base de données est en ligne est appelée sauvegarde en ligne. Également appelée sauvegarde à chaud, une sauvegarde en ligne vous permet de créer une sauvegarde de la base de données sans l'arrêter.
+
+Dans le cadre de la sauvegarde en ligne, vous pouvez créer une sauvegarde des fichiers suivants :
+
+* Fichiers de données et fichiers de contrôle uniquement
+* Fichiers journaux d'archive uniquement (la base de données n'est pas mise en mode de sauvegarde dans ce scénario)
+* Base de données complète comprenant les fichiers de données, les fichiers de contrôle et les fichiers journaux d'archivage
+
+
+
+
+== Sauvegarde hors ligne
+
+Une sauvegarde créée lorsque la base de données est à l'état monté ou arrêté est appelée sauvegarde hors ligne. Une sauvegarde hors ligne est également appelée sauvegarde à froid. Vous pouvez inclure uniquement les fichiers de données et les fichiers de contrôle dans les sauvegardes hors ligne. Vous pouvez créer une sauvegarde de montage hors ligne ou d'arrêt hors ligne.
+
+* Lors de la création d'une sauvegarde de montage hors ligne, vous devez vous assurer que la base de données est à l'état monté.
++
+Si la base de données est dans un autre état, l'opération de sauvegarde échoue.
+
+* Lors de la création d'une sauvegarde d'arrêt hors ligne, la base de données peut être dans n'importe quel état.
++
+L'état de la base de données passe à l'état requis pour créer une sauvegarde. Après avoir créé la sauvegarde, l'état de la base de données est rétabli à son état d'origine.
+
+

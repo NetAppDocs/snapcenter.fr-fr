@@ -40,7 +40,7 @@ Si la stratégie sélectionnée pour la sauvegarde à la demande est associée �
 +
 ** Dans les configurations MetroCluster, il est possible que SnapCenter ne détecte pas une relation de protection après un basculement.
 +
-https://["Impossible de détecter la relation SnapMirror ou SnapVault après le basculement de MetroCluster"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossible de détecter la relation SnapMirror ou SnapVault après le basculement de MetroCluster"]
 
 ** Si vous sauvegardez des données d'application sur des disques VMDK et que la taille du segment de mémoire Java du plug-in SnapCenter pour VMware vSphere n'est pas suffisamment importante, la sauvegarde risque d'échouer. Pour augmenter la taille du segment de mémoire Java, localisez le fichier de script /opt/netapp/init_scripts/scvservice. Dans ce script, le `do_start method` Command démarre le service du plug-in SnapCenter VMware. Mettez à jour cette commande à l'adresse suivante : `Java -jar -Xmx8192M -Xms4096M`.
 

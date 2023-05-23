@@ -17,7 +17,7 @@ Les ressources sont les bases de données, les groupes de disponibilité de base
 
 * Vous devez avoir déjà terminé des tâches telles que l'installation de SnapCenter Server, l'ajout d'hôtes, la création de connexions au système de stockage, l'ajout d'informations d'identification et l'installation du plug-in pour Exchange.
 * Pour tirer parti des fonctionnalités du logiciel Single Mailbox Recovery, vous devez avoir localisé votre base de données active sur le serveur Exchange Server sur lequel le logiciel Single Mailbox Recovery est installé.
-* Si les bases de données résident sur des LUN RDM VMware, vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter. Le https://["Documentation du plug-in SnapCenter pour VMware vSphere"] a plus d'informations.
+* Si les bases de données résident sur des LUN RDM VMware, vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter. Le https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["Documentation du plug-in SnapCenter pour VMware vSphere"] a plus d'informations.
 
 
 *À propos de cette tâche*

@@ -40,9 +40,9 @@ Voir link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installing
 
 * Si vous disposez de bases de données Oracle sur des environnements SAN, assurez-vous que l'environnement SAN est configuré selon les recommandations indiquées dans les guides suivants :
 +
-** https://["Paramètres d'hôte recommandés pour les utilitaires d'hôtes unifiés Linux"^]
-** https://["Utilisation d'hôtes Linux avec stockage ONTAP"^]
-** https://["Paramètres d'hôte affectés par les utilitaires hôtes AIX"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547957["Paramètres d'hôte recommandés pour les utilitaires d'hôtes unifiés Linux"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547958["Utilisation d'hôtes Linux avec stockage ONTAP"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMP1119218["Paramètres d'hôte affectés par les utilitaires hôtes AIX"^]
 
 
 * Si vous avez des bases de données Oracle sur LVM sous Oracle Linux ou RHEL, installez la dernière version de Logical Volume Management (LVM).
@@ -54,7 +54,7 @@ Pour les utilisateurs de SnapCenter 4.1.1, la documentation du plug-in SnapCente
 
 *Plus d'informations*
 
-* https://["Matrice d'interopérabilité"^]
-* https://["Documentation du plug-in SnapCenter pour VMware vSphere"^]
-* https://["L'opération de protection des données échoue dans un environnement sans chemins d'accès multiples sous RHEL 7 et versions ultérieures"^]
+* https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^]
+* https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["Documentation du plug-in SnapCenter pour VMware vSphere"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Data_protection_operation_fails_in_a_non-multipath_environment_in_RHEL_7_and_later["L'opération de protection des données échoue dans un environnement sans chemins d'accès multiples sous RHEL 7 et versions ultérieures"^]
 

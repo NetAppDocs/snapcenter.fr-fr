@@ -40,7 +40,7 @@ Pour gérer la protection des données cohérente avec les machines virtuelles d
 * Restauration du fichier invité du distributeur auxiliaire
 
 
-Pour plus d'informations, voir https://["Types de RBAC pour le plug-in SnapCenter pour les utilisateurs VMware vSphere"^]
+Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["Types de RBAC pour le plug-in SnapCenter pour les utilisateurs VMware vSphere"^]
 
 |===
 

@@ -15,41 +15,40 @@ Un groupe de ressources est un ensemble de ressources sur un hôte ou un cluster
 
 Vous pouvez sauvegarder un groupe de ressources à la demande à partir de la page Ressources. Si une stratégie est associée à un groupe de ressources et qu'une planification est configurée, les sauvegardes sont automatiquement effectuées en fonction de la planification.
 
-*Étapes*
-
-. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
+. Entrez le nom du groupe de ressources dans la zone de recherche ou cliquez sur image:../media/filter_icon.gif["Icône de filtre"], et sélectionnez la balise.
 +
-Vous pouvez rechercher le groupe de ressources en saisissant le nom du groupe de ressources dans la zone de recherche ou en cliquant sur *image:../media/filter_icon.gif[""]*, puis la sélection de la balise. Vous pouvez ensuite cliquer sur *image:../media/filter_icon.gif[""]* pour fermer le volet de filtre.
+Cliquez sur image:../media/filter_icon.gif["Icône de filtre"] pour fermer le volet de filtre.
 
-. Dans la page groupes de ressources, sélectionnez le groupe de ressources à sauvegarder, puis cliquez sur *Sauvegarder maintenant*.
+. Dans la page Groupe de ressources, sélectionnez le groupe de ressources à sauvegarder.
 +
 
-NOTE: Si vous disposez d'un groupe de ressources fédéré contenant deux bases de données et que l'une de ces bases de données possède un fichier de données sur un stockage non NetApp, l'opération de sauvegarde est abandonnée, même si l'autre base de données se trouve sur le stockage NetApp.
+NOTE: Si vous disposez d'un groupe de ressources fédéré avec deux bases de données et que l'une d'entre elles contient des données sur un système de stockage non NetApp, l'opération de sauvegarde est abandonnée même si l'autre base de données se trouve sur un système de stockage NetApp.
 
 . Dans la page sauvegarde, effectuez les opérations suivantes :
 +
-.. Si vous avez associé plusieurs stratégies au groupe de ressources, dans la liste déroulante *Stratégie*, sélectionnez la stratégie que vous souhaitez utiliser pour la sauvegarde.
+.. Si plusieurs stratégies sont associées au groupe de ressources, sélectionnez la stratégie de sauvegarde que vous souhaitez utiliser dans la liste déroulante *Stratégie*.
 +
 Si la stratégie sélectionnée pour la sauvegarde à la demande est associée à un planning de sauvegarde, les sauvegardes à la demande seront conservées en fonction des paramètres de conservation spécifiés pour le type de programme.
 
-.. Cliquez sur *Backup*.
+.. Sélectionnez *Backup*.
 
 
-. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+. Surveillez la progression en sélectionnant *Monitor > Jobs*.
 
 
-*Après la fin*
-
-* Dans le programme d'installation AIX, vous pouvez utiliser la commande lkdev pour verrouiller et la commande rendev pour renommer les disques sur lesquels la base de données a été sauvegardée.
+.Une fois que vous avez terminé
+* Dans le programme d'installation AIX, vous pouvez utiliser le `lkdev` pour verrouiller et `rendev` commande permettant de renommer les disques sur lesquels la base de données sauvegardée résidait.
 +
 Le verrouillage ou le changement de nom des périphériques n'affecte pas l'opération de restauration lors de la restauration à l'aide de cette sauvegarde.
 
-* Si l'opération de sauvegarde échoue parce que le temps d'exécution de la requête de base de données a dépassé la valeur de temporisation, vous devez modifier la valeur des paramètres ORACLE_SQL_QUERY_TIMEOUT et ORACLE_PLUGIN_SQL_QUERY_TIMEOUT en exécutant l'applet de commande set-SmConfigSettings :
+* Si l'opération de sauvegarde échoue parce que le temps d'exécution de la requête de base de données a dépassé la valeur du délai, vous devez modifier la valeur DES paramètres ORACLE_SQL_QUERY_TIMEOUT et ORACLE_PLUGIN_SQL_QUERY_TIMEOUT en exécutant le `Set-SmConfigSettings` cmdlet :
 +
 Après avoir modifié la valeur des paramètres, redémarrez le service SnapCenter Plug-in Loader (SPL) en exécutant la commande suivante `/opt/NetApp/snapcenter/spl/bin/spl restart`
 
-* Si le fichier n'est pas accessible et que le point de montage n'est pas disponible pendant le processus de vérification, l'opération peut échouer avec le code d'erreur DBV-00100 fichier spécifié. Vous devez modifier les valeurs des paramètres VERIFICATION_DELAY et VERIFICATION_RETRY_COUNT dans sco.properties.
+* Si le fichier n'est pas accessible et que le point de montage n'est pas disponible pendant le processus de vérification, l'opération peut échouer avec le code d'erreur DBV-00100 fichier spécifié. Vous devez modifier les valeurs des paramètres VERIFICATION_DELAY_ et VERIFICATION_RETRY_COUNT dans sco.properties.
 +
 Après avoir modifié la valeur des paramètres, redémarrez le service SnapCenter Plug-in Loader (SPL) en exécutant la commande suivante `/opt/NetApp/snapcenter/spl/bin/spl restart`
 

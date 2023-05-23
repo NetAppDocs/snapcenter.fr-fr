@@ -45,7 +45,7 @@ NOTE: Les VMDK ne sont pas pris en charge.
 
 Pour les utilisateurs de SnapCenter 4.1.1, la documentation du plug-in SnapCenter pour VMware vSphere 4.1.1 contient des informations sur la protection des bases de données virtualisées et des systèmes de fichiers. Pour les utilisateurs de SnapCenter 4.2.x, NetApp Data Broker 1.0 et 1.0.1, la documentation relative à la protection des bases de données et des systèmes de fichiers virtualisés à l'aide du plug-in SnapCenter pour VMware vSphere fourni par le dispositif virtuel NetApp Data Broker basé sur Linux (format Open Virtual Appliance). Pour les utilisateurs de SnapCenter 4.3.x, la documentation du plug-in SnapCenter pour VMware vSphere 4.3 contient des informations sur la protection des bases de données virtualisées et des systèmes de fichiers à l'aide du plug-in SnapCenter basé sur Linux pour l'appliance virtuelle VMware vSphere (format Open Virtual Appliance).
 
-https://["Documentation du plug-in SnapCenter pour VMware vSphere"^]
+https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["Documentation du plug-in SnapCenter pour VMware vSphere"^]
 
 
 

@@ -33,7 +33,7 @@ NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération �
 
 *À propos de cette tâche*
 
-Pour plus d'informations sur les limites des opérations de fractionnement de clonage, reportez-vous à la section http://["Guide de gestion du stockage logique ONTAP 9"^].
+Pour plus d'informations sur les limites des opérations de fractionnement de clonage, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guide de gestion du stockage logique ONTAP 9"^].
 
 *Étapes*
 

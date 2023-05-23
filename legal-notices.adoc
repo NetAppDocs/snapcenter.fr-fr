@@ -20,7 +20,7 @@ Les mentions légales donnent accès aux déclarations de copyright, aux marques
 
 == Droits d'auteur
 
-http://[]
+http://www.netapp.com/us/legal/copyright.aspx[]
 
 
 
@@ -28,7 +28,7 @@ http://[]
 
 NetApp, le logo NETAPP et les marques mentionnées sur la page des marques commerciales NetApp sont des marques commerciales de NetApp, Inc. Les autres noms de sociétés et de produits peuvent être des marques commerciales de leurs propriétaires respectifs.
 
-http://[]
+http://www.netapp.com/us/legal/netapptmlist.aspx[]
 
 
 
@@ -36,13 +36,13 @@ http://[]
 
 Vous trouverez une liste actuelle des brevets appartenant à NetApp à l'adresse suivante :
 
-https://[]
+https://www.netapp.com/us/media/patents-page.pdf[]
 
 
 
 == Politique de confidentialité
 
-https://[]
+https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 
 
@@ -50,4 +50,4 @@ https://[]
 
 Les fichiers de notification fournissent des informations sur les droits d'auteur et les licences de tiers utilisés dans le logiciel NetApp.
 
-https://["Notification relative à SnapCenter 4.8"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2884814["Notification relative à SnapCenter 4.8"^]

@@ -345,7 +345,7 @@ Le verrouillage ou le changement de nom des périphériques n'affecte pas l'opé
 
 *Plus d'informations*
 
-* https://["Échec de la restauration ou du clonage avec le message d'erreur ORA-00308"^]
-* https://["Impossible de restaurer une base de données clonée"^]
-* https://["Paramètres personnalisables pour les opérations de sauvegarde, de restauration et de clonage sur les systèmes AIX"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["Échec de la restauration ou du clonage avec le message d'erreur ORA-00308"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_recover_a_cloned_database["Impossible de restaurer une base de données clonée"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Paramètres personnalisables pour les opérations de sauvegarde, de restauration et de clonage sur les systèmes AIX"^]
 

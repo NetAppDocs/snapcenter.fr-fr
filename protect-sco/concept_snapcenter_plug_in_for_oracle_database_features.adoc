@@ -55,7 +55,7 @@ Activé par défaut, la fonction SLM détecte régulièrement les LUN qui ne dis
 
 +
 ** Vous pouvez le désactiver en définissant la valeur DU paramètre ENABLE_LUNPATH_MONITORING sur FALSE.
-** Vous pouvez spécifier la fréquence de correction automatique des chemins de LUN en attribuant la valeur (en heures) au paramètre LUNPATH_MONITORING_INTERVAL. Pour plus d'informations sur SLM, reportez-vous à la section http://["Guide d'administration du SAN ONTAP 9"^].
+** Vous pouvez spécifier la fréquence de correction automatique des chemins de LUN en attribuant la valeur (en heures) au paramètre LUNPATH_MONITORING_INTERVAL. Pour plus d'informations sur SLM, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["Guide d'administration du SAN ONTAP 9"^].
 
 
 * Prise en charge de NVMe (non-volatile Memory Express) sur Linux

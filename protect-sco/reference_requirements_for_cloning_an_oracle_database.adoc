@@ -24,7 +24,7 @@ Par défaut, les fichiers de reprise et de contrôle de la base de données clon
 * Si vous utilisez ASM sur NFS, vous devez ajouter _/var/opt/snapcenter/scu/clones/*/*_ au chemin existant défini dans le paramètre asm_diskstring.
 * Dans le paramètre asm_diskstring, vous devez configurer _AFD:*_ si vous utilisez ASMFD ou _ORCL:*_ si vous utilisez ASMLIB.
 +
-Pour plus d'informations sur la modification du paramètre asm_diskstring, reportez-vous à la section https://["Comment ajouter des chemins de disque à asm_diskstring"^].
+Pour plus d'informations sur la modification du paramètre asm_diskstring, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["Comment ajouter des chemins de disque à asm_diskstring"^].
 
 * Si vous créez le clone sur un autre hôte, celui-ci doit répondre aux exigences suivantes :
 +
@@ -33,8 +33,8 @@ Pour plus d'informations sur la modification du paramètre asm_diskstring, repor
 +
 *** Si vous effectuez le clonage depuis le stockage primaire ou le stockage secondaire (Vault ou Mirror) vers un autre hôte, assurez-vous qu'une session iSCSI est soit établie entre le stockage secondaire et l'hôte secondaire, ou bien zonée correctement pour FC.
 +
-**** https://["Guide d'installation et de configuration des utilitaires d'hôtes Linux"^]
-**** https://["Guide d'installation et de configuration des utilitaires hôtes AIX"^]
+**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Guide d'installation et de configuration des utilitaires d'hôtes Linux"^]
+**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["Guide d'installation et de configuration des utilitaires hôtes AIX"^]
 
 
 *** Si vous effectuez un clonage depuis le stockage Vault ou Mirror vers le même hôte, assurez-vous qu'une session iSCSI est soit établie entre le stockage Vault ou Mirror et l'hôte, soit zonée correctement pour FC.

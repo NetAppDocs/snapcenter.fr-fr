@@ -45,7 +45,7 @@ Cet outil gère automatiquement la configuration correcte des privilèges ONTAP.
 
 NOTE: Si vous mettez à niveau SnapCenter ou ONTAP ultérieurement, vous devez exécuter à nouveau l'outil Créateur d'utilisateurs RBAC pour Data ONTAP afin de mettre à jour les rôles utilisateur que vous avez créés précédemment. Les rôles utilisateur créés pour une version antérieure de SnapCenter ou ONTAP ne fonctionnent pas correctement avec les versions mises à niveau. Lorsque vous exécutez de nouveau l'outil, il gère automatiquement la mise à niveau. Il n'est pas nécessaire de recréer les rôles.
 
-Plus d'informations sur la configuration des rôles RBAC ONTAP, consultez le http://["Guide de l'authentification de l'administrateur ONTAP 9 et de l'alimentation RBAC"^].
+Plus d'informations sur la configuration des rôles RBAC ONTAP, consultez le http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["Guide de l'authentification de l'administrateur ONTAP 9 et de l'alimentation RBAC"^].
 
 
 NOTE: Dans un souci de cohérence, la documentation SnapCenter fait référence aux rôles en tant qu'utilisation des privilèges. L'interface graphique du Gestionnaire système OnCommand utilise le terme _attribute_ au lieu de _Privilege_. Lors de la configuration de rôles RBAC ONTAP, ces deux termes désignent la même chose.

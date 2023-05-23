@@ -13,4 +13,4 @@ summary: Fournit des informations importantes sur cette version de SnapCenter Se
 [role="lead"]
 Fournit des informations importantes sur cette version de SnapCenter Server et des modules de plug-in SnapCenter, y compris les problèmes résolus, les problèmes connus, les mises en garde et les limites.
 
-Pour plus d'informations, reportez-vous à la section https://["Notes de version du logiciel SnapCenter 4.8"^].
+Pour plus d'informations, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481["Notes de version du logiciel SnapCenter 4.8"^].

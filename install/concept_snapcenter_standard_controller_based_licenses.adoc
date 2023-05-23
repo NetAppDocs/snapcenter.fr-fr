@@ -176,7 +176,7 @@ Si vous ne saisissez pas d'informations d'identification valides, aucune informa
 
 *Étapes*
 
-. Connectez-vous au site de support NetApp à l'adresse http://["mysupport.netapp.com"^].
+. Connectez-vous au site de support NetApp à l'adresse http://mysupport.netapp.com/["mysupport.netapp.com"^].
 . Accédez à *systèmes* > *licences logicielles*.
 . Dans la zone critères de sélection, assurez-vous que le numéro de série (situé à l'arrière de l'unité) est sélectionné, saisissez le numéro de série du contrôleur, puis cliquez sur *Go!*.
 +
@@ -238,7 +238,7 @@ NOTE: La suppression manuelle d'une licence d'essai n'est nécessaire que si vou
 .. Exécutez l'applet de commande Open-SmConnection pour lancer une session de connexion avec le serveur SnapCenter pour un compte SnapCenterAdmin.
 .. Exécutez le mot de passe set-SmRepositoryPassword pour réinitialiser le mot de passe MySQL.
 +
-Pour plus d'informations sur les applets de commande, reportez-vous à la section https://["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Pour plus d'informations sur les applets de commande, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 
 

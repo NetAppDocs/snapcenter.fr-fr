@@ -13,51 +13,38 @@ summary: 'Si une ressource ne fait pas partie d"un groupe de ressources, vous po
 [role="lead"]
 Si une ressource ne fait pas partie d'un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.
 
-*Étapes*
-
-. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
-. Dans la page Ressources, sélectionnez *Database* dans la liste *View*.
-. Cliquez sur *image:../media/filter_icon.gif[""]*, puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources.
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Database* dans la liste vue.
+. Cliquez sur image:../media/filter_icon.gif["Icône de filtre"], puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources.
 +
-Vous pouvez ensuite cliquer sur *image:../media/filter_icon.gif[""]* pour fermer le volet de filtre.
+Vous pouvez ensuite cliquer sur image:../media/filter_icon.gif["Icône de filtre"] pour fermer le volet de filtre.
 
 . Sélectionnez la base de données à sauvegarder.
 +
 La page protéger la base de données s'affiche.
 
-. Dans la page ressource, effectuez les opérations suivantes :
+. Dans la page Ressources, vous pouvez effectuer les opérations suivantes :
 +
-|===
-| Pour ce champ... | Procédez comme ça... 
+.. Cochez la case et entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
++
+Par exemple : `customtext_policy_hostname` ou `resource_hostname`. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+
+.. Spécifiez les destinations des fichiers journaux d'archive que vous ne souhaitez pas sauvegarder.
 
 
- a| 
-Utilisez le format de nom personnalisé pour la copie Snapshot
- a| 
-Cochez cette case, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
-
-Par exemple, clienttext__policy_hostname ou Resource_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
-
-
-
- a| 
-Exclure les destinations du journal d'archivage de la sauvegarde
- a| 
-Spécifiez les destinations des fichiers journaux d'archive que vous ne souhaitez pas sauvegarder.
-
-|===
 . Dans la page stratégies, effectuez les opérations suivantes :
 +
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
 +
 
-NOTE: Vous pouvez également créer une stratégie en cliquant sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Vous pouvez créer une stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"].
 
 +
 Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
 
-.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif[""] Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
-.. Dans la fenêtre Ajouter des planifications pour la stratégie _policy_name_, configurez le planning, puis cliquez sur *OK*.
+.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"] Dans la colonne configurer les plannings pour configurer un planning pour la stratégie souhaitée.
+.. Dans la fenêtre Ajouter des plannings pour la règle _nom_règle_, configurez la planification, puis sélectionnez `OK`.
 +
 _policy_name_ est le nom de la stratégie que vous avez sélectionnée.
 
@@ -68,30 +55,14 @@ Les planifications configurées sont répertoriées dans la colonne programmes a
 
 . Dans la page Vérification, effectuez les opérations suivantes :
 +
-.. Cliquez sur *Charger les localisateurs* pour charger les volumes SnapMirror ou SnapVault afin d'effectuer une vérification sur le stockage secondaire.
-.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif[""] Dans la colonne configurer les programmes pour configurer le planning de vérification pour tous les types de planification de la stratégie.
-.. Dans la boîte de dialogue Ajouter des programmes de vérification _policy_name_, effectuez les opérations suivantes :
+.. Cliquez sur *Load locators* pour charger les volumes SnapMirror ou SnapVault afin de vérifier le stockage secondaire.
+.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"] Dans la colonne configurer les programmes pour configurer le planning de vérification pour tous les types de planification de la stratégie. + dans la boîte de dialogue Ajouter des planifications de vérification _nom_règle_, vous pouvez effectuer les opérations suivantes :
+.. Sélectionnez *Exécuter la vérification après la sauvegarde*.
+.. Sélectionnez *Exécuter la vérification planifiée*, puis sélectionnez le type de planification dans la liste déroulante.
 +
-|===
-| Les fonctions que vous recherchez... | Procédez comme ça... 
-
-
- a| 
-Exécutez la vérification après la sauvegarde
- a| 
-Sélectionnez *Exécuter la vérification après la sauvegarde*.
-
-
-
- a| 
-Planifier une vérification
- a| 
-Sélectionnez *Exécuter la vérification programmée*, puis sélectionnez le type d'horaire dans la liste déroulante.
-
 
 NOTE: Dans une configuration Flex ASM, vous ne pouvez pas effectuer d'opération de vérification sur les nœuds Leaf si la cardinalité est inférieure au nombre de nœuds dans le cluster RAC.
 
-|===
 .. Sélectionnez *vérifier sur l'emplacement secondaire* pour vérifier vos sauvegardes sur le stockage secondaire.
 .. Cliquez sur *OK*.
 +
@@ -99,13 +70,13 @@ Les planifications de vérification configurées sont répertoriées dans la col
 
 
 
-. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Dans la page notification, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails dans la liste déroulante *préférence de messagerie*.
 +
-Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Si vous souhaitez joindre le rapport de l'opération de sauvegarde effectuée sur la ressource, puis sélectionnez *attacher un rapport de travail*.
+Vous devez spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Si vous souhaitez joindre le rapport de l'opération de sauvegarde effectuée sur la ressource, sélectionnez *attacher un rapport de travail*.
 
 +
 
-NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface graphique ou de la commande PowerShell set-SmSmtpServer.
+NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface graphique ou de la commande PowerShell `Set-SmSmtpServer`.
 
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 +
@@ -114,7 +85,7 @@ La page topologie de la base de données s'affiche.
 . Cliquez sur *Sauvegarder maintenant*.
 . Dans la page sauvegarde, effectuez les opérations suivantes :
 +
-.. Si vous avez appliqué plusieurs stratégies à la ressource, dans la liste déroulante *Stratégie*, sélectionnez la stratégie que vous souhaitez utiliser pour la sauvegarde.
+.. Si vous avez appliqué plusieurs stratégies à la ressource, dans la liste déroulante Stratégie, sélectionnez la stratégie que vous souhaitez utiliser pour la sauvegarde.
 +
 Si la stratégie sélectionnée pour la sauvegarde à la demande est associée à un planning de sauvegarde, les sauvegardes à la demande seront conservées en fonction des paramètres de conservation spécifiés pour le type de programme.
 
@@ -124,13 +95,12 @@ Si la stratégie sélectionnée pour la sauvegarde à la demande est associée �
 . Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
 
 
-*Après la fin*
-
-* Dans le programme d'installation AIX, vous pouvez utiliser la commande lkdev pour verrouiller et la commande rendev pour renommer les disques sur lesquels la base de données a été sauvegardée.
+.Une fois que vous avez terminé
+* Dans le programme d'installation AIX, vous pouvez utiliser le `lkdev` pour verrouiller et `rendev` commande permettant de renommer les disques sur lesquels la base de données sauvegardée résidait.
 +
 Le verrouillage ou le changement de nom des périphériques n'affecte pas l'opération de restauration lors de la restauration à l'aide de cette sauvegarde.
 
-* Si l'opération de sauvegarde échoue parce que le temps d'exécution de la requête de base de données a dépassé la valeur de temporisation, vous devez modifier la valeur des paramètres ORACLE_SQL_QUERY_TIMEOUT et ORACLE_PLUGIN_SQL_QUERY_TIMEOUT en exécutant l'applet de commande set-SmConfigSettings :
+* Si l'opération de sauvegarde échoue parce que le temps d'exécution de la requête de base de données a dépassé la valeur du délai, vous devez modifier la valeur DES paramètres ORACLE_SQL_QUERY_TIMEOUT et ORACLE_PLUGIN_SQL_QUERY_TIMEOUT en exécutant le `Set-SmConfigSettings` cmdlet :
 +
 Après avoir modifié la valeur des paramètres, redémarrez le service SnapCenter Plug-in Loader (SPL) en exécutant la commande suivante `/opt/NetApp/snapcenter/spl/bin/spl restart`
 
@@ -145,10 +115,9 @@ Pour augmenter la taille du segment de mémoire Java, localisez le fichier de sc
 
 
 
-*Plus d'informations*
-
-* https://["Impossible de détecter la relation SnapMirror ou SnapVault après le basculement de MetroCluster"^]
-* https://["La base de données Oracle RAC One Node est ignorée pour effectuer les opérations SnapCenter"^]
-* https://["Impossible de modifier l'état d'une base de données Oracle 12c ASM"^]
-* https://["Paramètres personnalisables pour les opérations de sauvegarde, de restauration et de clonage sur les systèmes AIX"^]
+.Trouvez plus d'informations
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossible de détecter la relation SnapMirror ou SnapVault après le basculement de MetroCluster"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["La base de données Oracle RAC One Node est ignorée pour effectuer les opérations SnapCenter"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_change_the_state_of_an_Oracle_12c_ASM_database_from_shutdown_to_mount["Impossible de modifier l'état d'une base de données Oracle 12c ASM"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Paramètres personnalisables pour les opérations de sauvegarde, de restauration et de clonage sur les systèmes AIX"^] (Connexion requise)
 

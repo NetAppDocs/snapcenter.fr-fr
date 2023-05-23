@@ -1,8 +1,8 @@
 ---
-permalink: protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html 
+permalink: protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html 
 sidebar: sidebar 
 keywords: run as 
-summary: Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. 
+summary: Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. 
 ---
 = Créez des groupes de ressources et associez des stratégies pour les bases de données Oracle
 :allow-uri-read: 
@@ -11,62 +11,38 @@ summary: Un groupe de ressources est le conteneur dans lequel vous devez ajouter
 
 
 [role="lead"]
-Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée.
+Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée.
 
-*À propos de cette tâche*
+.Description de la tâche
+Une base de données contenant des fichiers dans des groupes de disques ASM doit être à l'état "MOUNT" ou "OPEN" pour vérifier ses sauvegardes à l'aide de l'utilitaire Oracle DBVERIFY.
 
-Vous devez vous assurer que la base de données contenant des fichiers sur les groupes de disques ASM doit être à l'état "MONTER" ou "OUVRIR" pour vérifier ses sauvegardes à l'aide de l'utilitaire Oracle DBVERIFY.
-
-Vous devez associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter.
+Associez une ou plusieurs règles au groupe de ressources pour définir le type de tâche de protection des données à exécuter.
 
 L'image suivante illustre la relation entre les ressources, les groupes de ressources et les politiques des bases de données :
 
 image::../media/sco_resourcegroup_policy.gif[stratégie de groupe de ressources sco]
 
-*Étapes*
-
-. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in approprié dans la liste.
 . Dans la page Ressources, cliquez sur *Nouveau groupe de ressources*.
 . Dans la page Nom, effectuez les opérations suivantes :
 +
-|===
-| Pour ce champ... | Procédez comme ça... 
-
-
- a| 
-Nom
- a| 
-Entrez un nom pour le groupe de ressources.
-
+.. Entrez un nom pour le groupe de ressources dans le champ Nom.
++
 
 NOTE: Le nom du groupe de ressources ne doit pas dépasser 250 caractères.
 
-
-
- a| 
-Étiquettes
- a| 
-Entrez un ou plusieurs libellés qui vous aideront à rechercher ultérieurement le groupe de ressources.
-
+.. Saisissez une ou plusieurs étiquettes dans le champ balise pour vous aider à rechercher le groupe de ressources ultérieurement.
++
 Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de ressources, vous pourrez rechercher par la suite tous les groupes de ressources associés à la balise RH.
 
-
-
- a| 
-Utilisez le format de nom personnalisé pour la copie Snapshot
- a| 
-Cochez cette case, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
-
+.. Cochez cette case, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
++
 Par exemple, clienttext_Resource group_policy_hostname ou Resource group_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
 
+.. Spécifiez les destinations des fichiers journaux d'archive que vous ne souhaitez pas sauvegarder.
 
 
- a| 
-Exclure les destinations du journal d'archivage de la sauvegarde
- a| 
-Spécifiez les destinations des fichiers journaux d'archive que vous ne souhaitez pas sauvegarder.
-
-|===
 . Dans la page Ressources, sélectionnez un nom d'hôte de base de données Oracle dans la liste déroulante *hôte*.
 +
 
@@ -82,12 +58,12 @@ NOTE: Vous pouvez ajouter des bases de données à partir d'hôtes Linux et AIX 
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
 +
 
-NOTE: Vous pouvez également créer une stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif[""].
+NOTE: Vous pouvez également créer une stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"].
 
 +
 Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
 
-.. Cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"] Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
 .. Dans la fenêtre Ajouter des planifications pour la stratégie _policy_name_, configurez le planning, puis cliquez sur *OK*.
 +
 Où, _policy_name_ est le nom de la stratégie que vous avez sélectionnée.
@@ -103,7 +79,7 @@ Les planifications de sauvegardes tierces ne sont pas prises en charge lorsqu'el
 . Sur la page Vérification, effectuez les opérations suivantes :
 +
 .. Cliquez sur *Charger les localisateurs* pour charger les volumes SnapMirror ou SnapVault afin d'effectuer une vérification sur le stockage secondaire.
-.. Cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes pour configurer le planning de vérification pour tous les types de planification de la stratégie.
+.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"] Dans la colonne configurer les plannings pour configurer le planning de vérification pour tous les types de planning de la stratégie.
 .. Dans la boîte de dialogue Ajouter des programmes de vérification nom_stratégie, effectuez les opérations suivantes :
 +
 |===

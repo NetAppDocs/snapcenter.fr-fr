@@ -19,7 +19,7 @@ Vous devez configurer les certificats d'autorité de certification et activer la
 * Vous pouvez afficher l'état du certificat pour le serveur SnapCenter à l'aide de l'applet de commande Get-SmCertificateSettings.
 
 
-Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 *Étapes*
 

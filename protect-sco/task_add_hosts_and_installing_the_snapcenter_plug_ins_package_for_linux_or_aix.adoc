@@ -153,7 +153,7 @@ Les fichiers journaux spécifiques à l'installation se trouvent à l'adresse _/
 
 
 
-*Après la fin*
+*Résultat*
 
 Toutes les bases de données de l'hôte sont automatiquement découvertes et affichées dans la page Ressources. Si rien ne s'affiche, cliquez sur *Actualiser les ressources*.
 

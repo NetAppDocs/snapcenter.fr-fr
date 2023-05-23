@@ -1550,19 +1550,14 @@
   <block id="070716b587ce6b006f4906a8222fc505" category="list-text"><block ref="c4a58f5a89534f3c56fb45bf5a2dca6a" prefix="" category="inline-code"></block></block>
   <block id="2bad882b7fb5945b0373cf8c526cb4ac" category="list-text"><block ref="4ec835b54c4394861b7aec03ca73cfcb" prefix="" category="inline-code"></block></block>
   <block id="c30d59401403b986989fc4a149ff2aea" category="summary">SnapCenter utilise des fonctionnalités de sécurité et d'authentification strictes pour sécuriser vos données.</block>
-  <block id="606d5e037822a442727a528828b14a45" category="doc">Activer l'authentification multifacteur (MFA)</block>
-  <block id="ef3ab6fc872d21b146098f5850df64c9" category="paragraph">Pour activer la fonctionnalité MFA, vous devez exécuter certaines étapes dans le serveur Active Directory Federation Service (AD FS) et le serveur SnapCenter.</block>
   <block id="b2f9ddbfbf0bb6739ee75e8c2a6ac138" category="list-text">Windows Active Directory Federation Service (AD FS) doit être opérationnel dans le domaine respectif.</block>
-  <block id="ff213a826598e59e3839e9ee5713eb9a" category="list-text">Vous devez disposer de services d'authentification multifacteur pris en charge par AD FS, tels qu'Azure MFA, Cisco Duo, etc.</block>
   <block id="cb7f79bbeb52e82fa7926e0724dba11e" category="list-text">L'horodatage du serveur SnapCenter et AD FS doit être identique, quel que soit le fuseau horaire.</block>
   <block id="0ee03cd1523961dfa875fac5c6817350" category="list-text">Procurez-vous et configurez le certificat d'autorité de certification autorisé pour le serveur SnapCenter.</block>
   <block id="4090d0adfa0a73ca248f3a29df56f147" category="paragraph">Le certificat CA est obligatoire pour les raisons suivantes :</block>
-  <block id="e26a403b5bc4392b06e59bf0ea5f3734" category="list-text">Garantit que les communications ADFS-F5 ne se rompez pas car les certificats auto-signés sont uniques au niveau du nœud.</block>
   <block id="3e3aa2cc7dad01d563ee8f2059cd8120" category="list-text">Garantit que lors de la mise à niveau, de la réparation ou de la reprise après incident dans une configuration autonome ou haute disponibilité, le certificat autosigné ne sera pas recréé, ce qui évite la reconfiguration de l'authentification multifacteur.</block>
   <block id="6c09b2d713717656ff82620da0253eb5" category="list-text">Garantit les résolutions IP-FQDN.</block>
   <block id="760bd9baa4b7633c0843cb714f00a44e" category="paragraph">Pour plus d'informations sur le certificat CA, reportez-vous à la section <block ref="de78619abe7dcb7b53be3c4ab98b1283" category="inline-link-macro-rx"></block>.</block>
   <block id="c746671a4c0cb7e7a37abe538fe2107e" category="list-text">SnapCenter prend en charge les connexions basées sur SSO lorsque d'autres applications sont configurées dans le même AD FS. Dans certaines configurations AD FS, SnapCenter peut exiger une authentification de l'utilisateur pour des raisons de sécurité, en fonction de la persistance de la session AD FS.</block>
-  <block id="0d432c3383a301d652dc61c7708c5724" category="list-text">Les informations concernant les paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant Get-Help nom_commande. Vous pouvez également vous reporter au<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>.</block>
   <block id="0470044badbfb7d0d8a4ec5bab24ebb3" category="list-text">Connectez-vous à l'hôte Active Directory Federation Services (AD FS).</block>
   <block id="6ef1300bebff7801c85a1789a6c0790a" category="list-text">Téléchargez le fichier de métadonnées de la fédération AD FS à partir de <block ref="a9571343becbc81f25857902551c1e72" category="inline-link-rx"></block> FQDN&gt;/FederationMetadata/2007-06/FederationMetadata.xml »</block>
   <block id="cc53a56f022408c7c918dae3f5120646" category="list-text">Copiez le fichier téléchargé sur le serveur SnapCenter pour activer la fonctionnalité MFA.</block>
@@ -1570,16 +1565,12 @@
   <block id="696ac2aea44e94108d138faca1e6061a" category="list-text">À l'aide de la session PowerShell, générez le fichier de métadonnées SnapCenter MFA à l'aide de l'applet de commande _New-SmMultifactorAuthenticationMetadata -path_.</block>
   <block id="c82bb0422af1b29a8b9694bbfe3ebe9e" category="paragraph">Le paramètre PATH spécifie le chemin d'enregistrement du fichier de métadonnées MFA sur l'hôte du serveur SnapCenter.</block>
   <block id="56fcee91de3134d2db0d32a05335e432" category="list-text">Copiez le fichier généré sur l'hôte AD FS pour configurer SnapCenter en tant qu'entité client.</block>
-  <block id="9268a48919705f415838693aa4146e28" category="list-text">Activez l'authentification multifacteur pour le serveur SnapCenter à l'aide de l'applet de commande _set-SmMultiFactorAuthentication -Enable -Path_.</block>
   <block id="588a899e5cfd7ee10458176f79204605" category="paragraph">Le paramètre PATH spécifie l'emplacement du fichier xml de métadonnées MFA AD FS, qui a été copié sur le serveur SnapCenter à l'étape 3.</block>
-  <block id="b47bdbc8d57f844fea0134ffbecf2242" category="list-text">(Facultatif) Vérifiez l'état et les paramètres de la configuration MFA à l'aide de la commande _Get-SmMultiFactorAuthentication_ cmdlet.</block>
   <block id="9e93c22d2a1e4426ec1fd94bd4ac31b3" category="list-text">Accédez à la console de gestion Microsoft (MMC) et effectuez les opérations suivantes :</block>
   <block id="9bcb5adfefb899867ed5b11f042b98db" category="list-text">Cliquez sur *fichier* &gt; *Ajouter/Supprimer Snapin*.</block>
   <block id="cf424f2e43207d2c78b3d27a5dc0fda2" category="list-text">Cliquez sur *Console Root* &gt; *Certificates – local Computer* &gt; *Personal* &gt; *Certificates*.</block>
   <block id="b245a32518063d47ab60cd9ae65b7937" category="list-text">Cliquez avec le bouton droit de la souris sur le certificat d'autorité de certification lié à SnapCenter, puis sélectionnez *toutes les tâches* &gt; *gérer les clés privées*.</block>
   <block id="39b5fcc1b0398cd4cdbf088d9851aa36" category="list-text">Sur l'assistant d'autorisations, effectuez les opérations suivantes :</block>
-  <block id="cd55bfd42602b8f720a9d41caf148f78" category="list-text">Cliquez sur *Ajouter*</block>
-  <block id="fc4f9883b30f507feb5ab0b4d42267cd" category="list-text">Cliquez sur *emplacements* et sélectionnez l'hôte concerné (haut de la hiérarchie)</block>
   <block id="198e6981b37af309244a71441c5344c9" category="list-text">Cliquez sur *OK* dans la fenêtre contextuelle *emplacements*.</block>
   <block id="80f7b3672de7c3d1051cd5ee2c883f05" category="list-text">Dans le champ Nom d'objet, entrez ‘IIS_IUSRS’, puis cliquez sur *vérifier les noms* et cliquez sur *OK*.</block>
   <block id="576824a9a44254550a67ab8aab39ac32" category="paragraph">Si la vérification a réussi, cliquez sur *OK*.</block>
@@ -1587,38 +1578,29 @@
   <block id="90fa18d048bbd4d789b594ebceeb2490" category="list-text">Cliquez avec le bouton droit de la souris sur *fiducies de partie de confiance* &gt; *Ajouter confiance de partie de confiance* &gt; *début*.</block>
   <block id="0179eedc054410462409658b0bad268c" category="list-text">Sélectionnez la deuxième option, parcourez le fichier de métadonnées MFA SnapCenter et cliquez sur *Suivant*.</block>
   <block id="b6312d7d51f31ed2e0c8dc5372435335" category="list-text">Spécifiez un nom d'affichage et cliquez sur *Suivant*.</block>
-  <block id="0e94f80e83724112f00526866ff5106f" category="list-text">Choisissez la stratégie de contrôle d'accès et cliquez sur *Suivant*.</block>
-  <block id="148d7f6f40daf98c2955bdd9fe18e6c1" category="list-text">Définissez les paramètres par défaut dans l'onglet suivant.</block>
   <block id="0c43eee88d95f645135455225ef45492" category="paragraph">SnapCenter se reflète désormais comme une personne de confiance avec le nom d'affichage fourni.</block>
   <block id="72636fa45db48574ba9c546fdd1db0a8" category="list-text">Sélectionnez le nom et effectuez les opérations suivantes :</block>
   <block id="fcfb637a4b496a9a140b628cdb573932" category="list-text">Cliquez sur *Modifier la politique d'émission des demandes de remboursement*.</block>
   <block id="082c51e92370324bc62e7c80c44d8941" category="list-text">Cliquez sur *Ajouter règle* et cliquez sur *Suivant*.</block>
-  <block id="6def5028f1988fc94fac52ad11230808" category="list-text">Spécifiez un nom pour la règle de sinistre</block>
   <block id="894da100f84831f7c70c6bfa7616298a" category="list-text">Sélectionnez *Active Directory* comme magasin d'attributs.</block>
   <block id="7fdc58355431a6a3d9515f7519f55a21" category="list-text">Sélectionnez l'attribut *User-principal-Name* et le type de réclamation sortant comme *Name-ID*.</block>
   <block id="adfd9f210cddba9223539ba1793c20cb" category="list-text">Exécutez les commandes PowerShell suivantes sur le serveur ADFS.</block>
-  <block id="ac4be3bbcd220f4cca6269e289646cd3" category="paragraph">_Set-AdfsRelyingPartyTrust -TargetName '&lt;Afficher le nom de la partie de confiance &gt;' -SigningCertificateRevocationCheck None_</block>
-  <block id="573e4455d62a0e745b09afd6c4db34f0" category="paragraph">_Set-AdfsRelyingPartyTrust -TargetName '&lt;Afficher le nom de la partie de confiance &gt;' -EncryptionCertificateRevocationCheck None_</block>
   <block id="06a6a46ff24f4c0f682d4804aaf90175" category="list-text">Procédez comme suit pour confirmer que les métadonnées ont été importées avec succès.</block>
   <block id="c3613ef2b11238bd320ee942d11e6fe4" category="list-text">Cliquez avec le bouton droit de la souris sur la confiance de la partie de confiance et sélectionnez *Propriétés*.</block>
   <block id="35602ea96136092b8b885fe1ef749873" category="list-text">Assurez-vous que les champs points finaux, identificateurs et Signature sont renseignés.</block>
   <block id="907fe6bfcd498fe3e561f7fb3ee67c89" category="paragraph">La fonctionnalité MFA de SnapCenter peut également être activée au moyen d'API REST.</block>
-  <block id="1958e9c22cb352dba19d476e05b4a53b" category="paragraph">Après l'activation, la mise à jour ou la désactivation des paramètres MFA dans SnapCenter, fermez tous les onglets du navigateur et rouvrez un navigateur pour vous reconnecter. Ceci efface les cookies de session existants ou actifs.</block>
   <block id="442ed19a31ac1f651ba7bf07effe122c" category="inline-link-macro">La connexion SnapCenter sous plusieurs onglets affiche une erreur MFA</block>
   <block id="aeb89440d41f10fd9cc43ab75d800138" category="section-title">Mettre à jour les métadonnées AD FS MFA</block>
   <block id="19b3ff63dd3f3b6c1e3e48e8b3be6141" category="paragraph">Vous devez mettre à jour les métadonnées AD FS MFA dans SnapCenter en cas de modification du serveur AD FS, telles que la mise à niveau, le renouvellement du certificat CA, la reprise sur incident, etc.</block>
   <block id="2a18eff05051b9c720a786193ade4742" category="list-text">Copiez le fichier téléchargé sur le serveur SnapCenter pour mettre à jour la configuration MFA.</block>
   <block id="0129ab4e23da78e3b3d44732592d15ea" category="list-text">Mettez à jour les métadonnées AD FS dans SnapCenter en exécutant l'applet de commande suivante :</block>
-  <block id="16c05d08e46f0d446d2623a535219dd1" category="paragraph">_Set-SmMultiFactorAuthentication -Path &lt;location du fichier xml de métadonnées ADSP MFA&gt;_</block>
   <block id="97088f26ec75cb4d55c4fe5eeb3b62b4" category="section-title">Mettre à jour les métadonnées MFA de SnapCenter</block>
   <block id="ac82039d46e3be923c813d3d4c5456e4" category="paragraph">Vous devez mettre à jour les métadonnées MFA SnapCenter dans AD FS en cas de modification du serveur ADFS, comme la réparation, le renouvellement du certificat CA, la reprise sur incident, etc.</block>
   <block id="56ec825045a003fc115765658ea8b639" category="list-text">Cliquez sur *confiance de la partie de confiance*.</block>
   <block id="83e84b83a6a686044df5e13021693e95" category="list-text">Cliquez avec le bouton droit de la souris sur la confiance de la partie de confiance créée pour SnapCenter et cliquez sur *Supprimer*.</block>
   <block id="d929cc2f30ed7ebb91266d0b79b5f2cf" category="paragraph">Le nom défini par l'utilisateur de la confiance de la partie utilisatrice s'affiche.</block>
   <block id="18231d11def74e66e747d2eb30fc1c50" category="list-text">Activez l'authentification multifacteur (MFA).</block>
-  <block id="7c83e4b143b42aa42696c765109a8cc2" category="paragraph">Reportez-vous à <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block></block>
   <block id="a606674f3f6a9cee6f0ddf2eef03b07b" category="section-title">Désactivation de l'authentification multifacteur (MFA)</block>
-  <block id="3ed7d0eb5098b6db6af6c5b3eb2ce30f" category="paragraph">Désactivez l'authentification multifacteur et nettoyez les fichiers de configuration créés lorsque l'authentification multifacteur a été activée à l'aide de l'applet de commande _set-SmMultiFactorAuthentication -Disable_.</block>
   <block id="4f208af6a990c3a6dbb3b1a7f78ab5d4" category="summary">Pour configurer un partage SMB3 sur un SVM, vous pouvez utiliser l'interface utilisateur SnapCenter ou les applets de commande PowerShell.</block>
   <block id="61e81eb53b72fd5418e7a2bd125c8686" category="doc">Création et gestion de partages SMB</block>
   <block id="e716be3faae541eba0074c1e65cdb45f" category="cell">*Meilleure pratique:* l'utilisation des applets de commande est recommandée car elle vous permet de tirer parti des modèles fournis avec SnapCenter pour automatiser la configuration du partage.</block>
@@ -3918,13 +3900,9 @@
   <block id="3e1681ef9d874ce4b60e8af499ec495a" category="paragraph">Même avec une ressource largement utilisée, il n'est pas nécessaire d'exécuter une sauvegarde complète plus d'une fois ou deux fois par jour. Par exemple, des sauvegardes régulières du journal de transactions peuvent suffire pour vous assurer que vous disposez des sauvegardes dont vous avez besoin. Plus vous sauvegardez des bases de données, plus le nombre de journaux de transaction que SnapCenter doit utiliser au moment de la restauration est élevé, ce qui accélère les opérations de restauration.</block>
   <block id="a9c04949b14fd7574e1168207d5adc46" category="paragraph">La fréquence de sauvegarde (fréquence d'exécution des sauvegardes), appelée _schedule type_ pour certains plug-ins, fait partie d'une configuration de stratégie. Vous pouvez sélectionner la fréquence de sauvegarde horaire, quotidienne, hebdomadaire ou mensuelle de la police. Si vous ne sélectionnez aucune de ces fréquences, la règle créée est une stratégie à la demande uniquement. Vous pouvez accéder aux stratégies en cliquant sur *Paramètres* &gt; *stratégies*.</block>
   <block id="a54ab9a48da734a10b9ef93ce5ee4d05" category="doc">Conventions de nom de sauvegarde du plug-in pour SQL Server</block>
-  <block id="93cc1cc2daa04d11bc708425a3170d4d" category="summary">Lorsque le plug-in SnapCenter pour SQL Server est en panne, vous pouvez effectuer une restauration en effectuant quelques étapes manuelles.</block>
   <block id="dc894d281805d8d1c222c04f94404928" category="doc">Reprise après incident du plug-in SnapCenter pour SQL Server</block>
-  <block id="37ffa79bbd2952586645cff30d8eba05" category="paragraph">Lorsque le plug-in SnapCenter pour SQL Server est en panne, basculez vers un autre hôte SQL et restaurez les données en suivant quelques étapes.</block>
   <block id="7a1a91fe74f7d2f66d8eabb50e547d5f" category="list-text">L'hôte secondaire doit avoir le même système d'exploitation, l'application et le même nom d'hôte que l'hôte principal.</block>
-  <block id="6ed11385ad389d901916b25a0b21aef9" category="list-text">Placez le plug-in SnapCenter pour SQL Server sur un autre hôte à l'aide de la page *Ajouter hôte* ou *Modifier hôte*.</block>
   <block id="51929aa5ac08be2aca8dda46b9a095b1" category="inline-link-macro">Gérer les hôtes</block>
-  <block id="fc11fadbfb2b2b87f8c260a133d75ad2" category="paragraph"><block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block></block>
   <block id="8bcdd66a940ad127d312a11316df6669" category="list-text">Sélectionnez l'hôte dans la page *hosts* pour modifier et installer le plug-in SnapCenter pour SQL Server.</block>
   <block id="2a1a78f96ec6b03f3ccdd06b708e6f1a" category="list-text">(Facultatif) remplacez les fichiers de configuration du plug-in SnapCenter pour SQL Server de la sauvegarde de reprise après sinistre vers la nouvelle machine.</block>
   <block id="9f2c74676fb5b339a2fd4a0ccd75bd1e" category="list-text">Importez les planifications Windows et SQL à partir du dossier du plug-in SnapCenter pour SQL Server à partir de la sauvegarde DR.</block>
@@ -5423,19 +5401,8 @@
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">Notes de mise à jour</block>
   <block id="3d94bcd4444e768c821c4af7214a7a73" category="summary">Vous pouvez restaurer le serveur SnapCenter en cas d'incident, par exemple en cas de corruption des ressources ou de panne serveur, à l'aide de la fonctionnalité de reprise après incident de SnapCenter.</block>
   <block id="e413eba49b15917b0c9dbf2620f3e66e" category="doc">Reprise sur incident</block>
-  <block id="948b4d6914f4248c5e96a053c1d7ae63" category="paragraph">Vous pouvez restaurer le serveur SnapCenter en cas d'incident, par exemple en cas de corruption des ressources ou de panne serveur, à l'aide de la fonctionnalité de reprise après incident de SnapCenter. Vous pouvez restaurer le référentiel SnapCenter, les planifications de serveur et les composants de configuration de serveur.</block>
-  <block id="685c106cf385da9da7d774e7b6cddea8" category="paragraph">Vous pouvez également restaurer le plug-in SnapCenter pour SQL Server et le plug-in SnapCenter pour le stockage SQL Server.</block>
-  <block id="7b7cd2b9067ed1c82323fb382c11f370" category="paragraph">Les types de reprise après sinistre (DR) sont les suivants :</block>
-  <block id="1636245b9e25bb600e733929465df761" category="list-text">*Reprise après incident du serveur SnapCenter*</block>
-  <block id="8fa1aa495cfe5fdc95202bda34adafcd" category="paragraph">Les données du serveur SnapCenter seront sauvegardées et récupérées que tout plug-in ait été ajouté ou géré par SnapCenter Server.</block>
   <block id="db73b4bff7f9b92f00d36e2a3fa01152" category="paragraph">Le serveur SnapCenter secondaire doit être installé sur le même répertoire d'installation et sur le même port que le serveur SnapCenter principal.</block>
-  <block id="d1e90d50eb139f0fd560c55b6bf37057" category="paragraph">Pour l'authentification multifacteur (MFA), lorsque la restauration de reprise après incident est effectuée pour SnapCenter Server, fermez tous les onglets du navigateur et rouvrez un navigateur pour vous reconnecter. Ceci efface les cookies de session existants ou active et garantit la mise à jour des données de configuration correctes.</block>
   <block id="eb3b9ec963eb618621a779602a309514" category="inline-link-macro">Workflows d'API REST pour la reprise après incident d'un serveur SnapCenter</block>
-  <block id="e667e897b20b02966f899ad38ce1ba39" category="paragraph"><block ref="e667e897b20b02966f899ad38ce1ba39" category="inline-link-macro-rx"></block></block>
-  <block id="30c24db21140190d4033af17ccd83090" category="list-text">*Plug-in SnapCenter et reprise après incident de stockage*</block>
-  <block id="0554390053842752b7d1d3059c743b32" category="paragraph">La reprise après incident est uniquement prise en charge pour le plug-in SnapCenter pour SQL Server. Lorsque le plug-in SnapCenter pour SQL Server est en panne, basculez vers un autre hôte SQL et restaurez les données en suivant quelques étapes.</block>
-  <block id="47046db67c1574cb29142c431fb68f1f" category="paragraph"><block ref="47046db67c1574cb29142c431fb68f1f" category="inline-link-macro-rx"></block></block>
-  <block id="196a4a3e452864b82a133adc0c1c5228" category="paragraph">SnapCenter réplique les données à l'aide de la technologie ONTAP SnapMirror. Celui-ci peut servir à répliquer des données vers un site secondaire pour la reprise après incident et à les synchroniser. Un basculement peut être initié en casser la relation de réplication dans SnapMirror. En cas de rétablissement, la synchronisation peut être inversée et les données du site de reprise sur incident peuvent être répliquées à nouveau vers l'emplacement principal.</block>
   <block id="34c24f1d15647adba6dcde96f1a84b95" category="summary">Vous pouvez utiliser des API REST pour effectuer plusieurs opérations de gestion du SnapCenter. Les API REST sont exposées via la page Web de swagger. Vous pouvez accéder à la page Web swagger pour afficher la documentation de l'API REST, ainsi que pour lancer manuellement un appel d'API. Vous pouvez utiliser des API REST pour gérer votre serveur SnapCenter ou votre hôte SnapCenter vSphere.</block>
   <block id="c8e5654e4bfafe9239ad785c178eec35" category="doc">Automatisation d'SnapCenter avec les API REST</block>
   <block id="4da05a98f7d43c6ecf97005050dd8b4c" category="cell">Les API REST pour...</block>
@@ -7955,7 +7922,6 @@
   <block id="cc12c6014b5ec85f58b6fb31a26a66f7" category="section-title">Configurez les connexions du système de stockage</block>
   <block id="1d765f352f6f5ec7cfa899be682026d8" category="section-title">Configurez Run as Credentials pour installer le plug-in pour Microsoft SQL Server</block>
   <block id="10976e15f1cbbbbb65eaf072d358489b" category="section-title">Ajoutez un hôte et installez le plug-in pour Microsoft SQL Server</block>
-  <block id="a066d76a64fcb852398ad527b862a806" category="paragraph">Pour obtenir des informations de dépannage, reportez-vous à la section<block ref="f832f6c8f890b8aacf5c6ca5adeb731b" category="inline-link-rx"></block>.</block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">Échec de la mise à niveau ou de l'installation de SnapCenter pour les systèmes hérités qui ne disposent pas d'une connexion Internet</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>.</block>
   <block id="0cf3e7b313a6954f7aed921dae42be39" category="list-text"><block ref="36ad9b98fe40ea7db5d149de26f34551" prefix="" category="inline-code"></block></block>
@@ -7964,4 +7930,44 @@
   <block id="198803c71459bc222adc91a3d7048f01" category="paragraph">L'option *utiliser le répertoire de journaux personnalisé* n'est disponible que si vous avez sélectionné *Restaurer la base de données sur un autre hôte* ou *Restaurer la base de données à l'aide des fichiers de base de données existants*. Vous pouvez également utiliser le chemin partagé mais vous assurer que le chemin est accessible par l'utilisateur SQL.</block>
   <block id="17049c1cdf73c2b4b41219f99ace3f81" category="list-text">Vous devez avoir *bash* comme shell par défaut pour l'installation du plug-in.</block>
   <block id="b3fae7a36581789e46e17a83505c11b3" category="paragraph">Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez attribuer manuellement les autorisations d'exécution aux répertoires prescripteur et postscript.</block>
+  <block id="a8d03bc12fa704a66e02c6802c0766f8" category="summary">Lorsque le plug-in SnapCenter pour SQL Server est arrêté, effectuez les étapes manuelles suivantes pour restaurer le plug-in.</block>
+  <block id="4846f8fb7f3c4d1460329ca7b77ea8ea" category="paragraph">Lorsque le plug-in SnapCenter pour SQL Server est arrêté, procédez comme suit pour basculer vers un autre hôte SQL et restaurer les données.</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">Ce dont vous avez besoin</block>
+  <block id="112fa4c1243fe1af31b4cf57c26ced23" category="list-text">Placez le plug-in SnapCenter pour SQL Server sur un autre hôte à l'aide de la page *Ajouter hôte* ou *Modifier hôte*. Voir <block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Étapes</block>
+  <block id="d13de4a83d7b44c2e65495def8ef1c7b" category="paragraph-title">Pour en savoir plus</block>
+  <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph">Voir la <block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block> vidéo.</block>
+  <block id="94c4200231b3891f27561beda5d4e31f" category="doc">Reprise d'activité SnapCenter</block>
+  <block id="1da5a00a663269fc81a2098b0d91e4d6" category="paragraph">Vous pouvez restaurer le serveur SnapCenter en cas d'incidents tels que la corruption de ressources ou la panne du serveur grâce à la fonction de reprise après incident SnapCenter. Vous pouvez restaurer le référentiel SnapCenter, les planifications de serveur et les composants de configuration de serveur. Vous pouvez également restaurer le plug-in SnapCenter pour SQL Server et le plug-in SnapCenter pour le stockage SQL Server.</block>
+  <block id="68e856b5be6554a8e4ee8b393b327b0b" category="paragraph">Cette section décrit les deux types de reprise sur incident dans SnapCenter :</block>
+  <block id="4bafae51c760477df325c1b3815da1aa" category="list-title">Reprise après incident du serveur SnapCenter</block>
+  <block id="4561e7fcd617a663505d8992af88d242" category="list-text">Les données du serveur SnapCenter sont sauvegardées et peuvent être restaurées sans ajout ou gestion de plug-in au serveur SnapCenter.</block>
+  <block id="3dbcd484a9ede0a6feaf76cb9d8a6868" category="list-text">Pour l'authentification multifacteur (MFA), pendant la reprise sur incident du serveur SnapCenter, fermez tous les onglets du navigateur et rouvrez un navigateur pour vous reconnecter. Ceci effacera les cookies de session existants ou actifs et mettra à jour les données de configuration correctes.</block>
+  <block id="20383b74f2f17a4c5b8bc914455eed3d" category="list-text">La fonctionnalité de reprise après incident SnapCenter utilise les API REST pour sauvegarder SnapCenter Server. Voir <block ref="e667e897b20b02966f899ad38ce1ba39" category="inline-link-macro-rx"></block>.</block>
+  <block id="717bb61127675bdfbac9d09d06c4bd89" category="paragraph-title">Plug-in SnapCenter et reprise après incident du stockage</block>
+  <block id="a3c30c25a1e544471bac224e74207425" category="paragraph">La reprise après incident est uniquement prise en charge pour le plug-in SnapCenter pour SQL Server. Lorsque le plug-in SnapCenter pour SQL Server est en panne, basculez vers un autre hôte SQL et restaurez les données en suivant quelques étapes. Voir <block ref="47046db67c1574cb29142c431fb68f1f" category="inline-link-macro-rx"></block>.</block>
+  <block id="9fbd6c9c898d3b24f2f3cfa67bb8c2b2" category="paragraph">SnapCenter réplique les données à l'aide de la technologie ONTAP SnapMirror. Celui-ci peut servir à répliquer des données vers un site secondaire pour la reprise après incident et à les synchroniser. Un basculement peut être initié en casser la relation de réplication dans SnapMirror. En cas de rétablissement, la synchronisation peut être inversée et les données du site de reprise sur incident peuvent être répliquées à nouveau vers l'emplacement principal.</block>
+  <block id="d4dbc002513d2615e9e9009874835b86" category="doc">Gestion de l'authentification multifacteur (MFA)</block>
+  <block id="eba5e183c4f404bb057076dc4ea10e64" category="paragraph">Cette rubrique décrit comment gérer la fonctionnalité d'authentification multifacteur (MFA) dans le serveur AD FS (Active Directory Federation Service) et le serveur SnapCenter.</block>
+  <block id="8e5ca8947d2ccd889e10c25276502da0" category="section-title">Prise en charge de l'authentification multifacteur (MFA)</block>
+  <block id="cf9e251e098e2f47bcb8e04e9e5ff28a" category="paragraph">Cette rubrique décrit comment activer la fonctionnalité MFA dans le serveur AD FS (Active Directory Federation Service) et le serveur SnapCenter.</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">Description de la tâche</block>
+  <block id="1f6600010f63592c168af66c387c499f" category="list-text">Les informations concernant les paramètres qui peuvent être utilisés avec l'applet de commande et leurs descriptions peuvent être obtenues en exécutant<block ref="b306feeed6ddda97d08ef1f2a0ba62d9" prefix=" " category="inline-code"></block>. Vous pouvez également voir<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>.</block>
+  <block id="4ceb1d36799251586ba061a0c2b9a7a8" category="list-text">Vous devez disposer d'un service d'authentification multifacteur pris en charge par AD FS, tel que Azure MFA, Cisco Duo, etc.</block>
+  <block id="090c9bbbd344aa7f6441901f2b8792f8" category="list-text">Garantit que les communications ADFS-F5 ne se rompez pas, car les certificats auto-signés sont uniques au niveau du nœud.</block>
+  <block id="30c7dffa036eadcc0342139cec28fa70" category="list-text">Téléchargez le fichier de métadonnées de la fédération AD FS à partir de <block ref="a9571343becbc81f25857902551c1e72" category="inline-link-rx"></block> FQDN&gt;/FederationMetadata/2007-06/FederationMetadata.xml ».</block>
+  <block id="aae311364aff04070e63a86b4fe0296f" category="list-text">Activez MFA pour SnapCenter Server à l'aide du<block ref="1254f269a5dd80690678b4df201e88a5" prefix=" " category="inline-code"></block> applet de commande.</block>
+  <block id="13cb11c142fa4483919ae32dd2a04113" category="list-text">(Facultatif) Vérifiez l'état et les paramètres de configuration MFA à l'aide de<block ref="d99b90475295700e9775deadcb723ac6" prefix=" " category="inline-code"></block> applet de commande.</block>
+  <block id="67fadfdbaf1af58c1560a82586252863" category="list-text">Cliquez sur *emplacements* et sélectionnez l'hôte concerné (en haut de la hiérarchie).</block>
+  <block id="35adcaf3c3f08c3b4becd894c0fafea3" category="list-text">Choisissez une stratégie de contrôle d'accès, le cas échéant, et cliquez sur *Suivant*.</block>
+  <block id="ba119cc36777aa5836242da63619667d" category="list-text">Sélectionnez les paramètres par défaut dans l'onglet suivant.</block>
+  <block id="55257e6ccdd63f9f4ab886869cbbf5cf" category="list-text">Spécifiez un nom pour la règle de sinistre.</block>
+  <block id="6e98d99dca8f4518c9e7567d19ce708c" category="paragraph"><block ref="513dca79729c465b5c3001bf26148c0c" prefix="" category="inline-code"></block></block>
+  <block id="a339a650564d067ea1ade511a61340e3" category="paragraph"><block ref="9111d0f1b6d8fdece369a21eacf0663f" prefix="" category="inline-code"></block></block>
+  <block id="e5111e1a8d09cf3b9cc87da0144221fb" category="list-text">Fermez tous les onglets du navigateur et rouvrez un navigateur pour effacer les cookies de session existants ou actifs, puis reconnectez-vous.</block>
+  <block id="4df2c26ea6368491393f05baf8841e6d" category="paragraph">Pour obtenir des informations de dépannage. voir <block ref="46642a8ad62fd1a061e94d6b7bf62dc5" category="inline-link-macro-rx"></block>.</block>
+  <block id="f668cd2acef670f8b213c6c785ddf8d6" category="paragraph"><block ref="7da21d8fe0787a3171af06722db1ee6f" prefix="" category="inline-code"></block></block>
+  <block id="0f5b112cebb37022dbfe2c80e388d605" category="paragraph">Voir <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>.</block>
+  <block id="a8d67928879d7cbd7d3c5d1b6d797736" category="list-text">Désactivez MFA et nettoyez les fichiers de configuration créés lorsque MFA a été activé à l'aide du<block ref="3f459b2c524cc44ef57664fd75d5c093" prefix=" " category="inline-code"></block> applet de commande.</block>
+  <block id="6bcc192d7209e867a0f8afd8938c62eb" category="sidebar">Gestion de l'authentification multifacteur (MFA)</block>
 </blocks>

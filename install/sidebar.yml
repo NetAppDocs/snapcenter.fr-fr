@@ -24,7 +24,7 @@ entries:
     url: "/install/concept_authentication_methods_for_your_credentials.html"
   - title: Connexions et identifiants de l'ordinateur virtuel de stockage
     url: "/install/concept_svm_connections_and_credentials.html"
-  - title: Activer l'authentification multifacteur (MFA)
+  - title: Gestion de l'authentification multifacteur (MFA)
     url: "/install/enable_multifactor_authentication.html"
 - title: Installez le serveur SnapCenter
   url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"

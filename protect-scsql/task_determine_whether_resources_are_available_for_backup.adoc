@@ -13,8 +13,7 @@ summary: 'Les ressources sont les bases de données, les instances d"application
 [role="lead"]
 Les ressources sont les bases de données, les instances d'application, les groupes de disponibilité et des composants similaires gérés par les plug-ins que vous avez installés. Vous pouvez ajouter ces ressources aux groupes de ressources de sorte que vous puissiez effectuer des tâches de protection des données, mais vous devez d'abord identifier les ressources disponibles. La détermination des ressources disponibles permet également de vérifier que l'installation du plug-in s'est déroulée correctement.
 
-*Ce dont vous aurez besoin*
-
+.Ce dont vous avez besoin
 * Vous devez avoir déjà terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la création de connexions au système de stockage et l'ajout d'informations d'identification.
 * Pour découvrir les bases de données Microsoft SQL, l'une des conditions suivantes doit être remplie.
 +
@@ -30,8 +29,7 @@ Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vs
 * Si l'hôte est ajouté avec GMSA et si le GMSA dispose de privilèges d'ouverture de session et d'administrateur système, le GMSA sera utilisé pour se connecter à l'instance SQL.
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Vous ne pouvez pas sauvegarder les bases de données lorsque l'option *Etat général* de la page Détails est définie sur non disponible pour la sauvegarde. L'option *Etat général* est définie sur non disponible pour la sauvegarde lorsque l'un des éléments suivants est vrai :
 
 * Les bases de données ne se trouvent pas sur un LUN NetApp.
@@ -48,8 +46,7 @@ Par exemple, si un utilisateur dispose uniquement d'un accès en vue à la base 
 
 NOTE: SnapCenter ne peut sauvegarder la base de données primaire que si vous avez une configuration de groupe de disponibilité sous SQL Server Standard Edition.
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Database*, *instance* ou *Groupe de disponibilité* dans la liste déroulante *View*.
 +
@@ -81,4 +78,5 @@ Vous ne pouvez pas effectuer d'opérations de protection des données sur une ba
 
 NOTE: Si vous avez activé une authentification SQL lors de la configuration des informations d'identification, l'instance découverte ou la base de données s'affiche avec une icône de cadenas rouge. Si l'icône de cadenas apparaît, vous devez spécifier les informations d'identification de l'instance ou de la base de données pour pouvoir ajouter l'instance ou la base de données à un groupe de ressources.
 
-Une fois que l'administrateur SnapCenter a affecté les ressources à un utilisateur RBAC, l'utilisateur RBAC doit se connecter et cliquer sur *Actualiser les ressources* pour afficher le dernier *Etat général* des ressources.
+. Une fois que l'administrateur SnapCenter a affecté les ressources à un utilisateur RBAC, l'utilisateur RBAC doit se connecter et cliquer sur *Actualiser les ressources* pour afficher le dernier *Etat général* des ressources.
+

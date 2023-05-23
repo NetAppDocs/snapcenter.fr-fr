@@ -13,24 +13,18 @@ summary: Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon vo
 [role="lead"]
 Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon votre environnement, les ressources peuvent être des instances de base de données ou des collections que vous souhaitez sauvegarder ou cloner.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la création de connexions au système de stockage et l'ajout d'informations d'identification.
-* Vous devez avoir créé un plug-in personnalisé.
-+
-link:concept_develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
-
+* Vous devez avoir link:concept_develop_a_plug_in_for_your_application.html["création d'un plug-in personnalisé pour votre application"].
 * Vous devez avoir chargé les plug-ins sur SnapCenter Server.
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Vous pouvez également ajouter des ressources pour les applications MySQL et DB2. Ces plug-ins peuvent être téléchargés depuis le https://automationstore.netapp.com/home.shtml["Stockage NetApp Storage Automation Store"].
 
-*Étapes*
-
-. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
-. Dans la page Ressources, cliquez sur *Ajouter ressource*.
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Ajouter une ressource*.
 . Dans la page Détails de la ressource, effectuez les opérations suivantes :
 +
 |===
@@ -73,9 +67,9 @@ Chemins de montage
 Entrez les chemins de montage sur lesquels la ressource est montée. Cette option est applicable uniquement à un hôte Windows.
 
 |===
-. Dans la page Entitetour Storage Footprint, sélectionnez un système de stockage et choisissez un ou plusieurs volumes, LUN et qtrees, puis cliquez sur *Save*.
+. Sur la page fournir l'empreinte du stockage, sélectionnez un système de stockage, choisissez un ou plusieurs volumes, LUN et qtrees, puis sélectionnez *Enregistrer*.
 +
-Facultatif : cliquez sur le bouton image:../media/add_policy_from_resourcegroup.gif[""] Icône pour ajouter d'autres volumes, LUN et qtrees à partir d'autres systèmes de stockage.
+Facultatif : sélectionnez le image:../media/add_policy_from_resourcegroup.gif["Icône plus"] Icône pour ajouter d'autres volumes, LUN et qtrees à partir d'autres systèmes de stockage.
 
 +
 
@@ -95,18 +89,16 @@ NOTE: Assurez-vous que les mots HÔTE et PORT sont en majuscules.
 +
 image::../media/resource_settings.gif[paramètres de ressources]
 
-. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Passez en revue le résumé, puis sélectionnez *Terminer*.
 
 
-*Résultat*
-
+.Résultat
 Les ressources s'affichent avec des informations telles que le type, le nom de l'hôte ou du cluster, les groupes de ressources et les stratégies associés et l'état global.
 
 
 IMPORTANT: Vous devez actualiser les ressources si les bases de données sont renommées en dehors de SnapCenter.
 
-*Après la fin*
-
+.Une fois que vous avez terminé
 Si vous souhaitez donner accès aux ressources à d'autres utilisateurs, l'administrateur SnapCenter doit attribuer des ressources à ces utilisateurs. Cela permet aux utilisateurs d'effectuer les actions pour lesquelles ils ont des autorisations sur les ressources qui leur sont assignées.
 
 Après avoir ajouté les ressources, vous pouvez modifier les détails de la ressource. Si des sauvegardes sont associées à une ressource de plug-in personnalisée, les champs suivants ne peuvent pas être modifiés : nom de ressource, type de ressource et nom d'hôte.

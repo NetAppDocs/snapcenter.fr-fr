@@ -1,0 +1,52 @@
+---
+permalink: protect-scsql/task-install-snapcenter-plug-in-for-sql-server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Fournit des instructions pour installer le plug-in SnapCenter pour Microsoft SQL Server. 
+---
+= Installez le plug-in SnapCenter pour Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fournit un ensemble condensé d'instructions d'installation pour le plug-in SnapCenter pour Microsoft SQL Server.
+
+
+
+== Étape 1 : configurer Exécuter en tant qu'informations d'identification pour installer le plug-in pour Microsoft SQL Server
+
+. Dans le volet de gauche, cliquez sur *Paramètres > informations d'identification > Nouveau*.
+. Entrez les informations d'identification.
++
+Pour un format de nom d'utilisateur d'administration de domaine intégré, utilisez : _NetBIOS\<nom d'utilisateur>_ ou _<nom d'utilisateur>@<domaine>_ ou _<domaine FQDN>\<nom d'utilisateur>_.
+
++
+Pour un format de nom d'utilisateur d'administration local intégré, utilisez _<nom d'utilisateur>_.
+
+
+
+
+
+== Étape 2 : ajoutez un hôte et installez le plug-in pour Microsoft SQL Server
+
+. Dans le volet gauche de l'interface graphique SnapCenter, cliquez sur *hôtes > hôtes gérés > Ajouter*.
+. Dans la page hosts de l'assistant, effectuez les opérations suivantes :
++
+.. Type d'hôte : sélectionnez le type d'hôte Windows.
+.. Nom d'hôte : utilisez l'hôte SQL ou spécifiez le FQDN d'un hôte Windows dédié.
+.. Informations d'identification : sélectionnez le nom d'identification valide de l'hôte que vous avez créé ou créez de nouvelles informations d'identification.
+
+
+. Dans la section Sélectionner les plug-ins à installer, sélectionnez *Microsoft SQL Server*.
+. Cliquez sur *plus d'options* pour spécifier les détails suivants :
++
+.. Port : conservez le numéro de port par défaut ou spécifiez le numéro de port.
+.. Chemin d'installation : le chemin par défaut est _C:\Program Files\NetApp\SnapCenter_. Vous pouvez éventuellement personnaliser le chemin.
+.. Ajouter tous les hôtes du cluster : cochez cette case si vous utilisez SQL dans WSFC.
+.. Ignorer les vérifications de préinstallation : cochez cette case si vous avez déjà installé les plug-ins manuellement ou si vous ne souhaitez pas vérifier si l'hôte répond aux exigences d'installation du plug-in.
+
+
+. Cliquez sur *soumettre*.
+

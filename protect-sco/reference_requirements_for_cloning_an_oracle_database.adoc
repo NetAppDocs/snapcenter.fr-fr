@@ -86,4 +86,5 @@ nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
 nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
 }
 ....
+* Vous devez vous assurer que la LUN n'est pas mappée sur l'hôte AIX à l'aide d'iGroup composé de protocoles mixtes iSCSI et FC. Pour plus d'informations, voir https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["L'opération échoue avec une erreur Impossible de détecter le périphérique pour la LUN"^].
 

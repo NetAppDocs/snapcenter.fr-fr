@@ -8124,4 +8124,6 @@
   <block id="6c0673b42ebb5475d507b9bee432a6e1" category="image-alt">Capture d'écran des critères de sélection et de la saisie du numéro de série.</block>
   <block id="e54115ab5aedb070ef9c763b003e67f1" category="section-title">Étape 5 : ajoutez une licence basée sur le contrôleur</block>
   <block id="392e651b70e91641288713738f526ce0" category="section-title">Étape 6 : supprimez la licence d'essai</block>
+  <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">L'opération échoue avec une erreur Impossible de détecter le périphérique pour la LUN</block>
+  <block id="24642a08e354f43168ca4f1178850f84" category="list-text">Vous devez vous assurer que la LUN n'est pas mappée sur l'hôte AIX à l'aide d'iGroup composé de protocoles mixtes iSCSI et FC. Pour plus d'informations, voir<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>.</block>
 </blocks>

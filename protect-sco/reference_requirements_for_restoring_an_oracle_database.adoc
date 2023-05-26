@@ -31,4 +31,5 @@ NOTE: Pour plus d'informations sur la modification du paramètre asm_diskstring,
 +
 Si les licences ne sont pas installées ou à jour, un message d'avertissement s'affiche. Si vous ignorez l'avertissement et continuez, la restauration à partir de RDM échoue.
 
+* Vous devez vous assurer que la LUN n'est pas mappée sur l'hôte AIX à l'aide d'iGroup composé de protocoles mixtes iSCSI et FC. Pour plus d'informations, voir https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["L'opération échoue avec une erreur Impossible de détecter le périphérique pour la LUN"^].
 

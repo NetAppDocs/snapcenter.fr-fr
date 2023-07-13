@@ -2,7 +2,7 @@
 permalink: admin/concept_overview_of_dashboard.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Dans le volet de navigation de SnapCenter gauche, le tableau de bord vous présente un premier aperçu de l"état de santé de votre système, y compris l"activité récente des tâches, les alertes, le récapitulatif de protection, l"efficacité et l"utilisation du stockage, l"état des tâches SnapCenter \(sauvegarde, clonage, restauration\), l"état de la configuration des hôtes de cluster Windows autonomes, Nombre de Storage Virtual machines \(SVM\) gérés par SnapCenter, et capacité de licence.' 
+summary: 'Dans le volet de navigation de gauche de SnapCenter, le tableau de bord fournit un premier aperçu de l"état de santé de votre système, notamment les activités récentes des tâches, les alertes, le résumé de la protection, l"efficacité et l"utilisation du stockage, l"état des tâches SnapCenter \(sauvegarde, clonage, restauration\), l"état de la configuration pour les hôtes de cluster autonomes et Windows, Nombre de SVM (Storage Virtual machine) gérés par SnapCenter, et capacité de licence.' 
 ---
 = Présentation du tableau de bord
 :allow-uri-read: 
@@ -263,7 +263,7 @@ Nombre d'hôtes où l'installation ou la désinstallation du plug-in est en cour
 La mosaïque capacité sous licence affiche des informations sur la capacité totale sous licence, la capacité utilisée, les alertes sur le seuil de capacité et les alertes d'expiration de licence pour les licences basées sur la capacité SnapCenter Standard.
 
 
-NOTE: Cet écran s'affiche uniquement si vous utilisez des licences basées sur la capacité standard SnapCenter sur des plateformes Cloud Volumes ONTAP ou ONTAP Select. Pour les plateformes FAS ou AFF, la licence SnapCenter est basée sur le contrôleur et sous licence pour une capacité illimitée. Aucune licence de capacité n'est requise.
+NOTE: Cet écran s'affiche uniquement si vous utilisez des licences basées sur la capacité standard SnapCenter sur des plateformes Cloud Volumes ONTAP ou ONTAP Select. Pour les plateformes FAS, AFF ou ASA (All SAN Array), la licence SnapCenter est basée sur le contrôleur et offre une capacité illimitée sous licence. En outre, aucune licence de capacité n'est requise.
 
 |===
 | État de la licence | Description 

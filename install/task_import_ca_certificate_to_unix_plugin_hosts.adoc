@@ -1,0 +1,31 @@
+---
+permalink: install/task_import_ca_certificate_to_unix_plugin_hosts.html 
+sidebar: sidebar 
+keywords: security,authentication,import CA certificates 
+summary: 'Vous devez importer le certificat de l"autorité de certification sur les hôtes du plug-in UNIX.' 
+---
+= Importez le certificat CA sur les hôtes du plug-in UNIX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez importer le certificat de l'autorité de certification sur les hôtes du plug-in UNIX.
+
+*À propos de cette tâche*
+
+* Vous pouvez gérer le mot de passe de la base de stockage de clés SPL et l'alias de la paire de clés signées CA utilisée.
+* Le mot de passe de la base de stockage de clés SPL et de tous les mots de passe alias associés à la clé privée doit être le même.
+
+
+*Étapes*
+
+. Vous pouvez récupérer le mot de passe par défaut du magasin de clés SPL dans le fichier de propriétés SPL. Il s'agit de la valeur correspondant à la clé `SPL_KEYSTORE_PASS`.
+. Modifiez le mot de passe du magasin de clés :
+`$ keytool -storepasswd -keystore keystore.jks`
+. Remplacez le mot de passe de tous les alias des entrées de clé privée du magasin de clés par le même mot de passe que celui utilisé pour le magasin de clés :
+`$ keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks`
+. Mettez à jour la même chose pour la clé SPL_KEYSTORE_PASS dans `spl.properties`` fichier.
+. Redémarrez le service après avoir modifié le mot de passe.
+

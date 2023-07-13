@@ -47,6 +47,10 @@ Vous ne pouvez pas installer le plug-in pour Windows sur un hôte Windows connec
 
 
 
+
+NOTE: SnapCenter ne prend pas en charge l'ajout du même hôte (hôte de plug-in) à SnapCenter si l'hôte fait déjà partie d'un groupe de travail et est modifié vers un autre domaine ou vice versa.
+Si vous souhaitez ajouter le même hôte, vous devez supprimer l'hôte de SnapCenter et l'ajouter à nouveau.
+
 *Étapes*
 
 . Dans le volet de navigation de gauche, cliquez sur *hosts*.

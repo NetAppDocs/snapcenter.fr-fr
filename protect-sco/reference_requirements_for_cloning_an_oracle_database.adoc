@@ -32,13 +32,11 @@ Pour plus d'informations sur la modification du paramètre asm_diskstring, repor
 ** L'hôte clone doit pouvoir détecter les LUN à partir du stockage primaire ou secondaire.
 +
 *** Si vous effectuez le clonage depuis le stockage primaire ou le stockage secondaire (Vault ou Mirror) vers un autre hôte, assurez-vous qu'une session iSCSI est soit établie entre le stockage secondaire et l'hôte secondaire, ou bien zonée correctement pour FC.
-+
-**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Guide d'installation et de configuration des utilitaires d'hôtes Linux"^]
-**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["Guide d'installation et de configuration des utilitaires hôtes AIX"^]
-
-
 *** Si vous effectuez un clonage depuis le stockage Vault ou Mirror vers le même hôte, assurez-vous qu'une session iSCSI est soit établie entre le stockage Vault ou Mirror et l'hôte, soit zonée correctement pour FC.
 *** Si vous effectuez le clonage dans un environnement virtualisé, assurez-vous qu'une session iSCSI est soit établie entre le stockage primaire ou secondaire et le serveur ESX qui héberge l'hôte secondaire, ou bien zonée correctement pour FC.
++
+Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/ontap-sanhost/["documentation des utilitaires hôtes"].
+
 
 
 ** Si la base de données source est une base de données ASM :

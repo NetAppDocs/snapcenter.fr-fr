@@ -41,9 +41,10 @@ Le type de licence que vous installez dépend de votre environnement.
  a| 
 Contrôleur SnapCenter standard
  a| 
-Requis pour les contrôleurs de stockage FAS ou AFF
+Requis pour les contrôleurs de stockage FAS, AFF ou All SAN Array (ASA)
 
-La licence SnapCenter Standard est basée sur le contrôleur et incluse dans le bundle Premium. Si vous disposez de la licence SnapManager Suite, vous bénéficiez également des droits de licence SnapCenter Standard. Si vous souhaitez installer SnapCenter sous forme d'essai avec les systèmes de stockage FAS ou AFF, vous pouvez obtenir une licence d'évaluation Premium Bundle en contactant l'ingénieur commercial.
+La licence SnapCenter Standard est basée sur le contrôleur et incluse dans le bundle Premium. Si vous disposez de la licence SnapManager Suite, vous bénéficiez également des droits de licence SnapCenter Standard.
+Si vous souhaitez installer SnapCenter en version d'essai avec des systèmes de stockage FAS, AFF ou ASA, vous pouvez obtenir une licence d'évaluation Premium Bundle en contactant l'ingénieur commercial.
 
 
 
@@ -85,7 +86,7 @@ NOTE: Il est recommandé, mais pas obligatoire, d'ajouter des licences SnapCente
 
 === Configuration requise pour l'hôte et le port
 
-Pour connaître la configuration minimale requise pour les plug-ins ONTAP et applicatifs, consultez https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^].
+Pour connaître la configuration minimale requise pour les plug-ins ONTAP et applicatifs, consultez https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité"^].
 
 [cols="1,3"]
 |===

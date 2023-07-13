@@ -24,8 +24,16 @@ entries:
     url: "/install/concept_authentication_methods_for_your_credentials.html"
   - title: Connexions et identifiants de l'ordinateur virtuel de stockage
     url: "/install/concept_svm_connections_and_credentials.html"
-  - title: Gestion de l'authentification multifacteur (MFA)
-    url: "/install/enable_multifactor_authentication.html"
+  - title: Authentification multifacteur (MFA)
+    entries:
+    - title: Gestion de l'authentification multifacteur (MFA)
+      url: "/install/enable_multifactor_authentication.html"
+    - title: Gérez l'authentification multifacteur (MFA) avec l'API REST, PowerShell
+        et SCCLI
+      url: "/install/enable_multifactor_authentication_using_RestAPI_PowerShell_SCCLI.html"
+    - title: Configurez MFA dans SnapCenter Server à l'aide de PowerShell, SCCLI et
+        de l'API REST
+      url: "/install/configure_mfa_using_powershell_sccli_restapi.html"
 - title: Installez le serveur SnapCenter
   url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
 - title: Connectez-vous à SnapCenter
@@ -45,6 +53,29 @@ entries:
     url: "/install/task_configure_CA_certificate_with_snapcenter_site.html"
   - title: Activez les certificats CA pour le serveur SnapCenter
     url: "/install/task_enable_ca_certificates_for_snapcenter.html"
+- title: Configurer et activer la communication SSL bidirectionnelle
+  entries:
+  - title: Configurer la communication SSL bidirectionnelle
+    url: "/install/task_configure_two_way_ssl.html"
+  - title: Activez la communication SSL bidirectionnelle
+    url: "/install/task_enable_two_way_ssl.html"
+- title: Configurer l'authentification basée sur certificat
+  entries:
+  - title: Exporter des certificats d'autorité de certification (CA) depuis le serveur
+      SnapCenter
+    url: "/install/task_export_ca_certificates_from_snapcenter_server.html"
+  - title: Importez le certificat CA dans les plug-ins hôtes Windows
+    url: "/install/task_import_ca_certificate_to_windows_plugin_hosts.html"
+  - title: Importez le certificat CA dans les plug-ins hôtes UNIX et configurez les
+      certificats racine ou intermédiaire dans le magasin de confiance SPL
+    entries:
+    - title: Importez le certificat CA dans les plug-ins hôtes UNIX
+      url: "/install/task_import_ca_certificate_to_unix_plugin_hosts.html"
+    - title: Configurez les certificats racine ou intermédiaire sur le magasin de
+        confiance SPL
+      url: "/install/task_configure_root_or_intermediate_certificates_to_trust_store.html"
+  - title: Activer l'authentification basée sur certificat
+    url: "/install/task_enable_certificate_based_authentication.html"
 - title: Configuration d'Active Directory, LDAP et LDAPS
   entries:
   - title: Enregistrer des domaines Active Directory non fiables

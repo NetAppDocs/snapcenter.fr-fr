@@ -1,0 +1,62 @@
+---
+permalink: install/task_export_ca_certificates_from_snapcenter_server.html 
+sidebar: sidebar 
+keywords: security,authentication, export CA certificates 
+summary: 'Vous devez exporter les certificats de l"autorité de certification du serveur SnapCenter vers les hôtes du plug-in.' 
+---
+= Exporter des certificats d'autorité de certification (CA) depuis le serveur SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez exporter les certificats d'autorité de certification du serveur SnapCenter vers les hôtes de plug-in à l'aide de la console MMC (Microsoft Management Console).
+
+*Ce dont vous aurez besoin*
+
+Vous devez avoir configuré le protocole SSL bidirectionnel.
+
+*Étapes*
+
+. Accédez à la console de gestion Microsoft (MMC), puis cliquez sur *fichier* > *Ajouter/Supprimer Snapin*.
+. Dans la fenêtre Ajouter ou supprimer des Snap-ins, sélectionnez *certificats*, puis cliquez sur *Ajouter*.
+. Dans la fenêtre du composant logiciel enfichable certificats, sélectionnez l'option *compte ordinateur*, puis cliquez sur *Terminer*.
+. Cliquez sur *Console Root* > *certificats - ordinateur local* > *personnel* > *certificats*.
+. Cliquez avec le bouton droit de la souris sur le certificat CA fourni, qui est utilisé pour le serveur SnapCenter, puis sélectionnez *toutes les tâches* > *Exporter* pour lancer l'assistant d'exportation.
+. Effectuez les actions suivantes dans l'assistant.
+
+
+|===
+| Pour cette option... | Procédez comme suit... 
+
+
+ a| 
+Exporter la clé privée
+ a| 
+Sélectionnez *non, ne pas exporter la clé privée*, puis cliquez sur *Suivant*.
+
+
+
+ a| 
+Exporter le format de fichier
+ a| 
+Cliquez sur *Suivant*.
+
+
+
+ a| 
+Nom du fichier
+ a| 
+Cliquez sur *Parcourir* et spécifiez le chemin d'accès au fichier pour enregistrer le certificat, puis cliquez sur *Suivant*.
+
+
+
+ a| 
+Exécution de l'assistant d'exportation de certificat
+ a| 
+Vérifiez le résumé, puis cliquez sur *Terminer* pour lancer l'exportation.
+
+|===
+
+NOTE: L'authentification basée sur certificat n'est pas prise en charge pour les configurations SnapCenter HA et le plug-in SnapCenter pour VMware vSphere.

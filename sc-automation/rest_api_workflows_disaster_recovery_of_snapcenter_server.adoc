@@ -60,6 +60,15 @@ NOTE: Après la restauration de reprise sur incident, l'hôte sera ajouté, mais
 NOTE: La planification des sauvegardes du référentiel sera restaurée uniquement si vous installez le plug-in SnapCenter pour Windows et que vous associez un LUN NetApp à la machine serveur.
 
 
+NOTE: Si les DLL sont corrompues, vous pouvez essayer de réparer le serveur SnapCenter ou de corriger l'installation défectueuse.
+
+
+NOTE: Si les fichiers NSM ou config sont corrompus, vous pouvez désinstaller et réinstaller le serveur SnapCenter avec la même version.
+
+
+NOTE: Si la machine virtuelle est corrompue, placez une autre machine virtuelle ou une machine portant le même nom et installez le serveur SnapCenter avec la même version.
+
+
 
 == API REST prise en charge pour la reprise après incident d'SnapCenter Server
 

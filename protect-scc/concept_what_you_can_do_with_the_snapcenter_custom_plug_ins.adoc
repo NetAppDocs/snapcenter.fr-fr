@@ -35,7 +35,7 @@ La sauvegarde d'un volume ONTAP, d'une LUN ou d'un qtree peut être effectuée.
 
 * Mettre à jour les copies Snapshot du système primaire sur un système ONTAP secondaire, en tirant parti de la relation de réplication existante (réplication SnapVault/SnapMirror/unifiée) à l'aide de la règle SnapCenter
 +
-ONTAP FAS, AFF, Select ou Cloud ONTAP peuvent être les systèmes primaires et secondaires ONTAP.
+Le système primaire et secondaire ONTAP peut être ONTAP FAS, AFF, All SAN Array (ASA), Select ou Cloud ONTAP.
 
 * Restaurez l'intégralité de votre volume ONTAP, LUN ou fichiers.
 +

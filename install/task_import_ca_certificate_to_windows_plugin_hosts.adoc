@@ -1,0 +1,56 @@
+---
+permalink: install/task_import_ca_certificate_to_windows_plugin_hosts.html 
+sidebar: sidebar 
+keywords: security,authentication, export CA certificates 
+summary: 'Pour utiliser le certificat de l"autorité de certification du serveur SnapCenter exporté, vous devez importer le certificat associé sur les hôtes du plug-in Windows SnapCenter' 
+---
+= Importer le certificat de l'autorité de certification (CA) vers les hôtes du plug-in Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour utiliser le certificat de l'autorité de certification du serveur SnapCenter exporté, vous devez importer le certificat associé sur les hôtes du plug-in Windows SnapCenter à l'aide de la console MMC (Microsoft Management Console).
+
+*Étapes*
+
+. Accédez à la console de gestion Microsoft (MMC), puis cliquez sur *fichier* > *Ajouter/Supprimer Snapin*.
+. Dans la fenêtre Ajouter ou supprimer des Snap-ins, sélectionnez *certificats*, puis cliquez sur *Ajouter*.
+. Dans la fenêtre du composant logiciel enfichable certificats, sélectionnez l'option *compte ordinateur*, puis cliquez sur *Terminer*.
+. Cliquez sur *Console Root* > *certificats - ordinateur local* > *personnel* > *certificats*.
+. Cliquez avec le bouton droit de la souris sur le dossier "personnel", puis sélectionnez *toutes les tâches* > *Importer* pour lancer l'assistant d'importation.
+. Effectuez les actions suivantes dans l'assistant.
+
+
+|===
+| Pour cette option... | Procédez comme suit... 
+
+
+ a| 
+Emplacement du magasin
+ a| 
+Cliquez sur *Suivant*.
+
+
+
+ a| 
+Fichier à importer
+ a| 
+Sélectionnez le certificat du serveur SnapCenter qui se termine par l'extension .cer.
+
+
+
+ a| 
+Magasin de certificats
+ a| 
+Cliquez sur *Suivant*.
+
+
+
+ a| 
+Exécution de l'assistant d'exportation de certificat
+ a| 
+Vérifiez le résumé, puis cliquez sur *Terminer* pour lancer l'importation.
+
+|===

@@ -4,12 +4,12 @@ indexpage:
     qui protège les données de vos applications, bases de données, systèmes de fichiers
     hôtes et machines virtuelles qui s'exécutent sur les systèmes ONTAP à partir de
     n'importe quel point du cloud hybride. Cette bibliothèque de documentation contient
-    des informations sur la version 4.8.
+    des informations sur la version 4.9.
   tiles:
   - title: Commencez
     links:
     - title: Notes de mise à jour
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886204
     - title: Découvrez SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: Référence rapide pour protéger les bases de données SQL Server

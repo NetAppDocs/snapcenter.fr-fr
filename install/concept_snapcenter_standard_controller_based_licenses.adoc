@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_snapcenter_standard_controller_based_licenses.html 
 sidebar: sidebar 
-keywords: controller-based licenses, standard license, SnapManager Suite license, FAS, AFF, retrieve controller serial number, controller serial number, controller-based license serial number, add controller-based license, remove trial license 
-summary: Une licence standard basée sur le contrôleur SnapCenter est requise si vous utilisez des contrôleurs de stockage FAS ou AFF. 
+keywords: 'controller-based licenses, standard license, SnapManager Suite license, FAS, AFF, All SAN Array (ASA), retrieve controller serial number, controller serial number, controller-based license serial number, add controller-based license, remove trial license' 
+summary: Une licence standard basée sur le contrôleur SnapCenter est requise si vous utilisez des contrôleurs de stockage FAS, AFF ou ASA. 
 ---
 = Ajout de licences SnapCenter standard basées sur le contrôleur
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: Une licence standard basée sur le contrôleur SnapCenter est requise s
 
 
 [role="lead"]
-Une licence standard basée sur le contrôleur SnapCenter est requise si vous utilisez des contrôleurs de stockage FAS ou AFF.
+Une licence standard basée sur le contrôleur SnapCenter est requise si vous utilisez des contrôleurs de stockage FAS, AFF ou All SAN Array (ASA).
 
 La licence basée sur le contrôleur présente les caractéristiques suivantes :
 
 * Droits SnapCenter Standard inclus dans l'achat des bundles Premium ou Flash (non inclus dans le pack de base)
 * Utilisation illimitée du stockage
-* Cette fonctionnalité est rendue possible par l'ajout direct du contrôleur de stockage FAS ou AFF à l'aide du gestionnaire système ONTAP ou de la ligne de commande du cluster de stockage
+* Activé en l'ajoutant directement au contrôleur de stockage FAS, AFF ou ASA via ONTAP System Manager ou la ligne de commandes du cluster de stockage
 +
 
 NOTE: Vous n'entrez aucune information de licence dans l'interface graphique de SnapCenter pour les licences basées sur le contrôleur SnapCenter.
@@ -31,7 +31,7 @@ Pour plus d'informations sur les licences requises, reportez-vous à la section 
 
 == Étape 1 : vérifiez si la licence de la suite SnapManager est installée
 
-Vous pouvez utiliser l'interface graphique de SnapCenter pour déterminer si une licence SnapManager Suite est installée sur les systèmes de stockage principaux FAS ou AFF et identifier les systèmes de stockage susceptibles de nécessiter des licences SnapManager Suite. Les licences de la suite SnapManager s'appliquent uniquement aux SVM FAS et AFF ou aux clusters des systèmes de stockage primaires.
+Vous pouvez utiliser l'interface graphique de SnapCenter pour vérifier si une licence de la suite SnapManager est installée sur les systèmes de stockage principaux FAS, AFF ou ASA, et pour identifier les systèmes de stockage susceptibles de nécessiter des licences de la suite SnapManager. Les licences de la suite SnapManager s'appliquent uniquement aux SVM FAS, AFF et ASA ou aux clusters des systèmes de stockage primaires.
 
 
 NOTE: Si vous disposez déjà d'une licence SnapManager Suite sur votre contrôleur, les droits de licence standard basée sur le contrôleur SnapCenter sont automatiquement fournis. Les noms de licence SnapManager Suite et de licence SnapCenter standard basée sur contrôleur sont utilisés de manière interchangeable, alors qu'ils font référence à la même licence.
@@ -52,8 +52,8 @@ Lorsque vous sélectionnez le nom du cluster, tous les SVM faisant partie du clu
 La colonne Controller License affiche l'état suivant :
 
 +
-** image:../media/controller_licensed_icon.gif["Une icône de vérification"] Indique qu'une licence SnapManager Suite est installée sur un système de stockage principal FAS ou AFF.
-** image:../media/controller_not_licensed_icon.gif["Une icône d'annulation"] Indique qu'une licence SnapManager Suite n'est pas installée sur un système de stockage principal FAS ou AFF.
+** image:../media/controller_licensed_icon.gif["Une icône de vérification"] Indique qu'une licence SnapManager Suite est installée sur un système de stockage principal FAS, AFF ou ASA.
+** image:../media/controller_not_licensed_icon.gif["Une icône d'annulation"] Indique qu'une licence SnapManager Suite n'est pas installée sur un système de stockage principal FAS, AFF ou ASA.
 ** Non applicable indique qu'une licence SnapManager Suite n'est pas applicable car le contrôleur de stockage se trouve sur des plateformes de stockage Cloud Volumes ONTAP, ONTAP Select ou secondaires.
 
 
@@ -63,7 +63,7 @@ La colonne Controller License affiche l'état suivant :
 
 == Étape 2 : identifier les licences installées sur le contrôleur
 
-Vous pouvez utiliser la ligne de commandes de ONTAP pour afficher toutes les licences installées sur votre contrôleur. Vous devez être un administrateur de cluster sur le système FAS ou AFF.
+Vous pouvez utiliser la ligne de commandes de ONTAP pour afficher toutes les licences installées sur votre contrôleur. Vous devez être administrateur du cluster sur le système FAS, AFF ou ASA.
 
 
 NOTE: La licence standard basée sur le contrôleur SnapCenter s'affiche sous la forme d'une licence SnapManager Suite sur le contrôleur.
@@ -110,7 +110,7 @@ Dans l'exemple, la licence SnapManager Suite est installée. Par conséquent, au
 
 == Étape 3 : récupérer le numéro de série du contrôleur
 
-Vous devez disposer du numéro de série du contrôleur pour récupérer le numéro de série de votre licence basée sur le contrôleur. Vous pouvez récupérer le numéro de série du contrôleur à l'aide de la ligne de commande ONTAP. Vous devez être un administrateur de cluster sur le système FAS ou AFF.
+Vous devez disposer du numéro de série du contrôleur pour récupérer le numéro de série de votre licence basée sur le contrôleur. Vous pouvez récupérer le numéro de série du contrôleur à l'aide de la ligne de commande ONTAP. Vous devez être administrateur du cluster sur le système FAS, AFF ou ASA.
 
 .Étapes
 . Connectez-vous au contrôleur à l'aide de la ligne de commande ONTAP.
@@ -189,15 +189,15 @@ La liste des licences du contrôleur spécifié s'affiche.
 
 == Étape 5 : ajoutez une licence basée sur le contrôleur
 
-Vous pouvez utiliser la ligne de commande ONTAP pour ajouter une licence basée sur le contrôleur SnapCenter lorsque vous utilisez des systèmes FAS ou AFF et que vous disposez d'une licence SnapCenter Standard ou SnapManager Suite.
+Vous pouvez utiliser la ligne de commande ONTAP pour ajouter une licence basée sur un contrôleur SnapCenter lorsque vous utilisez des systèmes FAS, AFF ou ASA et que vous disposez d'une licence SnapCenter Standard ou SnapManagerSuite.
 
 .Avant de commencer
-* Vous devez être un administrateur de cluster sur le système FAS ou AFF.
+* Vous devez être administrateur du cluster sur le système FAS, AFF ou ASA.
 * Vous devez disposer de la licence SnapCenter Standard ou SnapManager Suite.
 
 
 .Description de la tâche
-Si vous souhaitez installer SnapCenter sous forme d'essai avec le stockage FAS ou AFF, vous pouvez obtenir une licence d'évaluation Premium Bundle pour vous installer sur votre contrôleur.
+Si vous souhaitez installer SnapCenter en version d'essai avec un système de stockage FAS, AFF ou ASA, vous pouvez obtenir une licence d'évaluation Premium Bundle à installer sur votre contrôleur.
 
 Si vous souhaitez installer SnapCenter sous forme d'essai, contactez votre ingénieur commercial pour obtenir une licence d'évaluation du pack Premium pour l'installer sur votre contrôleur.
 
@@ -231,7 +231,7 @@ NOTE: La suppression manuelle d'une licence d'essai n'est nécessaire que si vou
 .. Exécutez l'applet de commande Open-SmConnection pour lancer une session de connexion avec le serveur SnapCenter pour un compte SnapCenterAdmin.
 .. Exécutez le mot de passe set-SmRepositoryPassword pour réinitialiser le mot de passe MySQL.
 +
-Pour plus d'informations sur les applets de commande, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Pour plus d'informations sur les applets de commande, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 
 

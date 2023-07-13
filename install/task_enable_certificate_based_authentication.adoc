@@ -1,0 +1,24 @@
+---
+permalink: install/task_enable_certificate_based_authentication.html 
+sidebar: sidebar 
+keywords: enable certificate-based authentication, certificate-based authentication 
+summary: 'Vous devez activer l"authentification basée sur certificat pour le serveur SnapCenter et les hôtes de plug-in Windows.' 
+---
+= Activer l'authentification basée sur un certificat
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour activer l'authentification basée sur certificat pour le serveur SnapCenter et les hôtes de plug-in Windows, exécutez l'applet de commande PowerShell suivante.  Pour les hôtes plug-in Linux, l'authentification basée sur certificat sera activée lorsque vous activez le protocole SSL bidirectionnel.
+
+* Pour activer l'authentification basée sur un certificat client :
++
+`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="true"}` `-HostName`<<hostname>>
+
+* Pour désactiver l'authentification basée sur des certificats client :
++
+`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="false"}` `-HostName` `<<hostname>>``
+
+

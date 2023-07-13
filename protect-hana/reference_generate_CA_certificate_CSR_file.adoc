@@ -15,6 +15,9 @@ Vous pouvez générer une requête de signature de certificat (CSR) et importer 
 
 CSR est un bloc de texte codé donné à un fournisseur de certificats autorisé pour obtenir le certificat d'autorité de certification signé.
 
+
+NOTE: La longueur de la clé RSA du certificat CA doit être d'au moins 3072 bits.
+
 Pour plus d'informations sur la génération d'une RSC, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_generate_CA_Certificate_CSR_file["Comment générer un fichier CSR de certificat CA"^].
 
 

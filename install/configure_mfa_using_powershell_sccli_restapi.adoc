@@ -1,0 +1,208 @@
+---
+permalink: install/configure_mfa_using_powershell_sccli_restapi.html 
+sidebar: sidebar 
+keywords: mfa, authentication, multifactor authentication 
+summary: Vous pouvez utiliser les interfaces REST API, PowerShell et SCCLI pour configurer MFA. 
+---
+= Configurez MFA dans SnapCenter Server à l'aide de PowerShell, SCCLI et de l'API REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer MFA dans SnapCenter Server à l'aide de PowerShell, SCCLI et de l'API REST.
+
+
+
+== Authentification SnapCenter MFA CLI
+
+Dans PowerShell et SCCLI, l'applet de commande existante (Open-SmConnection) est étendue avec un champ supplémentaire appelé "AccessToken" pour utiliser le jeton porteur pour authentifier l'utilisateur.
+
+`Open-SmConnection -Credential <PSCredential> [-SMSbaseUrl <String>] [-Port <String>] [-RoleName <String>] [ -AccessToken <string>]`
+
+Une fois l'applet de commande ci-dessus exécutée, une session est créée pour que l'utilisateur concerné exécute d'autres applets de commande SnapCenter.
+
+
+
+== Authentification SnapCenter MFA REST API
+
+Utilisez le jeton porteur au format _Authorization=Bearer <access token>_ dans le client API REST (tel que Postman ou swagger) et mentionnez l'utilisateur RoleName dans l'en-tête pour obtenir une réponse réussie de SnapCenter.
+
+
+
+== Workflow de l'API REST MFA
+
+Lorsque MFA est configuré avec AD FS, vous devez vous authentifier à l'aide d'un jeton d'accès (porteur) pour accéder à l'application SnapCenter par n'importe quelle API REST.
+
+*À propos de cette tâche*
+
+* Vous pouvez utiliser n'importe quel client REST comme Postman, swagger UI ou FireCamp.
+* Obtenez un jeton d'accès et utilisez-le pour authentifier les demandes suivantes (API REST SnapCenter) afin d'effectuer n'importe quelle opération.
+
+
+*Étapes*
+
+*Pour s'authentifier via AD FS MFA*
+
+. Configurez le client REST pour appeler le point de terminaison AD FS afin d'obtenir le jeton d'accès.
++
+Lorsque vous appuyez sur le bouton pour obtenir un jeton d'accès pour une application, vous serez redirigé vers la page AD FS SSO où vous devez fournir vos informations d'identification AD et vous authentifier auprès de MFA.
+1. Dans la page AD FS SSO, saisissez votre nom d'utilisateur ou votre adresse e-mail dans la zone de texte Nom d'utilisateur.
+
++
++
+Les noms d'utilisateur doivent être formatés en tant qu'utilisateur@domaine ou domaine\utilisateur.
+
+. Dans la zone de texte Mot de passe, saisissez votre mot de passe.
+. Cliquez sur *connexion*.
+. Dans la section *Options d'ouverture de session*, sélectionnez une option d'authentification et authentifiez-vous (selon votre configuration).
++
+** Push : approuvez la notification Push envoyée à votre téléphone.
+** Code QR : utilisez l'application mobile AUTH point pour scanner le code QR, puis saisissez le code de vérification affiché dans l'application
+** Mot de passe à usage unique : saisissez le mot de passe à usage unique de votre jeton.
+
+
+. Une fois l'authentification réussie, une fenêtre contextuelle contenant l'accès, l'ID et le jeton d'actualisation s'ouvre.
++
+Copiez le jeton d'accès et utilisez-le dans l'API REST SnapCenter pour effectuer l'opération.
+
+. Dans l'API REST, vous devez transmettre le jeton d'accès et le nom de rôle dans la section d'en-tête.
+. SnapCenter valide ce jeton d'accès à partir d'AD FS.
++
+S'il s'agit d'un jeton valide, SnapCenter le décode et obtient le nom d'utilisateur.
+
+. À l'aide du nom d'utilisateur et du nom de rôle, SnapCenter authentifie l'utilisateur pour une exécution d'API.
++
+Si l'authentification réussit, SnapCenter renvoie le résultat sinon un message d'erreur s'affiche.
+
+
+
+
+
+== Activez ou désactivez la fonctionnalité SnapCenter MFA pour l'API REST, l'interface de ligne de commande et l'interface graphique
+
+*GUI*
+
+*Étapes*
+
+. Connectez-vous au serveur SnapCenter en tant qu'administrateur SnapCenter.
+. Cliquez sur *Paramètres* > *Paramètres globaux* > *Paramètres d'authentification multifacteur (MFA)*
+. Sélectionnez l'interface (GUI/RST API/CLI) pour activer ou désactiver la connexion MFA.
+
+
+*Interface PowerShell*
+
+*Étapes*
+
+. Exécutez les commandes PowerShell ou CLI pour activer MFA pour l'interface graphique, l'API REST, PowerShell et SCCLI.
++
+`Set-SmMultiFactorAuthentication -IsGuiMFAEnabled -IsRestApiMFAEnabled`
+`-IsCliMFAEnabled -Path`
+
++
+Le paramètre PATH spécifie l'emplacement du fichier xml de métadonnées AD FS MFA.
+
++
+Active l'authentification multifacteur pour l'interface graphique SnapCenter, l'API REST, PowerShell et SCCLI configurée avec un chemin de fichier de métadonnées AD FS spécifié.
+
+. Vérifier l'état et les paramètres de configuration MFA à l'aide du `Get-SmMultiFactorAuthentication` applet de commande.
+
+
+*Interface SCCLI*
+
+*Étapes*
+
+. `# sccli Set-SmMultiFactorAuthentication -IsGuiMFAEnabled true -IsRESTAPIMFAEnabled true -IsCliMFAEnabled true  -Path "C:\ADFS_metadata\abc.xml"`
+. `# sccli Get-SmMultiFactorAuthentication`
+
+
+*API REST*
+
+. Exécutez l'API post suivante pour activer MFA pour l'interface graphique, l'API REST, PowerShell et SCCLI.
++
+|===
+
+
+| Paramètre | Valeur 
+
+
+ a| 
+URL demandée
+ a| 
+/api/4.9/settings/multifactorauthentication
+
+
+
+ a| 
+Méthode HTTP
+ a| 
+Post
+
+
+
+ a| 
+Corps de la demande
+ a| 
+{
+  "IsGuiMFAEnabled": FALSE,
+  "IsRestApiMFAEnabled": Vrai,
+  "IsCliMFAEnabled": FALSE,
+  « ADFSConfigFilePath » : « C:\\ADFS_metadata\\abc.xml »
+}
+
+
+
+ a| 
+Corps de réponse
+ a| 
+{
+  « MFAConfiguration » : {
+    "IsGuiMFAEnabled": FALSE,
+    « ADFSConfigFilePath » : « C:\\ADFS_metadata\\abc.xml »,
+    « SCConfigFilePath » : nul,
+    "IsRestApiMFAEnabled": Vrai,
+    "IsCliMFAEnabled": FALSE,
+    "ADFSHostName": "win-adfs-sc49.winscedom2.com"
+  }
+}
+
+|===
+. Vérifiez l'état et les paramètres de configuration MFA à l'aide de l'API suivante.
++
+|===
+
+
+| Paramètre | Valeur 
+
+
+ a| 
+URL demandée
+ a| 
+/api/4.9/settings/multifactorauthentication
+
+
+
+ a| 
+Méthode HTTP
+ a| 
+Obtenez
+
+
+
+ a| 
+Corps de réponse
+ a| 
+{
+  « MFAConfiguration » : {
+    "IsGuiMFAEnabled": FALSE,
+    « ADFSConfigFilePath » : « C:\\ADFS_metadata\\abc.xml »,
+    « SCConfigFilePath » : nul,
+    "IsRestApiMFAEnabled": Vrai,
+    "IsCliMFAEnabled": FALSE,
+    "ADFSHostName": "win-adfs-sc49.winscedom2.com"
+  }
+}
+
+|===
+

@@ -26,15 +26,15 @@ SnapCenter peut être déployé de plusieurs manières :
 
 * Sur site, pour protéger ce qui suit :
 +
-** Les données qui résident dans les systèmes primaires ONTAP FAS ou AFF et qui sont répliquées vers les systèmes secondaires ONTAP FAS ou AFF
+** Les données qui résident dans les systèmes primaires ONTAP FAS, AFF ou ASA et qui sont répliquées vers les systèmes secondaires ONTAP FAS, AFF ou ASA
 ** Les données qui résident dans les systèmes primaires ONTAP Select
-** Les données qui résident dans des systèmes primaires et secondaires ONTAP FAS ou AFF, et qui sont protégées vers le stockage objet StorageGRID local (avec intégration de la sauvegarde dans le cloud NetApp BlueXP)
+** Les données qui se trouvent sur les systèmes primaires et secondaires ONTAP FAS, AFF ou ASA et qui sont protégées dans le stockage objet local StorageGRID (via l'intégration de la sauvegarde cloud NetApp BlueXP)
 
 
 * Sur site, dans un cloud hybride, pour protéger ce qui suit :
 +
-** Les données qui résident dans les systèmes primaires ONTAP FAS ou AFF et qui sont répliquées vers Cloud Volumes ONTAP
-** Les données qui résident dans des systèmes primaires et secondaires ONTAP FAS ou AFF, et qui sont protégées vers le stockage objet et d'archivage dans le cloud (avec l'intégration de NetApp BlueXP Cloud Backup)
+** Les données qui résident dans les systèmes primaires ONTAP FAS, AFF ou ASA et qui sont répliquées vers Cloud Volumes ONTAP
+** Les données qui se trouvent sur les systèmes primaires et secondaires ONTAP FAS, AFF ou ASA et qui sont protégées pour le stockage objet et d'archivage dans le cloud (via l'intégration de NetApp BlueXP Cloud Backup)
 
 
 * Dans un cloud public, pour protéger :
@@ -85,10 +85,10 @@ SnapCenter inclut des API REST pour la plupart des fonctionnalités d'intégrati
 Pour plus d'informations sur les API REST, voir https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["Présentation de l'API REST"].
 
 +
-Pour plus d'informations sur les applets de commande Windows, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Pour plus d'informations sur les applets de commande Windows, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 +
-Pour plus d'informations sur les commandes UNIX, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["Guide de référence sur les commandes du logiciel SnapCenter"^].
+Pour plus d'informations sur les commandes UNIX, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["Guide de référence sur les commandes du logiciel SnapCenter"^].
 
 * Tableau de bord et reporting centralisés pour la protection des données
 * Contrôle d'accès basé sur des rôles (RBAC) pour la sécurité et la délégation.

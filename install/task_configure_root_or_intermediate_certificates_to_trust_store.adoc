@@ -1,0 +1,56 @@
+---
+permalink: install/task_configure_root_or_intermediate_certificates_to_trust_store.html 
+sidebar: sidebar 
+keywords: enable certificate-based authentication,configure CA signed key pair,configure root, configure intermediate certificates 
+summary: Vous devez configurer les certificats racine ou intermédiaire dans le magasin de confiance SPL. 
+---
+= Configurez les certificats racine ou intermédiaire sur le magasin de confiance SPL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez configurer les certificats racine ou intermédiaire dans le magasin de confiance SPL. Vous devez ajouter le certificat de l'autorité de certification racine, puis les certificats de l'autorité de certification intermédiaire.
+
+*Étapes*
+
+. Accédez au dossier contenant le magasin de clés SPL : `/var/opt/snapcenter/spl/etc`.
+. Localisez le fichier `keystore.jks`.
+. Répertoriez les certificats ajoutés dans le magasin de clés :
+`$ keytool -list -v -keystore keystore.jks`
+. Ajouter un certificat racine ou intermédiaire :
+`$ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore` `keystore.jks`
+. Redémarrez le service après avoir configuré les certificats racine ou intermédiaire sur le stockage de confiance SPL.
+
+
+
+
+== Configurez la paire de clés signée CA sur le magasin de confiance SPL
+
+Vous devez configurer la paire de clés signées par l'autorité de certification dans le magasin de confiance SPL.
+
+*Étapes*
+
+. Accédez au dossier contenant le magasin de clés de la SPL `/var/opt/snapcenter/spl/etc`.
+. Localisez le fichier `keystore.jks``.
+. Répertoriez les certificats ajoutés dans le magasin de clés :
+`$ keytool -list -v -keystore keystore.jks`
+. Ajoutez le certificat de l'autorité de certification ayant une clé privée et une clé publique.
+`$ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks` `-deststoretype JKS`
+. Répertorier les certificats ajoutés dans le magasin de clés.
+`$ keytool -list -v -keystore keystore.jks`
+. Vérifiez que le magasin de clés contient l'alias correspondant au nouveau certificat de l'autorité de certification, qui a été ajouté au magasin de clés.
+. Remplacez le mot de passe de la clé privée ajoutée pour le certificat CA par le mot de passe du magasin de clés.
++
+Le mot de passe par défaut de la SPL keystore est la valeur de la clé SPL_KEYSTORE_PASS in `spl.properties` fichier.
+
++
+`$ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks``
+
+. Si le nom d'alias du certificat de l'autorité de certification est long et contient de l'espace ou des caractères spéciaux ("*",","), remplacez le nom d'alias par un nom simple :
+`$ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks``
+. Configurez le nom d'alias à partir du magasin de clés situé dans `spl.properties` fichier.
+Mettez à jour cette valeur par rapport à la clé SPL_CERTIFICATE_ALIAS.
+. Redémarrez le service après avoir configuré la paire de clés signée CA dans la boutique de confiance SPL.
+

@@ -18,21 +18,21 @@ SnapCenter prend en charge un large éventail de types de stockage sur les serve
 
 
  a| 
-Serveurs physiques et virtuels (les VMDK et les LUN RDM ne sont pas pris en charge)
+Montages physiques et directs NFS sur les hôtes de machine virtuelle (les VMDK et les LUN RDM ne sont pas pris en charge).
  a| 
 LUN connectés via FC
 
 
 
  a| 
-Serveurs physiques et virtuels (les VMDK et les LUN RDM ne sont pas pris en charge)
+Montages physiques et directs NFS sur les hôtes de machine virtuelle (les VMDK et les LUN RDM ne sont pas pris en charge).
  a| 
 LUN connectées à l'iSCSI
 
 
 
  a| 
-Serveurs physiques et virtuels (les VMDK et les LUN RDM ne sont pas pris en charge)
+Montages physiques et directs NFS sur les hôtes de machine virtuelle (les VMDK et les LUN RDM ne sont pas pris en charge).
  a| 
 Volumes connectés par NFS
 

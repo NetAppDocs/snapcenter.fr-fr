@@ -56,7 +56,7 @@ System de stockage
 Entrez le nom ou l'adresse IP du système de stockage.
 
 
-NOTE: Les noms de système de stockage, sans le nom de domaine, doivent comporter au moins 15 caractères et les noms doivent être résolus. Pour créer des connexions de système de stockage avec des noms comportant plus de 15 caractères, vous pouvez utiliser l'applet de commande Add-SmStorageConnectionPowerShell.
+NOTE: Les noms de système de stockage, sans inclure le nom de domaine, doivent comporter 15 caractères ou moins et les noms doivent être résolus. Pour créer des connexions de système de stockage avec des noms comportant plus de 15 caractères, vous pouvez utiliser l'applet de commande Add-SmStorageConnectionPowerShell.
 
 
 NOTE: Pour les systèmes de stockage avec configuration MetroCluster (MCC), il est recommandé d'enregistrer des clusters locaux et homologues pour garantir la continuité de l'activité.
@@ -91,6 +91,9 @@ Lorsque vous cochez la case *Envoyer la notification AutoSupport pour les opéra
 .. Dans plate-forme, sélectionnez l'une des options dans la liste déroulante.
 +
 Si le SVM est le système de stockage secondaire d'une relation de sauvegarde, cochez la case *secondaire*. Lorsque l'option *Secondary* est sélectionnée, SnapCenter n'effectue pas immédiatement de vérification de licence.
+
++
+Si vous avez ajouté un SVM dans SnapCenter, l'utilisateur doit sélectionner le type de plateforme dans la liste déroulante manuellement.
 
 .. Dans Protocol, sélectionnez le protocole configuré lors de la configuration du SVM ou du Cluster, en général HTTPS.
 .. Saisissez le port accepté par le système de stockage.
@@ -127,6 +130,9 @@ Lorsque vous cliquez sur le nom du cluster, tous les SVM qui font partie du clus
 Si un nouveau SVM est ajouté au cluster ONTAP à l'aide de l'interface graphique de ONTAP, cliquez sur *redécouvrez* pour afficher le nouveau SVM ajouté.
 
 
+
+
+NOTE: Si vous avez mis à niveau les systèmes de stockage FAS ou AFF vers une baie 100 % SAN (ASA), vous devez actualiser la connexion de stockage dans le serveur SnapCenter pour refléter le nouveau type de stockage dans SnapCenter.
 
 *Après la fin*
 

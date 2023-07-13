@@ -31,7 +31,7 @@ Prend en charge le contrôleur SCSI paravirtuel VMware. 256 disques peuvent êtr
 
 
 
-Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=112310;&solution=1517&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 
 

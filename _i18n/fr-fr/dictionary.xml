@@ -6378,7 +6378,6 @@
   <block id="03101d2d05b95aa8395d372be971ceec" category="cell">Nom du paramètre</block>
   <block id="e2072f9dd36121658dfb70db997cac48" category="paragraph">NIVEAU_JOURNAL</block>
   <block id="27ef522d71e1457c1d75f1a9fbdffdb9" category="paragraph">Affiche les niveaux de journaux pris en charge.</block>
-  <block id="9dec2839914c450a2eba38fd6ed0037d" category="paragraph">Les valeurs possibles sont INFO, DEBUG, TRACE, ERREUR, FATAL, Et AVERTIR.</block>
   <block id="54e3ff300a85eed4faafba9e929fcc68" category="paragraph">SPL_PROTOCOL</block>
   <block id="7af9608cb14f57495b1335e877ee3b0e" category="paragraph">Affiche le protocole pris en charge par le chargeur SnapCenter Plug-in.</block>
   <block id="36c24cffc745e8682deaec9e2c0960f8" category="paragraph">Seul le protocole HTTPS est pris en charge. Vous pouvez ajouter la valeur si la valeur par défaut est manquante.</block>
@@ -8443,4 +8442,5 @@ NetApp® Single Mailbox Recovery a pris fin le 12 mai 2023. NetApp continuera d'
   <block id="dc085c0453f245659c31e067671c65b0" category="sidebar">Importez le certificat CA dans les plug-ins hôtes UNIX et configurez les certificats racine ou intermédiaire dans le magasin de confiance SPL</block>
   <block id="78a044d413487b3c49b37567f8df9e4f" category="sidebar">Importez le certificat CA dans les plug-ins hôtes UNIX</block>
   <block id="7fbe6e40125b7d1b2f5c5c05044e7526" category="sidebar">Activer l'authentification basée sur certificat</block>
+  <block id="20c5c92c0148a7ebef737c442e93b7ec" category="paragraph">Les valeurs possibles sont TRACE, DEBUG, INFO, WARN, ERROR, ET FATAL.</block>
 </blocks>

@@ -32,7 +32,7 @@ NIVEAU_JOURNAL
  a| 
 Affiche les niveaux de journaux pris en charge.
 
-Les valeurs possibles sont INFO, DEBUG, TRACE, ERREUR, FATAL, Et AVERTIR.
+Les valeurs possibles sont TRACE, DEBUG, INFO, WARN, ERROR, ET FATAL.
 
 
 

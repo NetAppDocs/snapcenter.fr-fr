@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_cancel_sql_resources_restore_operations.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel, restore 
 summary: 'Vous pouvez annuler les travaux de restauration mis en file d"attente.' 
 ---
 = Annuler les opérations de restauration des ressources SQL

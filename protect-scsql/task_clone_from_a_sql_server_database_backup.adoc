@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_clone_from_a_sql_server_database_backup.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone 
 summary: Vous pouvez utiliser SnapCenter pour cloner une sauvegarde de base de données SQL Server. Pour accéder ou restaurer une ancienne version des données, vous pouvez cloner les sauvegardes de bases de données à la demande. 
 ---
 = Clonage à partir d'une sauvegarde de base de données SQL Server
@@ -13,8 +13,7 @@ summary: Vous pouvez utiliser SnapCenter pour cloner une sauvegarde de base de d
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour cloner une sauvegarde de base de données SQL Server. Pour accéder ou restaurer une ancienne version des données, vous pouvez cloner les sauvegardes de bases de données à la demande.
 
-*Ce dont vous aurez besoin*
-
+.Ce dont vous avez besoin
 * Vous devez préparer la protection des données en effectuant des tâches telles que l'ajout d'hôtes, l'identification des ressources et la création de connexions du système de stockage.
 * Vous devez avoir sauvegardé des bases de données ou des groupes de ressources.
 * Le type de protection tel que miroir, coffre-fort ou miroir-vault pour LUN de données et LUN de journaux doit être identique pour détecter les dispositifs de localisation secondaires lors du clonage sur un autre hôte à l'aide de sauvegardes de journaux.
@@ -22,8 +21,7 @@ Vous pouvez utiliser SnapCenter pour cloner une sauvegarde de base de données S
 * Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Lors du clonage vers une instance de base de données autonome, assurez-vous que le chemin du point de montage existe et qu'il s'agit d'un disque dédié.
 * Lors du clonage vers une instance de cluster de basculement (FCI), assurez-vous que les points de montage existent, qu'il s'agit d'un disque partagé, et que le chemin et le FCI doivent appartenir au même groupe de ressources SQL.
 * Assurez-vous qu'un seul initiateur VFC ou FC est connecté à chaque hôte. En effet, SnapCenter ne prend en charge qu'un seul initiateur par hôte.
@@ -43,22 +41,17 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 
 NOTE: Pour les environnements virtuels (VMDK/RDM), assurez-vous que le point de montage est un disque dédié.
 
-*Étapes*
-
-. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez *SnapCenter Plug-in for SQL Server* dans la liste.
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis *SnapCenter Plug-in pour SQL Server* dans la liste.
 . Dans la page Ressources, sélectionnez *Database* ou *Resource Group* dans la liste *View*.
 +
 
 NOTE: Le clonage d'une sauvegarde d'instance n'est pas pris en charge.
 
-
-
-*Étapes*
-
 . Sélectionnez la base de données ou le groupe de ressources.
-. Dans la page gérer les copies, sélectionnez la sauvegarde depuis le système de stockage primaire ou secondaire (en miroir ou en stockage).
-. Sélectionnez la sauvegarde, puis cliquez sur *image:../media/clone_icon.gif[""]*.
-. Dans la page Cloner les options, effectuez les opérations suivantes :
+. Dans la page d'affichage *gérer les copies*, sélectionnez la sauvegarde à partir du système de stockage principal ou secondaire (en miroir ou en stockage).
+. Sélectionnez la sauvegarde, puis sélectionnez *image:../media/clone_icon.gif["icône cloner"]*.
+. Dans la page *Clone Options*, effectuez les opérations suivantes :
 +
 |===
 | Pour ce champ... | Procédez comme ça... 
@@ -132,7 +125,7 @@ Spécifiez la date et l'heure après lesquelles les journaux de transactions ne 
 Ce clone instantané interrompt le clone des entrées du journal de transactions qui ont été enregistrées après la date et l'heure spécifiées.
 
 |===
-. Dans la page script, entrez le délai d'expiration du script, le chemin d'accès et les arguments du prescripteur ou du PostScript qui doivent être exécutés avant ou après l'opération de clonage, respectivement.
+. Sur la page *script*, entrez le délai d'expiration du script, le chemin et les arguments du prescripteur ou du postscript qui doivent être exécutés avant ou après l'opération de clonage, respectivement.
 +
 Vous pouvez par exemple exécuter un script pour mettre à jour les interruptions SNMP, automatiser les alertes, envoyer les journaux, etc.
 
@@ -143,7 +136,7 @@ NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou d
 +
 Le délai par défaut du script est de 60 secondes.
 
-. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Dans la page *notification*, dans la liste déroulante *préférence de courrier électronique*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
 +
 Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Si vous souhaitez joindre le rapport de l'opération de clonage effectuée, sélectionnez *attacher un rapport de travail*.
 
@@ -154,16 +147,14 @@ NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails 
 +
 Pour EMS, reportez-vous à la section https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["Gérer la collecte de données EMS"]
 
-. Vérifiez le résumé, puis cliquez sur *Terminer*.
-. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+. Passez en revue le résumé, puis sélectionnez *Terminer*.
+. Surveillez la progression de l'opération en sélectionnant *Monitor* > *Jobs*.
 
 
-*Après la fin*
-
+.Et la suite
 Une fois le clone créé, vous ne devez jamais le renommer.
 
-*Plus d'informations*
-
+.Informations associées
 link:reference_back_up_sql_server_database_or_instance_or_availability_group.html["Sauvegardez la base de données SQL Server, l'instance ou le groupe de disponibilité"]
 
 link:task_clone_backups_using_powershell_cmdlets_for_sql.html["Clonage des sauvegardes avec les applets de commande PowerShell"]

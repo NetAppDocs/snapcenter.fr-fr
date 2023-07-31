@@ -13,14 +13,12 @@ summary: 'La sauvegarde d"une base de données inclut l"établissement d"une con
 [role="lead"]
 La sauvegarde d'une base de données inclut l'établissement d'une connexion avec le serveur SnapCenter, l'ajout de ressources, l'ajout d'une stratégie, la création d'un groupe de ressources de sauvegarde et la sauvegarde.
 
-*Ce dont vous aurez besoin*
-
+.Ce dont vous avez besoin
 * Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
 * Vous devez avoir ajouté la connexion au système de stockage et créé une autorisation d'accès.
 
 
-*Étapes*
-
+.Étapes
 . Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
 +
 [listing]

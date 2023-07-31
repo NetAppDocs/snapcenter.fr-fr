@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_monitor_hana_database_clone_operations.html 
 sidebar: sidebar 
-keywords: clone 
+keywords: monitor, SAP HANA database, clone operations 
 summary: 'Vous pouvez contrôler la progression des opérations de clonage SnapCenter à l"aide de la page tâches. Vous pouvez vérifier la progression d"une opération pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
 = Surveillez les opérations de clonage de bases de données SAP HANA

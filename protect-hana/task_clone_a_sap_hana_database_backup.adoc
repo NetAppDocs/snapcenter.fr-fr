@@ -13,8 +13,7 @@ summary: 'Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouve
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d'une sauvegarde principale ou secondaire.
 
-*Ce dont vous aurez besoin*
-
+.Ce dont vous avez besoin
 * Vous devriez avoir sauvegardé les ressources ou le groupe de ressources.
 * Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
 * Vous ne pouvez pas cloner des sauvegardes basées sur des fichiers.
@@ -31,12 +30,10 @@ Pour Linux : _/var/opt/snapcenter/scc/allowed_commands_list.txt_
 
 NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération échoue.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Pour plus d'informations sur les limites des opérations de fractionnement de clonage, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guide de gestion du stockage logique ONTAP 9"^].
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
 +

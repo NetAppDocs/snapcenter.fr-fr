@@ -13,18 +13,15 @@ summary: Un groupe de ressources est un ensemble de ressources sur un hôte. Une
 [role="lead"]
 Un groupe de ressources est un ensemble de ressources sur un hôte. Une opération de sauvegarde sur le groupe de ressources est effectuée sur toutes les ressources définies dans le groupe de ressources.
 
-*Ce dont vous aurez besoin*
-
+.Ce dont vous avez besoin
 * Vous devez avoir créé un groupe de ressources associé à une stratégie.
 * Si vous souhaitez sauvegarder une ressource avec une relation SnapMirror avec un système de stockage secondaire, le rôle ONTAP attribué à l'utilisateur de stockage doit inclure le privilège « napmirror All ». Toutefois, si vous utilisez le rôle « vsadmin », le privilège « napmirror all » n'est pas requis.
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Vous pouvez sauvegarder un groupe de ressources à la demande à partir de la page Ressources. Si une stratégie est associée à un groupe de ressources et qu'une planification est configurée, les sauvegardes sont automatiquement effectuées en fonction de la planification.
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
 +

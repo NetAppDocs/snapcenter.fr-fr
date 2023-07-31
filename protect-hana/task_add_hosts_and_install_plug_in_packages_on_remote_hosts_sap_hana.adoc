@@ -13,8 +13,7 @@ summary: Vous devez utiliser la page SnapCenter Ajouter un hôte pour ajouter de
 [role="lead"]
 Vous devez utiliser la page SnapCenter Ajouter un hôte pour ajouter des hôtes, puis installer les modules de plug-ins. Les plug-ins sont automatiquement installés sur les hôtes distants. Vous pouvez ajouter un hôte et installer des modules de plug-in pour un hôte individuel ou pour un cluster.
 
-*Ce dont vous aurez besoin*
-
+.Ce dont vous avez besoin
 * Vous devez être un utilisateur affecté à un rôle disposant des autorisations d'installation et de désinstallation du plug-in, comme le rôle d'administrateur SnapCenter.
 * Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré ou si l'utilisateur appartient à un utilisateur de groupe de travail local, vous devez désactiver l'UAC sur l'hôte.
 * Assurez-vous que le service de mise en file d'attente des messages est en cours d'exécution.
@@ -25,14 +24,12 @@ link:../protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html["C
 
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Vous ne pouvez pas ajouter un serveur SnapCenter en tant qu'hôte de plug-in à un autre serveur SnapCenter.
 * Pour la réplication système SAP HANA afin de détecter les ressources sur les systèmes principal et secondaire, il est recommandé d'ajouter à la fois les systèmes principal et secondaire à l'aide de l'utilisateur root ou sudo.
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *hosts*.
 . Vérifiez que l'onglet *Managed Hosts* est sélectionné en haut.
 . Cliquez sur *Ajouter*.

@@ -13,8 +13,7 @@ summary: 'Les ressources sont les bases de données SAP HANA et les volumes non 
 [role="lead"]
 Les ressources sont les bases de données SAP HANA et les volumes non data sur l'hôte Linux gérés par SnapCenter. Vous pouvez ajouter ces ressources aux groupes de ressources pour effectuer des opérations de protection des données après avoir découvert les bases de données SAP HANA disponibles.
 
-*Ce dont vous aurez besoin*
-
+.Ce dont vous avez besoin
 * Vous devez avoir déjà terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'une clé de stockage utilisateur HDB, l'ajout d'hôtes et la configuration des connexions du système de stockage.
 * Vous devez avoir configuré la clé de stockage utilisateur sécurisée HDB et l'utilisateur HDB SQL OS sur l'hôte Linux.
 +
@@ -24,14 +23,12 @@ Les ressources sont les bases de données SAP HANA et les volumes non data sur l
 * Le plug-in SnapCenter pour base de données SAP HANA ne prend pas en charge la découverte automatique des ressources résidant dans des environnements virtuels RDM/VMDK. Vous devez fournir les informations de stockage pour les environnements virtuels tout en ajoutant les bases de données manuellement.
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Après l'installation du plug-in, toutes les ressources de cet hôte Linux sont automatiquement découvertes et affichées sur la page Ressources.
 
 Les ressources détectées automatiquement ne peuvent pas être modifiées ou supprimées.
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in pour la base de données SAP HANA dans la liste.
 . Dans la page Ressources, sélectionnez le type de ressource dans la liste vue.
 . (Facultatif) cliquez sur *image:../media/filter_icon.gif[""]*, puis sélectionnez le nom d'hôte.
@@ -55,8 +52,7 @@ NOTE: Si une clé de stockage HDB Secure User Store n'est pas configurée dans l
 
 IMPORTANT: Vous devez actualiser les ressources si les bases de données sont renommées en dehors de SnapCenter.
 
-*Après la fin*
-
+.Et la suite ?
 Vous devez configurer la clé du magasin d'utilisateurs sécurisé HDB et l'utilisateur HDBSQL pour pouvoir protéger la base de données ou l'ajouter au groupe de ressources pour effectuer des opérations de protection des données.
 
 link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["Configurez la clé HDB User Store et l'utilisateur HDBSQL OS pour la base de données SAP HANA"]

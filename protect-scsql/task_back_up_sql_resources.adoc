@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_back_up_sql_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup 
 summary: 'Si une ressource ne fait pas encore partie d"un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.' 
 ---
 = Sauvegarde des ressources SQL
@@ -13,17 +13,15 @@ summary: 'Si une ressource ne fait pas encore partie d"un groupe de ressources, 
 [role="lead"]
 Si une ressource ne fait pas encore partie d'un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Pour l'authentification des informations d'identification Windows, vous devez configurer vos informations d'identification avant d'installer les plug-ins.
 * Pour l'authentification de l'instance SQL Server, vous devez ajouter les informations d'identification après l'installation des plug-ins.
 * Pour l'authentification GMSA, vous devez configurer GMSA lors de l'enregistrement de l'hôte avec SnapCenter dans la page *Ajouter hôte* ou *Modifier hôte* pour activer et utiliser le GMSA.
 * Si l'hôte est ajouté avec GMSA et si le GMSA dispose de privilèges d'ouverture de session et d'administrateur système, le GMSA sera utilisé pour se connecter à l'instance SQL.
 
 
-*Étapes*
-
-. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *base de données* ou *instance* ou *Groupe de disponibilité* dans la liste déroulante *Affichage*.
 +
 .. Sélectionnez la base de données, l'instance ou le groupe de disponibilité à sauvegarder.
@@ -43,13 +41,13 @@ Par exemple, clienttext_policy_hostname ou Resource_hostname. Par défaut, un ho
 +
 .. Dans la section stratégies, sélectionnez une ou plusieurs stratégies dans la liste déroulante.
 +
-Vous pouvez créer une stratégie en cliquant sur *image:../media/add_policy_from_resourcegroup.gif[""]* pour démarrer l'assistant de règles.
+Vous pouvez créer une stratégie en sélectionnant *image:../media/add_policy_from_resourcegroup.gif[""]* pour démarrer l'assistant de règles.
 
 +
 Dans la section *configurer les plannings pour les stratégies sélectionnées*, les stratégies sélectionnées sont répertoriées.
 
-.. Cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
-.. Dans *Ajouter des horaires pour la police* `policy_name` Configurez la planification, puis cliquez sur *OK*.
+.. Sélectionnez *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Dans *Ajouter des horaires pour la police* `policy_name` Configurez la planification, puis sélectionnez *OK*.
 +
 Ici `policy_name` est le nom de la stratégie que vous avez sélectionnée.
 
@@ -70,7 +68,7 @@ Vous pouvez sélectionner plusieurs serveurs de vérification (hôte local ou h�
 NOTE: La version du serveur de vérification doit être égale ou supérieure à la version de l'édition du serveur SQL qui héberge la base de données primaire.
 
 .. Sélectionnez *Charger les localisateurs secondaires pour vérifier les sauvegardes sur le système de stockage secondaire* afin de vérifier vos sauvegardes sur le système de stockage secondaire.
-.. Sélectionnez la stratégie pour laquelle vous souhaitez configurer votre planning de vérification, puis cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Sélectionnez la stratégie pour laquelle vous souhaitez configurer votre planning de vérification, puis sélectionnez *image:../media/add_policy_from_resourcegroup.gif[""]*.
 .. Dans la boîte de dialogue Ajouter des programmes de vérification _policy_name_, effectuez les opérations suivantes :
 +
 |===
@@ -94,7 +92,7 @@ Sélectionnez *Exécuter la vérification planifiée*.
 
 NOTE: Si le serveur de vérification n'a pas de connexion de stockage, l'opération de vérification échoue avec l'erreur : échec du montage du disque.
 
-.. Cliquez sur *OK*.
+.. Sélectionnez *OK*.
 +
 Les planifications configurées sont répertoriées dans la colonne programmes appliqués.
 
@@ -108,11 +106,11 @@ Vous devez également spécifier les adresses e-mail de l'expéditeur et du dest
 
 NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface utilisateur graphique ou de la commande PowerShell set-SmtpServer.
 
-. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Passez en revue le résumé, puis sélectionnez *Terminer*.
 +
 La page topologie de la base de données s'affiche.
 
-. Cliquez sur *Sauvegarder maintenant*.
+. Sélectionnez *Sauvegarder maintenant*.
 . Dans la page sauvegarde, effectuez les opérations suivantes :
 +
 .. Si vous avez appliqué plusieurs stratégies à la ressource, dans la liste déroulante *Stratégie*, sélectionnez la stratégie que vous souhaitez utiliser pour la sauvegarde.
@@ -120,7 +118,7 @@ La page topologie de la base de données s'affiche.
 Si la stratégie sélectionnée pour la sauvegarde à la demande est associée à un planning de sauvegarde, les sauvegardes à la demande seront conservées en fonction des paramètres de conservation spécifiés pour le type de programme.
 
 .. Sélectionnez *vérifier après sauvegarde* pour vérifier votre sauvegarde.
-.. Cliquez sur *Backup*.
+.. Sélectionnez *Backup*.
 +
 
 NOTE: Vous ne devez pas renommer la tâche de sauvegarde créée dans le planificateur Windows ou l'agent SQL Server.
@@ -133,11 +131,10 @@ Un groupe de ressources implicite est créé. Vous pouvez afficher ces informati
 
 
 
-. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+. Surveillez la progression de l'opération en sélectionnant *Monitor* > *Jobs*.
 
 
-*Après la fin*
-
+.Et la suite ?
 * Dans les configurations MetroCluster, il est possible que SnapCenter ne détecte pas une relation de protection après un basculement.
 +
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossible de détecter la relation SnapMirror ou SnapVault après le basculement de MetroCluster"]
@@ -145,8 +142,7 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 * Si vous sauvegardez des données d'application sur des disques VMDK et que la taille du segment de mémoire Java du plug-in SnapCenter pour VMware vSphere n'est pas suffisamment importante, la sauvegarde risque d'échouer. Pour augmenter la taille du segment de mémoire Java, localisez le fichier de script /opt/netapp/init_scripts/scvservice. Dans ce script, le `do_start method` Command démarre le service du plug-in SnapCenter VMware. Mettez à jour cette commande à l'adresse suivante : `Java -jar -Xmx8192M -Xms4096M`.
 
 
-*Plus d'informations*
-
+.Informations associées
 link:task_create_backup_policies_for_sql_server_databases.html["Créer des stratégies de sauvegarde pour les bases de données SQL Server"]
 
 link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["Sauvegarde des ressources avec les applets de commande PowerShell"]

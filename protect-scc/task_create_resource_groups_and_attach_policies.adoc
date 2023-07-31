@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_create_resource_groups_and_attach_policies.html 
 sidebar: sidebar 
-keywords:  
+keywords: resource groups, attach policies, snapcenter 
 summary: Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. 
 ---
 = Création de groupes de ressources et association de règles dans SnapCenter
@@ -10,7 +10,7 @@ summary: Un groupe de ressources est le conteneur dans lequel vous devez ajouter
 :imagesdir: ../media/
 
 
-Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. Il vous permet de sauvegarder simultanément toutes les données associées à une application donnée, ce qui est requis pour toute tâche de protection des données. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter.
+Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. Il vous permet de sauvegarder simultanément toutes les données associées à une application donnée. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter.
 
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
@@ -35,7 +35,7 @@ Remarque : le nom du groupe de ressources ne doit pas dépasser 250 caractères.
  a| 
 Entrez un ou plusieurs libellés qui vous aideront à rechercher ultérieurement le groupe de ressources.
 
-Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de ressources, vous pourrez rechercher par la suite tous les groupes de ressources associés à la balise RH.
+Par exemple, si vous ajoutez HR comme balise à plusieurs groupes de ressources, vous trouverez plus tard tous les groupes de ressources associés à la balise HR.
 
 
 
@@ -52,7 +52,7 @@ Par exemple, _customtext_Resource group_policy_hostname ou Resource group_hostna
 Cela aide à filtrer les informations affichées à l'écran.
 
 . Sélectionnez les ressources dans la section *Ressources disponibles*, puis sélectionnez la flèche droite pour les déplacer vers la section *Ressources sélectionnées*.
-. Facultatif : dans la page Paramètres de l'application, procédez comme suit :
+. Facultatif : dans la page *Paramètres de l'application*, procédez comme suit :
 +
 .. Sélectionnez la flèche sauvegardes pour définir des options de sauvegarde supplémentaires :
 +
@@ -188,7 +188,7 @@ Les planifications configurées sont répertoriées dans la colonne programmes a
 
 
 
-. Dans la liste déroulante *préférence de messagerie* de la page notification, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Dans la liste déroulante *préférence de messagerie* de la page *notification*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
 +
 Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Le serveur SMTP doit être configuré dans *Paramètres* > *Paramètres globaux*.
 

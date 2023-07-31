@@ -13,8 +13,7 @@ summary: 'Pour les hôtes SAP HANA directement enregistrés dans SnapCenter, l"i
 [role="lead"]
 Pour les hôtes SAP HANA directement enregistrés dans SnapCenter, l'installation ou la mise à niveau du plug-in SnapCenter pour base de données SAP HANA déclenchera une détection automatique des ressources sur l'hôte. Après l'installation ou la mise à niveau du plug-in, pour chaque ressource MDC (conteneur de base de données multitenant) située sur l'hôte du plug-in, une autre ressource MDC sera automatiquement découverte avec un format GUID différent et enregistrée dans SnapCenter. La nouvelle ressource sera à l'état « verrouillée ».
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Par exemple, dans SnapCenter 4.2, si la ressource MDC E90 était située sur l'hôte du plug-in et enregistrée manuellement, après la mise à niveau vers SnapCenter 4.3, une autre ressource MDC E90 avec un GUID différent sera découverte et enregistrée dans SnapCenter.
 
 
@@ -24,8 +23,7 @@ NOTE: Les sauvegardes associées à la ressource de SnapCenter 4.2 et versions a
 
 Pour commencer à utiliser la nouvelle ressource découverte dans SnapCenter 4.3 pour les opérations de protection des données, procédez comme suit :
 
-*Étapes*
-
+.Étapes
 . Dans la page Ressources, sélectionnez l'ancienne ressource MDC avec les sauvegardes ajoutées à la version précédente de SnapCenter, puis placez-la dans "mode de maintenance" à partir de la page topologie.
 +
 Si la ressource fait partie d'un groupe de ressources, placez le groupe de ressources dans "mode de provenance".
@@ -43,8 +41,7 @@ Par exemple, si la période de conservation des copies Snapshot primaires est de
 
 
 
-*Plus d'informations*
-
+.Informations associées
 link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["Configurez la clé HDB User Store et l'utilisateur HDBSQL OS pour la base de données SAP HANA"]
 
 link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Affichez les sauvegardes et les clones des bases de données SAP HANA sur la page topologie"]

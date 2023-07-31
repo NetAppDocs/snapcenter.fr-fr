@@ -31,9 +31,9 @@ Si vous installez des plug-ins sur un cluster (WSFC), les plug-ins sont install�
 
 *Étapes*
 
-. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Dans le volet de navigation de gauche, sélectionnez *hosts*.
 . Vérifiez que l'onglet *Managed Hosts* est sélectionné en haut.
-. Cliquez sur *Ajouter*.
+. Sélectionnez *Ajouter*.
 . Dans la page hôtes, effectuez les opérations suivantes :
 +
 |===
@@ -83,7 +83,7 @@ NOTE: Le mode d'authentification des informations d'identification est détermin
 
 |===
 . Dans la section *Select Plug-ins to Install*, sélectionnez les plug-ins à installer.
-. (Facultatif) cliquez sur *plus d'options*.
+. (Facultatif) sélectionnez *plus d'options*.
 +
 |===
 | Pour ce champ... | Procédez comme ça... 
@@ -116,14 +116,14 @@ Vous pouvez également personnaliser le chemin.
 
 ** Pour les plug-ins personnalisés SnapCenter :
 +
-... Dans la section plugiciels personnalisés, cliquez sur *Parcourir*, puis sélectionnez le dossier de plug-in personnalisé zippé.
+... Dans la section Custom Plug-ins, sélectionnez *Browse*, puis sélectionnez le dossier zip Custom Plug-in.
 +
 Le dossier compressé contient le code du plug-in personnalisé et le fichier descripteur .xml.
 
 +
 Pour le plug-in de stockage, accédez à _C:\ProgramData\NetApp\SnapCenter\Package Repository_ et sélectionnez `Storage.zip` dossier.
 
-... Cliquez sur *Upload*.
+... Sélectionnez *Upload*.
 +
 Le fichier descripteur .xml du dossier de plug-in personnalisé compressé est validé avant le téléchargement du package.
 
@@ -158,7 +158,7 @@ IMPORTANT: Indiquez le nom GMSA au format suivant : domainname\accountName$.
 NOTE: GMSA sera utilisé comme compte de service de connexion uniquement pour le plug-in SnapCenter pour Windows.
 
 |===
-. Cliquez sur *soumettre*.
+. Sélectionnez *soumettre*.
 +
 Si vous n'avez pas coché la case *Skip précontrôles*, l'hôte est validé pour vérifier si l'hôte répond aux exigences d'installation du plug-in. L'espace disque, la RAM, la version PowerShell, la version .NET, l'emplacement (pour les plug-ins Windows) et la version Java (pour les plug-ins Linux) sont validés par rapport à la configuration minimale requise. Si la configuration minimale requise n'est pas respectée, des messages d'erreur ou d'avertissement appropriés s'affichent.
 
@@ -169,7 +169,7 @@ Si l'erreur est liée à l'espace disque ou à la RAM, vous pouvez mettre à jou
 
 NOTE: Dans une configuration HA, si vous mettez à jour le fichier web.config, vous devez le mettre à jour sur les deux nœuds.
 
-. Si le type d'hôte est Linux, vérifiez l'empreinte digitale, puis cliquez sur *confirmer et soumettre*.
+. Si le type d'hôte est Linux, vérifiez l'empreinte, puis sélectionnez *confirmer et soumettre*.
 +
 
 NOTE: La vérification des empreintes est obligatoire même si le même hôte a été ajouté précédemment à SnapCenter et que l'empreinte a été confirmée.

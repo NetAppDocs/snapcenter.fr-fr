@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in, resources, snapcenter 
 summary: Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon votre environnement, les ressources peuvent être des instances de base de données ou des collections que vous souhaitez sauvegarder ou cloner. 
 ---
 = Ajoutez des ressources aux plug-ins personnalisés SnapCenter
@@ -13,7 +13,7 @@ summary: Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon vo
 [role="lead"]
 Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon votre environnement, les ressources peuvent être des instances de base de données ou des collections que vous souhaitez sauvegarder ou cloner.
 
-.Avant de commencer
+.Ce dont vous avez besoin
 * Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la création de connexions au système de stockage et l'ajout d'informations d'identification.
 * Vous devez avoir link:concept_develop_a_plug_in_for_your_application.html["création d'un plug-in personnalisé pour votre application"].
 * Vous devez avoir chargé les plug-ins sur SnapCenter Server.
@@ -73,7 +73,7 @@ Facultatif : sélectionnez le image:../media/add_policy_from_resourcegroup.gif["
 
 +
 
-NOTE: Les plug-ins personnalisés SnapCenter ne prennent pas en charge la découverte automatique des ressources et des informations de stockage pour les environnements physiques et virtuels. Vous devez fournir les informations de stockage pour les environnements physiques et virtuels tout en créant les ressources.
+NOTE: Les plug-ins personnalisés SnapCenter ne prennent pas en charge la détection automatique des ressources. De plus, les détails du stockage des environnements physiques et virtuels ne sont pas découverts automatiquement. Vous devez fournir les informations de stockage pour les environnements physiques et virtuels tout en créant les ressources.
 
 +
 image::../media/storage_footprint.gif[Encombrement du stockage]

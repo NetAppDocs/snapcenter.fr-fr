@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_monitor_the_status_of_installing_plugin_for_sap_hana.html 
 sidebar: sidebar 
-keywords:  
+keywords: monitor, install, snapCenter plug-in for SAP HANA 
 summary: 'Vous pouvez contrôler la progression de l"installation du module d"extension SnapCenter à l"aide de la page travaux. Vous pouvez vérifier la progression de l"installation pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
 = Contrôler l'état de l'installation du plug-in pour SAP HANA

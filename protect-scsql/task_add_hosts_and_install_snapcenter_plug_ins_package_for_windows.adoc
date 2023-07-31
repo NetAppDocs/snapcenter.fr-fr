@@ -13,8 +13,7 @@ summary: Vous devez utiliser la page SnapCenterAdd Host pour ajouter des hôtes 
 [role="lead"]
 Vous devez utiliser la page SnapCenter *Ajouter hôte* pour ajouter des hôtes et installer le module de plug-ins. Les plug-ins sont automatiquement installés sur les hôtes distants.
 
-*Ce dont vous aurez besoin*
-
+.Ce dont vous avez besoin
 * Vous devez être un utilisateur affecté à un rôle disposant des autorisations d'installation et de désinstallation du plug-in, comme le rôle d'administrateur SnapCenter.
 * Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré, vous devez désactiver l'UAC sur l'hôte.
 * Vous devez vous assurer que le service de mise en file d'attente des messages est en cours d'exécution.
@@ -24,19 +23,17 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["Configurez le com
 
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Vous ne pouvez pas ajouter un serveur SnapCenter en tant qu'hôte de plug-in à un autre serveur SnapCenter.
 
 Vous pouvez ajouter un hôte et installer les modules d'extension pour un hôte individuel ou pour un cluster. Si vous installez les plug-ins sur un cluster ou Windows Server Failover Clustering (WSFC), les plug-ins sont installés sur tous les nœuds du cluster.
 
 Pour plus d'informations sur la gestion des hôtes, reportez-vous à la section link:../admin/concept_manage_hosts.html["Gérer les hôtes"^].
 
-*Étapes*
-
-. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *hosts*.
 . Vérifiez que l'onglet *Managed Hosts* est sélectionné en haut.
-. Cliquez sur *Ajouter*.
+. Sélectionnez *Ajouter*.
 . Dans la page hôtes, procédez comme suit :
 +
 |===
@@ -79,7 +76,7 @@ NOTE: Le mode d'authentification des informations d'identification est détermin
 
 |===
 . Dans la section *Select Plug-ins to Install*, sélectionnez les plug-ins à installer.
-. Cliquez sur *plus d'options*.
+. Sélectionnez *plus d'options*.
 +
 |===
 | Pour ce champ... | Procédez comme ça... 
@@ -127,10 +124,10 @@ Indiquez le nom GMSA au format suivant : domainname\accountName$.
 NOTE: Si l'hôte est ajouté avec GMSA et si le GMSA dispose de privilèges d'ouverture de session et d'administrateur système, le GMSA sera utilisé pour se connecter à l'instance SQL.
 
 |===
-. Cliquez sur *soumettre*.
+. Sélectionnez *soumettre*.
 . Pour le plug-in SQL, sélectionnez l'hôte pour configurer le répertoire du journal.
 +
-.. Cliquez sur *configurer le répertoire du journal* et, dans la page configurer le répertoire du journal hôte, cliquez sur *Parcourir* et procédez comme suit :
+.. Sélectionnez *Configure log Directory* et dans la page Configure host log Directory, sélectionnez *Browse* et procédez comme suit :
 +
 Seules les LUN NetApp (disques) sont répertoriées pour être sélectionnées. SnapCenter sauvegarde et réplique le répertoire journal de l'hôte dans le cadre de l'opération de sauvegarde.
 
@@ -140,12 +137,12 @@ image::../media/host_managed_hosts_configureplugin.gif[Page configurer le plug-i
 +
 ... Sélectionnez la lettre de lecteur ou le point de montage sur l'hôte sur lequel le journal hôte sera stocké.
 ... Choisissez un sous-répertoire, le cas échéant.
-... Cliquez sur *Enregistrer*.
+... Sélectionnez *Enregistrer*.
 
 
 
 
-. Cliquez sur *soumettre*.
+. Sélectionnez *soumettre*.
 +
 Si vous n'avez pas coché la case *Skip précontrôles*, l'hôte est validé pour vérifier s'il répond aux exigences d'installation du plug-in. L'espace disque, la RAM, la version PowerShell, la version .NET, l'emplacement (pour les plug-ins Windows) et la version Java (pour les plug-ins Linux) sont validés par rapport à la configuration minimale requise. Si la configuration minimale requise n'est pas respectée, des messages d'erreur ou d'avertissement appropriés s'affichent.
 

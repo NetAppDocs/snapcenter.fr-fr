@@ -13,8 +13,7 @@ summary: 'Le workflow de clonage inclut la réalisation de l"opération de clona
 [role="lead"]
 Le workflow de clonage inclut la réalisation de l'opération de clonage et le contrôle de l'opération.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Vous pouvez cloner sur le serveur SAP HANA source.
 * Vous pouvez cloner des sauvegardes de ressources pour les raisons suivantes :
 +

@@ -43,10 +43,10 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 
 == Étape 1 : création d'un nom de stratégie
 
-. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
-. Dans la page Paramètres, cliquez sur *stratégies*.
-. Cliquez sur *Nouveau*.
-. Dans la page Nom, entrez le nom et la description de la stratégie.
+. Dans le volet de navigation de gauche, sélectionnez *Paramètres*.
+. Dans la page Paramètres, sélectionnez *stratégies*.
+. Sélectionnez *Nouveau*.
+. Dans la page *Nom*, entrez le nom et la description de la stratégie.
 
 
 
@@ -336,5 +336,5 @@ NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou d
 
 == Étape 7 : passez en revue le résumé
 
-. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Passez en revue le résumé, puis sélectionnez *Terminer*.
 

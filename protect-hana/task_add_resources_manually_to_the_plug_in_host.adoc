@@ -13,16 +13,14 @@ summary: 'La détection automatique n"est pas prise en charge pour certaines ins
 [role="lead"]
 La détection automatique n'est pas prise en charge pour certaines instances HANA. Vous devez ajouter ces ressources manuellement.
 
-*Ce dont vous aurez besoin*
-
+.Ce dont vous avez besoin
 * Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la configuration des connexions du système de stockage et l'ajout d'une clé de stockage utilisateur HDB.
 * Pour la réplication des systèmes SAP HANA, il est recommandé d'ajouter toutes les ressources de ce système HANA dans un groupe de ressources et de sauvegarder un groupe de ressources. Cela garantit une sauvegarde transparente en mode basculement/retour arrière.
 
 
 link:task_create_resource_groups_and_attach_policies.html["Créer des groupes de ressources et attacher des stratégies"].
 
-*À propos de cette tâche*
-
+.Description de la tâche
 La détection automatique n'est pas prise en charge pour les configurations suivantes :
 
 * Dispositions RDM et VMDK
@@ -36,8 +34,7 @@ NOTE: Lorsque les ressources ci-dessus sont découvertes, les opérations de pro
 * Environnement de réplication en cascade en mode réplication du système
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, sélectionnez le plug-in SnapCenter pour base de données SAP HANA dans la liste déroulante, puis cliquez sur *Ressources*.
 . Dans la page Ressources, cliquez sur *Ajouter une base de données SAP HANA*.
 . Dans la page Détails de la ressource, effectuez les opérations suivantes :

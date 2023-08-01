@@ -39,7 +39,7 @@ Dans la page Ressources, le image:../media/not_supported_icon.png[""] L'icône i
 NOTE: Dans un DAG, si une copie active de la base de données se trouve sur un stockage non-NetApp et qu'au moins une copie de base de données passive réside sur un stockage NetApp, vous pouvez protéger la base de données.
 
 +
-Cliquez sur *image:../media/filter_icon.gif[""]*, puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources. Vous pouvez ensuite cliquer sur *image:../media/filter_icon.gif[""]* pour fermer le volet de filtre.
+Cliquez sur *image:../media/filter_icon.png[""]*, puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources. Vous pouvez ensuite cliquer sur *image:../media/filter_icon.png[""]* pour fermer le volet de filtre.
 
 +
 ** Si vous souhaitez sauvegarder une base de données, cliquez sur son nom.

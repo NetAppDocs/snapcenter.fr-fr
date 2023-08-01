@@ -28,13 +28,13 @@ SnapCenter peut être déployé de plusieurs manières :
 +
 ** Les données qui résident dans les systèmes primaires ONTAP FAS, AFF ou ASA et qui sont répliquées vers les systèmes secondaires ONTAP FAS, AFF ou ASA
 ** Les données qui résident dans les systèmes primaires ONTAP Select
-** Les données qui se trouvent sur les systèmes primaires et secondaires ONTAP FAS, AFF ou ASA et qui sont protégées dans le stockage objet local StorageGRID (via l'intégration de la sauvegarde cloud NetApp BlueXP)
+** Les données qui se trouvent sur les systèmes primaires et secondaires ONTAP FAS, AFF ou ASA et qui sont protégées pour le stockage objet local StorageGRID
 
 
 * Sur site, dans un cloud hybride, pour protéger ce qui suit :
 +
 ** Les données qui résident dans les systèmes primaires ONTAP FAS, AFF ou ASA et qui sont répliquées vers Cloud Volumes ONTAP
-** Les données qui se trouvent sur les systèmes primaires et secondaires ONTAP FAS, AFF ou ASA et qui sont protégées pour le stockage objet et d'archivage dans le cloud (via l'intégration de NetApp BlueXP Cloud Backup)
+** Les données qui se trouvent sur les systèmes primaires et secondaires ONTAP FAS, AFF ou ASA et qui sont protégées pour le stockage objet et d'archivage dans le cloud (via l'intégration de la sauvegarde et de la restauration BlueXP)
 
 
 * Dans un cloud public, pour protéger :
@@ -184,9 +184,10 @@ Le serveur SnapCenter communique avec les plug-ins Windows via l'agent hôte.
 
 
 
-Le serveur SnapCenter et les plug-ins communiquent avec l'agent hôte via HTTPS.
+Le serveur SnapCenter et les plug-ins communiquent avec l'agent hôte via HTTPS. Les informations relatives aux opérations SnapCenter sont stockées dans le référentiel SnapCenter.
 
-Les informations relatives aux opérations SnapCenter sont stockées dans le référentiel SnapCenter.
+
+NOTE: SnapCenter prend en charge l'espace de noms disjoint pour les hôtes Windows. Si vous rencontrez des problèmes lors de l'utilisation d'un espace de noms disjoint, reportez-vous à la section https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_is_unable_to_discover_resources_when_using_disjoint_namespace["SnapCenter ne parvient pas à détecter les ressources lors de l'utilisation d'un namespace disjoint"].
 
 
 

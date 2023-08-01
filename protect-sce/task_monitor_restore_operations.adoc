@@ -33,7 +33,7 @@ Les icônes suivantes apparaissent sur la page travaux et indiquent l'état de l
 . Dans la page moniteur, cliquez sur *travaux*.
 . Dans la page travaux, effectuez les opérations suivantes :
 +
-.. Cliquez sur image:../media/filter_icon.gif[""] pour filtrer la liste afin que seules les opérations de restauration soient répertoriées.
+.. Cliquez sur image:../media/filter_icon.png[""] pour filtrer la liste afin que seules les opérations de restauration soient répertoriées.
 .. Spécifiez les dates de début et de fin.
 .. Dans la liste déroulante *Type*, sélectionnez *Restaurer*.
 .. Dans la liste déroulante *Status*, sélectionnez l'état de restauration.

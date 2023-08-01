@@ -42,7 +42,7 @@ Les bases de données ne sont pas à l'état normal lorsqu'elles sont en montage
 Toutes les bases de données et les fichiers DAG sont affichés avec leurs noms DAG ou d'hôte au format FQDN, ce qui vous permet de distinguer entre plusieurs bases de données.
 
 +
-Cliquez sur image:../media/filter_icon.gif[""] Et sélectionnez le nom d'hôte et le serveur Exchange pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.gif[""] pour fermer le volet de filtre.
+Cliquez sur image:../media/filter_icon.png[""] Et sélectionnez le nom d'hôte et le serveur Exchange pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.png[""] pour fermer le volet de filtre.
 
 . Cliquez sur *Actualiser les ressources*.
 +

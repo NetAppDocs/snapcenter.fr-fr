@@ -50,7 +50,7 @@ NOTE: SnapCenter ne peut sauvegarder la base de données primaire que si vous av
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Database*, *instance* ou *Groupe de disponibilité* dans la liste déroulante *View*.
 +
-Cliquez sur image:../media/filter_icon.gif[""] Et sélectionnez le nom d'hôte et l'instance SQL Server pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.gif[""] pour fermer le volet de filtre.
+Cliquez sur image:../media/filter_icon.png[""] Et sélectionnez le nom d'hôte et l'instance SQL Server pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.png[""] pour fermer le volet de filtre.
 
 . Cliquez sur *Actualiser les ressources*.
 +

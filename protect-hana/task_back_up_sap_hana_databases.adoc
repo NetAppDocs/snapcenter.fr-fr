@@ -41,19 +41,19 @@ Pour Linux : _/var/opt/snapcenter/scc/allowed_commands_list.txt_
 NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération échoue.
 
 .Étapes
-. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page ressource, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
 +
-Cliquez sur *image:../media/filter_icon.gif[""]*, puis sélectionnez le nom d'hôte et le type de ressource pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.gif[""] pour fermer le volet de filtre.
+Sélectionnez *image:../media/filter_icon.png[""]*, puis sélectionnez le nom d'hôte et le type de ressource pour filtrer les ressources. Vous pouvez ensuite sélectionner image:../media/filter_icon.png[""] pour fermer le volet de filtre.
 
-. Cliquez sur la ressource à sauvegarder.
+. Sélectionnez la ressource à sauvegarder.
 . Sur la page ressource, sélectionnez *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de la copie Snapshot.
 +
 Par exemple, _customtext_policy_hostname_ ou _Resource_hostname_. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
 
 . Dans la page Paramètres de l'application, procédez comme suit :
 +
-** Cliquez sur la flèche *backups* pour définir des options de sauvegarde supplémentaires :
+** Sélectionnez la flèche *backups* pour définir des options de sauvegarde supplémentaires :
 +
 Activez la sauvegarde du groupe de cohérence, si nécessaire, et effectuez les tâches suivantes :
 
@@ -75,12 +75,12 @@ Désactivez la synchronisation WAFL
 Sélectionnez cette option pour éviter de forcer un point de cohérence WAFL.
 
 |===
-** Cliquez sur la flèche *scripts* pour exécuter des commandes de pré et post pour les opérations de mise en veille, de copie Snapshot et de mise en veille.
+** Sélectionnez la flèche *scripts* pour exécuter les commandes pré et post pour les opérations quiesce, Snapshot copy et unquiesce.
 +
 Vous pouvez également exécuter des pré-commandes avant de quitter l'opération de sauvegarde. Des préscripts et des postscripts sont exécutés sur le serveur SnapCenter.
 
-** Cliquez sur la flèche **configurations personnalisées**, puis entrez les paires de valeurs personnalisées requises pour tous les travaux utilisant cette ressource.
-** Cliquez sur la flèche *Snapshot Copy Tool* pour sélectionner l'outil de création de copies Snapshot :
+** Sélectionnez la flèche **configurations personnalisées **, puis entrez les paires de valeurs personnalisées requises pour tous les travaux utilisant cette ressource.
+** Sélectionner la flèche *Snapshot Copy Tool* pour sélectionner l'outil de création de copies Snapshot :
 +
 |===
 | Les fonctions que vous recherchez... | Alors... 
@@ -121,8 +121,8 @@ NOTE: Vous pouvez également créer une stratégie en cliquant sur *image:../med
 +
 Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
 
-.. Cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
-.. Dans la boîte de dialogue Ajouter des planifications pour la stratégie _policy_name_, configurez le programme, puis cliquez sur *OK*.
+.. Sélectionnez *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Dans la boîte de dialogue Ajouter des plannings pour la stratégie _nom_règle_, configurez la planification, puis sélectionnez *OK*.
 +
 _policy_name_ est le nom de la stratégie que vous avez sélectionnée.
 
@@ -135,18 +135,18 @@ Les planifications configurées sont répertoriées dans la colonne programmes a
 +
 Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. SMTP doit également être configuré dans *Paramètres* > *Paramètres globaux*.
 
-. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Passez en revue le résumé, puis sélectionnez *Terminer*.
 +
 La page topologie des ressources s'affiche.
 
-. Cliquez sur *Sauvegarder maintenant*.
+. Sélectionnez *Sauvegarder maintenant*.
 . Dans la page sauvegarde, effectuez les opérations suivantes :
 +
 .. Si vous avez appliqué plusieurs stratégies à la ressource, dans la liste déroulante *Stratégie*, sélectionnez la stratégie que vous souhaitez utiliser pour la sauvegarde.
 +
 Si la stratégie sélectionnée pour la sauvegarde à la demande est associée à un planning de sauvegarde, les sauvegardes à la demande seront conservées en fonction des paramètres de conservation spécifiés pour le type de programme.
 
-.. Cliquez sur *Backup*.
+.. Sélectionnez *Backup*.
 
 
 . Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.

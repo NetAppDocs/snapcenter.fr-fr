@@ -13,8 +13,7 @@ summary: 'Vous pouvez surveiller la progression des différentes opérations de 
 [role="lead"]
 Vous pouvez surveiller la progression des différentes opérations de sauvegarde à l'aide de la page SnapCenterJobs. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s'il y a un problème.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Les icônes suivantes apparaissent sur la page travaux et indiquent l'état correspondant des opérations :
 
 * image:../media/progress_icon.gif["Icône en cours"] En cours
@@ -22,11 +21,10 @@ Les icônes suivantes apparaissent sur la page travaux et indiquent l'état corr
 * image:../media/failed_icon.gif["Icône échec"] Échec
 * image:../media/warning_icon.gif["Terminé avec l'icône d'avertissement"] Terminé avec des avertissements ou impossible de démarrer en raison d'avertissements
 * image:../media/verification_job_in_queue.gif["La tâche de vérification est mise en file d'attente"] En file d'attente
-* image:../media/cancel_icon.gif[""] Annulée
+* image:../media/cancel_icon.gif["Icône Annuler"] Annulée
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *moniteur*.
 . Dans la page moniteur, cliquez sur *travaux*.
 . Dans la page travaux, effectuez les opérations suivantes :
@@ -57,11 +55,10 @@ Le volet activité affiche les cinq opérations les plus récentes effectuées. 
 
 Le volet activité affiche des informations concernant les opérations de sauvegarde, de restauration, de clonage et de sauvegarde planifiée. Si vous utilisez le plug-in pour SQL Server ou le plug-in pour Exchange Server, le volet activité affiche également des informations sur l'opération de réamorçage.
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Cliquez sur image:../media/activity_pane_icon.gif[""] Dans le volet activité pour afficher les cinq opérations les plus récentes.
 +
-Lorsque vous cliquez sur l'une des opérations, les détails de l'opération sont répertoriés dans la page Détails du travail.
+Lorsque vous cliquez sur l'une des opérations, les détails de l'opération sont répertoriés dans la page *Détails du travail*.
 
 

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_clone_from_a_backup.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone 
 summary: 'Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d"une sauvegarde principale ou secondaire. Les fonctionnalités des opérations de clonage dépendent du plug-in que vous utilisez.' 
 ---
 = Cloner à partir d'une sauvegarde
@@ -13,17 +13,15 @@ summary: 'Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouve
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d'une sauvegarde principale ou secondaire. Les fonctionnalités des opérations de clonage dépendent du plug-in que vous utilisez.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir sauvegardé les ressources ou le groupe de ressources.
 * L'opération de clonage par défaut ne cloner que les objets de stockage. Les opérations de clonage au niveau applicatif ne peuvent être réalisées que si le plug-in personnalisé offre cette fonctionnalité.
 * Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
-. Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
+. Dans la page *Ressources*, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
 +
 Les ressources s'affichent avec des informations telles que le type, le nom de l'hôte ou du cluster, les groupes de ressources et les stratégies associés et l'état.
 
@@ -64,7 +62,7 @@ Par exemple, rs1_clone. Si vous effectuez le clonage sur le même hôte que la r
 +
 Si la ressource sélectionnée est une LUN et si vous effectuez un clonage à partir d'une sauvegarde secondaire, les volumes de destination sont répertoriés. Une seule source peut avoir plusieurs volumes de destination.
 
-. Dans la page Paramètres, effectuez les opérations suivantes :
+. Dans la page *Paramètres*, effectuez les opérations suivantes :
 +
 |===
 | Pour ce champ... | Procédez comme ça... 
@@ -99,7 +97,7 @@ Commande mount pour un volume ou un qtree sur une machine Linux : mount<VSERVER_
 
 
 
-. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Dans la page *notification*, dans la liste déroulante *préférence de courrier électronique*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
 +
 Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail.
 

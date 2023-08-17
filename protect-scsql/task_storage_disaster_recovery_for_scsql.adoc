@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_storage_disaster_recovery_for_scsql.html 
 sidebar: sidebar 
-keywords:  
+keywords: disaster recovery 
 summary: Vous pouvez restaurer le plug-in SnapCenter pour stockage SQL Server en activant le mode DR pour le stockage sur la page Paramètres globaux. 
 ---
 = Stockage de reprise après incident pour le plug-in SnapCenter pour SQL Server
@@ -13,8 +13,7 @@ summary: Vous pouvez restaurer le plug-in SnapCenter pour stockage SQL Server en
 [role="lead"]
 Vous pouvez restaurer le plug-in SnapCenter pour stockage SQL Server en activant le mode DR pour le stockage sur la page Paramètres globaux.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Assurez-vous que les plug-ins sont en mode de maintenance.
 * Interrompre la relation SnapMirror/SnapVaultlink:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-950/GUID-8A3F828F-CD3D-48E8-A171-393581FEB2ED.html["Repousser les relations SnapMirror"]
 * Reliez le LUN du système secondaire à l'ordinateur hôte avec la même lettre de lecteur.
@@ -23,20 +22,17 @@ Vous pouvez restaurer le plug-in SnapCenter pour stockage SQL Server en activant
 * Assurez-vous que les ressources SQL sont de nouveau en ligne.
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 La reprise après incident n'est pas prise en charge sur les configurations VMDK et RDM.
 
-*Étapes*
-
+.Étapes
 . Dans la page Paramètres, accédez à *Paramètres* > *Paramètres globaux* > *reprise après sinistre*.
 . Sélectionnez *Activer la récupération après sinistre*.
 . Cliquez sur *appliquer*.
 . Vérifiez si le travail DR est activé ou non en cliquant sur *Monitor* > *Jobs*.
 
 
-*Après la fin*
-
+.Une fois que vous avez terminé
 * Si de nouvelles bases de données sont créées après le basculement, celles-ci seront en mode non-DR.
 +
 Les nouvelles bases de données continueront à fonctionner comme elles l'ont fait avant le basculement.

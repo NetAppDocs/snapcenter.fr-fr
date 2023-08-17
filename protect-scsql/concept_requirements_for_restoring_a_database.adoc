@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_requirements_for_restoring_a_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: Requirements 
 summary: 'Avant de restaurer une base de données SQL Server à partir d"un plug-in SnapCenter pour sauvegarde Microsoft SQL Server, vous devez vous assurer que plusieurs conditions sont respectées.' 
 ---
 = Conditions requises pour restaurer une base de données

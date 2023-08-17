@@ -13,8 +13,7 @@ summary: Un groupe de ressources est un ensemble de ressources sur un hôte ou u
 [role="lead"]
 Un groupe de ressources est un ensemble de ressources sur un hôte ou un DAG Exchange, et le groupe de ressources peut inclure un DAG entier ou des bases de données individuelles. Vous pouvez sauvegarder les groupes de ressources à partir de la page Ressources.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir créé un groupe de ressources associé à une stratégie.
 * Vous devez avoir attribué l'agrégat utilisé par l'opération de sauvegarde à la machine virtuelle de stockage (SVM) utilisée par la base de données.
 * Si vous souhaitez sauvegarder une ressource avec une relation SnapMirror avec un stockage secondaire, le rôle attribué à l'utilisateur de stockage doit inclure le privilège « napmirror All ». Toutefois, si vous utilisez le rôle « vsadmin », le privilège « napmirror all » n'est pas requis.
@@ -25,12 +24,10 @@ La sauvegarde réussira si la copie de base de données active/passive sur le st
 
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Vous pouvez sauvegarder un groupe de ressources à la demande à partir de la page Ressources. Si une stratégie est associée à un groupe de ressources et qu'une planification est configurée, les sauvegardes sont automatiquement effectuées en fonction de la planification.
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in *Microsoft Exchange Server* dans la liste.
 . Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
 +

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: 'Vous pouvez restaurer les bases de données SQL Server sauvegardées à partir des LUN physiques \(RDM, iSCSI ou FCP\) sur un système de stockage secondaire. La fonction Restaurer est un processus multiphase qui copie toutes les données et toutes les pages de journal à partir d"une sauvegarde SQL Server spécifiée résidant sur le système de stockage secondaire vers une base de données spécifiée.' 
 ---
 = Restaurer une base de données SQL Server à partir du stockage secondaire
@@ -13,15 +13,13 @@ summary: 'Vous pouvez restaurer les bases de données SQL Server sauvegardées �
 [role="lead"]
 Vous pouvez restaurer les bases de données SQL Server sauvegardées à partir des LUN physiques (RDM, iSCSI ou FCP) sur un système de stockage secondaire. La fonction Restaurer est un processus multiphase qui copie toutes les données et toutes les pages de journal à partir d'une sauvegarde SQL Server spécifiée résidant sur le système de stockage secondaire vers une base de données spécifiée.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir répliqué les copies Snapshot à partir du système de stockage primaire vers le système secondaire.
 * Vous devez vous assurer que le serveur SnapCenter et l'hôte du plug-in peuvent se connecter au système de stockage secondaire.
 * La plupart des champs des pages de l'assistant de restauration sont expliqués dans le processus de restauration de base. Les informations suivantes décrivent certains champs pour lesquels vous avez peut-être besoin d'aide.
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez *SnapCenter Plug-in for SQL Server* dans la liste.
 . Dans la page Ressources, sélectionnez *Database* ou *Resource Group* dans la liste déroulante *View*.
 . Sélectionnez la base de données ou le groupe de ressources.

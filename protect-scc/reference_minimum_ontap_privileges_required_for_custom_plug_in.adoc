@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_minimum_ontap_privileges_required_for_custom_plug_in.html 
 sidebar: sidebar 
-keywords:  
+keywords: Minimum ONTAP privileges 
 summary: Les privilèges minimum ONTAP requis varient en fonction des plug-ins SnapCenter utilisés pour la protection des données. 
 ---
 = Privilèges minimum de ONTAP requis pour le plug-in personnalisé

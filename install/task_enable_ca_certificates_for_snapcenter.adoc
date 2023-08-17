@@ -13,8 +13,7 @@ summary: 'Vous devez configurer les certificats d"autorité de certification et 
 [role="lead"]
 Vous devez configurer les certificats d'autorité de certification et activer la validation du certificat d'autorité de certification pour le serveur SnapCenter.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous pouvez activer ou désactiver les certificats CA à l'aide de l'applet de commande set-SmCertificateSettings.
 * Vous pouvez afficher l'état du certificat pour le serveur SnapCenter à l'aide de l'applet de commande Get-SmCertificateSettings.
 

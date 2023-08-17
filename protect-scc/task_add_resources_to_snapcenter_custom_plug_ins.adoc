@@ -13,7 +13,7 @@ summary: Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon vo
 [role="lead"]
 Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon votre environnement, les ressources peuvent être des instances de base de données ou des collections que vous souhaitez sauvegarder ou cloner.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la création de connexions au système de stockage et l'ajout d'informations d'identification.
 * Vous devez avoir link:concept_develop_a_plug_in_for_your_application.html["création d'un plug-in personnalisé pour votre application"].
 * Vous devez avoir chargé les plug-ins sur SnapCenter Server.

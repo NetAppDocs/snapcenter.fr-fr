@@ -15,8 +15,7 @@ Le workflow de clonage inclut la planification, la réalisation de l'opération 
 
 Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
 
-*Étapes*
-
+.Étapes
 . Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
 +
 [listing]

@@ -15,8 +15,7 @@ Les modules d'extension sont distribués dans le cadre de la mise à niveau de S
 
 La procédure de mise à niveau place votre hôte Windows, Linux ou AIX en mode « Maintenance », ce qui empêche l'hôte d'exécuter des tâches planifiées.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Si vous êtes un utilisateur non-root disposant d'un accès aux machines Linux, vous devez mettre à jour le fichier _/etc/sudoers_ avec les dernières valeurs de somme de contrôle avant d'effectuer l'opération de mise à niveau.
 * Par défaut, SnapCenter détecte JAVA_HOME à partir de l'environnement. Si vous souhaitez utiliser un JAVA_HOME fixe et si vous mettez à niveau les plug-ins sur un hôte Linux, vous devez ajouter manuellement le paramètre SKIP_JAVAHOME_UPDATE dans le fichier _spl.properties_ situé à _/var/opt/snapcenter/spl/etc/_ et définir la valeur SUR TRUE.
 +
@@ -28,8 +27,7 @@ Exemples de fichiers de configuration SnapCenter : SnapDriveService.exe.config, 
 
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * La procédure de mise à niveau place votre hôte Windows, Linux ou AIX en mode « Maintenance », ce qui empêche l'hôte d'exécuter des tâches planifiées.
 * Pour le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server et le plug-in SnapCenter pour Microsoft Windows, il est recommandé de mettre à niveau à la fois le serveur et les hôtes du plug-in vers la dernière version pour que LE CHEMIN_SCRIPTS s'exécute.
 +
@@ -40,8 +38,7 @@ Dans la page *Détails du travail*, un message d'avertissement recommande au cli
 
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *hosts* > *Managed Hosts*.
 . Mettez à niveau les hôtes en effectuant l'une des tâches suivantes :
 +

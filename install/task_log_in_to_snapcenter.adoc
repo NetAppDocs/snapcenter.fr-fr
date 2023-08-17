@@ -13,8 +13,7 @@ summary: 'SnapCenter prend en charge le contrôle d"accès basé sur des rôles 
 [role="lead"]
 SnapCenter prend en charge le contrôle d'accès basé sur des rôles (RBAC). L'administrateur SnapCenter affecte des rôles et des ressources via le RBAC SnapCenter à un utilisateur dans un groupe de travail ou un répertoire actif, ou à des groupes dans l'annuaire actif. L'utilisateur RBAC peut désormais se connecter à SnapCenter avec les rôles attribués.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez activer Windows Process activation Service (WAS) dans Windows Server Manager.
 * Si vous souhaitez utiliser Internet Explorer comme navigateur pour vous connecter au serveur SnapCenter, vous devez vous assurer que le mode protégé dans Internet Explorer est désactivé.
 
@@ -74,7 +73,7 @@ Votre utilisateur actuel et votre rôle associé s'affichent dans l'angle supér
 
 
 
-*Résultats*
+*Résultat*
 
 La page Tableau de bord s'affiche.
 
@@ -92,8 +91,7 @@ Si vous possédez des domaines Active Directory non approuvés que vous souhaite
 
 Le serveur SnapCenter prend en charge l'authentification multifacteur pour le compte de domaine, qui fait partie de l'annuaire actif.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir activé MFA.
 +
 Pour plus d'informations sur l'activation du MFA, reportez-vous à la section link:../install/enable_multifactor_authentication.html["Activer l'authentification multifacteur"]

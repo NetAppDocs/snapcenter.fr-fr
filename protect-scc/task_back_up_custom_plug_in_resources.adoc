@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_back_up_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup 
 summary: 'Le workflow de sauvegarde comprend la planification, l"identification des ressources de sauvegarde, la gestion des stratégies de sauvegarde, la création de groupes de ressources et la connexion de stratégies, la création de sauvegardes et le contrôle des opérations.' 
 ---
 = Sauvegarder des ressources de plug-in personnalisées

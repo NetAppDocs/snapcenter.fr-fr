@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_backup_schedules_for_plugin_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup schedules 
 summary: 'La fréquence de sauvegarde \(type de planification\) est spécifiée dans les stratégies ; un planning de sauvegarde est spécifié dans la configuration du groupe de ressources.' 
 ---
 = Planifications de sauvegarde pour le plug-in pour SQL Server

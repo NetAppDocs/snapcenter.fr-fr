@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_create_backup_policies_for_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup policy 
 summary: 'Vous pouvez créer une nouvelle stratégie de sauvegarde pour les ressources avant d"utiliser SnapCenter pour sauvegarder des systèmes de fichiers Windows, ou vous pouvez créer une nouvelle stratégie de sauvegarde au moment de créer un groupe de ressources ou de sauvegarder une ressource.' 
 ---
 = Créez des stratégies de sauvegarde pour les systèmes de fichiers Windows
@@ -13,8 +13,7 @@ summary: 'Vous pouvez créer une nouvelle stratégie de sauvegarde pour les ress
 [role="lead"]
 Vous pouvez créer une nouvelle stratégie de sauvegarde pour les ressources avant d'utiliser SnapCenter pour sauvegarder des systèmes de fichiers Windows, ou vous pouvez créer une nouvelle stratégie de sauvegarde au moment de créer un groupe de ressources ou de sauvegarder une ressource.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir défini votre stratégie de sauvegarde. link:task_define_a_backup_strategy_for_windows_file_systems.html["En savoir plus >>"^]
 * Vous devez avoir préparé pour la protection des données,
 +
@@ -27,8 +26,7 @@ La valeur par défaut est FALSE
 
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Le CHEMIN_SCRIPTS est défini à l'aide de la clé pré-défini WindowsScriptsDirectory située dans le fichier SMCoreServiceHost.exe.Config de l'hôte du plug-in.
 +
 Si nécessaire, vous pouvez modifier ce chemin et redémarrer le service SMcore. Il est recommandé d'utiliser le chemin par défaut pour la sécurité.
@@ -41,8 +39,7 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
 . Dans la page Paramètres, cliquez sur *stratégies*.
 . Pour déterminer si vous pouvez utiliser une stratégie existante, sélectionnez le nom de la stratégie, puis cliquez sur *Détails*.

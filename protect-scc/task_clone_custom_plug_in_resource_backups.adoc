@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_clone_custom_plug_in_resource_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone, custom plug-in 
 summary: 'Le workflow de clonage inclut la réalisation de l"opération de clonage et le contrôle de l"opération.' 
 ---
 = Cloner des sauvegardes de ressources de plug-ins personnalisées
@@ -13,8 +13,7 @@ summary: 'Le workflow de clonage inclut la réalisation de l"opération de clona
 [role="lead"]
 Le workflow de clonage inclut la réalisation de l'opération de clonage et le contrôle de l'opération.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Vous pouvez cloner des sauvegardes de ressources pour les raisons suivantes :
 
 * Tester les fonctionnalités à implémenter à l'aide de la structure de ressources actuelle et du contenu pendant les cycles de développement d'applications

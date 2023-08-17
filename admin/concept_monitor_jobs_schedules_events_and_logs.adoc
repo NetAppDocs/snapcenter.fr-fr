@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_monitor_jobs_schedules_events_and_logs.html 
 sidebar: sidebar 
-keywords:  
+keywords: Monitor jobs, schedules, events, logs 
 summary: Vous pouvez surveiller la progression de vos travaux, obtenir des informations sur les tâches planifiées et vérifier les événements et les journaux à partir de la page Monitor. 
 ---
 = Surveillez les tâches, les plannings, les événements et les journaux
@@ -135,6 +135,5 @@ Il n'est pas nécessaire de placer l'hôte en mode de maintenance pour supprimer
 . Dans la page travaux, vérifiez l'état du travail.
 
 
-*Plus d'informations*
-
+.Informations associées
 Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

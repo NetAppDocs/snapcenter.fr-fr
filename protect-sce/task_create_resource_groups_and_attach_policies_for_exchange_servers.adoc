@@ -13,8 +13,7 @@ summary: Un groupe de ressources est requis pour toute tâche de protection des 
 [role="lead"]
 Un groupe de ressources est requis pour toute tâche de protection des données. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de tâche de protection des données que vous souhaitez exécuter et la planification de protection.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Le CHEMIN_SCRIPTS est défini à l'aide de la clé pré-défini WindowsScriptsDirectory située dans le fichier SMCoreServiceHost.exe.Config de l'hôte du plug-in.
 +
 Si nécessaire, vous pouvez modifier ce chemin et redémarrer le service SMcore. Il est recommandé d'utiliser le chemin par défaut pour la sécurité.
@@ -27,8 +26,7 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Microsoft Exchange Server dans la liste.
 . Dans la page Ressources, sélectionnez *Database* dans la liste *View*.
 +
@@ -99,7 +97,7 @@ Les groupes de ressources de SnapCenter pour Microsoft Exchange Server ne peuven
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
 +
 
-NOTE: Vous pouvez également créer une stratégie en cliquant sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Vous pouvez également créer une stratégie en cliquant sur *image:../media/add_policy_from_resourcegroup.gif["Icône plus"]*.
 
 +
 
@@ -108,7 +106,7 @@ NOTE: Si une stratégie contient l'option *Sauvegarder les copies sur les serveu
 +
 Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
 
-.. Dans la section configurer les plannings des stratégies sélectionnées, cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne *configurer les programmes* pour la stratégie pour laquelle vous souhaitez configurer le planning.
+.. Dans la section configurer les plannings des stratégies sélectionnées, cliquez sur *image:../media/add_policy_from_resourcegroup.gif["Icône plus"]* Dans la colonne *configurer les programmes* pour la stratégie pour laquelle vous souhaitez configurer le planning.
 .. Dans la boîte de dialogue Ajouter des planifications pour la stratégie _policy_name_, configurez la planification en spécifiant la date de début, la date d'expiration et la fréquence, puis cliquez sur *OK*.
 +
 Vous devez le faire pour chaque fréquence répertoriée dans la police. Les planifications configurées sont répertoriées dans la colonne *programmes appliqués* de la section configurer les planifications pour les stratégies sélectionnées.

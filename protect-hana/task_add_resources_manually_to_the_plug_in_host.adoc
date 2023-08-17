@@ -13,7 +13,7 @@ summary: 'La détection automatique n"est pas prise en charge pour certaines ins
 [role="lead"]
 La détection automatique n'est pas prise en charge pour certaines instances HANA. Vous devez ajouter ces ressources manuellement.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la configuration des connexions du système de stockage et l'ajout d'une clé de stockage utilisateur HDB.
 * Pour la réplication des systèmes SAP HANA, il est recommandé d'ajouter toutes les ressources de ce système HANA dans un groupe de ressources et de sauvegarder un groupe de ressources. Cela garantit une sauvegarde transparente en mode basculement/retour arrière.
 

@@ -15,8 +15,7 @@ La restauration d'une base de données Exchange inclut le lancement d'une sessio
 
 Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
 
-*Étapes*
-
+.Étapes
 . Démarrez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié en utilisant le `Open-SmConnection` applet de commande.
 +
 [listing]

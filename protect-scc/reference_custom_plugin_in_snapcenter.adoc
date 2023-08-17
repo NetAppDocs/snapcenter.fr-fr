@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_custom_plugin_in_snapcenter.html 
 sidebar: sidebar 
-keywords:  
+keywords: Custom plug-in 
 summary: 'Le plug-in personnalisé créé peut être installé sur l"hôte à l"aide du serveur SnapCenter afin de permettre la protection des données de votre application.' 
 ---
 = Plug-in personnalisé dans SnapCenter

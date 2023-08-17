@@ -1,7 +1,7 @@
 ---
 permalink: install/reference_features_enabled_on_your_windows_host_during_installation.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, snapcenter 
 summary: 'Le programme d"installation de SnapCenter Server active les fonctions et les rôles Windows sur votre hôte Windows au cours de l"installation. Ils peuvent vous intéresser à des fins de dépannage et de maintenance du système hôte.' 
 ---
 = Fonctionnalités activées sur votre hôte Windows pendant l'installation

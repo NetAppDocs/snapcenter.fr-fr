@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in 
 summary: 'Le facteur le plus important dans la détermination d"un planning de sauvegarde est le taux de modification de la ressource. Le nombre de journaux d"archivage que SnapCenter doit utiliser pour la restauration, donc le plus souvent pour les sauvegardes, accélère les opérations de restauration.' 
 ---
 = Planification de sauvegarde des ressources de plug-in personnalisées

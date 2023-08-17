@@ -36,7 +36,7 @@ L'option *Verify* de la stratégie ne s'applique qu'aux tâches planifiées.
 . Surveillez la progression de l'opération en sélectionnant *Monitor* > *Jobs*.
 
 
-.Et la suite ?
+.Informations associées
 link:task_create_backup_policies_for_sql_server_databases.html["Créer des stratégies de sauvegarde pour les bases de données SQL Server"]
 
 link:task_create_resource_groups_and_attach_policies_for_sql_server.html["Créez des groupes de ressources et associez des stratégies pour SQL Server"]

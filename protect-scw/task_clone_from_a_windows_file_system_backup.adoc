@@ -13,8 +13,7 @@ summary: Vous pouvez utiliser SnapCenter pour cloner une sauvegarde du système 
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour cloner une sauvegarde du système de fichiers Windows. Pour copier un fichier qui a été supprimé ou modifié par erreur, vous pouvez cloner une sauvegarde et accéder à ce fichier dans le clone.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez être prêt à préparer la protection des données en effectuant des tâches telles que l'ajout d'hôtes, l'identification des ressources et la création de connexions de machines virtuelles de stockage (SVM).
 * Vous devez avoir une sauvegarde du système de fichiers.
 * Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
@@ -28,8 +27,7 @@ Vous pouvez utiliser SnapCenter pour cloner une sauvegarde du système de fichie
 * Vous ne pouvez pas cloner des environnements. Par exemple, le clonage d'un disque physique vers un disque virtuel ou vice versa.
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Le CHEMIN_SCRIPTS est défini à l'aide de la clé pré-défini WindowsScriptsDirectory située dans le fichier SMCoreServiceHost.exe.Config de l'hôte du plug-in.
 +
 Si nécessaire, vous pouvez modifier ce chemin et redémarrer le service SMcore. Il est recommandé d'utiliser le chemin par défaut pour la sécurité.
@@ -42,8 +40,7 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *systèmes de fichiers* dans la liste.
 . Sélectionnez l'hôte.

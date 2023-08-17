@@ -13,8 +13,7 @@ summary: 'Vous pouvez utiliser le fichier exécutable du programme d"installatio
 [role="lead"]
 Vous pouvez utiliser le fichier exécutable du programme d'installation du serveur SnapCenter pour mettre à niveau le serveur SnapCenter.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * L'hôte SnapCenter Server doit être à jour avec les mises à jour Windows, sans redémarrage système en attente.
 * Assurez-vous qu'aucune autre opération n'est en cours d'exécution avant de lancer l'opération de mise à niveau.
 * Vous devez sauvegarder la base de données du référentiel SnapCenter (MySQL) après avoir vérifié qu'aucun travail n'est en cours d'exécution. Ceci est recommandé avant la mise à niveau de SnapCenter Server et du plug-in Exchange.
@@ -27,8 +26,7 @@ Exemples de fichiers de configuration SnapCenter : SnapDriveService.exe.config, 
 
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Lors de la mise à niveau, l'hôte passe automatiquement en mode de maintenance qui empêche l'hôte d'exécuter des tâches planifiées. Après la mise à niveau, l'hôte est automatiquement mis hors service du mode de maintenance.
 * Lors de la mise à niveau, un script SQL est exécuté pour mettre à jour les données Exchange dans la base de données NSM, qui convertit le nom abrégé DAG et hôte en FQDN. Cette fonctionnalité est applicable uniquement si vous utilisez SnapCenter Server avec le plug-in Exchange.
 * Avant de lancer l'opération de mise à niveau, si vous avez placé manuellement l'hôte en mode maintenance, après la mise à niveau, vous devez mettre manuellement l'hôte hors du mode maintenance en cliquant sur *hosts* > *Activate Schedule*.
@@ -41,8 +39,7 @@ Dans la page *Détails du travail*, un message d'avertissement recommande au cli
 
 
 
-*Étapes*
-
+.Étapes
 . Téléchargez le pack d'installation du serveur SnapCenter depuis le site de support NetApp.
 +
 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
@@ -79,8 +76,7 @@ A tout moment si vous cliquez sur le bouton *Annuler*, le flux de travail de mis
 |===
 
 
-*Après la fin*
-
+.Une fois que vous avez terminé
 * Si le plug-in est installé à l'aide d'un utilisateur sudo, vous devez copier les clés sha224 disponibles à l'adresse _C:\ProgramData\NetApp\SnapCenter\Package Repository\oracle_checksum.txt_ pour mettre à jour le fichier _/etc/sudoers_.
 * Vous devez effectuer une nouvelle détection des ressources sur les hôtes.
 +

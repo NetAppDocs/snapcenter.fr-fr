@@ -13,15 +13,13 @@ summary: 'Les ressources sont les bases de données, les groupes de disponibilit
 [role="lead"]
 Les ressources sont les bases de données, les groupes de disponibilité de base de données Exchange gérés par les plug-ins que vous avez installés. Vous pouvez ajouter ces ressources aux groupes de ressources de sorte que vous puissiez effectuer des tâches de protection des données, mais vous devez d'abord identifier les ressources disponibles. La détermination des ressources disponibles permet également de vérifier que l'installation du plug-in s'est déroulée correctement.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir déjà terminé des tâches telles que l'installation de SnapCenter Server, l'ajout d'hôtes, la création de connexions au système de stockage, l'ajout d'informations d'identification et l'installation du plug-in pour Exchange.
 * Pour tirer parti des fonctionnalités du logiciel Single Mailbox Recovery, vous devez avoir localisé votre base de données active sur le serveur Exchange Server sur lequel le logiciel Single Mailbox Recovery est installé.
 * Si les bases de données résident sur des LUN RDM VMware, vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter. Le https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["Documentation du plug-in SnapCenter pour VMware vSphere"] a plus d'informations.
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Vous ne pouvez pas sauvegarder les bases de données lorsque l'option *Etat général* de la page Détails est définie sur non disponible pour la sauvegarde. L'option *Etat général* est définie sur non disponible pour la sauvegarde lorsque l'un des éléments suivants est vrai :
 +
 ** Les bases de données ne se trouvent pas sur un LUN NetApp.
@@ -34,15 +32,14 @@ Les bases de données ne sont pas à l'état normal lorsqu'elles sont en montage
 * Si vous disposez d'un groupe de disponibilité de base de données (DAG), vous pouvez sauvegarder toutes les bases de données du groupe en exécutant la tâche de sauvegarde à partir du DAG.
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez *Microsoft Exchange Server* dans la liste déroulante des plug-ins située dans le coin supérieur gauche de la page Ressources.
 . Dans la page Ressources, sélectionnez *Database*, *Database Availability Group* ou *Resource Group* dans la liste déroulante *View*.
 +
 Toutes les bases de données et les fichiers DAG sont affichés avec leurs noms DAG ou d'hôte au format FQDN, ce qui vous permet de distinguer entre plusieurs bases de données.
 
 +
-Cliquez sur image:../media/filter_icon.png[""] Et sélectionnez le nom d'hôte et le serveur Exchange pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.png[""] pour fermer le volet de filtre.
+Cliquez sur image:../media/filter_icon.png["Icône de filtre"] Et sélectionnez le nom d'hôte et le serveur Exchange pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.png["Icône de filtre"] pour fermer le volet de filtre.
 
 . Cliquez sur *Actualiser les ressources*.
 +

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: Vous pouvez utiliser les applets de commande PowerShell pour restaurer une réplique défectueuse en utilisant la copie la plus récente sur le même hôte ou la copie la plus récente depuis un autre hôte. 
 ---
 = Réamorçage d'une réplique à l'aide des applets de commande PowerShell pour la base de données Exchange
@@ -15,8 +15,7 @@ Vous pouvez utiliser les applets de commande PowerShell pour restaurer une répl
 
 Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
-*Étapes*
-
+.Étapes
 . Démarrez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié en utilisant le `Open-SmConnection` applet de commande.
 +
 [listing]

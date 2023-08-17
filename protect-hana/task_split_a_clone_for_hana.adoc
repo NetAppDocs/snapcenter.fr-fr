@@ -13,8 +13,7 @@ summary: Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de 
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Vous ne pouvez pas effectuer l'opération de fractionnement de clone sur un clone intermédiaire.
 +
 Par exemple, après avoir créé clone1 à partir d'une sauvegarde de base de données, vous pouvez créer une sauvegarde de clone1, puis cloner cette sauvegarde (clone2). Après avoir créé clone2, clone1 est un clone intermédiaire et vous ne pouvez pas effectuer l'opération de séparation de clone sur clone1. Toutefois, vous pouvez réaliser l'opération de séparation des clones sur clone2.
@@ -27,10 +26,9 @@ Après avoir divisé le clone2, vous pouvez effectuer l'opération de fractionne
 * Assurez-vous que le volume ou l'agrégat du système de stockage est en ligne.
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
-. Sur la page Ressources, sélectionnez l'option appropriée dans la liste Afficher :
+. Dans la page *Ressources*, sélectionnez l'option appropriée dans la liste Affichage :
 +
 |===
 | Option | Description 
@@ -53,7 +51,7 @@ Sélectionnez *Path* dans la liste vue.
 +
 La page topologie de ressources s'affiche.
 
-. Dans la vue gérer les copies, sélectionnez la ressource clonée (par exemple, la base de données ou la LUN), puis cliquez sur *image:../media/split_cone.gif[""]*.
+. Dans la vue *gérer les copies*, sélectionnez la ressource clonée (par exemple, la base de données ou la LUN), puis cliquez sur *image:../media/split_cone.gif["Icône de fractionnement de clone"]*.
 . Vérifiez la taille estimée du clone à diviser et l'espace requis disponible sur l'agrégat, puis cliquez sur *Start*.
 . Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
 +
@@ -75,6 +73,5 @@ L'opération de démarrage du fractionnement du clone échoue si la sauvegarde, 
 
 
 
-*Plus d'informations*
-
+.Informations associées
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["Le clone SnapCenter ou une vérification échoue avec un agrégat"]

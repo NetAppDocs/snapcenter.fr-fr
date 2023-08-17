@@ -15,8 +15,7 @@ SnapCenter permet de créer des clones à partir d'un groupe de ressources ou d'
 
 SnapCenter vous permet de planifier plusieurs opérations de clonage afin de s'exécuter simultanément sur plusieurs serveurs.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Lors du clonage vers une instance de base de données autonome, assurez-vous que le chemin du point de montage existe et qu'il s'agit d'un disque dédié.
 * Lors du clonage vers une instance de cluster de basculement (FCI), assurez-vous que les points de montage existent, qu'il s'agit d'un disque partagé, et que le chemin et le FCI doivent appartenir au même groupe de ressources SQL.
 * Si la base de données source ou l'instance cible se trouve sur un volume partagé de cluster (csv), la base de données clonée se trouve dans le fichier csv.
@@ -25,8 +24,7 @@ SnapCenter vous permet de planifier plusieurs opérations de clonage afin de s'e
 
 NOTE: Pour les environnements virtuels (VMDK/RDM), assurez-vous que le point de montage est un disque dédié.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Le CHEMIN_SCRIPTS est défini à l'aide de la clé pré-défini WindowsScriptsDirectory située dans le fichier SMCoreServiceHost.exe.Config de l'hôte du plug-in.
 +
 Si nécessaire, vous pouvez modifier ce chemin et redémarrer le service SMcore. Il est recommandé d'utiliser le chemin par défaut pour la sécurité.
@@ -40,8 +38,7 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 * La plupart des champs des pages de l'assistant de clonage de cycle de vie sont explicites. Les informations suivantes décrivent les champs pour lesquels vous aurez peut-être besoin d'aide.
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Database* ou *Resource Group* dans la liste *View*.
 . Sélectionnez le groupe de ressources ou la base de données, puis cliquez sur *Cloner le cycle de vie*.

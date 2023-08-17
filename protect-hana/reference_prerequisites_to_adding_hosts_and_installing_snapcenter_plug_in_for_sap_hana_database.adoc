@@ -57,3 +57,47 @@ https://imt.netapp.com/matrix/imt.jsp?components=112393;&solution=1259&isHWU&src
 * Pour les bases de données SAP HANA qui s'exécutent sur un hôte Linux, lors de l'installation du plug-in pour base de données SAP HANA, le plug-in SnapCenter pour UNIX est installé automatiquement.
 * Vous devez avoir *bash* comme shell par défaut pour l'installation du plug-in.
 
+
+
+
+== Commandes supplémentaires
+
+Pour exécuter une commande supplémentaire sur le plug-in SnapCenter pour SAP HANA, vous devez l'inclure dans le `allowed_commands.config` fichier.
+
+`allowed_commands.config` Ce fichier se trouve dans le sous-répertoire « etc » du répertoire du plug-in SnapCenter pour SAP HANA.
+
+.Hôtes Windows
+Valeur par défaut : `C:\Program Files\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
+
+Chemin personnalisé : `<Custome_Directory>\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
+Hôte Windows :
+
+.Hôtes Linux
+Valeur par défaut : `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+Chemin personnalisé : `<Custome_Directory>/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+Pour autoriser des commandes supplémentaires sur l'hôte du plug-in, ouvrez `allowed_commands.config` fichier dans un éditeur. Entrez chaque commande sur une ligne distincte. Il n'est pas sensible à la casse.
+Par exemple :
+
+commande : mount
+
+commande : umount
+
+Assurez-vous de spécifier le chemin d'accès complet. Placez le chemin d'accès entre guillemets (") s'il contient des espaces.
+Par exemple :
+
+Commande : « C:\Program Files\NetApp\SnapCreator commands\sdcli.exe »
+
+commande : myscript.bat
+
+Si le `allowed_commands.config` le fichier n'est pas présent, les commandes ou l'exécution de script seront bloquées et le flux de travail échouera avec l'erreur suivante :
+
+"[/mnt/mount -a] exécution non autorisée. Autoriser en ajoutant la commande dans le fichier %s sur l'hôte du plug-in. »
+
+Si la commande ou le script n'est pas présent dans `allowed_commands.config`, l'exécution de la commande ou du script sera bloquée et le flux de travail échouera avec l'erreur suivante :
+
+"[/mnt/mount -a] exécution non autorisée. Autoriser en ajoutant la commande dans le fichier %s sur l'hôte du plug-in. »
+
+
+NOTE: Vous ne devez pas utiliser de caractère générique (*) pour autoriser toutes les commandes.

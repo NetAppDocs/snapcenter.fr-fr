@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_disaster_recovery_scsql.html 
 sidebar: sidebar 
-keywords:  
+keywords: disaster recovery 
 summary: Lorsque le plug-in SnapCenter pour SQL Server est arrêté, effectuez les étapes manuelles suivantes pour restaurer le plug-in. 
 ---
 = Reprise après incident du plug-in SnapCenter pour SQL Server
@@ -13,7 +13,7 @@ summary: Lorsque le plug-in SnapCenter pour SQL Server est arrêté, effectuez l
 [role="lead"]
 Lorsque le plug-in SnapCenter pour SQL Server est arrêté, procédez comme suit pour basculer vers un autre hôte SQL et restaurer les données.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * L'hôte secondaire doit avoir le même système d'exploitation, l'application et le même nom d'hôte que l'hôte principal.
 * Placez le plug-in SnapCenter pour SQL Server sur un autre hôte à l'aide de la page *Ajouter hôte* ou *Modifier hôte*. Voir link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["Gérer les hôtes"] pour en savoir plus.
 
@@ -24,5 +24,5 @@ Lorsque le plug-in SnapCenter pour SQL Server est arrêté, procédez comme suit
 . Importez les planifications Windows et SQL à partir du dossier du plug-in SnapCenter pour SQL Server à partir de la sauvegarde DR.
 
 
-.Pour en savoir plus
+.Informations associées
 Voir la link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["API de reprise après incident"^] vidéo.

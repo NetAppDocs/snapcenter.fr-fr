@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_storage_layout_recommendations_for_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: Storage layout 
 summary: 'Grâce à une disposition de stockage bien conçue, SnapCenter Server peut sauvegarder vos bases de données pour atteindre vos objectifs de restauration. Vous devez tenir compte de plusieurs facteurs lors de la définition de l"organisation du stockage, notamment la taille de la base de données, le taux de changement de la base de données et la fréquence à laquelle vous effectuez des sauvegardes.' 
 ---
 = Recommandations relatives à l'organisation du stockage pour le plug-in SnapCenter pour Microsoft SQL Server

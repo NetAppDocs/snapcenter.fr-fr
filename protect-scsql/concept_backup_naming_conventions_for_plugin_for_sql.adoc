@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_backup_naming_conventions_for_plugin_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup naming conventions 
 summary: 'Vous pouvez utiliser la convention d"appellation de copie Snapshot par défaut ou la convention de nom personnalisée. la convention de nommage des sauvegardes par défaut ajoute un horodatage aux noms de copie Snapshot qui vous aide à identifier le moment de la création des copies.' 
 ---
 = Conventions de nom de sauvegarde du plug-in pour SQL Server

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Pour permettre au plug-in SnapCenter pour Microsoft Exchange Server de coexister avec SnapManager pour Microsoft Exchange Server, vous devez installer le plug-in SnapCenter pour Microsoft Exchange Server sur le même serveur Exchange sur lequel SnapManager pour Microsoft Exchange Server est installé, désactiver les planifications SnapManager pour Exchange, Et configurer de nouveaux planifications et de nouvelles sauvegardes à l"aide du plug-in SnapCenter pour Microsoft Exchange Server.' 
 ---
 = Configurez SnapManager 7.x pour Exchange et SnapCenter afin qu'ils coexistent
@@ -13,8 +13,7 @@ summary: 'Pour permettre au plug-in SnapCenter pour Microsoft Exchange Server de
 [role="lead"]
 Pour permettre au plug-in SnapCenter pour Microsoft Exchange Server de coexister avec SnapManager pour Microsoft Exchange Server, vous devez installer le plug-in SnapCenter pour Microsoft Exchange Server sur le même serveur Exchange sur lequel SnapManager pour Microsoft Exchange Server est installé, désactiver les planifications SnapManager pour Exchange, Et configurer de nouveaux planifications et de nouvelles sauvegardes à l'aide du plug-in SnapCenter pour Microsoft Exchange Server.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * SnapManager pour Microsoft Exchange Server et SnapDrive pour Windows sont déjà installés. De plus, SnapManager pour les sauvegardes Microsoft Exchange Server est présent sur le système et dans le répertoire SnapInfo.
 * Vous devez avoir supprimé ou récupéré les sauvegardes effectuées par SnapManager pour Microsoft Exchange Server dont vous n'avez plus besoin.
 * Vous devez avoir suspendu ou supprimé tous les programmes créés par SnapManager pour Microsoft Exchange Server à partir du planificateur Windows.
@@ -28,8 +27,7 @@ Si vous ne désinstallez pas SnapManager pour Microsoft Exchange Server après l
 
 
 
-*Étapes*
-
+.Étapes
 . En utilisant PowerShell sur tous les nœuds DAG, déterminez si SnapDrive pour Windows VSS Hardware Provider est enregistré : _vssadmin list fournisseurs_
 +
 [listing]

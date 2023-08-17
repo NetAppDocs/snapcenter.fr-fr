@@ -13,7 +13,7 @@ summary: 'Les ressources sont les bases de données, les instances d"application
 [role="lead"]
 Les ressources sont les bases de données, les instances d'application, les groupes de disponibilité et des composants similaires gérés par les plug-ins que vous avez installés. Vous pouvez ajouter ces ressources aux groupes de ressources de sorte que vous puissiez effectuer des tâches de protection des données, mais vous devez d'abord identifier les ressources disponibles. La détermination des ressources disponibles permet également de vérifier que l'installation du plug-in s'est déroulée correctement.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devez avoir déjà terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la création de connexions au système de stockage et l'ajout d'informations d'identification.
 * Pour découvrir les bases de données Microsoft SQL, l'une des conditions suivantes doit être remplie.
 +

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_define_a_restoration_strategy_for_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: restoration strategy 
 summary: 'La définition d"une stratégie de restauration pour SQL Server vous permet de restaurer votre base de données avec succès.' 
 ---
 = Définissez une stratégie de restauration pour SQL Server

@@ -13,8 +13,7 @@ summary: Vous pouvez utiliser les commandes de connexion de sécurité pour ajou
 [role="lead"]
 Vous pouvez utiliser les commandes de connexion de sécurité pour ajouter un rôle RBAC ONTAP lorsque vos systèmes de stockage exécutent clustered ONTAP.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Avant de créer un rôle RBAC ONTAP pour les systèmes de stockage exécutant clustered ONTAP, vous devez identifier les éléments suivants :
 +
 ** La ou les tâches que vous souhaitez effectuer

@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_request_reports_of_the_protection_status_from_the_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: 'Vous pouvez demander des informations sur la protection des ressources gérées par des plug-ins spécifiques à l"aide du tableau de bord.' 
 ---
 = Demander des rapports d'état de protection à partir du tableau de bord

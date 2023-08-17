@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_restore_sql_server_database_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: 'Vous pouvez utiliser SnapCenter pour restaurer des bases de données SQL Server sauvegardées. La restauration de la base de données est un processus multiphase qui copie toutes les pages de données et de journaux d"une sauvegarde SQL Server spécifique vers une base de données spécifiée.' 
 ---
 = Restaurez les sauvegardes des bases de données SQL Server
@@ -13,8 +13,7 @@ summary: 'Vous pouvez utiliser SnapCenter pour restaurer des bases de données S
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour restaurer des bases de données SQL Server sauvegardées. La restauration de la base de données est un processus multiphase qui copie toutes les pages de données et de journaux d'une sauvegarde SQL Server spécifique vers une base de données spécifiée.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Vous pouvez restaurer les bases de données SQL Server sauvegardées sur une autre instance SQL Server sur le même hôte où la sauvegarde a été créée.
 +
 Vous pouvez utiliser SnapCenter pour restaurer les bases de données SQL Server sauvegardées sur un autre chemin afin de ne pas remplacer une version de production.
@@ -36,8 +35,7 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 * La plupart des champs des pages de l'assistant de restauration sont explicites. Les informations suivantes décrivent les champs pour lesquels vous aurez peut-être besoin d'aide.
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Database* ou *Resource Group* dans la liste *View*.
 . Sélectionnez la base de données ou le groupe de ressources dans la liste.
@@ -190,8 +188,7 @@ Vous devez également spécifier les adresses e-mail de l'expéditeur et du dest
 . Surveillez le processus de restauration à l'aide de la page *Monitor* > *Jobs*.
 
 
-*Plus d'informations*
-
+.Informations associées
 link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["Restauration et restauration des ressources via les applets de commande PowerShell"]
 
 link:task_restore_a_sql_server_database_from_secondary_storage.html["Restaurer une base de données SQL Server à partir du stockage secondaire"]

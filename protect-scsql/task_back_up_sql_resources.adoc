@@ -134,7 +134,7 @@ Un groupe de ressources implicite est créé. Vous pouvez afficher ces informati
 . Surveillez la progression de l'opération en sélectionnant *Monitor* > *Jobs*.
 
 
-.Et la suite ?
+.Une fois que vous avez terminé
 * Dans les configurations MetroCluster, il est possible que SnapCenter ne détecte pas une relation de protection après un basculement.
 +
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossible de détecter la relation SnapMirror ou SnapVault après le basculement de MetroCluster"]

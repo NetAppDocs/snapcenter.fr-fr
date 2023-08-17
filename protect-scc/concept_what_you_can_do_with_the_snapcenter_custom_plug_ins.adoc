@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Custom Plug-ins 
 summary: Vous pouvez utiliser les plug-ins personnalisés SnapCenter pour les opérations de protection des données. 
 ---
 = Avantages des plug-ins personnalisés et du plug-in de stockage SnapCenter

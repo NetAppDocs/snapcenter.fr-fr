@@ -13,7 +13,7 @@ summary: 'Vous pouvez installer simultanément les modules SnapCenter Plug-in po
 [role="lead"]
 Vous pouvez installer simultanément les modules SnapCenter Plug-in pour Linux ou Windows sur plusieurs hôtes à l'aide de l'applet de commande Install-SmHostPackage PowerShell.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 Vous devez vous connecter à SnapCenter en tant qu'utilisateur de domaine disposant des droits d'administrateur local sur chaque hôte sur lequel vous souhaitez installer le module externe.
 
 .Étapes

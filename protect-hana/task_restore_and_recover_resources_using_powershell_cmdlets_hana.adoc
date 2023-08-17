@@ -15,8 +15,7 @@ La restauration d'une sauvegarde de ressources inclut le lancement d'une session
 
 Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
 
-*Étapes*
-
+.Étapes
 . Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
 +
 [listing]

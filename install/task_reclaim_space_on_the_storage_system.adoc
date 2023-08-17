@@ -15,8 +15,7 @@ Bien que NTFS surveille l'espace disponible sur une LUN lorsque des fichiers son
 
 Si vous exécutez l'applet de commande sur un hôte de plug-in distant, vous devez avoir exécuté l'applet de commande SnapCenterOpen-SMConnection pour ouvrir une connexion au serveur SnapCenter.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez vous assurer que le processus de récupération d'espace est terminé avant d'effectuer une opération de restauration.
 * Si la LUN est partagée par les hôtes d'un cluster de basculement Windows Server, vous devez effectuer la récupération d'espace sur l'hôte qui possède le groupe de clusters.
 * Pour un stockage optimal en termes de performances, nous vous conseillons d'assurer la récupération d'espace aussi souvent que possible.

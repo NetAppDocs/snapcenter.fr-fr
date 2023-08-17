@@ -13,7 +13,7 @@ summary: 'Vous devez créer une connexion SVM (Storage Virtual machine) et une i
 [role="lead"]
 Vous devez créer une connexion SVM (Storage Virtual machine) et une identifiant d'identification avant d'utiliser les applets de commande PowerShell pour sauvegarder, restaurer ou cloner les bases de données SAP HANA.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
 * Pour créer des connexions de stockage, vous devez disposer des autorisations requises dans le rôle d'administrateur d'infrastructure.
 * Vous devez vous assurer que les installations du plug-in ne sont pas en cours.

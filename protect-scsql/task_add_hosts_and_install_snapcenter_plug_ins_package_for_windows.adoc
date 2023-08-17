@@ -13,7 +13,7 @@ summary: Vous devez utiliser la page SnapCenterAdd Host pour ajouter des hôtes 
 [role="lead"]
 Vous devez utiliser la page SnapCenter *Ajouter hôte* pour ajouter des hôtes et installer le module de plug-ins. Les plug-ins sont automatiquement installés sur les hôtes distants.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devez être un utilisateur affecté à un rôle disposant des autorisations d'installation et de désinstallation du plug-in, comme le rôle d'administrateur SnapCenter.
 * Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré, vous devez désactiver l'UAC sur l'hôte.
 * Vous devez vous assurer que le service de mise en file d'attente des messages est en cours d'exécution.

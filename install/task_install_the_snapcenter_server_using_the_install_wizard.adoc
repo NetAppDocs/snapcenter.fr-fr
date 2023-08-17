@@ -18,8 +18,7 @@ Vous pouvez éventuellement effectuer plusieurs procédures d'installation et de
 
 NOTE: L'installation silencieuse du serveur SnapCenter à partir de la ligne de commande n'est pas prise en charge.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * L'hôte SnapCenter Server doit être à jour avec les mises à jour Windows sans redémarrage système en attente.
 * Vous devez vous assurer que le serveur MySQL n'est pas installé sur l'hôte où vous prévoyez d'installer le serveur SnapCenter.
 * Vous devez avoir activé le débogage du programme d'installation de Windows.

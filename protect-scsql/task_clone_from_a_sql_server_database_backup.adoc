@@ -13,7 +13,7 @@ summary: Vous pouvez utiliser SnapCenter pour cloner une sauvegarde de base de d
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour cloner une sauvegarde de base de données SQL Server. Pour accéder ou restaurer une ancienne version des données, vous pouvez cloner les sauvegardes de bases de données à la demande.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devez préparer la protection des données en effectuant des tâches telles que l'ajout d'hôtes, l'identification des ressources et la création de connexions du système de stockage.
 * Vous devez avoir sauvegardé des bases de données ou des groupes de ressources.
 * Le type de protection tel que miroir, coffre-fort ou miroir-vault pour LUN de données et LUN de journaux doit être identique pour détecter les dispositifs de localisation secondaires lors du clonage sur un autre hôte à l'aide de sauvegardes de journaux.
@@ -151,7 +151,7 @@ Pour EMS, reportez-vous à la section https://docs.netapp.com/us-en/snapcenter/a
 . Surveillez la progression de l'opération en sélectionnant *Monitor* > *Jobs*.
 
 
-.Et la suite
+.Une fois que vous avez terminé
 Une fois le clone créé, vous ne devez jamais le renommer.
 
 .Informations associées

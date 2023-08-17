@@ -1,7 +1,7 @@
 ---
 permalink: install/task_register_untrusted_active_directory_domains.html 
 sidebar: sidebar 
-keywords:  
+keywords: Active Directory 
 summary: Vous devez enregistrer Active Directory avec le serveur SnapCenter pour gérer les hôtes, les utilisateurs et les groupes de plusieurs domaines Active Directory non fiables. 
 ---
 = Enregistrer des domaines Active Directory non fiables
@@ -13,8 +13,7 @@ summary: Vous devez enregistrer Active Directory avec le serveur SnapCenter pour
 [role="lead"]
 Vous devez enregistrer Active Directory avec le serveur SnapCenter pour gérer les hôtes, les utilisateurs et les groupes de plusieurs domaines Active Directory non fiables.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 *Protocoles LDAP et LDAPS*
 
 * Vous pouvez enregistrer les domaines d'annuaire actifs non approuvés à l'aide du protocole LDAP ou LDAPS.

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_clone_backups_using_powershell_cmdlets.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone backups 
 summary: 'Le workflow de clonage inclut la planification, la réalisation de l"opération de clonage et le contrôle de l"opération.' 
 ---
 = Clonage des sauvegardes avec les applets de commande PowerShell
@@ -13,14 +13,12 @@ summary: 'Le workflow de clonage inclut la planification, la réalisation de l"o
 [role="lead"]
 Le workflow de clonage inclut la planification, la réalisation de l'opération de clonage et le contrôle de l'opération.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
 
 Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
-*Étapes*
-
+.Étapes
 . Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
 +
 [listing]

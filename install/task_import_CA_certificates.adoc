@@ -13,8 +13,7 @@ summary: 'Vous devez importer les certificats d"autorité de certification sur l
 [role="lead"]
 Vous devez importer les certificats d'autorité de certification sur le serveur SnapCenter et les plug-ins hôtes Windows à l'aide de la console de gestion Microsoft (MMC).
 
-*Étapes*
-
+.Étapes
 . Accédez à la console de gestion Microsoft (MMC), puis cliquez sur *fichier* > *Ajouter/Supprimer Snapin*.
 . Dans la fenêtre Ajouter ou supprimer des Snap-ins, sélectionnez *certificats*, puis cliquez sur *Ajouter*.
 . Dans la fenêtre du composant logiciel enfichable certificats, sélectionnez l'option *compte ordinateur*, puis cliquez sur *Terminer*.

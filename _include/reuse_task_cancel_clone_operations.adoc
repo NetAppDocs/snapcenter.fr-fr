@@ -6,16 +6,14 @@ Vous pouvez annuler les opérations de clonage mises en file d'attente.
 
 Pour annuler les opérations de clonage, vous devez être connecté en tant qu'administrateur SnapCenter ou propriétaire de tâches.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Vous pouvez annuler une opération de clonage en file d'attente à partir de la page *Monitor* ou du volet *Activity*.
 * Vous ne pouvez pas annuler une opération de clonage en cours d'exécution.
 * Vous pouvez utiliser l'interface utilisateur graphique SnapCenter, les applets de commande PowerShell ou les commandes de l'interface de ligne de commande pour annuler les opérations de clonage mises en attente.
 * Si vous avez sélectionné *tous les membres de ce rôle peuvent voir et fonctionner sur d'autres objets membres* dans la page utilisateurs\groupes lors de la création d'un rôle, vous pouvez annuler les opérations de clonage en file d'attente d'autres membres tout en utilisant ce rôle.
 
 
-*Étape*
-
+.Étape
 Effectuez l'une des opérations suivantes :
 
 |===
@@ -36,7 +34,7 @@ Volet activité
  a| 
 . Après avoir lancé l'opération de clonage, cliquez sur image:../media/activity_pane_icon.gif[""] Dans le volet activité pour afficher les cinq opérations les plus récentes.
 . Sélectionner l'opération.
-. Dans la page Détails du travail, cliquez sur *Annuler le travail*.
+. Dans la page *Détails du travail*, cliquez sur *Annuler le travail*.
 
 
 |===

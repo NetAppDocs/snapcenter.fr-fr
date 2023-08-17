@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_restore_sql_server_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Restore workflow 
 summary: Vous pouvez utiliser SnapCenter pour restaurer les bases de données SQL Server en les restaurant depuis une ou plusieurs sauvegardes vers votre système de fichiers actif, puis en récupérant la base de données. Vous pouvez également restaurer les bases de données qui se trouvent dans les groupes de disponibilité, puis ajouter les bases de données restaurées au groupe de disponibilité. Avant de restaurer une base de données SQL Server, vous devez effectuer plusieurs tâches préparatoires. 
 ---
 = Restaurer le flux de travail

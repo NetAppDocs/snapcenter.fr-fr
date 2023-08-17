@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_what_operations_can_be_performed_from_the_resource_page.html 
 sidebar: sidebar 
-keywords:  
+keywords: Resources page 
 summary: Pour découvrir les ressources et exécuter les opérations de protection des données, consultez la page Ressources. Les opérations que vous pouvez effectuer diffèrent en fonction du plug-in que vous utilisez pour gérer vos ressources. 
 ---
 = Opérations prises en charge à partir de la page Ressources

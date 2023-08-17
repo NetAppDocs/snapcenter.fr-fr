@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_cancel_backup_operations_for_windows_file_system.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel backup 
 summary: 'Vous pouvez annuler les opérations de sauvegarde mises en file d"attente.' 
 ---
 = Annuler les opérations de sauvegarde

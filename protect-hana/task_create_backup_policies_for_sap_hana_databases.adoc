@@ -13,7 +13,7 @@ summary: 'Avant d"utiliser SnapCenter pour sauvegarder les ressources de base de
 [role="lead"]
 Avant d'utiliser SnapCenter pour sauvegarder les ressources de base de données SAP HANA, vous devez créer une règle de sauvegarde pour la ressource ou le groupe de ressources à sauvegarder. Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devez avoir défini votre stratégie de sauvegarde.
 +
 Pour en savoir plus, découvrez comment définir une stratégie de protection des données pour les bases de données SAP HANA.

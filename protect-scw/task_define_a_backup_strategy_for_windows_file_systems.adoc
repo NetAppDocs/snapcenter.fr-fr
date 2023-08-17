@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_define_a_backup_strategy_for_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup strategy 
 summary: 'En définissant une stratégie de sauvegarde avant de créer vos sauvegardes, vous obtenez les sauvegardes dont vous avez besoin pour restaurer ou cloner vos systèmes de fichiers. Votre contrat de niveau de service (SLA), votre objectif de délai de restauration (RTO) et votre objectif de point de restauration (RPO) déterminent largement votre stratégie de sauvegarde.' 
 ---
 = Définir une stratégie de sauvegarde pour les systèmes de fichiers Windows

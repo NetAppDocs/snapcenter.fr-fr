@@ -19,8 +19,7 @@ Les plug-ins personnalisés utilisent le fichier _keystore.jks_, qui se trouve �
 
 == Gérer le mot de passe pour le magasin de clés de plug-in personnalisé et l'alias de la paire de clés signée par l'autorité de certification utilisée
 
-*Étapes*
-
+.Étapes
 . Vous pouvez récupérer le mot de passe par défaut du magasin de clés enfichable personnalisé à partir du fichier de propriétés de l'agent du plug-in personnalisé.
 +
 C'est la valeur correspondant à la clé _KEYSTORE_PASS_.
@@ -56,8 +55,7 @@ NOTE: Le mot de passe du magasin de clés de plug-in personnalisé et de tous le
 
 Vous devez configurer les certificats racine ou intermédiaire sans la clé privée sur le magasin de confiance du plug-in personnalisé.
 
-*Étapes*
-
+.Étapes
 . Accédez au dossier contenant le magasin de clés personnalisé du plug-in _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_
 . Localisez le fichier 'keystore.jks'.
 . Répertoriez les certificats ajoutés dans le magasin de clés :
@@ -80,8 +78,7 @@ NOTE: Vous devez ajouter le certificat de l'autorité de certification racine, p
 
 Vous devez configurer la paire de clés signées CA dans le magasin de confiance personnalisé du plug-in.
 
-*Étapes*
-
+.Étapes
 . Accédez au dossier contenant le magasin de clés personnalisé du plug-in _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_
 . Localisez le fichier _keystore.jks_.
 . Répertoriez les certificats ajoutés dans le magasin de clés :
@@ -115,15 +112,13 @@ Mettez cette valeur à jour par rapport à la clé SCC_CERTIFICATE_ALIAS.
 
 == Configurez la liste de révocation de certificats (CRL) pour les plug-ins personnalisés SnapCenter
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Pour télécharger le fichier CRL le plus récent pour le certificat d'autorité de certification associé, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["Comment mettre à jour le fichier de liste de révocation de certificats dans le certificat d'autorité de certification SnapCenter"].
 * Les plug-ins personnalisés SnapCenter rechercheront les fichiers CRL dans un répertoire préconfiguré.
 * Le répertoire par défaut des fichiers CRL pour les plug-ins personnalisés SnapCenter est _'C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\ etc\crl'_.
 
 
-*Étapes*
-
+.Étapes
 . Vous pouvez modifier et mettre à jour le répertoire par défaut du fichier _agent.properties_ par rapport à la clé CRL_PATH.
 . Vous pouvez placer plusieurs fichiers CRL dans ce répertoire.
 +

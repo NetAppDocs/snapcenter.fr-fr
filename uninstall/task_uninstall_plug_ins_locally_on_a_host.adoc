@@ -13,8 +13,7 @@ summary: 'Vous pouvez désinstaller les plug-ins SnapCenter localement sur un h�
 [role="lead"]
 Vous pouvez désinstaller les plug-ins SnapCenter localement sur un hôte si vous ne pouvez pas accéder à l'hôte à partir du serveur SnapCenter.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 La meilleure pratique pour désinstaller des plug-ins individuels ou des modules externes consiste à utiliser l'interface graphique SnapCenter ou l'applet de commande Uninstall-SmHostPackage sur l'interface de ligne de commande de l'hôte SnapCenter Server. Ces procédures permettent au serveur SnapCenter de rester à jour en cas de modification.
 
 Toutefois, il peut être rare de devoir désinstaller des plug-ins localement. Par exemple, vous avez peut-être exécuté une tâche de désinstallation à partir du serveur SnapCenter, mais la tâche a échoué, ou vous avez désinstallé votre serveur SnapCenter et les plug-ins orphelins restent sur un hôte.
@@ -25,8 +24,7 @@ IMPORTANT: La désinstallation d'un module de plug-in localement sur un hôte ne
 
 IMPORTANT: N'essayez pas de désinstaller localement le module de plug-ins SnapCenter pour Windows à partir du panneau de configuration. Vous devez utiliser l'interface graphique SnapCenter pour vous assurer que le plug-in SnapCenter pour Microsoft Windows est correctement désinstallé.
 
-*Étapes*
-
+.Étapes
 . Sur le système hôte, accédez au panneau de configuration et cliquez sur *Désinstaller un programme*.
 . Dans la liste de programmes, sélectionnez le module SnapCenter ou le module externe que vous souhaitez désinstaller, puis cliquez sur *Désinstaller*.
 +

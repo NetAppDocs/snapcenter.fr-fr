@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_snapcenter_custom_plug_ins_features.html 
 sidebar: sidebar 
-keywords:  
+keywords: Custom Plug-ins features 
 summary: 'SnapCenter s"intègre avec l"application de plug-in et avec les technologies NetApp sur le système de stockage. Pour utiliser des plug-ins personnalisés, utilisez l"interface utilisateur graphique de SnapCenter.' 
 ---
 = Fonctionnalités des plug-ins personnalisés SnapCenter

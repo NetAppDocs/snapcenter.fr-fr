@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_requirements_for_backing_up_sql_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Requirements 
 summary: Avant de sauvegarder une ressource SQL, vous devez vous assurer que plusieurs exigences sont respectées. 
 ---
 = Conditions requises pour la sauvegarde des ressources SQL

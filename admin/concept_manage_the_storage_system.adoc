@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_the_storage_system.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage storage system 
 summary: Après avoir ajouté le système de stockage, vous pouvez modifier la configuration et les connexions du système de stockage ou supprimer le système de stockage. 
 ---
 = Gestion du système de stockage

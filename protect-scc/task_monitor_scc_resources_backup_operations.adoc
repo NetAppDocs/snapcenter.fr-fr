@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_monitor_scc_resources_backup_operations.html 
 sidebar: sidebar 
-keywords: SnapCenter Server 
+keywords: SnapCenter Server, custom plug-in 
 summary: 'Vous pouvez contrôler la progression des différentes opérations de sauvegarde à l"aide de la page tâches SnapCenter. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
 = Surveiller les opérations de sauvegarde des ressources de plug-ins personnalisées
@@ -13,8 +13,7 @@ summary: 'Vous pouvez contrôler la progression des différentes opérations de 
 [role="lead"]
 Vous pouvez surveiller la progression des différentes opérations de sauvegarde à l'aide de la page SnapCenterJobs. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s'il y a un problème.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Les icônes suivantes apparaissent sur la page travaux et indiquent l'état correspondant des opérations :
 
 * image:../media/progress_icon.gif["Icône en cours"] En cours
@@ -22,11 +21,10 @@ Les icônes suivantes apparaissent sur la page travaux et indiquent l'état corr
 * image:../media/failed_icon.gif["Icône échec"] Échec
 * image:../media/warning_icon.gif["Terminé avec l'icône d'avertissement"] Terminé avec des avertissements ou impossible de démarrer en raison d'avertissements
 * image:../media/verification_job_in_queue.gif["La tâche de vérification est mise en file d'attente"] En file d'attente
-* image:../media/cancel_icon.gif[""] Annulée
+* image:../media/cancel_icon.gif["Icône Annuler"] Annulée
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *moniteur*.
 . Dans la page moniteur, cliquez sur *travaux*.
 . Dans la page travaux, effectuez les opérations suivantes :

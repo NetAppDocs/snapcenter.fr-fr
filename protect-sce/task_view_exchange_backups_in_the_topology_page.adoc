@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_view_exchange_backups_in_the_topology_page.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Lorsque vous préparez à sauvegarder une ressource, il est parfois utile d"afficher une représentation graphique de toutes les sauvegardes des stockages primaire et secondaire.' 
 ---
 = Afficher les sauvegardes Exchange sur la page topologie
@@ -13,8 +13,7 @@ summary: 'Lorsque vous préparez à sauvegarder une ressource, il est parfois ut
 [role="lead"]
 Lorsque vous préparez à sauvegarder une ressource, il est parfois utile d'afficher une représentation graphique de toutes les sauvegardes des stockages primaire et secondaire.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Dans la page topologie, vous pouvez voir toutes les sauvegardes disponibles pour la ressource ou le groupe de ressources sélectionné. Vous pouvez afficher les détails de ces sauvegardes, puis les sélectionner pour effectuer des opérations de protection des données.
 
 Vous pouvez consulter l'icône suivante dans la vue gérer les copies pour déterminer si les sauvegardes sont disponibles sur le stockage principal ou secondaire (copies miroir ou copies Vault).
@@ -37,8 +36,7 @@ Par exemple, si vous avez créé 6 sauvegardes à l'aide d'une stratégie de con
 |===
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez la base de données, la ressource ou le groupe de ressources dans la liste déroulante *View*.
 . Sélectionnez la ressource dans la vue Détails de la base de données ou dans la vue Détails du groupe de ressources.

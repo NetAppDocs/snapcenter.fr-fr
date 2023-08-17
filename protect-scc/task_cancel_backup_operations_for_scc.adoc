@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_cancel_backup_operations_for_scc.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel backup, custom plug-in 
 summary: 'Vous pouvez annuler les opérations de sauvegarde mises en file d"attente.' 
 ---
 = Annuler les opérations de sauvegarde pour les plug-ins personnalisés

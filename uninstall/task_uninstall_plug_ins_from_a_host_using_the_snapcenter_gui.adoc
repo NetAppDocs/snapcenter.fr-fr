@@ -13,14 +13,12 @@ summary: 'Lorsque vous décidez de ne plus avoir besoin d"un plug-in individuel 
 [role="lead"]
 Lorsque vous décidez de ne plus avoir besoin d'un plug-in individuel ou d'un module externe, vous pouvez le désinstaller à l'aide de l'interface SnapCenter.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir supprimé les groupes de ressources du module d'extension que vous désinstallez.
 * Vous devez avoir détaché les stratégies associées aux groupes de ressources du module externe que vous désinstallez.
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Vous pouvez désinstaller un plug-in individuel. Par exemple, vous devrez peut-être désinstaller le plug-in SnapCenter pour Microsoft SQL Server car un hôte manque de ressources et vous souhaitez déplacer ce plug-in vers un hôte plus puissant. Vous pouvez également désinstaller tout un module externe. Par exemple, vous devrez peut-être désinstaller le module de plug-ins SnapCenter pour Linux, qui inclut le plug-in SnapCenter pour Oracle Database et le plug-in SnapCenter pour UNIX.
 
 * La suppression d'un hôte inclut la désinstallation de tous les plug-ins.
@@ -39,16 +37,14 @@ Vous pouvez également désinstaller un plug-in à partir de plusieurs hôtes à
 
 IMPORTANT: La désinstallation du module de plug-ins SnapCenter pour Windows à partir d'un hôte sur lequel le serveur SnapCenter est installé endommagera l'installation du serveur SnapCenter. Ne désinstallez pas le module de plug-ins SnapCenter pour Windows, sauf si vous êtes certain que vous n'avez plus besoin du serveur SnapCenter.
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *hosts*.
 . Dans la page hôtes, cliquez sur *Managed Hosts*.
 . Dans la page hôtes gérés, sélectionnez l'hôte à partir duquel vous souhaitez désinstaller le module externe ou le module externe.
 . À côté du plug-in que vous souhaitez supprimer, cliquez sur *Remove* > *Submit*.
 
 
-*Après la fin*
-
+.Une fois que vous avez terminé
 Patientez 5 minutes avant de réinstaller le plug-in sur cet hôte. Cette période est suffisante pour que l'interface graphique de SnapCenter actualise l'état de l'hôte géré. L'installation échoue si vous réinstallez immédiatement le plug-in.
 
 Si vous désinstallez le module de plug-ins SnapCenter pour Linux, des fichiers journaux spécifiques à la désinstallation sont disponibles à l'adresse suivante : _/Custom_location/snapcenter/log_.

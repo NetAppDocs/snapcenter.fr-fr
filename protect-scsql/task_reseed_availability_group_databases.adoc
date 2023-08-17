@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_reseed_availability_group_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: reseed 
 summary: 'Réamorçage est une option permettant de restaurer les bases de données du groupe de disponibilité \(AG\). Si une base de données secondaire n"est plus synchronisée avec la base de données principale d"un AG, vous pouvez réamorcer la base de données secondaire.' 
 ---
 = Réamorçage des bases de données du groupe de disponibilité
@@ -13,21 +13,18 @@ summary: 'Réamorçage est une option permettant de restaurer les bases de donn�
 [role="lead"]
 Réamorçage est une option permettant de restaurer les bases de données du groupe de disponibilité (AG). Si une base de données secondaire n'est plus synchronisée avec la base de données principale d'un AG, vous pouvez réamorcer la base de données secondaire.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir créé une sauvegarde de la base de données AG secondaire que vous souhaitez restaurer.
 * La même version de SnapCenter doit être installée sur le serveur SnapCenter et l'hôte du plug-in.
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Vous ne pouvez pas effectuer de réamorçage sur les bases de données primaires.
 * Vous ne pouvez pas effectuer de réamorçage si la base de données de réplica est supprimée du groupe de disponibilité. Lorsque le réplica est supprimé, l'opération de réamorçage échoue.
 * Lors de l'exécution de l'opération de réamorçage sur la base de données du groupe de disponibilité SQL, vous ne devez pas déclencher de sauvegardes de journaux sur les bases de données de réplica de cette base de données du groupe de disponibilité. Si vous déclenchez des sauvegardes de journaux pendant le réamorçage, l'opération de réamorçage échoue avec la base de données miroir, "nom_base_de_données" a des données de journal de transactions insuffisantes pour préserver la chaîne de sauvegarde du journal du message d'erreur de la base de données principale.
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez *SnapCenter Plug-in for SQL Server* dans la liste.
 . Dans la page Ressources, sélectionnez *Database* dans la liste *View*.
 . Sélectionnez la base de données AG secondaire dans la liste.

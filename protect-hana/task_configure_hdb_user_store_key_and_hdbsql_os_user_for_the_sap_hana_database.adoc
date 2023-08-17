@@ -13,7 +13,7 @@ summary: 'Vous devez configurer la clé de stockage utilisateur HDB et l"utilisa
 [role="lead"]
 Vous devez configurer la clé de stockage utilisateur HDB et l'utilisateur HDBSQL pour effectuer des opérations de protection des données sur des bases de données SAP HANA.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Si la clé HDB Secure User Store et l'utilisateur HDB SQL OS ne sont pas configurés dans la base de données SAP HANA, une icône de cadenas rouge s'affiche uniquement pour les ressources découvertes automatiquement. Si, au cours d'une opération de découverte ultérieure, la clé de stockage sécurisée HDB configurée a été détectée comme incorrecte ou n'a pas fourni d'accès à la base de données elle-même, l'icône rouge du cadenas réapparaîtra.
 * Vous devez configurer la clé du magasin d'utilisateurs sécurisé HDB et l'utilisateur HDB SQL OS pour pouvoir protéger la base de données ou l'ajouter à un groupe de ressources pour effectuer des opérations de protection des données.
 * Vous devez configurer HDB SQL OS User pour accéder à la base de données système. Si HDB SQL OS User est configuré pour accéder uniquement à la base de données de tenant, l'opération de découverte échoue.

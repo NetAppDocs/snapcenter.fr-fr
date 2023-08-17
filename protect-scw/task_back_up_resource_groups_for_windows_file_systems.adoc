@@ -13,8 +13,7 @@ summary: 'Un groupe de ressources est un ensemble de ressources sur un hôte ou 
 [role="lead"]
 Un groupe de ressources est un ensemble de ressources sur un hôte ou un cluster. Une opération de sauvegarde sur le groupe de ressources est effectuée sur toutes les ressources définies dans le groupe de ressources. Vous pouvez sauvegarder un groupe de ressources à la demande à partir de la page Ressources. Si une stratégie est associée à un groupe de ressources et qu'une planification est configurée, les sauvegardes sont automatiquement effectuées en fonction de la planification.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir créé un groupe de ressources associé à une stratégie.
 * Si vous souhaitez sauvegarder une ressource avec une relation SnapMirror sur un système de stockage secondaire, le rôle attribué à l'utilisateur de stockage doit inclure le privilège « napmirror All ». Toutefois, si vous utilisez le rôle « vsadmin », le privilège « napmirror all » n'est pas requis.
 * Si un groupe de ressources contient plusieurs bases de données provenant de différents hôtes, l'opération de sauvegarde sur certains hôtes peut se déclencher tardivement en raison de problèmes réseau. Vous devez configurer la valeur de MaxRetryForUninitializedHoots dans web.config à l'aide de l'applet de commande set-SmConfigSettings PowerShell
@@ -26,8 +25,7 @@ NOTE: Lors de la sauvegarde d'un système de fichiers, SnapCenter ne sauvegarde 
 
 IMPORTANT: Si vous travaillez dans un contexte de système de fichiers Windows, ne sauvegardez pas les fichiers de base de données. La sauvegarde est ainsi incohérente et risque de perte de données lors de la restauration. Pour protéger les fichiers de base de données, vous devez utiliser le plug-in SnapCenter approprié pour la base de données (par exemple, le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server ou un plug-in personnalisé pour les fichiers de base de données).
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
 +

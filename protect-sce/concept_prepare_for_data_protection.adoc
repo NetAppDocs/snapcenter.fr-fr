@@ -72,4 +72,4 @@ Lorsque vous créez un groupe de ressources, vous sélectionnez une ou plusieurs
 
 Pensez à un groupe de ressources comme définissant _quoi_ vous voulez protéger et quand vous voulez le protéger en termes de jour et de temps. Pensez à une stratégie comme définir _comment_ vous voulez la protéger. Si vous sauvegardez toutes les bases de données d'un hôte, par exemple, vous pouvez créer un groupe de ressources qui inclut toutes les bases de données de l'hôte. Vous pouvez ensuite associer deux stratégies au groupe de ressources : une stratégie quotidienne et une stratégie horaire. Lorsque vous créez le groupe de ressources et joignez les stratégies, vous pouvez configurer le groupe de ressources pour effectuer une sauvegarde complète tous les jours et un autre programme qui effectue des sauvegardes de journaux toutes les heures. L'image suivante illustre la relation entre les ressources, les groupes de ressources et les politiques des bases de données :
 
-image::../media/sce_resourcegroup_policy.gif[stratégie sce resourcegroup]
+image::../media/sce_resourcegroup_policy.gif[Capture d'écran de la stratégie de groupe de ressources]

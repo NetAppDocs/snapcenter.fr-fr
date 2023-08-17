@@ -19,8 +19,7 @@ SnapCenter permet de modifier les rôles, les utilisateurs et les groupes.
 
 Vous pouvez modifier un rôle SnapCenter pour supprimer des utilisateurs ou des groupes et modifier les autorisations associées au rôle. Il est particulièrement utile de modifier des rôles lorsque vous voulez modifier ou supprimer les autorisations utilisées par un rôle entier.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 Vous devez avoir ouvert une session en tant que rôle « SnapCenterAdmin ».
 
 
@@ -49,8 +48,7 @@ NOTE: Lorsque cette option est activée, il n'est pas nécessaire d'attribuer au
 
 Vous pouvez modifier les utilisateurs ou les groupes SnapCenter pour modifier leur rôle et leurs ressources.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 Vous devez être connecté en tant qu'administrateur SnapCenter.
 
 *Étapes*

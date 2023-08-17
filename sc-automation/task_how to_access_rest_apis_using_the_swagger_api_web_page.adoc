@@ -17,8 +17,7 @@ Vous devez connaître l'adresse IP de gestion ou le nom de domaine du serveur Sn
 
 Vous n'avez pas besoin d'autorisations spéciales pour exécuter le client de l'API REST. N'importe quel utilisateur peut accéder à la page Web de swagger. Les autorisations respectives sur les objets accessibles via l'API REST sont basées sur l'utilisateur qui génère le jeton pour se connecter à l'API REST.
 
-*Étapes*
-
+.Étapes
 . À partir d'un navigateur, entrez l'URL pour accéder à la page Web swagger au format _\https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_.
 +
 

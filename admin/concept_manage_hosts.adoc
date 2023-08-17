@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_hosts.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage hosts 
 summary: 'Vous pouvez ajouter des hôtes et installer des packages plug-in SnapCenter, ajouter un serveur de vérification, supprimer des hôtes, migrer des tâches de sauvegarde et mettre à jour l"hôte pour mettre à niveau des modules plug-in ou ajouter de nouveaux modules plug-in. Selon le plug-in que vous utilisez, vous pouvez également provisionner des disques, gérer des partages SMB, gérer les groupes initiateurs \(igroups\), gérer des sessions iSCSI et migrer des données.' 
 ---
 = Gérer les hôtes
@@ -244,7 +244,7 @@ Un seul champ peut être modifié à la fois.
 . Cliquez sur *soumettre*.
 
 
-*Résultats*
+*Résultat*
 
 L'hôte est validé et ajouté au serveur SnapCenter.
 
@@ -291,7 +291,7 @@ NOTE: Vous n'avez pas besoin d'arrêter le service de plug-in en premier. Le ser
 
 
 
-*Résultats*
+*Résultat*
 
 Une fois les planifications suspendues sur l'hôte, la page hôtes gérés affiche *suspendu* dans le champ d'état global de l'hôte.
 

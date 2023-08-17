@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_create_backup_policies_for_sql_server_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup policy 
 summary: 'Vous pouvez créer une stratégie de sauvegarde pour la ressource ou le groupe de ressources avant d"utiliser SnapCenter pour sauvegarder les ressources SQL Server, ou vous pouvez créer une stratégie de sauvegarde au moment où vous créez un groupe de ressources ou sauvegardez une seule ressource.' 
 ---
 = Créer des stratégies de sauvegarde pour les bases de données SQL Server
@@ -13,7 +13,7 @@ summary: 'Vous pouvez créer une stratégie de sauvegarde pour la ressource ou l
 [role="lead"]
 Vous pouvez créer une stratégie de sauvegarde pour la ressource ou le groupe de ressources avant d'utiliser SnapCenter pour sauvegarder les ressources SQL Server, ou vous pouvez créer une stratégie de sauvegarde au moment où vous créez un groupe de ressources ou sauvegardez une seule ressource.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devez avoir défini votre stratégie de protection des données.
 * Vous devez être prêt à préparer la protection des données en exécutant des tâches telles que l'installation d'SnapCenter, l'ajout d'hôtes, l'identification des ressources et la création de connexions du système de stockage.
 * Vous devez avoir configuré le répertoire du journal hôte pour la sauvegarde des journaux.

@@ -13,7 +13,7 @@ summary: 'Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouve
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d'une sauvegarde principale ou secondaire.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devriez avoir sauvegardé les ressources ou le groupe de ressources.
 * Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
 * Vous ne pouvez pas cloner des sauvegardes basées sur des fichiers.

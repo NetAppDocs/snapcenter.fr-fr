@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_delete_clones.html 
 sidebar: sidebar 
-keywords:  
+keywords: Delete clones 
 summary: Vous pouvez supprimer les clones si vous les trouvez devenus superflus. 
 ---
 = Supprimer les clones

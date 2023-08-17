@@ -4,8 +4,7 @@
 
 Vous pouvez contrôler la progression de l'installation du module d'extension SnapCenter à l'aide de la page travaux. Vous pouvez vérifier la progression de l'installation pour déterminer quand elle est terminée ou s'il y a un problème.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Les icônes suivantes apparaissent sur la page travaux et indiquent l'état de l'opération :
 
 * image:../media/progress_icon.gif["Icône en cours"] En cours
@@ -15,11 +14,10 @@ Les icônes suivantes apparaissent sur la page travaux et indiquent l'état de l
 * image:../media/verification_job_in_queue.gif["La tâche de vérification est mise en file d'attente"] En file d'attente
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *moniteur*.
-. Dans la page moniteur, cliquez sur *travaux*.
-. Dans la page travaux, pour filtrer la liste de manière à ce que seules les opérations d'installation du plug-in soient répertoriées, procédez comme suit :
+. Dans la page *moniteur*, cliquez sur *travaux*.
+. Dans la page *Jobs*, pour filtrer la liste de manière à ce que seules les opérations d'installation des plug-ins soient répertoriées, procédez comme suit :
 +
 .. Cliquez sur *Filtrer*.
 .. Facultatif : spécifiez les dates de début et de fin.
@@ -29,5 +27,5 @@ Les icônes suivantes apparaissent sur la page travaux et indiquent l'état de l
 
 
 . Sélectionnez le travail d'installation et cliquez sur *Détails* pour afficher les détails du travail.
-. Dans la page Détails du travail, cliquez sur *Afficher les journaux*.
+. Dans la page *Détails du travail*, cliquez sur *Afficher les journaux*.
 

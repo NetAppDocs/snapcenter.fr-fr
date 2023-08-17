@@ -13,8 +13,7 @@ summary: Le workflow de restauration et de reprise comprend la planification, la
 [role="lead"]
 Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Le flux de travail suivant montre l'ordre dans lequel vous devez effectuer l'opération de restauration :
 
 image::../media/restore_workflow.gif[Restaurer le flux de travail]

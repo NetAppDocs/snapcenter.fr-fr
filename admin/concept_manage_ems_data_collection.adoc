@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_ems_data_collection.html 
 sidebar: sidebar 
-keywords:  
+keywords: EMS data collection 
 summary: 'Vous pouvez planifier et gérer la collecte de données EMS (Event Management System) à l"aide des applets de commande PowerShell. La collecte des données EMS implique la collecte de détails sur le serveur SnapCenter, les modules du plug-in SnapCenter installés, les hôtes et des informations similaires, puis leur envoi à une machine virtuelle de stockage ONTAP spécifiée \(SVM\).' 
 ---
 = Gérer la collecte de données EMS
@@ -69,6 +69,5 @@ Vous pouvez surveiller l'état de votre collecte de données EMS à l'aide de pl
 . Récupérez des informations sur la cible de collecte de données EMS en entrant _get-SmDataCollectionEmsTarget_.
 
 
-*Plus d'informations*
-
+.Informations associées
 Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

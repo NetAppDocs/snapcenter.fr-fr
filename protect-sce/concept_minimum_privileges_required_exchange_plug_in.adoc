@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/concept_minimum_privileges_required_exchange_plug_in.html 
 sidebar: sidebar 
-keywords:  
+keywords: Minimum ONTAP privileges 
 summary: Les privilèges minimum ONTAP requis varient en fonction des plug-ins SnapCenter utilisés pour la protection des données. 
 ---
 = Privilèges ONTAP minimum requis pour le plug-in Exchange

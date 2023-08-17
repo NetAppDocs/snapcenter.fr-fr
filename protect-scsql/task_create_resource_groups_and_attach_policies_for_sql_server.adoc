@@ -15,8 +15,7 @@ Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources
 
 Vous pouvez protéger les ressources individuellement sans créer de nouveau groupe de ressources. Vous pouvez effectuer des sauvegardes sur la ressource protégée.
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Database* dans la liste *View*.
 +
@@ -143,6 +142,5 @@ NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails 
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 
 
-*Plus d'informations*
-
+.Informations associées
 link:task_create_backup_policies_for_sql_server_databases.html["Créer des stratégies de sauvegarde pour les bases de données SQL Server"]

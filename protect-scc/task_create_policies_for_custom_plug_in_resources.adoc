@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_create_policies_for_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: create policies, custom plug-in 
 summary: 'Avant d"utiliser SnapCenter pour sauvegarder des ressources spécifiques à un plug-in personnalisé, vous devez créer une stratégie de sauvegarde pour les ressources ou le groupe de ressources à sauvegarder.' 
 ---
 = Créez des règles pour les ressources de plug-in personnalisées
@@ -13,8 +13,7 @@ summary: 'Avant d"utiliser SnapCenter pour sauvegarder des ressources spécifiqu
 [role="lead"]
 Avant d'utiliser SnapCenter pour sauvegarder des ressources spécifiques à un plug-in personnalisé, vous devez créer une stratégie de sauvegarde pour les ressources ou le groupe de ressources à sauvegarder.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devriez avoir défini votre stratégie de sauvegarde.
 +
 Pour en savoir plus, découvrez comment définir une stratégie de protection des données pour les plug-ins personnalisés.
@@ -30,14 +29,12 @@ L'administrateur SnapCenter doit avoir attribué les SVM aux volumes source et d
 * Vous devez avoir ajouté manuellement les ressources que vous voulez protéger.
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes. En outre, vous pouvez spécifier les paramètres de réplication, de script et d'application.
 * La définition d'options dans une stratégie permet de gagner du temps lorsque vous souhaitez réutiliser la stratégie pour un autre groupe de ressources.
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
 . Dans la page Paramètres, cliquez sur *stratégies*.
 . Cliquez sur *Nouveau*.
@@ -50,7 +47,7 @@ L'administrateur SnapCenter doit avoir attribué les SVM aux volumes source et d
 NOTE: Vous pouvez spécifier la planification (date de début, date de fin et fréquence) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais vous permet d'affecter des programmes de sauvegarde différents à chaque stratégie.
 
 +
-image::../media/backup_settings.gif[sauvegarder les paramètres]
+image::../media/backup_settings.gif[Sauvegarder la page des paramètres]
 
 +
 
@@ -59,7 +56,7 @@ NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'he
 ** Dans la section Paramètres de sauvegarde personnalisés, fournissez tous les paramètres de sauvegarde spécifiques qui doivent être transmis au plug-in au format clé-valeur. Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
 
 
-. Dans la page Retention, spécifiez les paramètres de conservation pour le type de sauvegarde et le type de programme sélectionné dans la page Type de sauvegarde :
+. Sur la page *Retention*, spécifiez les paramètres de rétention pour le type de sauvegarde et le type de planification sélectionné dans la page *Type de sauvegarde* :
 +
 |===
 | Les fonctions que vous recherchez... | Alors... 
@@ -86,7 +83,7 @@ Conservez les copies Snapshot pendant un certain nombre de jours
 Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer.
 
 |===
-. Dans la page réplication, spécifiez les paramètres de réplication :
+. Dans la page *Replication*, spécifiez les paramètres de réplication :
 +
 |===
 | Pour ce champ... | Procédez comme ça... 

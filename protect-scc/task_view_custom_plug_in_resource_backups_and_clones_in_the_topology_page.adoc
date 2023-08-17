@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html 
 sidebar: sidebar 
-keywords:  
+keywords: view custom plug-in resource 
 summary: 'Lorsque vous préparez une sauvegarde ou le clonage d"une ressource, vous trouverez peut-être utile d"afficher une représentation graphique de toutes les sauvegardes et clones sur le stockage primaire et secondaire. Sur la page topologie, vous pouvez voir toutes les sauvegardes et clones disponibles pour la ressource ou le groupe de ressources sélectionné. Vous pouvez afficher les détails de ces sauvegardes et clones, puis les sélectionner pour effectuer des opérations de protection des données.' 
 ---
 = Affichez les sauvegardes et clones personnalisés relatifs aux ressources du plug-in sur la page topologie
@@ -13,8 +13,7 @@ summary: 'Lorsque vous préparez une sauvegarde ou le clonage d"une ressource, v
 [role="lead"]
 Lorsque vous préparez une sauvegarde ou le clonage d'une ressource, vous trouverez peut-être utile d'afficher une représentation graphique de toutes les sauvegardes et clones sur le stockage primaire et secondaire. Sur la page topologie, vous pouvez voir toutes les sauvegardes et clones disponibles pour la ressource ou le groupe de ressources sélectionné. Vous pouvez afficher les détails de ces sauvegardes et clones, puis les sélectionner pour effectuer des opérations de protection des données.
 
-*À propos de cette tâche*
-
+.Description de la tâche
 Vous pouvez consulter les icônes suivantes dans la vue gérer les copies pour déterminer si les sauvegardes et les clones sont disponibles sur le stockage principal ou secondaire (copies en miroir ou copies du coffre-fort).
 
 * image:../media/topology_primary_storage.gif["icône stockage principal"] affiche le nombre de sauvegardes et de clones disponibles sur le stockage principal.
@@ -33,8 +32,7 @@ NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume 
 
 
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez la ressource ou le groupe de ressources dans la liste déroulante *Affichage*.
 . Sélectionnez la ressource dans la vue Détails de la ressource ou dans la vue Détails du groupe de ressources.

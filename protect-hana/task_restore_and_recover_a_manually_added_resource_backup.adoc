@@ -13,7 +13,7 @@ summary: 'Vous pouvez utiliser SnapCenter pour restaurer et récupérer des donn
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour restaurer et récupérer des données à partir d'une ou plusieurs sauvegardes.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devez avoir sauvegardé la ressource ou les groupes de ressources.
 * Vous devez avoir annulé toute opération de sauvegarde en cours pour la ressource ou le groupe de ressources que vous souhaitez restaurer.
 * Pour les commandes de pré-restauration, post-restauration, montage et démontage, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in depuis les chemins suivants :

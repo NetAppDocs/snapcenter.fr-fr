@@ -13,8 +13,7 @@ summary: 'Vous devez exporter les certificats de l"autorité de certification du
 [role="lead"]
 Vous devez exporter les certificats d'autorité de certification du serveur SnapCenter vers les hôtes de plug-in à l'aide de la console MMC (Microsoft Management Console).
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 Vous devez avoir configuré le protocole SSL bidirectionnel.
 
 *Étapes*

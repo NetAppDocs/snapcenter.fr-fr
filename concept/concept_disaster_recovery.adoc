@@ -1,7 +1,7 @@
 ---
 permalink: concept/concept_disaster_recovery.html 
 sidebar: sidebar 
-keywords:  
+keywords: Disaster Recovery 
 summary: 'Vous pouvez restaurer le serveur SnapCenter en cas d"incident, par exemple en cas de corruption des ressources ou de panne serveur, à l"aide de la fonctionnalité de reprise après incident de SnapCenter.' 
 ---
 = Reprise d'activité SnapCenter

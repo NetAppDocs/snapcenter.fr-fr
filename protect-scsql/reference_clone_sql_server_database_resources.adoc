@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_clone_sql_server_database_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Clone workflow 
 summary: 'Vous devez effectuer plusieurs tâches à l"aide du serveur SnapCenter avant de cloner les ressources de base de données à partir d"une sauvegarde. Le clonage de la base de données consiste à créer une copie instantanée d"une base de données de production ou de son jeu de sauvegarde. Vous pouvez cloner les bases de données pour tester les fonctionnalités qui doivent être implémentées en utilisant la structure et le contenu actuels de la base de données pendant les cycles de développement d"applications, pour utiliser les outils d"extraction et de manipulation des données lors du remplissage des data warehouses, ou pour récupérer les données qui ont été supprimées ou modifiées par erreur.' 
 ---
 = Workflow de clonage

@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_how_to_view_information_on_the_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: 'Dans le volet de navigation de gauche de SnapCenter, vous pouvez afficher les différentes mosaïques de tableau de bord, ainsi que les détails système associés. Le nombre d"affichages disponibles dans le tableau de bord est fixe et ne peut pas être modifié. Le contenu fourni sur chaque écran dépend du contrôle d"accès basé sur des rôles \(RBAC\).' 
 ---
 = Comment afficher les informations sur le tableau de bord

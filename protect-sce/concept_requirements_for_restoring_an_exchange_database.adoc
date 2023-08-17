@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/concept_requirements_for_restoring_an_exchange_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: restoring an Exchange database 
 summary: 'Avant de restaurer une base de données Exchange Server à partir d"un plug-in SnapCenter pour sauvegarde Microsoft Exchange Server, vous devez vous assurer que plusieurs conditions sont respectées.' 
 ---
 = Conditions requises pour la restauration d'une base de données Exchange

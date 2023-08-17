@@ -19,8 +19,7 @@ Les plug-ins personnalisés utilisent le fichier « keystore.jks », qui se trou
 
 == Gérer le mot de passe pour le magasin de clés de plug-in personnalisé et l'alias de la paire de clés signée par l'autorité de certification utilisée
 
-*Étapes*
-
+.Étapes
 . Vous pouvez récupérer le mot de passe par défaut du magasin de clés enfichable personnalisé à partir du fichier de propriétés de l'agent du plug-in personnalisé.
 +
 C'est la valeur correspondant à la clé 'KEYSTORE_PASS'.
@@ -46,8 +45,7 @@ NOTE: Le mot de passe du magasin de clés de plug-in personnalisé et de tous le
 
 Vous devez configurer les certificats racine ou intermédiaire sans la clé privée sur le magasin de confiance du plug-in personnalisé.
 
-*Étapes*
-
+.Étapes
 . Accédez au dossier contenant le magasin de clés personnalisé du plug-in : /opt/NetApp/snapcenter/scc/etc
 . Localisez le fichier 'keystore.jks'.
 . Répertoriez les certificats ajoutés dans le magasin de clés :
@@ -69,8 +67,7 @@ NOTE: Vous devez ajouter le certificat de l'autorité de certification racine, p
 
 Vous devez configurer la paire de clés signées CA dans le magasin de confiance personnalisé du plug-in.
 
-*Étapes*
-
+.Étapes
 . Accédez au dossier contenant le magasin de clés personnalisé du plug-in /opt/NetApp/snapcenter/scc/etc
 . Localisez le fichier 'keystore.jks'.
 . Répertoriez les certificats ajoutés dans le magasin de clés :
@@ -106,14 +103,12 @@ Mettez cette valeur à jour par rapport à la clé SCC_CERTIFICATE_ALIAS.
 
 == Configurez la liste de révocation de certificats (CRL) pour les plug-ins personnalisés SnapCenter
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Les plug-ins personnalisés SnapCenter rechercheront les fichiers CRL dans un répertoire préconfiguré.
 * Le répertoire par défaut des fichiers CRL pour les plug-ins personnalisés SnapCenter est opt/NetApp/snapcenter/etc/crl.
 
 
-*Étapes*
-
+.Étapes
 . Vous pouvez modifier et mettre à jour le répertoire par défaut du fichier agent.properties par rapport à la clé CRL_PATH.
 +
 Vous pouvez placer plusieurs fichiers CRL dans ce répertoire. Les certificats entrants seront vérifiés pour chaque CRL.

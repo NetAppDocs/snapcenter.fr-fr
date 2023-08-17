@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_create_backup_policies_for_exchange_server_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Vous pouvez créer une stratégie de sauvegarde pour les ressources Exchange ou pour les groupes de ressources avant d"utiliser SnapCenter pour sauvegarder les ressources Microsoft Exchange Server, ou vous pouvez créer une stratégie de sauvegarde au moment de créer un groupe de ressources ou de sauvegarder une seule ressource.' 
 ---
 = Créer des stratégies de sauvegarde pour les bases de données Exchange Server
@@ -13,8 +13,7 @@ summary: 'Vous pouvez créer une stratégie de sauvegarde pour les ressources Ex
 [role="lead"]
 Vous pouvez créer une stratégie de sauvegarde pour les ressources Exchange ou pour les groupes de ressources avant d'utiliser SnapCenter pour sauvegarder les ressources Microsoft Exchange Server, ou vous pouvez créer une stratégie de sauvegarde au moment de créer un groupe de ressources ou de sauvegarder une seule ressource.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir défini votre stratégie de protection des données.
 +
 Pour en savoir plus, consultez les informations sur la définition d'une stratégie de protection des données pour les bases de données Exchange.
@@ -28,8 +27,7 @@ La valeur par défaut est FALSE
 
 
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Une stratégie de sauvegarde est un ensemble de règles qui régit la façon dont vous gérez et conservez les sauvegardes, ainsi que la fréquence de sauvegarde de la ressource ou du groupe de ressources. En outre, vous pouvez spécifier des paramètres de script. La définition d'options dans une stratégie permet de gagner du temps lorsque vous souhaitez réutiliser la stratégie pour un autre groupe de ressources.
 * La conservation complète des sauvegardes est spécifique à une règle donnée. Une base de données ou une ressource utilisant la stratégie A avec une conservation de sauvegarde complète de 4 conserve 4 sauvegardes complètes et n'a aucun effet sur la stratégie B pour la même base de données ou ressource, qui peut avoir une rétention de 3 pour conserver 3 sauvegardes complètes.
 * La conservation des sauvegardes de journaux est efficace pour toutes les stratégies et s'applique à toutes les sauvegardes de journaux d'une base de données ou d'une ressource. Par conséquent, lorsqu'une sauvegarde complète est effectuée à l'aide de la stratégie B, le paramètre de conservation des journaux affecte les sauvegardes des journaux créées par la stratégie A sur la même base de données ou ressource. De même, le paramètre de rétention des journaux de la stratégie A affecte les sauvegardes des journaux créées par la stratégie B sur la même base de données.
@@ -50,8 +48,7 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 
 | *Meilleure pratique:* il est préférable de configurer la stratégie de rétention secondaire en fonction du nombre de sauvegardes complètes et de journaux, globalement, que vous voulez conserver. Lorsque vous configurez des règles de conservation secondaires, gardez à l'esprit que lorsque les bases de données et les journaux se trouvent dans des volumes différents, chaque sauvegarde peut avoir trois copies Snapshot. Lorsque les bases de données et les journaux se trouvent dans le même volume, chaque sauvegarde peut avoir deux copies Snapshot. 
 |===
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
 . Dans la page Paramètres, cliquez sur *stratégies*.
 . Cliquez sur *Nouveau*.

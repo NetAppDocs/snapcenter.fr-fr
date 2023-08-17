@@ -13,7 +13,7 @@ summary: 'Si une ressource ne fait pas encore partie d"un groupe de ressources, 
 [role="lead"]
 Si une ressource ne fait pas encore partie d'un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous devez avoir créé une stratégie de sauvegarde.
 * Si vous souhaitez sauvegarder une ressource avec une relation SnapMirror avec un système de stockage secondaire, le rôle ONTAP attribué à l'utilisateur de stockage doit inclure le privilège « napmirror All ». Toutefois, si vous utilisez le rôle « vsadmin », le privilège « napmirror all » n'est pas requis.
 * Pour une opération de sauvegarde basée sur des copies Snapshot, assurez-vous que toutes les bases de données de tenant sont valides et actives.

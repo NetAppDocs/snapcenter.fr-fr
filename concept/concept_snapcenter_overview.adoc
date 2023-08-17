@@ -1,7 +1,7 @@
 ---
 permalink: concept/concept_snapcenter_overview.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter overview 
 summary: 'Le logiciel SnapCenter est une plateforme simple, centralisée et évolutive qui protège les données de vos applications, bases de données, systèmes de fichiers hôtes et machines virtuelles qui s"exécutent sur les systèmes ONTAP à partir de n"importe quel point du cloud hybride.' 
 ---
 = Présentation de SnapCenter

@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage backups 
 summary: Vous pouvez renommer et supprimer des sauvegardes. Vous pouvez également supprimer plusieurs sauvegardes simultanément. 
 ---
 = Gérer les sauvegardes
@@ -44,8 +44,7 @@ Si vous avez catalogué les sauvegardes des bases de données Oracle à l'aide d
 
 Vous pouvez supprimer des sauvegardes si vous n'avez plus besoin de sauvegarder pour d'autres opérations de protection des données.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 Vous devez avoir supprimé les clones associés avant de supprimer une sauvegarde.
 
 

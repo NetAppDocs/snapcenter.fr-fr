@@ -70,9 +70,9 @@ indexpage:
   - title: Ressources supplémentaires
     links:
     - title: Guide de référence de l'applet de commande
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205
     - title: Guide de référence sur les commandes
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206
     - title: Documentation relative aux versions antérieures de SnapCenter
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: Base de connaissances NetApp - SnapCenter

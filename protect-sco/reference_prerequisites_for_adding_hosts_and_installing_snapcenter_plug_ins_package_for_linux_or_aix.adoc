@@ -77,7 +77,7 @@ NOTE: Si vous utilisez une base de données Oracle sur LVM sous Oracle Linux ou 
  a| 
 RAM minimale pour le plug-in SnapCenter sur l'hôte
  a| 
-1 GO
+2 GO
 
 
 
@@ -211,7 +211,7 @@ RAM minimale pour le plug-in SnapCenter sur l'hôte
  a| 
 Espace minimal d'installation et de journalisation pour le plug-in SnapCenter sur l'hôte
  a| 
-1 GO
+2 GO
 
 
 NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommation de stockage par le dossier des journaux. L'espace de journalisation requis varie en fonction du nombre d'entités à protéger et de la fréquence des opérations de protection des données. S'il n'y a pas suffisamment d'espace disque, les journaux ne seront pas créés pour les opérations récentes.

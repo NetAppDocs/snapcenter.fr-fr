@@ -14,7 +14,9 @@ summary: Un groupe de ressources est le conteneur dans lequel vous devez ajouter
 Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. Un groupe de ressources est requis pour toute tâche de protection des données. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter.
 
 .Description de la tâche
-Pour créer des sauvegardes de réplication du système SAP HANA, il est recommandé d'ajouter toutes les ressources du système SAP HANA dans un groupe de ressources. Cela garantit une sauvegarde transparente en mode basculement/retour arrière.
+* Pour créer des sauvegardes de réplication du système SAP HANA, il est recommandé d'ajouter toutes les ressources du système SAP HANA dans un groupe de ressources. Cela garantit une sauvegarde transparente en mode basculement/retour arrière.
+* Pour les règles SnapLock activées, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables hériteront de l'heure d'expiration du SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
 
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.

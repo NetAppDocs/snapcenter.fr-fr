@@ -14,13 +14,20 @@ summary: Un groupe de ressources est un conteneur dans lequel vous ajoutez des r
 Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée.
 
 .Description de la tâche
-Une base de données contenant des fichiers dans des groupes de disques ASM doit être à l'état "MOUNT" ou "OPEN" pour vérifier ses sauvegardes à l'aide de l'utilitaire Oracle DBVERIFY.
-
+* Une base de données contenant des fichiers dans des groupes de disques ASM doit être à l'état "MOUNT" ou "OPEN" pour vérifier ses sauvegardes à l'aide de l'utilitaire Oracle DBVERIFY.
++
 Associez une ou plusieurs règles au groupe de ressources pour définir le type de tâche de protection des données à exécuter.
 
++
 L'image suivante illustre la relation entre les ressources, les groupes de ressources et les politiques des bases de données :
 
++
 image::../media/sco_resourcegroup_policy.gif[stratégie de groupe de ressources sco]
+
+* Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* L'ajout de nouvelles bases de données sans SM-BC à un groupe de ressources existant qui contient des ressources avec SM-BC n'est pas pris en charge.
+* L'ajout de nouvelles bases de données à un groupe de ressources existant en mode de basculement de SM-BC n'est pas pris en charge. Vous pouvez ajouter des ressources au groupe de ressources uniquement à l'état normal ou de retour arrière.
+
 
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in approprié dans la liste.
@@ -41,6 +48,10 @@ Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de res
 Par exemple, clienttext_Resource group_policy_hostname ou Resource group_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
 
 .. Spécifiez les destinations des fichiers journaux d'archive que vous ne souhaitez pas sauvegarder.
++
+
+NOTE: Si nécessaire, vous devez utiliser la même destination que celle définie dans Oracle, y compris le préfixe.
+
 
 
 . Dans la page Ressources, sélectionnez un nom d'hôte de base de données Oracle dans la liste déroulante *hôte*.

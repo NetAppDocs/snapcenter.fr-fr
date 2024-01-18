@@ -21,7 +21,7 @@ Vous pouvez activer la fonctionnalité MFA pour SnapCenter Server à l'aide des 
 
 .Description de la tâche
 * SnapCenter prend en charge les connexions basées sur SSO lorsque d'autres applications sont configurées dans le même AD FS. Dans certaines configurations AD FS, SnapCenter peut exiger une authentification de l'utilisateur pour des raisons de sécurité, en fonction de la persistance de la session AD FS.
-* Les informations concernant les paramètres qui peuvent être utilisés avec l'applet de commande et leurs descriptions peuvent être obtenues en exécutant `Get-Help command_name`. Vous pouvez également voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+* Les informations concernant les paramètres qui peuvent être utilisés avec l'applet de commande et leurs descriptions peuvent être obtenues en exécutant `Get-Help command_name`. Vous pouvez également voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 
 .Avant de commencer

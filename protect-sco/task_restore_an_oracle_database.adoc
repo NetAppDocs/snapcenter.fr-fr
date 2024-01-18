@@ -19,14 +19,19 @@ Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez at
 
 *À propos de cette tâche*
 
-La récupération est effectuée à l'aide des journaux d'archivage disponibles à l'emplacement configuré du journal d'archivage. Si la base de données est exécutée en mode ARCHIVELOG, la base de données Oracle enregistre les groupes remplis de fichiers journaux de reprise vers une ou plusieurs destinations hors ligne, appelées collectivement le journal de reprise archivé. SnapCenter identifie et monte le nombre optimal de sauvegardes de journaux en fonction du SCN spécifié, de la date et de l'heure sélectionnées ou de tous les journaux. Si les journaux d'archivage requis pour la restauration ne sont pas disponibles à l'emplacement configuré, vous devez monter la copie Snapshot contenant les journaux et spécifier le chemin en tant que journaux d'archivage externes.
-
+* La récupération est effectuée à l'aide des journaux d'archivage disponibles à l'emplacement configuré du journal d'archivage. Si la base de données est exécutée en mode ARCHIVELOG, la base de données Oracle enregistre les groupes remplis de fichiers journaux de reprise vers une ou plusieurs destinations hors ligne, appelées collectivement le journal de reprise archivé. SnapCenter identifie et monte le nombre optimal de sauvegardes de journaux en fonction du SCN spécifié, de la date et de l'heure sélectionnées ou de tous les journaux. Si les journaux d'archivage requis pour la restauration ne sont pas disponibles à l'emplacement configuré, vous devez monter la copie Snapshot contenant les journaux et spécifier le chemin en tant que journaux d'archivage externes.
++
 Si vous migrez la base de données ASM d'ASMLIB vers ASMFD, les sauvegardes créées avec ASMLIB ne peuvent pas être utilisées pour restaurer la base de données. Vous devez créer des sauvegardes dans la configuration ASMFD et utiliser ces sauvegardes pour les restaurer. De même, si la base de données ASM est migrée d'ASMFD vers ASMLIB, vous devez créer des sauvegardes dans la configuration ASMLIB pour restaurer.
 
++
 Lors de la restauration d'une base de données, un fichier de verrouillage opérationnel (.sm_lock_dbsid) est créé sur l'hôte de la base de données Oracle dans le répertoire _/var/opt/snapcenter/sco/lock_ pour éviter l'exécution de plusieurs opérations sur la base de données. Une fois la base de données restaurée, le fichier de verrouillage opérationnel est automatiquement supprimé.
 
++
 
 NOTE: La restauration des fichiers SPFILE et Password n'est pas prise en charge.
+
+* Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
 
 *Étapes*
 

@@ -1,0 +1,31 @@
+---
+permalink: protect-scu/task_determine_whether_unix_file_systems_are_available_for_backup.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for UNIX file systems, discovery,file systems, UNIX, Unix file systems 
+summary: 'Après avoir installé le plug-in pour les systèmes de fichiers Unix, les systèmes de fichiers de l"hôte sont automatiquement découverts et affichés dans la page Ressources.' 
+---
+= Découvrez les systèmes de fichiers UNIX disponibles pour la sauvegarde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après l'installation du plug-in, tous les systèmes de fichiers de cet hôte sont automatiquement détectés et affichés dans la page Ressources. Vous pouvez ajouter ces systèmes de fichiers à des groupes de ressources pour effectuer des opérations de protection des données.
+
+.Avant de commencer
+* Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes et la création de connexions au système de stockage.
+* Si les systèmes de fichiers résident sur un disque VMDK (Virtual machine Disk) ou un RDM (Raw Device Mapping), vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter.
++
+Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["Déployez le plug-in SnapCenter pour VMware vSphere"^].
+
+
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *chemin* dans la liste Affichage.
+. Cliquez sur *Actualiser les ressources*.
++
+Les systèmes de fichiers s'affichent avec des informations telles que le type, le nom d'hôte, les groupes de ressources et les stratégies associés, ainsi que l'état.
+
+

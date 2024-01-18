@@ -26,7 +26,7 @@ Vous devez être membre du groupe administrateurs locaux sur les serveurs SnapCe
 * Add-SmServer
 * Remove-SmServerCluster
 +
-Pour plus d'informations, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Pour plus d'informations, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 
 

@@ -85,10 +85,10 @@ SnapCenter inclut des API REST pour la plupart des fonctionnalités d'intégrati
 Pour plus d'informations sur les API REST, voir https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["Présentation de l'API REST"].
 
 +
-Pour plus d'informations sur les applets de commande Windows, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Pour plus d'informations sur les applets de commande Windows, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 +
-Pour plus d'informations sur les commandes UNIX, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["Guide de référence sur les commandes du logiciel SnapCenter"^].
+Pour plus d'informations sur les commandes UNIX, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["Guide de référence sur les commandes du logiciel SnapCenter"^].
 
 * Tableau de bord et reporting centralisés pour la protection des données
 * Contrôle d'accès basé sur des rôles (RBAC) pour la sécurité et la délégation.
@@ -107,6 +107,33 @@ La haute disponibilité de SnapCenter est configurée à l'aide d'un équilibreu
 * Reprise après incident
 +
 Vous pouvez restaurer le serveur SnapCenter en cas d'incident, comme une corruption des ressources ou une panne du serveur.
+
+* SnapLock
++
+SnapLock est une solution de conformité haute performance qui permet aux entreprises qui utilisent le stockage WORM (Write Once, Read Many) de conserver les fichiers sous leur forme non modifiée à des fins réglementaires et de gouvernance.
+
++
+Pour plus d'informations sur SnapLock, reportez-vous à la section https://docs.netapp.com/us-en/ontap/snaplock/["Qu'est-ce que SnapLock"]
+
+* Continuité de l'activité SnapMirror (SM-BC)
++
+SnapMirror Business Continuity (SM-BC) assure la continuité des services de l'entreprise même en cas de défaillance complète du site, permettant aux applications de basculer en toute transparence à l'aide d'une copie secondaire. Aucune intervention manuelle ni script supplémentaire n'est nécessaire pour déclencher un basculement avec SM-BC.
+
++
+Les plug-ins pris en charge pour cette fonctionnalité sont le plug-in SnapCenter pour SQL Server, le plug-in SnapCenter pour Windows et le plug-in SnapCenter pour Oracle Database.
+
++
+Pour plus d'informations sur SM-BC, reportez-vous à la section https://docs.netapp.com/us-en/ontap/smbc/index.html["Continuité de l'activité SnapMirror (SM-BC)"]
+
++
+Pour SM-BC, assurez-vous que vous avez satisfait aux différentes exigences en matière de matériel, de logiciels et de configuration du système.  Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html["Prérequis"]
+
+* La mise en miroir synchrone
++
+La fonctionnalité de mise en miroir synchrone permet la réplication des données en ligne en temps réel entre les baies de stockage sur une distance distante.
+
++
+Pour plus d'informations sur Sync Mirror, reportez-vous à la section https://docs.netapp.com/us-en/e-series-santricity/sm-mirroring/overview-mirroring-sync.html["Présentation de la mise en miroir synchrone"]
 
 
 
@@ -139,21 +166,13 @@ SnapCenter se compose du serveur SnapCenter et des plug-ins SnapCenter. Vous dev
 +
 ** Plug-in SnapCenter pour bases de données Oracle
 ** Plug-in SnapCenter pour base de données SAP HANA
-** Plug-in SnapCenter pour UNIX
-+
-
-NOTE: Le plug-in SnapCenter pour UNIX n'est pas un plug-in autonome et ne peut pas être installé indépendamment. Ce plug-in est automatiquement installé lorsque vous installez le plug-in SnapCenter pour Oracle Database ou le plug-in SnapCenter pour SAP HANA Database.
-
+** Plug-in SnapCenter pour systèmes de fichiers UNIX
 
 
 * SnapCenter Plug-ins Package pour AIX, qui comprend les plug-ins suivants :
 +
 ** Plug-in SnapCenter pour bases de données Oracle
-** Plug-in SnapCenter pour UNIX
-+
-
-NOTE: Le plug-in SnapCenter pour UNIX n'est pas un plug-in autonome et ne peut pas être installé indépendamment. Ce plug-in est automatiquement installé lorsque vous installez le plug-in SnapCenter pour la base de données Oracle.
-
+** Plug-in SnapCenter pour systèmes de fichiers UNIX
 
 
 * Plug-ins personnalisés SnapCenter
@@ -331,6 +350,7 @@ NOTE: Le plug-in pour Windows provisionne les partages SMB et les systèmes de f
 +
 Les périphériques SAN natifs, les systèmes de fichiers et les dispositions LVM basées sur des périphériques SAN sont pris en charge.
 
+* Automatise les opérations de sauvegarde, de restauration et de clonage respectueuses des applications pour les systèmes de fichiers UNIX de votre environnement SnapCenter
 
 
 

@@ -17,7 +17,7 @@ Le workflow suivant montre la séquence dans laquelle vous devez effectuer les o
 
 image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_workflow]
 
-Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration, de restauration, de vérification et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"]
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration, de restauration, de vérification et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"]
 
 *Plus d'informations*
 

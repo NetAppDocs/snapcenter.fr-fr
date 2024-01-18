@@ -1,0 +1,95 @@
+---
+permalink: protect-scu/concept_overview_snapcenter_plug_in_for_UNIX_file_systems.html 
+sidebar: sidebar 
+keywords: overview, unix file system, plug-in for unix file system, backup, restore, clone 
+summary: Le plug-in pour systèmes de fichiers Unix prend en charge la sauvegarde, la restauration et le clonage des systèmes de fichiers Unix tof. 
+---
+= Ce que vous pouvez faire avec le plug-in SnapCenter pour les systèmes de fichiers Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque le plug-in pour systèmes de fichiers Unix est installé dans votre environnement, vous pouvez utiliser SnapCenter pour sauvegarder, restaurer et cloner des systèmes de fichiers Unix. Vous pouvez également effectuer des tâches prenant en charge ces opérations.
+
+* Découvrir les ressources
+* Sauvegardez les systèmes de fichiers Unix
+* Planifiez les opérations de sauvegarde
+* Restaurer les sauvegardes du système de fichiers
+* Cloner les sauvegardes du système de fichiers
+* Contrôle des opérations de sauvegarde, de restauration et de clonage
+
+
+
+
+== Configurations compatibles
+
+|===
+| Élément | Configuration prise en charge 
+
+
+ a| 
+Des environnements
+ a| 
+* Serveur physique
+* Serveur virtuel
+
+
+
+
+ a| 
+Systèmes d'exploitation
+ a| 
+* Red Hat Enterprise Linux
+* Oracle Linux
+* SUSE Linux Enterprise Server (SLES)
+
+
+
+
+ a| 
+Systèmes de fichiers
+ a| 
+* SAN :
++
+** Systèmes de fichiers basés sur LVM et non LVM
+** LVM sur VMDK ext3, ext4 et xfs
+
+
+* NFS : NFS v3, NFS v4.x
+
+
+
+
+ a| 
+Protocoles
+ a| 
+* FC
+* FCoE
+* ISCSI
+* NFS
+
+
+
+
+ a| 
+Chemins d'accès multiples
+ a| 
+oui
+
+|===
+
+
+== Limites
+
+* La combinaison de RDM et de disques virtuels dans un groupe de volumes n'est pas prise en charge.
+* La restauration au niveau des fichiers n'est pas prise en charge.
++
+Toutefois, vous pouvez effectuer manuellement une restauration au niveau des fichiers en clonant la sauvegarde, puis en copiant les fichiers manuellement.
+
+* La combinaison de systèmes de fichiers répartis sur des VMDK provenant à la fois des datastores NFS et VMFS n'est pas prise en charge.
+* NVMe n'est pas pris en charge.
+* SnapMirror Business Continuity (SM-BC) n'est pas pris en charge.
+* Le provisionnement n'est pas pris en charge.
+

@@ -1,0 +1,10 @@
+---
+section: tech-refresh
+title: Mise à jour technologique
+entries:
+- title: Mise à jour technologique de l'hôte du serveur SnapCenter
+  url: "/tech-refresh/task_tech_refresh_server_host.html"
+- title: Mise à jour technologique des hôtes du plug-in SnapCenter
+  url: "/tech-refresh/task_tech_refresh_plugin_host.html"
+- title: Mise à jour technologique du système de stockage
+  url: "/tech-refresh/task_tech_refresh_storage_system.html"

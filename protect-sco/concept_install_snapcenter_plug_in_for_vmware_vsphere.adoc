@@ -11,7 +11,7 @@ summary: 'Si votre base de données est stockée sur des machines virtuelles (VM
 
 
 [role="lead"]
-Si votre base de données est stockée sur des machines virtuelles (VM) ou si vous souhaitez protéger des machines virtuelles et des datastores, vous devez déployer le plug-in SnapCenter pour l'appliance virtuelle VMware vSphere.
+Si votre base de données ou votre système de fichiers est stocké sur des machines virtuelles (VM) ou si vous souhaitez protéger des VM et des datastores, vous devez déployer l'appliance virtuelle du plug-in SnapCenter pour VMware vSphere.
 
 Pour plus d'informations sur le déploiement, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["Présentation du déploiement"^].
 

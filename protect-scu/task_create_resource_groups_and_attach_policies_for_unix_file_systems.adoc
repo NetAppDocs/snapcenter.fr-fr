@@ -1,0 +1,93 @@
+---
+permalink: protect-scu/task_create_resource_groups_and_attach_policies_for_unix_file_systems.html 
+sidebar: sidebar 
+keywords: unix file systems, resource group, policy 
+summary: Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger. 
+---
+= Créez des groupes de ressources et associez des stratégies pour les systèmes de fichiers Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder toutes les données associées aux systèmes de fichiers.
+
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in approprié dans la liste.
+. Dans la page Ressources, cliquez sur *Nouveau groupe de ressources*.
+. Dans la page Nom, effectuez les opérations suivantes :
++
+.. Entrez un nom pour le groupe de ressources dans le champ Nom.
++
+
+NOTE: Le nom du groupe de ressources ne doit pas dépasser 250 caractères.
+
+.. Saisissez une ou plusieurs étiquettes dans le champ balise pour vous aider à rechercher le groupe de ressources ultérieurement.
++
+Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de ressources, vous pourrez rechercher par la suite tous les groupes de ressources associés à la balise RH.
+
+.. Cochez la case et entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
++
+Par exemple, clienttext_Resource group_policy_hostname ou Resource group_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+
+
+
+. Dans la page Ressources, sélectionnez un nom d'hôte de systèmes de fichiers Unix dans la liste déroulante *hôte*.
++
+
+NOTE: Les ressources sont répertoriées dans la section Ressources disponibles uniquement si la ressource a été découverte avec succès. Si vous avez récemment ajouté des ressources, elles apparaissent dans la liste des ressources disponibles uniquement après avoir actualisé votre liste de ressources.
+
+. Sélectionnez les ressources de la section Ressources disponibles et déplacez-les vers la section Ressources sélectionnées.
+. Dans la page Paramètres de l'application, effectuez les opérations suivantes :
++
+** Sélectionnez la flèche scripts et entrez les commandes pré et post pour les opérations quiesce, Snapshot copy et unquiesce. Vous pouvez également saisir les pré-commandes à exécuter avant de quitter en cas de défaillance.
+** Sélectionnez l'une des options de cohérence des sauvegardes :
++
+*** Sélectionnez *cohérence système de fichiers* si vous voulez vous assurer que les données mises en cache des systèmes de fichiers sont vidées avant de créer la sauvegarde et qu'aucune opération d'entrée ou de sortie n'est autorisée sur le système de fichiers lors de la création de la sauvegarde.
++
+
+NOTE: Pour une cohérence avec le système de fichiers, des snapshots de groupes de cohérence seront créés pour les LUN impliqués dans le groupe de volumes.
+
+*** Sélectionnez *cohérence de panne* si vous souhaitez vous assurer que les données en cache des systèmes de fichiers sont vidées avant de créer la sauvegarde.
++
+
+NOTE: Si vous avez ajouté des systèmes de fichiers différents dans le groupe de ressources, tous les volumes provenant de systèmes de fichiers différents du groupe de ressources seront placés dans un groupe de cohérence.
+
+
+
+
+
+. Dans la page stratégies, effectuez les opérations suivantes :
++
+.. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
++
+
+NOTE: Vous pouvez également créer une stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"].
+
++
+Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
+
+.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"] Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Dans la fenêtre Ajouter des planifications pour la stratégie _policy_name_, configurez le planning, puis cliquez sur *OK*.
++
+Où, _policy_name_ est le nom de la stratégie que vous avez sélectionnée.
+
++
+Les planifications configurées sont répertoriées dans la colonne programmes appliqués.
+
+
+
++
+Les planifications de sauvegardes tierces ne sont pas prises en charge lorsqu'elles se chevauchent avec les planifications de sauvegarde SnapCenter.
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Si vous souhaitez joindre le rapport de l'opération effectuée sur le groupe de ressources, sélectionnez *attacher un rapport de travail*.
+
++
+
+NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface graphique ou de la commande PowerShell set-SmSmtpServer.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

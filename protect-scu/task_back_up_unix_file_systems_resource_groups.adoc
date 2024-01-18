@@ -1,0 +1,34 @@
+---
+permalink: protect-scu/task_back_up_unix_file_systems_resource_groups.html 
+sidebar: sidebar 
+keywords: backup, resource group 
+summary: Une opération de sauvegarde sur le groupe de ressources est effectuée sur toutes les ressources définies dans le groupe de ressources. 
+---
+= Sauvegardez les groupes de ressources des systèmes de fichiers Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder les systèmes de fichiers Unix définis dans le groupe de ressources. Vous pouvez sauvegarder un groupe de ressources à la demande à partir de la page Ressources. Si une stratégie est associée à un groupe de ressources et qu'une planification est configurée, les sauvegardes sont créées en fonction de la planification.
+
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
+. Entrez le nom du groupe de ressources dans la zone de recherche ou cliquez sur image:../media/filter_icon.png["Icône de filtre"], et sélectionnez la balise.
++
+Cliquez sur image:../media/filter_icon.png["Icône de filtre"] pour fermer le volet de filtre.
+
+. Dans la page Groupe de ressources, sélectionnez le groupe de ressources à sauvegarder.
+. Dans la page sauvegarde, effectuez les opérations suivantes :
++
+.. Si plusieurs stratégies sont associées au groupe de ressources, sélectionnez la stratégie de sauvegarde que vous souhaitez utiliser dans la liste déroulante *Stratégie*.
++
+Si la stratégie sélectionnée pour la sauvegarde à la demande est associée à un planning de sauvegarde, les sauvegardes à la demande seront conservées en fonction des paramètres de conservation spécifiés pour le type de programme.
+
+.. Sélectionnez *Backup*.
+
+
+. Surveillez la progression en sélectionnant *Monitor > Jobs*.
+

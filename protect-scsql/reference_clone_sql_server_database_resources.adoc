@@ -19,7 +19,7 @@ Le workflow suivant montre l'ordre dans lequel vous devez effectuer les opérati
 
 image::../media/scsql_clone_workflow.png[Cloner le diagramme de workflow]
 
-Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration, de restauration, de vérification et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"]
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration, de restauration, de vérification et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"]
 
 *Plus d'informations*
 

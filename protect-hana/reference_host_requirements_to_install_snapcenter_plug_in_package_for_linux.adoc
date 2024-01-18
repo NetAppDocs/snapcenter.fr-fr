@@ -48,7 +48,7 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-Java 1.8.x (64 bits)Java Oracle et OpenJDK Flavors
+Java 1.8.x (64 bits) Oracle Java et OpenJDK
 
 Si vous avez mis à niveau JAVA vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version JAVA correcte et le chemin correct.
 

@@ -20,7 +20,9 @@ Vous pouvez utiliser SnapCenter pour restaurer des ressources. Les fonctionnalit
 
 
 .Description de la tâche
-L'opération de restauration par défaut restaure uniquement les objets de stockage. Les opérations de restauration au niveau application ne peuvent être effectuées que si le plug-in personnalisé offre cette fonctionnalité.
+* L'opération de restauration par défaut restaure uniquement les objets de stockage. Les opérations de restauration au niveau application ne peuvent être effectuées que si le plug-in personnalisé offre cette fonctionnalité.
+* Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
 
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.

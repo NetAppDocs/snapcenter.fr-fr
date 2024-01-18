@@ -34,8 +34,4 @@ Les icônes suivantes apparaissent sur la page travaux et indiquent l'état de l
 +
 Le bouton *Afficher les journaux* affiche les journaux détaillés de l'opération sélectionnée.
 
-+
-
-IMPORTANT: Une fois l'opération de restauration basée sur le volume effectuée, les métadonnées de sauvegarde sont supprimées du référentiel SnapCenter, mais les entrées du catalogue de sauvegardes restent dans le catalogue SAP HANA. Bien que l'état de la tâche de restauration s'affiche image:../media/success_icon.gif["Icône terminé"], cliquez sur les détails du travail pour afficher le signe d'avertissement de certaines tâches enfants. Cliquez sur le signe d'avertissement et supprimez les entrées du catalogue de sauvegarde indiquées.
-
 

@@ -19,19 +19,26 @@ Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez at
 
 *À propos de cette tâche*
 
-L'opération de clonage crée une copie des fichiers de données de la base de données et crée de nouveaux fichiers journaux de reprise en ligne et fichiers de contrôle. La base de données peut être éventuellement restaurée à une heure spécifiée, en fonction des options de restauration spécifiées.
-
+* L'opération de clonage crée une copie des fichiers de données de la base de données et crée de nouveaux fichiers journaux de reprise en ligne et fichiers de contrôle. La base de données peut être éventuellement restaurée à une heure spécifiée, en fonction des options de restauration spécifiées.
++
 
 NOTE: Le clonage échoue si vous tentez de cloner une sauvegarde créée sur un hôte Linux vers un hôte AIX ou vice-versa.
 
++
 SnapCenter crée une base de données autonome lorsqu'elle est clonée à partir d'une sauvegarde de base de données Oracle RAC. SnapCenter prend en charge la création de clone à partir de la sauvegarde d'une base de données de secours Data Guard et Active Data Guard.
 
++
 Lors du clonage, SnapCenter monte le nombre optimal de sauvegardes de journaux en fonction de SCN ou dat, et de la durée des opérations de restauration. Après la récupération, la sauvegarde du journal est démonté. Tous ces clones sont montés sous _/var/opt/snapcenter/scu/clones/_. Si vous utilisez ASM sur NFS, vous devez ajouter _/var/opt/snapcenter/scu/clones/*/*_ au chemin existant défini dans le paramètre asm_diskstring.
 
++
 Lors du clonage d'une sauvegarde d'une base de données ASM dans un environnement SAN, les règles udev pour les périphériques hôtes clonés sont créées à l'adresse _/etc/udev/rules.d/999-scu-netapp.rules_. Ces règles udev associées aux périphériques hôtes clonés sont supprimées lorsque vous supprimez le clone.
 
++
 
 NOTE: Dans une configuration Flex ASM, vous ne pouvez pas effectuer d'opération de clonage sur les nœuds Leaf si la cardinalité est inférieure au nombre de nœuds dans le cluster RAC.
+
+* Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
 
 *Étapes*
 

@@ -19,6 +19,9 @@ Vous pouvez restaurer les bases de données SQL Server sauvegardées à partir d
 * La plupart des champs des pages de l'assistant de restauration sont expliqués dans le processus de restauration de base. Les informations suivantes décrivent certains champs pour lesquels vous avez peut-être besoin d'aide.
 
 
+.Description de la tâche
+Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez *SnapCenter Plug-in for SQL Server* dans la liste.
 . Dans la page Ressources, sélectionnez *Database* ou *Resource Group* dans la liste déroulante *View*.

@@ -1,0 +1,112 @@
+---
+permalink: protect-scu/task_create_backup_policies_for_unix_file_systems.html 
+sidebar: sidebar 
+keywords: backup policies, policies, unix file systems, file systems 
+summary: Créez une stratégie de sauvegarde pour les systèmes de fichiers Unix que vous souhaitez sauvegarder. 
+---
+= Créez des règles de sauvegarde pour les systèmes de fichiers Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser SnapCenter pour sauvegarder des systèmes de fichiers Unix, vous devez créer une stratégie de sauvegarde pour la ressource ou le groupe de ressources que vous souhaitez sauvegarder. Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes. Vous pouvez également spécifier les paramètres de réplication, de script et de type de sauvegarde. La création d'une stratégie permet de gagner du temps lorsque vous souhaitez réutiliser la stratégie sur une autre ressource ou un autre groupe de ressources.
+
+.Avant de commencer
+* Vous devez vous préparer à la protection des données en réalisant des tâches telles que l'installation de SnapCenter, l'ajout d'hôtes, la découverte des systèmes de fichiers et la création de connexions au système de stockage.
+* Si vous répliquez des copies Snapshot sur un stockage secondaire miroir ou vault, l'administrateur SnapCenter doit avoir attribué les SVM à vous pour les volumes source et de destination.
+
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *stratégies*.
+. Sélectionnez *Unix File Systems* dans la liste déroulante.
+. Cliquez sur *Nouveau*.
+. Dans la page Nom, entrez le nom et la description de la stratégie.
+. Spécifiez la fréquence d'horaire en sélectionnant *sur demande*, *horaire*, *quotidien*, *hebdomadaire* ou *mensuel*.
+. Dans la page Retention, spécifiez les paramètres de conservation pour le type de sauvegarde et le type de programme sélectionné dans la page Type de sauvegarde :
++
+|===
+
+
+| Les fonctions que vous recherchez... | Alors... 
+
+
+ a| 
+Conserver un certain nombre de copies Snapshot
+ a| 
+Sélectionnez *nombre total de copies Snapshot à conserver*, puis spécifiez le nombre de copies Snapshot que vous souhaitez conserver.
+
+Si le nombre de copies Snapshot dépasse le nombre spécifié, les copies Snapshot sont supprimées par les plus anciennes copies supprimées en premier.
+
+
+NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+
+
+IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+
+
+
+ a| 
+Conservez les copies Snapshot pendant un certain nombre de jours
+ a| 
+Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer.
+
+|===
++
+
+NOTE: Vous ne pouvez conserver les sauvegardes du journal d'archivage que si vous avez sélectionné les fichiers journaux d'archive dans le cadre de votre sauvegarde.
+
+. Dans la page réplication, spécifiez les paramètres de réplication :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Mettez à jour SnapMirror après avoir créé une copie Snapshot locale
+ a| 
+Sélectionnez ce champ pour créer des copies en miroir des jeux de sauvegarde sur un autre volume (réplication SnapMirror).
+
+
+
+ a| 
+Mettez à jour SnapVault après avoir créé une copie Snapshot locale
+ a| 
+Sélectionnez cette option pour effectuer la réplication de sauvegarde disque à disque (sauvegardes SnapVault).
+
+
+
+ a| 
+Deuxième étiquette de police
+ a| 
+Sélectionnez une étiquette Snapshot.
+
+En fonction de l'étiquette de copie Snapshot que vous sélectionnez, ONTAP applique la règle de conservation des copies Snapshot secondaires correspondant à l'étiquette.
+
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+
+
+ a| 
+Nombre de tentatives d'erreur
+ a| 
+Saisissez le nombre maximal de tentatives de réplication pouvant être autorisées avant l'arrêt de l'opération.
+
+|===
++
+
+NOTE: Il est recommandé de configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter la limite maximale des copies Snapshot sur le stockage secondaire.
+
+. Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript que vous souhaitez exécuter avant ou après l'opération de sauvegarde, respectivement.
++
+
+NOTE: Vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir du chemin _/opt/NetApp/snapcenter/scc/etc/allowed_commands.config_.
+
++
+Vous pouvez également spécifier la valeur du délai d'expiration du script. La valeur par défaut est 60 secondes.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

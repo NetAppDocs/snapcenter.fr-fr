@@ -24,6 +24,7 @@ La valeur de la clé peut être affichée à partir de Swagger via l'API : API /
 +
 Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
 
+* Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 .Étapes
@@ -124,7 +125,7 @@ Vous devez également spécifier les adresses e-mail de l'expéditeur et du dest
 Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface graphique ou de la commande PowerShell `Set-SmSmtpServer`.
 
 +
-Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 

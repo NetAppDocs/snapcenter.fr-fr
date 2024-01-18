@@ -15,6 +15,9 @@ La restauration d'une base de données Exchange inclut le lancement d'une sessio
 
 Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
 
+.Description de la tâche
+Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
 .Étapes
 . Démarrez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié en utilisant le `Open-SmConnection` applet de commande.
 +
@@ -72,4 +75,4 @@ Le `-IsRecoverMount:$true` paramètre vous permet de monter la base de données 
 
 
 
-Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

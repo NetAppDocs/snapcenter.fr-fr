@@ -19,7 +19,7 @@ Cette section décrit les deux types de reprise sur incident dans SnapCenter :
 * Les données du serveur SnapCenter sont sauvegardées et peuvent être restaurées sans ajout ou gestion de plug-in au serveur SnapCenter.
 * Le serveur SnapCenter secondaire doit être installé sur le même répertoire d'installation et sur le même port que le serveur SnapCenter principal.
 * Pour l'authentification multifacteur (MFA), pendant la reprise sur incident du serveur SnapCenter, fermez tous les onglets du navigateur et rouvrez un navigateur pour vous reconnecter. Ceci effacera les cookies de session existants ou actifs et mettra à jour les données de configuration correctes.
-* La fonctionnalité de reprise après incident SnapCenter utilise les API REST pour sauvegarder SnapCenter Server. Voir link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["Workflows d'API REST pour la reprise après incident d'un serveur SnapCenter"].
+* La fonctionnalité de reprise après incident SnapCenter utilise les API REST pour sauvegarder SnapCenter Server. Voir link:../tech-refresh/task_tech_refresh_server_host.html["Workflows d'API REST pour la reprise après incident d'un serveur SnapCenter"].
 * Le fichier de configuration associé aux paramètres d'audit n'est pas sauvegardé dans la sauvegarde de reprise sur incident ni sur le serveur DR après l'opération de restauration. Vous devez répéter manuellement les paramètres du journal d'audit.
 
 

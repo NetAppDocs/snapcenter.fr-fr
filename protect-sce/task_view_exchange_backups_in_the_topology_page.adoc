@@ -50,6 +50,15 @@ La section carte récapitulative affiche le nombre total de sauvegardes et le no
 +
 Cliquez sur le bouton *Actualiser* pour lancer une requête sur le stockage afin d'afficher un décompte précis.
 
++
+Si une sauvegarde SnapLock est activée, cliquez sur le bouton *Refresh* pour actualiser l'heure d'expiration SnapLock principale et secondaire récupérée depuis ONTAP. Un planning hebdomadaire actualise également les temps d'expiration SnapLock primaire et secondaire extraits de ONTAP.
+
++
+Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au délai d'expiration SnapLock le plus long défini pour une copie Snapshot d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
+
++
+Après une sauvegarde à la demande, en cliquant sur le bouton *Refresh*, vous actualisez les détails de la sauvegarde ou du clone.
+
 . Dans la vue gérer les copies, cliquez sur *sauvegardes* dans le stockage principal ou secondaire pour afficher les détails d'une sauvegarde.
 +
 Les détails des sauvegardes s'affichent sous forme de tableau.

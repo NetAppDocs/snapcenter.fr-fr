@@ -32,6 +32,7 @@ NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération �
 .Description de la tâche
 * Les copies de sauvegarde basées sur des fichiers ne peuvent pas être restaurées depuis SnapCenter.
 * Après la mise à niveau vers SnapCenter 4.3, les sauvegardes effectuées dans SnapCenter 4.2 peuvent être restaurées, mais ne peuvent pas être restaurées. Vous devez utiliser des scripts de restauration HANA Studio ou HANA externes à SnapCenter pour restaurer les sauvegardes prises dans SnapCenter 4.2.
+* Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 .Étapes
@@ -156,6 +157,10 @@ Les commandes de démontage ne sont pas disponibles pour les ressources détect�
 . Dans la page Post OPS, entrez les commandes de montage et de post-restauration à exécuter après l'exécution d'une tâche de restauration.
 +
 Les commandes de montage ne sont pas disponibles pour les ressources détectées automatiquement.
+
++
+
+NOTE: Pour les commandes pré et post pour les opérations quiesce, Snapshot copy et unquiesce, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir des commandes _/opt/snapcenter/snapcenter/scc/allowed_commands.config_ path pour Linux et _C:\Program Files\NetApp\txt\Snapcenter Plug-in Creator\etc\SnapCenter_list_for Windows.
 
 . Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
 +

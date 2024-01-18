@@ -41,13 +41,29 @@ La valeur de la clé peut être affichée à partir de Swagger via l'API : API /
 +
 Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
 
-
-
++
 |===
 
 
 | *Meilleure pratique:* il est préférable de configurer la stratégie de rétention secondaire en fonction du nombre de sauvegardes complètes et de journaux, globalement, que vous voulez conserver. Lorsque vous configurez des règles de conservation secondaires, gardez à l'esprit que lorsque les bases de données et les journaux se trouvent dans des volumes différents, chaque sauvegarde peut avoir trois copies Snapshot. Lorsque les bases de données et les journaux se trouvent dans le même volume, chaque sauvegarde peut avoir deux copies Snapshot. 
 |===
+* SnapLock
++
+** Si l'option « conserver les copies de sauvegarde pendant un nombre de jours spécifique » est sélectionnée, la période de conservation SnapLock doit être inférieure ou égale aux jours de conservation mentionnés.
++
+Si vous spécifiez une période de verrouillage des copies Snapshot, vous ne pouvez pas supprimer les copies Snapshot avant l'expiration de la période de conservation.  Cela peut entraîner la conservation d'un plus grand nombre de copies Snapshot que le nombre spécifié dans la règle.
+
++
+Pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables hériteront de l'heure d'expiration du SnapLock.  Vous devez nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
++
+
+NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sauvegarde SnapCenter et les paramètres SnapLock secondaires sont gérés par ONTAP.
+
+
+
+
+
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
 . Dans la page Paramètres, cliquez sur *stratégies*.
@@ -190,6 +206,15 @@ Sélectionnez l'option *conserver les sauvegardes du journal pour le dernier* et
 
 Les sauvegardes de journaux ne prennent pas plus de jours, mais sont conservées.
 
+
+
+ a| 
+Période de verrouillage des copies Snapshot
+ a| 
+Sélectionnez *période de verrouillage des copies Snapshot*, puis sélectionnez jours, mois ou années.
+
+La période de conservation SnapLock doit être inférieure à 100 ans.
+
 |===
 +
 Si vous avez sélectionné *Log backup* comme type de sauvegarde, les sauvegardes de journaux sont conservées dans le cadre des paramètres de conservation à la minute pour les sauvegardes complètes.
@@ -213,6 +238,15 @@ Si le nombre de sauvegardes complètes dépasse le nombre spécifié, les sauveg
 Conservation des sauvegardes complètes pendant un nombre spécifique de jours
  a| 
 Sélectionnez l'option *conserver les copies Snapshot pour* et spécifiez le nombre de jours pour conserver les copies Snapshot (sauvegardes complètes).
+
+
+
+ a| 
+Période de verrouillage des copies Snapshot
+ a| 
+Sélectionnez *période de verrouillage des copies Snapshot*, puis sélectionnez jours, mois ou années.
+
+La période de conservation SnapLock doit être inférieure à 100 ans.
 
 |===
 +
@@ -239,6 +273,12 @@ Dans l'exemple, la valeur 10 signifie que vous conservez jusqu'à 10 sauvegardes
 
  a| 
 Mettez à jour SnapMirror après avoir créé une copie Snapshot locale
+
+Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal.
+
+Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
+
+Voir link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["Afficher les sauvegardes Exchange sur la page topologie"].
  a| 
 Sélectionnez cette option pour conserver des copies en miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
 

@@ -94,8 +94,8 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-* Java 1.8.x (64 bits) Oracle Java et OpenJDK Flavors
-* Java 11 (64 bits) Oracle Java et OpenJDK Flavors
+* Java 1.8.x (64 bits) Oracle Java et OpenJDK
+* Java 11 (64 bits) Oracle Java et OpenJDK
 
 
 

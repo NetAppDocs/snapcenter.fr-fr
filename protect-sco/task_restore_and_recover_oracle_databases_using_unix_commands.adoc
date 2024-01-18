@@ -15,9 +15,12 @@ Le flux de travail de restauration et de reprise comprend une planification, des
 
 *À propos de cette tâche*
 
-Vous devez exécuter les commandes suivantes pour établir la connexion avec le serveur SnapCenter, répertorier les sauvegardes et récupérer ses informations, et restaurer la sauvegarde.
+* Vous devez exécuter les commandes suivantes pour établir la connexion avec le serveur SnapCenter, répertorier les sauvegardes et récupérer ses informations, et restaurer la sauvegarde.
++
+Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["Guide de référence sur les commandes du logiciel SnapCenter"^].
 
-Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["Guide de référence sur les commandes du logiciel SnapCenter"^].
+* Pour l'opération de restauration SnapMirror Business Continuity (SM-BC), vous devez sélectionner la sauvegarde à partir de l'emplacement principal.
+
 
 *Étapes*
 

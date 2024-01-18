@@ -33,6 +33,13 @@ NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume 
 
 NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume de type miroir-coffre-fort sont affichés dans la vue topologique, mais le nombre de sauvegardes du miroir dans la vue topologique n'inclut pas la sauvegarde flexible de version.
 
+Si vous avez une relation secondaire comme SnapMirror Business Continuity (SM-BC), les icônes supplémentaires suivantes s'affichent :
+
+* image:../media/topology_replica_site_up.png["site de réplica en haut"] implique que le site de réplica est en service.
+* image:../media/topology_replica_site_down.png["site de réplica en panne"]  implique que le site de réplica est en panne.
+* image:../media/topology_reestablished.png["la relation est rétablie"] implique que la relation miroir ou coffre-fort secondaire n'a pas été rétablie.
+
+
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez la ressource ou le groupe de ressources dans la liste déroulante *Affichage*.
@@ -45,7 +52,21 @@ Si la ressource est protégée, la page topologique de la ressource sélectionn�
 La section carte récapitulative affiche le nombre total de sauvegardes et de clones. Pour la base de données Oracle uniquement, la section carte de résumé affiche également le nombre total de sauvegardes de journaux.
 
 +
-Cliquez sur le bouton Actualiser pour afficher un décompte précis.
+Cliquez sur le bouton *Actualiser* pour lancer une requête sur le stockage afin d'afficher un décompte précis.
+
++
+Si une sauvegarde SnapLock est activée, cliquez sur le bouton *Refresh* pour actualiser l'heure d'expiration SnapLock principale et secondaire récupérée depuis ONTAP. Un planning hebdomadaire actualise également les temps d'expiration SnapLock primaire et secondaire extraits de ONTAP.
+
++
+Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au délai d'expiration SnapLock le plus long défini pour une copie Snapshot d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
+
++
+Pour SnapMirror Business Continuity (SM-BC), cliquez sur le bouton *Refresh* pour actualiser l'inventaire des sauvegardes SnapCenter en interrogeant ONTAP sur les sites principaux et de réplica. Un planning hebdomadaire effectue également cette activité pour toutes les bases de données contenant la relation SM-BC.
+
++
+** Pour les relations SM-BC, Async Mirror, Vault ou MirrorVault vers la nouvelle destination principale doivent être configurées manuellement après le basculement.
+** Après le basculement, une sauvegarde doit être créée afin que SnapCenter puisse prendre connaissance du basculement. Vous ne pouvez cliquer sur *Rafraîchir* qu'après la création d'une sauvegarde.
+
 
 . Dans la vue gérer les copies, cliquez sur *sauvegardes* ou *clones* à partir du stockage primaire ou secondaire pour afficher les détails d'une sauvegarde ou d'un clone.
 +

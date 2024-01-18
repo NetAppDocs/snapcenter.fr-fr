@@ -1,0 +1,30 @@
+---
+permalink: protect-scu/reference_prepare_for_protecting_UNIX file systems.html 
+sidebar: sidebar 
+keywords: unix file systems, preparation for protection, prerequisites 
+summary: 'Avant d"effectuer toute opération de protection des données, telle que des opérations de sauvegarde, de clonage ou de restauration, vous devez configurer votre environnement.' 
+---
+= Préparez-vous à protéger les systèmes de fichiers Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'effectuer toute opération de protection des données, telle que des opérations de sauvegarde, de clonage ou de restauration, vous devez configurer votre environnement. Vous pouvez également configurer le serveur SnapCenter pour qu'il utilise la technologie SnapMirror et SnapVault.
+
+Pour profiter des avantages de SnapVault et de la technologie SnapMirror, vous devez configurer et initialiser une relation de protection des données entre les volumes source et destination sur le périphérique de stockage. Vous pouvez utiliser NetAppSystem Manager ou utiliser la ligne de commandes de la console de stockage pour effectuer ces tâches.
+
+Avant d'utiliser le plug-in pour les systèmes de fichiers Unix, l'administrateur SnapCenter doit installer et configurer le serveur SnapCenter et effectuer les tâches requises.
+
+* Installer et configurer SnapCenter Server. link:../install/task_install_the_snapcenter_server_using_the_install_wizard.html["En savoir plus >>"^]
+* Configurez l'environnement SnapCenter en ajoutant des connexions au système de stockage. link:../install/task_add_storage_systems.html["En savoir plus >>"^]
++
+
+NOTE: SnapCenter ne prend pas en charge plusieurs SVM de même nom sur différents clusters. Chaque SVM enregistré avec SnapCenter via l'enregistrement de SVM ou de cluster doit être unique.
+
+* Ajoutez des hôtes, installez les plug-ins et découvrez les ressources.
+* Si vous utilisez SnapCenter Server pour protéger les systèmes de fichiers Unix qui résident sur des LUN RDM ou VMDK VMware, vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter.
+* Installez Java sur votre hôte Linux.
+* Configurez SnapMirror et SnapVault sur ONTAP si vous souhaitez la réplication de sauvegarde.
+

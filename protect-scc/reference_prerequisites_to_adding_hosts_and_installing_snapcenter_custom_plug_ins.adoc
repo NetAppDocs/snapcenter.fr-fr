@@ -88,7 +88,7 @@ Si vous utilisez Windows Server 2019 ou Windows Server 2016 pour l'hôte SnapCen
 http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=112392;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
+https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
 
 * Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins. Ajoutez les lignes suivantes au fichier /etc/sudoers à l'aide de l'utilitaire visudo Linux.
 +

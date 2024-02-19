@@ -25,7 +25,7 @@ Microsoft Windows
 Seules les versions anglaise, allemande, japonaise et chinoise simplifiée des systèmes d'exploitation sont prises en charge.
 
 Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section
-https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 
 

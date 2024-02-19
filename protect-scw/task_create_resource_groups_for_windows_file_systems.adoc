@@ -14,7 +14,7 @@ summary: Un groupe de ressources est le conteneur auquel vous pouvez ajouter plu
 Un groupe de ressources est le conteneur auquel vous pouvez ajouter plusieurs systèmes de fichiers que vous souhaitez protéger. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de tâche de protection des données que vous souhaitez exécuter, puis spécifier la planification de sauvegarde.
 
 .Description de la tâche
-* Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 * L'ajout de nouveaux systèmes de fichiers sans SM-BC à un groupe de ressources existant qui contient des ressources avec SM-BC n'est pas pris en charge.
 * L'ajout de nouveaux systèmes de fichiers à un groupe de ressources existant en mode de basculement de SM-BC n'est pas pris en charge. Vous pouvez ajouter des ressources au groupe de ressources uniquement à l'état normal ou de retour arrière.
 

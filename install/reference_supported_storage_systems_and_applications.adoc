@@ -23,6 +23,6 @@ Pour plus d'informations sur Amazon FSX pour NetApp ONTAP, consultez https://doc
 
 * SnapCenter prend en charge la protection de différentes applications et bases de données.
 +
-Pour plus d'informations sur les applications et bases de données prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour plus d'informations sur les applications et bases de données prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 

@@ -16,7 +16,7 @@ Vous pouvez restaurer une base de données Exchange Server sauvegardée à parti
 Vous devez avoir répliqué les copies Snapshot à partir d'un stockage primaire vers un stockage secondaire.
 
 .Description de la tâche
-* Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 .Étapes

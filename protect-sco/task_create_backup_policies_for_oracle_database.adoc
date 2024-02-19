@@ -30,7 +30,7 @@ Avant d'utiliser SnapCenter pour sauvegarder les ressources de la base de donné
 Si vous spécifiez une période de verrouillage des copies Snapshot, vous ne pouvez pas supprimer les copies Snapshot avant l'expiration de la période de conservation. Cela peut entraîner la conservation d'un plus grand nombre de copies Snapshot que le nombre spécifié dans la règle.
 
 +
-Pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables hériteront de l'heure d'expiration du SnapLock. Vous devez nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 +
 

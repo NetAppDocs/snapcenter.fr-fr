@@ -44,7 +44,7 @@ La valeur de la clé peut être affichée à partir de Swagger via l'API : API /
 +
 Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
 
-* Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage des copies Snapshot, les clones créés à partir des copies Snapshot inviolables dans le cadre de la restauration hériteront de la date d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 .Étapes

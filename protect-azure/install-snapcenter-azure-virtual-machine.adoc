@@ -1,0 +1,44 @@
+---
+permalink: protect-azure/install-snapcenter-azure-virtual-machine.html 
+sidebar: sidebar 
+keywords: snapcenter server, azure virtual machine, install 
+summary: Téléchargez et installez SnapCenter sur la machine virtuelle Azure. 
+---
+= Installez SnapCenter sur la machine virtuelle Azure
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez télécharger le logiciel SnapCenter depuis le site du support NetApp et l'installer sur la machine virtuelle Azure.
+
+.Avant de commencer
+Assurez-vous que la machine virtuelle Azure Windows est conforme aux conditions requises pour l'installation de SnapCenter Server. Pour plus d'informations, reportez-vous à la section link:../install/reference_domain_and_workgroup_requirements.html["Préparez-vous à installer le serveur SnapCenter"].
+
+.Étapes
+. Téléchargez le package d'installation du serveur SnapCenter à partir de https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["Site de support NetApp"].
+. Lancez l'installation du serveur SnapCenter en double-cliquant sur le fichier .exe téléchargé.
++
+Après le lancement de l'installation, tous les pré-contrôles sont effectués et si les exigences minimales ne sont pas satisfaites, des messages d'erreur ou d'avertissement appropriés s'affichent. Vous pouvez ignorer les messages d'avertissement et poursuivre l'installation ; cependant, les erreurs doivent être résolues.
+
+. Vérifiez les valeurs pré-remplies requises pour l'installation du serveur SnapCenter et modifiez-les si nécessaire.
++
+Vous n'avez pas besoin de spécifier le mot de passe pour la base de données du référentiel MySQL Server. Lors de l'installation du serveur SnapCenter, le mot de passe est généré automatiquement.
+
++
+
+NOTE: Le caractère spécial "%" n'est pas pris en charge dans le chemin personnalisé de la base de données du référentiel. Si vous incluez " %" dans le chemin, l'installation échoue.
+
+. Cliquez sur *installer maintenant*.
++
+Si vous avez spécifié des valeurs non valides, des messages d'erreur appropriés s'affichent. Entrez à nouveau les valeurs, puis lancez l'installation.
+
++
+
+NOTE: Si vous cliquez sur le bouton *Annuler*, l'étape en cours d'exécution est terminée, puis démarrez l'opération de restauration. Le serveur SnapCenter sera complètement supprimé de l'hôte.
+
++
+Toutefois, si vous cliquez sur *Annuler* lorsque vous exécutez des opérations "redémarrage du site du serveur SnapCenter" ou "attente du démarrage du serveur SnapCenter", l'installation se poursuit sans annuler l'opération.
+
+

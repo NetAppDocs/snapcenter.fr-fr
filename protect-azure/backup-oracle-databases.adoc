@@ -1,0 +1,45 @@
+---
+permalink: protect-azure/backup-oracle-databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Database, back up, databases, Azure NetApp Files 
+summary: Sauvegardez la ressource à partir de la page Ressources. 
+---
+= Sauvegarde des bases de données Oracle exécutées sur Azure NetApp Files
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si une ressource ne fait pas encore partie d'un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.
+
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page ressource, sélectionnez *base de données* dans la liste déroulante Affichage.
+. Sur la page ressource, sélectionnez *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de la copie Snapshot.
+. Dans la page stratégies, effectuez les opérations suivantes :
++
+.. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
+.. Sélectionnez *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Dans la boîte de dialogue Ajouter des plannings pour la stratégie _nom_règle_, configurez la planification, puis sélectionnez *OK*.
+
+
+. Dans la page Vérification, effectuez les opérations suivantes :
++
+.. Sélectionnez le serveur de vérification.
+.. Sélectionnez la stratégie pour laquelle vous souhaitez configurer votre planning de vérification, puis cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Sélectionnez *Exécuter la vérification après la sauvegarde* ou *Exécuter la vérification planifiée*.
+.. Cliquez sur OK.
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Sélectionnez *Sauvegarder maintenant*.
+. Dans la page sauvegarde, effectuez les opérations suivantes :
++
+.. Si plusieurs stratégies sont associées à la ressource, dans la liste déroulante *Stratégie*, sélectionnez la stratégie que vous souhaitez utiliser pour la sauvegarde.
+.. Cliquez sur *Backup*.
+
+
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+

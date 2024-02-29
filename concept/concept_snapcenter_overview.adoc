@@ -41,6 +41,7 @@ SnapCenter peut être déployé de plusieurs manières :
 +
 ** Les données qui résident dans les systèmes primaires Cloud Volumes ONTAP (anciennement ONTAP Cloud)
 ** Données qui se trouvent sur Amazon FSX pour ONTAP
+** Les données qui se trouvent sur un système Azure NetApp Files primaire (Oracle, Microsoft SQL et SAP HANA)
 
 
 

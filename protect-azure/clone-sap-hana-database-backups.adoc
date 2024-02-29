@@ -1,0 +1,52 @@
+---
+permalink: protect-azure/clone-sap-hana-database-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database, clone, database, backups 
+summary: Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. 
+---
+= Clonez la sauvegarde de la base de données SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour cloner une sauvegarde.
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
+. Sélectionnez la ressource ou le groupe de ressources.
+. Dans la vue gérer les copies, sélectionnez *backups* dans le système de stockage principal.
+. Sélectionnez la sauvegarde des données dans le tableau, puis cliquez sur image:../media/clone_icon.gif["icône cloner"].
+. Dans la page emplacement, effectuez les opérations suivantes :
++
+.. Sélectionnez l'hôte sur lequel le plug-in SAP HANA est installé pour gérer le système HANA cloné.
++
+Il peut s'agir d'un hôte de plug-in centralisé ou d'un hôte système HANA.
+
+.. Entrez le SID SAP HANA à cloner à partir des sauvegardes existantes.
+.. Entrez les adresses IP ou les noms d'hôte sur lesquels les volumes clonés seront exportés.
+.. Si les volumes ANF de la base de données SAP HANA sont configurés dans un pool de capacité QoS manuelle, spécifiez la QoS pour les volumes clonés.
++
+Si la QoS des volumes clonés n'est pas spécifiée, la QoS du volume source sera utilisée. Si le pool de capacité de QoS automatique est utilisé, la valeur de QoS spécifiée sera ignorée.
+
+
+
+. Dans la page scripts, effectuez les opérations suivantes :
++
+.. Entrez les commandes du pré-clonage ou du post-clonage qui doivent être exécutées avant ou après l'opération de clonage, respectivement.
+.. Entrez la commande mount pour monter un système de fichiers sur un hôte.
++
+Si le système HANA source est détecté automatiquement et que le plug-in hôte cible clone est installé sur l'hôte SAP HANA, SnapCenter démonte automatiquement les volumes de données HANA existants sur l'hôte cible clone et monte les volumes de données HANA nouvellement clonés.
+
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
++
+
+NOTE: La fonctionnalité de répartition des clones est désactivée pour les clones ANF, car le clone ANF est déjà un volume indépendant créé à partir de la copie Snapshot sélectionnée.
+
+

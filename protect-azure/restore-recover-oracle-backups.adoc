@@ -1,0 +1,125 @@
+---
+permalink: protect-azure/restore-recover-oracle-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Database, restore, recover, tablespaces, pluggable databases, point-in-time 
+summary: 'Vous pouvez utiliser SnapCenter pour restaurer et récupérer des données à partir d"une ou plusieurs sauvegardes.' 
+---
+= Restaurez et récupérez les bases de données Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En cas de perte de données, vous pouvez utiliser SnapCenter pour restaurer les données d'une ou plusieurs sauvegardes sur votre système de fichiers actif, puis restaurer la base de données.
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *base de données* ou *Groupe de ressources* dans la liste Affichage.
+. Sélectionnez la base de données ou le groupe de ressources dans la liste.
+. Dans la vue gérer les copies, sélectionnez *backups* dans le système de stockage principal.
+. Sélectionnez la sauvegarde dans le tableau, puis cliquez sur *image:../media/restore_icon.gif["icône restaurer"]*.
+. Dans la page objectif de restauration, effectuez les tâches suivantes :
++
+.. Sélectionnez RAC si vous avez sélectionné une sauvegarde d'une base de données dans un environnement RAC.
+.. Effectuez les opérations suivantes :
++
+... Sélectionnez *tous les fichiers de données* si vous souhaitez restaurer uniquement les fichiers de base de données.
+... Sélectionnez *tablespaces* si vous souhaitez restaurer uniquement les tablespaces.
+... Sélectionnez *Redo log files* si vous souhaitez restaurer les fichiers redo log des bases de données de secours Data Guard ou Active Data Guard.
+... Sélectionnez *bases de données enfichables* et spécifiez les PDB à restaurer.
+... Sélectionnez *Pluggable database (PDB) tablespaces*, puis spécifiez le PDB et les espaces de stockage de ce PDB que vous souhaitez restaurer.
+... Sélectionnez *Restaurer la base de données sur le même hôte que celui sur lequel la sauvegarde a été créée* si vous souhaitez restaurer la base de données sur le même serveur SQL sur lequel les sauvegardes sont effectuées.
+... Sélectionnez *Restaurer la base de données sur un autre hôte* si vous souhaitez que la base de données soit restaurée sur un autre serveur SQL sur le même hôte ou sur un autre hôte sur lequel les sauvegardes sont effectuées.
+... Sélectionnez *changer l'état de la base de données si nécessaire pour restaurer et restaurer* pour changer l'état de la base de données à l'état requis pour effectuer les opérations de restauration et de reprise.
+... Sélectionnez *forcer la restauration sur place* si vous souhaitez effectuer une restauration sur place dans les scénarios où de nouveaux fichiers de données sont ajoutés après la sauvegarde ou lorsque des LUN sont ajoutées, supprimés ou recréées à un groupe de disques LVM.
+
+
+
+
+. Dans la page étendue de la récupération, sélectionnez l'une des options suivantes :
++
+.. Sélectionnez *tous les journaux* si vous souhaitez récupérer la dernière transaction.
+.. Sélectionnez *jusqu'à ce que SCN (Numéro de changement de système)* si vous souhaitez restaurer un SCN spécifique.
+.. Sélectionnez *Date et heure* si vous souhaitez récupérer une date et une heure spécifiques.
+.. Sélectionnez *pas de récupération* si vous ne voulez pas récupérer.
+.. Sélectionnez *spécifier les emplacements des journaux d'archives externes* si vous souhaitez spécifier l'emplacement des fichiers journaux d'archives externes.
+
+
+. Dans la page pré-opérations et post-opérations, spécifiez les détails requis.
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+
+
+
+
+== Restauration et restauration d'espaces de stockage à partir d'une restauration instantanée
+
+Vous pouvez restaurer un sous-ensemble d'espaces de stockage qui ont été corrompus ou supprimés sans affecter les autres espaces de stockage de la base de données. SnapCenter utilise RMAN pour effectuer une restauration instantanée (PITR) des tablespaces.
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *base de données* ou *Groupe de ressources* dans la liste Affichage.
+. Sélectionnez la base de données de type instance unique (multitenant).
+. Dans la vue gérer les copies, sélectionnez *sauvegardes* dans le système de stockage.
++
+Si la sauvegarde n'est pas cataloguée, sélectionnez la sauvegarde et cliquez sur *Catalogue*.
+
+. Sélectionnez la sauvegarde cataloguée, puis cliquez sur *image:../media/restore_icon.gif["icône restaurer"]*.
+. Dans la page objectif de restauration, effectuez les tâches suivantes :
++
+.. Sélectionnez *RAC* si vous avez sélectionné une sauvegarde d'une base de données dans un environnement RAC.
+.. Sélectionnez *tablespaces* si vous souhaitez restaurer uniquement les tablespaces.
+.. Sélectionnez *changer l'état de la base de données si nécessaire pour restaurer et restaurer* pour changer l'état de la base de données à l'état requis pour effectuer les opérations de restauration et de reprise.
+
+
+. Dans la page étendue de la récupération, sélectionnez l'une des options suivantes :
++
+.. Sélectionnez *jusqu'à ce que SCN (Numéro de changement de système)* si vous souhaitez restaurer un SCN spécifique.
+.. Sélectionnez *Date et heure* si vous souhaitez récupérer une date et une heure spécifiques.
+
+
+. Dans la page pré-opérations et post-opérations, spécifiez les détails requis.
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez le processus de restauration à l'aide de la page *Monitor* > *Jobs*.
+
+
+
+
+== Restaurez et récupérez une base de données enfichable à l'aide d'une récupération ponctuelle
+
+Vous pouvez restaurer et récupérer une base de données enfichable (PDB) qui a été corrompue ou supprimée sans affecter les autres PDB dans la base de données du conteneur (CDB). SnapCenter utilise RMAN pour effectuer une récupération ponctuelle (PITI) du PDB.
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *base de données* ou *Groupe de ressources* dans la liste Affichage.
+. Sélectionnez la base de données de type instance unique (multitenant).
+. Dans la vue gérer les copies, sélectionnez *sauvegardes* dans le système de stockage.
++
+Si la sauvegarde n'est pas cataloguée, sélectionnez la sauvegarde et cliquez sur *Catalogue*.
+
+. Sélectionnez la sauvegarde cataloguée, puis cliquez sur *image:../media/restore_icon.gif["icône restaurer"]*.
+. Dans la page objectif de restauration, effectuez les tâches suivantes :
++
+.. Sélectionnez *RAC* si vous avez sélectionné une sauvegarde d'une base de données dans un environnement RAC.
+.. Selon que vous souhaitez restaurer le PDB ou les espaces de stockage dans un PDB, effectuez l'une des opérations suivantes :
++
+*** Sélectionnez *bases de données enfichables (PDB)* si vous souhaitez restaurer un PDB.
+*** Sélectionnez *tablespaces de base de données enfichables (PDB)* si vous souhaitez restaurer des tablespaces dans un PDB.
+
+
+
+
+. Dans la page étendue de la récupération, sélectionnez l'une des options suivantes :
++
+.. Sélectionnez *jusqu'à ce que SCN (Numéro de changement de système)* si vous souhaitez restaurer un SCN spécifique.
+.. Sélectionnez *Date et heure* si vous souhaitez récupérer une date et une heure spécifiques.
+
+
+. Dans la page pré-opérations et post-opérations, spécifiez les détails requis.
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez le processus de restauration à l'aide de la page *Monitor* > *Jobs*.
+

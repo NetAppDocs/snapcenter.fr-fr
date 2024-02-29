@@ -1,0 +1,35 @@
+---
+permalink: protect-azure/create-backup-policies-oracle.html 
+sidebar: sidebar 
+keywords: create policies, Oracle, backup policies 
+summary: Créez une stratégie de sauvegarde pour le groupe de ressources ou de ressources que vous souhaitez sauvegarder. 
+---
+= Créez des règles de sauvegarde pour les bases de données Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser SnapCenter pour sauvegarder les ressources de la base de données Oracle, vous devez créer une stratégie de sauvegarde pour la ressource ou le groupe de ressources à sauvegarder.
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *stratégies*.
+. Sélectionnez Oracle Database dans la liste déroulante.
+. Cliquez sur *Nouveau*.
+. Dans la page Nom, entrez le nom et la description de la stratégie.
+. Dans la page Type de sauvegarde, effectuez les opérations suivantes :
++
+.. Sélectionnez le type de sauvegarde en tant que sauvegarde en ligne ou hors ligne.
+.. Spécifiez la fréquence de planification.
+.. Si vous souhaitez cataloguer la sauvegarde à l'aide d'Oracle Recovery Manager (RMAN), sélectionnez *sauvegarde de catalogue avec Oracle Recovery Manager (RMAN)*.
+.. Si vous souhaitez élaguer les journaux d'archive après la sauvegarde, sélectionnez *Prune archive logs après la sauvegarde*.
+.. Spécifiez les paramètres de suppression du journal d'archivage.
+
+
+. Dans la page rétention, spécifiez les paramètres de rétention.
+. Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript que vous souhaitez exécuter avant ou après l'opération de sauvegarde, respectivement.
+. Dans la page Vérification, sélectionnez le planning de sauvegarde pour lequel vous souhaitez effectuer l'opération de vérification et entrez respectivement le chemin et les arguments du prescripteur ou du postscript que vous souhaitez exécuter avant ou après l'opération de vérification.
+. Vérifiez le résumé et cliquez sur *Terminer*.
+

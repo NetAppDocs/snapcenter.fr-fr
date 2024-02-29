@@ -1,0 +1,41 @@
+---
+permalink: protect-azure/restore-recover-sql-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server Database, restore, recover 
+summary: 'Vous pouvez utiliser SnapCenter pour restaurer et récupérer des données à partir d"une ou plusieurs sauvegardes.' 
+---
+= Restaurer et restaurer des bases de données SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour restaurer des bases de données SQL Server sauvegardées. La restauration de la base de données est un processus en plusieurs phases qui copie toutes les pages de données et de journaux d'une sauvegarde SQL Server spécifiée vers une base de données spécifiée.
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *base de données* ou *Groupe de ressources* dans la liste Affichage.
+. Sélectionnez la base de données ou le groupe de ressources dans la liste.
+. Dans la vue gérer les copies, sélectionnez *backups* à partir du système de stockage.
+. Sélectionnez la sauvegarde dans la table, puis cliquez sur image:../media/restore_icon.gif["icône restaurer"] icône.
+. Dans la page objectif de restauration, sélectionnez l'une des options suivantes :
++
+.. Sélectionnez *Restaurer la base de données sur le même hôte que celui sur lequel la sauvegarde a été créée* si vous souhaitez restaurer la base de données sur le même serveur SQL sur lequel les sauvegardes sont effectuées.
+.. Sélectionnez *Restaurer la base de données sur un autre hôte* si vous souhaitez que la base de données soit restaurée sur un autre serveur SQL sur le même hôte ou sur un autre hôte sur lequel les sauvegardes sont effectuées.
+
+
+. Dans la page étendue de la récupération, sélectionnez l'une des options suivantes :
++
+.. Sélectionnez *aucun* si vous devez restaurer uniquement la sauvegarde complète sans journaux.
+.. Sélectionnez *toutes les sauvegardes de journaux* opération de restauration de sauvegarde à la minute pour restaurer toutes les sauvegardes de journaux disponibles après la sauvegarde complète.
+.. Sélectionnez *par sauvegardes de journaux* pour effectuer une opération de restauration ponctuelle, qui restaure la base de données en fonction des journaux de sauvegarde jusqu'à ce que le journal de sauvegarde avec la date sélectionnée.
+.. Sélectionnez *par date spécifique jusqu'à* pour spécifier la date et l'heure après lesquelles les journaux de transactions ne sont pas appliqués à la base de données restaurée.
+.. Si vous avez sélectionné *toutes les sauvegardes de journaux*, *par sauvegarde de journaux* ou *par date spécifique jusqu'à* et que les journaux se trouvent à un emplacement personnalisé, sélectionnez *utiliser le répertoire de journaux personnalisé*, puis spécifiez l'emplacement du journal.
+
+
+. Dans la page pré-opérations et post-opérations, spécifiez les détails requis.
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez le processus de restauration à l'aide de la page *Monitor* > *Jobs*.
+

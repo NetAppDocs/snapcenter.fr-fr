@@ -1,0 +1,39 @@
+---
+permalink: protect-azure/add-hosts-install-plugin-for-sql.html 
+sidebar: sidebar 
+keywords: add host, install, install plug-in, SQL 
+summary: Ajoutez des hôtes, puis installez les packages de plug-ins. 
+---
+= Ajoutez des hôtes et installez le plug-in SnapCenter pour la base de données SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter prend en charge la protection des données des instances SQL sur des partages SMB sur Azure NetApp Files. Les configurations autonome et de groupe de disponibilité (AG) sont prises en charge.
+
+Vous devez utiliser la page Ajout d'hôte de SnapCenter pour ajouter des hôtes, puis installer le package de plug-ins. Les plug-ins sont automatiquement installés sur les hôtes distants.
+
+.Avant de commencer
+* Vous devez être un utilisateur affecté à un rôle disposant des autorisations d'installation et de désinstallation du plug-in, comme le rôle d'administrateur SnapCenter.
+* Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré ou si l'utilisateur appartient à un utilisateur de groupe de travail local, vous devez désactiver l'UAC sur l'hôte.
+
+
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *hosts*.
+. Vérifiez que l'onglet *Managed Hosts* est sélectionné en haut.
+. Sélectionnez *Ajouter*.
+. Dans la page hôtes, procédez comme suit :
++
+.. Dans le champ Type d'hôte, sélectionnez le type d'hôte.
+.. Dans le champ Nom d'hôte, entrez le nom de domaine complet (FQDN) ou l'adresse IP de l'hôte.
+.. Dans le champ informations d'identification, entrez les informations d'identification que vous avez créées.
+
+
+. Dans la section *Select Plug-ins to Install*, sélectionnez les plug-ins à installer.
+. (Facultatif) cliquez sur *plus d'options* et spécifiez les détails.
+. Sélectionnez *soumettre*.
+. Sélectionnez *Configure log Directory* et dans la page Configure host log Directory, entrez le chemin SMB du répertoire log hôte, puis cliquez sur *Save*.
+. Cliquez sur *Submit* et surveillez la progression de l'installation.
+

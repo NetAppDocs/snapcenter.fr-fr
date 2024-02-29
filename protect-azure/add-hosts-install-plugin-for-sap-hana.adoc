@@ -1,0 +1,41 @@
+---
+permalink: protect-azure/add-hosts-install-plugin-for-sap-hana.html 
+sidebar: sidebar 
+keywords: add host, install, install plug-in, SAP HANA 
+summary: Ajoutez des hôtes, puis installez les packages de plug-ins. 
+---
+= Ajoutez des hôtes et installez le plug-in SnapCenter pour la base de données SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez utiliser la page SnapCenter Ajouter un hôte pour ajouter des hôtes, puis installer les modules de plug-ins. Les plug-ins sont automatiquement installés sur les hôtes distants.
+
+.Avant de commencer
+* Vous devez être un utilisateur affecté à un rôle disposant des autorisations d'installation et de désinstallation du plug-in, comme le rôle d'administrateur SnapCenter.
+* Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré ou si l'utilisateur appartient à un utilisateur de groupe de travail local, vous devez désactiver l'UAC sur l'hôte.
+* Si vous effectuez l'installation sur l'hôte centralisé, assurez-vous que le logiciel client SAP HANA est installé sur cet hôte et ouvrez les ports requis sur l'hôte de base de données SAP HANA pour exécuter les requêtes SQL HDB à distance.
+
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Vérifiez que l'onglet *Managed Hosts* est sélectionné.
+. Cliquez sur *Ajouter*.
+. Dans la page hôtes, effectuez les opérations suivantes :
++
+.. Dans le champ Type d'hôte, sélectionnez le type d'hôte.
+.. Dans le champ Nom d'hôte, entrez le nom de domaine complet (FQDN) ou l'adresse IP de l'hôte.
+.. Dans le champ informations d'identification, entrez les informations d'identification que vous avez créées.
+
+
+. Dans la section Sélectionner les plug-ins à installer, sélectionnez les plug-ins à installer.
+. (Facultatif) cliquez sur *plus d'options* et spécifiez les détails.
+. Cliquez sur *soumettre*.
+. Si le type d'hôte est Linux, vérifiez l'empreinte digitale, puis cliquez sur *confirmer et soumettre*.
++
+Dans une configuration de cluster, vous devez vérifier l'empreinte de chacun des nœuds du cluster.
+
+. Surveillez la progression de l'installation.
+

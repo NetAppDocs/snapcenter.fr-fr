@@ -1,0 +1,30 @@
+---
+permalink: protect-azure/backup-sap-hana-resource-groups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database, back up, resource groups 
+summary: Un groupe de ressources est un ensemble de ressources sur un hôte. Une opération de sauvegarde sur le groupe de ressources est effectuée sur toutes les ressources définies dans le groupe de ressources. 
+---
+= Sauvegardez les groupes de ressources SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un groupe de ressources est un ensemble de ressources sur un hôte. Une opération de sauvegarde sur le groupe de ressources est effectuée sur toutes les ressources définies dans le groupe de ressources.
+
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
+. Dans la page groupes de ressources, sélectionnez le groupe de ressources à sauvegarder, puis sélectionnez *Sauvegarder maintenant*.
+. Dans la page sauvegarde, effectuez les opérations suivantes :
++
+.. Si plusieurs stratégies sont associées au groupe de ressources, dans la liste déroulante *Stratégie*, sélectionnez la stratégie que vous souhaitez utiliser pour la sauvegarde.
++
+Si la stratégie sélectionnée pour la sauvegarde à la demande est associée à un planning de sauvegarde, les sauvegardes à la demande seront conservées en fonction des paramètres de conservation spécifiés pour le type de programme.
+
+.. Sélectionnez *Backup*.
+
+
+. Surveillez la progression de l'opération en sélectionnant *Monitor* > *Jobs*.
+

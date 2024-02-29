@@ -61,6 +61,18 @@ indexpage:
       url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html
     - title: Déployez le plug-in SnapCenter pour VMware vSphere
       url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html
+  - title: Protégez les applications exécutées sur Azure NetApp Files
+    links:
+    - title: Installez SnapCenter sur la machine virtuelle Azure
+      url: "/protect-azure/install-snapcenter-azure-virtual-machine.html"
+    - title: Sauvegardez les bases de données SAP HANA s'exécutant sur Azure NetApp
+        Files
+      url: "/protect-azure/backup-sap-hana-databases.html"
+    - title: Sauvegardez les bases de données SQL Server exécutées sur Azure NetApp
+        Files
+      url: "/protect-azure/backup-sql-server-databases.html"
+    - title: Sauvegarde des bases de données Oracle exécutées sur Azure NetApp Files
+      url: "/protect-azure/backup-oracle-databases.html"
   - title: Communauté sur les blogs
     links:
     - title: Blog NetApp - SnapCenter

@@ -1,0 +1,72 @@
+---
+section: protect-azure
+title: Protégez les applications exécutées sur Azure NetApp Files
+entries:
+- title: Installez SnapCenter et créez des informations d'identification
+  entries:
+  - title: Installez SnapCenter sur la machine virtuelle Azure
+    url: "/protect-azure/install-snapcenter-azure-virtual-machine.html"
+  - title: Créez les informations d'identification Azure dans SnapCenter
+    url: "/protect-azure/create-azure-credential.html"
+  - title: Configuration du compte de stockage Azure
+    url: "/protect-azure/configure-azure-storage-account.html"
+  - title: Créez les informations d'identification pour ajouter l'hôte du plug-in
+    url: "/protect-azure/create-credential-add-plugin-host.html"
+- title: Protection des bases de données SAP HANA
+  entries:
+  - title: Ajoutez des hôtes et installez le plug-in SnapCenter pour la base de données
+      SAP HANA
+    url: "/protect-azure/add-hosts-install-plugin-for-sap-hana.html"
+  - title: Ajoutez la base de données SAP HANA
+    url: "/protect-azure/add-sap-hana-database.html"
+  - title: Créez des règles de sauvegarde pour les bases de données SAP HANA
+    url: "/protect-azure/create-backup-policies-sap-hana.html"
+  - title: Créez des groupes de ressources et associez des politiques de sauvegarde
+      SAP HANA
+    url: "/protect-azure/create-resource-groups-attach-sap-hana-backup-policies.html"
+  - title: Sauvegardez les bases de données SAP HANA s'exécutant sur Azure NetApp
+      Files
+    url: "/protect-azure/backup-sap-hana-databases.html"
+  - title: Sauvegardez les groupes de ressources SAP HANA
+    url: "/protect-azure/backup-sap-hana-resource-groups.html"
+  - title: Restaurez et restaurez les bases de données SAP HANA
+    url: "/protect-azure/restore-recover-sap-hana-backups.html"
+  - title: Clonez la sauvegarde de la base de données SAP HANA
+    url: "/protect-azure/clone-sap-hana-database-backups.html"
+- title: Protection des bases de données Microsoft SQL Server
+  entries:
+  - title: Ajoutez des hôtes et installez le plug-in SnapCenter pour la base de données
+      SQL Server
+    url: "/protect-azure/add-hosts-install-plugin-for-sql.html"
+  - title: Créer des stratégies de sauvegarde pour les bases de données SQL Server
+    url: "/protect-azure/create-backup-policies-sql.html"
+  - title: Créez des groupes de ressources et associez des stratégies de sauvegarde
+      SQL
+    url: "/protect-azure/create-resource-groups-attach-sql-backup-policies.html"
+  - title: Sauvegardez les bases de données SQL Server exécutées sur Azure NetApp
+      Files
+    url: "/protect-azure/backup-sql-server-databases.html"
+  - title: Sauvegardez les groupes de ressources SQL Server
+    url: "/protect-azure/backup-sql-resource-groups.html"
+  - title: Restaurer et restaurer des bases de données SQL Server
+    url: "/protect-azure/restore-recover-sql-backups.html"
+  - title: Cloner la sauvegarde de la base de données SQL Server
+    url: "/protect-azure/clone-sql-database-backups.html"
+- title: Protection des bases de données Oracle
+  entries:
+  - title: Ajoutez des hôtes et installez le plug-in SnapCenter pour la base de données
+      Oracle
+    url: "/protect-azure/add-hosts-install-plugin-for-oracle.html"
+  - title: Créez des règles de sauvegarde pour les bases de données Oracle
+    url: "/protect-azure/create-backup-policies-oracle.html"
+  - title: Créez des groupes de ressources et associez des stratégies de sauvegarde
+      Oracle
+    url: "/protect-azure/create-resource-groups-attach-oracle-backup-policies.html"
+  - title: Sauvegarde des bases de données Oracle exécutées sur Azure NetApp Files
+    url: "/protect-azure/backup-oracle-databases.html"
+  - title: Sauvegarder les groupes de ressources Oracle
+    url: "/protect-azure/backup-oracle-resource-groups.html"
+  - title: Restaurez et récupérez les bases de données Oracle
+    url: "/protect-azure/restore-recover-oracle-backups.html"
+  - title: Cloner la sauvegarde de la base de données Oracle
+    url: "/protect-azure/clone-oracle-database-backups.html"

@@ -1,0 +1,58 @@
+---
+permalink: protect-azure/create-resource-groups-attach-sap-hana-backup-policies.html 
+sidebar: sidebar 
+keywords: resource groups, attach policies, snapcenter, SAP HANA, backup polices, schedule 
+summary: Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. 
+---
+= Créez des groupes de ressources et associez des politiques de sauvegarde SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger.
+
+Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. Un groupe de ressources est requis pour toute tâche de protection des données. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter.
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, cliquez sur *Nouveau groupe de ressources*.
+. Dans la page Nom, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom
+ a| 
+Entrez un nom pour le groupe de ressources.
+
+
+
+ a| 
+Étiquettes
+ a| 
+Entrez un ou plusieurs libellés qui vous aideront à rechercher ultérieurement le groupe de ressources.
+
+
+
+ a| 
+Utilisez le format de nom personnalisé pour la copie Snapshot
+ a| 
+Cochez cette case, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+
+|===
+. Dans la page Ressources, sélectionnez un nom d'hôte dans la liste déroulante *hôte* et le type de ressource dans la liste déroulante *Type de ressource*.
+. Sélectionnez les ressources dans la section *Ressources disponibles*, puis cliquez sur la flèche vers la droite pour les déplacer dans la section *Ressources sélectionnées*.
+. Dans la page stratégies, effectuez les opérations suivantes :
++
+.. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
+.. Dans la colonne configurer les programmes, cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* pour la stratégie que vous souhaitez configurer.
+.. Dans la boîte de dialogue Ajouter des planifications pour la stratégie _policy_name_, configurez le programme, puis cliquez sur *OK*.
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

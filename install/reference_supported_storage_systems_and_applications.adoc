@@ -25,4 +25,8 @@ Pour plus d'informations sur Amazon FSX pour NetApp ONTAP, consultez https://doc
 +
 Pour plus d'informations sur les applications et bases de données prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
+* SnapCenter 4.9 P1 et versions ultérieures prennent en charge la protection des workloads Oracle et Microsoft SQL dans le cloud VMware sur les environnements de data Center Software-defined (SDDC) Amazon Web Services (AWS).
++
+Pour plus d'informations, voir https://community.netapp.com/t5/Tech-ONTAP-Blogs/Protect-Oracle-MS-SQL-workloads-using-NetApp-SnapCenter-in-VMware-Cloud-on-AWS/ba-p/449168["Protégez les workloads Oracle et Microsoft SQL à l'aide de NetApp SnapCenter dans les environnements SDDC VMware Cloud on AWS"].
+
 

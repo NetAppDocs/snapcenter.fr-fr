@@ -16,7 +16,7 @@ Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources
 Vous pouvez protéger les ressources individuellement sans créer de nouveau groupe de ressources. Vous pouvez effectuer des sauvegardes sur la ressource protégée.
 
 .Description de la tâche
-* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 * L'ajout de nouvelles bases de données sans SM-BC à un groupe de ressources existant qui contient des ressources avec SM-BC n'est pas pris en charge.
 * L'ajout de nouvelles bases de données à un groupe de ressources existant en mode de basculement de SM-BC n'est pas pris en charge. Vous pouvez ajouter des ressources au groupe de ressources uniquement à l'état normal ou de retour arrière.
 
@@ -55,7 +55,7 @@ Entrez un ou plusieurs libellés qui vous aideront à rechercher ultérieurement
  a| 
 Utilisez le format de nom personnalisé pour la copie Snapshot
  a| 
-Facultatif : entrez le nom et le format d'une copie Snapshot personnalisée. Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Facultatif : entrez un nom et un format de snapshot personnalisés.     Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 |===
 . Dans la page Ressources, effectuez les opérations suivantes :

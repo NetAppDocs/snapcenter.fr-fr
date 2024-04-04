@@ -15,13 +15,13 @@ Vous pouvez utiliser SnapCenter pour restaurer des ressources. Les fonctionnalit
 
 .Avant de commencer
 * Vous devez avoir sauvegardé la ressource ou les groupes de ressources.
-* L'administrateur SnapCenter doit vous avoir attribué les serveurs virtuels de stockage pour les volumes source et les volumes de destination si vous répliquez les copies Snapshot dans un miroir ou un coffre-fort.
+* Si vous répliquez des snapshots sur un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué les machines virtuelles de stockage (SVM) des volumes source et de destination.
 * Vous devez avoir annulé toute opération de sauvegarde en cours pour la ressource ou le groupe de ressources à restaurer.
 
 
 .Description de la tâche
 * L'opération de restauration par défaut restaure uniquement les objets de stockage. Les opérations de restauration au niveau application ne peuvent être effectuées que si le plug-in personnalisé offre cette fonctionnalité.
-* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 .Étapes
@@ -53,7 +53,7 @@ image::../media/restoring_resource.gif[restauration des ressources]
 +
 .. Si vous avez sélectionné *Complete Resource*, la sauvegarde de la ressource est restaurée.
 +
-Si la ressource contient des volumes ou des qtrees tels que l'empreinte du stockage, des copies Snapshot plus récentes sur ces volumes ou ces qtrees sont supprimées et ne peuvent pas être restaurées. De même, si une autre ressource est hébergée sur les mêmes volumes ou qtrees, cette ressource est également supprimée.
+Si la ressource contient des volumes ou des qtrees comme empreinte du stockage, les snapshots les plus récents sur ces volumes ou qtrees sont supprimés et ne peuvent pas être restaurés. De même, si une autre ressource est hébergée sur les mêmes volumes ou qtrees, cette ressource est également supprimée.
 
 .. Si vous avez sélectionné *File Level*, vous pouvez sélectionner *All*, ou sélectionner des volumes ou des qtrees, puis entrer le chemin d'accès relatif aux volumes ou aux qtrees sélectionnés séparés par des virgules.
 +

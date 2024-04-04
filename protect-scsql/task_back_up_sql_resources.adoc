@@ -33,9 +33,9 @@ Dans la vue topologique, vous ne pouvez pas différencier l'état de sauvegarde,
 
 
 
-. Sur la page Ressources, cochez la case *format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+. Dans la page Ressources, cochez la case *custom name format for Snapshot copy*, puis entrez un format de nom personnalisé à utiliser pour le nom de l'instantané.
 +
-Par exemple, clienttext_policy_hostname ou Resource_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Par exemple, clienttext_policy_hostname ou Resource_hostname. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 . Dans la page stratégies, effectuez les tâches suivantes :
 +

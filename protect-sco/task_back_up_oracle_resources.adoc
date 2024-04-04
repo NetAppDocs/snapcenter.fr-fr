@@ -26,9 +26,9 @@ La page protéger la base de données s'affiche.
 
 . Dans la page Ressources, vous pouvez effectuer les opérations suivantes :
 +
-.. Cochez la case et entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+.. Cochez la case et entrez un format de nom personnalisé à utiliser pour le nom du snapshot.
 +
-Par exemple : `customtext_policy_hostname` ou `resource_hostname`. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Par exemple : `customtext_policy_hostname` ou `resource_hostname`. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 .. Spécifiez les destinations des fichiers journaux d'archive que vous ne souhaitez pas sauvegarder.
 

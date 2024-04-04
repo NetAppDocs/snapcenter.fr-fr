@@ -54,7 +54,7 @@ Si la disposition de la base de données diffère de celle de la sauvegarde ou s
 
 *Étapes*
 
-. Le volume est cloné à partir de la copie Snapshot et la pile du système de fichiers est basée sur l'hôte à l'aide des LUN ou des volumes clonés.
+. Le volume est cloné à partir de la copie Snapshot et la pile du système de fichiers est construite sur l'hôte à l'aide des LUN ou des volumes clonés.
 . Les fichiers sont copiés depuis les systèmes de fichiers clonés vers les systèmes de fichiers d'origine.
 . Les systèmes de fichiers clonés sont ensuite démontés de l'hôte et les volumes clonés sont supprimés de ONTAP.
 

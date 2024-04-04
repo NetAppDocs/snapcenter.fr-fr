@@ -87,7 +87,7 @@ Mise au repos
  a| 
 Oui.
  a| 
-Doit effectuer une mise en veille sur l'application. Dans la plupart des cas, cela signifie que l'application est mise à l'état où le serveur SnapCenter peut créer une sauvegarde (par exemple, une copie Snapshot).
+Doit effectuer une mise en veille sur l'application. Dans la plupart des cas, cela signifie de placer l'application dans un état où le serveur SnapCenter peut créer une sauvegarde (par exemple, un instantané).
  a| 
 Avant que le serveur SnapCenter crée une copie Snapshot ou effectue une sauvegarde en général.
 
@@ -100,7 +100,8 @@ Oui.
  a| 
 Doit effectuer une mise en veille sur l'application. Dans la plupart des cas, cela signifie que l'application revient à un état de fonctionnement normal.
  a| 
-Une fois le serveur SnapCenter créé une copie Snapshot ou a effectué une sauvegarde en général.
+Une fois que le serveur SnapCenter a créé un instantané ou a créé
+a effectué une sauvegarde en général.
 
 
 

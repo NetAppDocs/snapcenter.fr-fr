@@ -164,7 +164,7 @@ Mise au repos
  a| 
 obligatoire
  a| 
-Ce stub est chargé d'effectuer une mise au repos, ce qui signifie que l'application est mise à l'état dans lequel vous pouvez créer une copie Snapshot. Il s'agit de l'opération avant l'opération de copie Snapshot. Les métadonnées de l'application à conserver doivent être définies dans le cadre de la réponse, qui doivent être renvoyées au cours des opérations de clonage suivantes ou de restauration sur la copie Snapshot de stockage correspondante sous la forme de paramètres de configuration.
+Ce stub est chargé d'effectuer une mise en veille, ce qui signifie placer l'application dans un état où vous pouvez créer un Snapshot. Cette opération est appelée avant l'opération Snapshot. Les métadonnées de l'application à conserver doivent être définies dans le cadre de la réponse, qui sera renvoyée lors des opérations de clonage ou de restauration suivantes sur la Snapshot de stockage correspondante sous la forme de paramètres de configuration.
 
 
 
@@ -173,7 +173,7 @@ Mise au repos
  a| 
 obligatoire
  a| 
-Ce segment d'accroche est responsable de l'exécution d'une mise en veille, ce qui signifie que l'application est dans un état normal. Ce processus est appelé après la création d'une copie Snapshot.
+Ce segment d'accroche est responsable de l'exécution d'une mise en veille, ce qui signifie que l'application est dans un état normal. Cette opération est appelée après la création d'un instantané.
 
 
 

@@ -20,9 +20,9 @@ Un SLA définit le niveau de service attendu et traite de nombreux problèmes li
 . Déterminez à quel moment il est nécessaire de sauvegarder vos ressources.
 . Déterminer le nombre de tâches de sauvegarde dont vous avez besoin
 . Choisissez le nom de vos sauvegardes.
-. Décider de créer ou non une règle Snapshot pour sauvegarder des copies Snapshot cohérentes au niveau des applications de la base de données
+. Décidez si vous souhaitez créer une règle basée sur les copies Snapshot pour sauvegarder des copies Snapshot cohérentes au niveau des applications de la base de données.
 . Décidez si vous voulez vérifier l'intégrité de la base de données.
 . Choisissez si vous souhaitez utiliser la technologie NetApp SnapMirror pour la réplication ou la technologie NetApp SnapVault pour la conservation à long terme.
-. Déterminez la période de conservation des copies Snapshot sur le système de stockage source et la destination SnapMirror.
+. Déterminez la période de conservation des snapshots sur le système de stockage source et la destination SnapMirror.
 . Déterminez si vous souhaitez exécuter des commandes avant ou après l'opération de sauvegarde et fournissez un prescripteur ou un PostScript.
 

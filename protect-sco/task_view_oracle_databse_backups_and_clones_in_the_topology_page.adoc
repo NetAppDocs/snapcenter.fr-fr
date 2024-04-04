@@ -56,7 +56,7 @@ Cliquez sur le bouton *Actualiser* pour lancer une requête sur le stockage afin
 Si une sauvegarde SnapLock est activée, cliquez sur le bouton *Refresh* pour actualiser l'heure d'expiration SnapLock principale et secondaire récupérée depuis ONTAP. Un planning hebdomadaire actualise également les temps d'expiration SnapLock primaire et secondaire extraits de ONTAP.
 
 +
-Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au délai d'expiration SnapLock le plus long défini pour une copie Snapshot d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
+Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au temps d'expiration SnapLock le plus long défini pour un instantané d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
 
 +
 Pour SnapMirror Business Continuity (SM-BC), cliquez sur le bouton *Refresh* pour actualiser l'inventaire des sauvegardes SnapCenter en interrogeant ONTAP sur les sites principaux et de réplica. Un planning hebdomadaire effectue également cette activité pour toutes les bases de données contenant la relation SM-BC.

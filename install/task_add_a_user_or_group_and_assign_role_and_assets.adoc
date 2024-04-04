@@ -82,7 +82,7 @@ hôte
 +
 Vous devez réassigner l'utilisateur ou le groupe RBAC au cluster ou au DAG pour inclure le nouveau nœud à l'utilisateur ou au groupe RBAC. Par exemple, vous avez un cluster à deux nœuds et avez affecté un utilisateur ou un groupe RBAC au cluster. Lorsque vous ajoutez un autre nœud au cluster, vous devez réattribuer l'utilisateur ou le groupe RBAC au cluster afin d'inclure le nouveau nœud pour l'utilisateur ou le groupe RBAC.
 
-* Si vous prévoyez de répliquer des copies Snapshot, vous devez attribuer la connexion de stockage aux volumes source et de destination à l'utilisateur effectuant l'opération.
+* Si vous prévoyez de répliquer des snapshots, vous devez attribuer la connexion de stockage pour le volume source et le volume de destination à l'utilisateur qui effectue l'opération.
 +
 Vous devez ajouter des ressources avant d'attribuer l'accès aux utilisateurs.
 

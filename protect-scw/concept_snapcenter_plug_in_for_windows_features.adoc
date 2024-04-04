@@ -2,7 +2,7 @@
 permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: 'Le plug-in pour Windows s"intègre à la technologie de copie NetApp Snapshot du système de stockage. Pour utiliser le plug-in pour Windows, utilisez l"interface SnapCenter.' 
+summary: 'Le plug-in pour Windows s"intègre à la technologie NetApp Snapshot sur le système de stockage. Pour utiliser le plug-in pour Windows, utilisez l"interface SnapCenter.' 
 ---
 = Le plug-in SnapCenter pour Windows
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Le plug-in pour Windows s"intègre à la technologie de copie NetApp S
 
 
 [role="lead"]
-Le plug-in pour Windows s'intègre à la technologie de copie NetApp Snapshot du système de stockage. Pour utiliser le plug-in pour Windows, utilisez l'interface SnapCenter.
+Le plug-in pour Windows s'intègre à la technologie NetApp Snapshot sur le système de stockage. Pour utiliser le plug-in pour Windows, utilisez l'interface SnapCenter.
 
 Le plug-in pour Windows inclut les principales fonctionnalités suivantes :
 
@@ -23,9 +23,9 @@ L'interface SnapCenter vous permet de standardiser et d'assurer une cohérence e
 +
 Vous pouvez planifier des sauvegardes de routine des systèmes de fichiers, configurer la conservation des sauvegardes basée sur des règles et configurer des opérations de restauration. Vous pouvez également surveiller de manière proactive votre environnement de système de fichiers en configurant SnapCenter pour envoyer des alertes par e-mail.
 
-* *Technologie de copie Snapshot NetApp non disruptive*
+* *Technologie snapshot NetApp non disruptive*
 +
-Le plug-in pour Windows utilise la technologie de copie Snapshot de NetApp. Vous pouvez ainsi sauvegarder vos systèmes de fichiers en quelques secondes et les restaurer rapidement sans mettre l'hôte hors ligne. Les copies Snapshot requièrent un espace de stockage minimal.
+Le plug-in pour Windows utilise la technologie Snapshot de NetApp. Vous pouvez ainsi sauvegarder vos systèmes de fichiers en quelques secondes et les restaurer rapidement sans mettre l'hôte hors ligne. Les copies Snapshot consomment un espace de stockage minimal.
 
 
 

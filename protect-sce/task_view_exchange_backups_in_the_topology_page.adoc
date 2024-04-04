@@ -54,7 +54,7 @@ Cliquez sur le bouton *Actualiser* pour lancer une requête sur le stockage afin
 Si une sauvegarde SnapLock est activée, cliquez sur le bouton *Refresh* pour actualiser l'heure d'expiration SnapLock principale et secondaire récupérée depuis ONTAP. Un planning hebdomadaire actualise également les temps d'expiration SnapLock primaire et secondaire extraits de ONTAP.
 
 +
-Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au délai d'expiration SnapLock le plus long défini pour une copie Snapshot d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
+Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au temps d'expiration SnapLock le plus long défini pour un instantané d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
 
 +
 Après une sauvegarde à la demande, en cliquant sur le bouton *Refresh*, vous actualisez les détails de la sauvegarde ou du clone.
@@ -66,6 +66,6 @@ Les détails des sauvegardes s'affichent sous forme de tableau.
 . Sélectionnez la sauvegarde dans le tableau, puis cliquez sur les icônes de protection des données pour effectuer des opérations de restauration, de renommage et de suppression.
 +
 
-NOTE: Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent sur le stockage secondaire. La suppression des copies Snapshot est gérée par les paramètres de conservation ONTAP.
+NOTE: Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent sur le stockage secondaire. La suppression des snapshots est gérée par les paramètres de conservation ONTAP.
 
 

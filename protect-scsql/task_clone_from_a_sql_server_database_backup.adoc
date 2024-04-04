@@ -41,7 +41,7 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 
 NOTE: Pour les environnements virtuels (VMDK/RDM), assurez-vous que le point de montage est un disque dédié.
 
-* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 .Étapes

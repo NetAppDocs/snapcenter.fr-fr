@@ -27,9 +27,9 @@ NOTE: Le nom du groupe de ressources ne doit pas dépasser 250 caractères.
 +
 Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de ressources, vous pourrez rechercher par la suite tous les groupes de ressources associés à la balise RH.
 
-.. Cochez la case et entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+.. Cochez la case et entrez un format de nom personnalisé à utiliser pour le nom du snapshot.
 +
-Par exemple, clienttext_Resource group_policy_hostname ou Resource group_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Par exemple, clienttext_Resource group_policy_hostname ou Resource group_hostname. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 
 
@@ -41,7 +41,7 @@ NOTE: Les ressources sont répertoriées dans la section Ressources disponibles 
 . Sélectionnez les ressources de la section Ressources disponibles et déplacez-les vers la section Ressources sélectionnées.
 . Dans la page Paramètres de l'application, effectuez les opérations suivantes :
 +
-** Sélectionnez la flèche scripts et entrez les commandes pré et post pour les opérations quiesce, Snapshot copy et unquiesce. Vous pouvez également saisir les pré-commandes à exécuter avant de quitter en cas de défaillance.
+** Sélectionnez la flèche scripts et entrez les commandes pré et post pour les opérations quiesce, Snapshot et unquiesce. Vous pouvez également saisir les pré-commandes à exécuter avant de quitter en cas de défaillance.
 ** Sélectionnez l'une des options de cohérence des sauvegardes :
 +
 *** Sélectionnez *cohérence système de fichiers* si vous voulez vous assurer que les données mises en cache des systèmes de fichiers sont vidées avant de créer la sauvegarde et qu'aucune opération d'entrée ou de sortie n'est autorisée sur le système de fichiers lors de la création de la sauvegarde.

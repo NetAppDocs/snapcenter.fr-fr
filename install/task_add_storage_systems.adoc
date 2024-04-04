@@ -33,7 +33,7 @@ SnapCenter ne prend pas en charge plusieurs systèmes de stockage portant le mê
 +
 Si vous activez ces fonctionnalités, SnapCenter envoie des informations AutoSupport au système de stockage et des messages EMS au système de stockage lorsqu'une ressource est protégée, qu'une opération de restauration ou de clonage se termine correctement ou qu'une opération échoue.
 
-* Si vous prévoyez de répliquer des copies Snapshot sur une destination SnapMirror ou SnapVault, vous devez configurer des connexions du système de stockage pour le SVM ou le Cluster de destination, ainsi que le SVM ou le Cluster source.
+* Si vous prévoyez de répliquer des snapshots sur une destination SnapMirror ou SnapVault, vous devez configurer les connexions du système de stockage pour le SVM ou le cluster de destination ainsi que le SVM ou le cluster source.
 
 
 

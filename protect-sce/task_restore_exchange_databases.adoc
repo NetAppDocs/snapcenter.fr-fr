@@ -16,7 +16,7 @@ Vous pouvez utiliser SnapCenter pour restaurer des bases de données Exchange sa
 .Avant de commencer
 * Vous devez avoir sauvegardé les groupes de ressources, la base de données ou les groupes de disponibilité de base de données (DAG).
 * Lorsque la base de données Exchange est migrée vers un autre emplacement, l'opération de restauration ne fonctionne pas pour les anciennes sauvegardes.
-* Si vous répliquez des copies Snapshot dans un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué les SVM à la fois pour les volumes source et de destination.
+* Si vous répliquez des snapshots sur un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué les SVM pour les volumes source et de destination.
 * Dans un DAG, si une copie active de la base de données se trouve sur un stockage non NetApp et que vous souhaitez restaurer à partir de la sauvegarde passive de copie de base de données sur un stockage NetApp, faire la copie passive (stockage NetApp) comme copie active, actualiser les ressources et exécuter l'opération de restauration.
 +
 Exécutez le `Move-ActiveMailboxDatabase` commande pour faire de la copie passive de la base de données une copie active de la base de données.
@@ -44,7 +44,7 @@ La valeur de la clé peut être affichée à partir de Swagger via l'API : API /
 +
 Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
 
-* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 .Étapes

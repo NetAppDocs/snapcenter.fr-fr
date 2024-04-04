@@ -47,9 +47,9 @@ Les facteurs déterminant le nombre de sauvegardes nécessaires incluent la tail
 
 == convention de dénomination des sauvegardes pour les systèmes de fichiers Windows
 
-Les sauvegardes du système de fichiers Windows utilisent la convention d'appellation des copies Snapshot par défaut. la convention de nommage des sauvegardes par défaut ajoute un horodatage aux noms de copie Snapshot qui vous aide à identifier le moment de la création des copies.
+Les sauvegardes du système de fichiers Windows utilisent la nomenclature établie par défaut des snapshots. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots pour vous aider à identifier la date de création des copies.
 
-La copie snapshot utilise la convention de dénomination par défaut suivante : resourgroupe_nom_nom_hôte_horodatage
+Le snapshot utilise la convention de nommage par défaut suivante : resourcegroupname_hostname_timestamp
 
 Vous devez nommer vos groupes de ressources de sauvegarde de manière logique, comme dans l'exemple suivant :
 

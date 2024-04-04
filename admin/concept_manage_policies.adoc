@@ -17,7 +17,7 @@ Vous pouvez détacher des stratégies d'une ressource ou d'un groupe de ressourc
 
 == Modifier des règles
 
-Vous pouvez modifier les options de réplication, les paramètres de conservation des copies Snapshot, le nombre de tentatives d'erreur ou les informations relatives aux scripts lorsqu'une stratégie est associée à une ressource ou à un groupe de ressources. Vous ne pouvez modifier le type de planification (fréquence) qu'après avoir désolidariser une stratégie.
+Vous pouvez modifier les options de réplication, les paramètres de rétention des snapshots, le nombre de tentatives d'erreur ou les informations relatives aux scripts lorsqu'une règle est attachée à un groupe de ressources ou de ressources. Vous ne pouvez modifier le type de planification (fréquence) qu'après avoir désolidariser une stratégie.
 
 *À propos de cette tâche*
 

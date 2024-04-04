@@ -17,13 +17,13 @@ Si une ressource ne fait pas encore partie d'un groupe de ressources, vous pouve
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page ressource, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
 . Sélectionnez la ressource à sauvegarder.
-. Sur la page ressource, sélectionnez *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de la copie Snapshot.
+. Dans la page ressource, sélectionnez *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de l'instantané.
 . Dans la page Paramètres de l'application, procédez comme suit :
 +
 .. Sélectionnez la flèche *backups* pour définir des options de sauvegarde supplémentaires.
-.. Sélectionnez la flèche *scripts* pour exécuter les commandes pré et post pour les opérations quiesce, Snapshot copy et unquiesce.
+.. Sélectionnez la flèche *scripts* pour exécuter des commandes pré et post pour les opérations quiesce, Snapshot et unquiesce.
 .. Sélectionnez la flèche *configurations personnalisées*, puis entrez les paires de valeurs personnalisées requises pour tous les travaux utilisant cette ressource.
-.. Sélectionnez *outil de copie Snapshot > SnapCenter sans cohérence du système de fichiers* pour créer des copies Snapshot.
+.. Sélectionnez l'outil *Snapshot Copy Tool > SnapCenter without File System Consistency* pour créer des snapshots.
 +
 L'option *File System Consistency* ne s'applique qu'aux applications exécutées sur des hôtes Windows.
 

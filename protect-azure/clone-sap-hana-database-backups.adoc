@@ -47,6 +47,6 @@ Si le système HANA source est détecté automatiquement et que le plug-in hôte
 . Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
 +
 
-NOTE: La fonctionnalité de répartition des clones est désactivée pour les clones ANF, car le clone ANF est déjà un volume indépendant créé à partir de la copie Snapshot sélectionnée.
+NOTE: La répartition des clones est désactivée pour les clones ANF, car le clone ANF est déjà un volume indépendant créé à partir du Snapshot sélectionné.
 
 

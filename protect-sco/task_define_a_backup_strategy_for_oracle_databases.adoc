@@ -257,9 +257,9 @@ Les planifications de sauvegarde (exactement quand les sauvegardes doivent être
 
 == Nomenclature établie des sauvegardes
 
-Vous pouvez utiliser la convention d'appellation de copie Snapshot par défaut ou la convention de nom personnalisée. la convention de nommage des sauvegardes par défaut ajoute un horodatage aux noms de copie Snapshot qui vous aide à identifier le moment de la création des copies.
+Vous pouvez utiliser la nomenclature établie par défaut des snapshots ou une nomenclature établie personnalisée. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots pour vous aider à identifier la date de création des copies.
 
-La copie Snapshot utilise la convention de nom par défaut suivante :
+Le Snapshot utilise la nomenclature établie par défaut suivante :
 
 `resourcegroupname_hostname_timestamp`
 
@@ -276,7 +276,7 @@ Dans cet exemple, les éléments de syntaxe ont la signification suivante :
 * _03-12-2015_23.17.26_ est la date et l'horodatage.
 
 
-Vous pouvez également spécifier le format du nom de la copie Snapshot tout en protégeant les ressources ou les groupes de ressources en sélectionnant *utiliser le format de nom personnalisé pour la copie Snapshot*. Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, le suffixe numérique est ajouté au nom de la copie Snapshot.
+Vous pouvez également spécifier le format du nom de l'instantané tout en protégeant les ressources ou les groupes de ressources en sélectionnant *utiliser le format de nom personnalisé pour la copie Snapshot*. Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, le suffixe de l'horodatage est ajouté au nom du Snapshot.
 
 
 
@@ -299,6 +299,6 @@ NOTE: Pour la conservation à long terme des copies de sauvegarde, nous vous rec
 
 Vous pouvez vérifier les copies de sauvegarde sur le volume de stockage primaire ou sur le volume de stockage secondaire SnapMirror ou SnapVault. La vérification à l'aide d'un volume de stockage secondaire réduit la charge sur le volume de stockage primaire.
 
-Lorsque vous vérifiez une sauvegarde sur le volume de stockage primaire ou secondaire, toutes les copies Snapshot primaires et secondaires sont marquées comme vérifiées.
+Lorsque vous vérifiez une sauvegarde se trouvant sur le volume de stockage primaire ou secondaire, tous les snapshots primaire et secondaire sont marqués comme étant vérifiés.
 
 Une licence SnapRestore est requise pour vérifier les copies de sauvegarde sur les volumes de stockage secondaire SnapMirror et SnapVault.

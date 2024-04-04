@@ -60,7 +60,7 @@ https://automationstore.netapp.com/home.shtml["Stockage NetApp Storage Automatio
 
 * Sauvegardes basées sur des règles
 +
-Les sauvegardes basées sur des règles tirent parti de la technologie de copie NetApp Snapshot pour créer des sauvegardes sur disque rapides, compactes et cohérentes avec les applications. Vous pouvez également automatiser la protection de ces sauvegardes sur un stockage secondaire par une mise à jour des relations de protection existantes.
+Les sauvegardes basées sur des règles utilisent la technologie Snapshot de NetApp pour créer des sauvegardes sur disque rapides, compactes et cohérentes au niveau des applications. Vous pouvez également automatiser la protection de ces sauvegardes sur un stockage secondaire par une mise à jour des relations de protection existantes.
 
 * Sauvegardez des sauvegardes multiples pour plusieurs ressources
 +
@@ -316,7 +316,7 @@ Pour les utilisateurs de SnapCenter 4.1.1, la documentation du plug-in SnapCente
 
 * Protège les données respectueuses des applications pour les autres plug-ins exécutés dans les hôtes Windows de votre environnement SnapCenter
 * Automatise les opérations de sauvegarde, de restauration et de clonage respectueuses des applications pour les systèmes de fichiers Microsoft dans votre environnement SnapCenter
-* Prend en charge le provisionnement du stockage, la cohérence des copies Snapshot et la récupération d'espace pour les hôtes Windows
+* Prend en charge le provisionnement du stockage, la cohérence Snapshot et la récupération d'espace pour les hôtes Windows
 +
 
 NOTE: Le plug-in pour Windows provisionne les partages SMB et les systèmes de fichiers Windows sur les LUN physiques et RDM, mais ne prend pas en charge les opérations de sauvegarde pour les systèmes de fichiers Windows sur les partages SMB.

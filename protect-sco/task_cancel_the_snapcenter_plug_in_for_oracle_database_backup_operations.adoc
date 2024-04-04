@@ -17,7 +17,7 @@ Vous devez être connecté en tant qu'administrateur SnapCenter ou propriétaire
 
 *À propos de cette tâche*
 
-Lorsque vous annulez une opération de sauvegarde, le serveur SnapCenter arrête l'opération et supprime toutes les copies Snapshot du stockage si la sauvegarde créée n'est pas enregistrée auprès du serveur SnapCenter. Si la sauvegarde est déjà enregistrée avec SnapCenter Server, elle ne pourra pas restaurer la copie Snapshot déjà créée, même après le déclenchement de l'annulation.
+Lorsque vous annulez une opération de sauvegarde, le serveur SnapCenter arrête l'opération et supprime tous les snapshots du stockage si la sauvegarde créée n'est pas enregistrée auprès du serveur SnapCenter. Si la sauvegarde est déjà enregistrée avec le serveur SnapCenter, elle ne peut pas revenir à l'instantané déjà créé même après le déclenchement de l'annulation.
 
 * Vous pouvez annuler uniquement le journal ou l'opération de sauvegarde complète en attente ou en cours d'exécution.
 * Vous ne pouvez pas annuler l'opération après le début de la vérification.

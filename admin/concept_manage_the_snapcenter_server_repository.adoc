@@ -96,7 +96,7 @@ L'applet de commande suivante restaure le référentiel de base de données Snap
 C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445
 ----
 +
-L'applet de commande ci-dessous restaure la base de données SnapCenter MySQL lorsque les fichiers de sauvegarde sont supprimés accidentellement dans la LUN iSCSI. Pour un VMDK, restaurez manuellement la sauvegarde à partir de copies Snapshot ONTAP.
+L'applet de commande ci-dessous restaure la base de données SnapCenter MySQL lorsque les fichiers de sauvegarde sont supprimés accidentellement dans la LUN iSCSI. Pour VMDK, restaurez manuellement la sauvegarde à partir de snapshots ONTAP.
 
 +
 [listing]

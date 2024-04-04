@@ -29,9 +29,9 @@ IMPORTANT: Si vous travaillez dans un contexte de système de fichiers Windows, 
 +
 Spécifiez les paramètres de protection, comme décrit dans les tâches création de groupes de ressources.
 
-. Facultatif : sur la page ressource de l'assistant, entrez un format de nom personnalisé pour la copie Snapshot.
+. Facultatif : dans la page ressource de l'assistant, entrez un format de nom personnalisé pour l'instantané.
 +
-Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 . Dans la page stratégies, effectuez les tâches suivantes :
 +

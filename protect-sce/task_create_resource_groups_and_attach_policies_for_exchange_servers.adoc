@@ -24,7 +24,7 @@ La valeur de la clé peut être affichée à partir de Swagger via l'API : API /
 +
 Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
 
-* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 .Étapes
@@ -63,9 +63,9 @@ Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de res
  a| 
 Utilisez le format de nom personnalisé pour la copie Snapshot
  a| 
-Facultatif : entrez le nom et le format d'une copie Snapshot personnalisée.
+Facultatif : entrez un nom et un format de snapshot personnalisés.
 
-Par exemple, _clienttext_resourcegroup_policy_hostname_ ou _resourcegroup_hostname_. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Par exemple, _clienttext_resourcegroup_policy_hostname_ ou _resourcegroup_hostname_. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 |===
 . Dans la page Ressources, effectuez les opérations suivantes :
@@ -87,7 +87,7 @@ Dans les sections Ressources disponibles et Ressources sélectionnées, le nom d
 *** Sélectionnez *Autosélectionner toutes les ressources sur le même volume de stockage* pour déplacer toutes les ressources du même volume vers la section Ressources sélectionnées.
 *** Sélectionnez les ressources dans la section Ressources disponibles, puis cliquez sur la flèche droite pour les déplacer vers la section Ressources sélectionnées.
 +
-Les groupes de ressources de SnapCenter pour Microsoft Exchange Server ne peuvent pas disposer de plus de 30 bases de données par copie Snapshot. Si plusieurs 30 bases de données se trouvent dans un même groupe de ressources, une seconde copie Snapshot est créée pour les bases de données supplémentaires. Par conséquent, 2 sous-tâches sont créées sous la tâche de sauvegarde principale. Pour les sauvegardes ayant une réplication secondaire, lorsque SnapMirror ou SnapVault est en cours de mise à jour, il peut arriver que la mise à jour pour les sous-tâches se chevauchent. La tâche de sauvegarde principale reste en cours d'exécution permanente même si les journaux indiquent que la tâche est terminée.
+Les groupes de ressources de SnapCenter pour Microsoft Exchange Server ne peuvent pas avoir plus de 30 bases de données par instantané. S'il y a plus de 30 bases de données dans un groupe de ressources, un deuxième instantané est créé pour les bases de données supplémentaires. Par conséquent, 2 sous-tâches sont créées sous la tâche de sauvegarde principale. Pour les sauvegardes ayant une réplication secondaire, lorsque SnapMirror ou SnapVault est en cours de mise à jour, il peut arriver que la mise à jour pour les sous-tâches se chevauchent. La tâche de sauvegarde principale reste en cours d'exécution permanente même si les journaux indiquent que la tâche est terminée.
 
 
 

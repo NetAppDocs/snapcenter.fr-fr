@@ -34,7 +34,7 @@ La restauration de AG échoue lorsque l'une des conditions suivantes est remplie
 https://support.microsoft.com/kb/2887595["Article 2887595 du support Microsoft : ensemble de mises à jour Windows RT 8.1, Windows 8.1 et Windows Server 2012 R2 : novembre 2013"]
 
 * Vous devez avoir sauvegardé les groupes de ressources ou la base de données.
-* Si vous répliquez des copies Snapshot dans un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué les serveurs virtuels de stockage (SVM) pour les volumes source et de destination.
+* Si vous répliquez des snapshots sur un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué les machines virtuelles de stockage (SVM) pour les volumes source et de destination.
 +
 Pour plus d'informations sur la manière dont les administrateurs attribuent des ressources aux utilisateurs, consultez les informations d'installation de SnapCenter.
 

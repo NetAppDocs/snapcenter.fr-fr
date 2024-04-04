@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
-summary: 'Le plug-in pour SQL Server s"intègre à Microsoft SQL Server sur l"hôte Windows et à la technologie de copie NetApp Snapshot sur le système de stockage. Pour utiliser le plug-in pour SQL Server, utilisez l"interface SnapCenter.' 
+summary: 'Le plug-in pour SQL Server s"intègre à Microsoft SQL Server sur l"hôte Windows et à la technologie NetApp Snapshot sur le système de stockage. Pour utiliser le plug-in pour SQL Server, utilisez l"interface SnapCenter.' 
 ---
 = Fonctionnalités du plug-in SnapCenter pour Microsoft SQL Server
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Le plug-in pour SQL Server s"intègre à Microsoft SQL Server sur l"h�
 
 
 [role="lead"]
-Le plug-in pour SQL Server s'intègre à Microsoft SQL Server sur l'hôte Windows et à la technologie de copie NetApp Snapshot sur le système de stockage. Pour utiliser le plug-in pour SQL Server, utilisez l'interface SnapCenter.
+Le plug-in pour SQL Server s'intègre à Microsoft SQL Server sur l'hôte Windows et à la technologie NetApp Snapshot sur le système de stockage. Pour utiliser le plug-in pour SQL Server, utilisez l'interface SnapCenter.
 
 Le plug-in pour SQL Server inclut les principales fonctionnalités suivantes :
 
@@ -23,9 +23,9 @@ L'interface SnapCenter vous permet de standardiser et d'assurer une cohérence e
 +
 Vous pouvez planifier des sauvegardes SQL Server de routine, configurer la conservation des sauvegardes basée sur des règles et configurer des opérations de restauration instantanées et à chaud. Vous pouvez également surveiller de manière proactive votre environnement SQL Server en configurant SnapCenter pour envoyer des alertes par e-mail.
 
-* *Technologie de copie Snapshot NetApp non disruptive*
+* *Technologie snapshot NetApp non disruptive*
 +
-Le plug-in pour SQL Server utilise la technologie de copie NetApp Snapshot et le plug-in NetApp SnapCenter pour Microsoft Windows. Vous pouvez ainsi sauvegarder des bases de données en quelques secondes et les restaurer rapidement sans mettre SQL Server hors ligne. Les copies Snapshot requièrent un espace de stockage minimal.
+Le plug-in pour SQL Server utilise la technologie Snapshot NetApp avec le plug-in NetApp SnapCenter pour Microsoft Windows. Vous pouvez ainsi sauvegarder des bases de données en quelques secondes et les restaurer rapidement sans mettre SQL Server hors ligne. Les copies Snapshot consomment un espace de stockage minimal.
 
 
 

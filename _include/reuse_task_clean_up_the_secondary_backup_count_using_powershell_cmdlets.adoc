@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-Vous pouvez utiliser l'applet de commande Remove-SmBackup pour nettoyer le nombre de sauvegardes pour les sauvegardes secondaires qui ne possèdent pas de copie Snapshot. Vous pouvez utiliser cette applet de commande lorsque le nombre total de copies Snapshot affichées dans la topologie gérer les copies ne correspond pas au paramètre de conservation des copies Snapshot de stockage secondaire.
+Vous pouvez utiliser l'applet de commande Remove-SmBackup pour nettoyer le nombre de sauvegardes secondaires sans instantané. Vous pouvez utiliser cette applet de commande lorsque le nombre total de snapshots affichés dans la topologie gérer les copies ne correspond pas au paramètre de conservation des snapshots de stockage secondaire.
 
 Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
 
@@ -17,7 +17,7 @@ Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
 ----
 . Nettoyez le nombre de sauvegardes secondaires à l'aide du paramètre -CleanuppyBackups.
 +
-Dans cet exemple, nous nettoie le nombre de sauvegardes pour les sauvegardes secondaires, sans copie Snapshot :
+Cet exemple nettoie le nombre de sauvegardes secondaires sans snapshots :
 
 +
 [listing]

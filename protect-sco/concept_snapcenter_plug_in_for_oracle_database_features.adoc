@@ -21,9 +21,9 @@ L'interface SnapCenter assure la standardisation et la cohérence dans l'ensembl
 +
 Vous pouvez planifier des opérations de sauvegarde et de clonage, configurer la conservation des sauvegardes à l'aide de règles et effectuer des opérations de restauration. Vous pouvez également surveiller votre environnement de manière proactive en configurant SnapCenter pour envoyer des alertes par e-mail.
 
-* Technologie de copie NetApp Snapshot non disruptive
+* La technologie Snapshot de NetApp sans interruption
 +
-SnapCenter utilise la technologie de copie NetApp Snapshot avec le plug-in pour bases de données Oracle et le plug-in pour UNIX pour sauvegarder des bases de données. Les copies Snapshot requièrent un espace de stockage minimal.
+SnapCenter utilise la technologie Snapshot de NetApp avec le plug-in pour Oracle Database et le plug-in pour UNIX pour sauvegarder des bases de données. Les copies Snapshot consomment un espace de stockage minimal.
 
 
 
@@ -45,7 +45,7 @@ Une licence FlexClone est requise sur le système de stockage dans lequel vous s
 * Vérification automatisée et sans interruption des sauvegardes
 * Possibilité d'exécuter plusieurs sauvegardes simultanément sur plusieurs hôtes de base de données
 +
-En une seule opération, les copies Snapshot sont consolidées lorsque les bases de données sur un hôte unique partagent le même volume.
+Dans une seule opération, les snapshots sont consolidés lorsque les bases de données d'un hôte unique partagent le même volume.
 
 * Prise en charge des infrastructures physiques et virtualisées
 * Prise en charge de NFS, iSCSI, Fibre Channel (FC), RDM, VMDK over NFS et VMFS et ASM sur NFS, SAN, RDM et VMDK

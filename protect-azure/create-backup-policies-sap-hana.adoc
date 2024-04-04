@@ -23,7 +23,7 @@ Avant d'utiliser SnapCenter pour sauvegarder les ressources de base de données 
 .. Sélectionnez le type de sauvegarde.
 +
 ... Sélectionnez *sauvegarde basée sur un fichier* si vous souhaitez effectuer un contrôle d'intégrité de la base de données.
-... Sélectionnez *snapshot based* si vous souhaitez créer une sauvegarde à l'aide de la technologie de copie Snapshot.
+... Sélectionnez *snapshot based* si vous souhaitez créer une sauvegarde à l'aide de la technologie Snapshot.
 
 
 .. Spécifiez le type de planification.

@@ -41,7 +41,7 @@ Entrez un ou plusieurs libellés qui vous aideront à rechercher ultérieurement
  a| 
 Utilisez le format de nom personnalisé pour la copie Snapshot
  a| 
-Cochez cette case, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+Cochez cette case et entrez un format de nom personnalisé à utiliser pour le nom du snapshot.
 
 
 

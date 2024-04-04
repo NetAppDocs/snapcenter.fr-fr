@@ -19,7 +19,7 @@ Avant d'utiliser SnapCenter pour sauvegarder les ressources de base de données 
 Pour en savoir plus, découvrez comment définir une stratégie de protection des données pour les bases de données SAP HANA.
 
 * Vous devez vous préparer à la protection des données en effectuant des tâches telles que l'installation de SnapCenter, l'ajout d'hôtes, la configuration des connexions du système de stockage et l'ajout de ressources.
-* L'administrateur SnapCenter doit avoir attribué les SVM aux volumes source et de destination, si vous répliquez les copies Snapshot sur un miroir ou un coffre-fort.
+* Si vous répliquez des snapshots sur un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir affecté des SVM aux volumes source et de destination.
 +
 En outre, vous pouvez spécifier des paramètres de réplication, de script et d'application dans la stratégie. Ces options vous permettent de gagner du temps lorsque vous souhaitez réutiliser la stratégie d'un autre groupe de ressources.
 
@@ -41,8 +41,8 @@ Vous ne pouvez pas créer de sauvegarde pour le volume de données SAP HANA, mai
 * SnapLock
 +
 ** Si l'option « conserver les copies de sauvegarde pendant un nombre de jours spécifique » est sélectionnée, la période de conservation SnapLock doit être inférieure ou égale aux jours de conservation mentionnés.
-** Si vous spécifiez une période de verrouillage des copies Snapshot, vous ne pouvez pas supprimer les copies Snapshot avant l'expiration de la période de conservation. Cela peut entraîner la conservation d'un plus grand nombre de copies Snapshot que le nombre spécifié dans la règle.
-** Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+** La spécification d'une période de verrouillage de snapshot empêche la suppression des snapshots jusqu'à l'expiration de la période de conservation. Cela peut entraîner la conservation d'un nombre plus important de snapshots que le nombre spécifié dans la règle.
+** Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 
@@ -71,7 +71,7 @@ Sélectionnez *sauvegarde basée sur fichier*. Seuls les locataires actifs sont 
 
 
  a| 
-Créer une sauvegarde à l'aide de la technologie de copie Snapshot
+Créer une sauvegarde à l'aide de la technologie Snapshot
  a| 
 Sélectionnez *basé sur les instantanés*.
 
@@ -101,30 +101,31 @@ Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
 
 
  a| 
-Conserver un certain nombre de copies Snapshot
+Conserver un certain nombre d'instantanés
  a| 
-Sélectionnez *nombre total de copies Snapshot à conserver*, puis spécifiez le nombre de copies Snapshot que vous souhaitez conserver.
+Sélectionnez *nombre total de copies Snapshot à conserver*, puis indiquez le nombre de snapshots que vous souhaitez conserver.
 
-Si le nombre de copies Snapshot dépasse le nombre spécifié, les copies Snapshot sont supprimées par les plus anciennes copies supprimées en premier.
+Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
 
 NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
 
 
-IMPORTANT: Dans le cas des sauvegardes basées sur des copies Snapshot, vous devez définir le nombre de rétention à 2 ou plus si vous prévoyez d'activer la réplication SnapVault. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+IMPORTANT: Dans le cas des sauvegardes basées sur des copies Snapshot, vous devez définir le nombre de rétention à 2 ou plus si vous prévoyez d'activer la réplication SnapVault. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
 
 
 NOTE: Pour la réplication des systèmes SAP HANA, il est recommandé d'ajouter toutes les ressources du système SAP HANA dans un groupe de ressources unique. Cela permet de conserver le nombre adéquat de sauvegardes.
 
 
-NOTE: Pour la réplication système SAP HANA, le total des copies Snapshot prises sera égal à la conservation définie pour le groupe de ressources. La suppression de la copie Snapshot la plus ancienne est basée sur le nœud sur lequel se trouve la copie Snapshot la plus ancienne. Par exemple, la conservation est définie sur 7 pour un groupe de ressources avec réplication système primaire SAP HANA et réplication système secondaire SAP HANA. Vous pouvez prendre jusqu'à 7 copies Snapshot à la fois, y compris la réplication système primaire SAP HANA et le stockage secondaire de réplication système SAP HANA.
+NOTE: Pour la réplication système SAP HANA, le total des snapshots pris sera égal au jeu de conservation défini pour le groupe de ressources.  La suppression de l'instantané le plus ancien est basée sur le nœud sur lequel se trouve l'instantané le plus ancien.
+Par exemple, la conservation est définie sur 7 pour un groupe de ressources avec réplication système primaire SAP HANA et réplication système secondaire SAP HANA.  Vous pouvez effectuer un maximum de 7 copies Snapshot à la fois, y compris la réplication système primaire SAP HANA et la réplication système secondaire SAP HANA.
 
 
 
  a| 
-Conservez les copies Snapshot pendant un certain nombre de jours
+Conserver les instantanés pendant un certain nombre de jours
  a| 
-Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer.
+Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer.
 
 
 
@@ -147,7 +148,7 @@ La période de conservation SnapLock doit être inférieure à 100 ans.
  a| 
 Sélectionnez ce champ pour créer des copies en miroir des jeux de sauvegarde sur un autre volume (réplication SnapMirror).
 
-Si la relation de protection dans ONTAP est de type miroir et coffre-fort et si vous sélectionnez uniquement cette option, la copie Snapshot créée sur le système primaire ne sera pas transférée vers la destination, mais elle sera répertoriée dans le système de destination. Si cette copie Snapshot est sélectionnée à partir de la destination pour effectuer une opération de restauration, le message d'erreur emplacement secondaire n'est pas disponible pour la sauvegarde en copie/miroir sélectionnée s'affiche.
+Si la relation de protection dans ONTAP est de type miroir et coffre-fort et si vous sélectionnez uniquement cette option, le snapshot créé sur le primaire ne sera pas transféré vers la destination, mais sera répertorié dans la destination. Si cet instantané est sélectionné à partir de la destination pour effectuer une opération de restauration, le message d'erreur emplacement secondaire n'est pas disponible pour la sauvegarde voûtée/miroir sélectionnée s'affiche.
 
 Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal.
 
@@ -177,7 +178,7 @@ Voir link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_t
  a| 
 Sélectionnez une étiquette Snapshot.
 
-En fonction de l'étiquette de copie Snapshot que vous sélectionnez, ONTAP applique la règle de conservation des copies Snapshot secondaires correspondant à l'étiquette.
+Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
 
 
 NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
@@ -192,7 +193,7 @@ Saisissez le nombre maximal de tentatives de réplication pouvant être autoris�
 |===
 +
 
-NOTE: Il est recommandé de configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter la limite maximale des copies Snapshot sur le stockage secondaire.
+NOTE:  Vous devez configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter d'atteindre la limite maximale des snapshots sur le stockage secondaire.
 
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 

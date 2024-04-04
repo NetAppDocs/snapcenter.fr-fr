@@ -50,7 +50,7 @@ Cliquez sur le bouton Actualiser pour afficher un décompte précis.
 Si une sauvegarde SnapLock est activée, cliquez sur le bouton *Refresh* pour actualiser l'heure d'expiration SnapLock principale et secondaire récupérée depuis ONTAP. Un planning hebdomadaire actualise également les temps d'expiration SnapLock primaire et secondaire extraits de ONTAP.
 
 +
-Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au délai d'expiration SnapLock le plus long défini pour une copie Snapshot d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
+Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au temps d'expiration SnapLock le plus long défini pour un instantané d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
 
 +
 Après une sauvegarde à la demande, en cliquant sur le bouton *Refresh*, vous actualisez les détails de la sauvegarde ou du clone.

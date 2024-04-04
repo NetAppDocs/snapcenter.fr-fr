@@ -16,7 +16,7 @@ Si une ressource ne fait pas encore partie d'un groupe de ressources, vous pouve
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page ressource, sélectionnez *base de données*, *instance* ou *Groupe de disponibilité* dans la liste déroulante Affichage.
-. Sur la page ressource, sélectionnez *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de la copie Snapshot.
+. Dans la page ressource, sélectionnez *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de l'instantané.
 . Dans la page stratégies, effectuez les opérations suivantes :
 +
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.

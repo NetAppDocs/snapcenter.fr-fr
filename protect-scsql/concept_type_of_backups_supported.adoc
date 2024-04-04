@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_type_of_backups_supported.html 
 sidebar: sidebar 
 keywords: Type of backups 
-summary: 'Pour sauvegarder les bases de données système et utilisateur SQL Server à l"aide de SnapCenter, vous devez choisir le type de ressource, comme les bases de données, les instances de serveur SQL et les groupes de disponibilité \(AG\). La technologie de copie Snapshot permet de créer des copies en ligne et en lecture seule des volumes sur lesquels résident les ressources.' 
+summary: 'Pour sauvegarder les bases de données système et utilisateur SQL Server à l"aide de SnapCenter, vous devez choisir le type de ressource, comme les bases de données, les instances de serveur SQL et les groupes de disponibilité \(AG\). Elle permet de créer des copies en ligne en lecture seule des volumes sur lesquels résident les ressources.' 
 ---
 = Types de sauvegardes pris en charge
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Pour sauvegarder les bases de données système et utilisateur SQL Ser
 
 
 [role="lead"]
-Pour sauvegarder des bases de données système et utilisateur SQL Server à l'aide de SnapCenter, vous devez choisir le type de ressource, tel que les bases de données, les instances SQL Server et les groupes de disponibilité (AG). La technologie de copie Snapshot permet de créer des copies en ligne et en lecture seule des volumes sur lesquels résident les ressources.
+Pour sauvegarder des bases de données système et utilisateur SQL Server à l'aide de SnapCenter, vous devez choisir le type de ressource, tel que les bases de données, les instances SQL Server et les groupes de disponibilité (AG). Elle permet de créer des copies en ligne en lecture seule des volumes sur lesquels résident les ressources.
 
 Vous pouvez sélectionner l'option copie seule pour indiquer que SQL Server ne tronque pas les journaux de transactions. Vous devez utiliser cette option lorsque vous gérez également SQL Server avec d'autres applications de sauvegarde. Le fait de préserver l'intégrité des journaux de transactions permet à toute application de sauvegarde de restaurer les bases de données système. Les sauvegardes de copie uniquement sont indépendantes de la séquence des sauvegardes planifiées et n'affectent pas les procédures de sauvegarde et de restauration de la base de données.
 

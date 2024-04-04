@@ -58,7 +58,7 @@ Sélectionné par défaut.
 +
 La base de données SQL Server utilise le vérificateur de cohérence de base de données Microsoft SQL Server (DBCC) pour vérifier l'intégrité logique et physique des objets de la base de données.
 
-... Sélectionnez *limiter les vérifications et obtenir les verrous au lieu d'utiliser une copie Snapshot de base de données interne (TABLOCK)* pour limiter les vérifications et obtenir des verrous au lieu d'utiliser une copie Snapshot de base de données interne.
+... Sélectionnez *limiter les vérifications et obtenir les verrous au lieu d'utiliser une copie Snapshot de base de données interne (TABLOCK)* pour limiter les vérifications et obtenir des verrous au lieu d'utiliser un instantané de base de données interne.
 
 
 .. Dans la section *Log Backup*, sélectionnez *Verify log backup upon terminés* pour vérifier la sauvegarde du journal à la fin de l'opération.

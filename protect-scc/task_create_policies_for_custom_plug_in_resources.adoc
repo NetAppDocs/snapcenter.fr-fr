@@ -24,7 +24,7 @@ La préparation à la protection des données comprend des tâches telles que l'
 
 * Les serveurs virtuels de stockage (SVM) doivent vous être affectés pour les opérations de mise en miroir ou de copie sécurisée.
 +
-L'administrateur SnapCenter doit avoir attribué les SVM aux volumes source et de destination, si vous répliquez les copies Snapshot sur un miroir ou un coffre-fort.
+Si vous répliquez des snapshots sur un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir affecté des SVM aux volumes source et de destination.
 
 * Vous devez avoir ajouté manuellement les ressources que vous voulez protéger.
 
@@ -35,8 +35,8 @@ L'administrateur SnapCenter doit avoir attribué les SVM aux volumes source et d
 * SnapLock
 +
 ** Si l'option « conserver les copies de sauvegarde pendant un nombre de jours spécifique » est sélectionnée, la période de conservation SnapLock doit être inférieure ou égale aux jours de conservation mentionnés.
-** Si vous spécifiez une période de verrouillage des copies Snapshot, vous ne pouvez pas supprimer les copies Snapshot avant l'expiration de la période de conservation. Cela peut entraîner la conservation d'un plus grand nombre de copies Snapshot que le nombre spécifié dans la règle.
-** Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+** La spécification d'une période de verrouillage de snapshot empêche la suppression des snapshots jusqu'à l'expiration de la période de conservation. Cela peut entraîner la conservation d'un nombre plus important de snapshots que le nombre spécifié dans la règle.
+** Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 
@@ -73,14 +73,14 @@ NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'he
 
 
  a| 
-Conserver un certain nombre de copies Snapshot
+Conserver un certain nombre d'instantanés
  a| 
-Sélectionnez *nombre total de copies Snapshot à conserver*, puis spécifiez le nombre de copies Snapshot que vous souhaitez conserver.
+Sélectionnez *nombre total de copies Snapshot à conserver*, puis indiquez le nombre de snapshots que vous souhaitez conserver.
 
-Si le nombre de copies Snapshot dépasse le nombre spécifié, les copies Snapshot sont supprimées par les plus anciennes copies supprimées en premier.
+Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
 
-NOTE: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+NOTE: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
 
 
 NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
@@ -88,16 +88,16 @@ NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP
 
 
  a| 
-Conservez les copies Snapshot pendant un certain nombre de jours
+Conserver les instantanés pendant un certain nombre de jours
  a| 
-Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer.
+Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer.
 
 
 
  a| 
 Période de verrouillage des copies Snapshot
  a| 
-Sélectionnez la période de verrouillage des copies Snapshot, puis sélectionnez les jours, les mois ou les années.
+Sélectionnez période de verrouillage des instantanés, puis sélectionnez jours, mois ou années.
 
 La période de conservation SnapLock doit être inférieure à 100 ans.
 
@@ -113,7 +113,7 @@ La période de conservation SnapLock doit être inférieure à 100 ans.
  a| 
 Sélectionnez ce champ pour créer des copies en miroir des jeux de sauvegarde sur un autre volume (réplication SnapMirror).
 
-Si la relation de protection dans ONTAP est de type miroir et coffre-fort et si vous sélectionnez uniquement cette option, la copie Snapshot créée sur le système primaire n'est pas transférée vers la destination, mais elle sera répertoriée dans le système de destination. Si cette copie Snapshot est sélectionnée à partir de la destination pour effectuer une opération de restauration, le message d'erreur suivant s'affiche : emplacement secondaire non disponible pour la sauvegarde voûtée/mise en miroir sélectionnée.
+Si la relation de protection dans ONTAP est de type miroir et coffre-fort et si vous sélectionnez uniquement cette option, le snapshot créé sur le primaire ne sera pas transféré vers la destination, mais sera répertorié dans la destination. Si cet instantané est sélectionné à partir de la destination pour effectuer une opération de restauration, le message d'erreur suivant s'affiche : l'emplacement secondaire n'est pas disponible pour la sauvegarde en miroir/en coffre-fort sélectionnée.
 
 Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal.
 
@@ -132,7 +132,7 @@ Lors de la réplication secondaire, le délai d'expiration SnapLock charge le d�
 
 Lorsque SnapLock est configuré uniquement sur le serveur secondaire à partir de ONTAP appelé coffre-fort SnapLock, cliquez sur le bouton *Actualiser* de la page topologie pour actualiser la période de verrouillage sur le serveur secondaire extrait de ONTAP.
 
-Pour plus d'informations sur le coffre-fort SnapLock, reportez-vous à la section archivage des copies Snapshot en mode WORM dans un coffre-fort
+Pour plus d'informations sur le coffre-fort SnapLock, reportez-vous à la section archivage des snapshots en mode WORM sur un coffre-fort
 destination
 
 Voir link:protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["Affichez les sauvegardes et clones personnalisés relatifs aux ressources du plug-in sur la page topologie"].
@@ -144,7 +144,7 @@ Voir link:protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_th
  a| 
 Sélectionnez une étiquette Snapshot.
 
-En fonction de l'étiquette de copie Snapshot que vous sélectionnez, ONTAP applique la règle de conservation des copies Snapshot secondaires correspondant à l'étiquette.
+Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
 
 
 NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
@@ -159,7 +159,7 @@ Saisissez le nombre maximal de tentatives de réplication pouvant être autoris�
 |===
 +
 
-NOTE: Il est recommandé de configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter la limite maximale des copies Snapshot sur le stockage secondaire.
+NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter d'atteindre la limite maximale des snapshots sur le stockage secondaire.
 
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 

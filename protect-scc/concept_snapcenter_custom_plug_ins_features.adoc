@@ -21,9 +21,9 @@ L'interface SnapCenter assure la standardisation et la cohérence dans l'ensembl
 +
 Vous pouvez planifier des opérations de sauvegarde, configurer la conservation des sauvegardes basée sur des règles et effectuer des opérations de restauration. Vous pouvez également surveiller votre environnement de manière proactive en configurant SnapCenter pour envoyer des alertes par e-mail.
 
-* *Technologie de copie Snapshot NetApp non disruptive*
+* *Technologie snapshot NetApp non disruptive*
 +
-SnapCenter utilise la technologie de copie NetApp Snapshot avec les plug-ins personnalisés SnapCenter pour sauvegarder des ressources. Les copies Snapshot requièrent un espace de stockage minimal.
+SnapCenter utilise la technologie Snapshot de NetApp avec les plug-ins personnalisés SnapCenter pour sauvegarder des ressources. Les copies Snapshot consomment un espace de stockage minimal.
 
 
 
@@ -38,11 +38,11 @@ Vous pouvez également définir les informations d'identification de sorte que l
 +
 Une licence FlexClone est requise sur le système de stockage dans lequel vous souhaitez créer le clone.
 
-* Prise en charge de la fonctionnalité de copie Snapshot de groupe de cohérence d'ONTAP dans le cadre de la création des sauvegardes.
+* Prise en charge de la fonctionnalité Snapshot de groupe de cohérence (CG) de ONTAP dans le cadre de la création des sauvegardes.
 * Possibilité d'exécuter plusieurs sauvegardes simultanément sur plusieurs hôtes de ressources
 +
-Lors d'une opération unique, les copies Snapshot sont consolidées lorsque les ressources d'un hôte unique partagent le même volume.
+En une seule opération, les snapshots sont consolidés lorsque les ressources d'un hôte unique partagent le même volume.
 
-* Possibilité de créer une copie Snapshot à l'aide de commandes externes.
-* Fonctionnalité permettant de créer des copies Snapshot cohérentes avec le système de fichiers dans les environnements Windows.
+* Possibilité de créer un instantané à l'aide de commandes externes.
+* Fonctionnalité de création de copies Snapshot cohérentes avec le système de fichiers dans les environnements Windows.
 

@@ -21,7 +21,7 @@ Lorsque le serveur SnapCenter supprime un hôte, il supprime d'abord la sauvegar
 +
 Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"^]
 
-* Le temps nécessaire pour supprimer un hôte dépend du nombre de sauvegardes et des paramètres de rétention. En effet, les copies Snapshot sont supprimées de chaque contrôleur et les métadonnées sont nettoyées.
+* Le temps nécessaire pour supprimer un hôte dépend du nombre de sauvegardes et des paramètres de rétention. En effet, les instantanés sont supprimés de chacun des contrôleurs et les métadonnées sont nettoyées.
 
 
 .Étapes

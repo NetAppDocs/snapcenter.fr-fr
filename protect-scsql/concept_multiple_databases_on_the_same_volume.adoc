@@ -13,4 +13,4 @@ summary: 'Vous pouvez placer toutes les bases de données sur le même volume, c
 [role="lead"]
 Vous pouvez placer toutes les bases de données sur le même volume, car la stratégie de sauvegarde a une option permettant de définir le maximum de bases de données par sauvegarde (la valeur par défaut est 100).
 
-Par exemple, si vous disposez de 200 bases de données dans le même volume, deux copies Snapshot sont créées avec 100 bases de données dans chacune des deux copies Snapshot.
+Par exemple, si vous avez 200 bases de données dans le même volume, deux snapshots sont créés avec 100 bases de données dans chacun des deux snapshots.

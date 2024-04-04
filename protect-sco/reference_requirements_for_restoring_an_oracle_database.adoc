@@ -14,7 +14,7 @@ summary: Avant de restaurer une base de données Oracle, vous devez vous assurer
 Avant de restaurer une base de données Oracle, vous devez vous assurer que les prérequis sont terminés.
 
 * Vous devez avoir défini votre stratégie de restauration et de récupération.
-* L'administrateur SnapCenter doit vous avoir attribué les serveurs virtuels de stockage pour les volumes source et les volumes de destination si vous répliquez les copies Snapshot dans un miroir ou un coffre-fort.
+* Si vous répliquez des snapshots sur un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué les machines virtuelles de stockage (SVM) des volumes source et de destination.
 * Si les journaux d'archive sont élagués dans le cadre de la sauvegarde, vous devez avoir monté manuellement les sauvegardes de journaux d'archive requises.
 * Si vous souhaitez restaurer les bases de données Oracle résidant sur un VMDK (Virtual machine Disk), assurez-vous que l'ordinateur invité dispose du nombre requis de slots libres pour allouer les VMDK clonés.
 * Vous devez vous assurer que tous les volumes de données et de journaux d'archives appartenant à la base de données sont protégés si la protection secondaire est activée pour cette base de données.

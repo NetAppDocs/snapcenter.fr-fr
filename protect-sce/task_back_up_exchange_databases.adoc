@@ -49,9 +49,9 @@ Cliquez sur *image:../media/filter_icon.png[""]*, puis sélectionnez le nom d'h�
 ** Si vous souhaitez sauvegarder un groupe de disponibilité de base de données, cliquez sur le nom du groupe de disponibilité de base de données.
 
 
-. Si vous souhaitez spécifier un nom de copie snapshot personnalisé, dans la page Ressources, cochez la case *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+. Si vous souhaitez spécifier un nom d'instantané personnalisé, dans la page Ressources, cochez la case *utiliser le format de nom personnalisé pour la copie d'instantané*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom d'instantané.
 +
-Par exemple, _customtext_policy_hostname_ ou _Resource_hostname_. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Par exemple, _customtext_policy_hostname_ ou _Resource_hostname_. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 . Dans la page stratégies, effectuez les opérations suivantes :
 +

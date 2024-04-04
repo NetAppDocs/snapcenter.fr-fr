@@ -28,12 +28,12 @@ Vous pouvez utiliser les plug-ins personnalisés SnapCenter pour les opérations
 
 Vous pouvez utiliser le plug-in de stockage pour assurer la protection des données.
 
-* Copies Snapshot de groupes de cohérence des volumes de stockage sur les clusters ONTAP
+* Prenez des copies Snapshot de groupes de cohérence des volumes de stockage sur les clusters ONTAP.
 * Sauvegardez des applications personnalisées à l'aide de l'infrastructure intégrée de pré et post-script
 +
 La sauvegarde d'un volume ONTAP, d'une LUN ou d'un qtree peut être effectuée.
 
-* Mettre à jour les copies Snapshot du système primaire sur un système ONTAP secondaire, en tirant parti de la relation de réplication existante (réplication SnapVault/SnapMirror/unifiée) à l'aide de la règle SnapCenter
+* Mettre à jour les copies Snapshot du stockage primaire vers un système secondaire ONTAP, en exploitant la relation de réplication existante (SnapVault/SnapMirror/réplication unifiée) à l'aide de règles SnapCenter
 +
 Le système primaire et secondaire ONTAP peut être ONTAP FAS, AFF, All SAN Array (ASA), Select ou Cloud ONTAP.
 

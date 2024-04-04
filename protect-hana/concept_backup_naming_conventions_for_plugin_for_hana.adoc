@@ -2,7 +2,7 @@
 permalink: protect-hana/concept_backup_naming_conventions_for_plugin_for_hana.html 
 sidebar: sidebar 
 keywords: Backup naming conventions 
-summary: 'Vous pouvez utiliser la convention d"appellation de copie Snapshot par défaut ou la convention de nom personnalisée. la convention de nommage des sauvegardes par défaut ajoute un horodatage aux noms de copie Snapshot qui vous aide à identifier le moment de la création des copies.' 
+summary: Vous pouvez utiliser la nomenclature établie par défaut des snapshots ou une nomenclature établie personnalisée. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots pour vous aider à identifier la date de création des copies. 
 ---
 = Conventions de nom de sauvegarde pour le plug-in pour bases de données SAP HANA
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: 'Vous pouvez utiliser la convention d"appellation de copie Snapshot par
 
 
 [role="lead"]
-Vous pouvez utiliser la convention d'appellation de copie Snapshot par défaut ou la convention de nom personnalisée. la convention de nommage des sauvegardes par défaut ajoute un horodatage aux noms de copie Snapshot qui vous aide à identifier le moment de la création des copies.
+Vous pouvez utiliser la nomenclature établie par défaut des snapshots ou une nomenclature établie personnalisée. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots pour vous aider à identifier la date de création des copies.
 
-La copie Snapshot utilise la convention de nom par défaut suivante :
+Le Snapshot utilise la nomenclature établie par défaut suivante :
 
 `resourcegroupname_hostname_timestamp`
 
@@ -30,4 +30,4 @@ Dans cet exemple, les éléments de syntaxe ont la signification suivante :
 * _03-12-2015_23.17.26_ est la date et l'horodatage.
 
 
-Vous pouvez également spécifier le format du nom de la copie Snapshot tout en protégeant les ressources ou les groupes de ressources en sélectionnant *utiliser le format de nom personnalisé pour la copie Snapshot*. Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, le suffixe numérique est ajouté au nom de la copie Snapshot.
+Vous pouvez également spécifier le format du nom de l'instantané tout en protégeant les ressources ou les groupes de ressources en sélectionnant *utiliser le format de nom personnalisé pour la copie Snapshot*. Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, le suffixe de l'horodatage est ajouté au nom du Snapshot.

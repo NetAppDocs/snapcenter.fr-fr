@@ -91,7 +91,7 @@ La base de données SQL Server utilise le vérificateur de cohérence de base de
 
 NOTE: Vous pouvez sélectionner cette option pour réduire la durée d'exécution.
 
-** Sélectionnez l'option **TABLOCK** pour limiter les vérifications et obtenir des verrous au lieu d'utiliser une copie Snapshot interne de la base de données.
+** Sélectionnez l'option **TABLOCK** pour limiter les vérifications et obtenir des verrous au lieu d'utiliser un instantané de base de données interne.
 
 
 |===

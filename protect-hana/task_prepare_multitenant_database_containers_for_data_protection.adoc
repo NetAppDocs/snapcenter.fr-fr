@@ -37,7 +37,7 @@ Si la ressource fait partie d'un groupe de ressources, placez le groupe de resso
 . Supprimez le groupe de ressources de la page topologie.
 . Supprimez l'ancienne ressource MDC de la page Ressources.
 +
-Par exemple, si la période de conservation des copies Snapshot primaires est de 7 jours et que la conservation des copies Snapshot secondaires est de 45 jours, après 45 jours et après la suppression de toutes les sauvegardes, vous devez supprimer le groupe de ressources et l'ancienne ressource MDC.
+Par exemple, si la période de conservation des snapshots primaires est de 7 jours et que la conservation des snapshots secondaires est de 45 jours, après 45 jours et après la suppression de toutes les sauvegardes, vous devez supprimer le groupe de ressources et l'ancienne ressource MDC.
 
 
 

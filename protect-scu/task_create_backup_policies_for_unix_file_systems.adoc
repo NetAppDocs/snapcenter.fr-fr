@@ -15,7 +15,7 @@ Avant d'utiliser SnapCenter pour sauvegarder des systèmes de fichiers Unix, vou
 
 .Avant de commencer
 * Vous devez vous préparer à la protection des données en réalisant des tâches telles que l'installation de SnapCenter, l'ajout d'hôtes, la découverte des systèmes de fichiers et la création de connexions au système de stockage.
-* Si vous répliquez des copies Snapshot sur un stockage secondaire miroir ou vault, l'administrateur SnapCenter doit avoir attribué les SVM à vous pour les volumes source et de destination.
+* Si vous répliquez des snapshots sur un stockage secondaire de copie miroir ou d'archivage sécurisé, l'administrateur SnapCenter doit vous avoir assigné les SVM pour les volumes source et de destination.
 
 
 .Étapes
@@ -34,24 +34,24 @@ Avant d'utiliser SnapCenter pour sauvegarder des systèmes de fichiers Unix, vou
 
 
  a| 
-Conserver un certain nombre de copies Snapshot
+Conserver un certain nombre d'instantanés
  a| 
-Sélectionnez *nombre total de copies Snapshot à conserver*, puis spécifiez le nombre de copies Snapshot que vous souhaitez conserver.
+Sélectionnez *nombre total de copies Snapshot à conserver*, puis indiquez le nombre de snapshots que vous souhaitez conserver.
 
-Si le nombre de copies Snapshot dépasse le nombre spécifié, les copies Snapshot sont supprimées par les plus anciennes copies supprimées en premier.
+Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
 
 NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
 
 
-IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
 
 
 
  a| 
-Conservez les copies Snapshot pendant un certain nombre de jours
+Conserver les instantanés pendant un certain nombre de jours
  a| 
-Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer.
+Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer.
 
 |===
 +
@@ -83,7 +83,7 @@ Deuxième étiquette de police
  a| 
 Sélectionnez une étiquette Snapshot.
 
-En fonction de l'étiquette de copie Snapshot que vous sélectionnez, ONTAP applique la règle de conservation des copies Snapshot secondaires correspondant à l'étiquette.
+Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
 
 
 NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
@@ -98,7 +98,7 @@ Saisissez le nombre maximal de tentatives de réplication pouvant être autoris�
 |===
 +
 
-NOTE: Il est recommandé de configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter la limite maximale des copies Snapshot sur le stockage secondaire.
+NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter d'atteindre la limite maximale des snapshots sur le stockage secondaire.
 
 . Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript que vous souhaitez exécuter avant ou après l'opération de sauvegarde, respectivement.
 +

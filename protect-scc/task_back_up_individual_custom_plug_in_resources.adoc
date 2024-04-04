@@ -25,9 +25,9 @@ Si une ressource de plug-in personnalisée ne fait pas partie d'un groupe de res
 Cliquez sur image:../media/filter_icon.png[""], puis sélectionnez le nom d'hôte et le type de ressource pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.png["Icône de filtre"] pour fermer le volet de filtre.
 
 . Cliquez sur la ressource à sauvegarder.
-. Sur la page ressource, si vous souhaitez utiliser un nom personnalisé, cochez la case *utiliser le format de nom personnalisé pour la copie Snapshot* , puis entrez un format de nom personnalisé pour le nom de la copie Snapshot.
+. Dans la page ressource, si vous souhaitez utiliser un nom personnalisé, cochez la case *utiliser le format de nom personnalisé pour la copie Snapshot* , puis entrez un format de nom personnalisé pour le nom de l'instantané.
 +
-Par exemple, _customtext_policy_hostname_ ou _Resource_hostname_. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Par exemple, _customtext_policy_hostname_ ou _Resource_hostname_. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 . Dans la page Paramètres de l'application, procédez comme suit :
 +
@@ -43,7 +43,7 @@ Activez la sauvegarde du groupe de cohérence, si nécessaire, et effectuez les 
  a| 
 Permet d'attendre la fin de l'opération Snapshot du groupe de cohérence
  a| 
-Sélectionnez urgent, Moyen ou détendu pour spécifier le temps d'attente de l'opération de copie Snapshot.
+Sélectionnez urgent, Moyen ou détendu pour spécifier le temps d'attente pour l'exécution de l'opération Snapshot.
 
 Urgent = 5 secondes, Moyen = 7 secondes et détendu = 20 secondes.
 
@@ -58,35 +58,35 @@ Sélectionnez cette option pour éviter de forcer un point de cohérence WAFL.
 +
 image:../media/application_settings.gif["Page des paramètres de l'application"]
 
-.. Cliquez sur la flèche *scripts* pour exécuter des commandes de pré et post pour les opérations de mise en veille, de copie Snapshot et de mise en veille. Vous pouvez également exécuter des pré-commandes avant de quitter l'opération de sauvegarde.
+.. Cliquez sur la flèche *scripts* pour exécuter des commandes pré et post pour les opérations quiesce, Snapshot et unquiesce. Vous pouvez également exécuter des pré-commandes avant de quitter l'opération de sauvegarde.
 +
 Des préscripts et des postscripts sont exécutés sur le serveur SnapCenter.
 
 .. Cliquez sur la flèche *configurations personnalisées*, puis entrez les paires de valeurs personnalisées requises pour tous les travaux utilisant cette ressource.
-.. Cliquez sur la flèche *Snapshot Copy Tool* pour sélectionner l'outil de création de copies Snapshot :
+.. Cliquez sur la flèche *outil de copie d'instantanés* pour sélectionner l'outil de création d'instantanés :
 +
 |===
 | Les fonctions que vous recherchez... | Alors... 
 
 
  a| 
-SnapCenter pour prendre une copie Snapshot au niveau du stockage
+SnapCenter pour créer une copie Snapshot au niveau du stockage
  a| 
 Sélectionnez *SnapCenter sans cohérence du système de fichiers*.
 
 
 
  a| 
-SnapCenter permettant d'utiliser le plug-in pour Windows afin de rétablir la cohérence du système de fichiers, puis de créer une copie Snapshot
+SnapCenter pour utiliser le plug-in pour Windows afin de mettre le système de fichiers dans un état cohérent, puis de créer une copie Snapshot
  a| 
 Sélectionnez *SnapCenter avec cohérence du système de fichiers*.
 
 
 
  a| 
-Pour saisir la commande afin de créer une copie Snapshot
+Pour saisir la commande permettant de créer un Snapshot
  a| 
-Sélectionnez *autre*, puis entrez la commande pour créer une copie Snapshot.
+Sélectionnez *autre*, puis entrez la commande pour créer un instantané.
 
 |===
 

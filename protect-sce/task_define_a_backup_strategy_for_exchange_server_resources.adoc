@@ -19,7 +19,7 @@ Un SLA définit le niveau de service attendu et traite de nombreux problèmes li
 
 == Types de sauvegardes pris en charge pour la base de données Exchange
 
-Pour sauvegarder des boîtes aux lettres Exchange avec SnapCenter, il vous faut choisir le type de ressource, comme les bases de données et les groupes de disponibilité de base de données. La technologie de copie Snapshot permet de créer des copies en ligne et en lecture seule des volumes sur lesquels résident les ressources.
+Pour sauvegarder des boîtes aux lettres Exchange avec SnapCenter, il vous faut choisir le type de ressource, comme les bases de données et les groupes de disponibilité de base de données. Elle permet de créer des copies en ligne en lecture seule des volumes sur lesquels résident les ressources.
 
 |===
 | Type de sauvegarde | Description 
@@ -85,9 +85,9 @@ Les facteurs qui déterminent le nombre de tâches de sauvegarde dont vous avez 
 
 == Nomenclature établie des sauvegardes
 
-Vous pouvez utiliser la convention d'appellation de copie Snapshot par défaut ou la convention de nom personnalisée. la convention de nommage des sauvegardes par défaut ajoute un horodatage aux noms de copie Snapshot qui vous aide à identifier le moment de la création des copies.
+Vous pouvez utiliser la nomenclature établie par défaut des snapshots ou une nomenclature établie personnalisée. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots pour vous aider à identifier la date de création des copies.
 
-La copie Snapshot utilise la convention de nom par défaut suivante :
+Le Snapshot utilise la nomenclature établie par défaut suivante :
 
 `resourcegroupname_hostname_timestamp`
 
@@ -104,7 +104,7 @@ Dans cet exemple, les éléments de syntaxe ont la signification suivante :
 * _03-12-2015_23.17.26_ est la date et l'horodatage.
 
 
-Vous pouvez également spécifier le format du nom de la copie Snapshot tout en protégeant les ressources ou les groupes de ressources en sélectionnant *utiliser le format de nom personnalisé pour la copie Snapshot*. Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, le suffixe numérique est ajouté au nom de la copie Snapshot.
+Vous pouvez également spécifier le format du nom de l'instantané tout en protégeant les ressources ou les groupes de ressources en sélectionnant *utiliser le format de nom personnalisé pour la copie Snapshot*. Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname. Par défaut, le suffixe de l'horodatage est ajouté au nom du Snapshot.
 
 
 

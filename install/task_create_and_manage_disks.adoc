@@ -295,10 +295,10 @@ Vous pouvez augmenter ou réduire la taille d'un disque en fonction de l'évolut
 * Pour les LUN thick provisionnées, la taille extensible (taille disponible dans le volume) est indiquée comme taille maximale.
 * Les LUN avec partitions de style MBR ont une taille limite de 2 To.
 * Les LUN avec des partitions de type GPT ont une taille de système de stockage limite de 16 To.
-* Il est recommandé de faire une copie Snapshot avant de redimensionner une LUN.
-* Si vous devez restaurer une LUN à partir d'une copie Snapshot effectuée avant le redimensionnement de la LUN, SnapCenter redimensionne automatiquement la LUN en fonction de la taille de la copie Snapshot.
+* Avant de redimensionner une LUN, il est recommandé de créer une copie Snapshot.
+* Si vous devez restaurer une LUN à partir d'une copie Snapshot effectuée avant le redimensionnement de la LUN, SnapCenter redimensionne automatiquement la LUN en fonction de sa taille.
 +
-Une fois l'opération de restauration effectuée, les données ajoutées à la LUN après le redimensionnement doivent être restaurées à partir d'une copie Snapshot effectuée une fois le redimensionnement effectué.
+Après l'opération de restauration, les données ajoutées à la LUN après son redimensionnement doivent être restaurées à partir d'une copie Snapshot effectuée après son redimensionnement.
 
 
 

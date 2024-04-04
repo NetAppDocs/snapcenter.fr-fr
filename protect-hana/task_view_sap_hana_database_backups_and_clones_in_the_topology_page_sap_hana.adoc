@@ -42,7 +42,7 @@ Si la ressource est protégée, la page topologique de la ressource sélectionn�
 
 . Consultez la *carte Résumé* pour afficher un résumé du nombre de sauvegardes et de clones disponibles sur le stockage primaire et secondaire.
 +
-La section *Résumé Card* affiche le nombre total de sauvegardes basées sur les fichiers, de sauvegardes de copies Snapshot et de clones.
+La section *Summary Card* affiche le nombre total de sauvegardes basées sur des fichiers, de sauvegardes basées sur des copies Snapshot et de clones.
 
 +
 Cliquez sur le bouton *Actualiser* pour lancer une requête sur le stockage afin d'afficher un décompte précis.
@@ -51,7 +51,7 @@ Cliquez sur le bouton *Actualiser* pour lancer une requête sur le stockage afin
 Si une sauvegarde SnapLock est activée, cliquez sur le bouton *Refresh* pour actualiser l'heure d'expiration SnapLock principale et secondaire récupérée depuis ONTAP. Un planning hebdomadaire actualise également les temps d'expiration SnapLock primaire et secondaire extraits de ONTAP.
 
 +
-Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au délai d'expiration SnapLock le plus long défini pour une copie Snapshot d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
+Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au temps d'expiration SnapLock le plus long défini pour un instantané d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
 
 +
 Après une sauvegarde à la demande, en cliquant sur le bouton *Refresh*, vous actualisez les détails de la sauvegarde ou du clone.

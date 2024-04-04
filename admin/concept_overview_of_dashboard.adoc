@@ -41,7 +41,7 @@ En cliquant sur une alerte spécifique, vous accédez à la page alertes pour en
 
 == Dernière synthèse de la protection
 
-La dernière mosaïque de résumé de la protection vous donne l'état de protection pour toutes les entités auxquelles vous avez accès. Par défaut, l'affichage indique l'état de tous les plug-ins. Des informations d'état sont fournies pour les ressources sauvegardées dans le stockage principal en tant que copies Snapshot, ainsi que dans le stockage secondaire à l'aide des technologies SnapMirror et SnapVault. La disponibilité des informations d'état de protection pour le stockage secondaire dépend du type de plug-in sélectionné.
+La dernière mosaïque de résumé de la protection vous donne l'état de protection pour toutes les entités auxquelles vous avez accès. Par défaut, l'affichage indique l'état de tous les plug-ins. Des informations d'état sont fournies pour les ressources sauvegardées sur un stockage primaire comme snapshots et sur un stockage secondaire à l'aide des technologies SnapMirror et SnapVault. La disponibilité des informations d'état de protection pour le stockage secondaire dépend du type de plug-in sélectionné.
 
 
 NOTE: Si vous utilisez une règle de protection mirror-vault, les compteurs de la protection récapitulative sont affichés dans le tableau récapitulatif SnapVault et non dans le graphique SnapMirror.
@@ -52,7 +52,7 @@ L'état de protection des différents plug-ins est disponible en sélectionnant 
 IMPORTANT: Les rapports sur le stockage secondaire s'appliquent uniquement à SnapVault. Les rapports SnapMirror ne sont pas pris en charge.
 
 
-NOTE: SAP HANA fournit des informations d'état de protection pour le stockage principal et secondaire pour les copies Snapshot. Seul l'état de protection du stockage primaire est disponible pour les sauvegardes basées sur des fichiers.
+NOTE: SAP HANA fournit des informations sur l'état de la protection pour le stockage principal et secondaire pour les snapshots. Seul l'état de protection du stockage primaire est disponible pour les sauvegardes basées sur des fichiers.
 
 |===
 | État de la protection | Le stockage primaire | Le stockage secondaire 
@@ -141,9 +141,9 @@ Nombre de travaux en cours d'exécution.
 
 Le module stockage affiche le stockage primaire et secondaire consommé par les tâches de protection sur une période de 90 jours, décrit sous forme graphique les tendances de consommation et calcule les économies en termes de stockage primaire. Les informations de stockage sont mises à jour toutes les 24 heures à 12 h du matin
 
-Le total de consommation de la journée, qui comprend le nombre total de sauvegardes disponibles en SnapCenter et leur taille occupée, s'affiche en haut de l'écran. Une sauvegarde peut être associée à plusieurs copies Snapshot et le nombre reflète la même. Cette fonctionnalité s'applique à la fois aux copies Snapshot primaires et secondaires. Par exemple, vous avez créé 10 sauvegardes, dont 2 sont supprimées en raison de la conservation des sauvegardes basée sur des règles et 1 sauvegarde est explicitement supprimée par vous. Ainsi, le nombre de 7 sauvegardes s'affiche avec la taille occupée par ces 7 sauvegardes.
+Le total de consommation de la journée, qui comprend le nombre total de sauvegardes disponibles en SnapCenter et leur taille occupée, s'affiche en haut de l'écran. Une sauvegarde peut avoir plusieurs snapshots associés et le nombre de copies reflète le même. Cela s'applique aux snapshots primaires et secondaires. Par exemple, vous avez créé 10 sauvegardes, dont 2 sont supprimées en raison de la conservation des sauvegardes basée sur des règles et 1 sauvegarde est explicitement supprimée par vous. Ainsi, le nombre de 7 sauvegardes s'affiche avec la taille occupée par ces 7 sauvegardes.
 
-Le facteur d'économies en stockage du stockage primaire correspond au rapport entre la capacité logique (économies de clone et de copie Snapshot plus stockage consommé) et la capacité physique du stockage primaire. Un graphique à barres illustre les économies de stockage réalisées.
+Le facteur d'économie du stockage pour le stockage primaire est le rapport entre la capacité logique (économies de clones et de copies Snapshot et espace de stockage consommé) et la capacité physique du stockage primaire. Un graphique à barres illustre les économies de stockage réalisées.
 
 Le graphique linéaire trace séparément la consommation de stockage primaire et secondaire, jour par jour, sur une période de 90 jours. Passez le pointeur de la souris sur les graphiques pour obtenir des résultats détaillés au jour le jour.
 

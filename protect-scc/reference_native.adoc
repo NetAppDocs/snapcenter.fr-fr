@@ -55,7 +55,8 @@ mise au repos
  a| 
 obligatoire
  a| 
-Ce segment d'accroche est responsable de l'exécution d'une mise en veille. Elle place l'application dans un état où nous pouvons créer une copie Snapshot. Il s'agit de l'opération de copie Snapshot du stockage.
+Ce segment d'accroche est responsable de l'exécution d'une mise en veille. Il place le
+Dans un état où nous pouvons créer une copie Snapshot. Ce processus est appelé avant l'opération Snapshot de stockage.
 
 
 
@@ -64,7 +65,9 @@ mise au repos
  a| 
 obligatoire
  a| 
-Ce segment d'accroche est responsable de l'exécution d'une mise au repos. Elle place l'application dans un état normal. Il s'agit de l'opération de copie Snapshot du stockage.
+Ce segment d'accroche est responsable de l'exécution d'une mise au repos. Il place
+l'application dans un état normal. Ce processus est appelé après le stockage
+Opération de copie Snapshot.
 
 
 

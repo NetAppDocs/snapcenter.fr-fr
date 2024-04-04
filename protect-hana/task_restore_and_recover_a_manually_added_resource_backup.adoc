@@ -32,7 +32,7 @@ NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération �
 .Description de la tâche
 * Les copies de sauvegarde basées sur des fichiers ne peuvent pas être restaurées depuis SnapCenter.
 * Après la mise à niveau vers SnapCenter 4.3, les sauvegardes effectuées dans SnapCenter 4.2 peuvent être restaurées, mais ne peuvent pas être restaurées. Vous devez utiliser des scripts de restauration HANA Studio ou HANA externes à SnapCenter pour restaurer les sauvegardes prises dans SnapCenter 4.2.
-* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 .Étapes
@@ -61,7 +61,7 @@ image::../media/restoring_resource.gif[restauration des ressources]
 +
 .. Si vous sélectionnez *Complete Resource*, tous les volumes de données configurés de la base de données SAP HANA sont restaurés.
 +
-Si la ressource contient des volumes ou des qtrees, les copies Snapshot sont supprimées après la copie Snapshot sélectionnée pour être restaurées sur de tels volumes ou qtrees et ne peuvent pas être restaurées. De même, si une autre ressource est hébergée sur les mêmes volumes ou qtrees, cette ressource est également supprimée.
+Si la ressource contient des volumes ou des qtrees, les snapshots pris après le Snapshot sélectionné pour la restauration sur ces volumes ou ces qtrees sont supprimés et ne peuvent pas être restaurés. De même, si une autre ressource est hébergée sur les mêmes volumes ou qtrees, cette ressource est également supprimée.
 
 .. Si vous sélectionnez *File Level*, vous pouvez sélectionner *All* ou sélectionner des volumes ou des qtrees spécifiques, puis entrer le chemin d'accès associé à ces volumes ou qtrees, séparés par des virgules
 +
@@ -88,7 +88,7 @@ Les commandes de montage ne sont pas disponibles pour les ressources détectées
 
 +
 
-NOTE: Pour les commandes pré et post pour les opérations quiesce, Snapshot copy et unquiesce, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir des commandes _/opt/snapcenter/snapcenter/scc/allowed_commands.config_ path pour Linux et _C:\Program Files\NetApp\txt\Snapcenter Plug-in Creator\etc\SnapCenter_list_for Windows.
+NOTE: Pour les commandes pré et post pour les opérations quiesce, Snapshot et unquiesce, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir de _/opt/snapcenter/snapcenter/scc/allowed_commands.config_ path pour Linux et _C:\Program Files\NetApp\txt Plug-in Creator\etc\SnapCenter_list_commandes pour Windows.
 
 . Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
 +

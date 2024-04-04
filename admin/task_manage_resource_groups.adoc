@@ -61,13 +61,13 @@ Vous pouvez supprimer un groupe de ressources si vous n'avez plus besoin de prot
 
 *À propos de cette tâche*
 
-Vous devez supprimer manuellement tous les clones créés pour l'une des ressources du groupe de ressources. Vous pouvez également forcer la suppression de toutes les sauvegardes, métadonnées, règles et copies Snapshot associées au groupe de ressources.
+Vous devez supprimer manuellement tous les clones créés pour l'une des ressources du groupe de ressources. Vous pouvez également forcer la suppression de toutes les sauvegardes, métadonnées, règles et snapshots associés au groupe de ressources.
 
 *Étapes*
 
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
 . Sélectionnez le groupe de ressources, puis cliquez sur *Supprimer*.
-. Facultatif : cochez la case *Supprimer les sauvegardes et détacher les stratégies associées à ce groupe de ressources* pour supprimer toutes les sauvegardes, métadonnées, stratégies et copies Snapshot associées au groupe de ressources.
+. Facultatif : cochez la case *Supprimer les sauvegardes et détacher les stratégies associées à ce groupe de ressources* pour supprimer toutes les sauvegardes, métadonnées, stratégies et instantanés associés au groupe de ressources.
 . Cliquez sur *OK*.
 

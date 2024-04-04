@@ -23,4 +23,4 @@ Les sauvegardes basées sur des fichiers vérifient l'intégrité de la base de 
 
 == Sauvegarde basée sur des copies Snapshot
 
-Les sauvegardes basées sur des copies Snapshot exploitent la technologie de copie NetApp Snapshot pour créer des copies en ligne en lecture seule des volumes sur lesquels résident les bases de données SAP HANA.
+Les sauvegardes basées sur des copies Snapshot utilisent la technologie Snapshot de NetApp pour créer des copies en ligne en lecture seule des volumes sur lesquels résident les bases de données SAP HANA.

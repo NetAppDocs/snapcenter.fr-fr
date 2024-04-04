@@ -18,7 +18,7 @@ Vous pouvez créer une stratégie de sauvegarde pour la ressource ou le groupe d
 * Vous devez être prêt à préparer la protection des données en exécutant des tâches telles que l'installation d'SnapCenter, l'ajout d'hôtes, l'identification des ressources et la création de connexions du système de stockage.
 * Vous devez avoir configuré le répertoire du journal hôte pour la sauvegarde des journaux.
 * Vous devez avoir actualisé (découvert) les ressources SQL Server.
-* Si vous répliquez des copies Snapshot dans un miroir ou un coffre-fort, l'administrateur SnapCenter doit avoir attribué les serveurs virtuels de stockage (SVM) aux volumes source et aux volumes de destination.
+* Si vous répliquez des snapshots sur un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué des machines virtuelles de stockage (SVM) pour les volumes source et de destination.
 +
 Pour plus d'informations sur la manière dont les administrateurs attribuent des ressources aux utilisateurs, consultez les informations d'installation de SnapCenter.
 
@@ -47,10 +47,10 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 +
 ** Si l'option « conserver les copies de sauvegarde pendant un nombre de jours spécifique » est sélectionnée, la période de conservation SnapLock doit être inférieure ou égale aux jours de conservation mentionnés.
 +
-Si vous spécifiez une période de verrouillage des copies Snapshot, vous ne pouvez pas supprimer les copies Snapshot avant l'expiration de la période de conservation.  Cela peut entraîner la conservation d'un plus grand nombre de copies Snapshot que le nombre spécifié dans la règle.
+La spécification d'une période de verrouillage de snapshot empêche la suppression des snapshots jusqu'à l'expiration de la période de conservation.  Cela peut entraîner la conservation d'un nombre plus important de snapshots que le nombre spécifié dans la règle.
 
 +
-Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des copies Snapshot du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 +
 
@@ -84,7 +84,7 @@ NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sau
 Sauvegardez les fichiers de base de données et les journaux de transactions et tronquez les journaux de transactions.
 
 . Sélectionnez *sauvegarde complète et sauvegarde du journal*.
-. Entrez le nombre maximal de bases de données à sauvegarder pour chaque copie Snapshot.
+. Entrez le nombre maximal de bases de données à sauvegarder pour chaque snapshot.
 +
 
 NOTE: Vous devez augmenter cette valeur si vous souhaitez exécuter simultanément plusieurs opérations de sauvegarde.
@@ -97,7 +97,8 @@ NOTE: Vous devez augmenter cette valeur si vous souhaitez exécuter simultanéme
 Sauvegardez les fichiers de base de données.
 
 . Sélectionnez *sauvegarde complète*.
-. Entrez le nombre maximal de bases de données à sauvegarder pour chaque copie Snapshot. La valeur par défaut est 100
+. Entrez le nombre maximal de bases de données à sauvegarder pour chaque snapshot.
+La valeur par défaut est 100
 +
 
 NOTE: Vous devez augmenter cette valeur si vous souhaitez exécuter simultanément plusieurs opérations de sauvegarde.
@@ -175,7 +176,7 @@ Dans la page Retention, selon le type de sauvegarde sélectionné dans la page T
 ====
 .Nombre spécifique de copies
 --
-Ne conserver qu'un nombre spécifique de copies Snapshot.
+Conservez uniquement un nombre spécifique d'instantanés.
 
 . Sélectionnez l'option *conserver les sauvegardes de journal applicables au dernier <chiffre> jours* et indiquez le nombre de jours à conserver. Si vous vous approchez de cette limite, vous pouvez supprimer des anciennes copies.
 
@@ -192,10 +193,10 @@ Conservation des copies de sauvegarde pendant un nombre spécifique de jours.
 ====
 . Dans la section *Paramètres de rétention de sauvegarde complète* pour les paramètres de rétention à la demande, effectuez les opérations suivantes :
 +
-.. Spécifiez le nombre total de copies Snapshot à conserver
+.. Spécifiez le nombre total d'instantanés à conserver
 +
-... Pour spécifier le nombre de copies Snapshot à conserver, sélectionnez *nombre total de copies Snapshot à conserver*.
-... Si le nombre de copies Snapshot dépasse le nombre spécifié, les copies Snapshot sont supprimées par les plus anciennes copies supprimées en premier.
+... Pour spécifier le nombre d'instantanés à conserver, sélectionnez *nombre total d'instantanés à conserver*.
+... Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
 
 
@@ -203,17 +204,17 @@ Conservation des copies de sauvegarde pendant un nombre spécifique de jours.
 
 
 
-IMPORTANT: Par défaut, la valeur du nombre de rétention est définie sur 2. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+IMPORTANT: Par défaut, la valeur du nombre de rétention est définie sur 2. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
 
 
 NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
 
-. Durée de conservation des copies Snapshot
+. Durée de conservation des instantanés
 +
-.. Si vous souhaitez spécifier le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer, sélectionnez *conserver les copies Snapshot pour*.
+.. Si vous souhaitez spécifier le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer, sélectionnez *conserver les copies Snapshot pour*.
 
 
-. Si vous souhaitez spécifier la période de verrouillage des copies Snapshot, sélectionnez *période de verrouillage des copies Snapshot* et sélectionnez jours, mois ou années.
+. Si vous souhaitez spécifier la période de verrouillage des instantanés, sélectionnez *période de verrouillage des copies Snapshot* et sélectionnez jours, mois ou années.
 +
 La période de conservation SnapLock doit être inférieure à 100 ans.
 
@@ -221,9 +222,9 @@ La période de conservation SnapLock doit être inférieure à 100 ans.
 
 . Dans la section *Paramètres de rétention de sauvegarde complète* pour les paramètres de conservation horaire, quotidien, hebdomadaire et mensuel, spécifiez les paramètres de conservation pour le type de programme sélectionné dans la page Type de sauvegarde.
 +
-.. Spécifiez le nombre total de copies Snapshot à conserver
+.. Spécifiez le nombre total d'instantanés à conserver
 +
-... Pour spécifier le nombre de copies Snapshot à conserver, sélectionnez *nombre total de copies Snapshot à conserver*. Si le nombre de copies Snapshot dépasse le nombre spécifié, les copies Snapshot sont supprimées par les plus anciennes copies supprimées en premier.
+... Pour spécifier le nombre d'instantanés à conserver, sélectionnez *nombre total d'instantanés à conserver*. Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
 
 
@@ -231,23 +232,23 @@ La période de conservation SnapLock doit être inférieure à 100 ans.
 
 
 
-IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car la première copie Snapshot est la copie de référence pour la relation SnapVault jusqu'à ce qu'une nouvelle copie Snapshot soit répliquée vers la cible.
+IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
 
-. Durée de conservation des copies Snapshot
+. Durée de conservation des instantanés
 +
-.. Pour spécifier le nombre de jours pendant lesquels vous souhaitez conserver les copies Snapshot avant de les supprimer, sélectionnez *conserver les copies Snapshot pour*.
+.. Pour spécifier le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer, sélectionnez *conserver les copies Snapshot pour*.
 
 
-. Si vous souhaitez spécifier la période de verrouillage des copies Snapshot, sélectionnez *période de verrouillage des copies Snapshot* et sélectionnez jours, mois ou années.
+. Si vous souhaitez spécifier la période de verrouillage des instantanés, sélectionnez *période de verrouillage des copies Snapshot* et sélectionnez jours, mois ou années.
 +
 La période de conservation SnapLock doit être inférieure à 100 ans.
 
 +
-Par défaut, la conservation des copies Snapshot de journaux est définie sur 7 jours. Utilisez l'applet de commande set-SmPolicy pour modifier la conservation des copies Snapshot du journal.
+Par défaut, la rétention des snapshots du journal est définie sur 7 jours. Utilisez l'applet de commande set-SmPolicy pour modifier la rétention des snapshots du journal.
 
 
 
-Dans cet exemple, la conservation des copies Snapshot de journal est définie sur 2 :
+Dans cet exemple, la rétention des snapshots du journal est de 2 :
 
 .Montrer l'exemple
 []
@@ -308,7 +309,7 @@ Voir link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topolog
 . Sélectionnez une étiquette Snapshot.
 
 
-En fonction de l'étiquette de copie Snapshot que vous sélectionnez, ONTAP applique la règle de conservation des copies Snapshot secondaires correspondant à l'étiquette.
+Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
 
 
 NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
@@ -335,7 +336,7 @@ NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou d
 
 +
 
-NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP, de sorte que le stockage secondaire n'atteigne pas la limite maximale des copies Snapshot.
+NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP de sorte que le stockage secondaire n'atteigne pas la limite maximale des snapshots.
 
 
 
@@ -368,9 +369,9 @@ Dans la page Vérification, effectuez les opérations suivantes :
 ... Sélectionnez *ne pas cocher les index non clusterisés (REGROUPÉS EN CLUSTERS)* si vous ne souhaitez pas vérifier les index non clusterisés. La base de données SQL Server utilise le vérificateur de cohérence de base de données Microsoft SQL Server (DBCC) pour vérifier l'intégrité logique et physique des objets de la base de données.
 
 
-.. Limiter les vérifications et obtenir les verrouillages au lieu d'utiliser une copie Snapshot de base de données interne (TABLOCK)
+.. Limiter les vérifications et obtenir les verrous au lieu d'utiliser un instantané de base de données interne (TABLOCK)
 +
-... Sélectionnez *limiter les vérifications et obtenir les verrous au lieu d'utiliser une copie Snapshot de base de données interne (TABLOCK)* pour limiter les vérifications et obtenir des verrous au lieu d'utiliser une copie Snapshot de base de données interne.
+... Sélectionnez *limiter les vérifications et obtenir les verrous au lieu d'utiliser une copie Snapshot de base de données interne (TABLOCK)* pour limiter les vérifications et obtenir des verrous au lieu d'utiliser un instantané de base de données interne.
 
 
 

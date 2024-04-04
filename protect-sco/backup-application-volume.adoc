@@ -38,9 +38,9 @@ La page protection du volume de l'application s'affiche.
  a| 
 Utilisez le format de nom personnalisé pour la copie Snapshot
  a| 
-Cochez cette case, puis entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+Cochez cette case, puis entrez un format de nom personnalisé à utiliser pour le nom du snapshot.
 
-Par exemple, clienttext__policy_hostname ou Resource_hostname. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Par exemple, clienttext__policy_hostname ou Resource_hostname. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 
 

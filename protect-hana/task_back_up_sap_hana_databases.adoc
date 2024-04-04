@@ -16,7 +16,7 @@ Si une ressource ne fait pas encore partie d'un groupe de ressources, vous pouve
 .Avant de commencer
 * Vous devez avoir créé une stratégie de sauvegarde.
 * Si vous souhaitez sauvegarder une ressource avec une relation SnapMirror avec un système de stockage secondaire, le rôle ONTAP attribué à l'utilisateur de stockage doit inclure le privilège « napmirror All ». Toutefois, si vous utilisez le rôle « vsadmin », le privilège « napmirror all » n'est pas requis.
-* Pour une opération de sauvegarde basée sur des copies Snapshot, assurez-vous que toutes les bases de données de tenant sont valides et actives.
+* Pour l'opération de sauvegarde basée sur des copies Snapshot, vérifiez que toutes les bases de données des locataires sont valides et actives.
 * Pour créer des sauvegardes de réplication du système SAP HANA, il est recommandé d'ajouter toutes les ressources du système SAP HANA dans un groupe de ressources. Cela garantit une sauvegarde transparente en mode basculement/retour arrière.
 +
 link:task_create_resource_groups_and_attach_policies.html["Créer des groupes de ressources et attacher des stratégies"].
@@ -28,7 +28,7 @@ link:task_back_up_resource_groups_sap_hana.html["Sauvegarder les groupes de ress
 +
 Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter au https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"]
 
-* Pour les commandes pré et post pour les opérations de mise au repos, de copie Snapshot et d'annulation de la mise au repos, vous devez vérifier que les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir des chemins suivants :
+* Pour les commandes PRE et post pour les opérations quiesce, Snapshot et unquiesce, vous devez vérifier que les commandes existent dans la liste de commandes disponible sur l'hôte plug-in à partir des chemins suivants :
 +
 Pour Windows : _C:\Program Files\NetApp\SnapCenter\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands_list.txt_
 
@@ -47,9 +47,9 @@ NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération �
 Sélectionnez *image:../media/filter_icon.png[""]*, puis sélectionnez le nom d'hôte et le type de ressource pour filtrer les ressources. Vous pouvez ensuite sélectionner image:../media/filter_icon.png[""] pour fermer le volet de filtre.
 
 . Sélectionnez la ressource à sauvegarder.
-. Sur la page ressource, sélectionnez *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de la copie Snapshot.
+. Dans la page ressource, sélectionnez *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de l'instantané.
 +
-Par exemple, _customtext_policy_hostname_ ou _Resource_hostname_. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Par exemple, _customtext_policy_hostname_ ou _Resource_hostname_. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 . Dans la page Paramètres de l'application, procédez comme suit :
 +
@@ -65,7 +65,7 @@ Activez la sauvegarde du groupe de cohérence, si nécessaire, et effectuez les 
  a| 
 Temps d'attente avant la fin de l'opération de snapshot de groupe de cohérence
  a| 
-Sélectionnez *urgent*, ou *Moyen* ou *relâché* pour spécifier le temps d'attente pour la fin de l'opération de copie Snapshot. Urgent = 5 secondes, Moyen = 7 secondes et détendu = 20 secondes.
+Sélectionnez *urgent*, ou *Moyen*, ou *détendu* pour spécifier le temps d'attente pour la fin de l'opération Snapshot. Urgent = 5 secondes, Moyen = 7 secondes et détendu = 20 secondes.
 
 
 
@@ -75,12 +75,12 @@ Désactivez la synchronisation WAFL
 Sélectionnez cette option pour éviter de forcer un point de cohérence WAFL.
 
 |===
-** Sélectionnez la flèche *scripts* pour exécuter les commandes pré et post pour les opérations quiesce, Snapshot copy et unquiesce.
+** Sélectionnez la flèche *scripts* pour exécuter des commandes pré et post pour les opérations quiesce, Snapshot et unquiesce.
 +
 Vous pouvez également exécuter des pré-commandes avant de quitter l'opération de sauvegarde. Des préscripts et des postscripts sont exécutés sur le serveur SnapCenter.
 
 ** Sélectionnez la flèche **configurations personnalisées **, puis entrez les paires de valeurs personnalisées requises pour tous les travaux utilisant cette ressource.
-** Sélectionner la flèche *Snapshot Copy Tool* pour sélectionner l'outil de création de copies Snapshot :
+** Sélectionner la flèche *outil de copie d'instantanés* pour sélectionner l'outil de création d'instantanés :
 +
 |===
 | Les fonctions que vous recherchez... | Alors... 
@@ -94,16 +94,16 @@ Sélectionnez *SnapCenter sans cohérence du système de fichiers*.
 
 
  a| 
-SnapCenter permettant d'utiliser le plug-in pour Windows afin de rétablir la cohérence du système de fichiers, puis de créer une copie Snapshot
+SnapCenter pour utiliser le plug-in pour Windows afin de mettre le système de fichiers dans un état cohérent, puis de créer un Snapshot
  a| 
 Sélectionnez *SnapCenter avec cohérence du système de fichiers*.
 
 
 
  a| 
-Pour saisir la commande afin de créer une copie Snapshot
+Pour saisir la commande permettant de créer un Snapshot
  a| 
-Sélectionnez *autre*, puis entrez la commande pour créer une copie Snapshot.
+Sélectionnez *autre*, puis entrez la commande pour créer un instantané.
 
 |===
 +

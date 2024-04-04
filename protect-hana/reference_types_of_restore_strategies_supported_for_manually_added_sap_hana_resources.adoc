@@ -24,7 +24,7 @@ NOTE: Vous ne pouvez pas restaurer des ressources SAP HANA ajoutées manuellemen
 
 
 
-NOTE: Si la ressource contient des volumes ou des qtrees, les copies Snapshot sont supprimées après la copie Snapshot sélectionnée pour être restaurées sur de tels volumes ou qtrees et ne peuvent pas être restaurées. De même, si une autre ressource est hébergée sur les mêmes volumes ou qtrees, cette ressource est également supprimée.
+NOTE: Si la ressource contient des volumes ou des qtrees, les snapshots pris après le Snapshot sélectionné pour la restauration sur ces volumes ou ces qtrees sont supprimés et ne peuvent pas être restaurés. De même, si une autre ressource est hébergée sur les mêmes volumes ou qtrees, cette ressource est également supprimée.
 
 
 

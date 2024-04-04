@@ -20,15 +20,15 @@ Si une ressource ne fait pas partie d'un groupe de ressources, vous pouvez sauve
 . Sélectionnez le système de fichiers à sauvegarder.
 . Dans la page Ressources, vous pouvez effectuer les opérations suivantes :
 +
-.. Cochez la case et entrez un format de nom personnalisé à utiliser pour le nom de la copie Snapshot.
+.. Cochez la case et entrez un format de nom personnalisé à utiliser pour le nom du snapshot.
 +
-Par exemple : `customtext_policy_hostname` ou `resource_hostname`. Par défaut, un horodatage est ajouté au nom de la copie Snapshot.
+Par exemple : `customtext_policy_hostname` ou `resource_hostname`. Par défaut, un horodatage est ajouté au nom du Snapshot.
 
 
 
 . Dans la page Paramètres de l'application, effectuez les opérations suivantes :
 +
-** Sélectionnez la flèche scripts et entrez les commandes pré et post pour les opérations quiesce, Snapshot copy et unquiesce. Vous pouvez également saisir les pré-commandes à exécuter avant de quitter en cas de défaillance.
+** Sélectionnez la flèche scripts et entrez les commandes pré et post pour les opérations quiesce, Snapshot et unquiesce. Vous pouvez également saisir les pré-commandes à exécuter avant de quitter en cas de défaillance.
 ** Sélectionnez l'une des options de cohérence des sauvegardes :
 +
 *** Sélectionnez *File System cohérente* si vous voulez vous assurer que les données en cache des systèmes de fichiers sont vidées avant de créer la sauvegarde et qu'aucune opération n'est effectuée sur le système de fichiers lors de la création de la sauvegarde.

@@ -76,3 +76,20 @@ NOTE: Si la dernière sauvegarde restante est supprimée, les entrées du catalo
 NOTE: Si certaines sauvegardes de base de données obsolètes se trouvent dans SnapCenter qui ne disposent pas des sauvegardes correspondantes sur le système de stockage, vous devez utiliser la commande remove-smbackup pour nettoyer ces entrées de sauvegarde obsolètes. Si les sauvegardes obsolètes ont été cataloguées, elles seront décataloguées à partir de la base de données du catalogue de reprise.
 
 
+
+
+
+== Déposer la protection
+
+Supprimer la protection supprime toutes les sauvegardes et détache toutes les règles. Avant de supprimer la protection, assurez-vous que les sauvegardes ne sont pas montées et qu'aucun clone n'est associé à la sauvegarde.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez la ressource ou le groupe de ressources dans la liste déroulante *Affichage*.
+. Sélectionnez la ressource ou le groupe de ressources dans la liste.
++
+La page topologie des ressources ou des groupes de ressources s'affiche.
+
+. Sélectionnez la sauvegarde et cliquez sur *Supprimer la protection*.
+

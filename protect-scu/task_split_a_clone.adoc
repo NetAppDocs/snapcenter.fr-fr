@@ -1,16 +1,14 @@
-= 
-:allow-uri-read: 
-
-
---
-lien permanent : protect-scu/task_split_a_clone.html
-encadré : encadré
-mots-clés : clone divisé, SnapCenter
-résumé : 'vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent.'
 ---
-= diviser un clone
-:icons : police
+permalink: protect-scu/task_split_a_clone.html 
+sidebar: sidebar 
+keywords: split clone, snapcenter 
+summary: Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent. 
+---
+= Séparer un clone
+:allow-uri-read: 
+:icons: font
 :imagesdir: ../media/
+
 
 [role="lead"]
 Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent.
@@ -77,5 +75,3 @@ L'opération de démarrage du fractionnement du clone échoue si la sauvegarde, 
 
 .Informations associées
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["Le clone SnapCenter ou une vérification échoue avec un agrégat"]
-
---

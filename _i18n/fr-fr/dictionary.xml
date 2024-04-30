@@ -8298,14 +8298,6 @@ Les informations relatives aux paramètres pouvant être utilisés avec la comma
   <block id="40b141d81ebc81d0277454ddd95983be" category="paragraph">Après une sauvegarde à la demande, en cliquant sur le bouton *Refresh*, vous actualisez les détails de la sauvegarde ou du clone.</block>
   <block id="e3eb3098d9512640ba3691ccfbed50f5" category="paragraph">Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
   <block id="f1472e722e81a79d38810332425a4e76" category="paragraph">Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou reportez-vous à la<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block>.</block>
-  <block id="5145b2adfb55517e007962efd2a08be6" category="paragraph">lien permanent : protect-scu/task_split_a_clone.html
-encadré : encadré
-mots-clés : clone divisé, SnapCenter
-résumé : 'vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent.'
----
-= diviser un clone
-:icons : police
-:imagesdir: ../media/</block>
   <block id="e9b924bbf420ab11fb241e13f75a92c1" category="summary">Après avoir installé le plug-in pour les systèmes de fichiers Unix, les systèmes de fichiers de l'hôte sont automatiquement découverts et affichés dans la page Ressources.</block>
   <block id="5f6bb3736007978d5604be7df99325f8" category="doc">Découvrez les systèmes de fichiers UNIX disponibles pour la sauvegarde</block>
   <block id="c94588b5932cbd964b99829c9c53f185" category="paragraph">Après l'installation du plug-in, tous les systèmes de fichiers de cet hôte sont automatiquement détectés et affichés dans la page Ressources. Vous pouvez ajouter ces systèmes de fichiers à des groupes de ressources pour effectuer des opérations de protection des données.</block>
@@ -9074,4 +9066,7 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="bf971f3c72b83a1aac6d9fe1cb39850c" category="admonition">Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent sur le stockage secondaire. La suppression des snapshots est gérée par les paramètres de conservation ONTAP.</block>
   <block id="eb71c7e77b1cb5486117cdac9d378fb6" category="list-text">Si vous souhaitez spécifier un nom d'instantané personnalisé, dans la page Ressources, cochez la case *utiliser le format de nom personnalisé pour la copie d'instantané*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom d'instantané.</block>
   <block id="2457e427df18c87448fa7fa796d115c7" category="paragraph">Pour sauvegarder des boîtes aux lettres Exchange avec SnapCenter, il vous faut choisir le type de ressource, comme les bases de données et les groupes de disponibilité de base de données. Elle permet de créer des copies en ligne en lecture seule des volumes sur lesquels résident les ressources.</block>
+  <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">Déposer la protection</block>
+  <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">Supprimer la protection supprime toutes les sauvegardes et détache toutes les règles. Avant de supprimer la protection, assurez-vous que les sauvegardes ne sont pas montées et qu'aucun clone n'est associé à la sauvegarde.</block>
+  <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">Sélectionnez la sauvegarde et cliquez sur *Supprimer la protection*.</block>
 </blocks>

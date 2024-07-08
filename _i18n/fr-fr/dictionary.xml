@@ -5906,7 +5906,6 @@
   <block id="6347721d31864738b0e7a03f5553e69b" category="section-title">Configuration requise pour l'hôte AIX</block>
   <block id="fed30036a3caffc826b4e66f434f67ea" category="paragraph">Vous devez vous assurer que l'hôte répond aux exigences requises avant d'installer le module de plug-ins SnapCenter pour AIX.</block>
   <block id="cddfaa01c32e2362546c78364751248b" category="admonition">Le plug-in SnapCenter pour UNIX qui fait partie du package de plug-ins SnapCenter pour AIX ne prend pas en charge les groupes de volumes simultanés.</block>
-  <block id="895327977020e495debf0b375c7541d8" category="paragraph">AIX 6.1 ou version ultérieure</block>
   <block id="f805f99adc12df0c565005d33166c7bc" category="section-title">Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte AIX</block>
   <block id="841774125775c871852a88e3823b3b8c" category="list-text">/Home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx</block>
   <block id="c9d390513716fa3f8a5e273f77a61c88" category="list-text">Connectez-vous à l'hôte AIX sur lequel vous souhaitez installer SnapCenter Plug-ins Package pour AIX.</block>
@@ -9069,4 +9068,5 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">Déposer la protection</block>
   <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">Supprimer la protection supprime toutes les sauvegardes et détache toutes les règles. Avant de supprimer la protection, assurez-vous que les sauvegardes ne sont pas montées et qu'aucun clone n'est associé à la sauvegarde.</block>
   <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">Sélectionnez la sauvegarde et cliquez sur *Supprimer la protection*.</block>
+  <block id="ad569cc1cca820033bb20ffe1d5bc4a5" category="paragraph">AIX 7.1 ou version ultérieure</block>
 </blocks>

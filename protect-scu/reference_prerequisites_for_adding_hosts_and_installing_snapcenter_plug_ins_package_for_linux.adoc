@@ -19,7 +19,7 @@ Avant d'ajouter un hôte et d'installer le package de plug-ins pour Linux, vous 
 Le plug-in SnapCenter pour systèmes de fichiers Unix peut être installé par un utilisateur non root. Cependant, vous devez configurer les privilèges sudo pour que l'utilisateur non-root installe et démarre le processus de plug-in. Après l'installation du plug-in, les processus s'exécutent en tant qu'utilisateur non-racine efficace.
 
 * Créez des informations d'identification avec le mode d'authentification Linux pour l'utilisateur d'installation.
-* Vous devez avoir installé Java 1.8.x ou Java 11, 64 bits, sur votre hôte Linux.
+* Vous devez avoir installé Java 11 sur votre hôte Linux.
 +
 
 NOTE: Assurez-vous que vous avez installé uniquement l'édition certifiée DE JAVA 11 sur l'hôte Linux.
@@ -70,9 +70,7 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-* Java 1.8.x (64 bits) Oracle Java et OpenJDK
-* Java 11 (64 bits) Oracle Java et OpenJDK
-
+Java 11 Oracle Java et OpenJDK
 
 
 NOTE: Assurez-vous que vous avez installé uniquement l'édition certifiée DE JAVA 11 sur l'hôte Linux.

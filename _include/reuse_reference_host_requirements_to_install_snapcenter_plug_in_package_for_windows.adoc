@@ -37,9 +37,9 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-* Microsoft .NET Framework 4.7.2 ou version ultérieure
-* Windows Management Framework (WMF) 4.0 ou version ultérieure
-* PowerShell 4.0 ou version ultérieure
+* . Noyau NET 8.0.5
+* PowerShell Core 7.4.2
+* Java 11 Oracle Java et OpenJDK
 
 
 Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=117007;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].

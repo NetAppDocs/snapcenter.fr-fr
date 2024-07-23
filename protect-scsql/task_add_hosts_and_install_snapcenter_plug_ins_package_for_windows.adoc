@@ -14,12 +14,18 @@ summary: Vous devez utiliser la page SnapCenterAdd Host pour ajouter des hôtes 
 Vous devez utiliser la page SnapCenter *Ajouter hôte* pour ajouter des hôtes et installer le module de plug-ins. Les plug-ins sont automatiquement installés sur les hôtes distants.
 
 .Avant de commencer
+* Si le système d'exploitation de l'hôte du serveur SnapCenter est Windows 2019 et que le système d'exploitation de l'hôte du plug-in est Windows 2022, effectuez les opérations suivantes :
++
+** Mise à niveau vers Windows Server 2019 (se Build 17763.5936) ou version ultérieure
+** Mise à niveau vers Windows Server 2022 (se Build 20348.2402) ou version ultérieure
+
+
 * Vous devez être un utilisateur affecté à un rôle disposant des autorisations d'installation et de désinstallation du plug-in, comme le rôle d'administrateur SnapCenter.
 * Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré, vous devez désactiver l'UAC sur l'hôte.
 * Vous devez vous assurer que le service de mise en file d'attente des messages est en cours d'exécution.
 * Si vous utilisez le compte de service géré de groupe (GMSA), vous devez configurer GMSA avec des privilèges d'administration.
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later.html["Configurez le compte de service géré par groupe sous Windows Server 2012 ou version ultérieure pour SQL"^]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["Configurez le compte de service géré par groupe sous Windows Server 2016 ou version ultérieure pour SQL"^]
 
 
 

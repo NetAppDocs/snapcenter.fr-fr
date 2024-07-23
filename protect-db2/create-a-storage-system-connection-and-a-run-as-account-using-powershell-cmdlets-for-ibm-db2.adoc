@@ -1,0 +1,95 @@
+---
+permalink: protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 'Vous devez créer une connexion SVM et un identifiant avant d"utiliser les applets de commande PowerShell pour sauvegarder, restaurer ou cloner les bases de données IBM DB2.' 
+---
+= Créez une connexion au système de stockage et des informations d'identification à l'aide des applets de commande PowerShell pour IBM DB2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez créer une connexion SVM et un identifiant avant d'utiliser les applets de commande PowerShell pour sauvegarder, restaurer ou cloner les bases de données IBM DB2.
+
+.Avant de commencer
+* Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
+* Pour créer des connexions de stockage, vous devez disposer des autorisations requises dans le rôle d'administrateur d'infrastructure.
+* Vous devez vous assurer que les installations du plug-in ne sont pas en cours.
++
+Les installations de plug-ins hôtes ne doivent pas être en cours d'ajout d'une connexion au système de stockage, car le cache hôte n'est pas nécessairement mis à jour et l'état des bases de données peut être affiché dans l'interface utilisateur graphique de SnapCenter sous la forme « non disponible pour la sauvegarde » ou « non sur le stockage NetApp ».
+
+* Les noms des systèmes de stockage doivent être uniques.
++
+SnapCenter ne prend pas en charge plusieurs systèmes de stockage portant le même nom sur des clusters différents. Chaque système de stockage pris en charge par SnapCenter doit disposer d'un nom unique et d'une adresse IP de LIF de données unique.
+
+
+
+.Étapes
+. Cliquez sur *SnapCenterPS* pour lancer PowerShell Core.
+. Créez une nouvelle connexion au système de stockage à l'aide de l'applet de commande Add-SmStorageConnection.
++
+[listing]
+----
+PS C:\> Add-SmStorageConnection -StorageType DataOntap -Type DataOntap -OntapStorage ‘scsnfssvm’ -Protocol Https -Timeout 60
+----
+. Créez une nouvelle information d'identification à l'aide de l'applet de commande Add-SmCredential.
++
+Cet exemple montre comment créer un nouvel identifiant nommé FinancieAdmin avec les informations d'identification Windows :
+
++
+[listing]
+----
+PS C:\> Add-SmCredential -Name 'FinanceAdmin' -Type Linux -AuthenticationType PasswordBased -Credential db2hostuser -EnableSudoPrevileges:$true
+----
+. Ajoutez l'hôte de communication IBM DB2 au serveur SnapCenter.
++
+Pour Linux :
+
++
+[listing]
+----
+PS C:\> Add-SmHost -HostType Linux -HostName '10.232.204.61' -CredentialName 'defaultcreds'
+----
++
+Pour Windows :
+
++
+[listing]
+----
+PS C:\> Add-SmHost -HostType Windows -HostName '10.232.204.61' -CredentialName 'defaultcreds'
+----
+. Installez le package et le plug-in SnapCenter pour IBM DB2 sur l'hôte.
++
+Pour Linux :
+
++
+[listing]
+----
+PS C:\> Install-SmHostPackage -HostNames '10.232.204.61' -PluginCodes DB2
+----
++
+Pour Windows :
+
++
+[listing]
+----
+PS C:\> Install-SmHostPackage -HostNames '10.232.204.61' -PluginCodes DB2,SCW
+----
+. Définissez le chemin d'accès à SQLLIB.
++
+Sous Windows, le plug-in DB2 utilise le chemin par défaut du dossier SQLLIB : « C:\Program Files\IBM\SQLLIB\BIN ».
+
++
+Si vous souhaitez remplacer le chemin par défaut, utilisez la commande suivante.
+
++
+[listing]
+----
+PS C:\> Set-SmConfigSettings -Plugin -HostName '10.232.204.61' -PluginCode DB2 -configSettings @{"DB2_SQLLIB_CMD"="<custom_path>\IBM\SQLLIB\BIN"}
+
+----
+
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter à la https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

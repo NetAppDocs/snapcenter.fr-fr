@@ -88,6 +88,16 @@ SnapCenter ne permet pas de sauvegarder des données ou des partages utilisant l
 
 
  a| 
+VM VMware
+ a| 
+Datastores vVol sur NFS et SAN
+ a| 
+Outils ONTAP pour VMware vSphere
+ a| 
+
+
+
+ a| 
 Serveur virtuel Hyper-V.
  a| 
 LUN FC virtuels (VFC) connectés par un commutateur Fibre Channel virtuel

@@ -44,15 +44,6 @@ La licence SnapCenter Standard est basée sur le contrôleur et incluse dans le 
 
 
  a| 
-SnapCenter Standard basé sur la capacité
- a| 
-Requis avec ONTAP Select et Cloud Volumes ONTAP
-
-Si vous êtes un client Cloud Volumes ONTAP ou ONTAP Select, vous devez obtenir une licence basée sur la capacité par To en fonction des données gérées par SnapCenter. Par défaut, SnapCenter propose une licence d'évaluation standard basée sur la capacité SnapCenter 90 jours intégrée, avec une capacité de 100 To. Pour plus d'informations, contactez l'ingénieur commercial.
-
-
-
- a| 
 SnapMirror ou SnapVault
  a| 
 ONTAP
@@ -99,7 +90,7 @@ Voir https://imt.netapp.com/matrix/imt.jsp?components=117008;&solution=1259&isHW
 CPU
  a| 
 * Hôte du serveur : 4 cœurs
-* Plug-in hôte : 1 cœur
+* Hôte plug-in : 4 cœurs
 
 
 
@@ -108,7 +99,7 @@ CPU
 RAM
  a| 
 * Hôte du serveur : 8 Go
-* Plug-in hôte : 1 Go
+* Hôte plug-in : 4 Go
 
 
 
@@ -118,8 +109,8 @@ Espace disque dur
  a| 
 Hôte serveur :
 
-* 4 Go pour le logiciel SnapCenter Server et les journaux
-* 6 Go pour le référentiel SnapCenter
+* 7 Go pour le logiciel SnapCenter Server et les journaux
+* 8 Go pour le référentiel SnapCenter
 * Chaque hôte de plug-in : 2 Go pour l'installation et les journaux, cette opération est requise uniquement si le plug-in est installé sur un hôte dédié.
 
 
@@ -131,8 +122,8 @@ Bibliothèques tierces
 Requis sur l'hôte SnapCenter Server et l'hôte du plug-in :
 
 * Microsoft .NET Framework 4.7.2 ou version ultérieure
-* Windows Management Framework (WMF) 4.0 ou version ultérieure
-* PowerShell 4.0 ou version ultérieure
+* ASP. Bundle d'hébergement NET Core (8.0.5 ou version ultérieure)
+* PowerShell 7.4.2 ou version ultérieure
 
 
 

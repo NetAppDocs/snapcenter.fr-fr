@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Storage types 
 summary: 'SnapCenter prend en charge un large éventail de types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier si la prise en charge de votre type de stockage est disponible avant d"installer le package pour votre hôte.' 
 ---
-= Types de stockage pris en charge par les plug-ins SnapCenter pour Microsoft Windows
+= Types de stockage pris en charge par le plug-in SnapCenter pour Microsoft Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -93,6 +93,16 @@ Interface graphique SnapCenter ou applets de commande PowerShell
 Prise en charge du provisionnement uniquement.
 
 SnapCenter ne permet pas de sauvegarder des données ou des partages utilisant le protocole SMB.
+
+
+
+ a| 
+VM VMware
+ a| 
+Datastores vVol sur NFS et SAN
+ a| 
+Outils ONTAP pour VMware vSphere
+ a| 
 
 
 

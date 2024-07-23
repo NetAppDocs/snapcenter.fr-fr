@@ -59,9 +59,20 @@ Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/instal
 
 
  a| 
+Port de service du planificateur
+ a| 
+8154 (HTTPS)
+
+Ce port permet d'orchestrer de manière centralisée les flux de travail du planificateur SnapCenter pour tous les plug-ins gérés au sein de l'hôte du serveur SnapCenter.
+
+Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installez le serveur SnapCenter à l'aide de l'assistant d'installation."]
+
+
+
+ a| 
 Port MySQL
  a| 
-3306 (HTTPS), bidirectionnel
+3306 (HTTPS), bidirectionnel, personnalisable
 
 Le port est utilisé pour la communication entre SnapCenter et la base de données de référentiel MySQL.
 
@@ -118,7 +129,18 @@ Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/protec
 
 
  a| 
-Plug-ins personnalisés pour SnapCenter
+Plug-in SnapCenter pour base de données Exchange
+ a| 
+909, personnalisable
+
+Le NET par défaut. Le port TCP est utilisé par le plug-in pour Windows pour se connecter aux rappels Exchange VSS.
+
+Pour personnaliser le port, voir link:../protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html["Ajoutez des hôtes et installez le plug-in pour Exchange"].
+
+
+
+ a| 
+Plug-ins pris en charge par NetApp pour SnapCenter
  a| 
 9090 (HTTPS), fixe
 

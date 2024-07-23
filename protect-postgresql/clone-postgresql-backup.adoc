@@ -1,0 +1,121 @@
+---
+permalink: protect-postgresql/clone-postgresql-backup.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL,run as 
+summary: 'Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d"une sauvegarde principale ou secondaire.' 
+---
+= Cloner une sauvegarde PostgreSQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d'une sauvegarde principale ou secondaire.
+
+.Avant de commencer
+* Vous devriez avoir sauvegardé les ressources ou le groupe de ressources.
+* Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
+* Pour les commandes pré-clone ou post-clone, vérifiez si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir des chemins suivants :
++
+Pour Windows : _C:\Program Files\NetApp\SnapCenter\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands_list.txt_
+
++
+Pour Linux : _/var/opt/snapcenter/scc/allowed_commands_list.txt_
+
+
+
+
+NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération échoue.
+
+.Description de la tâche
+* Pour plus d'informations sur les limites des opérations de fractionnement de clonage, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guide de gestion du stockage logique ONTAP 9"^].
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
++
+Les ressources s'affichent avec des informations telles que le type, l'hôte, les groupes de ressources et les stratégies associés et l'état.
+
+. Sélectionnez la ressource ou le groupe de ressources.
++
+Vous devez sélectionner une ressource si vous sélectionnez un groupe de ressources.
+
++
+La page topologie des ressources ou des groupes de ressources s'affiche.
+
+. Dans la vue gestion des copies, sélectionnez *sauvegardes* dans les systèmes de stockage primaire ou secondaire (en miroir ou en stockage).
+. Sélectionnez la sauvegarde des données dans le tableau, puis cliquez sur image:../media/clone_icon.gif["icône cloner"].
+. Dans la page emplacement, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Serveur clone
+ a| 
+Choisissez l'hôte sur lequel le clone doit être créé.
+
+
+
+ a| 
+Port cible
+ a| 
+Entrez le port cible PostgreSQL à cloner à partir des sauvegardes existantes.
+
+
+
+ a| 
+Adresse IP d'exportation NFS
+ a| 
+Entrez les adresses IP ou les noms d'hôte sur lesquels les volumes clonés seront exportés.
+
+Cela s'applique uniquement à la ressource de type de stockage NFS.
+
+
+
+ a| 
+Capacité du pool max. Débit (Mio/s)
+ a| 
+Entrez le débit maximal d'un pool de capacité.
+
+Cela s'applique uniquement aux ressources de type de stockage ANF.
+
+|===
+. Dans la page scripts, effectuez les opérations suivantes :
++
+
+NOTE: Les scripts sont exécutés sur l'hôte du plug-in.
+
++
+.. Entrez les commandes du pré-clonage ou du post-clonage qui doivent être exécutées avant ou après l'opération de clonage, respectivement.
++
+*** Commande pré-clonage : supprimez les clusters existants portant le même nom
+*** Commande post-clonage : vérification d'un cluster ou démarrage d'un cluster
+
+
+.. Entrez la commande mount pour monter un système de fichiers sur un hôte.
++
+Commande mount pour un volume ou un qtree sur une machine Linux :
+
++
+Exemple pour NFS :
+
++
+ mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
++
+
+NOTE: Pour les commandes pré et post pour les opérations quiesce, Snapshot et unquiesce, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir de _/opt/snapcenter/snapcenter/scc/allowed_commands.config_ path pour Linux et _C:\Program Files\NetApp\txt Plug-in Creator\etc\SnapCenter_list_commandes pour Windows.
+
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+

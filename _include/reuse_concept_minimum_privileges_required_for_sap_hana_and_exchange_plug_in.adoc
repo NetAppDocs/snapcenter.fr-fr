@@ -64,6 +64,7 @@ Les privilèges minimum ONTAP requis varient en fonction des plug-ins SnapCenter
 ** création de copies snapshot de volume
 ** suppression du snapshot de volume
 ** modification de snapshot de volume
+** volume snapshot modify-snaplock-expiration-time
 ** renommage snapshot de volume
 ** restauration snapshot du volume
 ** fichier de restauration de snapshot de volume

@@ -14,6 +14,9 @@ summary: 'Pour prendre en charge la haute disponibilité \(HA\) dans SnapCenter,
 Pour prendre en charge la haute disponibilité (HA) dans SnapCenter, vous pouvez installer l'équilibreur de charge F5. F5 permet au serveur SnapCenter de prendre en charge les configurations actif-passif dans un maximum de deux hôtes au même emplacement. Pour utiliser F5 Load Balancer dans SnapCenter, vous devez configurer les serveurs SnapCenter et l'équilibreur de charge F5.
 
 
+NOTE: SnapCenter prend également en charge l'équilibrage de la charge AWS Elastic Load Balancing (ELB) et Azure.
+
+
 IMPORTANT: Si vous avez effectué une mise à niveau à partir de SnapCenter 4.2.x et que vous utilisiez précédemment l'équilibrage de la charge du réseau (NLB), vous pouvez continuer à utiliser cette configuration ou passer à F5.
 
 L'image de workflow répertorie les étapes de configuration des serveurs SnapCenter pour une haute disponibilité à l'aide de F5 Load Balancer. Pour des instructions détaillées, voir https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["Comment configurer les serveurs SnapCenter pour la haute disponibilité à l'aide de F5 Load Balancer"^].
@@ -26,7 +29,7 @@ Vous devez être membre du groupe administrateurs locaux sur les serveurs SnapCe
 * Add-SmServer
 * Remove-SmServerCluster
 +
-Pour plus d'informations, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Pour plus d'informations, voir https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 
 

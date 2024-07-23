@@ -26,7 +26,7 @@ Pour plus d'informations sur la manière dont les administrateurs attribuent des
 +
 La valeur par défaut est FALSE.
 
-* Pour plus d'informations sur SnapMirror Business Continuity (SM-BC), consultez le document https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limites des objets pour la continuité de l'activité SnapMirror"].
+* Vérifiez les prérequis et les limites spécifiques de la synchronisation active SnapMirror. Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limites d'objet pour la synchronisation active SnapMirror"].
 
 
 .Description de la tâche
@@ -273,7 +273,7 @@ Mettez à jour SnapMirror après la création d'une copie Snapshot locale.
 
 . Sélectionnez cette option pour créer des copies miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
 +
-Cette option doit être activée pour SnapMirror Business Continuity (SM-BC) ou pour SnapMirror Sync (SM-S).
+Cette option doit être activée pour la synchronisation active SnapMirror.
 
 +
 Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal. Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.

@@ -1,0 +1,22 @@
+---
+permalink: protect-db2/restore-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations. 
+---
+= Restaurer le flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations.
+
+Le flux de travail suivant montre l'ordre dans lequel vous devez effectuer l'opération de restauration :
+
+image::../media/db2_restore_workflow.png[Restaurer le flux de travail]
+
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. L'aide de la cmdlet de SnapCenter et les informations de référence de la cmdlet contiennent des informations détaillées sur les applets de commande PowerShell.
+
+https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

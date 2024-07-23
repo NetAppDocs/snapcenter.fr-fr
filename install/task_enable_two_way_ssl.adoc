@@ -1,17 +1,17 @@
 ---
 permalink: install/task_enable_two_way_ssl.html 
 sidebar: sidebar 
-keywords: security,disable two-way SSL,enable two-way SSL 
-summary: 'Vous pouvez activer la communication SSL bidirectionnelle pour sécuriser la communication mutuelle entre le serveur SnapCenter et les plug-ins à l"aide des commandes PowerShell.' 
+keywords: security,disable two-way SSL,enable two-way SSL, windows host 
+summary: 'Vous pouvez activer la communication SSL bidirectionnelle pour sécuriser la communication mutuelle entre SnapCenter Server sur l"hôte Windows et les plug-ins à l"aide des commandes PowerShell.' 
 ---
-= Activez la communication SSL bidirectionnelle
+= Activez la communication SSL bidirectionnelle sur l'hôte Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Vous pouvez activer la communication SSL bidirectionnelle pour sécuriser la communication mutuelle entre le serveur SnapCenter et les plug-ins à l'aide des commandes PowerShell.
+Vous pouvez activer la communication SSL bidirectionnelle pour sécuriser la communication mutuelle entre SnapCenter Server sur l'hôte Windows et les plug-ins à l'aide des commandes PowerShell.
 
 *Avant de commencer*
 

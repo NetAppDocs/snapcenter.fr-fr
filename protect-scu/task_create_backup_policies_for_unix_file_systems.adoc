@@ -16,6 +16,7 @@ Avant d'utiliser SnapCenter pour sauvegarder des systèmes de fichiers Unix, vou
 .Avant de commencer
 * Vous devez vous préparer à la protection des données en réalisant des tâches telles que l'installation de SnapCenter, l'ajout d'hôtes, la découverte des systèmes de fichiers et la création de connexions au système de stockage.
 * Si vous répliquez des snapshots sur un stockage secondaire de copie miroir ou d'archivage sécurisé, l'administrateur SnapCenter doit vous avoir assigné les SVM pour les volumes source et de destination.
+* Vérifiez les prérequis et les limites spécifiques de la synchronisation active SnapMirror. Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limites d'objet pour la synchronisation active SnapMirror"].
 
 
 .Étapes
@@ -68,6 +69,8 @@ NOTE: Vous ne pouvez conserver les sauvegardes du journal d'archivage que si vou
 Mettez à jour SnapMirror après avoir créé une copie Snapshot locale
  a| 
 Sélectionnez ce champ pour créer des copies en miroir des jeux de sauvegarde sur un autre volume (réplication SnapMirror).
+
+Cette option doit être activée pour la synchronisation active SnapMirror.
 
 
 

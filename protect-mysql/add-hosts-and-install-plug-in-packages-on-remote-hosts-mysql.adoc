@@ -1,0 +1,155 @@
+---
+permalink: protect-mysql/add-hosts-and-install-plug-in-packages-on-remote-hosts-mysql.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Vous devez utiliser la page SnapCenter Ajouter un hôte pour ajouter des hôtes, puis installer les modules de plug-ins. Les plug-ins sont automatiquement installés sur les hôtes distants. Vous pouvez ajouter un hôte et installer des modules de plug-in pour un hôte individuel ou pour un cluster. 
+---
+= Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez utiliser la page SnapCenter Ajouter un hôte pour ajouter des hôtes, puis installer les modules de plug-ins. Les plug-ins sont automatiquement installés sur les hôtes distants. Vous pouvez ajouter l'hôte et installer des modules d'extension pour un hôte individuel.
+
+.Avant de commencer
+* Si le système d'exploitation de l'hôte du serveur SnapCenter est Windows 2019 et que le système d'exploitation de l'hôte du plug-in est Windows 2022, effectuez les opérations suivantes :
++
+** Mise à niveau vers Windows Server 2019 (se Build 17763.5936) ou version ultérieure
+** Mise à niveau vers Windows Server 2022 (se Build 20348.2402) ou version ultérieure
+
+
+* Vous devez être un utilisateur affecté à un rôle disposant des autorisations d'installation et de désinstallation du plug-in, comme le rôle d'administrateur SnapCenter.
+* Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré ou si l'utilisateur appartient à un utilisateur de groupe de travail local, vous devez désactiver l'UAC sur l'hôte.
+* Assurez-vous que le service de mise en file d'attente des messages est en cours d'exécution.
+* La documentation d'administration contient des informations sur la gestion des hôtes.
+
+
+.Description de la tâche
+* Vous ne pouvez pas ajouter un serveur SnapCenter en tant qu'hôte de plug-in à un autre serveur SnapCenter.
+
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Vérifiez que l'onglet *Managed Hosts* est sélectionné en haut.
+. Cliquez sur *Ajouter*.
+. Dans la page hôtes, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Type d'hôte
+ a| 
+Sélectionnez le type d'hôte :
+
+** Répertoires de base
+** Linux
++
+
+NOTE: Le plug-in pour MySQL doit être installé sur le serveur de base de données MySQL.
+
+
+
+
+
+ a| 
+Nom d'hôte
+ a| 
+Entrez le nom d'hôte de communication. Saisissez le nom de domaine complet (FQDN) ou l'adresse IP de l'hôte. SnapCenter dépend de la configuration appropriée du DNS. Par conséquent, la meilleure pratique consiste à saisir le FQDN.
+
+
+
+ a| 
+Informations d'identification
+ a| 
+Sélectionnez le nom d'identification que vous avez créé ou créez de nouvelles informations d'identification. Les informations d'identification doivent disposer de droits d'administration sur l'hôte distant. Pour plus de détails, reportez-vous aux informations sur la création des informations d'identification.
+
+Vous pouvez afficher des détails sur les informations d'identification en positionnant le curseur sur le nom des informations d'identification que vous avez fourni.
+
+
+NOTE: Le mode d'authentification des informations d'identification est déterminé par le type d'hôte que vous spécifiez dans l'assistant Ajout d'hôte.
+
+|===
+. Dans la section Sélectionner les plug-ins à installer, sélectionnez les plug-ins à installer.
++
+Lorsque vous utilisez l'API REST pour installer Plug-in pour MySQL, vous devez passer la version 3.0. Par exemple, MySQL:3.0
+
+. (Facultatif) cliquez sur *plus d'options*.
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Port
+ a| 
+Conservez le numéro de port par défaut ou spécifiez le numéro de port. Le numéro de port par défaut est 8145. Si le serveur SnapCenter a été installé sur un port personnalisé, ce numéro de port est affiché comme port par défaut.
+
+
+NOTE: Si vous avez installé manuellement les plug-ins et spécifié un port personnalisé, vous devez spécifier le même port. Dans le cas contraire, l'opération échoue.
+
+
+
+ a| 
+Chemin d'installation
+ a| 
+Le plug-in pour MySQL est installé sur l'hôte client MySQL, et cet hôte peut se trouver sur un système Windows ou Linux.
+
+** Pour le package de plug-ins SnapCenter pour Windows, le chemin par défaut est C:\Program Files\NetApp\SnapCenter. Vous pouvez également personnaliser le chemin.
+** Pour le package de plug-ins SnapCenter pour Linux, le chemin par défaut est /opt/NetApp/snapcenter. Vous pouvez également personnaliser le chemin.
+
+
+
+
+ a| 
+Ignorer les vérifications de préinstallation
+ a| 
+Cochez cette case si vous avez déjà installé les plug-ins manuellement et que vous ne souhaitez pas vérifier si l'hôte répond aux exigences d'installation du plug-in.
+
+
+
+ a| 
+Ajoutez tous les hôtes du cluster
+ a| 
+Sans objet.
+
+
+
+ a| 
+Utilisez le compte de service géré de groupe (GMSA) pour exécuter les services du plug-in
+ a| 
+Sans objet.
+
+|===
+. Cliquez sur *soumettre*.
++
+Si vous n'avez pas coché la case Ignorer les contrôles préalables, l'hôte est validé pour vérifier si l'hôte répond aux exigences d'installation du plug-in. L'espace disque, la RAM, la version PowerShell, la version .NET, l'emplacement (pour les plug-ins Windows) et la version Java (pour les plug-ins Linux) sont validés par rapport à la configuration minimale requise. Si la configuration minimale requise n'est pas respectée, des messages d'erreur ou d'avertissement appropriés s'affichent.
+
++
+Si l'erreur est liée à l'espace disque ou à la RAM, vous pouvez mettre à jour le fichier web.config situé à l'adresse C:\Program Files\NetApp\SnapCenter WebApp pour modifier les valeurs par défaut. Si l'erreur est liée à d'autres paramètres, vous devez corriger le problème.
+
++
+
+NOTE: Dans une configuration HA, si vous mettez à jour le fichier web.config, vous devez le mettre à jour sur les deux nœuds.
+
+. Si le type d'hôte est Linux, vérifiez l'empreinte digitale, puis cliquez sur *confirmer et soumettre*.
++
+Dans une configuration de cluster, vous devez vérifier l'empreinte de chacun des nœuds du cluster.
+
++
+
+NOTE: La vérification des empreintes est obligatoire même si le même hôte a été ajouté précédemment à SnapCenter et que l'empreinte a été confirmée.
+
+. Surveillez la progression de l'installation.
++
+** Pour le plug-in Windows, les journaux d'installation et de mise à niveau se trouvent à l'adresse suivante : _C:\Windows\SnapCenter plugin\Install_<JOBID>\_
+** Pour le plug-in Linux, les journaux d'installation se trouvent à l'adresse suivante : _/var/opt/snapcenter/logs/SnapCenter_Linux_Host_Plug-in_Install_<JOBID>.log_ et les journaux de mise à niveau se trouvent à l'adresse : _/var/opt/snapcenter/logs/SnapCenter_Linux_Host_Plug-in_Upgrade_<JOBID>.log_
+
+
+
+
+.Une fois que vous avez terminé
+Si vous souhaitez effectuer une mise à niveau vers la version SnapCenter 6.0, le plug-in PERL existant pour MySQL sera désinstallé du serveur de plug-in distant.

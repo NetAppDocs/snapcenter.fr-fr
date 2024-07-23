@@ -6,7 +6,9 @@ entries:
   url: "/upgrade/task_configure_snapcenter_to_check_for_available_updates.html"
 - title: Workflow de mise à niveau
   url: "/upgrade/upgrade_workflow.html"
-- title: Mettez à niveau le serveur SnapCenter
+- title: Mettez à niveau le serveur SnapCenter sur l'hôte Windows
   url: "/upgrade/task_upgrade_snapcenter.html"
+- title: Mettez à niveau le serveur SnapCenter sur un hôte Linux
+  url: "/upgrade/upgrade_snapcenter_server_linux.html"
 - title: Mettez à niveau vos modules d'extension
   url: "/upgrade/task_upgrade_your_plug_in_packages.html"

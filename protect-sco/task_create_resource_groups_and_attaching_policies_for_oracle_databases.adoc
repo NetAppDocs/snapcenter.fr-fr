@@ -25,8 +25,8 @@ L'image suivante illustre la relation entre les ressources, les groupes de resso
 image::../media/sco_resourcegroup_policy.gif[stratégie de groupe de ressources sco]
 
 * Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage de snapshot, les clones créés à partir des snapshots inviolables dans le cadre de la restauration hériteront de l'heure d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
-* L'ajout de nouvelles bases de données sans SM-BC à un groupe de ressources existant qui contient des ressources avec SM-BC n'est pas pris en charge.
-* L'ajout de nouvelles bases de données à un groupe de ressources existant en mode de basculement de SM-BC n'est pas pris en charge. Vous pouvez ajouter des ressources au groupe de ressources uniquement à l'état normal ou de retour arrière.
+* L'ajout de nouvelles bases de données sans synchronisation active SnapMirror à un groupe de ressources existant contenant des ressources avec la synchronisation active SnapMirror n'est pas pris en charge.
+* L'ajout de nouvelles bases de données à un groupe de ressources existant en mode de basculement de la synchronisation active SnapMirror n'est pas pris en charge. Vous pouvez ajouter des ressources au groupe de ressources uniquement à l'état normal ou de retour arrière.
 
 
 .Étapes

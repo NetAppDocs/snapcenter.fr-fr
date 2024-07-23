@@ -24,7 +24,7 @@ Pour préparer la protection des données, vous devez réaliser des tâches tell
 +
 La valeur par défaut est FALSE
 
-* Pour plus d'informations sur SnapMirror Business Continuity (SM-BC), consultez le document https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limites des objets pour la continuité de l'activité SnapMirror"].
+* Vérifiez les prérequis et les limites spécifiques de la synchronisation active SnapMirror. Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limites d'objet pour la synchronisation active SnapMirror"].
 
 
 .Description de la tâche
@@ -143,7 +143,7 @@ NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP
  a| 
 Sélectionnez cette option pour créer des copies miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
 
-Cette option doit être activée pour SnapMirror Business Continuity (SM-BC).
+Cette option doit être activée pour la synchronisation active SnapSnapMirror.
 
 Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal. Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
 

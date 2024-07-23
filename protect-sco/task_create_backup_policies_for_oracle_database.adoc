@@ -19,7 +19,7 @@ Avant d'utiliser SnapCenter pour sauvegarder les ressources de la base de donné
 * Vous devez être prêt pour la protection des données en exécutant des tâches telles que l'installation d'SnapCenter, l'ajout d'hôtes, la détection de bases de données et la création de connexions du système de stockage.
 * Si vous répliquez des snapshots sur un stockage secondaire de copie miroir ou d'archivage sécurisé, l'administrateur SnapCenter doit vous avoir assigné les SVM pour les volumes source et de destination.
 * Si vous avez installé le plug-in en tant qu'utilisateur non root, vous devez attribuer manuellement les autorisations d'exécution aux répertoires prescripteur et postscript.
-* Pour connaître les prérequis et les limitations de SnapMirror Business Continuity (SM-BC), reportez-vous à https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limites des objets pour la continuité de l'activité SnapMirror"].
+* Vérifiez les prérequis et les limites spécifiques de la synchronisation active SnapMirror. Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limites d'objet pour la synchronisation active SnapMirror"].
 
 
 .Description de la tâche
@@ -184,7 +184,7 @@ Mettre à jour SnapMirror après la création d'un Snapshot local
  a| 
 Sélectionnez ce champ pour créer des copies en miroir des jeux de sauvegarde sur un autre volume (réplication SnapMirror).
 
-Cette option doit être activée pour SnapMirror Business Continuity (SM-BC).
+Cette option doit être activée pour la synchronisation active SnapMirror.
 
 Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal.
 

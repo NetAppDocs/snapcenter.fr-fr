@@ -63,9 +63,9 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-* Microsoft .NET Framework 4.7.2 ou version ultérieure
-* Windows Management Framework (WMF) 4.0 ou version ultérieure
-* PowerShell 4.0 ou version ultérieure
+* . Noyau NET 8.0.5
+* PowerShell Core 7.4.2
+* Java 11 Oracle Java et OpenJDK
 
 
 Pour obtenir les dernières informations sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=117007;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
@@ -144,13 +144,13 @@ Une fois que vous avez terminé la configuration des informations d'identificati
 
 
 
-== Configurez GMSA sur Windows Server 2012 ou version ultérieure
+== Configurez GMSA sur Windows Server 2016 ou version ultérieure
 
-Windows Server 2012 ou version ultérieure vous permet de créer un compte de service géré de groupe (GMSA) qui fournit une gestion automatisée des mots de passe de compte de service à partir d'un compte de domaine géré.
+Windows Server 2016 ou version ultérieure vous permet de créer un compte de service géré de groupe (GMSA) qui fournit une gestion automatisée des mots de passe de compte de service à partir d'un compte de domaine géré.
 
 .Avant de commencer
-* Vous devez disposer d'un contrôleur de domaine Windows Server 2012 ou version ultérieure.
-* Vous devez disposer d'un hôte Windows Server 2012 ou version ultérieure, qui est membre du domaine.
+* Vous devez disposer d'un contrôleur de domaine Windows Server 2016 ou version ultérieure.
+* Vous devez disposer d'un hôte Windows Server 2016 ou version ultérieure, qui est membre du domaine.
 
 
 .Étapes

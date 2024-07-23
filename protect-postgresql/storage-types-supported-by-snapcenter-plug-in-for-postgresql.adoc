@@ -1,0 +1,39 @@
+---
+permalink: protect-postgresql/storage-types-supported-by-snapcenter-plug-in-for-postgresql.html 
+sidebar: sidebar 
+keywords: storage types, 
+summary: 'SnapCenter prend en charge de nombreux types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier la prise en charge de votre type de stockage avant d"installer le plug-in SnapCenter pour PostgreSQL.' 
+---
+= Types de stockage pris en charge par le plug-in SnapCenter pour PostgreSQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter prend en charge de nombreux types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier la prise en charge de votre type de stockage avant d'installer le plug-in SnapCenter pour PostgreSQL.
+
+|===
+| Machine | Type de stockage 
+
+
+ a| 
+Serveurs physiques et virtuels
+ a| 
+LUN connectés via FC
+
+
+
+ a| 
+Serveur physique
+ a| 
+LUN connectées à l'iSCSI
+
+
+
+ a| 
+Serveurs physiques et virtuels
+ a| 
+Volumes connectés par NFS
+
+|===

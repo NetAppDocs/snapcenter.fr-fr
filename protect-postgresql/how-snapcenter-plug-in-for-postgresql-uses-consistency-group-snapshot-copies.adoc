@@ -1,0 +1,16 @@
+---
+permalink: protect-postgresql/how-snapcenter-plug-in-for-postgresql-uses-consistency-group-snapshot-copies.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL 
+summary: 'Vous pouvez utiliser le plug-in pour créer des snapshots de groupes de ressources. Un groupe de cohérence est un conteneur qui peut héberger plusieurs volumes, de sorte que vous puissiez les gérer comme une entité unique. Un groupe de cohérence est une copie instantanée de plusieurs volumes, fournissant ainsi des copies cohérentes d"un groupe de volumes.' 
+---
+= Comment le plug-in SnapCenter pour PostgreSQL utilise les snapshots de groupes de cohérence
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le plug-in pour créer des snapshots de groupes de ressources. Un groupe de cohérence est un conteneur qui peut héberger plusieurs volumes, de sorte que vous puissiez les gérer comme une entité unique. Un groupe de cohérence est une copie instantanée de plusieurs volumes, fournissant ainsi des copies cohérentes d'un groupe de volumes.
+
+Vous pouvez également spécifier le temps d'attente nécessaire au contrôleur de stockage pour regrouper les snapshots de manière cohérente. Les options de temps d'attente disponibles sont *urgent*, *Moyen* et *détendu*. Vous pouvez également activer ou désactiver la synchronisation WAFL (Write Anywhere File Layout) lors d'une opération de snapshot de groupe cohérente. WAFL Sync améliore les performances d'un snapshot de groupe de cohérence.

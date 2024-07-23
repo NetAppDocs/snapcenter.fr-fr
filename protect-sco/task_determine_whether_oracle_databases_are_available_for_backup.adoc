@@ -13,8 +13,7 @@ summary: 'Les ressources sont des bases de données Oracle sur l"hôte géré pa
 [role="lead"]
 Les ressources sont des bases de données Oracle sur l'hôte géré par SnapCenter. Vous pouvez ajouter ces bases de données à des groupes de ressources pour exécuter des opérations de protection des données après avoir découvert les bases de données disponibles.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la création de connexions au système de stockage et l'ajout d'informations d'identification.
 * Si les bases de données résident sur un VMDK (Virtual machine Disk) ou RDM (Raw Device Mapping), vous devez déployer le plug-in SnapCenter pour VMware vSphere et enregistrer le plug-in avec SnapCenter.
 +
@@ -30,8 +29,7 @@ Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vs
 
 Vous pouvez empêcher SnapCenter de découvrir les entrées non-base de données ajoutées dans le fichier oratab.
 
-*Étapes*
-
+.Étapes
 . Après avoir installé le plug-in pour Oracle, l'utilisateur root doit créer le fichier *sc_oratab.config* sous le répertoire _/var/opt/snapcenter/sco/etc/_.
 +
 Accordez l'autorisation d'écriture au propriétaire et au groupe binaire Oracle afin que le fichier puisse être conservé à l'avenir.
@@ -76,8 +74,7 @@ Les bases de données doivent être au moins dans l'état monté ou au-dessus po
 
 Si vous avez supprimé une base de données Oracle sur l'hôte, le serveur SnapCenter ne sera pas conscient et répertorie la base de données supprimée. Vous devez actualiser manuellement les ressources pour mettre à jour la liste des ressources SnapCenter.
 
-*Étapes*
-
+.Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Database* dans la liste *View*.
 +

@@ -1,0 +1,82 @@
+---
+permalink: protect-scu/view_protected_unix_file_systems_in_the_topology_page.html 
+sidebar: sidebar 
+keywords: topology, unix file systems, 
+summary: 'Lorsque vous préparez la sauvegarde, la restauration ou le clonage d"une ressource, il peut être utile d"afficher une représentation graphique de toutes les sauvegardes, systèmes de fichiers restaurés et clones sur le stockage primaire et secondaire.' 
+---
+= Afficher les systèmes de fichiers Unix protégés dans la page topologie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous préparez la sauvegarde, la restauration ou le clonage d'une ressource, il peut être utile d'afficher une représentation graphique de toutes les sauvegardes, systèmes de fichiers restaurés et clones sur le stockage primaire et secondaire.
+
+*À propos de cette tâche*
+
+Dans la page topologie, vous pouvez voir toutes les sauvegardes, les systèmes de fichiers restaurés et les clones disponibles pour la ressource ou le groupe de ressources sélectionné. Vous pouvez afficher les détails de ces sauvegardes, systèmes de fichiers restaurés et clones, puis les sélectionner pour exécuter des opérations de protection des données.
+
+Vous pouvez consulter les icônes suivantes dans la vue gérer les copies pour déterminer si les sauvegardes et les clones sont disponibles sur le stockage principal ou secondaire (copies en miroir ou copies du coffre-fort).
+
+* image:../media/topology_primary_storage.gif["icône stockage principal"] affiche le nombre de sauvegardes et de clones disponibles sur le stockage principal.
+* image:../media/topology_mirror_secondary_storage.gif["Icône du miroir du stockage secondaire"] Affiche le nombre de sauvegardes et de clones mis en miroir sur le système de stockage secondaire à l'aide de la technologie SnapMirror.
+* image:../media/topology_vault_secondary_storage.gif["icône de coffre-fort secondaire"] Affiche le nombre de sauvegardes et de clones répliqués sur le système de stockage secondaire à l'aide de la technologie SnapVault.
++
+Le nombre de sauvegardes affichées inclut les sauvegardes supprimées du stockage secondaire. Par exemple, si vous avez créé 6 sauvegardes à l'aide d'une stratégie de conservation de 4 sauvegardes seulement, le nombre de sauvegardes affichées est 6.
+
+
+
+
+NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume de type miroir-coffre-fort sont affichés dans la vue topologique, mais le nombre de sauvegardes en miroir dans la vue topologique n'inclut pas la sauvegarde flexible de version.
+
+Si vous utilisez une relation secondaire comme SnapMirror actif Sync (initialement commercialisé sous la forme SnapMirror Business Continuity [SM-BC]), les icônes supplémentaires suivantes s'affichent :
+
+* image:../media/topology_replica_site_up.png["site de réplica en haut"] implique que le site de réplica est en service.
+* image:../media/topology_replica_site_down.png["site de réplica en panne"]  implique que le site de réplica est en panne.
+* image:../media/topology_reestablished.png["la relation est rétablie"] implique que la relation miroir ou coffre-fort secondaire n'a pas été rétablie.
+
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, sélectionnez la ressource ou le groupe de ressources dans la liste déroulante *Affichage*.
+. Sélectionnez la ressource dans la vue Détails de la ressource ou dans la vue Détails du groupe de ressources.
++
+Si la ressource est protégée, la page topologie de la ressource sélectionnée s'affiche.
+
+. Consultez la fiche récapitulative pour connaître le nombre de sauvegardes et de clones disponibles sur les stockages primaire et secondaire.
++
+La section carte récapitulative affiche le nombre total de sauvegardes et de clones.
+
++
+Cliquez sur le bouton *Actualiser* pour lancer une requête sur le stockage afin d'afficher un décompte précis.
+
++
+Si une sauvegarde SnapLock est activée, cliquez sur le bouton *Refresh* pour actualiser l'heure d'expiration SnapLock principale et secondaire récupérée depuis ONTAP. Un planning hebdomadaire actualise également les temps d'expiration SnapLock primaire et secondaire extraits de ONTAP.
+
++
+Lorsque le système de fichiers est réparti sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au temps d'expiration SnapLock le plus long défini pour un instantané d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
+
++
+Pour la synchronisation active SnapMirror, cliquez sur le bouton *Refresh* pour actualiser l'inventaire des sauvegardes SnapCenter en interrogeant ONTAP sur les sites principaux et de réplica. Une planification hebdomadaire effectue également cette activité pour toutes les bases de données contenant une relation de synchronisation active SnapMirror.
+
++
+** Pour la synchronisation active SnapMirror et uniquement pour ONTAP 9.14.1, les relations SnapMirror miroir asynchrone ou MirrorVault asynchrone vers la nouvelle destination principale doivent être configurées manuellement après le basculement. À partir de ONTAP 9.15.1, Async Mirror ou Async MirrorVault est automatiquement configuré sur la nouvelle destination principale.
+** Après le basculement, une sauvegarde doit être créée afin que SnapCenter puisse prendre connaissance du basculement. Vous ne pouvez cliquer sur *Rafraîchir* qu'après la création d'une sauvegarde.
+
+
+. Dans la vue gérer les copies, cliquez sur *sauvegardes* ou *clones* à partir du stockage primaire ou secondaire pour afficher les détails d'une sauvegarde ou d'un clone.
++
+Le détail des sauvegardes et des clones est affiché sous forme de tableau.
+
+. Sélectionnez la sauvegarde dans le tableau, puis cliquez sur les icônes de protection des données pour effectuer des opérations de restauration, de clonage et de suppression.
++
+
+NOTE: Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent sur le stockage secondaire.
+
+. Pour supprimer un clone, sélectionnez-le dans le tableau, puis cliquez sur image:../media/delete_icon.gif[""].
+
+
+.Exemple de sauvegardes et de clones sur le stockage primaire
+image:../media/topology_view_scu.png["Vue topologique des sauvegardes et des clones du stockage primaire."]

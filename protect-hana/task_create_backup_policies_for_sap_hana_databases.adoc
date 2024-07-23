@@ -23,6 +23,7 @@ Pour en savoir plus, découvrez comment définir une stratégie de protection de
 +
 En outre, vous pouvez spécifier des paramètres de réplication, de script et d'application dans la stratégie. Ces options vous permettent de gagner du temps lorsque vous souhaitez réutiliser la stratégie d'un autre groupe de ressources.
 
+* Vérifiez les prérequis et les limites spécifiques de la synchronisation active SnapMirror. Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limites d'objet pour la synchronisation active SnapMirror"].
 
 
 .Description de la tâche
@@ -147,6 +148,8 @@ La période de conservation SnapLock doit être inférieure à 100 ans.
 *Mettre à jour SnapMirror après avoir créé une copie Snapshot locale*
  a| 
 Sélectionnez ce champ pour créer des copies en miroir des jeux de sauvegarde sur un autre volume (réplication SnapMirror).
+
+Cette option doit être activée pour la synchronisation active SnapMirror.
 
 Si la relation de protection dans ONTAP est de type miroir et coffre-fort et si vous sélectionnez uniquement cette option, le snapshot créé sur le primaire ne sera pas transféré vers la destination, mais sera répertorié dans la destination. Si cet instantané est sélectionné à partir de la destination pour effectuer une opération de restauration, le message d'erreur emplacement secondaire n'est pas disponible pour la sauvegarde voûtée/miroir sélectionnée s'affiche.
 

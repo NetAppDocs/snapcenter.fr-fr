@@ -24,6 +24,10 @@ Vous devez configurer le certificat d'autorité de certification avec le site Sn
 . Cliquez sur *Modifier*.
 . Dans la liste déroulante certificat SSL, sélectionnez le certificat SSL récemment importé.
 . Cliquez sur *OK*.
++
+
+NOTE: Le site du planificateur SnapCenter (port par défaut : 8154, HTTPS) est configuré avec un certificat auto-signé. Ce port communique avec l'hôte du serveur SnapCenter et il n'est pas obligatoire de le configurer avec un certificat CA. Toutefois, si votre environnement vous oblige à utiliser un certificat CA, répétez les étapes 5 à 9 à l'aide du site Planificateur SnapCenter.
+
 
 
 

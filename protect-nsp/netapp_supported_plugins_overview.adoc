@@ -1,0 +1,32 @@
+---
+permalink: protect-nsp/netapp_supported_plugins_overview.html 
+sidebar: sidebar 
+keywords: NetApp supported plug-ins 
+summary: 'Développez des plug-ins pris en charge par NetApp pour les applications que vous utilisez, puis utilisez SnapCenter pour sauvegarder, restaurer ou cloner ces applications. Comme d"autres plug-ins SnapCenter, vos plug-ins pris en charge par NetApp font office de composants côté hôte du logiciel NetApp SnapCenter, ce qui permet une protection des données compatible avec les applications et une gestion des ressources.' 
+---
+= Présentation des plug-ins pris en charge par NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser les plug-ins pris en charge par NetApp ou développer des plug-ins personnalisés pour les applications que vous utilisez, puis utiliser SnapCenter pour sauvegarder, restaurer ou cloner ces applications. Vos plug-ins pris en charge par NetApp font office de composants côté hôte du logiciel NetApp SnapCenter, ce qui permet une protection des données compatible avec les applications et une gestion des ressources.
+
+Une fois les plug-ins pris en charge par NetApp installés, vous pouvez utiliser SnapCenter avec la technologie NetApp SnapMirror pour créer des copies miroir de jeux de sauvegarde sur un autre volume et utiliser la technologie NetApp SnapVault pour effectuer la réplication de sauvegarde disque à disque. Les plug-ins pris en charge par NetApp peuvent être utilisés dans les environnements Windows et Linux.
+
+
+NOTE: SnapCenter CLI ne prend pas en charge les commandes des plug-ins pris en charge par NetApp.
+
+NetApp propose le plug-in de stockage qui permet d'effectuer les opérations de protection des données du volume de données sur le stockage ONTAP à l'aide du plug-in personnalisé intégré à SnapCenter.
+
+Vous pouvez installer les plug-ins pris en charge par NetApp, le plug-in personnalisé et le plug-in de stockage à partir de la page Ajouter un hôte.
+
+link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants."^]
+
+NetApp fournit également MongoDB, MySQL, PostgreSQL, Storage, MaxDB, Sybase ASE, ORASCPM, MongoDB et DPGlue Plug-ins.
+
+
+NOTE: La politique de support de SnapCenter prendra en charge le framework personnalisé de SnapCenter, le moteur principal et les API associées. Le support ne couvre pas le code source du plug-in et les scripts associés basés sur le framework personnalisé du plug-in.
+
+Vous pouvez créer vos propres plug-ins personnalisés en vous reportant au link:develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"^] guide.

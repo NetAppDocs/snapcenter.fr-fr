@@ -13,7 +13,7 @@ summary: 'Avant d"ajouter un hôte et d"installer les modules d"extension, vous 
 [role="lead"]
 Avant d'ajouter un hôte et d'installer les modules d'extension, vous devez remplir toutes les conditions requises. Le plug-in SnapCenter pour base de données SAP HANA est disponible dans les environnements Windows et Linux.
 
-* Vous devez avoir installé Java 1.8 64 bits sur votre hôte.
+* Vous devez avoir installé Java 11 sur votre hôte.
 +
 
 NOTE: IBM Java n'est pas pris en charge.
@@ -33,7 +33,7 @@ NOTE: IBM Java n'est pas pris en charge.
 * Vous devez disposer d'un utilisateur de domaine disposant de privilèges d'administrateur local avec des autorisations de connexion locales sur l'hôte distant.
 * Lors de l'installation du plug-in pour base de données SAP HANA sur un hôte Windows, le plug-in SnapCenter pour Microsoft Windows est installé automatiquement.
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
-* Vous devez avoir installé Java 1.8 64 bits sur votre hôte Windows.
+* Vous devez avoir installé Java 11 sur votre hôte Windows.
 +
 http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
 
@@ -47,7 +47,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src
 == Hôtes Linux
 
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
-* Vous devez avoir installé Java 1.8 64 bits sur votre hôte Linux.
+* Vous devez avoir installé Java 11 sur votre hôte Linux.
 +
 http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
 

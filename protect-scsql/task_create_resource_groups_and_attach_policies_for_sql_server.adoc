@@ -17,8 +17,8 @@ Vous pouvez protéger les ressources individuellement sans créer de nouveau gro
 
 .Description de la tâche
 * Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
-* L'ajout de nouvelles bases de données sans SM-BC à un groupe de ressources existant qui contient des ressources avec SM-BC n'est pas pris en charge.
-* L'ajout de nouvelles bases de données à un groupe de ressources existant en mode de basculement de SM-BC n'est pas pris en charge. Vous pouvez ajouter des ressources au groupe de ressources uniquement à l'état normal ou de retour arrière.
+* L'ajout de nouvelles bases de données sans synchronisation active SnapMirror à un groupe de ressources existant contenant des ressources avec la synchronisation active SnapMirror n'est pas pris en charge.
+* L'ajout de nouvelles bases de données à un groupe de ressources existant en mode de basculement de la synchronisation active SnapMirror n'est pas pris en charge. Vous pouvez ajouter des ressources au groupe de ressources uniquement à l'état normal ou de retour arrière.
 
 
 .Étapes

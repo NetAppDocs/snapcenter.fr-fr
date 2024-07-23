@@ -1,0 +1,16 @@
+---
+permalink: protect-db2/install-snapcenter-plug-in-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: installing 
+summary: Vous devez installer et configurer le plug-in SnapCenter pour IBM DB2 si vous souhaitez protéger IBM DB2. 
+---
+= Workflow d'installation du plug-in SnapCenter pour IBM DB2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez installer et configurer le plug-in SnapCenter pour IBM DB2 si vous souhaitez protéger les bases de données IBM DB2.
+
+image::../media/sap_hana_install_configure_workflow.gif[workflow de configuration de l'installation de sap hana]

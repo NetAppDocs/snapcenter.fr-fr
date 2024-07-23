@@ -31,6 +31,8 @@ Serveur physique
 * LUN connectés via FC
 * LUN connectées à l'iSCSI
 * Volumes connectés par NFS
+* FC-NVMe
+* NVMe-TCP
 
 
 
@@ -43,8 +45,17 @@ VMware ESXi
 Vous pouvez modifier le fichier *LinuxConfig.pm* situé à _/opt/NetApp/snapcenter/spl/plugins/scu/scucore/modules/SCU/Config_ pour définir la valeur du paramètre *SCSI_HOSTS_OPTIMIZED_RESCAN* à 1 pour analyser uniquement les HBA répertoriés dans les NOMS de PILOTE HBA.
 
 * LUN iSCSI connectés directement au système invité par l'initiateur iSCSI
-* VMDK sur des datastores VMFS ou NFS
+* VMDK sur des datastores NFS
+* VMDK sur VMFS créés sur NVMe-TCP
++
+
+NOTE: RAC est pris en charge sur ESX 8.0U2 qui prend en charge le VMDK partagé
+
 * Volumes NFS connectés directement au système invité
+* Datastores vVol sur NFS et SAN
++
+Le datastore vVol peut uniquement être provisionné avec les outils ONTAP pour VMware vSphere.
+
 
 
 |===

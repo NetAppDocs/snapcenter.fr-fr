@@ -1,0 +1,24 @@
+---
+permalink: protect-db2/monitor-dataprotection-operations-on-db2-in-the-activity-pane.html 
+sidebar: sidebar 
+keywords: SnapCenter Server 
+summary: 'Le volet activité affiche les cinq opérations les plus récentes effectuées. Le volet activité s"affiche également lorsque l"opération a été lancée et que l"état de l"opération a été défini.' 
+---
+= Surveillez les opérations de protection des données sur les bases de données IBM DB2 dans le volet activité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le volet activité affiche les cinq opérations les plus récentes effectuées. Le volet activité s'affiche également lorsque l'opération a été lancée et que l'état de l'opération a été défini.
+
+Le volet activité affiche des informations concernant les opérations de sauvegarde, de restauration, de clonage et de sauvegarde planifiée.
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Cliquez sur image:../media/activity_pane_icon.gif[""] Dans le volet activité pour afficher les cinq opérations les plus récentes.
++
+Lorsque vous cliquez sur l'une des opérations, les détails de l'opération sont répertoriés dans la page *Détails du travail*.
+
+

@@ -17,6 +17,9 @@ Vous pouvez utiliser la page Ajouter un hôte pour ajouter des hôtes, puis inst
 
 Vous pouvez ajouter un hôte et installer des modules de plug-in pour un hôte individuel ou pour un cluster. Si vous installez le plug-in sur un cluster (Oracle RAC), le plug-in est installé sur tous les nœuds du cluster. Pour Oracle RAC One Node, vous devez installer le plug-in sur les nœuds actif et passif.
 
+
+NOTE: Seule l'authentification par mot de passe est prise en charge lorsque vous installez le plug-in sur un RAC Oracle. L'authentification basée sur la clé SSH n'est pas prise en charge.
+
 Vous devez être affecté à un rôle doté des autorisations d'installation et de désinstallation du plug-in, telles que le rôle d'administrateur SnapCenter.
 
 

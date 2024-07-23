@@ -23,8 +23,9 @@ Pour en savoir plus, consultez les informations sur la définition d'une straté
 * Si vous répliquez des snapshots sur un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué des machines virtuelles de stockage (SVM) pour les volumes source et de destination.
 * Si vous voulez exécuter les scripts PowerShell dans les prescripteurs et les postscripts, vous devez définir la valeur de `usePowershellProcessforScripts` paramètre à vrai dans le `web.config` fichier.
 +
-La valeur par défaut est FALSE
+La valeur par défaut est FALSE.
 
+* Vérifiez les prérequis et les limites spécifiques de la synchronisation active SnapMirror. Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limites d'objet pour la synchronisation active SnapMirror"].
 
 
 .Description de la tâche
@@ -250,8 +251,7 @@ La période de conservation SnapLock doit être inférieure à 100 ans.
 
 |===
 +
-
-NOTE: Si vous disposez d'une base de données avec uniquement des sauvegardes de journaux et qu'aucune sauvegarde complète sur un hôte dans une configuration DAG, les sauvegardes de journaux sont conservées de la manière suivante :
+Si vous disposez d'une base de données avec uniquement des sauvegardes de journaux et qu'aucune sauvegarde complète sur un hôte dans une configuration DAG, les sauvegardes de journaux sont conservées de la manière suivante :
 
 +
 *** Par défaut, SnapCenter trouve la sauvegarde complète la plus ancienne pour cette base de données dans tous les autres hôtes du DAG, et supprime toutes les sauvegardes des journaux de cet hôte qui ont été effectuées avant la sauvegarde complète.
@@ -273,14 +273,19 @@ Dans l'exemple, la valeur 10 signifie que vous conservez jusqu'à 10 sauvegardes
 
  a| 
 Mettre à jour SnapMirror après la création d'un Snapshot local
+ a| 
+Sélectionnez cette option pour conserver des copies en miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
 
 Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal.
+
+Cette option doit être activée pour la synchronisation active SnapMirror.
+
+
+IMPORTANT: La règle primaire uniquement ne peut pas être utilisée si la synchronisation active SnapMirror est configurée pour des volumes Exchange ONTAP. SnapCenter n'autorise pas cela. Vous devez activer l'option « miroir ».
 
 Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
 
 Voir link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["Afficher les sauvegardes Exchange sur la page topologie"].
- a| 
-Sélectionnez cette option pour conserver des copies en miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
 
 
 

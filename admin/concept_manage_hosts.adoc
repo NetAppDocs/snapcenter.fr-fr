@@ -14,11 +14,17 @@ summary: 'Vous pouvez ajouter des hôtes et installer des packages plug-in SnapC
 Vous pouvez ajouter des hôtes et installer des packages plug-in SnapCenter, ajouter un serveur de vérification, supprimer des hôtes, migrer des tâches de sauvegarde et mettre à jour l'hôte pour mettre à niveau des modules plug-in ou ajouter de nouveaux modules plug-in. Selon le plug-in que vous utilisez, vous pouvez également provisionner des disques, gérer des partages SMB, gérer des groupes initiateurs (igroups), gérer des sessions iSCSI et migrer des données.
 
 |===
-| Vous pouvez effectuer ces tâches... | Pour Microsoft Exchange Server | Pour Microsoft SQL Server | Pour Microsoft Windows | Pour Oracle Database | Pour les bases de données SAP HANA | Pour les plug-ins personnalisés 
+| Vous pouvez effectuer ces tâches... | Pour Microsoft Exchange Server | Pour Microsoft SQL Server | Pour Microsoft Windows | Pour Oracle Database | Pour les bases de données SAP HANA | Pour les plug-ins NetApp pris en charge | Pour DB2 | Pour PostgreSQL | Pour MySQL 
 
 
  a| 
 Ajoutez des hôtes et installez le package de plug-in
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
  a| 
 Oui.
  a| 
@@ -48,11 +54,23 @@ Non
 Non
  a| 
 Non
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
 
 
 
  a| 
 Suspendre les plannings et placer les hôtes en mode de maintenance
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
  a| 
 Oui.
  a| 
@@ -82,11 +100,23 @@ Oui.
 Oui.
  a| 
 Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
 
 
 
  a| 
 Supprimer des hôtes de SnapCenter
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
  a| 
 Oui.
  a| 
@@ -116,6 +146,12 @@ Oui.
 Oui.
  a| 
 Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
 
 
 
@@ -127,6 +163,12 @@ Non
 Non
  a| 
 Oui.
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
  a| 
 Non
  a| 
@@ -150,6 +192,12 @@ Non
 Non
  a| 
 Non
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
 
 
 
@@ -161,6 +209,12 @@ Non
 Non
  a| 
 Oui.
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
  a| 
 Non
  a| 
@@ -183,6 +237,13 @@ Non
  a| 
 Non
  a| 
+Non
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
 
 |===
 

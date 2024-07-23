@@ -36,6 +36,8 @@ entries:
     url: "/protect-scu/task_back_up_unix_file_systems_resource_groups.html"
   - title: Surveiller la progression de la sauvegarde
     url: "/protect-scu/task_monitor_unix_file_systems_backup_operations.html"
+  - title: Afficher les systèmes de fichiers Unix protégés dans la page topologie
+    url: "/protect-scu/view_protected_unix_file_systems_in_the_topology_page.html"
 - title: Restaurez et restaurez les systèmes de fichiers Unix
   entries:
   - title: Restaurez et restaurez les systèmes de fichiers Unix

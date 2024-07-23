@@ -13,10 +13,7 @@ summary: Le logiciel SnapCenter peut être utilisé sur plusieurs navigateurs.
 [role="lead"]
 Le logiciel SnapCenter peut être utilisé sur plusieurs navigateurs.
 
-* Chrome
-+
-Si vous utilisez v66, il se peut que vous n'ayez pas pu lancer l'interface utilisateur SnapCenter.
-
+* Chrome version 125 et ultérieure
 * Internet Explorer
 +
 L'interface utilisateur SnapCenter ne se charge pas correctement si vous utilisez IE 10 ou des versions antérieures. Vous devez effectuer la mise à niveau vers IE 11.

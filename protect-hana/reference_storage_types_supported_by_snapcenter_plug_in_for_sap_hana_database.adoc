@@ -18,13 +18,6 @@ SnapCenter prend en charge de nombreux types de stockage sur les serveurs physiq
 
 
  a| 
-Serveurs physiques et virtuels
- a| 
-LUN connectés via FC
-
-
-
- a| 
 Serveur physique
  a| 
 LUN connectées à l'iSCSI
@@ -34,6 +27,17 @@ LUN connectées à l'iSCSI
  a| 
 Serveurs physiques et virtuels
  a| 
-Volumes connectés par NFS
+* LUN connectés via FC
+* Volumes connectés par NFS
+
+
+
+
+ a| 
+VMware ESXi
+ a| 
+Datastores vVol sur NFS et SAN
+
+Le datastore vVol peut uniquement être provisionné avec les outils ONTAP pour VMware vSphere.
 
 |===

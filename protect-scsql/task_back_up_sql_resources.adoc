@@ -17,7 +17,13 @@ Si une ressource ne fait pas encore partie d'un groupe de ressources, vous pouve
 * Pour l'authentification des informations d'identification Windows, vous devez configurer vos informations d'identification avant d'installer les plug-ins.
 * Pour l'authentification de l'instance SQL Server, vous devez ajouter les informations d'identification après l'installation des plug-ins.
 * Pour l'authentification GMSA, vous devez configurer GMSA lors de l'enregistrement de l'hôte avec SnapCenter dans la page *Ajouter hôte* ou *Modifier hôte* pour activer et utiliser le GMSA.
-* Si l'hôte est ajouté avec GMSA et si le GMSA dispose de privilèges d'ouverture de session et d'administrateur système, le GMSA sera utilisé pour se connecter à l'instance SQL.
+* Si l'hôte est ajouté avec GMSA et si GMSA dispose de privilèges d'ouverture de session et d'administration système, GMSA est autorisé à se connecter à l'instance SQL.
++
+** SnapCenter vérifie si l'authentification pour les instances SQL est configurée. Si l'authentification est configurée, l'instance SQL est accessible à l'aide de ces informations d'identification.
+** Si l'authentification n'est pas configurée, utilisez GMSA pour vérifier si le plug-in SQL fonctionne actuellement. Si le plug-in fonctionne, il sera utilisé pour établir une connexion à l'instance SQL.
+** L'instance SQL est accessible via l'authentification des informations d'identification Windows lorsque l'authentification des deux instances SQL n'est pas configurée et que le plug-in n'est pas opérationnel.
+
+
 
 
 .Étapes

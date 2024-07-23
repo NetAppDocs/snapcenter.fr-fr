@@ -1,0 +1,16 @@
+---
+permalink: protect-mysql/install-snapcenter-plug-in-for-mysql.html 
+sidebar: sidebar 
+keywords: installing 
+summary: Vous devez installer et configurer le plug-in SnapCenter pour MySQL si vous voulez protéger MySQL. 
+---
+= Workflow d'installation du plug-in SnapCenter pour MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez installer et configurer le plug-in SnapCenter pour MySQL si vous voulez protéger les bases de données MySQL.
+
+image::../media/sap_hana_install_configure_workflow.gif[Installer et configurer le workflow]

@@ -1,0 +1,87 @@
+---
+permalink: protect-db2/create-backup-policies-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 'Avant d"utiliser SnapCenter pour sauvegarder les ressources de la base de données IBM DB2, vous devez créer une stratégie de sauvegarde pour le groupe de ressources ou de ressources que vous souhaitez sauvegarder. Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes.' 
+---
+= Créez des stratégies de sauvegarde pour IBM DB2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser SnapCenter pour sauvegarder des ressources IBM DB2, vous devez créer une stratégie de sauvegarde pour le groupe de ressources ou de ressources que vous souhaitez sauvegarder. Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes.
+
+.Avant de commencer
+* Vous devez avoir défini votre stratégie de sauvegarde.
++
+Pour plus de détails, reportez-vous aux informations sur la définition d'une stratégie de protection des données pour les bases de données IBM DB2.
+
+* Vous devez vous préparer à la protection des données en effectuant des tâches telles que l'installation de SnapCenter, l'ajout d'hôtes, la configuration des connexions du système de stockage et l'ajout de ressources.
+* Si vous répliquez des snapshots sur un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir affecté des SVM aux volumes source et de destination.
++
+En outre, vous pouvez spécifier des paramètres de réplication, de script et d'application dans la stratégie. Ces options vous permettent de gagner du temps lorsque vous souhaitez réutiliser la stratégie d'un autre groupe de ressources.
+
+
+
+.Description de la tâche
+* SnapLock
++
+** Si l'option « conserver les copies de sauvegarde pendant un nombre de jours spécifique » est sélectionnée, la période de conservation SnapLock doit être inférieure ou égale aux jours de conservation mentionnés.
+** La spécification d'une période de verrouillage de snapshot empêche la suppression des snapshots jusqu'à l'expiration de la période de conservation. Cela peut entraîner la conservation d'un plus grand nombre d'instantanés que le nombre spécifié dans la règle.
+** Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
+
+
+
+
+NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sauvegarde SnapCenter et les paramètres SnapLock secondaires sont gérés par ONTAP.
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
+. Dans la page Paramètres, cliquez sur *stratégies*.
+. Cliquez sur *Nouveau*.
+. Dans la page Nom, entrez le nom et la description de la stratégie.
+. Dans la page Type de stratégie, effectuez les opérations suivantes :
++
+.. Sélectionnez le type de stockage.
+.. Dans la section *Paramètres de sauvegarde personnalisés*, indiquez tous les paramètres de sauvegarde spécifiques qui doivent être transmis au plug-in au format clé-valeur.
++
+Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
+
+
+
+. Dans la page instantané, spécifiez le type d'horaire en sélectionnant *sur demande*, *horaire*, *quotidien*, *hebdomadaire* ou *mensuel*.
++
+
+NOTE: Vous pouvez spécifier la planification (date de début, date de fin et fréquence) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais aussi d'affecter des programmes de sauvegarde différents à chaque stratégie.
+
++
+image::../media/backup_settings.gif[sauvegarder les paramètres]
+
++
+
+NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
+
+. Dans la section Paramètres de l'instantané, spécifiez le nombre d'instantanés que vous souhaitez conserver.
++
+|===
+| Les fonctions que vous recherchez... | Alors... 
+
+
+ a| 
+Conserver un certain nombre de snapshots
+ a| 
+Sélectionnez *copies à conserver*, puis indiquez le nombre d'instantanés que vous souhaitez conserver.
+
+Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
+
+|===
++
+
+IMPORTANT: Dans le cas des sauvegardes basées sur des copies Snapshot, vous devez définir le nombre de rétention à 2 ou plus si vous prévoyez d'activer la réplication SnapVault. Si vous définissez le nombre de rétention sur 1, l'opération de rétention risque d'échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
+
+. Dans la page rétention et sauvegarde, spécifiez les paramètres de rétention pour le type de sauvegarde et le type de planification sélectionnés dans la page Type de sauvegarde :
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

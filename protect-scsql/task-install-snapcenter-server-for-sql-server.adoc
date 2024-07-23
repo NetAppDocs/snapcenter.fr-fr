@@ -63,22 +63,7 @@ Pour un format de nom d'utilisateur d'administration local intégré, utilisez _
 
 
 
-== Étape 4 : ajoutez une licence SnapCenter basée sur la capacité
-
-. Dans le volet gauche de l'interface graphique SnapCenter, cliquez sur *Paramètres > logiciel*, puis dans la section Licence, cliquez sur *+*.
-. Sélectionnez l'une des deux méthodes d'obtention de la licence :
-+
-** Entrez vos identifiants de connexion au site du support NetApp pour importer les licences.
-** Parcourez l'emplacement du fichier de licence NetApp et cliquez sur *Open*.
-
-
-. Dans la page Notifications de l'assistant, utilisez le seuil de capacité par défaut de 90 %.
-. Cliquez sur *Terminer*.
-
-
-
-
-== Étape 5 : configurer les connexions du système de stockage
+== Étape 4 : configurer les connexions du système de stockage
 
 . Dans le volet de gauche, cliquez sur *Storage Systems > Nouveau*.
 . Sur la page Add Storage System, effectuez les opérations suivantes :

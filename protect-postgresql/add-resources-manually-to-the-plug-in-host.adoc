@@ -1,0 +1,95 @@
+---
+permalink: protect-postgresql/add-resources-manually-to-the-plug-in-host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Postgresql 
+summary: 'La découverte automatique n"est pas prise en charge pour certaines instances PostgreSQL. Vous devez ajouter ces ressources manuellement.' 
+---
+= Ajoutez des ressources manuellement au plug-in hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La découverte automatique n'est pas prise en charge sur l'hôte Windows. Vous devez ajouter manuellement les ressources de cluster PostgreSQL.
+
+.Avant de commencer
+* Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes et la configuration des connexions du système de stockage.
+
+
+.Description de la tâche
+La détection automatique n'est pas prise en charge pour les configurations suivantes :
+
+* Dispositions RDM et VMDK
+
+
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez le plug-in SnapCenter pour PostgreSQL dans la liste déroulante, puis cliquez sur *Ressources*.
+. Dans la page Ressources, cliquez sur *Ajouter des ressources PostgreSQL*.
+. Dans la page Détails de la ressource, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom
+ a| 
+Spécifier le nom du cluster
+
+
+
+ a| 
+Nom d'hôte
+ a| 
+Entrez le nom d'hôte.
+
+
+
+ a| 
+Type
+ a| 
+Sélectionnez cluster.
+
+
+
+ a| 
+Fréquence
+ a| 
+Spécifiez le nom de l'instance, qui est le parent du cluster.
+
+
+
+ a| 
+Informations d'identification
+ a| 
+Sélectionnez les informations d'identification ou ajoutez-les.
+
+Cette option est facultative.
+
+|===
+. Sur la page fournir l'empreinte du stockage, sélectionnez un type de stockage et choisissez un ou plusieurs volumes, LUN et qtrees, puis cliquez sur *Enregistrer*.
++
+Facultatif : vous pouvez cliquer sur *image:../media/add_policy_from_resourcegroup.gif[""]* Icône pour ajouter plus de volumes, de LUN et de qtrees à partir d'autres systèmes de stockage.
+
+. Facultatif : dans la page Paramètres de ressources, pour les ressources sur l'hôte Windows, entrez des paires clé-valeur personnalisées pour le plug-in PostgreSQL
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
++
+Les clusters s'affichent avec des informations telles que le nom d'hôte, les groupes de ressources et les stratégies associés, ainsi que l'état global
+
+
+
+Si vous souhaitez donner aux utilisateurs l'accès aux ressources, vous devez affecter ces ressources aux utilisateurs. Cela permet aux utilisateurs d'effectuer les actions pour lesquelles ils ont des autorisations sur les ressources qui leur sont assignées.
+
+link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html["Ajoutez un utilisateur ou un groupe et attribuez un rôle et des ressources"]
+
+.Une fois que vous avez terminé
+* Après avoir ajouté les clusters, vous pouvez modifier les détails du cluster PostgreSQL.
+* Les ressources migrées (tablespace et clusters) à partir de SnapCenter 5.0 seront marquées comme type de cluster PostgreSQL dans SnapCenter 6.0.
+* Lorsque vous modifiez les ressources ajoutées manuellement qui sont migrées depuis SnapCenter 5.0 ou une version antérieure, procédez comme suit dans la page *Paramètres de ressource* pour les paires de clés personnalisées :
++
+** Spécifiez le terme "PORT" dans le champ *Nom*.
+** Spécifiez le numéro de port dans le champ *valeur*.
+
+
+

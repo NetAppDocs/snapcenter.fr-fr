@@ -1,0 +1,47 @@
+---
+permalink: protect-postgresql/discover-the-clusters-automatically.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 'Les ressources sont des clusters PostgreSQL sur l"hôte Linux qui sont gérés par SnapCenter. Vous pouvez ajouter ces ressources à des groupes de ressources pour exécuter les opérations de protection des données une fois que vous avez découvert les clusters PostgreSQL disponibles.' 
+---
+= Découverte automatique des clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les ressources sont des clusters PostgreSQL sur l'hôte Linux qui sont gérés par SnapCenter. Vous pouvez ajouter des ressources à des groupes de ressources pour exécuter les opérations de protection des données une fois que vous avez découvert les clusters PostgreSQL disponibles.
+
+.Avant de commencer
+* Vous devez avoir déjà effectué des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes et la configuration des connexions du système de stockage.
+* Le plug-in SnapCenter pour PostgreSQL ne prend pas en charge la découverte automatique des ressources résidant sur les environnements virtuels RDM/VMDK.
+
+
+.Description de la tâche
+* Après l'installation du plug-in, tous les clusters de cet hôte Linux sont automatiquement détectés et affichés sur la page Ressources.
+* Seuls les clusters sont découverts automatiquement.
+
+
+Les ressources détectées automatiquement ne peuvent pas être modifiées ou supprimées.
+
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Resources*, puis sélectionnez le plug-in pour PostgreSQL dans la liste.
+. Dans la page Ressources, sélectionnez le type de ressource dans la liste vue.
+. (Facultatif) cliquez sur *image:../media/filter_icon.png["icône de filtre"]*, puis sélectionnez le nom d'hôte.
++
+Vous pouvez ensuite cliquer sur *image:../media/filter_icon.png["icône de filtre"]* pour fermer le volet de filtre.
+
+. Cliquez sur *Actualiser les ressources* pour découvrir les ressources disponibles sur l'hôte.
++
+Les ressources s'affichent avec des informations telles que le type de ressource, le nom d'hôte, les groupes de ressources associés, le type de sauvegarde, les stratégies et l'état global.
+
++
+** Si le cluster se trouve sur un système de stockage NetApp non protégé, la mention non protégé s'affiche dans la colonne État global.
+** Si le cluster se trouve sur un système de stockage NetApp et qu'il est protégé, et si aucune opération de sauvegarde n'est effectuée, la colonne État global affiche sauvegarde non exécutée. Dans le cas contraire, l'état passe en échec de la sauvegarde ou la sauvegarde a réussi en fonction de l'état de la dernière sauvegarde.
+
+
+
+
+
+IMPORTANT: Vous devez actualiser les ressources si les clusters sont renommés en dehors de SnapCenter.

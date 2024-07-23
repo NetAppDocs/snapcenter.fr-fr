@@ -15,7 +15,7 @@ Vous pouvez installer le plug-in SnapCenter pour Microsoft Windows localement su
 
 .Avant de commencer
 * Vous devez avoir installé Microsoft .Net 4.7.2 ou une version ultérieure.
-* Vous devez avoir installé PowerShell 4.0 ou une version ultérieure.
+* Vous devez avoir installé PowerShell 7.4.2 ou une version ultérieure.
 * Vous devez avoir activé la mise en file d'attente des messages Windows.
 * Vous devez être un administrateur local sur l'hôte.
 

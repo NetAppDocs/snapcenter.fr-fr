@@ -63,7 +63,7 @@ Serveur Web
 +
 ** Extensibilité .NET 4.5
 ** Initialisation de l'application
-** ASP.NET 4.7.2
+** ASP. Bundle d'hébergement NET Core (8.0.5 ou version ultérieure)
 ** Côté serveur inclus
 ** Protocole WebSocket
 
@@ -87,15 +87,14 @@ Outils et scripts de gestion IIS
 
 
  a| 
-+.NET Framework 4.7.2 Features+
++.NET Framework 8.0.5 fonctionnalités+
  a| 
-* .NET Framework 4.7.2
-* ASP.NET 4.7.2
+* .NET Framework 8.0.5
+* ASP.NET 8.0.5
 * Windows communication Foundation (WCF) HTTP Activation45
 +
 ** Activation TCP
 ** Activation HTTP
-** Activation de message Queuing (MSMQ)
 
 
 
@@ -112,7 +111,7 @@ Mise en file d'attente du message
 
 NOTE: Assurez-vous qu'aucune autre application n'utilise le service MSMQ créé et géré par SnapCenter.
 
-* Serveur MSMQ
+* RabbitMQ
 
 
 

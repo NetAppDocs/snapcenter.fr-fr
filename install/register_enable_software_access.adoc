@@ -1,0 +1,41 @@
+---
+permalink: install/register_enable_software_access.html 
+sidebar: sidebar 
+keywords: install, snapcenter software, install, register, new customer, NetApp account, enable 
+summary: 'Si vous ne possédez pas de compte NetApp, procédez comme suit pour vous inscrire afin d"accéder au logiciel.' 
+---
+= Inscrivez-vous pour accéder au logiciel SnapCenter
+:allow-uri-read: 
+
+
+[role="lead"]
+Vous pouvez accéder au logiciel SnapCenter si vous êtes nouveau dans Amazon FSX pour NetApp ONTAP ou Azure NetApp Files et que vous ne possédez pas de compte NetApp.
+
+.Avant de commencer
+* Vous devez avoir accès à l'ID de messagerie de l'entreprise.
+* Si vous utilisez Azure NetApp Files, vous devez disposer de l'ID d'abonnement Azure.
+* Si vous utilisez Amazon FSX pour NetApp ONTAP, vous devez disposer de l'ID du système de fichiers de votre système de fichiers FSX pour ONTAP.
+
+
+.Description de la tâche
+Votre inscription est soumise à des validations techniques et peut prendre jusqu'à un jour pour confirmer et mettre à niveau le nouveau compte du site de support NetApp (NSS) pour obtenir un accès « complet » dès l'accès « invité ».
+
+.Étapes
+. Cliquez sur https://mysupport.netapp.com/site/user/registration[] pour vous inscrire.
+. Entrez votre identifiant d'entreprise, remplissez le formulaire captcha, acceptez la déclaration de confidentialité de NetApp et cliquez sur *Submit*.
+. Authentifiez l'enregistrement en saisissant le mot de passe à usage unique envoyé à votre ID de courriel et cliquez sur *Continuer*.
+. Sur la page de fin de l'inscription, entrez les informations suivantes pour terminer l'inscription.
++
+.. Sélectionnez *client NetApp / utilisateur final*.
+.. Dans le champ du NUMÉRO DE SÉRIE, entrez l'une des valeurs suivantes :
++
+*** ID d'abonnement Azure si vous utilisez Azure NetApp Files.
+*** ID du système de fichiers si vous utilisez Amazon FSX pour NetApp ONTAP.
+
+
+
+
+
+
+
+NOTE: Vous pouvez émettre un billet à https://mysupport.netapp.com/site/help[] si vous rencontrez un problème pendant l'enregistrement ou si vous connaissez le statut.

@@ -33,7 +33,7 @@ La valeur de la clé peut être affichée à partir de Swagger via l'API : API /
 Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINIE n'est pas prise en charge.
 
 * La plupart des champs des pages de l'assistant de restauration sont explicites. Les informations suivantes décrivent les champs pour lesquels vous aurez peut-être besoin d'aide.
-* Pour l'opération de restauration SnapMirror Business Continuity (SM-BC), vous devez sélectionner la sauvegarde à partir de l'emplacement principal.
+* Pour une opération de restauration de synchronisation active SnapMirror, vous devez sélectionner la sauvegarde à partir de l'emplacement principal.
 * Pour les règles activées par SnapLock, pour ONTAP 9.12.1 et versions antérieures, si vous spécifiez une période de verrouillage de snapshot, les clones créés à partir des snapshots inviolables dans le cadre de la restauration hériteront de l'heure d'expiration de SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 

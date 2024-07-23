@@ -1,0 +1,14 @@
+---
+permalink: protect-mysql/housekeeping-of-log-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: 'SnapCenter gère la gestion des sauvegardes de journaux et de données au niveau du système de stockage et du système de fichiers, ainsi qu"au sein du catalogue des sauvegardes MySQL.' 
+---
+= Comment SnapCenter gère la gestion des sauvegardes de journaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter gère la gestion des sauvegardes de données au niveau du système de stockage et du système de fichiers.

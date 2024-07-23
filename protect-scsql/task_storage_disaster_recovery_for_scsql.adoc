@@ -44,7 +44,7 @@ Une icône « i » s'affiche en regard des nouvelles sauvegardes pour indiquer q
 * Vous pouvez supprimer le plug-in SnapCenter pour les sauvegardes SQL Server créées lors du basculement à l'aide de l'interface utilisateur ou de l'applet de commande suivante : `Remove-SmBackup`
 * Après le basculement, si vous souhaitez que certaines ressources soient en mode non-DR, utilisez l'applet de commande suivante : `Remove-SmResourceDRMode`
 +
-Pour plus d'informations, reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Pour plus d'informations, reportez-vous au https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 * Le serveur SnapCenter gère les ressources de stockage individuelles (bases de données SQL) en mode reprise après incident ou autre, mais pas le groupe de ressources avec les ressources de stockage en mode DR ou non.
 

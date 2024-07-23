@@ -33,6 +33,7 @@ NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération �
 * Les copies de sauvegarde basées sur des fichiers ne peuvent pas être restaurées depuis SnapCenter.
 * Après la mise à niveau vers SnapCenter 4.3, les sauvegardes effectuées dans SnapCenter 4.2 peuvent être restaurées, mais ne peuvent pas être restaurées. Vous devez utiliser des scripts de restauration HANA Studio ou HANA externes à SnapCenter pour restaurer les sauvegardes prises dans SnapCenter 4.2.
 * Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour une opération de restauration de synchronisation active SnapMirror, vous devez sélectionner la sauvegarde à partir de l'emplacement principal.
 
 
 .Étapes

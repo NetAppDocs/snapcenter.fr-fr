@@ -13,8 +13,8 @@ entries:
     url: "/protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html"
   - title: Prise en charge du mappage des LUN asymétriques dans les clusters Windows
     url: "/protect-scsql/concept_support_for_asymmetric_lun_mapping_alm_in_windows_clusters.html"
-  - title: Types de stockage pris en charge par les plug-ins SnapCenter pour Microsoft
-      Windows et pour Microsoft SQL Server
+  - title: Types de stockage pris en charge par le plug-in SnapCenter pour Microsoft
+      SQL Server
     url: "/protect-scsql/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows_and_for_microsoft_sql_server.html"
   - title: Recommandations relatives à l'organisation du stockage pour le plug-in
       SnapCenter pour Microsoft SQL Server
@@ -84,7 +84,7 @@ entries:
   - title: Configurer les informations d'identification d'une ressource SQL Server
       individuelle
     url: "/protect-scsql/task_configure_credentials_for_an_individual_sql_server_resource.html"
-  - title: Configurez GMSA sur Windows Server 2012 ou version ultérieure
+  - title: Configurez GMSA sur Windows Server 2016 ou version ultérieure
     url: "/protect-scsql/task_configure_gMSA_on_windows_server_2012_or_later.html"
   - title: Installez le plug-in SnapCenter pour Microsoft SQL Server
     entries:

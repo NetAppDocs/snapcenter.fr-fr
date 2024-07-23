@@ -50,13 +50,13 @@ SnapCenter inclut les fonctionnalités clés suivantes :
 
 * Protection des données centralisée et cohérente avec les applications
 +
-La protection des données est prise en charge pour Microsoft Exchange Server, Microsoft SQL Server, les bases de données Oracle sous Linux ou AIX, les bases de données SAP HANA et les systèmes de fichiers hôtes Windows s'exécutant sur des systèmes ONTAP.
+La protection des données est prise en charge pour les bases de données Microsoft Exchange Server, Microsoft SQL Server, Oracle sous Linux ou AIX, SAP HANA Database, IBM DB2 et les systèmes de fichiers hôtes Windows exécutés sur des systèmes ONTAP.
 
 +
-La protection des données est également prise en charge pour d'autres applications et bases de données standard ou personnalisées grâce à une structure permettant de créer des plug-ins SnapCenter définis par l'utilisateur. La protection des données est ainsi assurée pour d'autres applications et bases de données depuis une seule fenêtre. En tirant parti de cette structure, NetApp a publié des plug-ins personnalisés SnapCenter pour IBM DB2, MongoDB, MySQL, etc. Sur le NetApp Automation Store.
+La protection des données est également prise en charge pour d'autres applications et bases de données standard ou personnalisées grâce à une structure permettant de créer des plug-ins SnapCenter définis par l'utilisateur. La protection des données est ainsi assurée pour d'autres applications et bases de données depuis une seule fenêtre. En tirant parti de ce framework, NetApp a publié des plug-ins SnapCenter pour MongoDB, MySQL, PostgreSQL, Storage, MaxDB, Sybase ASE, ORASCPM, MongoDB et DPGlue. En plus de cela, vous pouvez créer votre propre plug-in à l'aide du guide du développeur.
 
 +
-https://automationstore.netapp.com/home.shtml["Stockage NetApp Storage Automation Store"^]
+link:concept_develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
 
 * Sauvegardes basées sur des règles
 +
@@ -86,10 +86,10 @@ SnapCenter inclut des API REST pour la plupart des fonctionnalités d'intégrati
 Pour plus d'informations sur les API REST, voir https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["Présentation de l'API REST"].
 
 +
-Pour plus d'informations sur les applets de commande Windows, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Pour plus d'informations sur les applets de commande Windows, reportez-vous à la section https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 +
-Pour plus d'informations sur les commandes UNIX, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["Guide de référence sur les commandes du logiciel SnapCenter"^].
+Pour plus d'informations sur les commandes UNIX, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["Guide de référence sur les commandes du logiciel SnapCenter"^].
 
 * Tableau de bord et reporting centralisés pour la protection des données
 * Contrôle d'accès basé sur des rôles (RBAC) pour la sécurité et la délégation.
@@ -116,18 +116,30 @@ SnapLock est une solution de conformité haute performance qui permet aux entrep
 +
 Pour plus d'informations sur SnapLock, reportez-vous à la section https://docs.netapp.com/us-en/ontap/snaplock/["Qu'est-ce que SnapLock"]
 
-* Continuité de l'activité SnapMirror (SM-BC)
+* Synchronisation active SnapMirror (initialement lancée sous la forme SnapMirror Business Continuity [SM-BC])
 +
-SnapMirror Business Continuity (SM-BC) assure la continuité des services de l'entreprise même en cas de défaillance complète du site, permettant aux applications de basculer en toute transparence à l'aide d'une copie secondaire. Aucune intervention manuelle ni script supplémentaire n'est nécessaire pour déclencher un basculement avec SM-BC.
+La synchronisation active SnapMirror assure la continuité des services, même en cas de défaillance complète d'un site. Les applications peuvent ainsi basculer en toute transparence au moyen d'une copie secondaire. Aucune intervention manuelle, ni script supplémentaire n'est nécessaire pour déclencher un basculement avec la synchronisation active SnapMirror.
 
 +
-Les plug-ins pris en charge pour cette fonctionnalité sont le plug-in SnapCenter pour SQL Server, le plug-in SnapCenter pour Windows et le plug-in SnapCenter pour Oracle Database.
+Les plug-ins pris en charge pour cette fonctionnalité sont le plug-in SnapCenter pour SQL Server, le plug-in SnapCenter pour Windows, le plug-in SnapCenter pour Oracle Database, le plug-in SnapCenter pour SAP HANA, le plug-in SnapCenter pour Microsoft Exchange Server et le plug-in SnapCenter pour Unix.
 
 +
-Pour plus d'informations sur SM-BC, reportez-vous à la section https://docs.netapp.com/us-en/ontap/smbc/index.html["Continuité de l'activité SnapMirror (SM-BC)"]
+
+NOTE: Pour prendre en charge la proximité de l'initiateur hôte dans SnapCenter, la source ou la destination doit être définie dans ONTAP.
 
 +
-Pour SM-BC, assurez-vous que vous avez satisfait aux différentes exigences en matière de matériel, de logiciels et de configuration du système.  Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html["Prérequis"]
+La fonctionnalité de synchronisation active SnapMirror n'est pas prise en charge dans SnapCenter :
+
++
+** Si vous convertissez les charges de travail de synchronisation active SnapMirror asymétriques en charges de travail symétriques en modifiant la règle sur les relations de synchronisation active SnapMirror de _automatedfailover_ à _automatefailoverduplex_ dans ONTAP, cette règle n'est pas prise en charge dans SnapCenter.
+** En cas de sauvegardes d'un groupe de ressources (déjà protégé dans SnapCenter), puis de modification de la règle de stockage sur les relations de synchronisation active SnapMirror entre _automatedfailover_ et _failetedoverduplex_ dans ONTAP, cette règle n'est pas prise en charge dans SnapCenter.
++
+Pour plus d'informations sur la synchronisation active SnapMirror, reportez-vous à la section https://docs.netapp.com/us-en/ontap/smbc/index.html["Présentation de la synchronisation active SnapMirror"]
+
++
+Pour la synchronisation active SnapMirror, assurez-vous que vous répondez aux différentes exigences en matière de matériel, de logiciels et de configuration du système. Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html["Prérequis"]
+
+
 
 * La mise en miroir synchrone
 +
@@ -161,6 +173,9 @@ SnapCenter se compose du serveur SnapCenter et des plug-ins SnapCenter. Vous dev
 ** Plug-in SnapCenter pour Microsoft Windows
 ** Plug-in SnapCenter pour Microsoft Exchange Server
 ** Plug-in SnapCenter pour base de données SAP HANA
+** Plug-in SnapCenter pour IBM DB2
+** Plug-in SnapCenter pour PostgreSQL
+** Plug-in SnapCenter pour MySQL
 
 
 * SnapCenter Plug-ins Package pour Linux, qui comprend les plug-ins suivants :
@@ -168,6 +183,9 @@ SnapCenter se compose du serveur SnapCenter et des plug-ins SnapCenter. Vous dev
 ** Plug-in SnapCenter pour bases de données Oracle
 ** Plug-in SnapCenter pour base de données SAP HANA
 ** Plug-in SnapCenter pour systèmes de fichiers UNIX
+** Plug-in SnapCenter pour IBM DB2
+** Plug-in SnapCenter pour PostgreSQL
+** Plug-in SnapCenter pour MySQL
 
 
 * SnapCenter Plug-ins Package pour AIX, qui comprend les plug-ins suivants :
@@ -176,10 +194,7 @@ SnapCenter se compose du serveur SnapCenter et des plug-ins SnapCenter. Vous dev
 ** Plug-in SnapCenter pour systèmes de fichiers UNIX
 
 
-* Plug-ins personnalisés SnapCenter
-+
-Ces plug-ins personnalisés sont pris en charge par la communauté et peuvent être téléchargés depuis le https://automationstore.netapp.com/home.shtml["Stockage NetApp Storage Automation Store"^].
-
+* Plug-ins pris en charge par SnapCenter NetApp
 
 
 Le plug-in SnapCenter pour VMware vSphere, anciennement NetApp Data Broker, est une appliance virtuelle autonome prenant en charge les opérations de protection des données SnapCenter sur des bases de données et des systèmes de fichiers virtualisés.
@@ -190,24 +205,27 @@ Le plug-in SnapCenter pour VMware vSphere, anciennement NetApp Data Broker, est 
 
 Le serveur SnapCenter comprend un serveur Web, une interface utilisateur centralisée basée sur HTML5, des applets de commande PowerShell, des API REST et un référentiel SnapCenter.
 
-SnapCenter assure une haute disponibilité et une évolutivité horizontale sur plusieurs serveurs SnapCenter au sein d'une interface utilisateur unique. Vous pouvez obtenir une haute disponibilité à l'aide de l'équilibreur de charge externe (F5). Pour les environnements de taille supérieure avec des milliers d'hôtes, l'ajout de plusieurs serveurs SnapCenter peut vous aider à équilibrer la charge.
+SnapCenter Server prend en charge Microsoft Windows et Linux (RHEL 8.x, RHEL 9.x, SLES 15 SP5)
 
-* Si vous utilisez le module de plug-ins SnapCenter pour Windows, l'agent hôte s'exécute sur le serveur SnapCenter et le plug-in Windows. L'agent hôte exécute les planifications de manière native sur l'hôte Windows distant ou, pour Microsoft SQL Server, le planning est exécuté sur l'instance SQL locale.
-+
-Le serveur SnapCenter communique avec les plug-ins Windows via l'agent hôte.
+Si vous utilisez le module de plug-ins SnapCenter pour Linux ou le module de plug-ins SnapCenter pour AIX, les planifications sont exécutées de manière centralisée à l'aide du planificateur Quartz.
 
-* Si vous utilisez le module de plug-ins SnapCenter pour Linux ou le module de plug-ins SnapCenter pour AIX, les planifications sont exécutées sur le serveur SnapCenter en tant que planifications de tâches Windows.
-+
-** Pour le plug-in SnapCenter pour la base de données Oracle, l'agent hôte qui s'exécute sur l'hôte SnapCenter Server communique avec le chargeur de plug-in SnapCenter (SPL) qui s'exécute sur l'hôte Linux ou AIX afin d'effectuer différentes opérations de protection des données.
-** Pour le plug-in SnapCenter pour base de données SAP HANA et plug-ins personnalisés SnapCenter, le serveur SnapCenter communique avec ces plug-ins via l'agent SCCore qui s'exécute sur l'hôte.
-
-
+* Pour le plug-in SnapCenter pour la base de données Oracle, l'agent hôte qui s'exécute sur l'hôte SnapCenter Server communique avec le chargeur de plug-in SnapCenter (SPL) qui s'exécute sur l'hôte Linux ou AIX afin d'effectuer différentes opérations de protection des données.
+* Pour le plug-in SnapCenter pour base de données SAP HANA et plug-ins personnalisés SnapCenter, le serveur SnapCenter communique avec ces plug-ins via l'agent SCCore qui s'exécute sur l'hôte.
 
 
 Le serveur SnapCenter et les plug-ins communiquent avec l'agent hôte via HTTPS. Les informations relatives aux opérations SnapCenter sont stockées dans le référentiel SnapCenter.
 
 
 NOTE: SnapCenter prend en charge l'espace de noms disjoint pour les hôtes Windows. Si vous rencontrez des problèmes lors de l'utilisation d'un espace de noms disjoint, reportez-vous à la section https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_is_unable_to_discover_resources_when_using_disjoint_namespace["SnapCenter ne parvient pas à détecter les ressources lors de l'utilisation d'un namespace disjoint"].
+
+Vous devez exécuter les commandes suivantes pour connaître l'état des composants SnapCenter s'exécutant sur un hôte Linux :
+
+* `systemctl status snapmanagerweb`
+* `systemctl status scheduler`
+* `systemctl status smcore`
+* `systemctl status nginx`
+* `systemctl status rabbitmq-server`
+
 
 
 
@@ -286,11 +304,50 @@ Linux ou Windows
  a| 
 Plug-ins personnalisés
  a| 
-https://automationstore.netapp.com/home.shtml["Stockage NetApp Storage Automation Store"^]
+Module de plug-ins pour Linux et module de plug-ins pour Windows
  a| 
 Pour les sauvegardes de système de fichiers, Plug-in pour Windows
  a| 
 Hôte d'application personnalisé
+ a| 
+Linux ou Windows
+
+
+
+ a| 
+Plug-in pour IBM DB2
+ a| 
+Module de plug-ins pour Linux et module de plug-ins pour Windows
+ a| 
+Plug-in pour UNIX ou plug-in pour Windows
+ a| 
+Hôte DB2
+ a| 
+Linux ou Windows
+
+
+
+ a| 
+Plug-in pour PostgreSQL
+ a| 
+Module de plug-ins pour Linux et module de plug-ins pour Windows
+ a| 
+Plug-in pour UNIX ou plug-in pour Windows
+ a| 
+Hôte PostgreSQL
+ a| 
+Linux ou Windows
+
+
+
+ a| 
+Plug-in pour MySQL
+ a| 
+Module de plug-ins pour Linux et module de plug-ins pour Windows
+ a| 
+Plug-in pour UNIX ou plug-in pour Windows
+ a| 
+Db2MySQL hôte
  a| 
 Linux ou Windows
 
@@ -358,26 +415,38 @@ Les périphériques SAN natifs, les systèmes de fichiers et les dispositions LV
 
 === Fonctionnalités du plug-in SnapCenter pour les bases de données SAP HANA
 
-* Automatise la sauvegarde, la restauration et le clonage des bases de données SAP HANA respectueuses des applications dans votre environnement SnapCenter
+Automatise la sauvegarde, la restauration et le clonage des bases de données SAP HANA compatibles avec les applications dans votre environnement SnapCenter.
 
 
 
+=== Fonctionnalités des plug-ins pris en charge par NetApp
 
-=== Fonctionnalités des plug-ins personnalisés SnapCenter
-
-* Prise en charge de plug-ins personnalisés pour gérer des applications ou des bases de données qui ne sont pas prises en charge par d'autres plug-ins SnapCenter. Les plug-ins personnalisés ne sont pas fournis lors de l'installation de SnapCenter.
+* Prise en charge d'autres plug-ins pour la gestion d'applications et de bases de données qui ne sont pas pris en charge par d'autres plug-ins SnapCenter Les plug-ins pris en charge par NetApp ne sont pas fournis lors de l'installation de SnapCenter.
 * Prise en charge de la création de copies en miroir des jeux de sauvegarde sur un autre volume et de la réplication de sauvegarde disque à disque.
 * Prise en charge des environnements Windows et Linux. Dans les environnements Windows, les applications personnalisées via des plug-ins personnalisés peuvent, en option, utiliser le plug-in SnapCenter pour Microsoft Windows pour créer des sauvegardes cohérentes avec le système de fichiers.
 
 
-Des exemples de plug-in personnalisés MySQL, DB2 et MongoDB pour le logiciel SnapCenter peuvent être téléchargés à partir du https://automationstore.netapp.com/home.shtml["Stockage NetApp Storage Automation Store"^].
+NetApp prend en charge la création et l'utilisation de plug-ins pris en charge. Toutefois, les plug-ins que vous créez ne sont pas pris en charge par NetApp.
+
+Pour plus d'informations, voir link:../protect-nsp/develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
 
 
-NOTE: Les plug-ins personnalisés MySQL, DB2 et MongoDB sont pris en charge uniquement par les communautés NetApp.
 
-NetApp prend en charge la possibilité de créer et d'utiliser des plug-ins personnalisés. Cependant, les plug-ins personnalisés que vous créez ne sont pas pris en charge par NetApp.
+=== Plug-in SnapCenter pour IBM DB2
 
-Pour plus d'informations, voir link:../protect-scc/concept_develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
+Automatise la sauvegarde, la restauration et le clonage des bases de données IBM DB2 respectueuses des applications dans votre environnement SnapCenter.
+
+
+
+=== Plug-in SnapCenter pour PostgreSQL
+
+Automatise la sauvegarde, la restauration et le clonage des instances PostgreSQL dans votre environnement SnapCenter.
+
+
+
+=== Plug-in SnapCenter pour MySQL
+
+Automatise la sauvegarde, la restauration et le clonage des instances MySQL compatibles avec les applications dans votre environnement SnapCenter.
 
 
 
@@ -387,7 +456,7 @@ Le référentiel SnapCenter, parfois appelé base de données NSM, stocke des in
 
 La base de données du référentiel du serveur MySQL est installée par défaut lorsque vous installez le serveur SnapCenter. Si MySQL Server est déjà installé et que vous effectuez une nouvelle installation de SnapCenter Server, vous devez désinstaller MySQL Server.
 
-SnapCenter prend en charge MySQL Server 5.7.25 ou version ultérieure en tant que base de données de référentiel SnapCenter. Si vous utilisiez une version antérieure de MySQL Server avec une version antérieure de SnapCenter, pendant la mise à niveau de SnapCenter, le serveur MySQL est mis à niveau vers la version 5.7.25 ou ultérieure.
+SnapCenter prend en charge MySQL Server 8.0.37 ou version ultérieure en tant que base de données de référentiel SnapCenter. Si vous utilisiez une version antérieure du serveur MySQL avec une version antérieure de SnapCenter, pendant la mise à niveau de SnapCenter, le serveur MySQL est mis à niveau vers 8.0.37 ou une version ultérieure.
 
 Le référentiel SnapCenter stocke les informations et métadonnées suivantes :
 

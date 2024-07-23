@@ -64,17 +64,19 @@ Activé par défaut, la fonction SLM détecte régulièrement les LUN qui ne dis
 +
 Vous devez installer NVMe util sur cloner ou monter sur un autre hôte.
 
-** Sauvegarde, restauration, clonage, montage, démontage, Les opérations de catalogage, de catalogage et de vérification sont prises en charge sur le matériel NVMe, à l'exception des environnements virtualisés tels que VMDK et RDM.
+** Sauvegarde, restauration, clone, montage, démontage, les opérations de catalogue, d'annulation de catalogue et de vérification sont prises en charge sur le matériel NVMe, à l'exception des environnements virtualisés tels que RDM.
 +
 Les opérations ci-dessus sont prises en charge sur les périphériques sans partitions ou avec une seule partition.
 
-
-
-
-
++
 
 NOTE: Vous pouvez configurer la solution de chemins d'accès multiples pour les périphériques NVMe en définissant l'option de chemins d'accès multiples natifs dans le noyau. Les chemins d'accès multiples de Device Mapper (DM) ne sont pas pris en charge.
 
+** Sauvegarde, restauration, clone, montage, démontage, les workflows de catalogue, d'annulation de catalogue et de vérification sont pris en charge sur NVMe via TCP/IP.
+** Sauvegarde, restauration, clone, montage, démontage, les workflows de catalogue, d'annulation de catalogue et de vérification sont pris en charge sur la disposition VMDK créée sur NVMe over TCP/IP.
+
+
+* Prise en charge de la synchronisation active SnapMirror (initialement lancée sous la forme de SnapMirror Business Continuity [SM-BC]) qui assure la continuité des services de l'entreprise même en cas de défaillance complète du site, permettant ainsi aux applications de basculer en toute transparence au moyen d'une copie secondaire. Aucune intervention manuelle, ni script supplémentaire n'est nécessaire pour déclencher un basculement avec la synchronisation active SnapMirror.
 * Prise en charge des utilisateurs non par défaut au lieu d'oracle et de Grid.
 +
 Pour prendre en charge les utilisateurs non par défaut, vous devez définir les utilisateurs non par défaut en modifiant les valeurs des paramètres dans le fichier *sco.properties* situé dans _file /var/opt/snapcenter/sco/etc/_.

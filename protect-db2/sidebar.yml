@@ -1,0 +1,167 @@
+---
+section: protect-db2
+title: Protégez IBM DB2
+entries:
+- title: Plug-in SnapCenter pour IBM DB2
+  entries:
+  - title: Présentation du plug-in SnapCenter pour IBM DB2
+    url: "/protect-db2/snapcenter-plug-in-for-ibm-db2-overview.html"
+  - title: Ce que vous pouvez faire avec le plug-in SnapCenter pour IBM DB2
+    url: "/protect-db2/what-you-can-do-using-the-snapcenter-plug-in-for-ibm-db2.html"
+  - title: Plug-in SnapCenter pour fonctionnalités IBM DB2
+    url: "/protect-db2/snapcenter-plug-in-for-ibm-db2-features.html"
+  - title: Types de stockage pris en charge par le plug-in SnapCenter pour IBM DB2
+    url: "/protect-db2/storage-types-supported-by-snapcenter-plug-in-for-ibm-db2.html"
+  - title: Privilèges minimum ONTAP requis
+    url: "/protect-db2/minimum-privileges-required-for-ibm-db2.html"
+  - title: Préparez les systèmes de stockage pour la réplication SnapMirror et SnapVault
+    url: "/protect-db2/prepare-storage-systems-for-snapmirror-and-snapvault-replication-for-plugin-for-db2.html"
+  - title: Stratégie de sauvegarde pour IBM DB2
+    entries:
+    - title: Définir une stratégie de sauvegarde pour IBM DB2
+      url: "/protect-db2/define-a-backup-strategy-for-ibm-db2.html"
+    - title: Découverte automatique des ressources sur l'hôte Linux
+      url: "/protect-db2/auto-discovery-of-resources-on-linux-host.html"
+    - title: Types de sauvegardes pris en charge
+      url: "/protect-db2/type-of-backups-supported.html"
+    - title: Utilisation des copies Snapshot de groupe de cohérence par le plug-in
+        SnapCenter pour IBM DB2
+      url: "/protect-db2/how-snapcenter-plug-in-for-ibm-db2-uses-consistency-group-snapshot-copies.html"
+    - title: Comment SnapCenter gère la gestion des sauvegardes de journaux
+      url: "/protect-db2/housekeeping-of-log-backups.html"
+    - title: Considérations relatives à la détermination des plannings de sauvegarde
+        pour IBM DB2
+      url: "/protect-db2/considerations-for-determining-backup-schedules-for-ibm-db2.html"
+    - title: Nombre de tâches de sauvegarde nécessaires pour IBM DB2
+      url: "/protect-db2/number-of-backup-jobs-needed-for-ibm-db2.html"
+    - title: Nomenclature établie des sauvegardes
+      url: "/protect-db2/backup-naming-conventions-for-plugin-for-ibm-db2.html"
+  - title: Stratégie de restauration et de récupération pour IBM DB2
+    entries:
+    - title: Définir une stratégie de restauration et de récupération pour les ressources
+        IBM DB2
+      url: "/protect-db2/define-a-restore-and-recovery-strategy-for-ibm-db2-resources.html"
+    - title: Types de stratégies de restauration pris en charge pour les ressources
+        IBM DB2 ajoutées manuellement
+      url: "/protect-db2/types-of-restore-strategies-supported-for-manually-added-ibm-db2.html"
+    - title: Types de stratégies de restauration pris en charge pour IBM DB2 détecté
+        automatiquement
+      url: "/protect-db2/types-of-restore-strategies-supported-for-auto-discovered-ibm-db2.html"
+    - title: Types d'opérations de restauration pour IBM DB2 détecté automatiquement
+      url: "/protect-db2/types-of-restore-performed-for-auto-discovered-ibm-db2.html"
+- title: Préparez l'installation du plug-in SnapCenter pour IBM DB2
+  entries:
+  - title: Workflow d'installation du plug-in SnapCenter pour IBM DB2
+    url: "/protect-db2/install-snapcenter-plug-in-for-ibm-db2.html"
+  - title: Conditions préalables à l'ajout d'hôtes et à l'installation du plug-in
+      SnapCenter pour IBM DB2
+    url: "/protect-db2/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-ibm-db2.html"
+  - title: Configuration requise pour l'hôte pour installer le module de plug-ins
+      SnapCenter pour Windows
+    url: "/protect-db2/host-requirements-to-install-snapcenter-plug-in-package-for-windows-db2.html"
+  - title: Configuration requise pour l'installation du module de plug-ins SnapCenter
+      pour Linux
+    url: "/protect-db2/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html"
+  - title: Configurez les informations d'identification du plug-in SnapCenter pour
+      IBM DB2
+    url: "/protect-db2/set-up-credentials-for-snapcenter-plug-in-for-ibm-db2.html"
+  - title: Configurez GMSA sur Windows Server 2016 ou version ultérieure
+    url: "/protect-db2/configure-gMSA-on-windows-server-2012-or-later.html"
+  - title: Installez le plug-in SnapCenter pour IBM DB2
+    entries:
+    - title: Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants
+      url: "/protect-db2/add-hosts-and-install-plug-in-packages-on-remote-hosts-ibm-db2.html"
+    - title: Installez les modules SnapCenter Plug-in pour Linux ou Windows sur plusieurs
+        hôtes distants à l'aide d'applets de commande
+      url: "/protect-db2/install-snapcenter-plug-in-packages-for-linux-or-windows-on-multiple-remote-hosts-using-cmdlets-ibm-db2.html"
+    - title: Installez le plug-in SnapCenter pour IBM DB2 sur les hôtes Linux à l'aide
+        de l'interface de ligne de commande
+      url: "/protect-db2/install-the-snapcenter-plug-in-for-ibm-db2-on-linux-hosts-using-the-command-line-interface.html"
+    - title: Contrôler l'état d'installation du module d'extension SnapCenter
+      url: "/protect-db2/monitor-the-status-of-installing-plugin-for-ibm-db2.html"
+  - title: Configurer le certificat CA
+    entries:
+    - title: Générer le fichier CSR de certificat CA
+      url: "/protect-db2/generate-CA-certificate-CSR-file.html"
+    - title: Importer des certificats CA
+      url: "/protect-db2/import-CA-certificates.html"
+    - title: Obtenez le certificat CA imprimé
+      url: "/protect-db2/get-the-CA-certificate-thumbprint.html"
+    - title: Configurez le certificat d'autorité de certification avec les services
+        de plug-in d'hôte Windows
+      url: "/protect-db2/configure-CA-certificate-with-Windows-host-plug-in-services.html"
+    - title: Configurez le certificat CA pour le service de plug-ins IBM DB2 SnapCenter
+        sur un hôte Linux
+      url: "/protect-db2/configure-CA-certificate-for-ibm-db2-on-Linux-host.html"
+    - title: Configurez le certificat CA pour le service de plug-ins IBM DB2 SnapCenter
+        sur un hôte Windows
+      url: "/protect-db2/configure-CA-certificate-for-ibm-db2-on-windows-host.html"
+    - title: Activez les certificats CA pour les plug-ins
+      url: "/protect-db2/enable-ca-certificates-for-plug-ins.html"
+- title: Préparation à la protection des données
+  entries:
+  - title: Conditions préalables à l'utilisation du plug-in SnapCenter pour IBM DB2
+    url: "/protect-db2/prerequisites-for-using-snapcenter-plug-in-for-ibm-db2.html"
+  - title: Utilisation des ressources, des groupes de ressources et des stratégies
+      pour protéger IBM DB2
+    url: "/protect-db2/how-resources-resource-groups-and-policies-are-used-for-protecting-ibm-db2.html"
+- title: Sauvegarder les ressources IBM DB2
+  entries:
+  - title: Sauvegardez le flux de travail
+    url: "/protect-db2/back-up-ibm-db2-resources.html"
+  - title: Découvrir les bases de données automatiquement
+    url: "/protect-db2/discover-the-databases-automatically.html"
+  - title: Ajoutez des ressources manuellement au plug-in hôte
+    url: "/protect-db2/add-resources-manually-to-the-plug-in-host.html"
+  - title: Créez des stratégies de sauvegarde pour IBM DB2
+    url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
+  - title: Créer des groupes de ressources et attacher des stratégies
+    url: "/protect-db2/create-resource-groups-and-attach-policies.html"
+  - title: Sauvegardez IBM DB2
+    url: "/protect-db2/back-up-ibm-db2.html"
+  - title: Sauvegarder les groupes de ressources
+    url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
+  - title: Créez une connexion au système de stockage et des informations d'identification
+      à l'aide des applets de commande PowerShell pour IBM DB2
+    url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
+  - title: Sauvegarder des bases de données à l'aide des applets de commande PowerShell
+    url: "/protect-db2/back-up-databases-using-powershell-cmdlets-ibm-db2.html"
+  - title: Surveiller les opérations de sauvegarde
+    entries:
+    - title: Contrôlez les opérations de sauvegarde dans la page tâches SnapCenter
+      url: "/protect-db2/monitor-db2-backup-operations.html"
+    - title: Surveiller les opérations dans le volet activité
+      url: "/protect-db2/monitor-dataprotection-operations-on-db2-in-the-activity-pane.html"
+  - title: Annuler les opérations de sauvegarde
+    url: "/protect-db2/cancel-backup-operations-for-ibm-db2.html"
+  - title: Affichez les sauvegardes et clones de bases de données IBM DB2 dans la
+      page topologie
+    url: "/protect-db2/view-ibm-db2-database-backups-and-clones-in-the-topology-page.html"
+- title: Restaurez IBM DB2
+  entries:
+  - title: Restaurer le flux de travail
+    url: "/protect-db2/restore-ibm-db2.html"
+  - title: Restaurer une sauvegarde de ressource ajoutée manuellement
+    url: "/protect-db2/restore-manually-added-resource-backup.html"
+  - title: Restaurez une sauvegarde de base de données découverte automatiquement
+    url: "/protect-db2/restore-auto-discovered-database-backup.html"
+  - title: Restaurez IBM DB2 à l'aide des applets de commande PowerShell
+    url: "/protect-db2/restore-ibm-db2-database-using-powershell-cmdlets.html"
+  - title: Surveiller les opérations de restauration
+    url: "/protect-db2/monitor-db2-restore-operations.html"
+- title: Clonage des sauvegardes de ressources IBM DB2
+  entries:
+  - title: Workflow de clonage
+    url: "/protect-db2/clone-ibm-db2-resource-backups.html"
+  - title: Cloner une sauvegarde de base de données IBM DB2
+    url: "/protect-db2/clone-ibm-db2-backup.html"
+  - title: Cloner les sauvegardes de bases de données IBM DB2 à l'aide des applets
+      de commande PowerShell
+    url: "/protect-db2/clone-ibm-db2-backups-using-powershell-cmdlets.html"
+  - title: Surveillance des opérations de clonage dans SnapCenter
+    url: "/protect-db2/monitor-db2-clone-operations.html"
+  - title: Séparer un clone
+    url: "/protect-db2/split-a-clone-for-db2.html"
+  - title: Supprimez ou divisez les clones de base de données IBM DB2 après la mise
+      à niveau de SnapCenter
+    url: "/protect-db2/delete-or-split-ibm-db2-clones-after-upgrading-snapcenter.html"

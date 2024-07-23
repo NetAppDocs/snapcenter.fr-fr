@@ -2,11 +2,11 @@
 :allow-uri-read: 
 
 
-Windows Server 2012 ou version ultérieure vous permet de créer un compte de service géré de groupe (GMSA) qui fournit une gestion automatisée des mots de passe de compte de service à partir d'un compte de domaine géré.
+Windows Server 2016 ou version ultérieure vous permet de créer un compte de service géré de groupe (GMSA) qui fournit une gestion automatisée des mots de passe de compte de service à partir d'un compte de domaine géré.
 
 .Avant de commencer
-* Vous devez disposer d'un contrôleur de domaine Windows Server 2012 ou version ultérieure.
-* Vous devez disposer d'un hôte Windows Server 2012 ou version ultérieure, qui est membre du domaine.
+* Vous devez disposer d'un contrôleur de domaine Windows Server 2016 ou version ultérieure.
+* Vous devez disposer d'un hôte Windows Server 2016 ou version ultérieure, qui est membre du domaine.
 
 
 .Étapes

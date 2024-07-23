@@ -33,7 +33,7 @@ NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume 
 
 NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume de type miroir-coffre-fort sont affichés dans la vue topologique, mais le nombre de sauvegardes du miroir dans la vue topologique n'inclut pas la sauvegarde flexible de version.
 
-Si vous avez une relation secondaire comme SnapMirror Business Continuity (SM-BC), les icônes supplémentaires suivantes s'affichent :
+Si vous utilisez une relation secondaire comme SnapMirror actif Sync (initialement commercialisé sous la forme SnapMirror Business Continuity [SM-BC]), les icônes supplémentaires suivantes s'affichent :
 
 * image:../media/topology_replica_site_up.png["site de réplica en haut"] implique que le site de réplica est en service.
 * image:../media/topology_replica_site_down.png["site de réplica en panne"]  implique que le site de réplica est en panne.
@@ -61,10 +61,10 @@ Si une sauvegarde SnapLock est activée, cliquez sur le bouton *Refresh* pour ac
 Lorsque la ressource d'application est répartie sur plusieurs volumes, le délai d'expiration SnapLock de la sauvegarde correspond au temps d'expiration SnapLock le plus long défini pour un instantané d'un volume. Le temps d'expiration SnapLock le plus long est extrait de ONTAP.
 
 +
-Pour SnapMirror Business Continuity (SM-BC), cliquez sur le bouton *Refresh* pour actualiser l'inventaire des sauvegardes SnapCenter en interrogeant ONTAP sur les sites principaux et de réplica. Un planning hebdomadaire effectue également cette activité pour toutes les bases de données contenant la relation SM-BC.
+Pour la synchronisation active SnapMirror, cliquez sur le bouton *Refresh* pour actualiser l'inventaire des sauvegardes SnapCenter en interrogeant ONTAP sur les sites principaux et de réplica. Une planification hebdomadaire effectue également cette activité pour toutes les bases de données contenant une relation de synchronisation active SnapMirror.
 
 +
-** Pour les relations SM-BC, Async Mirror, Vault ou MirrorVault vers la nouvelle destination principale doivent être configurées manuellement après le basculement.
+** Pour la synchronisation active SnapMirror et uniquement pour ONTAP 9.14.1, les relations SnapMirror miroir asynchrone ou MirrorVault asynchrone vers la nouvelle destination principale doivent être configurées manuellement après le basculement. À partir de ONTAP 9.15.1, Async Mirror ou Async MirrorVault est automatiquement configuré sur la nouvelle destination principale.
 ** Après le basculement, une sauvegarde doit être créée afin que SnapCenter puisse prendre connaissance du basculement. Vous ne pouvez cliquer sur *Rafraîchir* qu'après la création d'une sauvegarde.
 
 
@@ -79,12 +79,6 @@ NOTE: Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent s
 
 +
 Si vous utilisez des plug-ins personnalisés SnapCenter, vous ne pouvez pas renommer les sauvegardes qui se trouvent sur le système de stockage principal.
-
-+
-** Si vous sélectionnez une sauvegarde d'une ressource ou d'un groupe de ressources Oracle, vous pouvez également effectuer des opérations de montage et de démontage.
-** Si vous avez sélectionné une sauvegarde des journaux d'une ressource ou d'un groupe de ressources Oracle, vous pouvez effectuer des opérations de renommage, de montage, de démontage et de suppression.
-** Si vous utilisez le module SnapCenter Plug-ins Package pour Linux et que vous avez catalogué la sauvegarde à l'aide d'Oracle Recovery Manager (RMAN), vous ne pouvez pas renommer ces sauvegardes cataloguées.
-
 
 . Pour supprimer un clone, sélectionnez-le dans le tableau, puis cliquez sur image:../media/delete_icon.gif["icône supprimer"] pour supprimer le clone.
 

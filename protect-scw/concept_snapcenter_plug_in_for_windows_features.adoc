@@ -42,4 +42,12 @@ Pour plus d'informations sur les licences FlexClone, reportez-vous à link:../in
 * Prise en charge des sauvegardes des systèmes de fichiers et des disques de machines virtuelles (VMDK)
 * Prise en charge des infrastructures physiques et virtualisées
 * Prise en charge des protocoles iSCSI, Fibre Channel, FCoE, Raw Device Mapping (RDM), Asymmetric LUN Mapping (ALM), VMDK over NFS et VMFS, et du protocole FC virtuel
+* Prise en charge de NVMe (non-volatile Memory Express) sur Windows Server 2022
++
+** Workflows de sauvegarde, de restauration, de clonage et de vérification sur une disposition VMDK créée sur NVMe over TCP/IP.
+** Prend en charge la version 1.3 du firmware NVMe à partir de la mise à jour 2 d'ESX 8.0 et requiert la version 21 du matériel virtuel.
+** Windows Server Failover Clustering (WSFC) n'est pas pris en charge pour les applications sur VMDK sur NVMe over TCP/IP.
+
+
+* Prise en charge de la synchronisation active SnapMirror (initialement lancée sous la forme de SnapMirror Business Continuity [SM-BC]) qui assure la continuité des services de l'entreprise même en cas de défaillance complète du site, permettant ainsi aux applications de basculer en toute transparence au moyen d'une copie secondaire. Aucune intervention manuelle, ni script supplémentaire n'est nécessaire pour déclencher un basculement avec la synchronisation active SnapMirror.
 

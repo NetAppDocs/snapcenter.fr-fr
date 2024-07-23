@@ -14,7 +14,9 @@ summary: Téléchargez et installez SnapCenter sur la machine virtuelle Azure.
 Vous pouvez télécharger le logiciel SnapCenter depuis le site du support NetApp et l'installer sur la machine virtuelle Azure.
 
 .Avant de commencer
-Assurez-vous que la machine virtuelle Azure Windows est conforme aux conditions requises pour l'installation de SnapCenter Server. Pour plus d'informations, reportez-vous à la section link:../install/reference_domain_and_workgroup_requirements.html["Préparez-vous à installer le serveur SnapCenter"].
+* Assurez-vous que la machine virtuelle Azure Windows est conforme aux conditions requises pour l'installation de SnapCenter Server. Pour plus d'informations, reportez-vous à la section link:../install/reference_domain_and_workgroup_requirements.html["Préparez-vous à installer le serveur SnapCenter"].
+* Si vous êtes nouveau sur Azure NetApp Files et que vous ne possédez pas de compte NetApp, assurez-vous que vous vous êtes inscrit pour pouvoir accéder au logiciel SnapCenter.
+
 
 .Étapes
 . Téléchargez le package d'installation du serveur SnapCenter à partir de https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["Site de support NetApp"].
@@ -41,4 +43,23 @@ NOTE: Si vous cliquez sur le bouton *Annuler*, l'étape en cours d'exécution es
 +
 Toutefois, si vous cliquez sur *Annuler* lorsque vous exécutez des opérations "redémarrage du site du serveur SnapCenter" ou "attente du démarrage du serveur SnapCenter", l'installation se poursuit sans annuler l'opération.
 
+
+
+
+
+== Enregistrez le produit pour activer le support
+
+Si vous découvrez NetApp et ne possédez pas de compte NetApp, enregistrez le produit pour activer le support.
+
+.Étapes
+. Après avoir installé SnapCenter, accédez à *aide > à propos de*.
+. Dans la boîte de dialogue _a propos de SnapCenter_, notez l'instance SnapCenter, un nombre à 20 chiffres commençant par 971.
+. Cliquez sur https://register.netapp.com[].
+. Cliquez sur *Je ne suis pas un client NetApp enregistré*.
+. Indiquez vos coordonnées pour vous inscrire.
+. Laissez le champ NetApp Reference SN vide.
+. Sélectionnez *SnapCenter* dans la liste déroulante gamme de produits.
+. Sélectionnez le fournisseur de facturation.
+. Entrez l'ID d'instance SnapCenter à 20 chiffres.
+. Cliquez sur *soumettre*.
 

@@ -1,0 +1,20 @@
+---
+permalink: protect-mysql/type-of-backups-supported.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for mysql 
+summary: Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer. SnapCenter prend en charge le type de sauvegarde basée sur la copie Snapshot pour les bases de données MySQL. 
+---
+= Types de sauvegardes pris en charge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer. SnapCenter prend en charge le type de sauvegarde basée sur la copie Snapshot pour les bases de données MySQL.
+
+
+
+== Sauvegarde basée sur des copies Snapshot
+
+Les sauvegardes basées sur des copies Snapshot utilisent la technologie Snapshot de NetApp pour créer des copies en ligne en lecture seule des volumes sur lesquels résident les bases de données MySQL.

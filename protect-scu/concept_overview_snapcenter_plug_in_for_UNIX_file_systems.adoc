@@ -34,6 +34,9 @@ Des environnements
  a| 
 * Serveur physique
 * Serveur virtuel
++
+Datastores vVol sur NFS et SAN. Le datastore vVol peut uniquement être provisionné avec les outils ONTAP pour VMware vSphere.
+
 
 
 
@@ -90,6 +93,5 @@ Toutefois, vous pouvez effectuer manuellement une restauration au niveau des fic
 
 * La combinaison de systèmes de fichiers répartis sur des VMDK provenant à la fois des datastores NFS et VMFS n'est pas prise en charge.
 * NVMe n'est pas pris en charge.
-* SnapMirror Business Continuity (SM-BC) n'est pas pris en charge.
 * Le provisionnement n'est pas pris en charge.
 

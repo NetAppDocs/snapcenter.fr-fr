@@ -130,7 +130,7 @@ Paramètres à transmettre pour l'installation du serveur SnapCenter :
 * Si l'état _SELinux_ est "activé" et que le _mode actuel_ est "application", le service *nginx* ne démarre pas. Vous devez exécuter les commandes suivantes :
 +
 .. Accédez au répertoire local.
-.. Exécutez la commande : `jorunalctl -x|grep nginx`.
+.. Exécutez la commande : `journalctl -x|grep nginx`.
 .. Si le port interne de WebApp (8147) n'est pas autorisé à écouter, exécutez les commandes suivantes :
 +
 *** `ausearch -c 'nginx' --raw | audit2allow -M my-nginx`

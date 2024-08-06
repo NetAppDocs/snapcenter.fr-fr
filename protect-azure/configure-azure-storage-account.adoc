@@ -15,6 +15,9 @@ Vous devez configurer le compte de stockage Azure dans SnapCenter.
 
 Le compte de stockage Azure contient des informations sur l'ID d'abonnement, les informations d'identification Azure et le compte Azure NetApp.
 
+
+NOTE: Les licences standard et basées sur la capacité ne sont pas requises pour Azure NetApp Files.
+
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Storage Systems*.
 . Sur la page systèmes de stockage, sélectionnez *Azure NetApp Files* et cliquez sur *Nouveau*.

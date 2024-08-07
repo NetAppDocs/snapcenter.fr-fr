@@ -5460,8 +5460,6 @@
   <block id="f99510060ae91e89fdabd39c0e222578" category="paragraph">Si vous voulez toujours spécifier l'emplacement des fichiers journaux d'archives externes, sélectionnez *spécifier les emplacements des journaux d'archives externes*.</block>
   <block id="5207ebbbc32a1a4bd295b43498ad0913" category="paragraph">Si les journaux d'archives sont élagués dans le cadre de la sauvegarde et que vous avez monté manuellement les sauvegardes de journaux d'archives requises, vous devez spécifier le chemin de sauvegarde monté comme emplacement de journal d'archivage externe pour la restauration.</block>
   <block id="07a2a06d39605aa9ff4e7d9c550b1f32" category="admonition">Vous devez vérifier le chemin et le contenu du chemin de montage avant de le répertorier en tant qu'emplacement de journal externe.</block>
-  <block id="58fa648380c73e758318652a30ff424d" category="inline-link">Rapport technique NetApp 4591 : sauvegarde, restauration, réplication et reprise sur incident dans les bases de données</block>
-  <block id="5e8af025f634ab1bdb43a04eac96f1c3" category="list-text"><block ref="5e8af025f634ab1bdb43a04eac96f1c3" category="inline-link-rx"></block></block>
   <block id="d4242c48bd0d5641374fbc107c7d9f14" category="inline-link">L'opération échoue avec l'erreur ORA-00308</block>
   <block id="79ca58af823b457a1798d606cfd6d6ae" category="list-text"><block ref="79ca58af823b457a1798d606cfd6d6ae" category="inline-link-rx"></block></block>
   <block id="73ee3801ba5f54ed62d44865741a046d" category="paragraph">Vous ne pouvez pas effectuer une restauration avec restauration à partir de sauvegardes secondaires si les volumes du journal d'archivage ne sont pas protégés, mais si les volumes de données sont protégés. Vous ne pouvez restaurer que si vous sélectionnez *pas de récupération*.</block>
@@ -9876,4 +9874,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="eba5bfa2c0dc8d9f24998cf70fa891a6" category="list-text">Non applicable indique qu'une licence de la suite SnapManager n'est pas applicable, car le contrôleur de stockage se trouve sur Amazon FSX pour les plateformes de stockage NetApp ONTAP, Cloud Volumes ONTAP, ONTAP Select ou secondaires.</block>
   <block id="4e07c38c016a099592ed905ac7e037f7" category="list-text">Exécutez la commande :<block ref="1031a5113d1c9ac03f4fa3db4c69d3a4" prefix=" " category="inline-code"></block>.</block>
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Les licences standard et basées sur la capacité ne sont pas requises pour Azure NetApp Files.</block>
+  <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">Protection des données Oracle avec ONTAP</block>
+  <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
 </blocks>

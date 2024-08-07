@@ -176,7 +176,7 @@ Si les journaux d'archives sont élagués dans le cadre de la sauvegarde et que 
 
 NOTE: Vous devez vérifier le chemin et le contenu du chemin de montage avant de le répertorier en tant qu'emplacement de journal externe.
 
-** http://www.netapp.com/us/media/tr-4591.pdf["Rapport technique NetApp 4591 : sauvegarde, restauration, réplication et reprise sur incident dans les bases de données"^]
+** https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-dp-overview.html["Protection des données Oracle avec ONTAP"^]
 ** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["L'opération échoue avec l'erreur ORA-00308"^]
 
 

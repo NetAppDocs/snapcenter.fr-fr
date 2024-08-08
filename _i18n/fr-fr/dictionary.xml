@@ -9876,4 +9876,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Les licences standard et basées sur la capacité ne sont pas requises pour Azure NetApp Files.</block>
   <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">Protection des données Oracle avec ONTAP</block>
   <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
+  <block id="26d0f7d5ea2b87e82f98d6e622ecf6a0" category="admonition">À partir de la version 5.0, les utilisateurs SVM admin ne sont pris en charge qu'avec les API REST. Si vous souhaitez créer des rôles à l'aide d'un admin non vServer, vous devez utiliser ZAPI.</block>
+  <block id="3955db71dd681bf23ceee85c567a0129" category="admonition">À partir de SnapCenter 5.0, les utilisateurs d'administrateurs de cluster ne sont pris en charge que par les API REST. Si vous souhaitez créer des rôles à l'aide d'un autre administrateur de cluster, vous devez utiliser ZAPI.</block>
 </blocks>

@@ -20,7 +20,7 @@ Vous devez installer le plug-in SnapCenter pour la base de données SAP HANA à 
 La matrice d'interopérabilité (IMT) contient les dernières informations sur les configurations prises en charge.
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
+https://imt.netapp.com/matrix/imt.jsp?components=121029;&solution=1259&isHWU&src=IMT[]
 
 * Le plug-in SnapCenter pour base de données SAP HANA fait partie du package de plug-ins SnapCenter pour Linux. Avant d'installer SnapCenter Plug-ins Package pour Linux, vous devez avoir déjà installé SnapCenter sur un hôte Windows.
 

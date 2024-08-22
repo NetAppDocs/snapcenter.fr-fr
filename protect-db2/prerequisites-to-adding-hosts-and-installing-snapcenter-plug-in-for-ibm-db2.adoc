@@ -35,7 +35,7 @@ NOTE: IBM Java n'est pas pris en charge.
 http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
+https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
 
 
 
@@ -50,7 +50,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src
 http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
+https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
 
 * Pour les bases de données IBM DB2 exécutées sur un hôte Linux, lors de l'installation de Plug-in pour IBM DB2, SnapCenter Plug-in pour UNIX est installé automatiquement.
 * Vous devez avoir *bash* comme shell par défaut pour l'installation du plug-in.

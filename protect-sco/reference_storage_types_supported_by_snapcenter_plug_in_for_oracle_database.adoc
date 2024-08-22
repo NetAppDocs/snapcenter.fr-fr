@@ -87,4 +87,4 @@ Prend en charge la connexion en ligne sur les systèmes de fichiers SAN et la di
 
 
 |===
-Le https://imt.netapp.com/matrix/imt.jsp?components=117016;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"] contient les informations les plus récentes sur les versions prises en charge.
+Le https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"] contient les dernières informations sur les versions prises en charge.

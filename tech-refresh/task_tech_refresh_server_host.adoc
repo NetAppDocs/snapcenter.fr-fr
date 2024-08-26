@@ -20,7 +20,7 @@ Lorsque l'hôte du serveur SnapCenter nécessite une actualisation, vous pouvez 
 
 
 . Connectez-vous en tant qu'utilisateur Admin SnapCenter.
-. Créez une sauvegarde du serveur SnapCenter sur l'ancien hôte à l'aide de l'API : `/5.0/server/backup` Ou l'applet de commande : _New-SmServerBackup_.
+. Créez une sauvegarde du serveur SnapCenter sur l'ancien hôte à l'aide de l'API: `/<snapcenter_version>/server/backup` Ou de l'applet de commande: _New-SmServerBackup_.
 +
 
 NOTE: Avant de procéder à la sauvegarde, suspendez toutes les tâches planifiées et assurez-vous qu'aucune tâche n'est en cours d'exécution.
@@ -30,9 +30,9 @@ NOTE: Avant de procéder à la sauvegarde, suspendez toutes les tâches planifi�
 IMPORTANT: Si vous souhaitez restaurer la sauvegarde sur le serveur SnapCenter en cours d'exécution sur un nouveau domaine, vous devez ajouter le nouvel utilisateur de domaine dans l'ancien hôte SnapCenter et attribuer le rôle d'administrateur SnapCenter avant de procéder à une sauvegarde.
 
 . Copiez la sauvegarde de l'ancien hôte vers le nouvel hôte.
-. Restaurez la sauvegarde du serveur SnapCenter sur le nouvel hôte à l'aide de l'API : `/5.0/server/restore` Ou l'applet de commande : _Restore-SmServerBackup_.
+. Restaurez la sauvegarde du serveur SnapCenter sur le nouvel hôte à l'aide de l'API `/<snapcenter_version>/server/restore` : ou de l'applet de commande : _Restore-SmServerBackup_.
 +
-Par défaut, la restauration mettra à jour la nouvelle URL du serveur SnapCenter dans tous les hôtes. Si vous voulez ignorer la mise à jour, utilisez l'attribut _-SkipSMSURLInHosts_ et mettez à jour séparément l'URL du serveur en exécutant l'une des API suivantes : `/5.0/server/configureurl` Ou l'applet de commande : _set-SmServerConfig_.
+Par défaut, la restauration mettra à jour la nouvelle URL du serveur SnapCenter dans tous les hôtes. Si vous voulez ignorer la mise à jour, utilisez l'attribut _-SkipSMSURLInHosts_ et mettez à jour séparément l'URL du serveur en utilisant l'API: `/<snapcenter_version>/server/configureurl` Ou l'applet de commande: _Set-SmServerConfig_.
 
 +
 
@@ -49,7 +49,7 @@ Si la sauvegarde est restaurée sur le serveur SnpCenter qui s'exécute sur un n
 
 NOTE: Si vous avez mis à jour manuellement le fichier web.config dans l'ancien hôte SnapCenter, les mises à jour ne seront pas copiées sur le nouvel hôte. Vous devez effectuer manuellement les mêmes modifications dans le fichier web.config du nouvel hôte.
 
-. Si vous avez ignoré la mise à jour de l'URL du serveur SnapCenter ou si l'un des hôtes était en panne pendant le processus de restauration, mettez à jour le nouveau nom de serveur dans tous les hôtes ou hôtes spécifiés gérés par SnapCenter à l'aide de l'API : `/5.0/server/configureurl` Ou l'applet de commande : _set-SmServerConfig_.
+. Si vous avez ignoré la mise à jour de l'URL du serveur SnapCenter ou si l'un des hôtes était en panne pendant le processus de restauration, mettez à jour le nouveau nom du serveur dans tous les hôtes ou hôtes spécifiés gérés par SnapCenter à l'aide de l'API: `/<snapcenter_version>/server/configureurl` Ou de l'applet de commande: _Set-SmServerConfig_.
 . Activez les travaux planifiés sur tous les hôtes à partir du nouveau serveur SnapCenter.
 
 
@@ -62,7 +62,7 @@ Vous pouvez procéder à une actualisation technologique de n'importe quel nœud
 Pour plus d'informations sur l'ajout d'un nœud à un cluster F5, reportez-vous à la section https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["Configurer les serveurs SnapCenter pour la haute disponibilité à l'aide de F5"].
 
 
-NOTE: Si l'url du cluster F5 change, l'url peut être mise à jour dans tous les hôtes à l'aide de l'API : `/5.0/server/configureurl` Ou l'applet de commande : _set-SmServerConfig_.
+NOTE: Si l'url du cluster F5 change, l'url peut être mise à jour dans tous les hôtes à l'aide de l'API: `/<snapcenter_version>/server/configureurl` Ou de l'applet de commande: _Set-SmServerConfig_.
 
 
 
@@ -74,7 +74,7 @@ Vous pouvez supprimer l'ancien hôte du serveur SnapCenter après avoir vérifi�
 
 == Restauration vers l'ancien hôte du serveur SnapCenter
 
-En cas de problème, vous pouvez ramener l'ancien hôte du serveur SnapCenter en mettant à jour l'URL du serveur SnapCenter dans tous les hôtes à l'aide de l'API : `/5.0/server/configureurl` Ou l'applet de commande : _set-SmServerConfig_.
+En cas de problème, vous pouvez ramener l'ancien hôte du serveur SnapCenter en mettant à jour l'URL du serveur SnapCenter dans tous les hôtes à l'aide de l'API: `/<snapcenter_version>/server/configureurl` Ou de l'applet de commande: _Set-SmServerConfig_.
 
 
 
@@ -98,9 +98,9 @@ Assurez-vous que vous disposez d'une sauvegarde de l'ancien serveur SnapCenter.
 
 . Copiez l'ancienne sauvegarde du serveur SnapCenter sur le nouvel hôte.
 . Connectez-vous en tant qu'utilisateur Admin SnapCenter.
-. Restaurez la sauvegarde du serveur SnapCenter sur le nouvel hôte à l'aide de l'API : `/5.0/server/restore` Ou l'applet de commande : _Restore-SmServerBackup_.
+. Restaurez la sauvegarde du serveur SnapCenter sur le nouvel hôte à l'aide de l'API `/<snapcenter_version>/server/restore` : ou de l'applet de commande : _Restore-SmServerBackup_.
 +
-Par défaut, la restauration mettra à jour la nouvelle URL du serveur SnapCenter dans tous les hôtes. Si vous voulez ignorer la mise à jour, utilisez l'attribut _-SkipSMSURLInHosts_ et mettez à jour séparément l'URL du serveur à l'aide de l'API : `/5.0/server/configureurl` Ou l'applet de commande : _set-SmServerConfig_.
+Par défaut, la restauration mettra à jour la nouvelle URL du serveur SnapCenter dans tous les hôtes. Si vous voulez ignorer la mise à jour, utilisez l'attribut _-SkipSMSURLInHosts_ et mettez à jour séparément l'URL du serveur en utilisant l'API: `/<snapcenter_version>/server/configureurl` Ou l'applet de commande: _Set-SmServerConfig_.
 
 +
 
@@ -110,7 +110,7 @@ NOTE: Si l'hôte du plug-in ne parvient pas à résoudre le nom d'hôte du serve
 
 NOTE: Les entrées du serveur _etc/host_ ne seront pas restaurées. Vous pouvez le restaurer manuellement à partir de l'ancien serveur.
 
-. Si vous avez ignoré la mise à jour de l'URL ou si l'un des hôtes était en panne pendant le processus de restauration, mettez à jour le nouveau nom de serveur dans tous les hôtes ou hôtes spécifiés gérés par SnapCenter à l'aide de l'API : `/5.0/server/configureurl` Ou l'applet de commande : _set-SmServerConfig_.
+. Si vous avez ignoré la mise à jour de l'URL ou si l'un des hôtes était en panne pendant le processus de restauration, mettez à jour le nouveau nom de serveur dans tous les hôtes ou hôtes spécifiés gérés par SnapCenter à l'aide de l'API: `/<snapcenter_version>/server/configureurl` Ou de l'applet de commande: _Set-SmServerConfig_.
 
 
 
@@ -131,9 +131,9 @@ Assurez-vous que vous disposez d'une sauvegarde de l'ancien serveur SnapCenter.
 
 . Copiez l'ancienne sauvegarde du serveur SnapCenter sur le nouvel hôte.
 . Connectez-vous en tant qu'utilisateur Admin SnapCenter.
-. Restaurez la sauvegarde du serveur SnapCenter sur le nouvel hôte à l'aide de l'API : `/5.0/server/restore` Ou l'applet de commande : _Restore-SmServerBackup_.
+. Restaurez la sauvegarde du serveur SnapCenter sur le nouvel hôte à l'aide de l'API `/<snapcenter_version>/server/restore` : ou de l'applet de commande : _Restore-SmServerBackup_.
 +
-Par défaut, la restauration mettra à jour la nouvelle URL du serveur SnapCenter dans tous les hôtes. Si vous voulez ignorer la mise à jour, utilisez l'attribut _-SkipSMSURLInHosts_ et mettez à jour séparément l'URL du serveur à l'aide de l'API : `/5.0/server/configureurl` Ou l'applet de commande : _set-SmServerConfig_.
+Par défaut, la restauration mettra à jour la nouvelle URL du serveur SnapCenter dans tous les hôtes. Si vous voulez ignorer la mise à jour, utilisez l'attribut _-SkipSMSURLInHosts_ et mettez à jour séparément l'URL du serveur en utilisant l'API: `/<snapcenter_version>/server/configureurl` Ou l'applet de commande: _Set-SmServerConfig_.
 
 +
 
@@ -143,7 +143,7 @@ NOTE: Si l'hôte du plug-in ne parvient pas à résoudre le nom d'hôte du serve
 
 NOTE: Les entrées du serveur _etc/host_ ne seront pas restaurées. Vous pouvez le restaurer manuellement à partir de l'ancien serveur.
 
-. Si vous avez ignoré la mise à jour de l'URL ou si l'un des hôtes était en panne pendant le processus de restauration, mettez à jour le nouveau nom de serveur dans tous les hôtes ou hôtes spécifiés gérés par SnapCenter à l'aide de l'API : `/5.0/server/configureurl` Ou l'applet de commande : _set-SmServerConfig_.
+. Si vous avez ignoré la mise à jour de l'URL ou si l'un des hôtes était en panne pendant le processus de restauration, mettez à jour le nouveau nom de serveur dans tous les hôtes ou hôtes spécifiés gérés par SnapCenter à l'aide de l'API: `/<snapcenter_version>/server/configureurl` Ou de l'applet de commande: _Set-SmServerConfig_.
 . Convertir l'hôte autonome en cluster F5.
 +
 Pour plus d'informations sur la configuration de F5, reportez-vous à la section https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["Configurer les serveurs SnapCenter pour la haute disponibilité à l'aide de F5"].

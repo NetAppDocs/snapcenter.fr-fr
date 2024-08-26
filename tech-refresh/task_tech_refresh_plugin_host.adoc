@@ -91,7 +91,7 @@ Pour plus d'informations, reportez-vous à :
 
 . Ajoutez le nouvel hôte à SnapCenter.
 . Vérifiez si toutes les ressources sont découvertes.
-. Exécutez l'API d'actualisation de l'hôte : `/5.0/techrefresh/host` Ou l'applet de commande : _Invoke-SmTechRefreshHost_.
+. Exécutez l'API d'actualisation de l'hôte `/<snapcenter_version>/techrefresh/host` : ou l'applet de commande : _Invoke-SmTechRefreshHost_.
 +
 
 NOTE: La séquence sèche est activée par défaut et les ressources correspondantes à réassocier sont identifiées. Vous pouvez vérifier les ressources en exécutant l'API '/jobs/{jobid}' ou l'applet de commande _get-SmJobSummaryReport_.

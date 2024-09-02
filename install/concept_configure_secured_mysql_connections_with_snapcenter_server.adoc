@@ -95,16 +95,16 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
 ----
 . Arrêtez l'application Web du serveur SnapCenter dans Internet information Server (IIS).
 . Redémarrez le service MySQL.
-. Mettez à jour la valeur de la clé MySQLProtocol dans le fichier web.config.
+. Mettez à jour la valeur de la clé MySQLProtocol dans le fichier SnapManager.Web.UI.dll.config.
 +
-L'exemple suivant montre la valeur de la clé MySQLProtocol mise à jour dans le fichier web.config.
+L'exemple suivant montre la valeur de la clé MySQLProtocol mise à jour dans le fichier SnapManager.Web.UI.dll.config.
 
 +
 [listing]
 ----
 <add key="MySQLProtocol" value="SSL" />
 ----
-. Mettez à jour le fichier web.config avec les chemins fournis dans la section [client] du fichier my.ini.
+. Mettez à jour le fichier SnapManager.Web.UI.dll.config avec les chemins fournis dans la section [client] du fichier my.ini.
 +
 L'exemple suivant montre les chemins mis à jour dans la section [client] du fichier my.ini.
 
@@ -279,16 +279,16 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-key.pem"
 
 . Arrêtez l'application Web du serveur SnapCenter dans Internet information Server (IIS) sur les deux nœuds HA.
 . Redémarrez le service MySQL sur les deux nœuds HA.
-. Mettez à jour la valeur de la clé MySQLProtocol dans le fichier web.config pour les deux nœuds HA.
+. Mettez à jour la valeur de la clé MySQLProtocol dans le fichier SnapManager.Web.UI.dll.config pour les deux nœuds HA.
 +
-L'exemple suivant montre la valeur de la clé MySQLProtocol mise à jour dans le fichier web.config.
+L'exemple suivant montre la valeur de la clé MySQLProtocol mise à jour dans le fichier SnapManager.Web.UI.dll.config.
 
 +
 [listing]
 ----
 <add key="MySQLProtocol" value="SSL" />
 ----
-. Mettez à jour le fichier web.config avec les chemins que vous avez spécifiés dans la section [client] du fichier my.ini pour les deux nœuds HA.
+. Mettez à jour le fichier SnapManager.Web.UI.dll.config avec les chemins que vous avez spécifiés dans la section [client] du fichier my.ini pour les deux nœuds HA.
 +
 L'exemple suivant montre les chemins mis à jour dans la section [client] des fichiers my.ini.
 

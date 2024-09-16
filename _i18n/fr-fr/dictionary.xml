@@ -2126,12 +2126,6 @@
   <block id="35cd5a8c25ff69e6886fc098109317e7" category="paragraph">SnapCenter supprime le disque.</block>
   <block id="14c90652b0a2e523d6e8630706107e75" category="summary">Le logiciel SnapCenter peut être utilisé sur plusieurs navigateurs.</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">Navigateurs pris en charge</block>
-  <block id="ebe4f447bd3316e4f81ab2a6d2f26810" category="list-text">Internet Explorer</block>
-  <block id="74e84f9442fdb7717385ee092400869a" category="paragraph">L'interface utilisateur SnapCenter ne se charge pas correctement si vous utilisez IE 10 ou des versions antérieures. Vous devez effectuer la mise à niveau vers IE 11.</block>
-  <block id="8b45fc0c82a493bebd2ae705881299e0" category="list-text">Seule la sécurité au niveau par défaut est prise en charge.</block>
-  <block id="8c39fdaac8e8c7ec5824fd1acda14c9a" category="paragraph">Les modifications apportées aux paramètres de sécurité d'Internet Explorer entraînent d'importants problèmes d'affichage du navigateur.</block>
-  <block id="c5c74f2a0046f37ca93f6d8e3c775364" category="list-text">L'affichage de compatibilité d'Internet Explorer doit être désactivé.</block>
-  <block id="a5c41f715c1b8a880253846c025624e9" category="list-text">Microsoft Edge</block>
   <block id="cf3152e36e70eecd5ed2d294f623eb90" category="summary">Si votre hôte SnapCenter fait partie d'un environnement FC/iSCSI, vous devrez peut-être installer des logiciels supplémentaires sur le système pour autoriser l'accès au stockage ONTAP.</block>
   <block id="8e9816159074c93c5490453d542c7149" category="doc">Exigences relatives à l'hôte SAN</block>
   <block id="f3409d8331123dc5c92af0a575ad2b93" category="paragraph">SnapCenter n'inclut pas les utilitaires hôtes ou un DSM. Si votre hôte SnapCenter fait partie d'un environnement SAN, vous devrez peut-être installer et configurer les logiciels suivants :</block>
@@ -7459,7 +7453,6 @@
   <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">L'opération échoue avec une erreur Impossible de détecter le périphérique pour la LUN</block>
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">Vous devez vous assurer que la LUN n'est pas mappée sur l'hôte AIX à l'aide d'iGroup composé de protocoles mixtes iSCSI et FC. Pour plus d'informations, voir<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>.</block>
   <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8</block>
-  <block id="028a3c414b2f36abce9baa1df750ef89" category="admonition">La longueur de la clé RSA du certificat CA doit être d'au moins 3072 bits.</block>
   <block id="36fecb1daf18c8eeaacbcc8cdc70f4a6" category="paragraph">Le système primaire et secondaire ONTAP peut être ONTAP FAS, AFF, All SAN Array (ASA), Select ou Cloud ONTAP.</block>
   <block id="d21fbb2a5ce79a2a4ef0780b73023b2e" category="paragraph">Montages physiques et directs NFS sur les hôtes de machine virtuelle (les VMDK et les LUN RDM ne sont pas pris en charge).</block>
   <block id="f2688d5a483bee7fcbd80a4e666fc088" category="inline-link">documentation des utilitaires hôtes</block>
@@ -8924,7 +8917,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="cf46417d06a0356fc053eba2626759a2" category="list-text">Sélectionnez le fournisseur de facturation.</block>
   <block id="98d7dda5167a79acadd993f0ad819512" category="list-text">Entrez l'ID d'instance SnapCenter à 20 chiffres.</block>
   <block id="a22e3c4898555ed30acf91192f3c301a" category="paragraph">Port de service du planificateur</block>
-  <block id="f494773247b901f17fbe90691d43594a" category="paragraph">8154 (HTTPS)</block>
   <block id="0703d446ecd330b75f76dab17472df37" category="paragraph">Ce port permet d'orchestrer de manière centralisée les flux de travail du planificateur SnapCenter pour tous les plug-ins gérés au sein de l'hôte du serveur SnapCenter.</block>
   <block id="e029a63ec5a2d5331a40bbf8a483cc16" category="paragraph">3306 (HTTPS), bidirectionnel, personnalisable</block>
   <block id="10dbf6dc6b3b30fd58efded1253516d8" category="paragraph">Plug-in SnapCenter pour base de données Exchange</block>
@@ -9883,4 +9875,10 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="0512eab1623a615d3740da31907b5d7c" category="list-text">Mettez à jour la valeur de la clé MySQLProtocol dans le fichier SnapManager.Web.UI.dll.config pour les deux nœuds HA.</block>
   <block id="e20a4407f4a132523f0ff53a11de8ea9" category="paragraph">L'exemple suivant montre la valeur de la clé MySQLProtocol mise à jour dans le fichier SnapManager.Web.UI.dll.config.</block>
   <block id="282f609628cc0aa1febc1031254fda4e" category="list-text">Mettez à jour le fichier SnapManager.Web.UI.dll.config avec les chemins que vous avez spécifiés dans la section [client] du fichier my.ini pour les deux nœuds HA.</block>
+  <block id="be9f9eca92a7b91f5cf9f485b92f2f33" category="admonition">La longueur de la clé RSA du certificat CA doit être d'au moins 3072 bits.</block>
+  <block id="76f30afe00c2fd9de2c57b507789aa7c" category="paragraph">8154 (HTTPS)</block>
+  <block id="064270f4c1b637c782011391ccc057cb" category="paragraph">Port RabbitMQ</block>
+  <block id="310b8da14055c2cf4702264e02854d3d" category="paragraph">5672 (tcp)</block>
+  <block id="c55a170d16570920e099a9e43d38db67" category="paragraph">Il s'agit du port par défaut sur lequel RabbitMQ écoute et il est utilisé pour la communication du modèle éditeur-abonné entre le service Planificateur et SnapCenter.</block>
+  <block id="f5a551e6a3161ca6d9ee33d926d734d5" category="list-text">Microsoft Edge 110.0.1587.17 et versions ultérieures</block>
 </blocks>

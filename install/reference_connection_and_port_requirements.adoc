@@ -70,6 +70,15 @@ Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/instal
 
 
  a| 
+Port RabbitMQ
+ a| 
+5672 (tcp)
+
+Il s'agit du port par défaut sur lequel RabbitMQ écoute et il est utilisé pour la communication du modèle éditeur-abonné entre le service Planificateur et SnapCenter.
+
+
+
+ a| 
 Port MySQL
  a| 
 3306 (HTTPS), bidirectionnel, personnalisable

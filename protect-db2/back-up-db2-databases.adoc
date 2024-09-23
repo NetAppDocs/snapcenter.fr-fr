@@ -1,17 +1,17 @@
 ---
-permalink: protect-db2/back-up-ibm-db2.html 
+permalink: protect-db2/back-up-db2-databases.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 
-summary: 'Si une ressource ne fait pas encore partie d"un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.' 
+summary: 'La sauvegarde d"une base de données inclut l"établissement d"une connexion avec le serveur SnapCenter, l"ajout de ressources, l"ajout d"une stratégie, la création d"un groupe de ressources de sauvegarde et la sauvegarde.' 
 ---
-= Sauvegardez IBM DB2
+= Sauvegarde des bases de données DB2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Si une ressource ne fait pas encore partie d'un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.
+La sauvegarde d'une base de données inclut l'établissement d'une connexion avec le serveur SnapCenter, l'ajout de ressources, l'ajout d'une stratégie, la création d'un groupe de ressources de sauvegarde et la sauvegarde.
 
 .Avant de commencer
 * Vous devez avoir créé une stratégie de sauvegarde.
@@ -29,6 +29,10 @@ Pour Linux : _/var/opt/snapcenter/scc/allowed_commands.config_
 
 NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération échoue.
 
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page ressource, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
@@ -147,3 +151,122 @@ Pour plus d'informations, voir : https://kb.netapp.com/Advice_and_Troubleshootin
 
 
 
+
+--
+.Applets de commande PowerShell
+--
+.Étapes
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+PS C:\> Open-SmConnection
+----
++
+L'invite du nom d'utilisateur et du mot de passe s'affiche.
+
+. Ajoutez des ressources manuelles à l'aide de l'applet de commande Add-SmResources.
++
+Cet exemple montre comment ajouter une instance IBM DB2 :
+
++
+[listing]
+----
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode DB2 -ResourceType Instance -ResourceName db2inst1 -StorageFootPrint (@{"VolumeName"="windb201_data01";"LUNName"="windb201_data01";"StorageSystem"="scsnfssvm"}) -MountPoints "D:\"
+----
++
+Pour DB2 Database :
+
++
+[listing]
+----
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode DB2 -ResourceType Database -ResourceName SALESDB -StorageFootPrint (@{"VolumeName"="windb201_data01";"LUNName"="windb201_data01";"StorageSystem"="scsnfssvm"}) -MountPoints "D:\" -Instance DB2
+----
+. Créez une stratégie de sauvegarde à l'aide de l'applet de commande Add-SmPolicy.
+. Protégez la ressource ou ajoutez un nouveau groupe de ressources à SnapCenter à l'aide de l'applet de commande Add-SmResourceGroup.
+. Lancez une nouvelle tâche de sauvegarde à l'aide de la cmdlet New-SmBackup.
++
+Cet exemple montre comment sauvegarder un groupe de ressources :
+
++
+[listing]
+----
+C:\PS> New-SMBackup -ResourceGroupName 'ResourceGroup_with_Db2_Resources' -Policy db2_policy1
+----
++
+Cet exemple sauvegarde une instance DB2 :
+
++
+[listing]
+----
+C:\PS> New-SMBackup -Resources @{"Host"="10.32.212.13";"Uid"="DB2INST1";"PluginName"="DB2"} -Policy db2_policy
+----
++
+Cet exemple sauvegarde une base de données DB2 :
+
++
+[listing]
+----
+C:\PS> New-SMBackup -Resources @{"Host"="10.32.212.13";"Uid"="DB2INST1\WINARCDB";"PluginName"="DB2"} -Policy db2_policy
+----
+. Surveillez l'état du travail (en cours d'exécution, terminé ou en échec) à l'aide de l'applet de commande Get-smJobSummaryReport.
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -JobId 467
+
+SmJobId            : 467
+JobCreatedDateTime :
+JobStartDateTime   : 27-Jun-24 01:40:09
+JobEndDateTime     : 27-Jun-24 01:41:15
+JobDuration        : 00:01:06.7013330
+JobName            : Backup of Resource Group 'SCDB201WIN_RAVIR1_OPENLAB_NETAPP_LOCAL_DB2_DB2_WINCIR' with policy 'snapshot-based-db2'
+JobDescription     :
+Status             : Completed
+IsScheduled        : False
+JobError           :
+JobType            : Backup
+PolicyName         : db2_policy
+JobResultData      :
+----
+. Surveillez les détails de la tâche de sauvegarde comme ID de sauvegarde, nom de sauvegarde pour effectuer une opération de restauration ou de clonage à l'aide de l'applet de commande Get-SmBackupReport.
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -JobId 467
+
+BackedUpObjects           : {WINCIR}
+FailedObjects             : {}
+IsScheduled               : False
+HasMetadata               : False
+SmBackupId                : 84
+SmJobId                   : 467
+StartDateTime             : 27-Jun-24 01:40:09
+EndDateTime               : 27-Jun-24 01:41:15
+Duration                  : 00:01:06.7013330
+CreatedDateTime           : 27-Jun-24 18:39:45
+Status                    : Completed
+ProtectionGroupName       : HOSTFQDN_DB2_DB2_WINCIR
+SmProtectionGroupId       : 23
+PolicyName                : db2_policy
+SmPolicyId                : 13
+BackupName                : HOSTFQDN _DB2_DB2_WINCIR_HOST_06-27-2024_01.40.09.7397
+VerificationStatus        : NotApplicable
+VerificationStatuses      :
+SmJobError                :
+BackupType                : SCC_BACKUP
+CatalogingStatus          : NotApplicable
+CatalogingStatuses        :
+ReportDataCreatedDateTime :
+PluginCode                : SCC
+PluginName                : DB2
+PluginDisplayName         : IBM DB2
+JobTypeId                 :
+JobHost                   : HOSTFQDN
+----
+
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter à la https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+--
+====

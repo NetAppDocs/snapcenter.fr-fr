@@ -159,8 +159,6 @@ entries:
   - title: Créer une connexion au système de stockage et une autorisation d'accès
       à l'aide des applets de commande PowerShell
     url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
-  - title: Sauvegarde des ressources avec les applets de commande PowerShell
-    url: "/protect-scsql/task_back_up_resources_using_powershell_cmdlets_for_sql.html"
   - title: Annulez les opérations de sauvegarde du plug-in SnapCenter pour Microsoft
       SQL Server
     url: "/protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html"
@@ -181,11 +179,10 @@ entries:
     url: "/protect-scsql/task_restore_sql_server_database_backups.html"
   - title: Restaurer une base de données SQL Server à partir du stockage secondaire
     url: "/protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html"
+  - title: Restaurer des ressources à l'aide des applets de commande PowerShell
+    url: "/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html"
   - title: Réamorçage des bases de données du groupe de disponibilité
     url: "/protect-scsql/task_reseed_availability_group_databases.html"
-  - title: Restauration et restauration des ressources via les applets de commande
-      PowerShell
-    url: "/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html"
   - title: Surveiller les opérations de restauration
     url: "/protect-scsql/task_monitor_sql_resources_restore_operations.html"
   - title: Annuler les opérations de restauration
@@ -196,8 +193,6 @@ entries:
     url: "/protect-scsql/reference_clone_sql_server_database_resources.html"
   - title: Clonage à partir d'une sauvegarde de base de données SQL Server
     url: "/protect-scsql/task_clone_from_a_sql_server_database_backup.html"
-  - title: Clonage des sauvegardes avec les applets de commande PowerShell
-    url: "/protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html"
   - title: Réaliser le cycle de vie des clones
     url: "/protect-scsql/task_perform_clone_lifecycle_management.html"
   - title: Surveillance des opérations de clonage dans SnapCenter

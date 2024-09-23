@@ -26,6 +26,10 @@ Si une ressource ne fait pas encore partie d'un groupe de ressources, vous pouve
 
 
 
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *base de données* ou *instance* ou *Groupe de disponibilité* dans la liste déroulante *Affichage*.
@@ -158,3 +162,101 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["La sauvegarde échoue en raison d'une erreur du planificateur Windows"]
 
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["Les opérations de mise en attente ou de regroupement des ressources échouent"]
+
+--
+.Applets de commande PowerShell
+--
+.Étapes
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
+----
++
+L'invite du nom d'utilisateur et du mot de passe s'affiche.
+
+. Créez une stratégie de sauvegarde à l'aide de l'applet de commande Add-SmPolicy.
++
+Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde SQL fullbackup :
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName TESTPolicy
+-PluginPolicyType SCSQL -PolicyType Backup
+-SqlBackupType FullBackup -Verbose
+----
++
+Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde de système de fichiers Windows de CrashConsistent :
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName FileSystemBackupPolicy
+-PluginPolicyType SCW -PolicyType Backup
+-ScwBackupType CrashConsistent -Verbose
+----
+. Découvrez les ressources hôte à l'aide de l'applet de commande Get-SmResources.
++
+Cet exemple recherche les ressources du plug-in Microsoft SQL sur l'hôte spécifié :
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise-f6.sddev.mycompany.com
+-PluginCode SCSQL
+----
++
+Cet exemple détecte les ressources des systèmes de fichiers Windows sur l'hôte spécifié :
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise2-f6.sddev.mycompany.com
+-PluginCode SCW
+----
+. Ajoutez un nouveau groupe de ressources à SnapCenter à l'aide de l'applet de commande Add-SmResourceGroup.
++
+Cet exemple crée un nouveau groupe de ressources de sauvegarde de base de données SQL avec la stratégie et les ressources spécifiées :
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName AccountingResource
+-Resources @{"Host"="visef6.org.com";
+"Type"="SQL Database";"Names"="vise-f6\PayrollDatabase"}
+-Policies "BackupPolicy"
+----
++
+Cet exemple crée un nouveau groupe de ressources de sauvegarde du système de fichiers Windows avec la stratégie et les ressources spécifiées :
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName EngineeringResource
+-PluginCode SCW -Resources @{"Host"="WIN-VOK20IKID5I";
+"Type"="Windows Filesystem";"Names"="E:\"}
+-Policies "EngineeringBackupPolicy"
+----
+. Lancez une nouvelle tâche de sauvegarde à l'aide de la cmdlet New-SmBackup.
++
+[listing]
+----
+PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
+----
+. Affichez l'état de la tâche de sauvegarde à l'aide de l'applet de commande Get-SmBackupReport.
++
+Cet exemple affiche un rapport récapitulatif de tous les travaux exécutés à la date spécifiée :
+
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -Date '1/27/2016'
+----
+
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter à la https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+--
+====

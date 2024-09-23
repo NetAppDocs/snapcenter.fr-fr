@@ -260,7 +260,6 @@
   <block id="a72cc47fad7d1846d19b085d2e77e5ba" category="list-text">Cliquez sur *OK*.</block>
   <block id="fc239c2b2a79ad8ee77cc5430b1803fe" category="paragraph">Une fois les informations d'identification terminées, vous pouvez affecter la maintenance des informations d'identification à un utilisateur ou à un groupe d'utilisateurs sur la page utilisateur et accès.</block>
   <block id="e174be7156154463517dfe3b864d0329" category="summary">Le workflow de clonage inclut la planification, la réalisation de l'opération de clonage et le contrôle de l'opération.</block>
-  <block id="8c922e6a0134954b667b072d00b58ce3" category="doc">Clonage des sauvegardes avec les applets de commande PowerShell</block>
   <block id="e8afddd41cf3a716324442f7a4538460" category="list-text">Répertoriez les sauvegardes pouvant être clonées à l'aide de l'applet de commande Get-SmBackup ou Get-SmResourceGroup.</block>
   <block id="b92d70c39b6e5b77f828b04b1f8cf2e7" category="paragraph">Cet exemple affiche des informations sur un groupe de ressources spécifié :</block>
   <block id="490bfe5ade57157a35bf58b686acb1cf" category="list-text">Lancez une opération de clonage à partir d'un groupe de ressources clone ou d'une sauvegarde existante à l'aide de l'applet de commande New-SmClone.</block>
@@ -812,9 +811,7 @@
   <block id="26e84c8fe3deb08970e1f17fbc4649f5" category="list-text">Le répertoire par défaut des fichiers CRL pour les plug-ins personnalisés SnapCenter est opt/NetApp/snapcenter/etc/crl.</block>
   <block id="4f1ac502e9d4dc79e3c307cd196d50fb" category="list-text">Vous pouvez modifier et mettre à jour le répertoire par défaut du fichier agent.properties par rapport à la clé CRL_PATH.</block>
   <block id="1b782c06b199c89589ed8bcf1a6ca9ab" category="paragraph">Vous pouvez placer plusieurs fichiers CRL dans ce répertoire. Les certificats entrants seront vérifiés pour chaque CRL.</block>
-  <block id="517a125fd46ee1a60309a280447487c0" category="summary">La sauvegarde d'une ressource comprend l'établissement d'une connexion avec le serveur SnapCenter, l'ajout de ressources, l'ajout d'une stratégie, la création d'un groupe de ressources de sauvegarde et la sauvegarde.</block>
   <block id="d2a5f76428abadccd7b24ea08a0eee1e" category="doc">Sauvegarde des ressources avec les applets de commande PowerShell</block>
-  <block id="38d7f66964588305ed5bee44db007183" category="list-text">Vous devez avoir ajouté la connexion au système de stockage et créé une autorisation d'accès.</block>
   <block id="d5b8eb2056e11e71857a777fd502266b" category="paragraph">L'invite du nom d'utilisateur et du mot de passe s'affiche.</block>
   <block id="78bce70d2497c3d80a1f0dabc6500d76" category="list-text">Ajoutez des ressources à l'aide de l'applet de commande Add-SmResources.</block>
   <block id="d278818a36e5f43a96b7082ec24a25e0" category="paragraph">Cet exemple ajoute des ressources :</block>
@@ -2569,8 +2566,6 @@
   <block id="0f51775b134a404749b8b65238771c2d" category="paragraph">Si vous configurez la réplication SnapMirror, la règle de conservation est mise en miroir sur le volume de destination.</block>
   <block id="3a163d65992b24ed0bae3de1025ef326" category="paragraph">SnapCenter supprime les sauvegardes conservées dont les étiquettes de conservation correspondent au type de planification. Si le type de planification a été modifié pour la ressource ou le groupe de ressources, les sauvegardes avec l'ancienne étiquette de type de planification peuvent rester sur le système.</block>
   <block id="1f8790fb0fa89fe5d30c0273b6299e25" category="admonition">Pour la conservation à long terme des copies de sauvegarde, nous vous recommandons d'utiliser la sauvegarde SnapVault.</block>
-  <block id="d2323db6aa3f6333b1375db7f025bd4e" category="summary">Vous pouvez utiliser les applets de commande PowerShell pour sauvegarder des bases de données SQL Server ou des systèmes de fichiers Windows. Cela inclut la sauvegarde d'une base de données SQL Server ou d'un système de fichiers Windows, notamment l'établissement d'une connexion avec le serveur SnapCenter, la découverte des instances de base de données SQL Server ou des systèmes de fichiers Windows, l'ajout d'une règle, la création d'un groupe de ressources de sauvegarde, la sauvegarde et la vérification de la sauvegarde.</block>
-  <block id="7d88eb773274afe1c014d0593b26bb0a" category="list-text">Vous devez avoir ajouté des hôtes et des ressources découvertes.</block>
   <block id="3e78fcd28fc74d7aa4a8ac3b657caa4e" category="paragraph">Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde SQL fullbackup :</block>
   <block id="2b3a9b6966873d8dbae9c68619afd0cb" category="paragraph">Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde de système de fichiers Windows de CrashConsistent :</block>
   <block id="0bc451b53e906ee74f8e7c875d53e50a" category="list-text">Découvrez les ressources hôte à l'aide de l'applet de commande Get-SmResources.</block>
@@ -2801,7 +2796,6 @@
   <block id="dbc89dfae1c6c8ad4eb43878b9171ca6" category="doc">Sauvegarder les groupes de ressources</block>
   <block id="38daee81aaf3af99133cf03d753b6a86" category="list-text">Si vous avez associé plusieurs stratégies au groupe de ressources, dans la liste déroulante *Stratégie*, sélectionnez la stratégie que vous souhaitez utiliser pour la sauvegarde.</block>
   <block id="bf2fb73b7932cdadf3476adc215ac4c1" category="summary">La sauvegarde d'une base de données inclut l'établissement d'une connexion avec le serveur SnapCenter, l'ajout de ressources, l'ajout d'une stratégie, la création d'un groupe de ressources de sauvegarde et la sauvegarde.</block>
-  <block id="0db7de34dbf5c1c143a3f3c98858115e" category="doc">Sauvegarder des bases de données à l'aide des applets de commande PowerShell</block>
   <block id="4ff3483d2f2e6b961be08deacbb372c4" category="paragraph">Cet exemple montre comment ajouter une base de données SAP HANA de type SingleContainer :</block>
   <block id="b708e8e9f86c4cd6cb76c67f9b00bf53" category="paragraph">Cet exemple montre comment ajouter une base de données SAP HANA de type MultipleContainers :</block>
   <block id="bb1ffae3f38e9b5dc46d4c22a016b298" category="paragraph">Cet exemple montre comment créer une ressource de volume autre que de données :</block>
@@ -3164,7 +3158,6 @@
   <block id="0b42d90235dd8ef6ec97a9268c77b113" category="doc">Types de stockage pris en charge par le plug-in SnapCenter pour la base de données SAP HANA</block>
   <block id="478593976233dfc3e57256f78404f939" category="paragraph">SnapCenter prend en charge de nombreux types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier la prise en charge de votre type de stockage avant d'installer le plug-in SnapCenter pour la base de données SAP HANA.</block>
   <block id="faa63149f52ece978423f5b04c274cf6" category="paragraph">Serveurs physiques et virtuels</block>
-  <block id="75a7c9b2e73f5c1cc5286ea02330c1bd" category="doc">Cloner les sauvegardes de bases de données SAP HANA à l'aide des applets de commande PowerShell</block>
   <block id="7efd97c2a4471de87de7e99332374e4a" category="list-text">Récupérez les sauvegardes pour effectuer l'opération de clonage à l'aide de l'applet de commande Get-SmBackup.</block>
   <block id="f03d64352eff2c5a90a8790e99accb55" category="paragraph">Cet exemple montre que deux sauvegardes sont disponibles pour le clonage :</block>
   <block id="d7272ca580c1be43c009610e69bf10d3" category="list-text">Lancez une opération de clonage à partir d'une sauvegarde existante et spécifiez les adresses IP d'exportation NFS sur lesquelles les volumes clonés sont exportés.</block>
@@ -3190,16 +3183,10 @@
   <block id="6626fe15de034730e066a71b2308dbef" category="paragraph">Après la mise à niveau vers SnapCenter 4.3, vous devez continuer à ajouter manuellement les ressources MDC sur le plug-in d'hôte centralisé.</block>
   <block id="e3e068bf97e81aa3c82b3a1ef5c543ee" category="paragraph">Pour les hôtes SAP HANA Linux directement enregistrés dans SnapCenter, l'installation ou la mise à niveau du plug-in déclenchera une détection automatique des ressources sur l'hôte. Après la mise à niveau du plug-in, pour chaque ressource MDC située sur l'hôte du plug-in, une autre ressource MDC sera automatiquement découverte avec un format GUID différent et enregistrée dans SnapCenter. La nouvelle ressource sera à l'état verrouillé.</block>
   <block id="e1eb2f8f1b503096778da6fef42f7902" category="doc">Contrôler l'état de l'installation du plug-in pour SAP HANA</block>
-  <block id="62bd1df1f8e068497569c97f3e404a98" category="summary">La restauration d'une sauvegarde de base de données SAP HANA inclut le lancement d'une session de connexion avec le serveur SnapCenter, la liste des sauvegardes, la récupération des informations de sauvegarde et la restauration d'une sauvegarde.</block>
-  <block id="0f69ffe8d82c94ffce3da6b597e697b5" category="doc">Restaurer la base de données SAP HANA à l'aide des applets de commande PowerShell</block>
   <block id="0be208f27c2aea320f1d6d221e131551" category="list-text">Identifiez la sauvegarde que vous souhaitez restaurer à l'aide des applets de commande Get-SmBackup and get-SmBackupReport.</block>
   <block id="2004c840a5bc74f37ca5c26f2dfd5e0e" category="paragraph">Cet exemple montre que deux sauvegardes sont disponibles pour la restauration :</block>
-  <block id="9cb2e8b30975ae43fe6a8ea67898a952" category="list-text">Démarrez le processus de restauration dans le studio HANA.</block>
-  <block id="a53d0252472f1610734654e51124858b" category="paragraph">La base de données est arrêtée.</block>
-  <block id="57a70f4a4a92a47a28f2f41b69a06ef8" category="admonition">AppObjectId est « Host\Plugin\UID », où UID = SID est pour une ressource de type conteneur unique et UID = MDC\SID est pour une ressource de conteneurs multiples. Vous pouvez obtenir ResourceID à partir de l'applet de commande Get-smResources.</block>
   <block id="2aa8b416a2f876e9cf8c5050ccf69e30" category="paragraph">Cet exemple montre comment restaurer la base de données à partir du stockage primaire :</block>
   <block id="08fb7677c629e186e2ce0a37ba408715" category="paragraph">Cet exemple montre comment restaurer la base de données à partir du stockage secondaire :</block>
-  <block id="1dbedac9aa8fb16b0d7e3f4c912759fc" category="paragraph">Les sauvegardes seront disponibles dans HANA Studio à des fins de restauration.</block>
   <block id="87b00f6abbcc1fdcc6961914d25afd74" category="summary">Vous devez utiliser la page SnapCenter Ajouter un hôte pour ajouter des hôtes, puis installer les modules de plug-ins. Les plug-ins sont automatiquement installés sur les hôtes distants. Vous pouvez ajouter un hôte et installer des modules de plug-in pour un hôte individuel ou pour un cluster.</block>
   <block id="13a108b3e21c73af6a906884ed35dc60" category="list-text">La documentation d'administration contient des informations sur la gestion des hôtes.</block>
   <block id="5e12dbd5bf3c6917f4290e5b5a559e1d" category="list-text">Pour la réplication système SAP HANA afin de détecter les ressources sur les systèmes principal et secondaire, il est recommandé d'ajouter à la fois les systèmes principal et secondaire à l'aide de l'utilisateur root ou sudo.</block>
@@ -3783,8 +3770,6 @@
   <block id="418da21041a76d47214208138e1523e2" category="paragraph">Ce clone instantané interrompt le clone des entrées du journal de transactions qui ont été enregistrées après la date et l'heure spécifiées.</block>
   <block id="b8ceb1eaf0d60af03679989562024d6b" category="paragraph">Une fois le clone créé, vous ne devez jamais le renommer.</block>
   <block id="8a2bd81e968aaadb6ec10a1b58f541cc" category="inline-link-macro">Sauvegardez la base de données SQL Server, l'instance ou le groupe de disponibilité</block>
-  <block id="38c78702a48e457f5ef291281168432e" category="paragraph"><block ref="38c78702a48e457f5ef291281168432e" category="inline-link-macro-rx"></block></block>
-  <block id="f9db2c2c51ac713541e90ff79219156d" category="paragraph"><block ref="f9db2c2c51ac713541e90ff79219156d" category="inline-link-macro-rx"></block></block>
   <block id="f7e7f0dd9d36aec3d609775de2dbbd0b" category="paragraph"><block ref="f7e7f0dd9d36aec3d609775de2dbbd0b" category="inline-link-rx"></block></block>
   <block id="1e9ab426973a56020f8d1db85cb07f06" category="inline-link">Le clone de base de données de l'instance de cluster de basculement échoue</block>
   <block id="2df5362c7aa8c12a0dd2f1b211cdf61d" category="paragraph"><block ref="2df5362c7aa8c12a0dd2f1b211cdf61d" category="inline-link-rx"></block></block>
@@ -4059,9 +4044,6 @@
   <block id="959ee61833678423ed8659abb1b27012" category="list-text">Les arguments de sauvegarde du prescripteur incluent « »$Database' et «»$ServerInstance' ».</block>
   <block id="0814f59f5f07398b1fe9623ede563b6e" category="list-text">Les arguments de sauvegarde PostScript incluent ""$Database""", ""$Serverinstance""", ""$BackupName""", ""$logDirectory""" et ""$Logsnapshot""".</block>
   <block id="3d40243b2d8fd2d8429d6d1e417ad7b3" category="paragraph">Vous pouvez exécuter un script pour mettre à jour les interruptions SNMP, automatiser les alertes, envoyer des journaux, etc.</block>
-  <block id="47dfd37b6d44f98f65b2e75ff64e7f3a" category="summary">La sauvegarde d'une base de données Exchange Server inclut l'établissement d'une connexion avec le serveur SnapCenter, la découverte de la base de données Exchange Server, l'ajout d'une stratégie, la création d'un groupe de ressources de sauvegarde, la sauvegarde et l'affichage de l'état de la sauvegarde.</block>
-  <block id="6c40f1cde52cc35bedb76a6ac167d83e" category="doc">Sauvegarde des ressources Exchange à l'aide des applets de commande PowerShell</block>
-  <block id="177c6d04e35e22fd728d0f8aa88c6c74" category="admonition">Le plug-in pour Exchange ne prend pas en charge les opérations de clonage ; par conséquent, le paramètre CloneType de la cmdlet Add-SmPolicy n'est pas pris en charge par le plug-in pour Exchange</block>
   <block id="584657e4b5bddce78001faf5776544cc" category="paragraph">Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde Exchange de sauvegarde complète et de sauvegarde des journaux :</block>
   <block id="208c499842b5bd5ba293e47da51ebd68" category="paragraph">Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde Exchange de sauvegarde complète et de sauvegarde des journaux toutes les heures :</block>
   <block id="206edf297460ddfa7679c1e47ace5ca1" category="paragraph">Cet exemple crée une nouvelle stratégie de sauvegarde pour sauvegarder uniquement les journaux Exchange :</block>
@@ -4450,8 +4432,6 @@
   <block id="da8c6007fce49243252ad5412a56905b" category="section-title">Durée de conservation des sauvegardes du journal des transactions sur le volume de stockage source pour Exchange Server</block>
   <block id="3d613c2cfea6cc0a0ec514ead742de44" category="paragraph">Le plug-in SnapCenter pour Microsoft Exchange Server nécessite des sauvegardes de journal de transactions pour effectuer des opérations de restauration à chaud, qui restaurent votre base de données à un moment donné entre deux sauvegardes complètes.</block>
   <block id="504dab336faa025661b32deace06211b" category="paragraph">Par exemple, si le plug-in pour Exchange a pris une sauvegarde complète du journal de transactions à 8:00 et une autre sauvegarde complète du journal de transactions plus à 5:00, elle pourrait utiliser la dernière sauvegarde du journal de transactions pour restaurer la base de données à n'importe quel moment entre 8:00 et 5:00 Si les journaux de transactions ne sont pas disponibles, le plug-in pour Exchange peut uniquement effectuer des opérations de restauration à un point dans le temps, ce qui permet de restaurer une base de données à l'heure où le plug-in pour Exchange a terminé une sauvegarde complète.</block>
-  <block id="b2589f75fce91547cb20c051fa1935d2" category="summary">La restauration d'une base de données Exchange inclut le lancement d'une session de connexion avec le serveur SnapCenter, la liste des sauvegardes, la récupération des informations de sauvegarde et la restauration d'une sauvegarde.</block>
-  <block id="97e9982b58636ac0e13e42585b460313" category="doc">Restauration des ressources Exchange à l'aide des applets de commande PowerShell</block>
   <block id="53d7030c30fb81234ffed5a3972eb621" category="list-text">Récupérez les informations relatives à une ou plusieurs sauvegardes que vous souhaitez restaurer à l'aide de la<block ref="3b327888082d0a6615ac0b1cac5ce6dc" prefix=" " category="inline-code"></block> applet de commande.</block>
   <block id="a65b207e84f627a2af00b6dd102bd0e3" category="list-text">Restaurez les données à partir de la sauvegarde à l'aide du<block ref="ed60514e5ff71a62bddf0cf1df75f8f0" prefix=" " category="inline-code"></block> applet de commande.</block>
   <block id="49ab07d3ee1a1aacb53dd0994a535a3f" category="paragraph">Cet exemple restaure une sauvegarde en moins d'une minute :</block>
@@ -9026,7 +9006,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="73bb0c3e029e657eee721094d9dfd4a4" category="doc">Sauvegarder les ressources IBM DB2</block>
   <block id="9bb1086732d729daa5079011da1d7f58" category="image-alt">Flux de travail de sauvegarde DB2</block>
   <block id="f6ca7431c38f4f9103a7165ce76ebf07" category="paragraph">Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. L'aide de la cmdlet de SnapCenter et les informations de référence de la cmdlet contiennent plus d'informations sur les applets de commande PowerShell. <block ref="5c7d1c91ee3f41bdd6f718a502a5613f" category="inline-link-rx"></block>.</block>
-  <block id="524291bce284c7a322c8064a7d402ef7" category="doc">Sauvegardez IBM DB2</block>
   <block id="5698d6a1b70b87c193bb309260fbe3c4" category="paragraph">Pour Windows : _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_</block>
   <block id="a9a2e6333525f32619cc146e3da2e140" category="paragraph">Pour Linux : _/var/opt/snapcenter/scc/allowed_commands.config_</block>
   <block id="f4ec0d473fd093ff1515ec698ec93238" category="summary">Vous pouvez utiliser la convention de dénomination par défaut des snapshots ou une convention de dénomination personnalisée. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots, ce qui vous permet d'identifier la date de création des copies.</block>
@@ -9046,10 +9025,7 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="a3abd792e75175dc6360666ec9533a2c" category="admonition">Pour les commandes pré et post pour les opérations quiesce, Snapshot et unquiesce, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir des commandes _/opt/snapcenter/snapcenter/scc/allowed_commands.config_ path pour Linux et _C:\Program Files\NetApp\allowed\Snapcenter Plug-in Creator\etc\SnapCenter_ for Windows.</block>
   <block id="bec1318185bcb08bbbdb149f6e72458c" category="paragraph">Après le clonage des ressources DB2 détectées automatiquement, la ressource clonée est marquée comme ressource manuelle. Cliquez sur *Actualiser les ressources* pour restaurer la ressource DB2 clonée. Lorsque vous supprimez le clone, le stockage et l'hôte sont également nettoyés.</block>
   <block id="8da40f6fe3107c9433a48199413eafc1" category="paragraph">Si vous n'actualisez pas les ressources après l'opération de clonage et que vous tentez de supprimer le clone, le stockage et l'hôte ne seront pas nettoyés. Vous devez supprimer les entrées manuellement dans fstab.</block>
-  <block id="0dba3293d94fffec6acecd31b797abb1" category="doc">Cloner les sauvegardes de bases de données IBM DB2 à l'aide des applets de commande PowerShell</block>
   <block id="7b5f6d9e0f208631c0910d81fcd84413" category="paragraph">Cet exemple montre que la sauvegarde à cloner a une adresse NFSExportaIP de 10.32.212.14 :</block>
-  <block id="e1d21c0573d8edccd1611eecec1c4497" category="paragraph">Pour la base de données DB2 :</block>
-  <block id="3bf2ba8333d028c6261fc6dc40aa02ef" category="paragraph">Pour l'instance DB2 :</block>
   <block id="a22f4a66e3c8c5cfcb28db540b3b53cd" category="list-text">Vous pouvez cloner sur le serveur IBM DB2 source.</block>
   <block id="62efa2c3113bfa21f93723855cb62c9a" category="doc">Configurez le certificat CA pour le service de plug-ins IBM DB2 SnapCenter sur un hôte Linux</block>
   <block id="a601121a2919d3d268279f81d4b8569b" category="doc">Configurez le certificat CA pour le service de plug-ins IBM DB2 SnapCenter sur un hôte Windows</block>
@@ -9168,8 +9144,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="c90dd548c691ca9f32913357e116af19" category="paragraph">Les commandes de montage ne sont pas requises pour les ressources découvertes automatiquement.</block>
   <block id="df85b9b2d7736db0ac0fccefcb84c8f0" category="admonition">Pour les commandes pré et post pour les opérations quiesce, snapshot et unquiesce, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir des commandes _/opt/snapcenter/snapcenter/scc/allowed_commands.config_ path pour Linux et _C:\Program Files\NetApp\allowed\Snapcenter Plug-in Creator\etc\SnapCenter_ for Windows.</block>
   <block id="63da44e9da033b590dde9b4ad197a492" category="paragraph">La récupération n'est possible que si l'état de récupération aval est à l'état "DB en attente". Cet état s'applique aux bases de données DB2 pour lesquelles la journalisation des archives est activée.</block>
-  <block id="53b75feee407d1834b322c10e85f7623" category="summary">La restauration d'une sauvegarde IBM DB2 comprend l'ouverture d'une session de connexion avec le serveur SnapCenter, la liste des sauvegardes et la récupération des informations de sauvegarde, ainsi que la restauration d'une sauvegarde.</block>
-  <block id="d1ef025ad5eecf5742761547510f17ec" category="doc">Restaurez la base de données IBM DB2 à l'aide des applets de commande PowerShell</block>
   <block id="a1d5af660c5e2d1e4fad83bdc58b7ce2" category="admonition">AppObjectId est "hôte\Plugin\UID", où UID = &lt;instance_name&gt; est pour la ressource d'instance DB2 découverte manuellement et UID = &lt;instance_name&gt;\&lt;databse_name&gt; est pour la ressource de base de données IBM DB2. Vous pouvez obtenir ResourceID à partir de l'applet de commande Get-smResources.</block>
   <block id="6bd0747e41f5cc71876f961107d5cde4" category="paragraph"><block ref="5c7d1c91ee3f41bdd6f718a502a5613f" category="inline-link-rx"></block>.</block>
   <block id="ba315e9de1111ac853f33529fa2cd3d3" category="doc">Restaurer une sauvegarde de ressource ajoutée manuellement</block>
@@ -9253,7 +9227,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="e705a7920e05c9bb81e85e88f3bc517e" category="admonition">Si les commandes n'existent pas dans la liste de commandes, l'opération échoue. * Pour MySQL version 5.7, vous devez définir IGNORE_MYSQLX_PORT = TRUE (par défaut FALSE) dans MySQL. fichier de propriétés.</block>
   <block id="1aa42ebe2562e36443837ba3783d56be" category="list-text">Vous ne pouvez pas protéger les instances MySQL clonées.</block>
   <block id="5ca99b958cb1bd3ef353a484ef374b7c" category="paragraph">Indiquez le port sur lequel l'instance MySQL clonée doit être démarrée.</block>
-  <block id="7bf249a0d2f6ca34f234e49a7c6ae839" category="doc">Cloner les sauvegardes de bases de données MySQL à l'aide d'applets de commande PowerShell</block>
   <block id="617874f47ab7905a23ed519cf3fea6ae" category="list-text">Vous pouvez cloner sur le serveur MySQL source.</block>
   <block id="0dfabcb39ba57463ff60fac9a6ef98b9" category="doc">Configurez le certificat CA pour le service SnapCenter MySQL Plug-ins sur l'hôte Linux</block>
   <block id="fcf09390b67d36433a1b5d8a3baa2685" category="doc">Configurez le certificat d'autorité de certification pour le service de plug-ins MySQL SnapCenter sur l'hôte Windows</block>
@@ -9323,9 +9296,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="cb883508bba7de6fa1086f8be627f59b" category="list-text">La restauration automatique à un point dans le temps et à une minute n'est pas prise en charge.</block>
   <block id="9fde62e7bc35c3b39dc1d0d05b5d4c30" category="list-text">Dans la page Restore Scope, sélectionnez *Complete Resource* pour restaurer les volumes de données configurés de la base de données MySQL.</block>
   <block id="3aac36b8956b530dee664d07e15ff001" category="admonition">Pour les commandes pré et post pour les opérations quiesce, snapshot et unquiesce, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte plug-in à partir du _/opt/snapcenter/snapcenter/scc/allowed_commands.config_ path pour Linux.</block>
-  <block id="cd590f35a0b386a7dbd4ed93e94a2563" category="summary">La restauration d'une sauvegarde MySQL comprend l'ouverture d'une session de connexion avec le serveur SnapCenter, la liste des sauvegardes et la récupération des informations de sauvegarde, ainsi que la restauration d'une sauvegarde.</block>
-  <block id="68a34ea2d1e4c6a908fbd0f2e0dfd502" category="doc">Restaurer la base de données MySQL à l'aide des applets de commande PowerShell</block>
-  <block id="5e9e173d2acff941dc42dd384b711936" category="admonition">AppObjectId est "hôte\Plugin\UID", où UID = &lt;instance_name&gt; est pour la ressource d'instance MySQL découverte manuellement et UID = &lt;instance_name&gt;\&lt;databse_name&gt; est pour la ressource de base de données MySQL. Vous pouvez obtenir le ResourceID à partir de l'applet de commande Get-SmResources.</block>
   <block id="26f012751d0422897cf8be8bfbe0e184" category="doc">Configurez les informations d'identification pour le plug-in SnapCenter pour MySQL</block>
   <block id="957af8278f8063c6cf7bcf3ea7d98baa" category="summary">SnapCenter s'intègre avec l'application de plug-in et avec les technologies NetApp sur le système de stockage. Pour travailler avec le plug-in pour la base de données MySQL, vous utilisez l'interface utilisateur graphique de SnapCenter.</block>
   <block id="0ce8bb1c11c9d867461ad1c0b83e04c0" category="doc">Plug-in SnapCenter pour les fonctionnalités MySQL</block>
@@ -9427,7 +9397,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="58ec0509621b150bb63b0fd69f20665f" category="doc">Sauvegarder les groupes de ressources des plug-ins pris en charge par NetApp</block>
   <block id="82f84190c005819dad7f504f11cda76c" category="doc">Plannings de sauvegarde des ressources de plug-in NetApp prises en charge</block>
   <block id="219faad869c51c259c3baeb888e7715b" category="doc">Annulez les opérations de sauvegarde pour les plug-ins NetApp pris en charge</block>
-  <block id="dbde28811975e59f9d793cdbedffa379" category="paragraph">Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou consultez le<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>.</block>
   <block id="439bf0bb77d088155289bdb25e45edeb" category="list-text">L'opération de clonage par défaut ne cloner que les objets de stockage. Les opérations de clonage au niveau de l'application ne peuvent être effectuées que si le plug-in NetApp pris en charge offre cette fonctionnalité.</block>
   <block id="16ee2093a7a4ef5d61a3e32fb3cdb6aa" category="doc">Cloner les sauvegardes de ressources de plug-ins pris en charge par NetApp</block>
   <block id="d6f2d27570c2ded83dc0df5937822b5e" category="paragraph">Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide du cmdlet SnapCenter ou consultez<block ref="bc27467ef171f28886fa3a802d3980c6" category="inline-link-rx"></block> le guide de référence du cmdlet Software^].</block>
@@ -9521,8 +9490,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="8c6a5ec4378c1fb0539384c188e10773" category="list-text">Spécifiez le numéro de port dans le champ *valeur*.</block>
   <block id="8df8e33d8de2d6167669d469ccf7bacd" category="summary">Les ressources sont des clusters et des instances PostgreSQL sur l'hôte Linux qui sont gérés par SnapCenter. Après avoir installé le plug-in SnapCenter pour PostgreSQL, les clusters PostgreSQL sur cet hôte Linux sont automatiquement découverts et affichés dans la page Ressources.</block>
   <block id="b7010b9dd54942efc350213b545f8fcc" category="paragraph">Les ressources sont des clusters et des instances PostgreSQL sur l'hôte Linux qui sont gérés par SnapCenter. Après avoir installé le plug-in SnapCenter pour PostgreSQL, les clusters PostgreSQL de toutes les instances de cet hôte Linux sont automatiquement découverts et affichés dans la page Ressources.</block>
-  <block id="0d78e7f1a288dafc16b38b2db161bd37" category="summary">La sauvegarde d'un cluster comprend l'établissement d'une connexion avec le serveur SnapCenter, l'ajout de ressources, l'ajout d'une stratégie, la création d'un groupe de ressources de sauvegarde et la sauvegarde.</block>
-  <block id="b1cbcfa72bf25e7c520985ac50c60f65" category="doc">Sauvegardez les clusters à l'aide des applets de commande PowerShell</block>
   <block id="82cdab2339b9d151736b53885e0ce102" category="paragraph">Cet exemple montre comment ajouter une instance PostgreSQL :</block>
   <block id="76c214e24b03aa4168d09074b6e14e3f" category="summary">Vous pouvez créer une sauvegarde d'une ressource \(cluster\) ou d'un groupe de ressources. Le workflow de sauvegarde comprend la planification, l'identification des clusters à sauvegarder, la gestion des stratégies de sauvegarde, la création de groupes de ressources et de stratégies de connexion, la création de sauvegardes et la surveillance des opérations.</block>
   <block id="530895ccaf7ffc619f25f8f9d8ec3597" category="doc">Sauvegarder les ressources PostgreSQL</block>
@@ -9537,7 +9504,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="3aec6404efc9e4c86b1c1e63225bc69f" category="paragraph">Entrez le port cible PostgreSQL à cloner à partir des sauvegardes existantes.</block>
   <block id="ddeb42879d827df35406b952ceec75ef" category="list-text">Commande pré-clonage : supprimez les clusters existants portant le même nom</block>
   <block id="ac6903fb60d8773c9c64b4d5c2ae07ca" category="list-text">Commande post-clonage : vérification d'un cluster ou démarrage d'un cluster</block>
-  <block id="c5f5244e6930e3be5fb9358a7fb198ec" category="doc">Cloner les sauvegardes de cluster PostgreSQL à l'aide d'applets de commande PowerShell</block>
   <block id="a46c7c9051556410e34daf87555e4af7" category="paragraph">Pour le cluster PostgreSQL :</block>
   <block id="16304fb8cc6cc60af53bde0bb5ac66b7" category="list-text">Vous pouvez cloner sur le serveur PostgreSQL source.</block>
   <block id="15ae17a7cd3cc273763752dd6144c354" category="doc">Configurez le certificat CA pour le service SnapCenter PostgreSQL Plug-ins sur l'hôte Linux</block>
@@ -9616,11 +9582,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="c9ef32d5d952753021dc5a9a5f8a1fc1" category="paragraph">Si l'utilisateur souhaite effectuer une récupération à 5 a.m . Sunnyvale, CA, alors l'utilisateur doit définir le fuseau horaire du navigateur sur le fuseau horaire de l'hôte PostgreSQL Linux, qui est GMT-07:00 et spécifier la date et l'heure à 5:00</block>
   <block id="08a801b87570777fd2e3960aa5df1bb1" category="admonition">Vous ne pouvez pas récupérer les ressources PostgreSQL ajoutées manuellement.</block>
   <block id="43434635d53a7654c99b7e0b2592780f" category="admonition">Le plug-in SnapCenter pour PostgreSQL crée une étiquette_sauvegarde et une table_map dans le dossier _/&lt;OS_temp_folder&gt;/postgresql_sc_Recovery_&lt;Restore_JobId&gt;/_ pour faciliter la restauration manuelle.</block>
-  <block id="77d20f777995de612db657a54e3dd05e" category="summary">La restauration d'une sauvegarde PostgreSQL comprend le lancement d'une session de connexion avec le serveur SnapCenter, la liste des sauvegardes et la récupération des informations de sauvegarde, ainsi que la restauration d'une sauvegarde.</block>
-  <block id="327dedb40ce8a6597f0c43633fac8ff6" category="doc">Restaurer un cluster PostgreSQL à l'aide des applets de commande PowerShell</block>
-  <block id="9211fb254b9418c89e77590ae03a0ae8" category="admonition">AppObjectId est « hôte\Plugin\UID », où UID = &lt;instance_name&gt; est pour la ressource d'instance PostgreSQL découverte manuellement et UID = &lt;instance_name&gt;\&lt;databse_name&gt; est pour la ressource de cluster PostgreSQL. Vous pouvez obtenir ResourceID à partir de l'applet de commande Get-smResources.</block>
-  <block id="b5c3bf7715665388a63229be96401c77" category="paragraph">Cet exemple montre comment restaurer le cluster à partir du stockage primaire :</block>
-  <block id="68457f3725741703167e8a741dfb53a5" category="paragraph">Cet exemple montre comment restaurer le cluster à partir du stockage secondaire :</block>
   <block id="e9ed9fe137a73fd8f4de1dd2a91bb6b4" category="summary">SnapCenter utilise des identifiants pour authentifier les utilisateurs pour les opérations SnapCenter. Vous devez créer des informations d'identification pour l'installation des plug-ins SnapCenter et des informations d'identification supplémentaires pour l'exécution des opérations de protection des données sur les clusters ou les systèmes de fichiers Windows.</block>
   <block id="e98661df3aff27229a7058376533924a" category="doc">Configurez les informations d'identification du plug-in SnapCenter pour PostgreSQL</block>
   <block id="4a22036d291fcb70270b7a277bb6609d" category="summary">SnapCenter s'intègre avec l'application de plug-in et avec les technologies NetApp sur le système de stockage. Pour utiliser le cluster Plug-in for postgresql, vous utilisez l'interface utilisateur graphique SnapCenter.</block>
@@ -9777,7 +9738,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="d2a6c0fe906c34dcc3199d46b0f064eb" category="sidebar">Affichez les sauvegardes et clones de bases de données IBM DB2 dans la page topologie</block>
   <block id="1f70c9e1700c704dfec3fabce3ea1e61" category="sidebar">Restaurez IBM DB2</block>
   <block id="3f1b13e4c36844e70f5e441d547e538a" category="sidebar">Restaurez une sauvegarde de base de données découverte automatiquement</block>
-  <block id="6430c6d3f6715feb3c81d928f75f4ef5" category="sidebar">Restaurez IBM DB2 à l'aide des applets de commande PowerShell</block>
   <block id="1c72949dbb5a015cff1821967cce106f" category="sidebar">Clonage des sauvegardes de ressources IBM DB2</block>
   <block id="b0b60126f154fbea1109285d09dabe64" category="sidebar">Cloner une sauvegarde de base de données IBM DB2</block>
   <block id="018574050002dfdb703111e592ace12f" category="sidebar">Protéger MySQL</block>
@@ -9790,7 +9750,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="0d1aafd347801e1c28235ed9f606913b" category="sidebar">Installez le plug-in SnapCenter pour MySQL</block>
   <block id="f8ec35321e854dc696eede14c98e61f0" category="sidebar">Afficher les sauvegardes et clones de bases de données MySQL dans la page topologie</block>
   <block id="74f11b6391f86775587d7212c298b439" category="sidebar">Restaurer MySQL</block>
-  <block id="2fd821a84f4f2d04dfd883d9e831b487" category="sidebar">Restaurer MySQL à l'aide des applets de commande PowerShell</block>
   <block id="66d8fc5dc91943dfb2a42f390879dbaa" category="sidebar">Cloner les sauvegardes de ressources MySQL</block>
   <block id="e21d8a65aeaef70217d9755dfc6ca944" category="sidebar">Cloner une sauvegarde de base de données MySQL</block>
   <block id="b0aa9b023351939602d9d1e28823f0e3" category="sidebar">Protégez les plug-ins pris en charge par NetApp</block>
@@ -9818,7 +9777,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="a60af869a07d535dff66727f74a69b19" category="sidebar">Installez le plug-in SnapCenter pour PostgreSQL</block>
   <block id="146ebe956310ab6aebfd83b175d2bae4" category="sidebar">Affichez les sauvegardes de cluster PostgreSQL et les clones dans la page topologie</block>
   <block id="d9b22e5cf88b9d4e6e8fe02a7489ea16" category="sidebar">Restaurer PostgreSQL</block>
-  <block id="57318c547ffe570761f4a3f4b7899d67" category="sidebar">Restaurer PostgreSQL à l'aide des applets de commande PowerShell</block>
   <block id="480aaec5aa69b781016a62284565640a" category="sidebar">Cloner les sauvegardes de ressources PostgreSQL</block>
   <block id="680c5ccf46f4a728694c590785dc9cda" category="sidebar">Cloner une sauvegarde de cluster PostgreSQL</block>
   <block id="881cbdbe2345b7472ef428b8c524734a" category="admonition">Les licences SnapCenter Advanced et SnapCenter NAS File Services sont obsolètes et ne sont plus disponibles. La licence basée sur la capacité n'est plus requise pour Amazon FSX pour NetApp ONTAP et Cloud Volumes ONTAP. Les licences standard et basées sur la capacité ne sont pas requises pour Azure NetApp Files.</block>
@@ -9881,4 +9839,7 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="310b8da14055c2cf4702264e02854d3d" category="paragraph">5672 (tcp)</block>
   <block id="c55a170d16570920e099a9e43d38db67" category="paragraph">Il s'agit du port par défaut sur lequel RabbitMQ écoute et il est utilisé pour la communication du modèle éditeur-abonné entre le service Planificateur et SnapCenter.</block>
   <block id="f5a551e6a3161ca6d9ee33d926d734d5" category="list-text">Microsoft Edge 110.0.1587.17 et versions ultérieures</block>
+  <block id="3d64c1dca7f60c2f025bc4b68e25eaec" category="doc">Sauvegarde des bases de données DB2</block>
+  <block id="fc25be62e75052437e6fa7b8d1571f48" category="open-title">UI SnapCenter</block>
+  <block id="41269337bd4507838c6bb1bd7b2141c3" category="sidebar">Sauvegarde des bases de données db2</block>
 </blocks>

@@ -114,8 +114,6 @@ entries:
   - title: Créer une connexion au système de stockage et une autorisation d'accès
       à l'aide des applets de commande PowerShell
     url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
-  - title: Sauvegarde des ressources avec les applets de commande PowerShell
-    url: "/protect-nsp/back_up_resources_using_powershell_cmdlets.html"
   - title: Surveiller les opérations de sauvegarde
     url: "/protect-nsp/monitor_resources_backup_operations.html"
   - title: Annuler les opérations de sauvegarde
@@ -139,7 +137,5 @@ entries:
     url: "/protect-nsp/clone_netapp_supported_plugins_resource_backups.html"
   - title: Cloner à partir d'une sauvegarde
     url: "/protect-nsp/clone_from_a_backup.html"
-  - title: Clonage des sauvegardes avec les applets de commande PowerShell
-    url: "/protect-nsp/clone_backups_using_powershell_cmdlets.html"
   - title: Surveillance des opérations de clonage dans SnapCenter
     url: "/protect-nsp/monitor_resource_clone_operations.html"

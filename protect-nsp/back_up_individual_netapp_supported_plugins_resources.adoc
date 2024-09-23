@@ -18,6 +18,10 @@ Si une ressource individuelle de plug-ins pris en charge par NetApp ne fait part
 * Si vous souhaitez sauvegarder une ressource avec une relation SnapMirror avec un système de stockage secondaire, le rôle ONTAP attribué à l'utilisateur de stockage doit inclure le privilège « napmirror All ». Toutefois, si vous utilisez le rôle « vsadmin », le privilège « napmirror all » n'est pas requis.
 
 
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
@@ -131,3 +135,89 @@ Si la stratégie sélectionnée pour la sauvegarde à la demande est associée �
 
 . Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
 
+
+--
+.Applets de commande PowerShell
+--
+.Étapes
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146\
+----
++
+L'invite du nom d'utilisateur et du mot de passe s'affiche.
+
+. Ajoutez des ressources à l'aide de l'applet de commande Add-SmResources.
++
+Cet exemple ajoute des ressources :
+
++
+[listing]
+----
+Add-SmResource -HostName '10.232.206.248' -PluginCode 'DB2' -ResourceName NONREC1 -ResourceType Database -StorageFootPrint ( @
+{"VolumeName"="DB2_NONREC1DB";"LunName"="DB2_NONREC1DB";"Vserver"="vserver_scauto_secondary"}) -Instance db2inst1
+----
+. Créez une stratégie de sauvegarde à l'aide de l'applet de commande Add-SmPolicy.
++
+Cet exemple crée une nouvelle stratégie de sauvegarde :
+
++
+[listing]
+----
+Add-SMPolicy -PolicyName 'db2VolumePolicy' -PolicyType 'Backup' -PluginPolicyType DB2  -description 'VolumePolicy'
+----
+. Ajoutez un nouveau groupe de ressources à SnapCenter à l'aide de l'applet de commande Add-SmResourceGroup.
++
+Cet exemple crée un nouveau groupe de ressources avec la stratégie et les ressources spécifiées :
+
++
+[listing]
+----
+Add-SmResourceGroup -ResourceGroupName 'Verify_ManualBackup_DatabaseLevel_MultipleVolume_unix' -Resources @(@
+{"Host"="10.232.206.248";"Uid"="db2inst2\NONREC"},@{"Host"="10.232.206.248";"Uid"="db2inst1\NONREC"}) -Policies db2ManualPolicy
+----
+. Lancez une nouvelle tâche de sauvegarde à l'aide de la cmdlet New-SmBackup.
++
+[listing]
+----
+New-SMBackup -DatasetName Verify_ManualBackup_DatabaseLevel_MultipleVolume_unix -Policy db2ManualPolicy
+----
+. Affichez l'état de la tâche de sauvegarde à l'aide de l'applet de commande Get-SmBackupReport.
++
+Cet exemple affiche un rapport récapitulatif de tous les travaux exécutés à la date spécifiée :
+
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -JobId 351
+Output:
+BackedUpObjects           : {DB1}
+FailedObjects             : {}
+IsScheduled               : False
+HasMetadata               : False
+SmBackupId                : 269
+SmJobId                   : 2361
+StartDateTime             : 10/4/2016 11:20:45 PM
+EndDateTime               : 10/4/2016 11:21:32 PM
+Duration                  : 00:00:46.2536470
+CreatedDateTime           : 10/4/2016 11:21:09 PM
+Status                    : Completed
+ProtectionGroupName       : Verify_ASUP_Message_windows
+SmProtectionGroupId       : 211
+PolicyName                : test2
+SmPolicyId                : 20
+BackupName                : Verify_ASUP_Message_windows_scc54_10-04-2016_23.20.46.2758
+VerificationStatus        : NotVerified
+VerificationStatuses      :
+SmJobError                :
+BackupType                : SCC_BACKUP
+CatalogingStatus          : NotApplicable
+CatalogingStatuses        :
+ReportDataCreatedDateTime :
+----
+
+
+--
+====

@@ -80,8 +80,6 @@ entries:
   - title: Créer une connexion au système de stockage et une autorisation d'accès
       à l'aide des applets de commande PowerShell pour Exchange Server
     url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
-  - title: Sauvegarde des ressources Exchange à l'aide des applets de commande PowerShell
-    url: "/protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html"
   - title: Surveiller les opérations de sauvegarde
     url: "/protect-sce/task_monitor_backup_operations.html"
   - title: Annuler les opérations de sauvegarde pour la base de données Exchange
@@ -102,8 +100,6 @@ entries:
     url: "/protect-sce/reference_granular_recovery_of_mails_and_mailbox.html"
   - title: Restaurer une base de données Exchange Server à partir du stockage secondaire
     url: "/protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html"
-  - title: Restauration des ressources Exchange à l'aide des applets de commande PowerShell
-    url: "/protect-sce/task_restore_exchange_resources_using_powershell_cmdlets.html"
   - title: Réamorçage d'un réplica de nœud Exchange passif
     url: "/protect-sce/task_reseed_a_passive_exchange_node_replica.html"
   - title: Réamorçage d'une réplique à l'aide des applets de commande PowerShell pour

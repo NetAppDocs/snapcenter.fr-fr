@@ -2,14 +2,6 @@
 :allow-uri-read: 
 
 
-Vous pouvez utiliser les applets de commande PowerShell pour sauvegarder des bases de données SQL Server ou des systèmes de fichiers Windows. Cela inclut la sauvegarde d'une base de données SQL Server ou d'un système de fichiers Windows, notamment l'établissement d'une connexion avec le serveur SnapCenter, la découverte des instances de base de données SQL Server ou des systèmes de fichiers Windows, l'ajout d'une règle, la création d'un groupe de ressources de sauvegarde, la sauvegarde et la vérification de la sauvegarde.
-
-.Avant de commencer
-* Vous devez avoir préparé l'environnement PowerShell pour exécuter les applets de commande PowerShell.
-* Vous devez avoir ajouté la connexion au système de stockage et créé une autorisation d'accès.
-* Vous devez avoir ajouté des hôtes et des ressources découvertes.
-
-
 .Étapes
 . Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
 +

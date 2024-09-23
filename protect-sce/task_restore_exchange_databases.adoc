@@ -48,6 +48,10 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 * Pour une opération de restauration de synchronisation active SnapMirror, vous devez sélectionner la sauvegarde à partir de l'emplacement principal.
 
 
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources* dans le coin supérieur gauche de la page ressource.
 . Sélectionnez le plug-in Exchange Server dans la liste déroulante.
@@ -132,3 +136,68 @@ Vous devez contrôler le processus de restauration à l'aide de la page *moniteu
 Lorsque vous restaurez une base de données active à partir d'une sauvegarde, la base de données passive peut passer à l'état suspendu ou en échec s'il y a un décalage entre la réplique et la base de données active.
 
 Le changement d'état peut se produire lorsque la chaîne de logs de la base de données active va et commence une nouvelle branche qui rompt la réplication. Exchange Server tente de corriger le réplica, mais s'il ne parvient pas à le faire, après la restauration, vous devez créer une nouvelle sauvegarde, puis réamorcer le réplica.
+
+--
+.Applets de commande PowerShell
+--
+.Étapes
+. Démarrez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié en utilisant le `Open-SmConnection` applet de commande.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
+. Récupérez les informations relatives à une ou plusieurs sauvegardes que vous souhaitez restaurer à l'aide de la `Get-SmBackup` applet de commande.
++
+Cet exemple affiche des informations sur toutes les sauvegardes disponibles :
+
++
+[listing]
+----
+PS C:\> Get-SmBackup
+
+BackupId                      BackupName                    BackupTime                    BackupType
+--------                      ----------                    ----------                    ----------
+341                           ResourceGroup_36304978_UTM... 12/8/2017 4:13:24 PM          Full Backup
+342                           ResourceGroup_36304978_UTM... 12/8/2017 4:16:23 PM          Full Backup
+355                           ResourceGroup_06140588_UTM... 12/8/2017 6:32:36 PM          Log Backup
+356                           ResourceGroup_06140588_UTM... 12/8/2017 6:36:20 PM          Full Backup
+----
+. Restaurez les données à partir de la sauvegarde à l'aide du `Restore-SmBackup` applet de commande.
++
+Cet exemple restaure une sauvegarde en moins d'une minute :
+
++
+[listing]
+----
+C:\PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true
+----
++
+Cet exemple restaure une sauvegarde instantanée :
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true -LogRestoreType ByTransactionLogs -LogCount 2
+----
++
+Cet exemple restaure une sauvegarde sur un système de stockage secondaire dans l'histoire principale :
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode 'SCE' -AppObjectId 'DB2' -BackupId 81 -IsRecoverMount:$true -Confirm:$false
+-archive @{Primary="paw_vs:vol1";Secondary="paw_vs:vol1_mirror"} -logrestoretype All
+----
++
+Le `-archive` paramètre vous permet de spécifier les volumes primaire et secondaire que vous souhaitez utiliser pour la restauration.
+
++
+Le `-IsRecoverMount:$true` paramètre vous permet de monter la base de données après la restauration.
+
+
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter à la https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+--
+====

@@ -22,6 +22,10 @@ NOTE: Lors de la sauvegarde d'un système de fichiers, SnapCenter ne sauvegarde 
 
 IMPORTANT: Si vous travaillez dans un contexte de système de fichiers Windows, ne sauvegardez pas les fichiers de base de données. La sauvegarde est ainsi incohérente et risque de perte de données lors de la restauration. Pour protéger les fichiers de base de données, vous devez utiliser le plug-in SnapCenter approprié pour la base de données (par exemple, le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server ou un plug-in personnalisé pour les fichiers de base de données).
 
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez le type de ressource système de fichiers, puis sélectionnez la ressource à sauvegarder.
@@ -106,3 +110,101 @@ Si la stratégie sélectionnée pour la sauvegarde à la demande est associée �
 
 . Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
 
+
+--
+.Applets de commande PowerShell
+--
+.Étapes
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
+----
++
+L'invite du nom d'utilisateur et du mot de passe s'affiche.
+
+. Créez une stratégie de sauvegarde à l'aide de l'applet de commande Add-SmPolicy.
++
+Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde SQL fullbackup :
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName TESTPolicy
+-PluginPolicyType SCSQL -PolicyType Backup
+-SqlBackupType FullBackup -Verbose
+----
++
+Cet exemple crée une nouvelle stratégie de sauvegarde avec un type de sauvegarde de système de fichiers Windows de CrashConsistent :
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName FileSystemBackupPolicy
+-PluginPolicyType SCW -PolicyType Backup
+-ScwBackupType CrashConsistent -Verbose
+----
+. Découvrez les ressources hôte à l'aide de l'applet de commande Get-SmResources.
++
+Cet exemple recherche les ressources du plug-in Microsoft SQL sur l'hôte spécifié :
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise-f6.sddev.mycompany.com
+-PluginCode SCSQL
+----
++
+Cet exemple détecte les ressources des systèmes de fichiers Windows sur l'hôte spécifié :
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise2-f6.sddev.mycompany.com
+-PluginCode SCW
+----
+. Ajoutez un nouveau groupe de ressources à SnapCenter à l'aide de l'applet de commande Add-SmResourceGroup.
++
+Cet exemple crée un nouveau groupe de ressources de sauvegarde de base de données SQL avec la stratégie et les ressources spécifiées :
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName AccountingResource
+-Resources @{"Host"="visef6.org.com";
+"Type"="SQL Database";"Names"="vise-f6\PayrollDatabase"}
+-Policies "BackupPolicy"
+----
++
+Cet exemple crée un nouveau groupe de ressources de sauvegarde du système de fichiers Windows avec la stratégie et les ressources spécifiées :
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName EngineeringResource
+-PluginCode SCW -Resources @{"Host"="WIN-VOK20IKID5I";
+"Type"="Windows Filesystem";"Names"="E:\"}
+-Policies "EngineeringBackupPolicy"
+----
+. Lancez une nouvelle tâche de sauvegarde à l'aide de la cmdlet New-SmBackup.
++
+[listing]
+----
+PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
+----
+. Affichez l'état de la tâche de sauvegarde à l'aide de l'applet de commande Get-SmBackupReport.
++
+Cet exemple affiche un rapport récapitulatif de tous les travaux exécutés à la date spécifiée :
+
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -Date '1/27/2016'
+----
+
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter à la https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+--
+====

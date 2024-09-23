@@ -35,6 +35,10 @@ NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération �
 * Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
@@ -131,3 +135,73 @@ Vous devez également spécifier les adresses e-mail de l'expéditeur et du dest
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 . Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
 
+
+--
+.Applets de commande PowerShell
+--
+.Étapes
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. Récupérez les sauvegardes pour effectuer l'opération de clonage à l'aide de l'applet de commande Get-SmBackup.
++
+Cet exemple montre que deux sauvegardes sont disponibles pour le clonage :
+
++
+[listing]
+----
+ C:\PS> Get-SmBackup
+
+        BackupId                      BackupName                    BackupTime                    BackupType
+        --------                      ----------                    ----------                    ----------
+         1                     Payroll Dataset_vise-f6_08... 8/4/2015 11:02:32 AM          Full Backup
+         2                     Payroll Dataset_vise-f6_08... 8/4/2015 11:23:17 AM
+----
+. Lancez une opération de clonage à partir d'une sauvegarde existante et spécifiez les adresses IP d'exportation NFS sur lesquelles les volumes clonés sont exportés.
++
+Cet exemple montre que la sauvegarde à cloner possède une adresse NFSExportIPS de 10.232.206.169 :
+
++
+[listing]
+----
+New-SmClone -AppPluginCode hana -BackupName scsccore1_sccore_test_com_hana_H73_scsccore1_06-07-2017_02.54.29.3817 -Resources @{"Host"="scsccore1.sccore.test.com";"Uid"="H73"}  -CloneToInstance shivscc4.sccore.test.com -mountcommand 'mount 10.232.206.169:%hana73data_Clone /hana83data' -preclonecreatecommands '/home/scripts/scpre_clone.sh' -postclonecreatecommands '/home/scripts/scpost_clone.sh'
+----
++
+
+NOTE: Si NFSExportIPS n'est pas spécifié, la valeur par défaut est exportée vers l'hôte cible du clone.
+
+. Vérifiez que les sauvegardes ont été correctement clonées à l'aide de l'applet de commande Get-SmCloneReport pour afficher les détails du travail clone.
++
+Vous pouvez afficher des informations telles que l'ID de clone, la date et l'heure de début, la date et l'heure de fin.
+
++
+[listing]
+----
+PS C:\> Get-SmCloneReport -JobId 186
+
+    SmCloneId           : 1
+    SmJobId             : 186
+    StartDateTime       : 8/3/2015 2:43:02 PM
+    EndDateTime         : 8/3/2015 2:44:08 PM
+    Duration            : 00:01:06.6760000
+    Status              : Completed
+    ProtectionGroupName : Draper
+    SmProtectionGroupId : 4
+    PolicyName          : OnDemand_Clone
+    SmPolicyId          : 4
+    BackupPolicyName    : OnDemand_Full_Log
+    SmBackupPolicyId    : 1
+    CloneHostName       : SCSPR0054212005.mycompany.com
+    CloneHostId         : 4
+    CloneName           : Draper__clone__08-03-2015_14.43.53
+    SourceResources     : {Don, Betty, Bobby, Sally}
+    ClonedResources     : {Don_DRAPER, Betty_DRAPER, Bobby_DRAPER, Sally_DRAPER}
+    SmJobError          :
+----
+
+
+--
+====

@@ -74,8 +74,6 @@ entries:
   - title: Créer une connexion au système de stockage et une autorisation d'accès
       à l'aide des applets de commande PowerShell
     url: "/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html"
-  - title: Sauvegarde des ressources avec les applets de commande PowerShell
-    url: "/protect-scw/task_back_up_resources_using_powershell_cmdlets_for_windows.html"
   - title: Surveiller les opérations de sauvegarde
     url: "/protect-scw/task_monitor_backup_operations.html"
   - title: Annuler les opérations de sauvegarde
@@ -91,8 +89,7 @@ entries:
   entries:
   - title: Restaurez les sauvegardes du système de fichiers Windows
     url: "/protect-scw/task_restore_windows_file_system_backups.html"
-  - title: Restauration et restauration des ressources via les applets de commande
-      PowerShell
+  - title: Restaurer des ressources à l'aide des applets de commande PowerShell
     url: "/protect-scw/task_restore_and_recover_resources_using_powershell_cmdlets_for_windows.html"
   - title: Surveiller les opérations de restauration
     url: "/protect-scw/task_monitor_restore_operations.html"
@@ -102,8 +99,6 @@ entries:
   entries:
   - title: Clonage à partir d'une sauvegarde du système de fichiers Windows
     url: "/protect-scw/task_clone_from_a_windows_file_system_backup.html"
-  - title: Clonage des sauvegardes avec les applets de commande PowerShell
-    url: "/protect-scw/task_clone_backups_using_powershell_cmdlets_for_windows.html"
   - title: Surveillance des opérations de clonage
     url: "/protect-scw/task_monitor_clone_operations.html"
   - title: Annuler les opérations de clonage

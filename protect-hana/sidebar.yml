@@ -146,8 +146,6 @@ entries:
   - title: Créer une connexion au système de stockage et une certification à l'aide
       des applets de commande PowerShell pour la base de données SAP HANA
     url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
-  - title: Sauvegarder des bases de données à l'aide des applets de commande PowerShell
-    url: "/protect-hana/task_back_up_databases_using_powershell_cmdlets_sap_hana.html"
   - title: Surveiller les opérations de sauvegarde
     entries:
     - title: Contrôlez les opérations de sauvegarde dans la page tâches SnapCenter
@@ -167,9 +165,6 @@ entries:
     url: "/protect-hana/task_restore_and_recover_a_manually_added_resource_backup.html"
   - title: Restaurez et récupérez une sauvegarde de base de données découverte automatiquement
     url: "/protect-hana/task_restore_and_recover_an_auto_discovered_database_backup.html"
-  - title: Restaurer la base de données SAP HANA à l'aide des applets de commande
-      PowerShell
-    url: "/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html"
   - title: Restaurer des ressources à l'aide des applets de commande PowerShell
     url: "/protect-hana/task_restore_and_recover_resources_using_powershell_cmdlets_hana.html"
   - title: Surveiller les opérations de restauration
@@ -180,9 +175,6 @@ entries:
     url: "/protect-hana/task_clone_sap_hana_resource_backups.html"
   - title: Cloner une sauvegarde de base de données SAP HANA
     url: "/protect-hana/task_clone_a_sap_hana_database_backup.html"
-  - title: Cloner les sauvegardes de bases de données SAP HANA à l'aide des applets
-      de commande PowerShell
-    url: "/protect-hana/task_clone_sap_hana_database_backups_using_powershell_cmdlets.html"
   - title: Surveillance des opérations de clonage dans SnapCenter
     url: "/protect-hana/task_monitor_hana_database_clone_operations.html"
   - title: Séparer un clone

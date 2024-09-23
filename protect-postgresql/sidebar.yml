@@ -126,8 +126,6 @@ entries:
   - title: Créez une connexion au système de stockage et des informations d'identification
       à l'aide des applets de commande PowerShell pour PostgreSQL
     url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
-  - title: Sauvegardez les clusters à l'aide des applets de commande PowerShell
-    url: "/protect-postgresql/back-up-clusters-using-powershell-cmdlets-postgresql.html"
   - title: Surveiller les opérations de sauvegarde
     entries:
     - title: Contrôlez les opérations de sauvegarde dans la page tâches SnapCenter
@@ -147,8 +145,6 @@ entries:
     url: "/protect-postgresql/restore-and-recover-a-manually-added-resource-backup.html"
   - title: Restaurez et récupérez une sauvegarde de cluster découverte automatiquement
     url: "/protect-postgresql/restore-and-recover-an-auto-discovered-cluster-backup.html"
-  - title: Restaurer PostgreSQL à l'aide des applets de commande PowerShell
-    url: "/protect-postgresql/restore-postgresql-using-powershell-cmdlets.html"
   - title: Restaurer des ressources à l'aide des applets de commande PowerShell
     url: "/protect-postgresql/restore-and-recover-resources-using-powershell-cmdlets-postgresql.html"
   - title: Surveiller les opérations de restauration
@@ -159,9 +155,6 @@ entries:
     url: "/protect-postgresql/clone-postgresql-resource-backups.html"
   - title: Cloner une sauvegarde de cluster PostgreSQL
     url: "/protect-postgresql/clone-postgresql-backup.html"
-  - title: Cloner les sauvegardes de cluster PostgreSQL à l'aide d'applets de commande
-      PowerShell
-    url: "/protect-postgresql/clone-postgresql-backups-using-powershell-cmdlets.html"
   - title: Surveillance des opérations de clonage dans SnapCenter
     url: "/protect-postgresql/monitor-postgresql-clone-operations.html"
   - title: Séparer un clone

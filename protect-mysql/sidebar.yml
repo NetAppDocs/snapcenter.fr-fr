@@ -114,19 +114,15 @@ entries:
     url: "/protect-mysql/create-backup-policies-for-mysql.html"
   - title: Créer des groupes de ressources et attacher des stratégies
     url: "/protect-mysql/create-resource-groups-and-attach-policies.html"
+  - title: Créez une connexion au système de stockage et des informations d'identification
+      à l'aide des applets de commande PowerShell pour MySQL
+    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
   - title: Sauvegardez MySQL
     url: "/protect-mysql/back-up-mysql.html"
   - title: Sauvegarder les groupes de ressources
     url: "/protect-mysql/back-up-resource-groups-mysql.html"
-  - title: Créez une connexion au système de stockage et des informations d'identification
-      à l'aide des applets de commande PowerShell pour MySQL
-    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
-  - title: Surveiller les opérations de sauvegarde
-    entries:
-    - title: Contrôlez les opérations de sauvegarde dans la page tâches SnapCenter
-      url: "/protect-mysql/monitor-mysql-backup-operations.html"
-    - title: Surveiller les opérations dans le volet activité
-      url: "/protect-mysql/monitor-dataprotection-operations-on-mysql-in-the-activity-pane.html"
+  - title: Contrôlez les opérations de sauvegarde dans la page tâches SnapCenter
+    url: "/protect-mysql/monitor-mysql-backup-operations.html"
   - title: Annuler les opérations de sauvegarde
     url: "/protect-mysql/cancel-backup-operations-for-mysql.html"
   - title: Afficher les sauvegardes et clones de bases de données MySQL dans la page

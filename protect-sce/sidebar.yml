@@ -73,19 +73,17 @@ entries:
   - title: Créez des groupes de ressources et associez des stratégies pour les serveurs
       Exchange
     url: "/protect-sce/task_create_resource_groups_and_attach_policies_for_exchange_servers.html"
+  - title: Créer une connexion au système de stockage et une autorisation d'accès
+      à l'aide des applets de commande PowerShell pour Exchange Server
+    url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
   - title: Sauvegarde des bases de données Exchange
     url: "/protect-sce/task_back_up_exchange_databases.html"
   - title: Sauvegardez les groupes de ressources Exchange
     url: "/protect-sce/task_back_up_exchange_resources_groups.html"
-  - title: Créer une connexion au système de stockage et une autorisation d'accès
-      à l'aide des applets de commande PowerShell pour Exchange Server
-    url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
   - title: Surveiller les opérations de sauvegarde
     url: "/protect-sce/task_monitor_backup_operations.html"
   - title: Annuler les opérations de sauvegarde pour la base de données Exchange
     url: "/protect-sce/task_cancel_backup_operations_for_exchange_database.html"
-  - title: Suppression des sauvegardes Exchange via des applets de commande PowerShell
-    url: "/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html"
   - title: Afficher les sauvegardes Exchange sur la page topologie
     url: "/protect-sce/task_view_exchange_backups_in_the_topology_page.html"
 - title: Restaurer les ressources Exchange

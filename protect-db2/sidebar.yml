@@ -117,19 +117,15 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: Créer des groupes de ressources et attacher des stratégies
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
+  - title: Créez une connexion au système de stockage et des informations d'identification
+      à l'aide des applets de commande PowerShell pour IBM DB2
+    url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
   - title: Sauvegarde des bases de données db2
     url: "/protect-db2/back-up-db2-databases.html"
   - title: Sauvegarder les groupes de ressources
     url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
-  - title: Créez une connexion au système de stockage et des informations d'identification
-      à l'aide des applets de commande PowerShell pour IBM DB2
-    url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
-  - title: Surveiller les opérations de sauvegarde
-    entries:
-    - title: Contrôlez les opérations de sauvegarde dans la page tâches SnapCenter
-      url: "/protect-db2/monitor-db2-backup-operations.html"
-    - title: Surveiller les opérations dans le volet activité
-      url: "/protect-db2/monitor-dataprotection-operations-on-db2-in-the-activity-pane.html"
+  - title: Contrôlez les opérations de sauvegarde dans la page tâches SnapCenter
+    url: "/protect-db2/monitor-db2-backup-operations.html"
   - title: Annuler les opérations de sauvegarde
     url: "/protect-db2/cancel-backup-operations-for-ibm-db2.html"
   - title: Affichez les sauvegardes et clones de bases de données IBM DB2 dans la

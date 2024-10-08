@@ -59,15 +59,6 @@ entries:
       url: "/protect-scsql/reference_types_of_restore_operations.html"
   - title: Définissez une stratégie de clonage pour SQL Server
     url: "/protect-scsql/task_define_a_clone_strategy_for_sql_server.html"
-- title: Démarrage rapide pour installer le plug-in SnapCenter pour Microsoft SQL
-    Server
-  entries:
-  - title: Préparez l'installation du serveur et du plug-in SnapCenter
-    url: "/protect-scsql/quick-start-to-prepare-for-snapcenter-plug-in-install-for-sql-server.html"
-  - title: Installez SnapCenter Server pour Microsoft SQL Server
-    url: "/protect-scsql/task-install-snapcenter-server-for-sql-server.html"
-  - title: Installez le plug-in SnapCenter pour Microsoft SQL Server
-    url: "/protect-scsql/task-install-snapcenter-plug-in-for-sql-server.html"
 - title: Préparez-vous à installer le plug-in SnapCenter pour Microsoft SQL Server
   entries:
   - title: Workflow d'installation pour le plug-in SnapCenter pour Microsoft SQL Server
@@ -146,26 +137,20 @@ entries:
     url: "/protect-scsql/task_create_resource_groups_and_attach_policies_for_sql_server.html"
   - title: Conditions requises pour la sauvegarde des ressources SQL
     url: "/protect-scsql/concept_requirements_for_backing_up_sql_resources.html"
+  - title: Créer une connexion au système de stockage et une autorisation d'accès
+      à l'aide des applets de commande PowerShell
+    url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
   - title: Sauvegarde des ressources SQL
     url: "/protect-scsql/task_back_up_sql_resources.html"
   - title: Sauvegardez les groupes de ressources SQL Server
     url: "/protect-scsql/task_back_up_sql_server_resource_groups.html"
-  - title: Surveiller les opérations de sauvegarde
-    entries:
-    - title: Contrôlez les opérations de sauvegarde dans la page tâches SnapCenter
-      url: "/protect-scsql/task_monitor_sql_resources_backup_operations.html"
-    - title: Surveiller les opérations dans le volet activité
-      url: "/protect-scsql/task_monitor_dataprotection_operations_on_sql_resources_in_the_activity_pane.html"
-  - title: Créer une connexion au système de stockage et une autorisation d'accès
-      à l'aide des applets de commande PowerShell
-    url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
+  - title: Contrôlez les opérations de sauvegarde dans la page tâches SnapCenter
+    url: "/protect-scsql/task_monitor_sql_resources_backup_operations.html"
   - title: Annulez les opérations de sauvegarde du plug-in SnapCenter pour Microsoft
       SQL Server
     url: "/protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html"
   - title: Afficher les sauvegardes et clones SQL Server sur la page topologie
     url: "/protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html"
-  - title: Suppression des sauvegardes à l'aide des applets de commande PowerShell
-    url: "/protect-scsql/task_remove_backups_using_powershell_cmdlets_for_sql.html"
   - title: Nettoyez le nombre de sauvegardes secondaires à l'aide des applets de commande
       PowerShell
     url: "/protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html"

@@ -108,7 +108,9 @@ NOTE: Vous devez augmenter cette valeur si vous souhaitez exécuter simultanéme
 --
 .Sauvegarde des journaux
 --
-Sauvegardez les journaux de transactions. . Sélectionnez *sauvegarde journal*.
+. Sauvegardez les journaux de transactions.
+. Sélectionnez *sauvegarde journal*.
+
 
 --
 .Copie seule sauvegarde
@@ -151,7 +153,7 @@ NOTE: Dans les configurations en cluster, les sauvegardes sont conservées sur c
 Vous ne pouvez sélectionner qu'un seul type de planification pour une stratégie.
 
 +
-image::../media/backup_settings.gif[Écran des paramètres de sauvegarde.]
+image:../media/backup_settings.gif["Écran des paramètres de sauvegarde."]
 
 +
 
@@ -279,7 +281,7 @@ Cette option doit être activée pour la synchronisation active SnapMirror.
 Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal. Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
 
 +
-Voir link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones SQL Server sur la page topologie"].
+Voir link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones SQL Server sur la page topologie"].
 
 
 
@@ -299,7 +301,7 @@ Lorsque SnapLock est configuré uniquement sur le serveur secondaire à partir d
 Pour plus d'informations sur le coffre-fort SnapLock, voir https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Archivage des copies Snapshot sur WORM sur une destination d'archivage sécurisé"]
 
 +
-Voir link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones SQL Server sur la page topologie"].
+Voir link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones SQL Server sur la page topologie"].
 
 
 

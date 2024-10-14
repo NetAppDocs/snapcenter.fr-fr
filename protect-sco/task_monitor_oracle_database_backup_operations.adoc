@@ -45,7 +45,7 @@ Les icônes suivantes apparaissent sur la page travaux et indiquent l'état corr
 . Sélectionnez une tâche de sauvegarde, puis cliquez sur *Détails* pour afficher les détails de la tâche.
 +
 
-NOTE: Bien que l'état de la tâche de sauvegarde s'afficheimage:../media/success_icon.gif["Icône terminé"], lorsque vous cliquez sur les détails du travail, vous pouvez constater que certaines tâches enfants de l'opération de sauvegarde sont toujours en cours ou marquées d'un signe d'avertissement.
+NOTE: Bien que l'état de la tâche image:../media/success_icon.gif["Icône terminé"]de sauvegarde s'affiche , lorsque vous cliquez sur les détails de la tâche, vous pouvez constater que certaines des tâches enfants de l'opération de sauvegarde sont toujours en cours ou marquées d'un avertissement.
 
 . Dans la page Détails du travail, cliquez sur *Afficher les journaux*.
 +

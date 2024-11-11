@@ -51,7 +51,7 @@ Page moniteur
  a| 
 Volet activité
  a| 
-. Après avoir lancé la procédure de sauvegarde, cliquez sur image:../media/activity_pane_icon.gif[""] Dans le volet activité pour afficher les cinq opérations les plus récentes.
+. Après avoir lancé la tâche de sauvegarde, cliquez sur image:../media/activity_pane_icon.gif["icône du volet activité"] le volet activité pour afficher les cinq opérations les plus récentes.
 . Sélectionner l'opération.
 . Dans la page Détails du travail, cliquez sur *Annuler le travail*.
 

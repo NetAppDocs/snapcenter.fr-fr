@@ -18,21 +18,19 @@ Avant d'utiliser SnapCenter pour sauvegarder les ressources de base de données 
 . Dans la page Paramètres, cliquez sur *stratégies*.
 . Cliquez sur *Nouveau*.
 . Dans la page Nom, entrez le nom et la description de la stratégie.
-. Dans la page Paramètres, effectuez les opérations suivantes :
+. Dans la page Type de stratégie, effectuez les opérations suivantes :
 +
-.. Sélectionnez le type de sauvegarde.
+.. Sélectionnez *Azure NetApp Files* comme type de stockage.
+.. Sélectionnez *basé sur un fichier* si vous souhaitez effectuer un contrôle d'intégrité de la base de données.
+.. Sélectionnez *snapshot based* si vous souhaitez créer une sauvegarde à l'aide de la technologie Snapshot.
+
+
+. Dans la page instantané et sauvegarde, effectuez les opérations suivantes :
 +
-... Sélectionnez *sauvegarde basée sur un fichier* si vous souhaitez effectuer un contrôle d'intégrité de la base de données.
-... Sélectionnez *snapshot based* si vous souhaitez créer une sauvegarde à l'aide de la technologie Snapshot.
+.. Sélectionnez la fréquence de la sauvegarde planifiée.
+.. Spécifiez les paramètres de rétention.
+.. Si vous souhaitez activer la sauvegarde Azure NetApp Files, sélectionnez *Activer la sauvegarde* et spécifiez les paramètres de rétention.
 
-
-.. Spécifiez le type de planification.
-
-
-. Dans la page Retention, spécifiez les paramètres de rétention pour le type de sauvegarde et le type de planification sélectionné.
-+
-
-NOTE: La réplication vers un stockage secondaire n'est pas prise en charge.
 
 . Vérifiez le résumé et cliquez sur *Terminer*.
 

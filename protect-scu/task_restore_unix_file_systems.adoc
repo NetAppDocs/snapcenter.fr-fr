@@ -44,7 +44,7 @@ Les nouveaux fichiers créés après la sauvegarde peuvent ne pas être disponib
 . Sur la page PostOps, entrez les commandes post-restauration à exécuter après l'exécution d'une tâche de restauration.
 +
 
-NOTE: Vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir du chemin _/opt/NetApp/snapcenter/scc/etc/allowed_commands.config_.
+NOTE: Vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à l'emplacement _/opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_path.
 
 . Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les notifications par e-mail.
 +

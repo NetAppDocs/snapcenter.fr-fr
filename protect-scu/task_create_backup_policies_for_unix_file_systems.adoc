@@ -106,7 +106,7 @@ NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP pour
 . Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript que vous souhaitez exécuter avant ou après l'opération de sauvegarde, respectivement.
 +
 
-NOTE: Vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir du chemin _/opt/NetApp/snapcenter/scc/etc/allowed_commands.config_.
+NOTE: Vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir de _ /opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_path.
 
 +
 Vous pouvez également spécifier la valeur du délai d'expiration du script. La valeur par défaut est 60 secondes.

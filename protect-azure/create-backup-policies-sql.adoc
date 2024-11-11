@@ -18,8 +18,9 @@ Vous pouvez créer une stratégie de sauvegarde pour la ressource ou le groupe d
 . Dans la page Paramètres, cliquez sur *stratégies*.
 . Cliquez sur *Nouveau*.
 . Dans la page Nom, entrez le nom et la description de la stratégie.
-. Dans la page Paramètres, effectuez les opérations suivantes :
+. Dans la page Type de stratégie, effectuez les opérations suivantes :
 +
+.. Sélectionnez *Azure NetApp Files* comme type de stockage.
 .. Sélectionnez le type de sauvegarde.
 +
 ... Sélectionnez *sauvegarde complète et sauvegarde du journal* si vous souhaitez sauvegarder les fichiers de base de données et les journaux de transactions.
@@ -35,13 +36,14 @@ Vous pouvez créer une stratégie de sauvegarde pour la ressource ou le groupe d
 ... Sélectionnez la priorité de sauvegarde.
 
 
-.. Spécifiez le type de planification.
 
 
-. Dans la page Retention, en fonction du type de sauvegarde sélectionné, spécifiez les paramètres de rétention.
+. Dans la page instantané et sauvegarde, effectuez les opérations suivantes :
 +
+.. Sélectionnez la fréquence de la sauvegarde planifiée.
+.. Spécifiez les paramètres de rétention en fonction du type de sauvegarde sélectionné.
+.. Si vous souhaitez activer la sauvegarde Azure NetApp Files, sélectionnez *Activer la sauvegarde* et spécifiez les paramètres de rétention.
 
-NOTE: La réplication vers un stockage secondaire n'est pas prise en charge.
 
 . Dans la page Vérification, effectuez les opérations suivantes :
 +

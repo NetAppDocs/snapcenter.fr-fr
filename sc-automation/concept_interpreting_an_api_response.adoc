@@ -7,7 +7,7 @@ summary: 'Chaque requête d"API génère une réponse au client. Vous devez exam
 = Interprétation d'une réponse API
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -48,7 +48,7 @@ link:task_configure_CA_client_certificate_for_LDAPS.html["Configurer le certific
 . Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
 . Dans la page Paramètres, cliquez sur *Paramètres globaux*.
 . Dans la page Paramètres globaux, cliquez sur *Paramètres de domaine*.
-. Cliquez sur image:../media/add_policy_from_resourcegroup.gif[""] pour enregistrer un nouveau domaine.
+. Cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter une règle"] pour enregistrer un nouveau domaine.
 . Dans la page Enregistrer un nouveau domaine, sélectionnez *LDAP* ou *LDAPS*.
 +
 .. Si vous sélectionnez *LDAP*, spécifiez les informations requises pour l'enregistrement du domaine non fiable pour LDAP :

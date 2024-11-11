@@ -33,4 +33,4 @@ Si vous sauvegardez toutes les bases de données d'un hôte, par exemple, vous p
 
 L'image suivante illustre la relation entre les ressources, les groupes de ressources et les politiques des bases de données :
 
-image::../media/sco_resourcegroup_policy.gif[stratégie de groupe de ressources sco]
+image::../media/sco_resourcegroup_policy.gif[stratégie de groupe de ressources]

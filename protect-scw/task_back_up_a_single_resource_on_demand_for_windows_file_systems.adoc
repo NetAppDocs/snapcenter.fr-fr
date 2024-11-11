@@ -44,12 +44,12 @@ Par exemple, clienttext_resourcegroup_policy_hostname ou resourcegroup_hostname.
 Vous pouvez sélectionner une stratégie existante, puis cliquer sur *Détails* pour déterminer si vous pouvez utiliser cette stratégie.
 
 +
-Si aucune politique existante ne répond à vos exigences, vous pouvez copier une stratégie existante et la modifier ou créer une nouvelle stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif[""] pour démarrer l'assistant de règles.
+Si aucune stratégie existante ne répond à vos exigences, vous pouvez copier une stratégie existante et la modifier ou créer une nouvelle stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"] pour lancer l'assistant de stratégie.
 
 +
 Les stratégies sélectionnées sont répertoriées dans la colonne Stratégie de la section configurer les plannings pour les stratégies sélectionnées.
 
-.. Dans la section configurer les plannings des stratégies sélectionnées, cliquez sur image:../media/add_policy_from_resourcegroup.gif[""] Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer le planning.
+.. Dans la section configurer les planifications pour les stratégies sélectionnées, cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter une stratégie à partir d'un groupe de ressources"] dans la colonne configurer les planifications de la stratégie pour laquelle vous souhaitez configurer la planification.
 .. Dans la boîte de dialogue Ajouter des planifications pour la stratégie _policy_name_, configurez la planification en spécifiant la date de début, la date d'expiration et la fréquence, puis cliquez sur *Finish*.
 +
 Les planifications configurées sont répertoriées dans la colonne programmes appliqués de la section configurer les planifications pour les stratégies sélectionnées.

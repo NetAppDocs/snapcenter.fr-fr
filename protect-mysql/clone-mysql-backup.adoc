@@ -18,10 +18,9 @@ Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner �
 * Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
 * Pour les commandes pré-clone ou post-clone, vérifiez si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir des chemins suivants :
 +
-Pour Windows : _C:\Program Files\NetApp\SnapCenter\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands_list.txt_
+** Emplacement par défaut sur l'hôte Windows : _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Emplacement par défaut sur l'hôte Linux : _/opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_
 
-+
-Pour Linux : _/var/opt/snapcenter/scc/allowed_commands_list.txt_
 
 
 
@@ -31,7 +30,7 @@ NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération �
 .Description de la tâche
 * Vous ne pouvez pas protéger les instances MySQL clonées.
 * Pour plus d'informations sur les limites des opérations de fractionnement de clonage, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guide de gestion du stockage logique ONTAP 9"^].
-* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 
 [role="tabbed-block"]
@@ -96,13 +95,7 @@ NOTE: Les scripts sont exécutés sur l'hôte du plug-in.
 Commande mount pour un volume ou un qtree sur une machine Linux :
 
 +
-Exemple pour NFS :
-
-+
- mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
-+
-
-NOTE: Pour les commandes pré et post pour les opérations quiesce, Snapshot et unquiesce, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir de _/opt/snapcenter/snapcenter/scc/allowed_commands.config_ path pour Linux et _C:\Program Files\NetApp\txt Plug-in Creator\etc\SnapCenter_list_commandes pour Windows.
+Exemple pour NFS : `mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt`
 
 
 

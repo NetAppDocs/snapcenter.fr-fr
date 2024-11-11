@@ -45,6 +45,4 @@ Si les données d'autres serveurs hôtes SQL résident sur le même volume, elle
 
 *Plus d'informations*
 
-link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["Sauvegarde des ressources avec les applets de commande PowerShell"]
-
 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["Les opérations de mise en attente ou de regroupement des ressources échouent"]

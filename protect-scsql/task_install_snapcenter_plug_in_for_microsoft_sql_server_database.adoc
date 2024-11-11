@@ -13,4 +13,4 @@ summary: Vous devez installer et configurer le plug-in SnapCenter pour Microsoft
 [role="lead"]
 Vous devez installer et configurer le plug-in SnapCenter pour Microsoft SQL Server si vous souhaitez protéger les bases de données SQL Server.
 
-image::../media/scsql_install_configure_workflow.gif[installation scsql flot de travaux de configuration]
+image::../media/scsql_install_configure_workflow.png[Flux de travail SQL]

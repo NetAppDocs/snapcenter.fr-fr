@@ -7,7 +7,7 @@ summary: 'REST est un style de création d"applications Web distribuées. Lorsqu
 = Base de services Web REST
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

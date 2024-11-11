@@ -127,7 +127,7 @@ Sélectionnez *Supprimer les journaux d'archive des destinations qui font partie
 
 |===
 +
-image:../media/sco_backuppolicy_prunning.gif[""]
+image:../media/sco_backuppolicy_prunning.gif["politique de sauvegarde"]
 
 
 
@@ -201,7 +201,7 @@ Lorsque SnapLock est configuré uniquement sur le serveur secondaire à partir d
 
 Pour plus d'informations sur le coffre-fort SnapLock, voir https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Archivage des copies Snapshot sur WORM sur une destination d'archivage sécurisé"]
 
-Voir link:..protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones des bases de données Oracle sur la page topologie"].
+Voir link:../protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones des bases de données Oracle sur la page topologie"].
 
 
 

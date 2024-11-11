@@ -64,7 +64,7 @@ NOTE: Dans un souci de cohérence, la documentation SnapCenter fait référence 
 NOTE: Vous devez répéter cette commande pour chaque autorisation. N'oubliez pas que les commandes All-Access doivent être répertoriées avant les commandes read-only.
 
 +
-Pour plus d'informations sur la liste des autorisations, reportez-vous à la section link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-roles-and-assigning-permissions["Commandes CLI ONTAP pour la création de rôles et l'attribution d'autorisations"^].
+Pour plus d'informations sur la liste des autorisations, reportez-vous à la section link:task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions["Commandes CLI ONTAP pour la création de rôles et l'attribution d'autorisations"^].
 
 
 

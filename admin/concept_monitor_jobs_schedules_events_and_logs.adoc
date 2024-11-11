@@ -33,6 +33,37 @@ Vous pouvez effectuer les tâches suivantes associées aux tâches de surveillan
 
 
 
+=== Gérer les tâches de sauvegarde planifiées
+
+À partir de la version SnapCenter 6.0.1, un nouveau paramètre *JobConcurrencyThreshold* a été introduit, qui définit un seuil pour le nombre de travaux programmés pouvant s'exécuter à tout moment. Cela vous permet de contrôler le nombre de sauvegardes que vous souhaitez exécuter en fonction de la configuration matérielle de votre système.
+
+La valeur par défaut attribuée à *JobConcurrencyThreshold* est 0 et est désactivée. Vous pouvez activer en attribuant une valeur si vous observez une dégradation des performances pendant la fenêtre de sauvegarde planifiée.
+
+
+NOTE: Si vous activez *JobConcurrencyThreshold* pour gérer des tâches simultanées, SnapCenter ne vous permet pas de contrôler l'ordre des sauvegardes et les sauvegardes peuvent ne pas être déclenchées au même moment que celui spécifié dans le planning.
+
+.Étapes
+. Définissez la valeur du paramètre _JobConcurrencyThreshold_ situé dans _C:\Program Files\NetApp\SnapCenter WebApp\SnapManager.Web.UI.dll.config_.
+. Recyclez le pool d'applications SnapCenter en cliquant sur IIS > pools d'applications > SnapCenter > redémarrer.
+. Redémarrez le service Web SnapCenter en cliquant sur IIS > sites > SnapCenter > redémarrer.
+
+
+
+
+=== Gérer les tâches obsolètes
+
+Les travaux obsolètes sont créés à la suite d'interruptions dans SnapCenter ou de mises à jour incorrectes des travaux. À partir de la version SnapCenter 6.0.1, un planning prédéfini est introduit pour nettoyer ces tâches obsolètes bloquées pendant plus de 72 heures. Vous pouvez modifier la fréquence de programmation en modifiant le paramètre configurable *CleanUpStaleJobsIntervalHours*.
+
+Vous pouvez déclencher le nettoyage à la demande en exécutant le programme à partir de *moniteur* > *programmes* > *SnapCenter_StaleJobCleanUp*.
+
+.Étapes
+. Définissez la valeur du paramètre _CleanUpStaleJobsIntervalHours_ situé dans _C:\Program Files\NetApp\SnapCenter WebApp\SnapManager.Web.UI.dll.config_.
+. Recyclez le pool d'applications SnapCenter en cliquant sur IIS > pools d'applications > SnapCenter > redémarrer.
+. Redémarrez le service Web SnapCenter en cliquant sur IIS > sites > SnapCenter > redémarrer.
+
+
+
+
 == Surveiller les plannings
 
 Vous pouvez afficher les horaires actuels pour déterminer le moment où l'opération démarre, le moment où elle a été exécutée pour la dernière fois et le moment où elle s'exécute ensuite. Vous pouvez également déterminer l'hôte sur lequel l'opération s'exécute, ainsi que le groupe de ressources et les informations de stratégie de l'opération.

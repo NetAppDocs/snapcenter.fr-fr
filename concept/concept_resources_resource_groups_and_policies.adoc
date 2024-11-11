@@ -47,4 +47,4 @@ image::../media/datasets_and_policies.gif[Dataset et diagrammes de règles]
 
 L'image suivante illustre la relation entre les ressources, les groupes de ressources et les stratégies des systèmes de fichiers Windows :
 
-image::../media/resources_and_policies_for_wfs.gif[ressources et politiques pour wfs]
+image::../media/resources_and_policies_for_wfs.gif[ressources et politiques]

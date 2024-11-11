@@ -32,9 +32,9 @@ NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume 
 
 Si vous utilisez une relation secondaire comme SnapMirror actif Sync (initialement commercialisé sous la forme SnapMirror Business Continuity [SM-BC]), les icônes supplémentaires suivantes s'affichent :
 
-* image:../media/topology_replica_site_up.png["site de réplica en haut"] implique que le site de réplica est en service.
-* image:../media/topology_replica_site_down.png["site de réplica en panne"]  implique que le site de réplica est en panne.
-* image:../media/topology_reestablished.png["la relation est rétablie"] implique que la relation miroir ou coffre-fort secondaire n'a pas été rétablie.
+* image:../media/topology_replica_site_up.png["site de réplica en haut"] Le site de réplica est en cours.
+* image:../media/topology_replica_site_down.png["site de réplica en panne"] Le site de réplica est en panne.
+* image:../media/topology_reestablished.png["la relation est rétablie"] La relation miroir ou coffre-fort secondaire n'a pas été rétablie.
 
 
 *Étapes*

@@ -34,7 +34,7 @@ Si une base de données ne fait pas partie d'un groupe de ressources, vous pouve
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in *Microsoft Exchange Server* dans la liste.
 . Dans la page Ressources, sélectionnez *Database* ou *Database Availability Group* dans la liste *View*.
 +
-Dans la page Ressources, le image:../media/not_supported_icon.png[""] L'icône indique que la base de données se trouve sur un système de stockage non NetApp.
+Dans la page Ressources, l' image:../media/not_supported_icon.png["stockage non pris en charge"] icône indique que la base de données se trouve sur un stockage non-NetApp.
 
 +
 
@@ -217,7 +217,7 @@ C:\PS> Get-SmJobSummaryReport -JobId 168
 ----
 
 
-Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également consulter le https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] Guide de référence de l'applet de commande^].
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également consulter la section https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 --
 ====

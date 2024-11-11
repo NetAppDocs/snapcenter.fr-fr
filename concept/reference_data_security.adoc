@@ -46,7 +46,7 @@ Le programme d'installation du serveur SnapCenter active la prise en charge cent
 
 Vous devez déployer des certificats d'autorité de certification après avoir installé le serveur SnapCenter et les plug-ins correspondants. Pour plus d'informations, voir link:../install/reference_generate_CA_certificate_CSR_file.html["Générer le fichier CSR de certificat CA"].
 
-Vous pouvez également déployer le certificat d'autorité de certification pour le plug-in SnapCenter pour VMware vSphere. Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#create-and-import-certificates["Créer et importer des certificats"^].
+Vous pouvez également déployer le certificat d'autorité de certification pour le plug-in SnapCenter pour VMware vSphere. Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_create_and_import_certificates.html["Créer et importer des certificats"^].
 
 
 

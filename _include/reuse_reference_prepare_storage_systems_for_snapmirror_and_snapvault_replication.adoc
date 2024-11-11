@@ -15,6 +15,3 @@ Une relation de protection des données réplique les données du système de st
 NOTE: SnapCenter ne prend pas en charge les relations en cascade entre SnapMirror et les volumes SnapVault (*primaire* > *miroir* > *coffre-fort*). Vous devez utiliser des relations de fanout.
 
 SnapCenter prend en charge la gestion des relations SnapMirror flexibles de version. Pour plus d'informations sur les relations SnapMirror flexibles de la version et sur la configuration de ces relations, consultez le http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.ic-base%2Fresources%2Fhome.html["Documentation ONTAP"^].
-
-
-NOTE: SnapCenter ne prend pas en charge la réplication *sync_mirror*.

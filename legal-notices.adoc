@@ -5,11 +5,8 @@ keywords: copyrights, notice, trademarks, patents, privacy, open source
 summary: Les mentions légales donnent accès aux déclarations de copyright, aux marques, aux brevets, etc. 
 ---
 = Mentions légales
-:hardbreaks:
 :allow-uri-read: 
-:nofooter: 
 :icons: font
-:linkattrs: 
 :imagesdir: ./media/
 
 

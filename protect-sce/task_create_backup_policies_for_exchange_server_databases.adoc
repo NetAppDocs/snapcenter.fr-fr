@@ -285,7 +285,7 @@ IMPORTANT: La règle primaire uniquement ne peut pas être utilisée si la synch
 
 Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
 
-Voir link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["Afficher les sauvegardes Exchange sur la page topologie"].
+Voir link:../protect-sce/task_view_exchange_backups_in_the_topology_page.html["Afficher les sauvegardes Exchange sur la page topologie"].
 
 
 

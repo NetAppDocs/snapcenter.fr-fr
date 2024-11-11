@@ -18,7 +18,7 @@ Pour configurer le contrôle d'accès basé sur des rôles pour les utilisateurs
 * Vous devez avoir créé les comptes utilisateur ou groupe dans Active Directory dans le système d'exploitation ou la base de données. Vous ne pouvez pas utiliser SnapCenter pour créer ces comptes.
 +
 
-NOTE: À partir de SnapCenter 4.5, vous ne pouvez inclure que les caractères spéciaux suivants dans les noms d'utilisateur et de groupe : espace ( ), tiret (-), trait de soulignement (_) et deux-points (:). Si vous souhaitez utiliser un rôle que vous avez créé dans une version antérieure de SnapCenter avec ces caractères spéciaux, vous pouvez désactiver la validation du nom de rôle en changeant la valeur du paramètre 'disableSQLInjectionvalidation' à true dans le fichier web.config situé dans lequel se trouve la WebApp SnapCenter. Après avoir modifié la valeur, vous n'avez pas besoin de redémarrer le service.
+NOTE: Vous ne pouvez inclure que les caractères spéciaux suivants dans les noms d'utilisateur et de groupe : espace ( ), tiret (-), trait de soulignement (_) et deux-points (:).
 
 * SnapCenter inclut plusieurs rôles prédéfinis.
 +

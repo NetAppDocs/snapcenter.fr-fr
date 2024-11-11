@@ -119,7 +119,7 @@ Lors de la réplication secondaire, le délai d'expiration SnapLock charge le d�
 
 Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
 
-Voir link:protect-nsp/view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["Consultez les sauvegardes et clones liés aux ressources des plug-ins pris en charge par NetApp sur la page topologie"].
+Voir link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["Consultez les sauvegardes et clones liés aux ressources des plug-ins pris en charge par NetApp sur la page topologie"].
 
 
 
@@ -135,7 +135,7 @@ Lorsque SnapLock est configuré uniquement sur le serveur secondaire à partir d
 Pour plus d'informations sur le coffre-fort SnapLock, reportez-vous à la section archivage des snapshots en mode WORM sur un coffre-fort
 destination
 
-Voir link:protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["Consultez les sauvegardes et clones liés aux ressources des plug-ins pris en charge par NetApp sur la page topologie"].
+link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["Consultez les sauvegardes et clones liés aux ressources des plug-ins pris en charge par NetApp sur la page topologie"].
 
 
 

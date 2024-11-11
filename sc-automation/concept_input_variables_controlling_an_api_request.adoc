@@ -7,7 +7,7 @@ summary: 'Vous pouvez contrôler le traitement d"un appel API à l"aide de param
 = Variables d'entrée contrôlant une requête API
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

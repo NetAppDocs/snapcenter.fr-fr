@@ -44,7 +44,7 @@ Vous pouvez modifier toutes les valeurs que vous avez spécifiées lors de l'ajo
 
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Oracle Database dans la liste.
 . Dans la page Ressources, sélectionnez *Volume d'application* dans la liste *Affichage*.
-. Cliquez sur image:../media/edit_icon.gif[""] pour modifier les valeurs.
+. Cliquez sur image:../media/edit_icon.gif["icône modifier"] pour modifier les valeurs.
 
 
 
@@ -59,5 +59,5 @@ Si nécessaire, SnapCenter vous permet d'annuler l'opération de suppression.
 
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Oracle Database dans la liste.
 . Dans la page Ressources, sélectionnez *Volume d'application* dans la liste *Affichage*.
-. Cliquez sur image:../media/delete_icon.gif[""] pour modifier les valeurs.
+. Cliquez sur image:../media/delete_icon.gif["icône supprimer"] pour modifier les valeurs.
 

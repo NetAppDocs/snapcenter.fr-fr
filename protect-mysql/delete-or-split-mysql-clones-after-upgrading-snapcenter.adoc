@@ -25,6 +25,6 @@ Si vous souhaitez localiser l'empreinte de stockage des clones masqués, exécut
 La page topologie de ressources s'affiche.
 
 . Dans la vue Manage copies (gérer les copies), sélectionnez les clones dans les systèmes de stockage principal ou secondaire (en miroir ou répliqué).
-. Sélectionnez les clones, puis cliquez sur image:../media/delete_icon.gif[""] pour supprimer des clones ou cliquez sur image:../media/split_cone.gif[""] pour séparer les clones.
+. Sélectionnez les clones, puis cliquez sur image:../media/delete_icon.gif["icône supprimer"] pour supprimer les clones ou sur image:../media/split_cone.gif["icône de fractionnement"] pour les séparer.
 . Cliquez sur *OK*.
 

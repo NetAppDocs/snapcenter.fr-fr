@@ -31,4 +31,4 @@ Pensez à un groupe de ressources comme définissant _quoi_ vous voulez protége
 
 L'image suivante illustre la relation entre les ressources, les groupes de ressources et les politiques des bases de données :
 
-image::../media/scsql_resourcegroup_policy.gif[stratégie de groupe resourcegroup de scsql]
+image::../media/scsql_resourcegroup_policy.gif[stratégie de groupe de ressources]

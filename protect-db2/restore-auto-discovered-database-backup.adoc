@@ -18,16 +18,14 @@ Vous pouvez utiliser SnapCenter pour restaurer et récupérer des données à pa
 * Vous devez avoir annulé toute opération de sauvegarde en cours pour la ressource ou le groupe de ressources que vous souhaitez restaurer.
 * Pour les commandes de pré-restauration, post-restauration, montage et démontage, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in depuis les chemins suivants :
 +
-Pour Windows : _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_
+** Emplacement par défaut sur l'hôte Windows : _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Emplacement par défaut sur l'hôte Linux : _/opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_
 
-+
-Pour Linux : _/opt/NetApp/snapcenter/scc/etc/allowed_commands.config_
 
-+
+
+
 
 NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération échoue.
-
-
 
 .Description de la tâche
 * Pour les ressources découvertes automatiquement, la restauration est prise en charge par SFSR.
@@ -65,10 +63,6 @@ Les commandes de démontage ne sont pas requises pour les ressources découverte
 . Dans la page Post OPS, entrez les commandes de montage et de post-restauration à exécuter après l'exécution d'une tâche de restauration.
 +
 Les commandes de montage ne sont pas requises pour les ressources découvertes automatiquement.
-
-+
-
-NOTE: Pour les commandes pré et post pour les opérations quiesce, snapshot et unquiesce, vous devez vérifier si les commandes existent dans la liste de commandes disponible sur l'hôte du plug-in à partir des commandes _/opt/snapcenter/snapcenter/scc/allowed_commands.config_ path pour Linux et _C:\Program Files\NetApp\allowed\Snapcenter Plug-in Creator\etc\SnapCenter_ for Windows.
 
 . Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
 +

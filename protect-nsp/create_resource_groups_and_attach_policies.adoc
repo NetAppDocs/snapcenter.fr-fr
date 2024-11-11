@@ -10,6 +10,7 @@ summary: Un groupe de ressources est le conteneur dans lequel vous devez ajouter
 :imagesdir: ../media/
 
 
+[role="lead"]
 Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ressources que vous souhaitez sauvegarder et protéger. Il vous permet de sauvegarder simultanément toutes les données associées à une application donnée. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter.
 
 .Étapes

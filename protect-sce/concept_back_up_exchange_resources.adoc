@@ -17,4 +17,4 @@ Vous pouvez planifier plusieurs sauvegardes pour les exécuter simultanément su
 
 Le workflow suivant montre la séquence dans laquelle vous devez effectuer l'opération de sauvegarde :
 
-image:../media/sce_backup_workflow.gif[""]
+image:../media/sce_backup_workflow.gif["Workflow de sauvegarde de la base de données Exchange"]

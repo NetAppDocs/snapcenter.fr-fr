@@ -22,7 +22,9 @@ Contrôleur SnapCenter standard
  a| 
 Requis pour les baies FAS, AFF et ASA
 
-La licence SnapCenter Standard est basée sur le contrôleur et incluse dans le bundle Premium. Si vous disposez de la licence SnapManager Suite, vous bénéficiez également des droits de licence SnapCenter Standard. Si vous souhaitez installer SnapCenter en version d'essai avec des systèmes de stockage FAS, AFF ou ASA, vous pouvez obtenir une licence d'évaluation Premium Bundle en contactant l'ingénieur commercial.
+La licence standard SnapCenter est basée sur le contrôleur et est incluse dans ONTAP One. Si vous disposez de la licence SnapManager Suite, vous bénéficiez également des droits de licence SnapCenter Standard. Si vous souhaitez installer SnapCenter en version d'essai avec un système de stockage FAS, AFF ou ASA, vous pouvez obtenir une licence d'évaluation ONTAP One en contactant l'ingénieur commercial.
+
+Pour plus d'informations sur les licences incluses avec ONTAP One, reportez-vous à la section https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["Licences incluses avec ONTAP One"].
 
 
 NOTE: SnapCenter fait également partie du pack de protection des données. Si vous avez acheté A400 ou une version ultérieure, vous devez acheter le pack de protection des données.
@@ -87,7 +89,7 @@ NOTE: Il est recommandé, mais pas obligatoire, d'ajouter des licences SnapCente
 
 |===
 
-NOTE: Les licences SnapCenter Advanced et SnapCenter NAS File Services sont obsolètes et ne sont plus disponibles. La licence basée sur la capacité n'est plus requise pour Amazon FSX pour NetApp ONTAP et Cloud Volumes ONTAP. Les licences standard et basées sur la capacité ne sont pas requises pour Azure NetApp Files.
+NOTE: Les licences SnapCenter Advanced et SnapCenter NAS File Services sont obsolètes et ne sont plus disponibles. La licence standard et la licence basée sur la capacité ne sont plus nécessaires pour Amazon FSX for NetApp ONTAP, ONTAP Select, Cloud Volumes ONTAP et Azure NetApp Files.
 
 Vous devez installer une ou plusieurs licences SnapCenter. Pour plus d'informations sur l'ajout de licences, reportez-vous à la section link:../install/concept_snapcenter_standard_controller_based_licenses.html["Ajout de licences SnapCenter standard basées sur le contrôleur"].
 

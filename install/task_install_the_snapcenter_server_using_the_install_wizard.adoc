@@ -13,7 +13,7 @@ summary: 'Vous pouvez exécuter le programme d"installation du serveur SnapCente
 [role="lead"]
 Vous pouvez exécuter le programme d'installation du serveur SnapCenter pour installer le serveur SnapCenter.
 
-Vous pouvez éventuellement effectuer plusieurs procédures d'installation et de configuration à l'aide d'applets de commande PowerShell.
+Vous pouvez éventuellement effectuer plusieurs procédures d'installation et de configuration à l'aide d'applets de commande PowerShell. Vous devez utiliser PowerShell 7.4.2 ou une version ultérieure.
 
 
 NOTE: L'installation silencieuse du serveur SnapCenter à partir de la ligne de commande n'est pas prise en charge.

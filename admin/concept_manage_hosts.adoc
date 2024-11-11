@@ -322,7 +322,7 @@ Vous devez vous assurer qu'aucun travail n'est en cours d'exécution lors du red
 . Dans le volet de navigation de gauche, cliquez sur *hosts*.
 . Dans la page hôtes, cliquez sur *Managed Hosts*.
 . Dans la page hôtes gérés, sélectionnez l'hôte que vous souhaitez démarrer.
-. Cliquez sur image:../media/more_icon.gif[""] Et cliquez sur *Démarrer le service* ou *redémarrer le service*.
+. Cliquez image:../media/more_icon.gif["plus d'icône"] sur et cliquez sur *Démarrer le service* ou *redémarrer le service*.
 +
 Vous pouvez démarrer ou redémarrer le service de plusieurs hôtes simultanément.
 
@@ -342,7 +342,7 @@ NOTE: Vous ne pouvez pas suspendre les planifications d'un hôte qui est arrêt�
 . Dans le volet de navigation de gauche, cliquez sur *hosts*.
 . Dans la page hôtes, cliquez sur *Managed Hosts*.
 . Dans la page hôtes gérés, sélectionnez l'hôte que vous souhaitez suspendre.
-. Cliquez sur le bouton image:../media/more_icon.gif[""] Puis cliquez sur *suspendre le calendrier* pour placer l'hôte de ce plug-in en mode maintenance.
+. Cliquez sur image:../media/more_icon.gif["plus d'icône"], puis sur *suspendre la planification* pour placer l'hôte de ce plug-in en mode de maintenance.
 +
 Vous pouvez interrompre la planification de plusieurs hôtes simultanément.
 

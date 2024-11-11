@@ -78,7 +78,7 @@ Si vous avez supprimé une base de données Oracle sur l'hôte, le serveur SnapC
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Database* dans la liste *View*.
 +
-Cliquez sur image:../media/filter_icon.png[""], puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.png[""] pour fermer le volet de filtre.
+Cliquez sur image:../media/filter_icon.png["icône de filtre"], puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources. Vous pouvez ensuite cliquer sur l' image:../media/filter_icon.png["icône de filtre"] icône pour fermer le volet de filtre.
 
 . Cliquez sur *Actualiser les ressources*.
 +

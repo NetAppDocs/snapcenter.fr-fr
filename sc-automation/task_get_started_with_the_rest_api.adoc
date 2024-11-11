@@ -7,7 +7,7 @@ summary: 'L"accès à l"API fournit une perspective avant de commencer à l"util
 = Commencez avec l'API REST
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

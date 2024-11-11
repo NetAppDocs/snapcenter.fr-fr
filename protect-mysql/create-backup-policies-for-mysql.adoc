@@ -58,7 +58,7 @@ Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
 NOTE: Vous pouvez spécifier la planification (date de début, date de fin et fréquence) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais aussi d'affecter des programmes de sauvegarde différents à chaque stratégie.
 
 +
-image::../media/backup_settings.gif[sauvegarder les paramètres]
+image::../media/backup_settings.gif[réglage de sauvegarde]
 
 +
 

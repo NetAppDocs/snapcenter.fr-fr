@@ -56,7 +56,7 @@ La protection des données est prise en charge pour les bases de données Micros
 La protection des données est également prise en charge pour d'autres applications et bases de données standard ou personnalisées grâce à une structure permettant de créer des plug-ins SnapCenter définis par l'utilisateur. La protection des données est ainsi assurée pour d'autres applications et bases de données depuis une seule fenêtre. En tirant parti de ce framework, NetApp a publié des plug-ins SnapCenter pour MongoDB, MySQL, PostgreSQL, Storage, MaxDB, Sybase ASE, ORASCPM, MongoDB et DPGlue. En plus de cela, vous pouvez créer votre propre plug-in à l'aide du guide du développeur.
 
 +
-link:concept_develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
+link:../protect-nsp/develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
 
 * Sauvegardes basées sur des règles
 +

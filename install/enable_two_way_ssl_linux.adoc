@@ -19,7 +19,7 @@ Vous pouvez activer la communication SSL bidirectionnelle pour sécuriser la com
 .. Connectez-vous à l'interface graphique de SnapCenter.
 .. Cliquez sur *Paramètres* > *Paramètres globaux* et sélectionnez *Activer la validation du certificat sur le serveur SnapCenter*.
 .. Cliquez sur *hosts* > *Managed Hosts* et sélectionnez l'hôte plug-in pour lequel vous souhaitez activer le protocole SSL unidirectionnel.
-.. Cliquez sur image:../media/more_icon.gif[""] l'icône, puis sur *Activer la validation du certificat*.
+.. Cliquez sur image:../media/more_icon.gif["plus d'icône"], puis sur *Activer la validation du certificat*.
 
 
 . Activez la communication SSL bidirectionnelle à partir de l'hôte Linux du serveur SnapCenter.

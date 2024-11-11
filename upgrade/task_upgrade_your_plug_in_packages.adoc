@@ -13,7 +13,7 @@ summary: 'Les modules d"extension sont distribués dans le cadre de la mise à n
 [role="lead"]
 Les modules d'extension sont distribués dans le cadre de la mise à niveau de SnapCenter.
 
-La procédure de mise à niveau place votre hôte Windows, Linux ou AIX en mode « Maintenance », ce qui empêche l'hôte d'exécuter des tâches planifiées.
+Il n'est pas nécessaire de mettre manuellement chaque hôte de plug-in à mettre à niveau en mode maintenance car la procédure de mise à niveau place vos hôtes de plug-in Windows, Linux ou AIX en mode maintenance. Le mode de maintenance empêche l'exécution de tâches planifiées sur l'hôte du plug-in pendant la mise à niveau.
 
 .Avant de commencer
 * Si vous êtes un utilisateur non-root disposant d'un accès aux machines Linux, vous devez mettre à jour le fichier _/etc/sudoers_ avec les dernières valeurs de somme de contrôle avant d'effectuer l'opération de mise à niveau.
@@ -28,7 +28,6 @@ Exemples de fichiers de configuration SnapCenter : SnapDriveService.exe.config, 
 
 
 .Description de la tâche
-* La procédure de mise à niveau place votre hôte Windows, Linux ou AIX en mode « Maintenance », ce qui empêche l'hôte d'exécuter des tâches planifiées.
 * Pour le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server et le plug-in SnapCenter pour Microsoft Windows, il est recommandé de mettre à niveau à la fois le serveur et les hôtes du plug-in vers la dernière version pour que LE CHEMIN_SCRIPTS s'exécute.
 +
 Pour les programmes de sauvegarde et de vérification existants avec les prescripteurs et les postscripts activés dans la stratégie, les opérations de sauvegarde continueront de fonctionner après la mise à niveau.
@@ -42,14 +41,14 @@ Dans la page *Détails du travail*, un message d'avertissement recommande au cli
 . Dans le volet de navigation de gauche, cliquez sur *hosts* > *Managed Hosts*.
 . Mettez à niveau les hôtes en effectuant l'une des tâches suivantes :
 +
-** Si la colonne État général affiche « mise à niveau disponible » pour l'un des hôtes, cliquez sur le nom d'hôte et effectuez les opérations suivantes :
+** Si la colonne État global affiche « mise à niveau disponible » pour l'un des plug-ins hôtes, cliquez sur le nom d'hôte du plug-in et effectuez les opérations suivantes :
 +
 ... Cliquez sur *plus d'options*.
-... Sélectionnez *Ignorer les contrôles préalables* si vous ne voulez pas vérifier si l'hôte répond aux exigences de mise à niveau du plug-in.
+... Sélectionnez *Ignorer les contrôles préalables* si vous ne souhaitez pas valider si l'hôte du plug-in répond aux exigences de mise à niveau du plug-in.
 ... Cliquez sur *Upgrade*.
 
 
-** Si vous souhaitez mettre à niveau plusieurs hôtes, sélectionnez tous les hôtes, cliquez sur image:../media/more_icon.gif[""], Puis cliquez sur *Upgrade* > *OK*.
+** Si vous souhaitez mettre à niveau plusieurs hôtes de plug-in, sélectionnez tous les hôtes, cliquez sur image:../media/more_icon.gif[""], puis cliquez sur *mettre à niveau* > *OK*.
 +
 Tous les services associés sont redémarrés lors de la mise à niveau du plug-in.
 
@@ -58,7 +57,7 @@ Tous les services associés sont redémarrés lors de la mise à niveau du plug-
 NOTE: Tous les plug-ins du package sont sélectionnés. Seuls les plug-ins installés avec la version précédente de SnapCenter sont mis à niveau et les plug-ins restants ne sont pas installés. Vous devez utiliser l'option *Ajouter des plug-ins* pour installer un nouveau plug-in.
 
 +
-Si vous n'avez pas coché la case *Skip précontrôles*, l'hôte est validé pour voir s'il répond aux exigences d'installation du plug-in. Si la configuration minimale requise n'est pas respectée, des messages d'erreur ou d'avertissement appropriés s'affichent. Après avoir résolu le problème, cliquez sur *Upgrade*.
+Si vous n'avez pas coché la case *Ignorer les précontrôles*, l'hôte du plug-in est validé pour vérifier s'il répond aux exigences d'installation du plug-in. Si les exigences minimales ne sont pas remplies, des messages d'erreur ou d'avertissement appropriés s'affichent. Après avoir résolu le problème, cliquez sur *Upgrade*.
 
 +
 

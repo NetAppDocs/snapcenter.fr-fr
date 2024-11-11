@@ -88,7 +88,7 @@ Sélectionnez cette option pour éviter de forcer un point de cohérence WAFL.
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["paramètres de l'application"]
 
 .. Cliquez sur la flèche *scripts* et entrez les commandes pré et post pour les opérations quiesce, Snapshot et unquiesce. Vous pouvez également saisir les pré-commandes à exécuter avant de quitter en cas de défaillance.
 .. Cliquez sur la flèche *configurations personnalisées* et entrez les paires clé-valeur personnalisées requises pour toutes les opérations de protection des données utilisant cette ressource.

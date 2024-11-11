@@ -27,9 +27,8 @@ Exemples de fichiers de configuration SnapCenter : SnapDriveService.exe.config, 
 
 
 .Description de la tâche
-* Lors de la mise à niveau, l'hôte passe automatiquement en mode de maintenance qui empêche l'hôte d'exécuter des tâches planifiées. Après la mise à niveau, l'hôte est automatiquement mis hors service du mode de maintenance.
 * Lors de la mise à niveau, un script SQL est exécuté pour mettre à jour les données Exchange dans la base de données NSM, qui convertit le nom abrégé DAG et hôte en FQDN. Cette fonctionnalité est applicable uniquement si vous utilisez SnapCenter Server avec le plug-in Exchange.
-* Avant de lancer l'opération de mise à niveau, si vous avez placé manuellement l'hôte en mode maintenance, après la mise à niveau, vous devez mettre manuellement l'hôte hors du mode maintenance en cliquant sur *hosts* > *Activate Schedule*.
+* Avant de lancer l'opération de mise à niveau, si vous avez placé manuellement l'hôte serveur en mode maintenance, vous devez sortir manuellement l'hôte serveur du mode maintenance en cliquant sur *hosts* > *Activate Schedule*.
 * Pour le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server et le plug-in SnapCenter pour Microsoft Windows, il est recommandé de mettre à niveau le serveur et les hôtes du plug-in vers la version 4.7 pour que LE CHEMIN_SCRIPTS s'exécute.
 +
 Pour les programmes de sauvegarde et de vérification existants avec les prescripteurs et les postscripts activés dans la stratégie, les opérations de sauvegarde continueront de fonctionner après la mise à niveau.
@@ -78,10 +77,10 @@ A tout moment si vous cliquez sur le bouton *Annuler*, le flux de travail de mis
 
 .Une fois que vous avez terminé
 * Si le plug-in est installé à l'aide d'un utilisateur sudo, vous devez copier les clés sha224 disponibles dans _C:\ProgramData\NetApp\SnapCenter\Package Repository\sc_unix_plugins_checksum.txt_ pour mettre à jour le fichier _/etc/sudoers_.
-* Vous devez effectuer une nouvelle détection des ressources sur les hôtes.
+* Vous devez effectuer une nouvelle découverte des ressources sur l'hôte du serveur.
 +
-Si l'état de l'hôte s'affiche comme arrêté, vous pouvez attendre un certain temps et effectuer une nouvelle détection. Vous pouvez également modifier la valeur du paramètre *HostRefreshInterval* (la valeur par défaut est de 3600 secondes) à n'importe quelle valeur supérieure à 10 minutes.
+Si l'état de l'hôte du serveur s'affiche comme étant arrêté, vous pouvez attendre un certain temps et effectuer une nouvelle découverte. Vous pouvez également modifier la valeur du paramètre *HostRefreshInterval* (la valeur par défaut est de 3600 secondes) à n'importe quelle valeur supérieure à 10 minutes.
 
 * Si la mise à niveau échoue, vous devez nettoyer l'installation qui a échoué, réinstaller la version précédente de SnapCenter, puis restaurer l'état précédent de la base de données NSM.
-* Après la mise à niveau de l'hôte SnapCenter Server, vous devez également mettre à niveau les plug-ins avant d'ajouter un système de stockage.
+* Après la mise à niveau de l'hôte serveur, vous devez également mettre à niveau les plug-ins avant d'ajouter un système de stockage.
 

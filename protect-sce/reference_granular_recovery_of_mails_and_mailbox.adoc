@@ -13,7 +13,7 @@ summary: 'Le logiciel Single Mailbox Recovery (SMBR) vous permet de restaurer et
 [role="lead"]
 Le logiciel Single Mailbox Recovery (SMBR) vous permet de restaurer et de récupérer des messages ou des boîtes aux lettres à la place de la base de données Exchange complète.
 
-La restauration d'une base de données complète simplement pour restaurer un courrier spécifique prendra beaucoup de temps et de ressources. SMBR permet de restaurer rapidement les courriers électroniques en créant une copie clone du Snapshot, puis en utilisant des API Microsoft pour monter la boîte aux lettres dans SMBR. Pour plus d'informations sur l'utilisation de SMBR, reportez-vous à https://library.netapp.com/ecm/ecm_download_file/ECMLP2871407["Guide d'administration de SMBR"^].
+La restauration d'une base de données complète simplement pour restaurer un courrier spécifique prendra beaucoup de temps et de ressources. SMBR permet de restaurer rapidement les courriers électroniques en créant une copie clone du Snapshot, puis en utilisant des API Microsoft pour monter la boîte aux lettres dans SMBR. Pour plus d'informations sur l'utilisation de SMBR, consultez https://docs.netapp.com/p/snap/smbr/8.3/Administrative-Server-Administration-Guide.pdf["Guide d'administration de SMBR"^].
 
 Pour plus d'informations sur SMBR, reportez-vous aux documents suivants :
 

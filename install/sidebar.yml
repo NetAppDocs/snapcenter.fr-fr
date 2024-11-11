@@ -88,6 +88,8 @@ entries:
       url: "/install/task_configure_root_or_intermediate_certificates_to_trust_store.html"
   - title: Activer l'authentification basée sur certificat
     url: "/install/task_enable_certificate_based_authentication.html"
+  - title: Exporter les certificats SnapCenter
+    url: "/install/task_export_snapcenter_certificates.html"
 - title: Configuration d'Active Directory, LDAP et LDAPS
   entries:
   - title: Enregistrer des domaines Active Directory non fiables
@@ -96,17 +98,10 @@ entries:
     url: "/install/task_configure_CA_client_certificate_for_LDAPS.html"
 - title: Configuration de la haute disponibilité
   entries:
-  - title: Configurer les serveurs SnapCenter pour la haute disponibilité à l'aide
-      de F5
+  - title: Configurez les serveurs SnapCenter pour la haute disponibilité
     url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
-  - title: Configurez manuellement Microsoft Network Load Balancer
-    url: "/install/concept_network_load_balanacing_and_application_request_routing_requirements.html"
-  - title: Passez de NLB à F5 pour la haute disponibilité
-    url: "/install/task_switch_from_nlb_to_f5_for_high_availability.html"
   - title: Haute disponibilité pour le référentiel SnapCenter MySQL
     url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
-  - title: Exporter les certificats SnapCenter
-    url: "/install/task_export_snapcenter_certificates.html"
 - title: Configuration du contrôle d'accès basé sur des rôles (RBAC)
   entries:
   - title: Ajoutez un utilisateur ou un groupe et attribuez un rôle et des ressources

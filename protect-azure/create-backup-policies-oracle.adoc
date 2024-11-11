@@ -19,16 +19,22 @@ Avant d'utiliser SnapCenter pour sauvegarder les ressources de la base de donné
 . Sélectionnez Oracle Database dans la liste déroulante.
 . Cliquez sur *Nouveau*.
 . Dans la page Nom, entrez le nom et la description de la stratégie.
-. Dans la page Type de sauvegarde, effectuez les opérations suivantes :
+. Dans la page Type de stratégie, effectuez les opérations suivantes :
 +
+.. Sélectionnez *Azure NetApp Files* comme type de stockage.
 .. Sélectionnez le type de sauvegarde en tant que sauvegarde en ligne ou hors ligne.
-.. Spécifiez la fréquence de planification.
 .. Si vous souhaitez cataloguer la sauvegarde à l'aide d'Oracle Recovery Manager (RMAN), sélectionnez *sauvegarde de catalogue avec Oracle Recovery Manager (RMAN)*.
 .. Si vous souhaitez élaguer les journaux d'archive après la sauvegarde, sélectionnez *Prune archive logs après la sauvegarde*.
 .. Spécifiez les paramètres de suppression du journal d'archivage.
 
 
-. Dans la page rétention, spécifiez les paramètres de rétention.
+. Dans la page instantané et sauvegarde, effectuez les opérations suivantes :
++
+.. Sélectionnez la fréquence de la sauvegarde planifiée.
+.. Spécifiez les paramètres de rétention.
+.. Si vous souhaitez activer la sauvegarde Azure NetApp Files, sélectionnez *Activer la sauvegarde* et spécifiez les paramètres de rétention.
+
+
 . Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript que vous souhaitez exécuter avant ou après l'opération de sauvegarde, respectivement.
 . Dans la page Vérification, sélectionnez le planning de sauvegarde pour lequel vous souhaitez effectuer l'opération de vérification et entrez respectivement le chemin et les arguments du prescripteur ou du postscript que vous souhaitez exécuter avant ou après l'opération de vérification.
 . Vérifiez le résumé et cliquez sur *Terminer*.

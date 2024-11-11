@@ -22,9 +22,9 @@ Vous devez configurer la clé de stockage utilisateur HDB et l'utilisateur HDBSQ
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez Plug-in SnapCenter pour base de données SAP HANA dans la liste.
 . Dans la page Ressources, sélectionnez le type de ressource dans la liste *Affichage*.
-. (Facultatif) cliquez sur image:../media/filter_icon.png[""] et sélectionnez le nom d'hôte.
+. (Facultatif) cliquez sur image:../media/filter_icon.png["icône de filtre"] et sélectionnez le nom d'hôte.
 +
-Vous pouvez ensuite cliquer sur image:../media/filter_icon.png[""] pour fermer le volet de filtre.
+Vous pouvez ensuite cliquer sur image:../media/filter_icon.png["icône de filtre"] pour fermer le volet de filtre.
 
 . Sélectionnez la base de données, puis cliquez sur *configurer la base de données*.
 . Dans la section configurer les paramètres de la base de données, entrez la clé de stockage sécurisée de l'utilisateur HDB.

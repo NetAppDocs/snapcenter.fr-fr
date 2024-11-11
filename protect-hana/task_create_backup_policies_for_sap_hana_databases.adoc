@@ -157,7 +157,7 @@ Lors de la réplication secondaire, le délai d'expiration SnapLock charge le d�
 
 Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
 
-Voir link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Affichez les sauvegardes et les clones des bases de données SAP HANA sur la page topologie"].
+Voir link:../protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Affichez les sauvegardes et les clones des bases de données SAP HANA sur la page topologie"].
 
 
 
@@ -172,7 +172,7 @@ Lorsque SnapLock est configuré uniquement sur le serveur secondaire à partir d
 
 Pour plus d'informations sur le coffre-fort SnapLock, voir https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Archivage des copies Snapshot sur WORM sur une destination d'archivage sécurisé"]
 
-Voir link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Affichez les sauvegardes et les clones des bases de données SAP HANA sur la page topologie"].
+Voir link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Affichez les sauvegardes et les clones des bases de données SAP HANA sur la page topologie"].
 
 
 

@@ -1,7 +1,7 @@
 ---
 permalink: protect-nsp/add_resources_to_netapp_supported_plugins.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-in, resources, snapcenter 
+keywords: NetApp supported plug-in, resources, NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon votre environnement, les ressources peuvent être des instances de base de données ou des collections que vous souhaitez sauvegarder ou cloner. 
 ---
 = Ajoutez des ressources aux plug-ins NetApp pris en charge
@@ -15,7 +15,6 @@ Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon votre envir
 
 .Avant de commencer
 * Vous devez avoir terminé des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes, la création de connexions au système de stockage et l'ajout d'informations d'identification.
-* Vous devez avoir link:develop_a_plug_in_for_your_application.html["création d'un plug-in personnalisé pour votre application"].
 * Vous devez avoir chargé les plug-ins sur SnapCenter Server.
 
 
@@ -73,7 +72,7 @@ Facultatif : sélectionnez le image:../media/add_policy_from_resourcegroup.gif["
 NOTE: Les plug-ins pris en charge par NetApp ne prennent pas en charge la détection automatique des ressources. De plus, les détails du stockage des environnements physiques et virtuels ne sont pas découverts automatiquement. Vous devez fournir les informations de stockage pour les environnements physiques et virtuels tout en créant les ressources.
 
 +
-image::../media/storage_footprint.gif[Encombrement du stockage]
+image::../media/storage_footprint.png[Encombrement du stockage]
 
 . Dans la page Resource Settings, fournissez des paires clé-valeur personnalisées pour la ressource.
 +
@@ -164,7 +163,7 @@ Si LE paramètre MAXDB_BACKUP_TEMPLATES est défini, vous devez également défi
 
 
 
-=== Plug-in pour Sybase ASE
+=== Plug-in pour SAP ASE
 
 Paramètres de ressource :
 

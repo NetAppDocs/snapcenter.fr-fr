@@ -1,7 +1,7 @@
 ---
-permalink: protect-nsp/add_hosts_and_install_plug_in_packages_on_remote_hosts.html 
+permalink: protect-scc/add_hosts_and_install_plug_in_packages_on_remote_hosts.html 
 sidebar: sidebar 
-keywords: add hostsNetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
+keywords: add hosts, custom plug-in 
 summary: 'Vous devez utiliser la page hôte SnapCenterAdd pour ajouter des hôtes, puis installer les modules de plug-in. Les plug-ins sont automatiquement installés sur les hôtes distants. Vous pouvez ajouter un hôte et installer les modules d"extension pour un hôte individuel ou pour un cluster.' 
 ---
 = Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants
@@ -11,7 +11,7 @@ summary: 'Vous devez utiliser la page hôte SnapCenterAdd pour ajouter des hôte
 
 
 [role="lead"]
-Vous devez utiliser la page Ajouter hôte de SnapCenter pour ajouter des hôtes, puis installer les modules de plug-in. Les plug-ins sont automatiquement installés sur les hôtes distants. Vous pouvez ajouter un hôte et installer les modules d'extension pour un hôte individuel ou pour un cluster.
+Vous devez utiliser la page hôte SnapCenterAdd pour ajouter des hôtes, puis installer les modules de plug-in. Les plug-ins sont automatiquement installés sur les hôtes distants. Vous pouvez ajouter un hôte et installer les modules d'extension pour un hôte individuel ou pour un cluster.
 
 .Avant de commencer
 * Vous devez être un utilisateur affecté à un rôle disposant des autorisations d'installation et de désinstallation du plug-in, comme le rôle d'administrateur SnapCenter.
@@ -20,13 +20,12 @@ Vous devez utiliser la page Ajouter hôte de SnapCenter pour ajouter des hôtes,
 +
 link:configure_gMSA_on_windows_server_2012_or_later.html["Configurez le compte de service géré par groupe sur Windows Server 2016 ou version ultérieure pour des applications personnalisées"]
 
-* Pour l'hôte Windows, vous devez vous assurer de sélectionner le plug-in SnapCenter pour Windows.
 
 
 .Description de la tâche
-* Vous ne pouvez pas ajouter un serveur SnapCenter en tant qu'hôte de plug-in à un autre serveur SnapCenter.
-* Si vous installez des plug-ins sur un cluster (WSFC), les plug-ins sont installés sur tous les nœuds du cluster.
+Vous ne pouvez pas ajouter un serveur SnapCenter en tant qu'hôte de plug-in à un autre serveur SnapCenter.
 
+Si vous installez des plug-ins sur un cluster (WSFC), les plug-ins sont installés sur tous les nœuds du cluster.
 
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *hosts*.
@@ -45,14 +44,10 @@ Sélectionnez le type d'hôte :
 
 ** Répertoires de base
 ** Linux
-** AIX
 
 
 
-NOTE: Les plug-ins pris en charge par NetApp peuvent être utilisés dans les environnements Windows, Linux et AIX.
-
-
-NOTE: Les applications de stockage et Oracle sont prises en charge sous AIX.
+NOTE: Les plug-ins personnalisés peuvent être utilisés dans les environnements Windows et Linux.
 
 
 
@@ -85,17 +80,6 @@ NOTE: Le mode d'authentification des informations d'identification est détermin
 
 |===
 . Dans la section *Select Plug-ins to Install*, sélectionnez les plug-ins à installer.
-+
-Vous pouvez installer les plug-ins suivants à partir de la liste :
-
-+
-** MongoDB
-** ORASCPM (affiché comme applications Oracle)
-** ASE SAP
-** SAP MaxDB
-** Stockage
-
-
 . (Facultatif) sélectionnez *plus d'options* pour installer les autres modules externes.
 +
 |===
@@ -117,15 +101,33 @@ NOTE: Si vous avez installé manuellement les plug-ins et spécifié un port per
  a| 
 Chemin d'installation
  a| 
-Les plug-ins pris en charge par NetApp peuvent être installés sur un système Windows ou Linux.
+Les plug-ins personnalisés SnapCenter peuvent être installés sur un système Windows ou Linux.
 
 ** Pour le package de plug-ins SnapCenter pour Windows, le chemin par défaut est C:\Program Files\NetApp\SnapCenter.
 +
 Vous pouvez également personnaliser le chemin.
 
-** Pour le module de plug-ins SnapCenter pour Linux et le module de plug-ins SnapCenter pour AIX, le chemin par défaut est `/opt/NetApp/snapcenter`.
+** Pour le module de plug-ins SnapCenter pour Linux, le chemin par défaut est `/opt/NetApp/snapcenter`.
 +
 Vous pouvez également personnaliser le chemin.
+
+** Pour les plug-ins personnalisés SnapCenter :
++
+... Dans la section Custom Plug-ins, sélectionnez *Browse*, puis sélectionnez le dossier zip Custom Plug-in.
++
+Le dossier compressé contient le code du plug-in personnalisé et le fichier descripteur .xml.
+
++
+Pour le plug-in de stockage, accédez à `_C:\ProgramData\NetApp\SnapCenter\Package Repository_` et sélectionnez `Storage.zip` dossier.
+
+... Sélectionnez *Upload*.
++
+Le fichier descripteur .xml du dossier de plug-in personnalisé compressé est validé avant le téléchargement du package.
+
++
+Les plug-ins personnalisés téléchargés sur le serveur SnapCenter sont répertoriés.
+
+
 
 
 
@@ -155,17 +157,11 @@ NOTE: GMSA sera utilisé comme compte de service de connexion uniquement pour le
 Si vous n'avez pas coché la case *Skip précontrôles*, l'hôte est validé pour vérifier si l'hôte répond aux exigences d'installation du plug-in. L'espace disque, la RAM, la version PowerShell, la version .NET, l'emplacement (pour les plug-ins Windows) et la version Java (pour les plug-ins Linux) sont validés par rapport à la configuration minimale requise. Si la configuration minimale requise n'est pas respectée, des messages d'erreur ou d'avertissement appropriés s'affichent.
 
 +
-Si l'erreur est liée à l'espace disque ou à la RAM, vous pouvez mettre à jour le fichier web.config situé à l' `C:\Program Files\NetApp\SnapCenter WebApp` pour modifier les valeurs par défaut. Si l'erreur est liée à d'autres paramètres, vous devez corriger le problème.
+Si l'erreur est liée à l'espace disque ou à la RAM, vous pouvez mettre à jour le fichier web.config situé à l'adresse C:\Program Files\NetApp\SnapCenter WebApp pour modifier les valeurs par défaut. Si l'erreur est liée à d'autres paramètres, vous devez corriger le problème.
 
 +
 
-NOTE: Dans une configuration haute disponibilité, si vous mettez à jour SnapManager.Web.UI.dll.config, vous devez mettre à jour le fichier sur les deux nœuds et redémarrer le pool d'applications SnapCenter.
-
-+
-Le chemin d'accès par défaut de Windows est `C:\Program Files\NetApp\SnapCenter WebApp\SnapManager.Web.UI.dll.config`
-
-+
-Le chemin d'accès par défaut de Linux est `/opt/NetApp/snapcenter/SnapManagerWeb/SnapManager.Web.UI.dll.config`
+NOTE: Dans une configuration HA, si vous mettez à jour le fichier web.config, vous devez le mettre à jour sur les deux nœuds.
 
 . Si le type d'hôte est Linux, vérifiez l'empreinte, puis sélectionnez *confirmer et soumettre*.
 +

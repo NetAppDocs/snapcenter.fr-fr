@@ -1,5 +1,5 @@
 ---
-permalink: protect-nsp/java.html 
+permalink: protect-scc/java.html 
 sidebar: sidebar 
 keywords: Custom plug-in 
 summary: 'Développez le plug-in à l"aide du style Java.' 

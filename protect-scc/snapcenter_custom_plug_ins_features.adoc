@@ -1,17 +1,17 @@
 ---
-permalink: protect-nsp/netapp_supported_plugins_features.html 
+permalink: protect-scc/snapcenter_custom_plug_ins_features.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-ins features, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
-summary: 'SnapCenter s"intègre avec l"application de plug-in et avec les technologies NetApp sur le système de stockage. Pour utiliser les plug-ins pris en charge par NetApp, vous utilisez l"interface utilisateur graphique SnapCenter.' 
+keywords: custom plug-ins features 
+summary: 'SnapCenter s"intègre avec l"application de plug-in et avec les technologies NetApp sur le système de stockage. Pour utiliser des plug-ins personnalisés, vous utilisez l"interface utilisateur graphique de SnapCenter.' 
 ---
-= Fonctionnalités des plug-ins pris en charge par NetApp
+= Fonctionnalités des plug-ins personnalisés SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter s'intègre avec l'application de plug-in et avec les technologies NetApp sur le système de stockage. Pour utiliser les plug-ins pris en charge par NetApp, tels que MongoDB, ORASCPM (applications Oracle), SAP ASE, SAP MaxDB et Storage Plug-in, vous utilisez l'interface utilisateur graphique de SnapCenter.
+SnapCenter s'intègre avec l'application de plug-in et avec les technologies NetApp sur le système de stockage. Pour utiliser des plug-ins personnalisés, vous utilisez l'interface utilisateur graphique de SnapCenter.
 
 * *Interface utilisateur graphique unifiée*
 +
@@ -23,11 +23,11 @@ Vous pouvez planifier des opérations de sauvegarde, configurer la conservation 
 
 * *Technologie snapshot NetApp non disruptive*
 +
-SnapCenter utilise la technologie Snapshot de NetApp avec les plug-ins NetApp pris en charge pour sauvegarder les ressources. Les copies Snapshot consomment un espace de stockage minimal.
+SnapCenter utilise la technologie Snapshot de NetApp avec les plug-ins personnalisés pour sauvegarder les ressources. Les copies Snapshot consomment un espace de stockage minimal.
 
 
 
-Les plug-ins NetApp pris en charge offrent également les avantages suivants :
+La fonctionnalité de plug-ins personnalisés offre également les avantages suivants :
 
 * Prise en charge des workflows de sauvegarde, de restauration et de clonage
 * Sécurité prise en charge par le RBAC et délégation centralisée des rôles

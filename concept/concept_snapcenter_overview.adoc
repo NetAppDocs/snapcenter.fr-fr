@@ -50,13 +50,13 @@ SnapCenter inclut les fonctionnalités clés suivantes :
 
 * Protection des données centralisée et cohérente avec les applications
 +
-La protection des données est prise en charge pour les bases de données Microsoft Exchange Server, Microsoft SQL Server, Oracle sous Linux ou AIX, SAP HANA Database, IBM DB2 et les systèmes de fichiers hôtes Windows exécutés sur des systèmes ONTAP.
+La protection des données est prise en charge pour les bases de données Microsoft Exchange Server, Microsoft SQL Server, Oracle sous Linux ou AIX, SAP HANA Database, IBM DB2, PostgreSQL, MySQL et Windows Host Filesystem exécutées sur des systèmes ONTAP.
 
 +
-La protection des données est également prise en charge pour d'autres applications et bases de données standard ou personnalisées grâce à une structure permettant de créer des plug-ins SnapCenter définis par l'utilisateur. La protection des données est ainsi assurée pour d'autres applications et bases de données depuis une seule fenêtre. En tirant parti de ce framework, NetApp a publié des plug-ins SnapCenter pour MongoDB, MySQL, PostgreSQL, Storage, MaxDB, Sybase ASE, ORASCPM, MongoDB et DPGlue. En plus de cela, vous pouvez créer votre propre plug-in à l'aide du guide du développeur.
+La protection des données est également prise en charge pour d'autres applications et bases de données standard ou personnalisées grâce à une structure permettant de créer des plug-ins SnapCenter définis par l'utilisateur. La protection des données est ainsi assurée pour d'autres applications et bases de données depuis une seule fenêtre. En tirant parti de cette structure, NetApp a publié des plug-ins SnapCenter pour MongoDB, Storage, MaxDB, Sybase ASE, ORASCPM. En plus de cela, vous pouvez créer votre propre plug-in à l'aide du guide du développeur.
 
 +
-link:../protect-nsp/develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
+link:../protect-scc/develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
 
 * Sauvegardes basées sur des règles
 +
@@ -176,6 +176,11 @@ SnapCenter se compose du serveur SnapCenter et des plug-ins SnapCenter. Vous dev
 ** Plug-in SnapCenter pour IBM DB2
 ** Plug-in SnapCenter pour PostgreSQL
 ** Plug-in SnapCenter pour MySQL
+** Plug-in SnapCenter pour MongoDB
+** Plug-in SnapCenter pour ORASCPM (applications Oracle)
+** Plug-in SnapCenter pour SAP ASE
+** Plug-in SnapCenter pour SAP MaxDB
+** Plug-in SnapCenter pour le plug-in de stockage
 
 
 * SnapCenter Plug-ins Package pour Linux, qui comprend les plug-ins suivants :
@@ -186,15 +191,20 @@ SnapCenter se compose du serveur SnapCenter et des plug-ins SnapCenter. Vous dev
 ** Plug-in SnapCenter pour IBM DB2
 ** Plug-in SnapCenter pour PostgreSQL
 ** Plug-in SnapCenter pour MySQL
+** Plug-in SnapCenter pour MongoDB
+** Plug-in SnapCenter pour ORASCPM (applications Oracle)
+** Plug-in SnapCenter pour SAP ASE
+** Plug-in SnapCenter pour SAP MaxDB
+** Plug-in SnapCenter pour le plug-in de stockage
 
 
 * SnapCenter Plug-ins Package pour AIX, qui comprend les plug-ins suivants :
 +
 ** Plug-in SnapCenter pour bases de données Oracle
 ** Plug-in SnapCenter pour systèmes de fichiers UNIX
+** Plug-in SnapCenter pour IBM DB2
 
 
-* Plug-ins pris en charge par SnapCenter NetApp
 
 
 Le plug-in SnapCenter pour VMware vSphere, anciennement NetApp Data Broker, est une appliance virtuelle autonome prenant en charge les opérations de protection des données SnapCenter sur des bases de données et des systèmes de fichiers virtualisés.
@@ -351,6 +361,71 @@ Db2MySQL hôte
  a| 
 Linux ou Windows
 
+
+
+ a| 
+Plug-in pour MongoDB
+ a| 
+Module de plug-ins pour Linux et module de plug-ins pour Windows
+ a| 
+Plug-in pour UNIX ou plug-in pour Windows
+ a| 
+Hôte MongoDB
+ a| 
+Linux ou Windows
+
+
+
+ a| 
+Plug-in pour ORASCPM (Oracle applications)
+ a| 
+Module de plug-ins pour Linux et module de plug-ins pour Windows
+ a| 
+Plug-in pour UNIX ou plug-in pour Windows
+ a| 
+Hôte Oracle
+ a| 
+Linux ou Windows
+
+
+
+ a| 
+Plug-in pour SAP ASE
+ a| 
+Module de plug-ins pour Linux et module de plug-ins pour Windows
+ a| 
+Plug-in pour UNIX ou plug-in pour Windows
+ a| 
+Hôte SAP
+ a| 
+Linux ou Windows
+
+
+
+ a| 
+Plug-in pour SAP MaxDB
+ a| 
+Module de plug-ins pour Linux et module de plug-ins pour Windows
+ a| 
+Plug-in pour UNIX ou plug-in pour Windows
+ a| 
+Hôte SAP MaxDB
+ a| 
+Linux ou Windows
+
+
+
+ a| 
+Plug-in pour le plug-in de stockage
+ a| 
+Module de plug-ins pour Linux et module de plug-ins pour Windows
+ a| 
+Plug-in pour UNIX ou plug-in pour Windows
+ a| 
+Hôte de stockage
+ a| 
+Linux ou Windows
+
 |===
 
 NOTE: Le plug-in SnapCenter pour VMware vSphere prend en charge les opérations de sauvegarde et de restauration cohérentes avec les défaillances et les machines virtuelles pour les machines virtuelles, les datastores et les disques virtuels (VMDK). Il prend également en charge les plug-ins spécifiques aux applications SnapCenter afin de protéger les opérations de sauvegarde et de restauration cohérentes avec les applications pour les bases de données et les systèmes de fichiers virtualisés.
@@ -421,14 +496,12 @@ Automatise la sauvegarde, la restauration et le clonage des bases de données SA
 
 === Fonctionnalités des plug-ins pris en charge par NetApp
 
+MongoDB, ORASCPM (applications Oracle), SAP ASE, SAP MaxDB et le plug-in de stockage sont pris en charge par NetApp.
+
 * Prise en charge d'autres plug-ins pour la gestion d'applications et de bases de données qui ne sont pas pris en charge par d'autres plug-ins SnapCenter Les plug-ins pris en charge par NetApp ne sont pas fournis lors de l'installation de SnapCenter.
 * Prise en charge de la création de copies en miroir des jeux de sauvegarde sur un autre volume et de la réplication de sauvegarde disque à disque.
 * Prise en charge des environnements Windows et Linux. Dans les environnements Windows, les applications personnalisées via des plug-ins personnalisés peuvent, en option, utiliser le plug-in SnapCenter pour Microsoft Windows pour créer des sauvegardes cohérentes avec le système de fichiers.
 
-
-NetApp prend en charge la création et l'utilisation de plug-ins pris en charge. Toutefois, les plug-ins que vous créez ne sont pas pris en charge par NetApp.
-
-Pour plus d'informations, voir link:../protect-nsp/develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]
 
 
 

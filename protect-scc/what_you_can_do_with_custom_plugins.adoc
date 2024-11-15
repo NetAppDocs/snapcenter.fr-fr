@@ -1,0 +1,21 @@
+---
+permalink: protect-scc/what_you_can_do_with_custom_plugins.html 
+sidebar: sidebar 
+keywords: custom plug-ins 
+summary: Vous pouvez utiliser les plug-ins personnalisés pour les opérations de protection des données. 
+---
+= Avantages des plug-ins personnalisés SnapCenter
+:allow-uri-read: 
+
+
+[role="lead"]
+Vous pouvez utiliser le plug-in personnalisé pour les opérations de protection des données.
+
+* Ajoutez des ressources telles que les bases de données, les instances, les documents ou les espaces de stockage.
+* Création de sauvegardes.
+* Effectuez des restaurations à partir des sauvegardes.
+* Sauvegardes clones.
+* Planifiez les opérations de sauvegarde.
+* Contrôle des opérations de sauvegarde, de restauration et de clonage
+* Afficher les rapports relatifs aux opérations de sauvegarde, de restauration et de clonage.
+

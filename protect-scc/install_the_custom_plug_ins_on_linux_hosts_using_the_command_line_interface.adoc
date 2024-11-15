@@ -1,20 +1,20 @@
 ---
-permalink: protect-nsp/install_the_netapp_supported_plugins_on_linux_hosts_using_the_command_line_interface.html 
+permalink: protect-scc/install_the_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html 
 sidebar: sidebar 
-keywords: install, NetApp supported plug-in 
-summary: 'Vous devez installer les plug-ins pris en charge par SnapCenter NetApp à l"aide de l"interface utilisateur SnapCenter. Si votre environnement n"autorise pas l"installation à distance du plug-in à partir de l"interface utilisateur SnapCenter, vous pouvez installer le plug-in pris en charge par NetApp en mode console ou en mode silencieux à l"aide de l"interface de ligne de commande.' 
+keywords: install, custom plug-in 
+summary: 'Vous devez installer les plug-ins personnalisés SnapCenter à l"aide de l"interface utilisateur SnapCenter. Si votre environnement n"autorise pas l"installation à distance du plug-in à partir de l"interface utilisateur SnapCenter, vous pouvez installer le plug-in personnalisé en mode console ou en mode silencieux à l"aide de l"interface de ligne de commande.' 
 ---
-= Installez les plug-ins pris en charge par NetApp sur les hôtes Linux à l'aide de l'interface de ligne de commande
+= Installez les plug-ins personnalisés SnapCenter sur les hôtes Linux à l'aide de l'interface de ligne de commande
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Vous devez installer les plug-ins pris en charge par NetApp à l'aide de l'interface utilisateur SnapCenter. Si votre environnement n'autorise pas l'installation à distance du plug-in à partir de l'interface utilisateur SnapCenter, vous pouvez installer les plug-ins pris en charge par NetApp en mode console ou en mode silencieux à l'aide de l'interface de ligne de commande.
+Vous devez installer les plug-ins personnalisés SnapCenter à l'aide de l'interface utilisateur SnapCenter. Si votre environnement ne permet pas l'installation à distance du plug-in à partir de l'interface utilisateur SnapCenter, vous pouvez installer les plug-ins personnalisés en mode console ou en mode silencieux à l'aide de l'interface de ligne de commande (CLI).
 
 .Étapes
-. Copiez le fichier d'installation du pack de plug-ins SnapCenter pour Linux (snapcenter_linux_host_plugin.bin) depuis C:\ProgramData\NetApp\SnapCenter\Package Repository vers l'hôte sur lequel vous souhaitez installer les plug-ins pris en charge par NetApp.
+. Copiez le fichier d'installation du package de plug-ins SnapCenter pour Linux (snapcenter_linux_host_plugin.bin) depuis C:\ProgramData\NetApp\SnapCenter\Package Repository vers l'hôte où vous souhaitez installer les plug-ins personnalisés.
 +
 Vous pouvez accéder à ce chemin à partir de l'hôte sur lequel le serveur SnapCenter est installé.
 
@@ -25,7 +25,7 @@ Vous pouvez accéder à ce chemin à partir de l'hôte sur lequel le serveur Sna
 ** -DSERVER_IP spécifie l'adresse IP du serveur SnapCenter.
 ** -DSERVER_HTTPS_PORT spécifie le port HTTPS du serveur SnapCenter.
 ** -DUSER_INSTALL_DIR indique le répertoire dans lequel vous souhaitez installer le module de plug-ins SnapCenter pour Linux.
-** _DINSTALL_LOG_NAME indique le nom du fichier journal.
+** DINSTALL_LOG_NAME indique le nom du fichier journal.
 
 
 +
@@ -37,9 +37,9 @@ Vous pouvez accéder à ce chemin à partir de l'hôte sur lequel le serveur Sna
 +
 Les informations relatives aux paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter à la https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
-. Connectez-vous à SnapCenter et téléchargez le plug-in pris en charge par NetApp depuis l'interface utilisateur ou à l'aide des applets de commande PowerShell.
+. Connectez-vous à SnapCenter et téléchargez le plug-in personnalisé depuis l'interface utilisateur ou via les applets de commande PowerShell.
 +
-Vous pouvez télécharger le plug-in pris en charge par NetApp à partir de l'interface utilisateur en vous reportant link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants"] à la section.
+Vous pouvez télécharger le plug-in personnalisé à partir de l'interface utilisateur en vous reportant link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants"] à la section.
 
 +
 L'aide de la cmdlet de SnapCenter et les informations de référence de la cmdlet contiennent plus d'informations sur les applets de commande PowerShell.

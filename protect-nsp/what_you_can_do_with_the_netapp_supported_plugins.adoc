@@ -4,16 +4,14 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: Vous pouvez utiliser les plug-ins pris en charge par NetApp pour vos opérations de protection des données. 
 ---
-= Avantages des plug-ins et du plug-in de stockage pris en charge par NetApp
+= Avantages des plug-ins pris en charge par NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Vous pouvez utiliser le plug-in pris en charge par NetApp pour les opérations de protection des données.
-
-*Plug-ins pris en charge par NetApp*
+Vous pouvez utiliser les plug-ins pris en charge par NetApp comme MongoDB, ORASCPM, les applications Oracle, SAP ASE, SAP MaxDB et le plug-in de stockage pour les opérations de protection des données.
 
 * Ajoutez des ressources telles que les bases de données, les instances, les documents ou les espaces de stockage.
 * Création de sauvegardes.
@@ -24,9 +22,7 @@ Vous pouvez utiliser le plug-in pris en charge par NetApp pour les opérations d
 * Afficher les rapports relatifs aux opérations de sauvegarde, de restauration et de clonage.
 
 
-*Module de stockage*
-
-Vous pouvez utiliser le plug-in de stockage pour assurer la protection des données.
+Vous pouvez utiliser les plug-ins pris en charge par NetApp pour vos opérations de protection des données.
 
 * Prenez des copies Snapshot de groupes de cohérence des volumes de stockage sur les clusters ONTAP.
 * Sauvegardez des applications personnalisées à l'aide de l'infrastructure intégrée de pré et post-script

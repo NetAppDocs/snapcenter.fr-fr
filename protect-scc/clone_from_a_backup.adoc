@@ -1,0 +1,281 @@
+---
+permalink: protect-scc/clone_from_a_backup.html 
+sidebar: sidebar 
+keywords: clone 
+summary: 'Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d"une sauvegarde principale ou secondaire. Les fonctionnalités des opérations de clonage dépendent du plug-in que vous utilisez.' 
+---
+= Cloner à partir d'une sauvegarde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d'une sauvegarde principale ou secondaire. Les fonctionnalités des opérations de clonage dépendent du plug-in que vous utilisez.
+
+.Avant de commencer
+* Vous devez avoir sauvegardé les ressources ou le groupe de ressources.
+* L'opération de clonage par défaut ne cloner que les objets de stockage. Les opérations de clonage au niveau applicatif ne peuvent être réalisées que si le plug-in personnalisé offre cette fonctionnalité.
+* Vous devez vous assurer que les agrégats hébergeant les volumes doivent se trouver dans la liste des agrégats attribués de la machine virtuelle de stockage (SVM).
+
+
+.Description de la tâche
+Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page *Ressources*, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
++
+Les ressources s'affichent avec des informations telles que le type, le nom de l'hôte ou du cluster, les groupes de ressources et les stratégies associés et l'état.
+
+. Sélectionnez la ressource ou le groupe de ressources.
++
+Vous devez sélectionner une ressource si vous sélectionnez un groupe de ressources.
+
++
+La page topologie des ressources ou des groupes de ressources s'affiche.
+
+. Dans la vue gestion des copies, sélectionnez *sauvegardes* dans les systèmes de stockage primaire ou secondaire (en miroir ou en stockage).
+. Sélectionnez la sauvegarde des données dans le tableau, puis cliquez sur image:../media/clone_icon.gif["icône cloner"].
+. Dans la page emplacements, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Serveur clone
+ a| 
+Par défaut, l'hôte source est renseigné.
+
+Si vous souhaitez spécifier un autre hôte, sélectionnez l'hôte sur lequel le clone doit être monté et le plug-in est installé.
+
+
+
+ a| 
+Suffixe du clone
+ a| 
+Cette opération est obligatoire lorsque la destination du clone est la même que la source.
+
+Indiquez un suffixe à ajouter au nom du nouveau clone. Le suffixe garantit que la ressource clonée est unique sur l'hôte.
+
+Par exemple, rs1_clone. Si vous effectuez le clonage sur le même hôte que la ressource d'origine, vous devez fournir un suffixe permettant de différencier la ressource clonée de la ressource d'origine. Dans le cas contraire, l'opération échoue.
+
+|===
++
+Si la ressource sélectionnée est une LUN et si vous effectuez un clonage à partir d'une sauvegarde secondaire, les volumes de destination sont répertoriés. Une seule source peut avoir plusieurs volumes de destination.
+
+. Dans la page *Paramètres*, effectuez les opérations suivantes :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom de l'initiateur
+ a| 
+Entrez le nom de l'initiateur hôte, qui est soit un IQDN, soit un WWPN.
+
+
+
+ a| 
+Protocole d'iGroup
+ a| 
+Sélectionnez le protocole iGroup.
+
+|===
++
+
+NOTE: La page des paramètres s'affiche uniquement si le type de stockage est LUN.
+
+. Dans la page scripts, entrez les commandes de pré-clonage ou post-clonage qui doivent être exécutées avant ou après l'opération de clonage, respectivement. Entrez la commande mount pour monter un système de fichiers sur un hôte.
++
+Par exemple :
+
++
+** Commande de pré-clonage : permet de supprimer les bases de données existantes portant le même nom
+** Commande post-clone : vérifiez une base de données ou démarrez une base de données.
++
+Commande mount pour un volume ou un qtree sur une machine Linux : mount<VSERVER_NAME>:%<VOLUME_NAME_Clone /mnt>
+
+
+
+. Dans la page *notification*, dans la liste déroulante *préférence de courrier électronique*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail.
+
+. Vérifiez le résumé et cliquez sur *Terminer*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+
+
+--
+.Applets de commande PowerShell
+--
+.Étapes
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. Répertoriez les sauvegardes pouvant être clonées à l'aide de l'applet de commande Get-SmBackup ou Get-SmResourceGroup.
++
+Cet exemple affiche des informations sur toutes les sauvegardes disponibles :
+
++
+[listing]
+----
+ C:\PS>PS C:\> Get-SmBackup
+
+BackupId                      BackupName                    BackupTime                    BackupType
+--------                      ----------                    ----------                    ----------
+   1              Payroll Dataset_vise-f6_08... 8/4/2015    11:02:32 AM                   Full Backup
+   2              Payroll Dataset_vise-f6_08... 8/4/2015    11:23:17 AM
+----
++
+Cet exemple affiche des informations sur un groupe de ressources spécifié :
+
++
+[listing]
+----
+PS C:\> Get-SmResourceGroup
+
+    Description                 :
+    CreationTime                : 10/10/2016 4:45:53 PM
+    ModificationTime            : 10/10/2016 4:45:53 PM
+    EnableEmail                 : False
+    EmailSMTPServer             :
+    EmailFrom                   :
+    EmailTo                     :
+    EmailSubject                :
+    EnableSysLog                : False
+    ProtectionGroupType         : Backup
+    EnableAsupOnFailure         : False
+    Policies                    : {}
+    HostResourceMaping          : {}
+    Configuration               : SMCoreContracts.SmCloneConfiguration
+    LastBackupStatus            : Completed
+    VerificationServer          :
+    EmailBody                   :
+    EmailNotificationPreference : Never
+    VerificationServerInfo      :
+    SchedulerSQLInstance        :
+    CustomText                  :
+    CustomSnapshotFormat        :
+    SearchResources             : False
+    ByPassCredential            : False
+    IsCustomSnapshot            :
+    MaintenanceStatus           : Production
+    PluginProtectionGroupTypes  : {SMSQL}
+    Tag                         :
+    IsInternal                  : False
+    EnableEmailAttachment       : False
+    VerificationSettings        : {}
+    Name                        : NFS_DB
+    Type                        : Group
+    Id                          : 2
+    Host                        :
+    UserName                    :
+    Passphrase                  :
+    Deleted                     : False
+    Auth                        : SMCoreContracts.SmAuth
+    IsClone                     : False
+    CloneLevel                  : 0
+    Hosts                       :
+    StorageName                 :
+    ResourceGroupNames          :
+    PolicyNames                 :
+
+    Description                 :
+    CreationTime                : 10/10/2016 4:51:36 PM
+    ModificationTime            : 10/10/2016 5:27:57 PM
+    EnableEmail                 : False
+    EmailSMTPServer             :
+    EmailFrom                   :
+    EmailTo                     :
+    EmailSubject                :
+    EnableSysLog                : False
+    ProtectionGroupType         : Backup
+    EnableAsupOnFailure         : False
+    Policies                    : {}
+    HostResourceMaping          : {}
+    Configuration               : SMCoreContracts.SmCloneConfiguration
+    LastBackupStatus            : Failed
+    VerificationServer          :
+    EmailBody                   :
+    EmailNotificationPreference : Never
+    VerificationServerInfo      :
+    SchedulerSQLInstance        :
+    CustomText                  :
+    CustomSnapshotFormat        :
+    SearchResources             : False
+    ByPassRunAs                 : False
+    IsCustomSnapshot            :
+    MaintenanceStatus           : Production
+    PluginProtectionGroupTypes  : {SMSQL}
+    Tag                         :
+    IsInternal                  : False
+    EnableEmailAttachment       : False
+    VerificationSettings        : {}
+    Name                        : Test
+    Type                        : Group
+    Id                          : 3
+    Host                        :
+    UserName                    :
+    Passphrase                  :
+    Deleted                     : False
+    Auth                        : SMCoreContracts.SmAuth
+    IsClone                     : False
+    CloneLevel                  : 0
+    Hosts                       :
+    StorageName                 :
+    ResourceGroupNames          :
+    PolicyNames                 :
+----
+. Lancez une opération de clonage à partir d'un groupe de ressources clone ou d'une sauvegarde existante à l'aide de l'applet de commande New-SmClone.
++
+Dans cet exemple, un clone est créé à partir d'une sauvegarde spécifiée avec tous les journaux :
+
++
+[listing]
+----
+New-SmClone -BackupName Verify_delete_clone_on_qtree_windows_scc54_10-04-2016_19.05.48.0886 -Resources @{"Host"="scc54.sccore.test.com";"Uid"="QTREE1"}  -
+CloneToInstance scc54.sccore.test.com -Suffix '_QtreeCloneWin9'  -AutoAssignMountPoint -AppPluginCode 'DummyPlugin' -initiatorname 'iqn.1991-
+05.com.microsoft:scc54.sccore.test.com' -igroupprotocol 'mixed'
+----
+. Affichez l'état du travail clone à l'aide de l'applet de commande Get-SmCloneReport.
++
+Cet exemple affiche un rapport de clonage pour l'ID de tâche spécifié :
+
++
+[listing]
+----
+PS C:\> Get-SmCloneReport -JobId 186
+
+    SmCloneId           : 1
+    SmJobId             : 186
+    StartDateTime       : 8/3/2015 2:43:02 PM
+    EndDateTime         : 8/3/2015 2:44:08 PM
+    Duration            : 00:01:06.6760000
+    Status              : Completed
+    ProtectionGroupName : Draper
+    SmProtectionGroupId : 4
+    PolicyName          : OnDemand_Clone
+    SmPolicyId          : 4
+    BackupPolicyName    : OnDemand_Full_Log
+    SmBackupPolicyId    : 1
+    CloneHostName       : SCSPR0054212005.mycompany.com
+    CloneHostId         : 4
+    CloneName           : Draper__clone__08-03-2015_14.43.53
+    SourceResources     : {Don, Betty, Bobby, Sally}
+    ClonedResources     : {Don_DRAPER, Betty_DRAPER, Bobby_DRAPER, Sally_DRAPER}
+    SmJobError          :
+----
+
+
+--
+====

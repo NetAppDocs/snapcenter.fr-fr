@@ -1,0 +1,175 @@
+---
+permalink: protect-scc/restore_a_resource_backup.html 
+sidebar: sidebar 
+keywords: restore 
+summary: Vous pouvez utiliser SnapCenter pour restaurer des ressources. Les fonctionnalités des opérations de restauration dépendent du plug-in utilisé. 
+---
+= Restaurer une sauvegarde de ressource
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SnapCenter pour restaurer des ressources. Les fonctionnalités des opérations de restauration dépendent du plug-in utilisé.
+
+.Avant de commencer
+* Vous devez avoir sauvegardé la ressource ou les groupes de ressources.
+* Si vous répliquez des snapshots sur un miroir ou un coffre-fort, l'administrateur SnapCenter doit vous avoir attribué les machines virtuelles de stockage (SVM) des volumes source et de destination.
+* Vous devez avoir annulé toute opération de sauvegarde en cours pour la ressource ou le groupe de ressources à restaurer.
+
+
+.Description de la tâche
+* L'opération de restauration par défaut restaure uniquement les objets de stockage. Les opérations de restauration au niveau application ne peuvent être effectuées que si le plug-in personnalisé offre cette fonctionnalité.
+* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
+
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
+.Étapes
+. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
++
+Les ressources s'affichent avec des informations telles que le type, le nom de l'hôte ou du cluster, les groupes de ressources et les stratégies associés et l'état.
+
++
+
+NOTE: Bien qu'une sauvegarde soit possible pour un groupe de ressources, lors de la restauration, vous devez sélectionner les ressources individuelles que vous souhaitez restaurer.
+
++
+Si la ressource n'est pas protégée, _non protégé_ s'affiche dans la colonne *Etat général*.
+
++
+L'état _Not Protected_ dans la colonne *Overall Status* peut signifier que la ressource n'est pas protégée ou que la ressource a été sauvegardée par un autre utilisateur.
+
+. Sélectionnez la ressource ou sélectionnez un groupe de ressources, puis sélectionnez une ressource dans ce groupe.
++
+La page topologie de ressources s'affiche.
+
+. Dans la vue *gérer les copies*, sélectionnez *sauvegardes* dans les systèmes de stockage primaire ou secondaire (en miroir ou en stockage).
+. Dans le tableau sauvegarde(s) principale(s), sélectionnez la sauvegarde à restaurer, puis cliquez sur image:../media/restore_icon.gif["icône restaurer"].
++
+image::../media/restoring_resource.gif[restauration des ressources]
+
+. Dans la page objectif de restauration, sélectionnez *ressource complète* ou *niveau de fichier*.
++
+.. Si vous avez sélectionné *Complete Resource*, la sauvegarde de la ressource est restaurée.
++
+Si la ressource contient des volumes ou des qtrees comme empreinte du stockage, les snapshots les plus récents sur ces volumes ou qtrees sont supprimés et ne peuvent pas être restaurés. De même, si une autre ressource est hébergée sur les mêmes volumes ou qtrees, cette ressource est également supprimée.
+
+.. Si vous avez sélectionné *File Level*, vous pouvez sélectionner *All*, ou sélectionner des volumes ou des qtrees, puis entrer le chemin d'accès relatif aux volumes ou aux qtrees sélectionnés séparés par des virgules.
++
+*** Vous pouvez sélectionner plusieurs volumes et qtrees.
+*** Si le type de ressource est LUN, la LUN entière est restaurée. Vous pouvez sélectionner plusieurs LUN. + REMARQUE : si vous sélectionnez *tous*, tous les fichiers des volumes, qtrees ou LUN sont restaurés.
+
+
+
+
+. Dans la page *Pre ops*, entrez les commandes de pré-restauration et de démontage à exécuter avant d'effectuer une tâche de restauration.
+. Dans la page *Post OPS*, entrez les commandes mount et post-restauration à exécuter après l'exécution d'une tâche de restauration.
+. Dans la page *notification*, dans la liste déroulante *préférence de courrier électronique*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. SMTP doit également être configuré dans la page *Paramètres* > *Paramètres globaux*.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
+
+
+--
+.Applets de commande PowerShell
+--
+.Étapes
+. Lancez une session de connexion avec le serveur SnapCenter pour un utilisateur spécifié à l'aide de l'applet de commande Open-SmConnection.
++
+[listing]
+----
+PS C:\> Open-Smconnection
+----
+. Récupérez les informations sur une ou plusieurs sauvegardes que vous souhaitez restaurer à l'aide des applets de commande Get-SmBackup and get-SmBackupReport.
++
+Cet exemple affiche des informations sur toutes les sauvegardes disponibles :
+
++
+[listing]
+----
+PS C:\> Get-SmBackup
+
+BackupId                      BackupName                    BackupTime                    BackupType
+--------                      ----------                    ----------                    ----------
+  1               Payroll Dataset_vise-f6_08... 8/4/2015    11:02:32 AM                 Full Backup
+  2               Payroll Dataset_vise-f6_08... 8/4/2015    11:23:17 AM
+----
++
+Cet exemple contient des informations détaillées sur la sauvegarde du 29 janvier 2015 au 3 février 2015 :
+
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -FromDateTime "1/29/2015" -ToDateTime "2/3/2015"
+
+   SmBackupId           : 113
+   SmJobId              : 2032
+   StartDateTime        : 2/2/2015 6:57:03 AM
+   EndDateTime          : 2/2/2015 6:57:11 AM
+   Duration             : 00:00:07.3060000
+   CreatedDateTime      : 2/2/2015 6:57:23 AM
+   Status               : Completed
+   ProtectionGroupName  : Clone
+   SmProtectionGroupId  : 34
+   PolicyName           : Vault
+   SmPolicyId           : 18
+   BackupName           : Clone_SCSPR0019366001_02-02-2015_06.57.08
+   VerificationStatus   : NotVerified
+
+   SmBackupId           : 114
+   SmJobId              : 2183
+   StartDateTime        : 2/2/2015 1:02:41 PM
+   EndDateTime          : 2/2/2015 1:02:38 PM
+   Duration             : -00:00:03.2300000
+   CreatedDateTime      : 2/2/2015 1:02:53 PM
+   Status               : Completed
+   ProtectionGroupName  : Clone
+   SmProtectionGroupId  : 34
+   PolicyName           : Vault
+   SmPolicyId           : 18
+   BackupName           : Clone_SCSPR0019366001_02-02-2015_13.02.45
+   VerificationStatus   : NotVerified
+----
+. Restaurez les données de la sauvegarde à l'aide de la cmdlet Restore-SmBackup.
++
+[listing]
+----
+Restore-SmBackup -PluginCode 'DummyPlugin' -AppObjectId 'scc54.sccore.test.com\DummyPlugin\NTP\DB1' -BackupId 269 -Confirm:$false
+output:
+Name                : Restore 'scc54.sccore.test.com\DummyPlugin\NTP\DB1'
+Id                  : 2368
+StartTime           : 10/4/2016 11:22:02 PM
+EndTime             :
+IsCancellable       : False
+IsRestartable       : False
+IsCompleted         : False
+IsVisible           : True
+IsScheduled         : False
+PercentageCompleted : 0
+Description         :
+Status              : Queued
+Owner               :
+Error               :
+Priority            : None
+Tasks               : {}
+ParentJobID         : 0
+EventId             : 0
+JobTypeId           :
+ApisJobKey          :
+ObjectId            : 0
+PluginCode          : NONE
+PluginName          :
+----
+
+
+Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter à la https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+
+--
+====

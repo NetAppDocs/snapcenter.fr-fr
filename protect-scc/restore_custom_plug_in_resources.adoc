@@ -1,10 +1,10 @@
 ---
-permalink: protect-nsp/restore_netapp_supported_plugins_resources.html 
+permalink: protect-scc/restore_custom_plug_in_resources.html 
 sidebar: sidebar 
 keywords:  
 summary: Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations. 
 ---
-= Restaurez les ressources de plug-in prises en charge par NetApp
+= Restauration de ressources de plug-ins personnalisées
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

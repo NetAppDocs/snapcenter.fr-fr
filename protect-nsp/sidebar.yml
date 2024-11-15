@@ -28,18 +28,6 @@ entries:
   - title: Types de stratégies de restauration prises en charge pour les ressources
       de plug-ins NetApp ajoutées manuellement
     url: "/protect-nsp/types_of_restore_strategies_supported_for_manually_added_netapp_supported_plugins_resources.html"
-- title: Développez un plug-in pour votre application
-  entries:
-  - title: Présentation
-    url: "/protect-nsp/develop_a_plug_in_for_your_application.html"
-  - title: Développement BASÉ SUR PERL
-    url: "/protect-nsp/perl.html"
-  - title: Style natif
-    url: "/protect-nsp/native.html"
-  - title: Style Java
-    url: "/protect-nsp/java.html"
-  - title: Plug-ins personnalisés dans SnapCenter
-    url: "/protect-nsp/custom_plugins_in_snapcenter.html"
 - title: Préparez l'installation des plug-ins pris en charge par NetApp
   entries:
   - title: Workflow d'installation des plug-ins pris en charge par NetApp
@@ -127,8 +115,6 @@ entries:
     url: "/protect-nsp/restore_netapp_supported_plugins_resources.html"
   - title: Restaurer une sauvegarde de ressource
     url: "/protect-nsp/restore_a_resource_backup.html"
-  - title: Restaurer des ressources à l'aide des applets de commande PowerShell
-    url: "/protect-nsp/restore_and_recover_resources_using_powershell_cmdlets.html"
   - title: Surveiller les opérations de restauration
     url: "/protect-nsp/monitor_resources_restore_operations.html"
 - title: Cloner les sauvegardes de ressources de plug-ins pris en charge par NetApp

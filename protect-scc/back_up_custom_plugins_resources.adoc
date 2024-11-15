@@ -1,0 +1,20 @@
+---
+permalink: protect-scc/back_up_custom_plugins_resources.html 
+sidebar: sidebar 
+keywords: backup, custom plug-in 
+summary: 'Le workflow de sauvegarde comprend la planification, l"identification des ressources de sauvegarde, la gestion des stratégies de sauvegarde, la création de groupes de ressources et la connexion de stratégies, la création de sauvegardes et le contrôle des opérations.' 
+---
+= Sauvegarde des ressources des plug-ins personnalisés SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le workflow de sauvegarde comprend la planification, l'identification des ressources de sauvegarde, la gestion des stratégies de sauvegarde, la création de groupes de ressources et la connexion de stratégies, la création de sauvegardes et le contrôle des opérations.
+
+Le workflow suivant montre la séquence dans laquelle vous devez effectuer l'opération de sauvegarde :
+
+image::../media/scc_backup_workflow.png[Workflow de sauvegarde]
+
+Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide du cmdlet SnapCenter ou consultez le https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"]

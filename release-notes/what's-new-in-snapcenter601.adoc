@@ -1,0 +1,43 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter601.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.0.1 
+summary: La version 6.0.1 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations. 
+---
+= Nouveautés du logiciel SnapCenter 6.0.1
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La version 6.0.1 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations.
+
+|===
+| Mise à jour | Description 
+
+
+| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/protect-azure/protect-applications-azure-netapp-files.html["Prise en charge des sauvegardes Azure NetApp Files"]  a| 
+SnapCenter prend en charge la fonctionnalité de sauvegarde Azure NetApp Files qui étend les fonctionnalités de protection des données d'Azure NetApp Files en fournissant une solution de sauvegarde entièrement gérée pour les restaurations, l'archivage et la conformité à long terme.
+
+
+
+| link:hhttps://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["Prise en charge de la haute disponibilité de SnapCenter sous Linux"]  a| 
+Configurez la haute disponibilité dans SnapCenter sous Windows ou Linux à l'aide de l'équilibreur de charge F5, de Microsoft Network Load Balancing (NLB), d'Amazon Web Services (AWS) Elastic Load Balancing (ELB) ou de l'équilibreur de charge Azure.
+
+
+
+| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["Prise en charge de la gestion des tâches de sauvegarde planifiées"]  a| 
+Permet de définir un seuil pour le nombre de tâches planifiées pouvant s'exécuter à un moment donné. Cela vous permet de contrôler le nombre de sauvegardes que vous souhaitez exécuter en fonction de la configuration matérielle de votre système.
+
+
+
+| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["Prise en charge de la gestion des tâches obsolètes"]  a| 
+Vous permet de nettoyer les tâches obsolètes qui sont bloquées pendant plus de 72 heures.
+
+
+
+| Prise en charge d'IBM DB2, d'Oracle application et du plug-in de stockage sous AIX  a| 
+Prend en charge la protection des données d'IBM DB2, d'Oracle application et de Storage Plug-in sous AIX
+
+|===

@@ -1,0 +1,55 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter60.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.0 
+summary: La version 6.0 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations. 
+---
+= Nouveautés du logiciel SnapCenter 6.0
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La version 6.0 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations.
+
+|===
+| Mise à jour | Description 
+
+
+| link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html#snapcenter-plug-ins["Plug-in de prise en charge des workloads d'entreprise avec prise en charge de NetApp"]  a| 
+SnapCenter fournit des plug-ins pour gérer les charges de travail comme PostgreSQL, MySQL et IBM DB2. Vous pouvez détecter, sauvegarder, restaurer, monter et cloner automatiquement les workloads.
+
+SnapCenter fournit également des plug-ins pour gérer les charges de travail comme SAP ASE, SAP MaxDB, MongoDB, les applications Oracle et le stockage ONTAP. Vous pouvez sauvegarder, restaurer et cloner les charges de travail.
+
+
+
+| link:https://docs.netapp.com/us-en/snapcenter/install/install_snapcenter_server_linux.html["Prise en charge de la version Linux d'SnapCenter pour les workloads cloud et sur site"]  a| 
+* Prise en charge du stockage Azure NetApp Files, Amazon FSX pour NetApp ONTAP, Cloud Volumes ONTAP et ONTAP
+* Binaires distincts pour les versions Linux telles que Red Hat Enterprise Linux (RHEL), Oracle Linux et SUSE Linux Enterprise Server (SLES).
+* Prise en charge des bases de données classiques comme SAP HANA, Oracle, IBM DB2, SAP ASE et SAP MaxDB
+* Prend en charge les charges de travail modernes telles que PostgreSQL, MySQL et MongoDB.
+* Prise en charge des plug-ins pour les volumes ONTAP et les systèmes de fichiers Linux pour la protection de toutes les applications non prises en charge ou développées en interne.
+
+
+
+
+| link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["Prise en charge de SnapMirror Active Sync"]  a| 
+Possibilité de sauvegarder, restaurer et cloner de manière transparente les charges de travail SAN (bases de données et machines virtuelles VMware) configurées pour assurer le basculement transparent des applications et la continuité de l'activité.
+
+
+
+| link:https://docs.netapp.com/us-en/snapcenter/install/concept_create_and_manage_smb_shares.html["Prise en charge de Microsoft SQL Server sur SMB3"]  a| 
+Les bases de données Microsoft SQL Server déployées sur le protocole SMB3 dans ONTAP, Azure NetApp Files, Amazon FSX pour NetApp ONTAP et ONTAP Cloud volumes peuvent désormais être protégées à l'aide de SnapCenter.
+
+
+
+| link:https://docs.netapp.com/us-en/snapcenter/protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html#storage-types-supported-on-linux["Prise en charge de NVMe/TCP"]  a| 
+Si vous migrez des workloads stratégiques vers NVMe/TCP pour améliorer les performances, vous pouvez utiliser SnapCenter pour sauvegarder et restaurer les applications et les systèmes de fichiers.
+
+
+
+| Prise en charge des vVols VMware  a| 
+Si vous avez déployé vos bases de données et vos systèmes de fichiers sur VMware vVols, vous pouvez les protéger à l'aide de SnapCenter.
+
+|===

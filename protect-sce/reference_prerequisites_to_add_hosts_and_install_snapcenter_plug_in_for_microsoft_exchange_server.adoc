@@ -81,7 +81,7 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-* . Noyau NET 8.0.5
+* .NET Core commençant par la version 8.0.5 et incluant tous les correctifs .NET 8 ultérieurs
 * PowerShell Core 7.4.2
 * Java 11 Oracle Java et OpenJDK
 
@@ -165,7 +165,7 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-* . Noyau NET 8.0.5
+* .NET Core commençant par la version 8.0.5 et incluant tous les correctifs .NET 8 ultérieurs
 * PowerShell Core 7.4.2
 * Java 11 Oracle Java et OpenJDK
 

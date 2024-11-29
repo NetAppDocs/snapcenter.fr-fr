@@ -16,7 +16,7 @@ Le serveur SnapCenter installe les progiciels ci-dessous. Ils peuvent être util
 * RabbitMQ
 * Nginx
 * Erlang
-* .NET Framework 8.0.5
+* .NET Framework à partir de la version 8.0.5 et incluant tous les correctifs .NET 8 ultérieurs
 * Devel-PAM
 * PowerShell
 

@@ -155,4 +155,4 @@ NOTE: La vérification des empreintes est obligatoire même si le même hôte a 
 
 
 .Une fois que vous avez terminé
-Si vous souhaitez effectuer une mise à niveau vers SnapCenter 6.0, le plug-in PERL existant pour DB2 sera désinstallé du serveur de plug-in distant.
+Si vous souhaitez effectuer une mise à niveau vers SnapCenter 6.0 ou une version ultérieure, le plug-in PERL existant pour DB2 sera désinstallé du serveur de plug-in distant.

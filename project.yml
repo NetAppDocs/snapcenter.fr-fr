@@ -21,13 +21,12 @@ settings:
     url: "/snapcenter-46"
   - version-number: '4.5'
     url: "/snapcenter-45"
-  langs: fr-fr,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,it-it
+  langs: fr-fr,us-en,de-de,es-es,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
   - title: Documents relatifs au logiciel SnapCenter 6.0
     url: "/index.html"
-  - title: Notes de mise à jour
-    url: "/release-notes.html"
+  - section: release-notes
   - section: concept
   - section: install
   - section: protect-scsql

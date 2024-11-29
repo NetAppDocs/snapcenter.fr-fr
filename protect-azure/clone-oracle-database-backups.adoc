@@ -11,7 +11,7 @@ summary: Vous pouvez utiliser SnapCenter pour cloner une sauvegarde.
 
 
 [role="lead"]
-Vous pouvez utiliser SnapCenter pour cloner une base de données Oracle à l'aide de la sauvegarde de la base de données.
+Vous pouvez utiliser SnapCenter pour cloner une base de données Oracle à l'aide de la sauvegarde de la base de données. Les clones créés sont des clones épais et sont créés dans le pool de capacité parent.
 
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
@@ -89,33 +89,4 @@ Décochez la case si vous souhaitez affecter le DBID de la base de données sour
 . Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
 . Passez en revue le résumé, puis sélectionnez *Terminer*.
 . Surveillez la progression de l'opération en sélectionnant *Monitor* > *Jobs*.
-
-
-
-
-== Fractionner un clone de base de données Oracle
-
-Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent.
-
-.Étapes
-. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
-. Dans la page Ressources, sélectionnez *Database* dans la liste vue.
-. Sélectionnez la ressource clonée (par exemple, la base de données ou la LUN), puis cliquez sur *image:../media/clone_icon.gif["icône cloner"]*.
-. Vérifiez la taille estimée du clone à diviser et l'espace requis disponible sur l'agrégat, puis cliquez sur *Start*.
-. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
-
-
-
-
-== Séparer le clone d'une base de données enfichable
-
-Vous pouvez utiliser SnapCenter pour diviser une base de données clonée enfichable (PDB).
-
-.Étapes
-. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
-. Sélectionnez la base de données du conteneur source (CDB) dans la vue ressource ou groupe de ressources.
-. Dans la vue gérer les copies, sélectionnez *clones* dans les systèmes de stockage principaux.
-. Sélectionnez le clone PDB (targetCDB:PDBClone), puis cliquez sur *image:../media/clone_icon.gif["icône cloner"]*.
-. Vérifiez la taille estimée du clone à diviser et l'espace requis disponible sur l'agrégat, puis cliquez sur *Start*.
-. Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
 

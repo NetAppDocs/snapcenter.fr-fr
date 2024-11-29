@@ -46,7 +46,7 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-* Cœur DOTNET 8.0.5
+* DOTNET Core à partir de la version 8.0.5 et incluant tous les correctifs .NET 8 ultérieurs
 * PowerShell Core 7.4.2
 
 

@@ -1,0 +1,57 @@
+---
+permalink: release-notes/upgrade-path.html 
+sidebar: sidebar 
+keywords: upgrade paths, supported, upgrade to SnapCenter 
+summary: Chemins de mise à niveau pris en charge pour SnapCenter. 
+---
+= Chemins de mise à niveau pris en charge pour SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le chemin de mise à niveau vous permet de savoir à partir de quelles versions antérieures de SnapCenter vous pouvez mettre à niveau vers les dernières versions de SnapCenter et quelles versions des plug-ins sont prises en charge.
+
+|===
+| Si vous utilisez la version du serveur SnapCenter... | Vous pouvez directement mettre à niveau SnapCenter Server vers... | Versions de plug-in prises en charge 
+
+
+.2+| 4.9 | 5.0  a| 
+* 4.9
+* 5.0
+
+
+
+
+| 6,0  a| 
+* 6,0
+
+
+
+
+.2+| 5.0  a| 
+6,0
+ a| 
+* 5.0
+* 6,0
+
+
+
+
+| 6.0.1  a| 
+* 6.0.1
+
+
+
+
+| 6,0 | 6.0.1  a| 
+* 6,0
+* 6.0.1
+
+
+|===
+
+IMPORTANT: Par exemple, si vous utilisez SnapCenter version 4.9 et que vous souhaitez effectuer une mise à niveau vers la version 6.0.1, vous devez d'abord mettre à niveau vers la version 5.0, puis effectuer une mise à niveau par déploiement vers la version 6.0.1.
+
+Pour plus d'informations sur la mise à niveau du plug-in SnapCenter pour VMware vSphere, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["Mettez à niveau le plug-in SnapCenter pour VMware vSphere"^].

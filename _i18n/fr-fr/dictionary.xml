@@ -9981,18 +9981,18 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="180a2e8c671bfb57b670570970b59480" category="summary">La version 6.0.1 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations.</block>
   <block id="f5db6e0b0a7608b32dd00dbb85353e53" category="doc">Nouveautés du logiciel SnapCenter 6.0.1</block>
   <block id="0ee351a583abf7baa869129519adaddb" category="inline-link-macro">Prise en charge des sauvegardes Azure NetApp Files</block>
-  <block id="62c2d7366772786ca345ac877bf79c4a" category="cell"><block ref="62c2d7366772786ca345ac877bf79c4a" category="inline-link-macro-rx"></block></block>
   <block id="4cc6d2996939fe7970c652728017b3e9" category="paragraph">SnapCenter prend en charge la fonctionnalité de sauvegarde Azure NetApp Files qui étend les fonctionnalités de protection des données d'Azure NetApp Files en fournissant une solution de sauvegarde entièrement gérée pour les restaurations, l'archivage et la conformité à long terme.</block>
   <block id="f47390dbd7bff67c8e4d16001f8c4395" category="inline-link-macro">Prise en charge de la haute disponibilité de SnapCenter sous Linux</block>
-  <block id="fa7aa08aceadadc58383fc01281330d1" category="cell"><block ref="fa7aa08aceadadc58383fc01281330d1" category="inline-link-macro-rx"></block></block>
   <block id="8951fc15a429c65f620e89da09c5240e" category="paragraph">Configurez la haute disponibilité dans SnapCenter sous Windows ou Linux à l'aide de l'équilibreur de charge F5, de Microsoft Network Load Balancing (NLB), d'Amazon Web Services (AWS) Elastic Load Balancing (ELB) ou de l'équilibreur de charge Azure.</block>
   <block id="1810fc343d328f63ca20580898910abc" category="inline-link-macro">Prise en charge de la gestion des tâches de sauvegarde planifiées</block>
-  <block id="a9e5aa37b3dc50c95040bd19f911000b" category="cell"><block ref="a9e5aa37b3dc50c95040bd19f911000b" category="inline-link-macro-rx"></block></block>
   <block id="6775f2c837a6e0d211c88415495a3ca3" category="paragraph">Permet de définir un seuil pour le nombre de tâches planifiées pouvant s'exécuter à un moment donné. Cela vous permet de contrôler le nombre de sauvegardes que vous souhaitez exécuter en fonction de la configuration matérielle de votre système.</block>
   <block id="6c1303e3667436380323a8f91aeeb3b1" category="inline-link-macro">Prise en charge de la gestion des tâches obsolètes</block>
-  <block id="0f16714fed95f3a4b2ef5ba9724d3658" category="cell"><block ref="0f16714fed95f3a4b2ef5ba9724d3658" category="inline-link-macro-rx"></block></block>
   <block id="4b6d2450b6badef80cca9ba40b34bd88" category="paragraph">Vous permet de nettoyer les tâches obsolètes qui sont bloquées pendant plus de 72 heures.</block>
   <block id="70e43ac38d4ee9a77d2476513c883d81" category="cell">Prise en charge d'IBM DB2, d'Oracle application et du plug-in de stockage sous AIX</block>
   <block id="9b37c223b27baf9481210cc34272107f" category="paragraph">Prend en charge la protection des données d'IBM DB2, d'Oracle application et de Storage Plug-in sous AIX</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Notes de version</block>
+  <block id="4396a053fce24f7f396ccf91773d1924" category="cell"><block ref="4396a053fce24f7f396ccf91773d1924" category="inline-link-macro-rx"></block></block>
+  <block id="c382d5571738a226abf22d83f911bf29" category="cell"><block ref="c382d5571738a226abf22d83f911bf29" category="inline-link-macro-rx"></block></block>
+  <block id="2a332b39aa52e9f2636ba160aca67cb8" category="cell"><block ref="2a332b39aa52e9f2636ba160aca67cb8" category="inline-link-macro-rx"></block></block>
+  <block id="4e57d9d37ed4764b16b2fed20544a690" category="cell"><block ref="4e57d9d37ed4764b16b2fed20544a690" category="inline-link-macro-rx"></block></block>
 </blocks>

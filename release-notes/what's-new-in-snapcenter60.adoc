@@ -17,14 +17,16 @@ La version 6.0 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalit
 | Mise à jour | Description 
 
 
-| link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html#snapcenter-plug-ins["Plug-in de prise en charge des workloads d'entreprise avec prise en charge de NetApp"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html#snapcenter-plug-ins["Prise en charge des plug-ins de workloads d'entreprise avec prise en charge de NetApp"]  a| 
 SnapCenter fournit des plug-ins pour gérer les charges de travail comme PostgreSQL, MySQL et IBM DB2. Vous pouvez détecter, sauvegarder, restaurer, monter et cloner automatiquement les workloads.
 
 SnapCenter fournit également des plug-ins pour gérer les charges de travail comme SAP ASE, SAP MaxDB, MongoDB, les applications Oracle et le stockage ONTAP. Vous pouvez sauvegarder, restaurer et cloner les charges de travail.
 
 
 
-| link:https://docs.netapp.com/us-en/snapcenter/install/install_snapcenter_server_linux.html["Prise en charge de la version Linux d'SnapCenter pour les workloads cloud et sur site"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/install/install_snapcenter_server_linux.html["Prise en charge de la version Linux d'SnapCenter pour les workloads dans le cloud et sur site"]  a| 
+Des binaires SnapCenter distincts sont désormais disponibles pour les versions Linux telles que Red Hat Enterprise Linux (RHEL), Oracle Linux et SUSE Linux Enterprise Server (SLES).
+
 * Prise en charge du stockage Azure NetApp Files, Amazon FSX pour NetApp ONTAP, Cloud Volumes ONTAP et ONTAP
 * Binaires distincts pour les versions Linux telles que Red Hat Enterprise Linux (RHEL), Oracle Linux et SUSE Linux Enterprise Server (SLES).
 * Prise en charge des bases de données classiques comme SAP HANA, Oracle, IBM DB2, SAP ASE et SAP MaxDB
@@ -34,22 +36,22 @@ SnapCenter fournit également des plug-ins pour gérer les charges de travail co
 
 
 
-| link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["Prise en charge de SnapMirror Active Sync"]  a| 
-Possibilité de sauvegarder, restaurer et cloner de manière transparente les charges de travail SAN (bases de données et machines virtuelles VMware) configurées pour assurer le basculement transparent des applications et la continuité de l'activité.
+| link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["Prise en charge de la synchronisation active SnapMirror"]  a| 
+Vous pouvez désormais utiliser SnapCenter pour configurer les fonctionnalités de synchronisation active de SnapMirror et sauvegarder, restaurer et cloner efficacement les charges de travail SAN pour les bases de données et les machines virtuelles VMware. Cela assure un basculement transparent des applications et la continuité de l'activité.
 
 
 
 | link:https://docs.netapp.com/us-en/snapcenter/install/concept_create_and_manage_smb_shares.html["Prise en charge de Microsoft SQL Server sur SMB3"]  a| 
-Les bases de données Microsoft SQL Server déployées sur le protocole SMB3 dans ONTAP, Azure NetApp Files, Amazon FSX pour NetApp ONTAP et ONTAP Cloud volumes peuvent désormais être protégées à l'aide de SnapCenter.
+Vous pouvez désormais utiliser SnapCenter pour protéger les bases de données Microsoft SQL Server déployées sur le protocole SMB3 dans ONTAP, Azure NetApp Files, Amazon FSX pour NetApp ONTAP et Cloud Volumes ONTAP.
 
 
 
 | link:https://docs.netapp.com/us-en/snapcenter/protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html#storage-types-supported-on-linux["Prise en charge de NVMe/TCP"]  a| 
-Si vous migrez des workloads stratégiques vers NVMe/TCP pour améliorer les performances, vous pouvez utiliser SnapCenter pour sauvegarder et restaurer les applications et les systèmes de fichiers.
+SnapCenter prend désormais en charge le protocole NVMe over TCP pour sauvegarder et restaurer les applications et les systèmes de fichiers.
 
 
 
-| Prise en charge des vVols VMware  a| 
-Si vous avez déployé vos bases de données et vos systèmes de fichiers sur VMware vVols, vous pouvez les protéger à l'aide de SnapCenter.
+| Prise en charge des volumes virtuels VMware vSphere (vVols)  a| 
+Vous pouvez désormais utiliser SnapCenter pour protéger vos bases de données et systèmes de fichiers déployés sur les vVols.
 
 |===

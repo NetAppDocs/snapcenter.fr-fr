@@ -32,7 +32,7 @@ Serveur physique
 * LUN connectées à l'iSCSI
 * Volumes connectés par NFS
 * FC-NVMe
-* NVMe-TCP
+* NVMe/TCP
 
 
 
@@ -46,7 +46,7 @@ Vous pouvez modifier le fichier *LinuxConfig.pm* situé à _/opt/NetApp/snapcent
 
 * LUN iSCSI connectés directement au système invité par l'initiateur iSCSI
 * VMDK sur des datastores NFS
-* VMDK sur VMFS créés sur NVMe-TCP
+* VMDK sur VMFS créés sur NVMe/TCP
 +
 
 NOTE: RAC est pris en charge sur ESX 8.0U2 qui prend en charge le VMDK partagé

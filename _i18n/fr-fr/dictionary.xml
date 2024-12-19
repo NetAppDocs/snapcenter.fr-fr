@@ -9402,9 +9402,7 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="cadca0993c074565e0295e47c4f0c2a0" category="list-text">Vous devez avoir installé Java 11 sur votre hôte Linux ou AIX.</block>
   <block id="97ee77f84790cbf22d7e32413911f94c" category="paragraph">Java 11 IBM Java</block>
   <block id="3ab5865f7b3fcc5851ae24144b15f370" category="list-text">FC-NVMe</block>
-  <block id="ad18d9aa7c4c9bdbf86e39bd6dd5b727" category="list-text">NVMe-TCP</block>
   <block id="bb2676e02f9905c86303b7f1988d2898" category="list-text">VMDK sur des datastores NFS</block>
-  <block id="13d64591a6e2c6389e1896047405d742" category="list-text">VMDK sur VMFS créés sur NVMe-TCP</block>
   <block id="ae1d120b56beba9c6f5a7802f3e3d61d" category="admonition">RAC est pris en charge sur ESX 8.0U2 qui prend en charge le VMDK partagé</block>
   <block id="35695ced3ec52ece3ab6114b133a4872" category="admonition">Seule l'authentification par mot de passe est prise en charge lorsque vous installez le plug-in sur un RAC Oracle. L'authentification basée sur la clé SSH n'est pas prise en charge.</block>
   <block id="bc3f01c8b7967405e08d06ae461bdcd7" category="paragraph">Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter à la<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>.</block>
@@ -9956,43 +9954,51 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="ab3e1b5fbcd7c46009ad34f096e65d30" category="admonition">Par exemple, si vous utilisez SnapCenter version 4.9 et que vous souhaitez effectuer une mise à niveau vers la version 6.0.1, vous devez d'abord mettre à niveau vers la version 5.0, puis effectuer une mise à niveau par déploiement vers la version 6.0.1.</block>
   <block id="430bb58f6ef28c742787a646394cc85d" category="summary">La version 6.0 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations.</block>
   <block id="c93a09afa54abf05ddd4770e3b2343a1" category="doc">Nouveautés du logiciel SnapCenter 6.0</block>
-  <block id="5864c825e06c8214939d2a9d0894bf16" category="inline-link-macro">Plug-in de prise en charge des workloads d'entreprise avec prise en charge de NetApp</block>
-  <block id="b378547eb64b7be3e2ffe67d84149895" category="cell"><block ref="b378547eb64b7be3e2ffe67d84149895" category="inline-link-macro-rx"></block></block>
   <block id="3be8c0bcb79f27206e60c05521a2483c" category="paragraph">SnapCenter fournit des plug-ins pour gérer les charges de travail comme PostgreSQL, MySQL et IBM DB2. Vous pouvez détecter, sauvegarder, restaurer, monter et cloner automatiquement les workloads.</block>
   <block id="1fa76ac55ad0967716ac4dfee12b4407" category="paragraph">SnapCenter fournit également des plug-ins pour gérer les charges de travail comme SAP ASE, SAP MaxDB, MongoDB, les applications Oracle et le stockage ONTAP. Vous pouvez sauvegarder, restaurer et cloner les charges de travail.</block>
-  <block id="2e267d83f08284f9047134b3c074b19b" category="inline-link-macro">Prise en charge de la version Linux d'SnapCenter pour les workloads cloud et sur site</block>
-  <block id="ca5b1ab4090623818a4fec6b963d13f9" category="cell"><block ref="ca5b1ab4090623818a4fec6b963d13f9" category="inline-link-macro-rx"></block></block>
   <block id="7daff1874dce5a11aba2586028b0c18f" category="list-text">Prise en charge du stockage Azure NetApp Files, Amazon FSX pour NetApp ONTAP, Cloud Volumes ONTAP et ONTAP</block>
   <block id="762100fcdd1477c85af12beef8cd62c3" category="list-text">Binaires distincts pour les versions Linux telles que Red Hat Enterprise Linux (RHEL), Oracle Linux et SUSE Linux Enterprise Server (SLES).</block>
   <block id="13600e1a28d7c26b057fc84f30416618" category="list-text">Prise en charge des bases de données classiques comme SAP HANA, Oracle, IBM DB2, SAP ASE et SAP MaxDB</block>
   <block id="1dbcbbe14ef1a2328b3e7e8b86a02d30" category="list-text">Prend en charge les charges de travail modernes telles que PostgreSQL, MySQL et MongoDB.</block>
   <block id="42e9bb4040dfb564c8bc793490bd7ba6" category="list-text">Prise en charge des plug-ins pour les volumes ONTAP et les systèmes de fichiers Linux pour la protection de toutes les applications non prises en charge ou développées en interne.</block>
-  <block id="95c6ebe4e9f4b874b3476bd9c75d257b" category="inline-link-macro">Prise en charge de SnapMirror Active Sync</block>
-  <block id="8440547858789da7c3b2feb37f16cb25" category="cell"><block ref="8440547858789da7c3b2feb37f16cb25" category="inline-link-macro-rx"></block></block>
-  <block id="d318b0578f25b54d744e21d30b035e8a" category="paragraph">Possibilité de sauvegarder, restaurer et cloner de manière transparente les charges de travail SAN (bases de données et machines virtuelles VMware) configurées pour assurer le basculement transparent des applications et la continuité de l'activité.</block>
   <block id="e030f85ea3742a8498cd3f4ce5f26a2f" category="inline-link-macro">Prise en charge de Microsoft SQL Server sur SMB3</block>
   <block id="c550e496e988fba14212cef600247fed" category="cell"><block ref="c550e496e988fba14212cef600247fed" category="inline-link-macro-rx"></block></block>
-  <block id="661984b66e3a7f72fbbda59c35c7aa92" category="paragraph">Les bases de données Microsoft SQL Server déployées sur le protocole SMB3 dans ONTAP, Azure NetApp Files, Amazon FSX pour NetApp ONTAP et ONTAP Cloud volumes peuvent désormais être protégées à l'aide de SnapCenter.</block>
   <block id="534b29f3d774d1d19d1dc1030cdc4b3d" category="inline-link-macro">Prise en charge de NVMe/TCP</block>
   <block id="98d7af4aa50fe1e0cd7013f44cc2cebc" category="cell"><block ref="98d7af4aa50fe1e0cd7013f44cc2cebc" category="inline-link-macro-rx"></block></block>
-  <block id="6b4fa7a607a45ee2985d38d057ed95a1" category="paragraph">Si vous migrez des workloads stratégiques vers NVMe/TCP pour améliorer les performances, vous pouvez utiliser SnapCenter pour sauvegarder et restaurer les applications et les systèmes de fichiers.</block>
-  <block id="64727e12025200ba369f3ba7c0682081" category="cell">Prise en charge des vVols VMware</block>
-  <block id="8717c0ac7cfbe6d918d19dd574d63e73" category="paragraph">Si vous avez déployé vos bases de données et vos systèmes de fichiers sur VMware vVols, vous pouvez les protéger à l'aide de SnapCenter.</block>
   <block id="180a2e8c671bfb57b670570970b59480" category="summary">La version 6.0.1 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations.</block>
   <block id="f5db6e0b0a7608b32dd00dbb85353e53" category="doc">Nouveautés du logiciel SnapCenter 6.0.1</block>
   <block id="0ee351a583abf7baa869129519adaddb" category="inline-link-macro">Prise en charge des sauvegardes Azure NetApp Files</block>
-  <block id="4cc6d2996939fe7970c652728017b3e9" category="paragraph">SnapCenter prend en charge la fonctionnalité de sauvegarde Azure NetApp Files qui étend les fonctionnalités de protection des données d'Azure NetApp Files en fournissant une solution de sauvegarde entièrement gérée pour les restaurations, l'archivage et la conformité à long terme.</block>
   <block id="f47390dbd7bff67c8e4d16001f8c4395" category="inline-link-macro">Prise en charge de la haute disponibilité de SnapCenter sous Linux</block>
-  <block id="8951fc15a429c65f620e89da09c5240e" category="paragraph">Configurez la haute disponibilité dans SnapCenter sous Windows ou Linux à l'aide de l'équilibreur de charge F5, de Microsoft Network Load Balancing (NLB), d'Amazon Web Services (AWS) Elastic Load Balancing (ELB) ou de l'équilibreur de charge Azure.</block>
-  <block id="1810fc343d328f63ca20580898910abc" category="inline-link-macro">Prise en charge de la gestion des tâches de sauvegarde planifiées</block>
-  <block id="6775f2c837a6e0d211c88415495a3ca3" category="paragraph">Permet de définir un seuil pour le nombre de tâches planifiées pouvant s'exécuter à un moment donné. Cela vous permet de contrôler le nombre de sauvegardes que vous souhaitez exécuter en fonction de la configuration matérielle de votre système.</block>
-  <block id="6c1303e3667436380323a8f91aeeb3b1" category="inline-link-macro">Prise en charge de la gestion des tâches obsolètes</block>
-  <block id="4b6d2450b6badef80cca9ba40b34bd88" category="paragraph">Vous permet de nettoyer les tâches obsolètes qui sont bloquées pendant plus de 72 heures.</block>
-  <block id="70e43ac38d4ee9a77d2476513c883d81" category="cell">Prise en charge d'IBM DB2, d'Oracle application et du plug-in de stockage sous AIX</block>
-  <block id="9b37c223b27baf9481210cc34272107f" category="paragraph">Prend en charge la protection des données d'IBM DB2, d'Oracle application et de Storage Plug-in sous AIX</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Notes de version</block>
   <block id="4396a053fce24f7f396ccf91773d1924" category="cell"><block ref="4396a053fce24f7f396ccf91773d1924" category="inline-link-macro-rx"></block></block>
   <block id="c382d5571738a226abf22d83f911bf29" category="cell"><block ref="c382d5571738a226abf22d83f911bf29" category="inline-link-macro-rx"></block></block>
-  <block id="2a332b39aa52e9f2636ba160aca67cb8" category="cell"><block ref="2a332b39aa52e9f2636ba160aca67cb8" category="inline-link-macro-rx"></block></block>
-  <block id="4e57d9d37ed4764b16b2fed20544a690" category="cell"><block ref="4e57d9d37ed4764b16b2fed20544a690" category="inline-link-macro-rx"></block></block>
+  <block id="8b7c42123642e2e4ea7dd426aeb2de58" category="list-text">NVMe/TCP</block>
+  <block id="e32c19b9fdeb1a3c3b963304701ce944" category="list-text">VMDK sur VMFS créés sur NVMe/TCP</block>
+  <block id="6f8d85621ec7e8c73c4ba859ec9c7469" category="inline-link-macro">Prise en charge des plug-ins de workloads d'entreprise avec prise en charge de NetApp</block>
+  <block id="478831acf82b0a4b3818fd65c592a742" category="cell"><block ref="478831acf82b0a4b3818fd65c592a742" category="inline-link-macro-rx"></block></block>
+  <block id="1ef9e52684a20f666e12e341c8ef8ce1" category="inline-link-macro">Prise en charge de la version Linux d'SnapCenter pour les workloads dans le cloud et sur site</block>
+  <block id="8759eb4a15f0954f1ffe6a1ba0fcb91b" category="cell"><block ref="8759eb4a15f0954f1ffe6a1ba0fcb91b" category="inline-link-macro-rx"></block></block>
+  <block id="1cbe08eda60fa869e0f775f6bb3d2581" category="paragraph">Des binaires SnapCenter distincts sont désormais disponibles pour les versions Linux telles que Red Hat Enterprise Linux (RHEL), Oracle Linux et SUSE Linux Enterprise Server (SLES).</block>
+  <block id="4f53b479c6b47d73b1fdb28f399b1301" category="inline-link-macro">Prise en charge de la synchronisation active SnapMirror</block>
+  <block id="a757709afe5913a9ac546212ec3e1688" category="cell"><block ref="a757709afe5913a9ac546212ec3e1688" category="inline-link-macro-rx"></block></block>
+  <block id="426704b1f334cde736f8e5ff800c0a22" category="paragraph">Vous pouvez désormais utiliser SnapCenter pour configurer les fonctionnalités de synchronisation active de SnapMirror et sauvegarder, restaurer et cloner efficacement les charges de travail SAN pour les bases de données et les machines virtuelles VMware. Cela assure un basculement transparent des applications et la continuité de l'activité.</block>
+  <block id="729dead3f3fe6b0217c2f68871edb8ee" category="paragraph">Vous pouvez désormais utiliser SnapCenter pour protéger les bases de données Microsoft SQL Server déployées sur le protocole SMB3 dans ONTAP, Azure NetApp Files, Amazon FSX pour NetApp ONTAP et Cloud Volumes ONTAP.</block>
+  <block id="cadb0ed69287e5a4f65d1590e5e42a58" category="paragraph">SnapCenter prend désormais en charge le protocole NVMe over TCP pour sauvegarder et restaurer les applications et les systèmes de fichiers.</block>
+  <block id="bcaa0376902365340dff7a0ee422b390" category="cell">Prise en charge des volumes virtuels VMware vSphere (vVols)</block>
+  <block id="d0942f199de3f390337f613419cc5b6d" category="paragraph">Vous pouvez désormais utiliser SnapCenter pour protéger vos bases de données et systèmes de fichiers déployés sur les vVols.</block>
+  <block id="6d3c36ceae85dfee8b7d9ccb6f9daa41" category="paragraph">Vous pouvez désormais utiliser SnapCenter pour sauvegarder et cloner les applications résidant sur Azure NetApp Files vers Azure Blob Storage (magasin d'objets).</block>
+  <block id="dc3cf03517bc0034c89608c70487dd43" category="paragraph">La prise en charge de la configuration haute disponibilité pour SnapCenter est désormais étendue aux systèmes Linux. Vous pouvez utiliser les équilibreurs de charge standard pour cette configuration :</block>
+  <block id="cf70dd989291fe3c73323dca9c132c7a" category="list-text">Équilibreur de charge F5</block>
+  <block id="3a5261cb56e1fc4dcab4467255cb2f77" category="list-text">Microsoft Network Load Balancing (NLB)</block>
+  <block id="943ca3782b28d89aff2f86a50b332b3c" category="list-text">Services Web Amazon (AWS)</block>
+  <block id="00c0ea0ebc04a689882db84f8ac573b8" category="list-text">Équilibrage de charge élastique (ELB)</block>
+  <block id="30b49d6d7f72510603794f5cddeb0f51" category="list-text">Équilibreur de charge Azure</block>
+  <block id="2f95a365481f255b94a459c0cdbe6403" category="inline-link-macro">Possibilité de gérer les tâches de sauvegarde planifiées</block>
+  <block id="ed432f9ce52c9850999f7b028aad79ff" category="cell"><block ref="ed432f9ce52c9850999f7b028aad79ff" category="inline-link-macro-rx"></block></block>
+  <block id="45504f3ad62432af1eda619e4b060b8a" category="paragraph">Vous pouvez maintenant définir un seuil pour vos tâches planifiées afin de contrôler le nombre de sauvegardes que vous souhaitez exécuter à un moment donné en fonction de la configuration matérielle de votre système.</block>
+  <block id="4001d0b97ee7312467d6a3f7954548e2" category="inline-link-macro">Possibilité de gérer des tâches obsolètes</block>
+  <block id="df630e1703b2829b32d71f57dd02d24e" category="cell"><block ref="df630e1703b2829b32d71f57dd02d24e" category="inline-link-macro-rx"></block></block>
+  <block id="d76b0a3fe3eb0d4b24bd1965df4f6005" category="paragraph">Vous pouvez maintenant définir un planning prédéfini pour nettoyer les travaux obsolètes qui sont bloqués pendant plus de 72 heures.</block>
+  <block id="8a30edb275ecde423390e79fd8e6f1b2" category="cell">Fonctionnalités de protection des données incluses pour IBM DB2, Oracle application et le plug-in de stockage sous AIX</block>
+  <block id="7d8509e50a4a8e004140e403e5253c3c" category="paragraph">Prend en charge la protection des données d'IBM DB2, d'Oracle application et de Storage Plug-in fonctionnant sous AIX.</block>
 </blocks>

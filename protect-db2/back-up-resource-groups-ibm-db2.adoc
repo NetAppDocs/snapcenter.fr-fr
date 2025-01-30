@@ -25,7 +25,7 @@ Vous pouvez sauvegarder un groupe de ressources à la demande à partir de la pa
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
 +
-Vous pouvez effectuer une recherche dans le groupe de ressources en entrant le nom du groupe de ressources dans la zone de recherche ou en sélectionnant , puis en image:../media/filter_icon.png["icône de filtre"]sélectionnant la balise. Vous pouvez ensuite choisir de image:../media/filter_icon.png["icône de filtre"] fermer le volet de filtre.
+Vous pouvez effectuer une recherche dans le groupe de ressources en entrant le nom du groupe de ressources dans la zone de recherche ou en sélectionnant , puis en image:../media/filter_icon.gif["icône de filtre"]sélectionnant la balise. Vous pouvez ensuite choisir de image:../media/filter_icon.gif["icône de filtre"] fermer le volet de filtre.
 
 . Dans la page groupes de ressources, sélectionnez le groupe de ressources à sauvegarder, puis sélectionnez *Sauvegarder maintenant*.
 . Dans la page sauvegarde, effectuez les opérations suivantes :

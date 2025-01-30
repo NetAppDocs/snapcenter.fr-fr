@@ -64,6 +64,7 @@ NOTE: Les ressources sont répertoriées dans la section Ressources disponibles 
 
 NOTE: Vous pouvez ajouter des bases de données à partir d'hôtes Linux et AIX dans un seul groupe de ressources.
 
+. Dans la page Paramètres de l'application, sélectionnez l'option de sauvegarde.
 . Dans la page stratégies, effectuez les opérations suivantes :
 +
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.

@@ -1,0 +1,28 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter61.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.1 
+summary: La version 6.1 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations. 
+---
+= Nouveautés du logiciel SnapCenter 6.1
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La version 6.1 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations.
+
+|===
+| Mise à jour | Description 
+
+
+| link:../install/learn-about-supporting-asa-r2-in-snapcenter.html["Prise en charge des systèmes ASA r2"]  a| 
+SnapCenter prend désormais en charge les systèmes ASA r2 qui offrent une expérience simplifiée adaptée aux besoins des clients SAN uniquement.
+
+
+
+| Prise en charge des copies Snapshot secondaires inviolables  a| 
+SnapCenter vous permet de spécifier la période de verrouillage des snapshots secondaires.
+
+|===

@@ -13,4 +13,4 @@ summary: Vous devez installer et configurer les plug-ins pris en charge par Snap
 [role="lead"]
 Vous devez installer et configurer les plug-ins pris en charge par SnapCenter NetApp si vous souhaitez protéger les ressources des plug-ins pris en charge par NetApp.
 
-image::../media/sap_hana_install_configure_workflow.png[][flux de travail des plug-ins pris en charge par SnapCenter NetApp]
+image::../media/scc_install_configure_workflow.gif[Workflow des plug-ins pris en charge par SnapCenter NetApp]

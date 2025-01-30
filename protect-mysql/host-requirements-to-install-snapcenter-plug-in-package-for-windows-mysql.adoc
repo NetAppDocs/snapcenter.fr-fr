@@ -46,7 +46,7 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-* DOTNET Core à partir de la version 8.0.5 et incluant tous les correctifs .NET 8 ultérieurs
+* ASP.NET Core Runtime 8.0.12 (et tous les correctifs 8.0.x suivants) Hosting Bundle
 * PowerShell Core 7.4.2
 
 

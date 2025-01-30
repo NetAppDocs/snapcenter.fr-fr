@@ -16,9 +16,9 @@ Si une ressource ne fait pas partie d'un groupe de ressources, vous pouvez sauve
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Database* dans la liste vue.
-. Cliquez sur image:../media/filter_icon.png["Icône de filtre"], puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources.
+. Cliquez sur image:../media/filter_icon.gif["icône de filtre"], puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources.
 +
-Vous pouvez ensuite cliquer sur image:../media/filter_icon.png["Icône de filtre"] pour fermer le volet de filtre.
+Vous pouvez ensuite cliquer sur image:../media/filter_icon.gif["icône de filtre"] pour fermer le volet de filtre.
 
 . Sélectionnez la base de données à sauvegarder.
 +

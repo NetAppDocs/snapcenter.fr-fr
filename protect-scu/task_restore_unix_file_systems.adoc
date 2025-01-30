@@ -17,7 +17,7 @@ En cas de perte de données, vous pouvez utiliser SnapCenter pour restaurer les 
 
 * Vous devez exécuter les commandes suivantes pour établir la connexion avec le serveur SnapCenter, répertorier les sauvegardes et récupérer ses informations, et restaurer la sauvegarde.
 +
-Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter à la https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["Guide de référence sur les commandes du logiciel SnapCenter"^].
+Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter à la https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["Guide de référence sur les commandes du logiciel SnapCenter"^].
 
 * Pour une opération de restauration de synchronisation active SnapMirror, vous devez sélectionner la sauvegarde à partir de l'emplacement principal.
 

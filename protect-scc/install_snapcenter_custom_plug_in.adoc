@@ -13,6 +13,6 @@ summary: Vous devez installer et configurer des plug-ins personnalisés SnapCent
 [role="lead"]
 Vous devez installer et configurer les plug-ins personnalisés SnapCenter pour protéger les ressources des plug-ins personnalisés.
 
-image::../media/scc_install_configure_workflow.png[Workflow des plug-ins personnalisés SnapCenter]
+image::../media/scc_install_configure_workflow.gif[Workflow des plug-ins personnalisés SnapCenter]
 
 link:develop_a_plug_in_for_your_application.html["Développez un plug-in pour votre application"]

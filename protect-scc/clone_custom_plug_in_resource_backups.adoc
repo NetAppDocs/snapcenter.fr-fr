@@ -23,6 +23,6 @@ Vous pouvez cloner des sauvegardes de ressources pour les raisons suivantes :
 
 Le workflow suivant affiche la séquence dans laquelle vous devez effectuer l'opération de clonage :
 
-image::../media/sco_scc_wfs_clone_workflow.png[Workflow de clonage]
+image::../media/sco_scc_wfs_clone_workflow.gif[Workflow de clonage]
 
 Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou consultez le https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

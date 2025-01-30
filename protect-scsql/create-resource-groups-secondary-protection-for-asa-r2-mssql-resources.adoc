@@ -1,0 +1,141 @@
+---
+permalink: protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html 
+sidebar: sidebar 
+keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
+summary: Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. 
+---
+= Créez des groupes de ressources et activez la protection secondaire des ressources Microsoft SQL Server sur les systèmes ASA r2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez créer le groupe de ressources pour ajouter les ressources qui se trouvent sur les systèmes ASA r2. Vous pouvez également provisionner la protection secondaire lors de la création du groupe de ressources.
+
+.Avant de commencer
+* Vous devez vous assurer que vous n'ajoutez pas les ressources ONTAP 9.x et ASA r2 au même groupe de ressources.
+* Vous devez vous assurer que vous ne disposez pas d'une base de données contenant à la fois des ressources ONTAP 9.x et ASA r2.
+
+
+.Description de la tâche
+* La protection secondaire n'est disponible que si l'utilisateur connecté est affecté au rôle pour lequel la fonction *Secondaryprotection* est activée.
+* Si vous avez activé la protection secondaire, le groupe de ressources passe en mode maintenance lors de la création des groupes de cohérence principal et secondaire. Une fois les groupes de cohérence primaire et secondaire créés, le groupe de ressources est mis hors mode de maintenance.
+* SnapCenter ne prend pas en charge la protection secondaire pour une ressource clone.
+
+
+.Étapes
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in approprié dans la liste.
+. Dans la page Ressources, cliquez sur *Nouveau groupe de ressources*.
+. Dans la page Nom, effectuez les opérations suivantes :
++
+.. Entrez un nom pour le groupe de ressources dans le champ Nom.
++
+
+NOTE: Le nom du groupe de ressources ne doit pas dépasser 250 caractères.
+
+.. Saisissez une ou plusieurs étiquettes dans le champ balise pour vous aider à rechercher le groupe de ressources ultérieurement.
++
+Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de ressources, vous pourrez rechercher par la suite tous les groupes de ressources associés à la balise RH.
+
+.. Cochez cette case et entrez un format de nom personnalisé à utiliser pour le nom du snapshot.
++
+Par exemple, clienttext_Resource group_policy_hostname ou Resource group_hostname. Par défaut, un horodatage est ajouté au nom du Snapshot.
+
+.. Spécifiez les destinations des fichiers journaux d'archive que vous ne souhaitez pas sauvegarder.
++
+
+NOTE: Si nécessaire, vous devez utiliser la même destination que celle définie dans l'application, y compris le préfixe.
+
+
+
+. Dans la page Ressources, sélectionnez le nom d'hôte de la base de données dans la liste déroulante *hôte*.
++
+
+NOTE: Les ressources sont répertoriées dans la section Ressources disponibles uniquement si la ressource a été découverte avec succès. Si vous avez récemment ajouté des ressources, elles apparaissent dans la liste des ressources disponibles uniquement après avoir actualisé votre liste de ressources.
+
+. Sélectionnez les ressources ASA r2 dans la section Ressources disponibles et déplacez-les dans la section Ressources sélectionnées.
+. Dans la page Paramètres de l'application, sélectionnez l'option de sauvegarde.
+. Dans la page stratégies, effectuez les opérations suivantes :
++
+.. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
++
+
+NOTE: Vous pouvez également créer une stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"].
+
++
+Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
+
+.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"] Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Dans la fenêtre Ajouter des planifications pour la stratégie _policy_name_, configurez le planning, puis cliquez sur *OK*.
++
+Où, _policy_name_ est le nom de la stratégie que vous avez sélectionnée.
+
++
+Les planifications configurées sont répertoriées dans la colonne programmes appliqués.
+
+
+
++
+Les planifications de sauvegardes tierces ne sont pas prises en charge lorsqu'elles se chevauchent avec les planifications de sauvegarde SnapCenter.
+
+. Si la protection secondaire est activée pour la stratégie que vous avez sélectionnée, la page protection secondaire s'affiche et vous devez effectuer les étapes suivantes :
++
+.. Sélectionnez le type de la règle de réplication.
++
+
+NOTE: Règle de réplication synchrone non prise en charge.
+
+.. Indiquez le suffixe du groupe de cohérence à utiliser.
+.. Dans les menus déroulants cluster de destination et SVM de destination, sélectionnez le cluster peering et le SVM que vous souhaitez utiliser.
++
+
+NOTE: Le cluster et le peering de SVM ne sont pas pris en charge par SnapCenter. Vous devez utiliser les interfaces de ligne de commande System Manager ou ONTAP pour effectuer le peering de cluster et de SVM.
+
+
+
+
+
+
+NOTE: Si les ressources sont déjà protégées en dehors de SnapCenter, elles s'affichent dans la section Ressources protégées secondaires.
+
+. Sur la page Vérification, effectuez les opérations suivantes :
++
+.. Cliquez sur *Charger les localisateurs* pour charger les volumes SnapMirror ou SnapVault afin d'effectuer une vérification sur le stockage secondaire.
+.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"] Dans la colonne configurer les plannings pour configurer le planning de vérification pour tous les types de planning de la stratégie.
+.. Dans la boîte de dialogue Ajouter des programmes de vérification nom_stratégie, effectuez les opérations suivantes :
++
+|===
+| Les fonctions que vous recherchez... | Procédez comme ça... 
+
+
+ a| 
+Exécutez la vérification après la sauvegarde
+ a| 
+Sélectionnez *Exécuter la vérification après la sauvegarde*.
+
+
+
+ a| 
+Planifier une vérification
+ a| 
+Sélectionnez *Exécuter la vérification programmée*, puis sélectionnez le type de planification dans la liste déroulante.
+
+|===
+.. Sélectionnez *vérifier sur l'emplacement secondaire* pour vérifier vos sauvegardes sur le système de stockage secondaire.
+.. Cliquez sur *OK*.
++
+Les planifications de vérification configurées sont répertoriées dans la colonne programmes appliqués.
+
+
+
+. Dans la page notification, dans la liste déroulante Préférences de *E-mail*, sélectionnez les scénarios dans lesquels vous souhaitez envoyer les e-mails.
++
+Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Si vous souhaitez joindre le rapport de l'opération effectuée sur le groupe de ressources, sélectionnez *attacher un rapport de travail*.
+
++
+
+NOTE: Pour la notification par e-mail, vous devez avoir spécifié les détails du serveur SMTP à l'aide de l'interface graphique ou de la commande PowerShell set-SmSmtpServer.
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+

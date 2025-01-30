@@ -62,7 +62,7 @@ La page topologie des ressources ou des groupes de ressources s'affiche.
 +
 Vous ne pouvez pas supprimer les sauvegardes qui se trouvent sur le système de stockage secondaire.
 
-. Sélectionnez la sauvegarde, puis cliquez sur image:../media/delete_icon.gif[""].
+. Sélectionnez la sauvegarde, puis cliquez sur image:../media/delete_icon.gif["icône supprimer"].
 +
 Si vous supprimez une sauvegarde de base de données SAP HANA, les catalogues SAP HANA associés de la sauvegarde sont également supprimés.
 

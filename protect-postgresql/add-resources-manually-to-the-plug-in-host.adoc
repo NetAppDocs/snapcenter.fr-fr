@@ -70,7 +70,7 @@ Cette option est facultative.
 |===
 . Sur la page fournir l'empreinte du stockage, sélectionnez un type de stockage et choisissez un ou plusieurs volumes, LUN et qtrees, puis cliquez sur *Enregistrer*.
 +
-Facultatif : vous pouvez cliquer sur *image:../media/add_policy_from_resourcegroup.gif[""]* Icône pour ajouter plus de volumes, de LUN et de qtrees à partir d'autres systèmes de stockage.
+Facultatif : vous pouvez cliquer sur l'icône *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]pour ajouter d'autres volumes, LUN et qtrees à partir d'autres systèmes de stockage.
 
 . Facultatif : dans la page Paramètres de ressources, pour les ressources sur l'hôte Windows, entrez des paires clé-valeur personnalisées pour le plug-in PostgreSQL
 . Vérifiez le résumé, puis cliquez sur *Terminer*.

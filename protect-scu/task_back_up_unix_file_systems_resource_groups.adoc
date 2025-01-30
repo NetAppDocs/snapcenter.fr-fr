@@ -16,9 +16,9 @@ Vous pouvez sauvegarder les systèmes de fichiers Unix définis dans le groupe d
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *Groupe de ressources* dans la liste *Affichage*.
-. Entrez le nom du groupe de ressources dans la zone de recherche ou cliquez sur image:../media/filter_icon.png["Icône de filtre"], et sélectionnez la balise.
+. Entrez le nom du groupe de ressources dans la zone de recherche ou cliquez sur image:../media/filter_icon.gif["icône de filtre"], puis sélectionnez la balise.
 +
-Cliquez sur image:../media/filter_icon.png["Icône de filtre"] pour fermer le volet de filtre.
+Cliquez sur image:../media/filter_icon.gif["icône de filtre"] pour fermer le volet de filtre.
 
 . Dans la page Groupe de ressources, sélectionnez le groupe de ressources à sauvegarder.
 . Dans la page sauvegarde, effectuez les opérations suivantes :

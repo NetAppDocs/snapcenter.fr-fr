@@ -21,9 +21,9 @@ Par défaut, des sauvegardes de groupe de cohérence sont créées. Si vous souh
 
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Oracle Database dans la liste.
 . Dans la page Ressources, sélectionnez *Volume d'application* dans la liste *Affichage*.
-. Cliquez sur image:../media/filter_icon.png["icône de filtre"], puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources.
+. Cliquez sur * *image:../media/filter_icon.gif["icône de filtre"], puis sélectionnez le nom d'hôte et le type de base de données pour filtrer les ressources.
 +
-Vous pouvez ensuite cliquer sur image:../media/filter_icon.png["icône de filtre"] pour fermer le volet de filtre.
+Vous pouvez alors cliquer sur * *image:../media/filter_icon.gif["icône de filtre"]pour fermer le volet de filtre.
 
 . Sélectionnez le volume d'application à sauvegarder.
 +
@@ -55,7 +55,7 @@ Spécifiez les destinations des fichiers journaux d'archive que vous ne souhaite
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
 +
 
-NOTE: Vous pouvez également créer une stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif["ajouter une règle"].
+NOTE: Vous pouvez également créer une police en cliquant sur * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"].
 
 
 
@@ -63,7 +63,7 @@ NOTE: Vous pouvez également créer une stratégie en cliquant sur image:../medi
 Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
 
 +
-.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter une règle"] dans la colonne configurer les plannings pour la stratégie pour laquelle vous souhaitez configurer une planification.
+.. Cliquez sur image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"] dans la colonne configurer les plannings pour la stratégie pour laquelle vous souhaitez configurer une planification.
 .. Dans la fenêtre Ajouter des planifications pour la stratégie _policy_name_, configurez le planning, puis cliquez sur *OK*.
 +
 _policy_name_ est le nom de la stratégie que vous avez sélectionnée.

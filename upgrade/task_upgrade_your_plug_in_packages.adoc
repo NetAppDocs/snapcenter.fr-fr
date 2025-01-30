@@ -48,7 +48,7 @@ Dans la page *Détails du travail*, un message d'avertissement recommande au cli
 ... Cliquez sur *Upgrade*.
 
 
-** Si vous souhaitez mettre à niveau plusieurs hôtes de plug-in, sélectionnez tous les hôtes, cliquez sur image:../media/more_icon.gif[""], puis cliquez sur *mettre à niveau* > *OK*.
+** Si vous souhaitez mettre à niveau plusieurs hôtes, sélectionnez tous les hôtes, cliquez sur image:../media/more_icon.gif["plus d'icône"], puis cliquez sur *mettre à niveau* > *OK*.
 +
 Tous les services associés sont redémarrés lors de la mise à niveau du plug-in.
 

@@ -17,7 +17,7 @@ Une opération de clonage de base de données génère des rapports basés sur l
 
 Le workflow suivant montre l'ordre dans lequel vous devez effectuer les opérations de clonage :
 
-image::../media/scsql_clone_workflow.png[Cloner le diagramme de workflow]
+image::../media/scsql_clone_workflow.gif[Cloner le diagramme de workflow]
 
 Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration, de restauration, de vérification et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide du cmdlet SnapCenter ou consultez le https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"]
 

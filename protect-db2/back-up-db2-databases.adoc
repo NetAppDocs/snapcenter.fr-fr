@@ -36,7 +36,7 @@ NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération �
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page ressource, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
 +
-Sélectionnez image:../media/filter_icon.png["icône de filtre"], puis sélectionnez le nom d'hôte et le type de ressource pour filtrer les ressources. Vous pouvez ensuite choisir de image:../media/filter_icon.png["icône de filtre"] fermer le volet de filtre.
+Sélectionnez image:../media/filter_icon.gif["icône de filtre"], puis sélectionnez le nom d'hôte et le type de ressource pour filtrer les ressources. Vous pouvez ensuite choisir de image:../media/filter_icon.gif["icône de filtre"] fermer le volet de filtre.
 
 . Sélectionnez la ressource à sauvegarder.
 . Dans la page ressource, sélectionnez *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de l'instantané.

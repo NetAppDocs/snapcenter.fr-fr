@@ -281,6 +281,21 @@ Sans objet
 
 
  a| 
+Protection secondaire
+ a| 
+Non
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
 Moniteur de tâche
  a| 
 Oui.
@@ -545,6 +560,21 @@ Sans objet
 
 
  a| 
+Protection secondaire
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
 Moniteur de tâche
  a| 
 Oui.
@@ -795,6 +825,21 @@ Sans objet
 
  a| 
 Restauration complète du volume
+ a| 
+Non
+ a| 
+Non
+ a| 
+Sans objet
+ a| 
+Sans objet
+ a| 
+Sans objet
+
+
+
+ a| 
+Protection secondaire
  a| 
 Non
  a| 

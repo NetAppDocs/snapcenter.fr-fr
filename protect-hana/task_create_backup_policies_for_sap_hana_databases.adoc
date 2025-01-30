@@ -48,16 +48,14 @@ Vous ne pouvez pas créer de sauvegarde pour le volume de données SAP HANA, mai
 
 
 
-
-NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sauvegarde SnapCenter et les paramètres SnapLock secondaires sont gérés par ONTAP.
-
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
 . Dans la page Paramètres, cliquez sur *stratégies*.
 . Cliquez sur *Nouveau*.
-. Dans la page Nom, entrez le nom et la description de la stratégie.
-. Dans la page Paramètres, effectuez les opérations suivantes :
+. Dans la page Nom, entrez le nom et les détails de la stratégie.
+. Dans la page Type de stratégie, effectuez les opérations suivantes :
 +
+** Choisissez un type de stockage
 ** Choisissez un type de sauvegarde :
 +
 |===
@@ -65,37 +63,34 @@ NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sau
 
 
  a| 
-Effectuer un contrôle d'intégrité de la base de données
- a| 
-Sélectionnez *sauvegarde basée sur fichier*. Seuls les locataires actifs sont sauvegardés.
-
-
-
- a| 
 Créer une sauvegarde à l'aide de la technologie Snapshot
  a| 
 Sélectionnez *basé sur les instantanés*.
 
+
+
+ a| 
+Effectuer un contrôle d'intégrité de la base de données
+ a| 
+Sélectionnez *sauvegarde basée sur fichier*. Seuls les locataires actifs sont sauvegardés.
+
 |===
+
+
+. Dans la page instantané et réplication, effectuez les opérations suivantes :
++
 ** Spécifiez le type d'horaire en sélectionnant *On Demand*, *Hourly*, *Daily*, *Weekly* ou *Monthly*.
 +
 
 NOTE: Vous pouvez spécifier la planification (date de début, date de fin et fréquence) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais aussi d'affecter des programmes de sauvegarde différents à chaque stratégie.
 
 +
-image::../media/backup_settings.gif[sauvegarder les paramètres]
-
-+
 
 NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
 
-** Dans la section *Paramètres de sauvegarde personnalisés*, indiquez tous les paramètres de sauvegarde spécifiques qui doivent être transmis au plug-in au format clé-valeur.
-+
-Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
 
 
-
-. Dans la page Retention, spécifiez les paramètres de conservation pour le type de sauvegarde et le type de programme sélectionné dans la page Type de sauvegarde :
+. Dans la page instantané et réplication, spécifiez les paramètres de rétention pour le type de sauvegarde et le type de planification sélectionnés dans la page Type de sauvegarde :
 +
 |===
 | Les fonctions que vous recherchez... | Alors... 
@@ -104,7 +99,7 @@ Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
  a| 
 Conserver un certain nombre d'instantanés
  a| 
-Sélectionnez *nombre total de copies Snapshot à conserver*, puis indiquez le nombre de snapshots que vous souhaitez conserver.
+Sélectionnez *copies à conserver*, puis indiquez le nombre d'instantanés que vous souhaitez conserver.
 
 Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
@@ -126,19 +121,44 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
  a| 
 Conserver les instantanés pendant un certain nombre de jours
  a| 
-Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer.
+Sélectionnez *conserver les copies pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les instantanés avant de les supprimer.
 
 
 
  a| 
-Période de verrouillage des copies Snapshot
+Période de verrouillage des copies Snapshot principales
  a| 
 Sélectionnez la période de verrouillage des copies Snapshot, puis sélectionnez les jours, les mois ou les années.
 
 La période de conservation SnapLock doit être inférieure à 100 ans.
 
+
+
+ a| 
+Période de verrouillage des copies Snapshot secondaires
+ a| 
+Sélectionnez *période de verrouillage de copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
+
+Pour que cette option soit efficace, vous devez effectuer les tâches suivantes :
+
+** Sélectionnez la *période de verrouillage de la copie d'instantané primaire*.
+** Sélectionnez l'une des options de réplication secondaires ou les deux.
+
+
 |===
-. Pour les sauvegardes basées sur des copies Snapshot, spécifiez les paramètres de réplication sur la page réplication :
+. Sélectionnez une étiquette Snapshot.
++
+Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
+
++
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+. Pour les sauvegardes basées sur des copies Snapshot, dans la section Sélectionner les options de réplication secondaire, sélectionnez l'une des options de réplication secondaires suivantes, ou les deux :
++
+
+NOTE: Vous devez sélectionner les options de réplication secondaires pour *période de verrouillage de copie d'instantané secondaire* pour être effectif.
+
 +
 |===
 | Pour ce champ... | Procédez comme ça... 
@@ -172,19 +192,7 @@ Lorsque SnapLock est configuré uniquement sur le serveur secondaire à partir d
 
 Pour plus d'informations sur le coffre-fort SnapLock, voir https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Archivage des copies Snapshot sur WORM sur une destination d'archivage sécurisé"]
 
-Voir link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Affichez les sauvegardes et les clones des bases de données SAP HANA sur la page topologie"].
-
-
-
- a| 
-*Étiquette de politique secondaire*
- a| 
-Sélectionnez une étiquette Snapshot.
-
-Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
-
-
-NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+Voir link:../protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Affichez les sauvegardes et les clones des bases de données SAP HANA sur la page topologie"].
 
 
 

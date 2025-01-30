@@ -30,7 +30,6 @@ NOTE: Vous ne pouvez ni modifier ni supprimer les autorisations pour le rôle Sn
 . Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
 . Dans la page Paramètres, cliquez sur *rôles*.
 . Dans le champ Nom du rôle, cliquez sur le rôle à modifier.
-. Dans la page Role Details (Détails du rôle), modifiez les autorisations ou annulez l'affectation des membres selon les besoins.
 . Select *tous les membres de ce rôle peuvent voir les objets d'autres membres* pour permettre aux autres membres du rôle d'afficher les ressources telles que les volumes et les hôtes après avoir actualisé la liste des ressources.
 +
 Désélectionnez cette option si vous ne souhaitez pas que les membres de ce rôle voient les objets auxquels les autres membres sont affectés.
@@ -39,6 +38,7 @@ Désélectionnez cette option si vous ne souhaitez pas que les membres de ce rô
 
 NOTE: Lorsque cette option est activée, il n'est pas nécessaire d'attribuer aux utilisateurs un accès aux objets ou aux ressources si les utilisateurs appartiennent au même rôle que l'utilisateur qui a créé les objets ou les ressources.
 
+. Dans la page Role Details (Détails du rôle), modifiez les autorisations ou annulez l'affectation des membres selon les besoins.
 . Cliquez sur *soumettre*.
 
 

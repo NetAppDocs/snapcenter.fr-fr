@@ -32,11 +32,6 @@ La spécification d'une période de verrouillage de snapshot empêche la suppres
 +
 Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
-+
-
-NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sauvegarde SnapCenter et dans le système secondaire
-Les paramètres SnapLock sont gérés par ONTAP.
-
 
 
 
@@ -47,32 +42,28 @@ Les paramètres SnapLock sont gérés par ONTAP.
 . Dans la page Paramètres, cliquez sur *stratégies*.
 . Sélectionnez *Oracle Database* dans la liste déroulante.
 . Cliquez sur *Nouveau*.
-. Dans la page Nom, entrez le nom et la description de la stratégie.
-. Dans la page Type de sauvegarde, effectuez les opérations suivantes :
+. Dans la page Nom, entrez le nom et les détails de la stratégie.
+. Dans la page Type de stratégie, effectuez les opérations suivantes :
 +
-** Si vous souhaitez *créer une sauvegarde en ligne*, sélectionnez *sauvegarde en ligne*.
+.. Sélectionnez votre type de stockage.
+.. Sélectionner la portée de la règle :
++
+*** Si vous souhaitez *créer une sauvegarde en ligne*, sélectionnez *sauvegarde en ligne*.
 +
 Vous devez indiquer si vous souhaitez sauvegarder tous les fichiers de données, les fichiers de contrôle et les fichiers journaux d'archivage, uniquement les fichiers de données et les fichiers de contrôle, ou uniquement les fichiers journaux d'archivage.
 
-** Si vous souhaitez *créer une sauvegarde hors ligne*, sélectionnez *sauvegarde hors ligne*, puis sélectionnez l'une des options suivantes :
+*** Si vous souhaitez *créer une sauvegarde hors ligne*, sélectionnez *sauvegarde hors ligne*, puis sélectionnez l'une des options suivantes :
 +
-*** Si vous souhaitez créer une sauvegarde hors ligne lorsque la base de données est à l'état monté, sélectionnez *Mount*.
-*** Si vous souhaitez créer une sauvegarde d'arrêt hors ligne en changeant l'état d'arrêt de la base de données, sélectionnez *Shutdown*.
+**** Si vous souhaitez créer une sauvegarde hors ligne lorsque la base de données est à l'état monté, sélectionnez *Mount*.
+**** Si vous souhaitez créer une sauvegarde d'arrêt hors ligne en changeant l'état d'arrêt de la base de données, sélectionnez *Shutdown*.
 +
 Si vous disposez de bases de données enfichables (PDB) et que vous souhaitez enregistrer l'état des PDB avant de créer la sauvegarde, vous devez sélectionner *Enregistrer l'état des PDB*. Cela vous permet de ramener les PDB à leur état d'origine une fois la sauvegarde créée.
 
 
 
-** Spécifiez la fréquence d'horaire en sélectionnant *sur demande*, *horaire*, *quotidien*, *hebdomadaire* ou *mensuel*.
-+
 
-NOTE: Vous pouvez spécifier le planning (date de début et date de fin) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais vous permet d'affecter des programmes de sauvegarde différents à chaque stratégie.
 
-+
-
-NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
-
-** Si vous souhaitez cataloguer la sauvegarde à l'aide d'Oracle Recovery Manager (RMAN), sélectionnez *sauvegarde de catalogue avec Oracle Recovery Manager (RMAN)*.
+.. Si vous souhaitez cataloguer la sauvegarde à l'aide d'Oracle Recovery Manager (RMAN), sélectionnez *sauvegarde de catalogue avec Oracle Recovery Manager (RMAN)*.
 +
 Vous pouvez effectuer le catalogage différé d'une sauvegarde à la fois à l'aide de l'interface utilisateur graphique ou à l'aide de la commande SnapCenter CLI Catalog-SmBackupWithOracleRMAN.
 
@@ -80,7 +71,7 @@ Vous pouvez effectuer le catalogage différé d'une sauvegarde à la fois à l'a
 
 NOTE: Si vous souhaitez cataloguer les sauvegardes d'une base de données RAC, assurez-vous qu'aucune autre tâche n'est en cours d'exécution pour cette base de données. Si un autre travail est en cours d'exécution, l'opération de catalogage échoue au lieu d'être mise en file d'attente.
 
-** Si vous souhaitez élaguer les journaux d'archive après la sauvegarde, sélectionnez *Prune archive logs après la sauvegarde*.
+.. Si vous souhaitez élaguer les journaux d'archive après la sauvegarde, sélectionnez *Prune archive logs après la sauvegarde*.
 +
 
 NOTE: L'élagage des journaux d'archive de la destination du journal d'archivage qui n'est pas configurée dans la base de données sera ignoré.
@@ -89,7 +80,8 @@ NOTE: L'élagage des journaux d'archive de la destination du journal d'archivage
 
 IMPORTANT: Si vous utilisez Oracle Standard Edition, vous pouvez utiliser LES paramètres LOG_ARCHIVE_DEST et LOG_ARCHIVE_DUPLEX_DEST lors de la sauvegarde du journal d'archivage.
 
-** Vous ne pouvez supprimer les journaux d'archive que si vous avez sélectionné les fichiers journaux d'archive dans le cadre de votre sauvegarde.
++
+*** Vous ne pouvez supprimer les journaux d'archive que si vous avez sélectionné les fichiers journaux d'archive dans le cadre de votre sauvegarde.
 +
 
 NOTE: Vous devez vous assurer que tous les nœuds d'un environnement RAC peuvent accéder à tous les emplacements du journal d'archivage pour que l'opération de suppression soit réussie.
@@ -127,11 +119,24 @@ Sélectionnez *Supprimer les journaux d'archive des destinations qui font partie
 
 |===
 +
-image:../media/sco_backuppolicy_prunning.gif["politique de sauvegarde"]
+image:../media/sco_backuppolicy_prunning.gif["règle de taille"]
 
 
 
-. Dans la page Retention, spécifiez les paramètres de conservation pour le type de sauvegarde et le type de programme sélectionné dans la page Type de sauvegarde :
+
+
+. Dans la page instantané et réplication, effectuez les opérations suivantes :
++
+.. Spécifiez la fréquence d'horaire en sélectionnant *sur demande*, *horaire*, *quotidien*, *hebdomadaire* ou *mensuel*.
++
+
+NOTE: Vous pouvez spécifier le planning (date de début et date de fin) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais vous permet d'affecter des programmes de sauvegarde différents à chaque stratégie.
+
++
+
+NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
+
+.. Dans la section Paramètres de rétention des instantanés de données, spécifiez les paramètres de rétention pour le type de sauvegarde et le type de planification sélectionné dans la page Type de sauvegarde :
 +
 |===
 
@@ -142,7 +147,7 @@ image:../media/sco_backuppolicy_prunning.gif["politique de sauvegarde"]
  a| 
 Conserver un certain nombre d'instantanés
  a| 
-Sélectionnez *nombre total de copies Snapshot à conserver*, puis indiquez le nombre de snapshots que vous souhaitez conserver.
+Sélectionnez *copies à conserver*, puis indiquez le nombre d'instantanés que vous souhaitez conserver.
 
 Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
@@ -157,23 +162,105 @@ IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez dé
  a| 
 Conserver les instantanés pendant un certain nombre de jours
  a| 
-Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer.
+Sélectionnez *conserver les copies pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les instantanés avant de les supprimer.
 
 
 
  a| 
-Période de verrouillage des snapshots
+Période de verrouillage des copies Snapshot principales
  a| 
-Sélectionnez la période de verrouillage des copies Snapshot, puis sélectionnez les jours, les mois ou les années.
+Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané principale, sélectionnez *période de verrouillage de la copie d'instantané principale* et sélectionnez jours, mois ou années.
 
 La période de conservation SnapLock doit être inférieure à 100 ans.
+
+
+
+ a| 
+Période de verrouillage des copies Snapshot secondaires
+ a| 
+Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané secondaire, sélectionnez *période de verrouillage de la copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
+
+Pour que cette option soit efficace, vous devez effectuer les tâches suivantes :
+
+*** Sélectionnez la *période de verrouillage de la copie d'instantané primaire*.
+*** Sélectionnez l'une des options de réplication secondaires ou les deux.
+
 
 |===
 +
 
 NOTE: Vous ne pouvez conserver les sauvegardes du journal d'archivage que si vous avez sélectionné les fichiers journaux d'archive dans le cadre de votre sauvegarde.
 
-. Dans la page réplication, spécifiez les paramètres de réplication :
+.. Dans la section Paramètres de conservation des instantanés du journal d'archivage, spécifiez les paramètres de conservation pour le type de sauvegarde et le type de planification sélectionnés dans la page Type de sauvegarde :
++
+|===
+
+
+| Les fonctions que vous recherchez... | Alors... 
+
+
+ a| 
+Conserver un certain nombre d'instantanés
+ a| 
+Sélectionnez *copies à conserver*, puis indiquez le nombre d'instantanés que vous souhaitez conserver.
+
+Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
+
+
+NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+
+
+IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
+
+
+
+ a| 
+Conserver les instantanés pendant un certain nombre de jours
+ a| 
+Sélectionnez *conserver les copies pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les instantanés avant de les supprimer.
+
+
+
+ a| 
+Période de verrouillage des copies Snapshot principales
+ a| 
+Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané principale, sélectionnez *période de verrouillage de la copie d'instantané principale* et sélectionnez jours, mois ou années.
+
+La période de conservation SnapLock doit être inférieure à 100 ans.
+
+
+
+ a| 
+Période de verrouillage des copies Snapshot secondaires
+ a| 
+Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané secondaire, sélectionnez *période de verrouillage de la copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
+
+Pour que cette option soit efficace, vous devez effectuer les tâches suivantes :
+
+*** Sélectionnez la *période de verrouillage de la copie d'instantané primaire*.
+*** Sélectionnez l'une des options de réplication secondaires ou les deux.
+
+
+|===
++
+
+NOTE: Vous ne pouvez conserver les sauvegardes du journal d'archivage que si vous avez sélectionné les fichiers journaux d'archive dans le cadre de votre sauvegarde.
+
+.. Sélectionnez le libellé de la stratégie.
++
+Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
+
++
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+
+
+. Dans la section Sélectionner les options de réplication secondaire, sélectionnez l'une des options de réplication secondaires suivantes ou les deux :
++
+
+NOTE: Vous devez sélectionner les options de réplication secondaires pour *période de verrouillage de copie d'instantané secondaire* pour être effectif.
+
 +
 |===
 | Pour ce champ... | Procédez comme ça... 
@@ -202,18 +289,6 @@ Lorsque SnapLock est configuré uniquement sur le serveur secondaire à partir d
 Pour plus d'informations sur le coffre-fort SnapLock, voir https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Archivage des copies Snapshot sur WORM sur une destination d'archivage sécurisé"]
 
 Voir link:../protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones des bases de données Oracle sur la page topologie"].
-
-
-
- a| 
-Deuxième étiquette de police
- a| 
-Sélectionnez une étiquette Snapshot.
-
-Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
-
-
-NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
 
 
 

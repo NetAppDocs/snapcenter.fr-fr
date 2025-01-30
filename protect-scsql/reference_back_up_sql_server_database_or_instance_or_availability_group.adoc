@@ -19,7 +19,7 @@ Les opérations de sauvegarde et de restauration ne peuvent pas être effectuée
 
 Le workflow suivant montre l'ordre dans lequel vous devez effectuer les opérations de sauvegarde :
 
-image::../media/scsql_backup_workflow.png[Flux de travail de sauvegarde SCSQL]
+image::../media/scsql_backup_workflow.gif[Flux de travail de sauvegarde SCSQL]
 
 
 NOTE: Les options sauvegarde immédiate, restauration, gestion des sauvegardes et clonage de la page Ressources sont désactivées si vous sélectionnez un LUN non NetApp, une base de données corrompue ou une base de données en cours de restauration.

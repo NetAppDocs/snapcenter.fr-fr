@@ -46,3 +46,5 @@ Les objets peuvent être clonés, sauvegarde, groupe de ressources, système de 
 * Vous devez avoir attribué l'utilisateur RBAC à l'hôte, au plug-in SnapCenter pour Microsoft SQL Server, aux informations d'identification, au groupe de ressources sur le cycle de vie des clones et au système de stockage.
 * Vous devez avoir ouvert une session SnapCenter en tant qu'utilisateur RBAC.
 
+
+Pour plus d'informations sur la désinstallation du plug-in SnapCenter pour VMware vSphere, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_remove_plugin.html["Suppression du plug-in SnapCenter pour VMware vSphere"^].

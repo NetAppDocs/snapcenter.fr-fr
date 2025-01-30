@@ -16,6 +16,6 @@ Le workflow de restauration et de reprise comprend la planification, la réalisa
 .Description de la tâche
 Le flux de travail suivant montre l'ordre dans lequel vous devez effectuer l'opération de restauration :
 
-image::../media/all_plug_ins_restore_workflow.png[Restaurer le flux de travail]
+image::../media/all_plug_ins_restore_workflow.gif[Restaurer le flux de travail]
 
 Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide de la cmdlet SnapCenter ou consultez le https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"].

@@ -32,7 +32,7 @@ L'option *File System Consistency* ne s'applique qu'aux applications exécutées
 . Dans la page stratégies, effectuez les opérations suivantes :
 +
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
-.. Sélectionnez *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Sélectionnez * * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]dans la colonne configurer les plannings pour la stratégie pour laquelle vous souhaitez configurer un planning.
 .. Dans la boîte de dialogue Ajouter des plannings pour la stratégie _nom_règle_, configurez la planification, puis sélectionnez *OK*.
 +
 _policy_name_ est le nom de la stratégie que vous avez sélectionnée.

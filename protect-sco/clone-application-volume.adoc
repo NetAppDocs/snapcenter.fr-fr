@@ -70,7 +70,7 @@ Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressou
 
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Oracle Database dans la liste.
 . Dans la page Ressources, sélectionnez *Volume d'application* dans la liste *Affichage*.
-. Sélectionnez la ressource clonée et cliquez sur image:../media/split_cone.gif[""].
+. Sélectionnez la ressource clonée et cliquez sur image:../media/split_clone.gif["séparer le clone"].
 . Vérifiez la taille estimée du clone à diviser et l'espace requis disponible sur l'agrégat, puis cliquez sur *Start*.
 . Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
 
@@ -90,7 +90,7 @@ Vous pouvez supprimer les clones si vous les trouvez devenus superflus. Vous ne 
 La page topologie de ressource ou de groupe de ressources s'affiche.
 
 . Dans la vue gérer les copies, sélectionnez *clones* dans les systèmes de stockage primaire ou secondaire (mis en miroir ou répliqué).
-. Sélectionnez le clone, puis cliquez sur image:../media/delete_icon.gif[""].
+. Sélectionnez le clone, puis cliquez sur image:../media/delete_icon.gif["icône supprimer"].
 . Sur la page Supprimer le clone, effectuez les opérations suivantes :
 +
 .. Dans le champ *Pre clone delete*, entrez les noms des scripts à exécuter avant de supprimer le clone.

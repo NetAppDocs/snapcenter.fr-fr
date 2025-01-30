@@ -48,25 +48,28 @@ NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sau
 . Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
 . Dans la page Paramètres, cliquez sur *stratégies*.
 . Cliquez sur *Nouveau*.
-. Dans la page Nom, entrez le nom et la description de la stratégie.
-. Dans la page Paramètres, effectuez les opérations suivantes :
+. Dans la page Nom, entrez le nom et les détails de la stratégie.
+. Dans la page Type de stratégie, effectuez les opérations suivantes :
 +
-** Spécifiez le type d'horaire en sélectionnant *On Demand*, *Hourly*, *Daily*, *Weekly* ou *Monthly*.
+.. Sélectionnez le type de stockage.
+.. Dans la section Paramètres de sauvegarde personnalisés, indiquez tous les paramètres de sauvegarde spécifiques qui doivent être transmis au plug-in au format clé-valeur.
++
+Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
+
+
+
+. Dans la page instantané et réplication, effectuez les opérations suivantes :
++
+.. Spécifiez le type d'horaire en sélectionnant *On Demand*, *Hourly*, *Daily*, *Weekly* ou *Monthly*.
 +
 
 NOTE: Vous pouvez spécifier la planification (date de début, date de fin et fréquence) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais vous permet d'affecter des programmes de sauvegarde différents à chaque stratégie.
 
 +
-image::../media/backup_settings.gif[Sauvegarder la page des paramètres]
-
-+
 
 NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
 
-** Dans la section Paramètres de sauvegarde personnalisés, fournissez tous les paramètres de sauvegarde spécifiques qui doivent être transmis au plug-in au format clé-valeur. Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
-
-
-. Sur la page *Retention*, spécifiez les paramètres de rétention pour le type de sauvegarde et le type de planification sélectionné dans la page *Type de sauvegarde* :
+.. Dans la section Paramètres de l'instantané, spécifiez les paramètres de rétention pour le type de sauvegarde et le type de planification sélectionné dans la page *Type de sauvegarde* :
 +
 |===
 | Les fonctions que vous recherchez... | Alors... 
@@ -75,7 +78,7 @@ NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'he
  a| 
 Conserver un certain nombre d'instantanés
  a| 
-Sélectionnez *nombre total de copies Snapshot à conserver*, puis indiquez le nombre de snapshots que vous souhaitez conserver.
+Sélectionnez *copies à conserver*, puis indiquez le nombre d'instantanés que vous souhaitez conserver.
 
 Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
@@ -90,19 +93,46 @@ NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP
  a| 
 Conserver les instantanés pendant un certain nombre de jours
  a| 
-Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer.
+Sélectionnez *conserver les copies pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les instantanés avant de les supprimer.
 
 
 
  a| 
-Période de verrouillage des copies Snapshot
+Période de verrouillage des copies Snapshot principales
  a| 
 Sélectionnez période de verrouillage des instantanés, puis sélectionnez jours, mois ou années.
 
 La période de conservation SnapLock doit être inférieure à 100 ans.
 
+
+
+ a| 
+Période de verrouillage des copies Snapshot secondaires
+ a| 
+Sélectionnez *période de verrouillage de copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
+
+Pour que cette option soit efficace, vous devez effectuer les tâches suivantes :
+
+*** Sélectionnez la *période de verrouillage de la copie d'instantané primaire*.
+*** Sélectionnez l'une des options de réplication secondaires ou les deux.
+
+
 |===
-. Dans la page *Replication*, spécifiez les paramètres de réplication :
+.. Sélectionnez un libellé de stratégie.
++
+Selon l'étiquette de règle que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à l'étiquette.
+
++
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+
+
+. Dans la section Sélectionner les options de réplication secondaire, sélectionnez l'une des options de réplication secondaires suivantes ou les deux :
++
+
+NOTE: Vous devez sélectionner les options de réplication secondaires pour *période de verrouillage de copie d'instantané secondaire* pour être effectif.
+
 +
 |===
 | Pour ce champ... | Procédez comme ça... 
@@ -119,7 +149,7 @@ Lors de la réplication secondaire, le délai d'expiration SnapLock charge le d�
 
 Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
 
-Voir link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["Consultez les sauvegardes et clones liés aux ressources des plug-ins pris en charge par NetApp sur la page topologie"].
+Voir link:view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["Consultez la page topologie des plug-ins pris en charge par NetApp, ainsi que les sauvegardes et clones liés aux ressources"].
 
 
 
@@ -132,22 +162,9 @@ Lors de la réplication secondaire, le délai d'expiration SnapLock charge le d�
 
 Lorsque SnapLock est configuré uniquement sur le serveur secondaire à partir de ONTAP appelé coffre-fort SnapLock, cliquez sur le bouton *Actualiser* de la page topologie pour actualiser la période de verrouillage sur le serveur secondaire extrait de ONTAP.
 
-Pour plus d'informations sur le coffre-fort SnapLock, reportez-vous à la section archivage des snapshots en mode WORM sur un coffre-fort
-destination
+Pour plus d'informations sur le coffre-fort SnapLock, reportez-vous à la section archivage des snapshots en mode WORM sur une destination de coffre-fort.
 
-link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["Consultez les sauvegardes et clones liés aux ressources des plug-ins pris en charge par NetApp sur la page topologie"].
-
-
-
- a| 
-*Étiquette de politique secondaire*
- a| 
-Sélectionnez une étiquette Snapshot.
-
-Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
-
-
-NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+Voir link:view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["Consultez la page topologie des plug-ins pris en charge par NetApp, ainsi que les sauvegardes et clones liés aux ressources"].
 
 
 

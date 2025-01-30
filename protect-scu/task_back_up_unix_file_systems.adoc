@@ -16,7 +16,7 @@ Si une ressource ne fait pas partie d'un groupe de ressources, vous pouvez sauve
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in approprié dans la liste.
 . Dans la page Ressources, sélectionnez *chemin* dans la liste Affichage.
-. Cliquez sur image:../media/filter_icon.png["Icône de filtre"], Puis sélectionnez le nom d'hôte et les systèmes de fichiers Unix pour filtrer les ressources.
+. Cliquez sur image:../media/filter_icon.gif["icône de filtre"], puis sélectionnez le nom d'hôte et les systèmes de fichiers Unix pour filtrer les ressources.
 . Sélectionnez le système de fichiers à sauvegarder.
 . Dans la page Ressources, vous pouvez effectuer les opérations suivantes :
 +

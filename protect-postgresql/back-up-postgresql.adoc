@@ -36,7 +36,7 @@ NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération �
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page ressource, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
 +
-Sélectionnez image:../media/filter_icon.png["icône de filtre"], puis sélectionnez le nom d'hôte et le type de ressource pour filtrer les ressources. Vous pouvez ensuite choisir de image:../media/filter_icon.png["icône de filtre"] fermer le volet de filtre.
+Sélectionnez * *image:../media/filter_icon.gif["icône de filtre"], puis sélectionnez le nom d'hôte et le type de ressource pour filtrer les ressources. Vous pouvez ensuite choisir de image:../media/filter_icon.gif["icône de filtre"] fermer le volet de filtre.
 
 . Sélectionnez la ressource à sauvegarder.
 . Dans la page ressource, sélectionnez *utiliser le format de nom personnalisé pour la copie Snapshot*, puis entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de l'instantané.
@@ -108,12 +108,12 @@ image:../media/application_settings.gif["paramètres de l'application"]
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
 +
 
-NOTE: Vous pouvez également créer une stratégie en cliquant sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Vous pouvez également créer une police en cliquant sur * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"].
 
 +
 Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.
 
-.. Sélectionnez *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Sélectionnez * * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]dans la colonne configurer les plannings pour la stratégie pour laquelle vous souhaitez configurer un planning.
 .. Dans la boîte de dialogue Ajouter des plannings pour la stratégie _nom_règle_, configurez la planification, puis sélectionnez *OK*.
 +
 _policy_name_ est le nom de la stratégie que vous avez sélectionnée.

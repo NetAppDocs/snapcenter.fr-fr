@@ -15,6 +15,6 @@ Vous pouvez utiliser SnapCenter pour restaurer les bases de données Exchange en
 
 Le flux de travail suivant montre l'ordre dans lequel vous devez effectuer les opérations de restauration de la base de données Exchange :
 
-image:../media/all_plug_ins_restore_workflow.png["Restaurer le flux de travail"]
+image:../media/all_plug_ins_restore_workflow.gif["Restaurer le flux de travail"]
 
 Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde et de restauration. Pour plus d'informations sur les applets de commande PowerShell, consultez l'aide du cmdlet SnapCenter ou consultez le https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

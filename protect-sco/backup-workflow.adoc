@@ -15,7 +15,7 @@ Vous pouvez créer une sauvegarde d'une ressource (base de données) ou d'un gro
 
 Le workflow suivant montre la séquence dans laquelle vous devez effectuer l'opération de sauvegarde :
 
-image::../media/sco_backup_workflow.png[Workflow de sauvegarde pour Oracle]
+image::../media/sco_backup_workflow.gif[Workflow de sauvegarde pour Oracle]
 
 Lors de la création d'une sauvegarde pour les bases de données Oracle, un fichier de verrouillage opérationnel (_.sm_lock_dbsid_) est créé sur l'hôte de la base de données Oracle dans le répertoire _/var/opt/snapcenter/sco/lock_ pour éviter l'exécution de plusieurs opérations sur la base de données. Une fois la base de données sauvegardée, le fichier de verrouillage opérationnel est automatiquement supprimé.
 

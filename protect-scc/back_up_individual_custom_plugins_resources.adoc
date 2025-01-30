@@ -26,7 +26,7 @@ Si une ressource de plug-ins personnalisés ne fait pas partie d'un groupe de re
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
 . Dans la page Ressources, filtrez les ressources de la liste déroulante *View* en fonction du type de ressource.
 +
-Cliquez sur image:../media/filter_icon.png[""], puis sélectionnez le nom d'hôte et le type de ressource pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.png["Icône de filtre"] pour fermer le volet de filtre.
+Cliquez sur image:../media/filter_icon.gif["icône de filtre"], puis sélectionnez le nom d'hôte et le type de ressource pour filtrer les ressources. Vous pouvez ensuite cliquer sur image:../media/filter_icon.gif["Icône de filtre"] pour fermer le volet de filtre.
 
 . Cliquez sur la ressource à sauvegarder.
 . Dans la page ressource, si vous souhaitez utiliser un nom personnalisé, cochez la case *utiliser le format de nom personnalisé pour la copie Snapshot* , puis entrez un format de nom personnalisé pour le nom de l'instantané.

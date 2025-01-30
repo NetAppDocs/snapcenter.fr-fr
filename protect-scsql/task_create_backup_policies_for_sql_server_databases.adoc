@@ -52,10 +52,6 @@ La spécification d'une période de verrouillage de snapshot empêche la suppres
 +
 Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
-+
-
-NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sauvegarde SnapCenter et les paramètres SnapLock secondaires sont gérés par ONTAP.
-
 
 
 
@@ -67,24 +63,26 @@ NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sau
 . Dans le volet de navigation de gauche, sélectionnez *Paramètres*.
 . Dans la page Paramètres, sélectionnez *stratégies*.
 . Sélectionnez *Nouveau*.
-. Dans la page *Nom*, entrez le nom et la description de la stratégie.
+. Sur la page *Nom*, entrez le nom et les détails de la stratégie.
 
 
 
 
-== Étape 2 : configurer les options de sauvegarde
+== Étape 2 : configuration des options de stratégie
 
-. Choisissez votre type de sauvegarde
-
-
+. Dans la page Type de stratégie, effectuez les opérations suivantes :
++
+.. Sélectionnez votre type de stockage.
+.. Sélectionnez la portée de la règle.
++
 [role="tabbed-block"]
 ====
 .Sauvegarde complète et sauvegarde des journaux
 --
 Sauvegardez les fichiers de base de données et les journaux de transactions et tronquez les journaux de transactions.
 
-. Sélectionnez *sauvegarde complète et sauvegarde du journal*.
-. Entrez le nombre maximal de bases de données à sauvegarder pour chaque snapshot.
+... Sélectionnez *sauvegarde complète et sauvegarde du journal*.
+... Entrez le nombre maximal de bases de données à sauvegarder pour chaque snapshot.
 +
 
 NOTE: Vous devez augmenter cette valeur si vous souhaitez exécuter simultanément plusieurs opérations de sauvegarde.
@@ -96,8 +94,8 @@ NOTE: Vous devez augmenter cette valeur si vous souhaitez exécuter simultanéme
 --
 Sauvegardez les fichiers de base de données.
 
-. Sélectionnez *sauvegarde complète*.
-. Entrez le nombre maximal de bases de données à sauvegarder pour chaque snapshot.
+... Sélectionnez *sauvegarde complète*.
+... Entrez le nombre maximal de bases de données à sauvegarder pour chaque snapshot.
 La valeur par défaut est 100
 +
 
@@ -108,14 +106,14 @@ NOTE: Vous devez augmenter cette valeur si vous souhaitez exécuter simultanéme
 --
 .Sauvegarde des journaux
 --
-. Sauvegardez les journaux de transactions.
-. Sélectionnez *sauvegarde journal*.
+... Sauvegardez les journaux de transactions.
+... Sélectionnez *sauvegarde journal*.
 
 
 --
 .Copie seule sauvegarde
 --
-. Si vous sauvegardez vos ressources à l'aide d'une autre application de sauvegarde, sélectionnez *copie uniquement sauvegarde*.
+... Si vous sauvegardez vos ressources à l'aide d'une autre application de sauvegarde, sélectionnez *copie uniquement sauvegarde*.
 
 
 Le fait de préserver l'intégrité des journaux de transactions permet à toute application de sauvegarde de restaurer les bases de données. En règle générale, vous ne devez pas utiliser l'option de copie uniquement dans d'autres cas.
@@ -125,6 +123,14 @@ NOTE: Microsoft SQL ne prend pas en charge l'option *copie uniquement sauvegarde
 
 --
 ====
+
+
+
+
+
+
+== Étape 3 : configurer les paramètres du groupe de disponibilité
+
 . Dans la section Paramètres du groupe de disponibilité, effectuez les opérations suivantes :
 +
 .. Sauvegarde sur le réplica de sauvegarde préféré uniquement.
@@ -148,12 +154,17 @@ Par défaut, la priorité minimale est 1 et la priorité maximale est 100.
 
 NOTE: Dans les configurations en cluster, les sauvegardes sont conservées sur chaque nœud du cluster en fonction des paramètres de conservation définis dans la règle. Si le nœud propriétaire de l'AG change, les sauvegardes sont prises en fonction des paramètres de conservation et les sauvegardes du nœud propriétaire précédent seront conservées. La conservation pour le groupe AG est applicable uniquement au niveau du nœud.
 
-. Planifiez la fréquence de sauvegarde de cette stratégie. Spécifiez le type d'horaire en sélectionnant *sur demande*, *horaire*, *quotidien*, *hebdomadaire* ou *mensuel*.
+
+
+
+
+== Étape 4 : configurer les paramètres de Snapshot et de réplication
+
+. Dans la page instantané et réplication, effectuez les opérations suivantes :
++
+.. Spécifiez le type d'horaire en sélectionnant *On Demand*, *Hourly*, *Daily*, *Weekly* ou *Monthly*.
 +
 Vous ne pouvez sélectionner qu'un seul type de planification pour une stratégie.
-
-+
-image:../media/backup_settings.gif["Écran des paramètres de sauvegarde."]
 
 +
 
@@ -167,11 +178,11 @@ NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'he
 
 
 
-== Étape 3 : configurer les paramètres de rétention
 
-Dans la page Retention, selon le type de sauvegarde sélectionné dans la page Type de sauvegarde, effectuez une ou plusieurs des opérations suivantes :
 
-. Dans la section Paramètres de conservation de l'opération de restauration à la minute, effectuez l'une des opérations suivantes :
+== Étape 5 : configurez les paramètres de conservation à chaud
+
+. Dans la section Paramètres de rétention à la minute, en fonction du type de sauvegarde sélectionné dans la page Type de sauvegarde, effectuez une ou plusieurs des opérations suivantes :
 
 
 [role="tabbed-block"]
@@ -193,11 +204,15 @@ Conservation des copies de sauvegarde pendant un nombre spécifique de jours.
 
 --
 ====
-. Dans la section *Paramètres de rétention de sauvegarde complète* pour les paramètres de rétention à la demande, effectuez les opérations suivantes :
+
+
+== Étape 6 : configurer les paramètres de snapshot
+
+. Pour les paramètres de conservation de sauvegarde complète, effectuez les opérations suivantes :
 +
 .. Spécifiez le nombre total d'instantanés à conserver
 +
-... Pour spécifier le nombre d'instantanés à conserver, sélectionnez *nombre total d'instantanés à conserver*.
+... Pour spécifier le nombre d'instantanés à conserver, sélectionnez *copies à conserver*.
 ... Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
 
@@ -206,65 +221,61 @@ Conservation des copies de sauvegarde pendant un nombre spécifique de jours.
 
 
 
-IMPORTANT: Par défaut, la valeur du nombre de rétention est définie sur 2. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
+IMPORTANT: Par défaut, la valeur du nombre de rétention est définie sur 2. Si vous définissez le nombre de rétention sur 1, l'opération de rétention risque d'échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
 
 
 NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
 
-. Durée de conservation des instantanés
+. Durée de conservation des snapshots
 +
-.. Si vous souhaitez spécifier le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer, sélectionnez *conserver les copies Snapshot pour*.
+.. Si vous souhaitez spécifier le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer, sélectionnez *conserver les copies pour*.
 
 
-. Si vous souhaitez spécifier la période de verrouillage des instantanés, sélectionnez *période de verrouillage des copies Snapshot* et sélectionnez jours, mois ou années.
-+
-La période de conservation SnapLock doit être inférieure à 100 ans.
-
-
-
-. Dans la section *Paramètres de rétention de sauvegarde complète* pour les paramètres de conservation horaire, quotidien, hebdomadaire et mensuel, spécifiez les paramètres de conservation pour le type de programme sélectionné dans la page Type de sauvegarde.
-+
-.. Spécifiez le nombre total d'instantanés à conserver
-+
-... Pour spécifier le nombre d'instantanés à conserver, sélectionnez *nombre total d'instantanés à conserver*. Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
-
-
-
-
-
-
-
-IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
-
-. Durée de conservation des instantanés
-+
-.. Pour spécifier le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer, sélectionnez *conserver les copies Snapshot pour*.
-
-
-. Si vous souhaitez spécifier la période de verrouillage des instantanés, sélectionnez *période de verrouillage des copies Snapshot* et sélectionnez jours, mois ou années.
+. Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané principale, sélectionnez *période de verrouillage de la copie d'instantané principale* et sélectionnez jours, mois ou années.
 +
 La période de conservation SnapLock doit être inférieure à 100 ans.
 
+. Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané secondaire, sélectionnez *période de verrouillage de la copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
 +
-Par défaut, la rétention des snapshots du journal est définie sur 7 jours. Utilisez l'applet de commande set-SmPolicy pour modifier la rétention des snapshots du journal.
+Pour que cette option soit efficace, vous devez effectuer les tâches suivantes :
 
-
-
++
+** Sélectionnez la *période de verrouillage de la copie d'instantané primaire*.
+** Sélectionnez l'une des options de réplication secondaires ou les deux.
++
 Dans cet exemple, la rétention des snapshots du journal est de 2 :
 
++
 .Montrer l'exemple
 []
 ====
 Set-SmPolicy -PolicyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'CSQL' -sqlbackuptype 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='DATA';ScheduleType='Hourly';RetentionCount=2},@{BackupType='BACKUPTYPE=';ReducationHourly='LOG};RetenCount='BackupType}, 'RegroupeHourly='Hourly=';RetenCount='BACKUPTYPE};RegroupeHourly=';RetenCount=';RegroupeHourly='
 
 ====
++
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter conserve les copies Snapshot de la base de données"]
 
 
 
-== Étape 4 : configurer les paramètres de réplication
+. Sélectionnez un libellé d'instantané
++
+Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
 
-. Dans la page réplication, spécifiez la réplication vers le système de stockage secondaire :
++
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+
+
+
+
+== Étape 7 : configurer les options de réplication secondaire
+
+. Dans la section Sélectionner les options de réplication secondaire, sélectionnez l'une des options de réplication secondaires suivantes ou les deux :
++
+
+NOTE: Vous devez sélectionner les options de réplication secondaires pour *période de verrouillage de copie d'instantané secondaire* pour être effectif.
+
 
 
 [role="tabbed-block"]
@@ -281,7 +292,7 @@ Cette option doit être activée pour la synchronisation active SnapMirror.
 Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal. Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
 
 +
-Voir link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones SQL Server sur la page topologie"].
+Voir link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones SQL Server sur la page topologie"].
 
 
 
@@ -301,20 +312,9 @@ Lorsque SnapLock est configuré uniquement sur le serveur secondaire à partir d
 Pour plus d'informations sur le coffre-fort SnapLock, voir https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Archivage des copies Snapshot sur WORM sur une destination d'archivage sécurisé"]
 
 +
-Voir link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones SQL Server sur la page topologie"].
+Voir link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["Afficher les sauvegardes et clones SQL Server sur la page topologie"].
 
 
-
---
-.Étiquette de police secondaire
---
-. Sélectionnez une étiquette Snapshot.
-
-
-Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
-
-
-NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
 
 --
 .Nombre de tentatives d'erreur
@@ -326,7 +326,7 @@ NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création 
 ====
 
 
-== Étape 5 : configurer les paramètres de script
+== Étape 8 : configurer les paramètres de script
 
 . Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript qui doivent être exécutés avant ou après l'opération de sauvegarde, respectivement.
 +
@@ -344,7 +344,7 @@ NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP de s
 
 
 
-== Étape 6 : configurer les paramètres de vérification
+== Étape 9 : configurer les paramètres de vérification
 
 Dans la page Vérification, effectuez les opérations suivantes :
 
@@ -388,7 +388,7 @@ NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou d
 
 
 
-== Étape 7 : passez en revue le résumé
+== Étape 10 : passez en revue le résumé
 
 . Passez en revue le résumé, puis sélectionnez *Terminer*.
 

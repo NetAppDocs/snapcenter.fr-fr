@@ -78,5 +78,5 @@ Vous devez avoir supprimé les hôtes, les utilisateurs, les groupes et les info
 . Dans la page Paramètres, cliquez sur *Paramètres globaux*.
 . Dans la page Paramètres globaux, cliquez sur *Paramètres de domaine*.
 . Dans la liste des domaines, sélectionnez le domaine que vous souhaitez annuler l'enregistrement.
-. Cliquez sur image:../media/delete_icon.gif[""], Puis cliquez sur *OK*.
+. Cliquez sur image:../media/delete_icon.gif["icône supprimer"], puis sur *OK*.
 

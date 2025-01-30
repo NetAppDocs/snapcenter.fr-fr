@@ -90,7 +90,7 @@ Entrez le nom d'utilisateur pour lequel la clé de stockage sécurisée de l'uti
 |===
 . Dans la page Entitetour Storage Footprint, sélectionnez un système de stockage et choisissez un ou plusieurs volumes, LUN et qtrees, puis cliquez sur *Save*.
 +
-Facultatif : vous pouvez cliquer sur *image:../media/add_policy_from_resourcegroup.gif[""]* Icône pour ajouter plus de volumes, de LUN et de qtrees à partir d'autres systèmes de stockage.
+Facultatif : vous pouvez cliquer sur l'icône *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]pour ajouter d'autres volumes, LUN et qtrees à partir d'autres systèmes de stockage.
 
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 +

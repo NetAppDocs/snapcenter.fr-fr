@@ -57,10 +57,6 @@ La spécification d'une période de verrouillage de snapshot empêche la suppres
 +
 Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots du coffre-fort SnapLock hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
-+
-
-NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sauvegarde SnapCenter et les paramètres SnapLock secondaires sont gérés par ONTAP.
-
 
 
 
@@ -69,8 +65,8 @@ NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sau
 . Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
 . Dans la page Paramètres, cliquez sur *stratégies*.
 . Cliquez sur *Nouveau*.
-. Dans la page Nom, entrez le nom et la description de la stratégie.
-. Dans la page Type de sauvegarde, effectuez les opérations suivantes :
+. Dans la page Nom, entrez le nom et les détails de la stratégie.
+. Dans la page Type de sauvegarde et réplication, effectuez les opérations suivantes :
 +
 .. Choisissez un type de sauvegarde :
 +
@@ -164,6 +160,59 @@ NOTE: Vous pouvez spécifier le planning (date de début, date de fin) des opér
 
 NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
 
+.. Sélectionnez le libellé police.
++
+Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
+
++
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+.. Dans la section Sélectionner les options de réplication secondaire, sélectionnez l'une des options de réplication secondaires suivantes ou les deux :
++
+
+NOTE: Vous devez sélectionner les options de réplication secondaires pour *période de verrouillage de copie d'instantané secondaire* pour être effectif. L'option *période de verrouillage de copie d'instantané secondaire* est disponible sur la page Retention.
+
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Mettre à jour SnapMirror après la création d'un Snapshot local
+ a| 
+Sélectionnez cette option pour conserver des copies en miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
+
+Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal.
+
+Cette option doit être activée pour la synchronisation active SnapMirror.
+
+
+IMPORTANT: La règle primaire uniquement ne peut pas être utilisée si la synchronisation active SnapMirror est configurée pour des volumes Exchange ONTAP. SnapCenter n'autorise pas cela. Vous devez activer l'option « miroir ».
+
+Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
+
+Voir link:../protect-sce/task_view_exchange_backups_in_the_topology_page.html["Afficher les sauvegardes Exchange sur la page topologie"].
+
+
+
+ a| 
+Mettre à jour SnapVault après avoir créé un instantané local
+ a| 
+Sélectionnez cette option pour effectuer la réplication de sauvegarde disque à disque.
+
+
+
+ a| 
+Nombre de tentatives d'erreur
+ a| 
+Saisissez le nombre de tentatives de réplication qui doivent se produire avant l'interruption du processus.
+
+|===
++
+
+NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter d'atteindre la limite maximale des snapshots sur le stockage secondaire.
+
 
 
 . Dans la page Retention, configurez les paramètres de rétention.
@@ -243,11 +292,24 @@ Sélectionnez l'option *conserver les copies Snapshot pour* et spécifiez le nom
 
 
  a| 
-Période de verrouillage des snapshots
+Période de verrouillage du snapshot principal
  a| 
-Sélectionnez *période de verrouillage des copies Snapshot*, puis sélectionnez jours, mois ou années.
+Sélectionnez *période de verrouillage des copies d'instantanés primaires*, puis sélectionnez jours, mois ou années.
 
 La période de conservation SnapLock doit être inférieure à 100 ans.
+
+
+
+ a| 
+Période de verrouillage des snapshots secondaires
+ a| 
+Sélectionnez *période de verrouillage de copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
+
+Pour que cette option soit efficace, vous devez effectuer les tâches suivantes :
+
+*** Sélectionnez la *période de verrouillage de la copie d'instantané primaire*.
+*** Sélectionnez l'une des options de réplication secondaires ou les deux.
+
 
 |===
 +
@@ -264,59 +326,6 @@ Dans l'exemple, la valeur 10 signifie que vous conservez jusqu'à 10 sauvegardes
 
 
 
-
-. Dans la page réplication, sélectionnez une ou les deux options de réplication secondaire suivantes :
-+
-|===
-| Pour ce champ... | Procédez comme ça... 
-
-
- a| 
-Mettre à jour SnapMirror après la création d'un Snapshot local
- a| 
-Sélectionnez cette option pour conserver des copies en miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
-
-Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal.
-
-Cette option doit être activée pour la synchronisation active SnapMirror.
-
-
-IMPORTANT: La règle primaire uniquement ne peut pas être utilisée si la synchronisation active SnapMirror est configurée pour des volumes Exchange ONTAP. SnapCenter n'autorise pas cela. Vous devez activer l'option « miroir ».
-
-Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
-
-Voir link:../protect-sce/task_view_exchange_backups_in_the_topology_page.html["Afficher les sauvegardes Exchange sur la page topologie"].
-
-
-
- a| 
-Mettre à jour SnapVault après avoir créé un instantané local
- a| 
-Sélectionnez cette option pour effectuer la réplication de sauvegarde disque à disque.
-
-
-
- a| 
-Deuxième étiquette de police
- a| 
-Sélectionnez une étiquette Snapshot.
-
-Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
-
-
-NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
-
-
-
- a| 
-Nombre de tentatives d'erreur
- a| 
-Saisissez le nombre de tentatives de réplication qui doivent se produire avant l'interruption du processus.
-
-|===
-+
-
-NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter d'atteindre la limite maximale des snapshots sur le stockage secondaire.
 
 . Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript qui doivent être exécutés avant ou après l'opération de sauvegarde, respectivement.
 +

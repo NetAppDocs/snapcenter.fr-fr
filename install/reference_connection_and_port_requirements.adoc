@@ -33,47 +33,61 @@ Vous pouvez modifier un port de plug-in après l'installation à l'aide de l'ass
 Le tableau ci-dessous répertorie les différents ports et leurs valeurs par défaut.
 
 |===
-| Type de port | Port par défaut 
+| Nom du port | Numéros de port | Protocole | Direction | Description 
 
 
  a| 
 Port SnapCenter
  a| 
-8146 (HTTPS), bidirectionnel, personnalisable, comme dans l'URL _\https://server:8146_
+8146
+ a| 
+HTTPS
+ a| 
+Bidirectionnel
+ a| 
+Ce port est utilisé pour la communication entre le client SnapCenter (l'utilisateur SnapCenter) et le serveur SnapCenter et est également utilisé pour la communication entre les hôtes de plug-in et le serveur SnapCenter.
 
-Utilisé pour la communication entre le client SnapCenter (utilisateur SnapCenter) et le serveur SnapCenter. Utilisé également pour la communication entre les hôtes du plug-in et le serveur SnapCenter.
-
-Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installez le serveur SnapCenter à l'aide de l'assistant d'installation."]
+Vous pouvez personnaliser le numéro de port.
 
 
 
  a| 
 Port de communication SMCore de SnapCenter
  a| 
-8145 (HTTPS), bidirectionnel, personnalisable
+8145
+ a| 
+HTTPS
+ a| 
+Bidirectionnel
+ a| 
+Ce port est utilisé pour la communication entre le serveur SnapCenter et les hôtes sur lesquels les plug-ins SnapCenter sont installés.
 
-Le port est utilisé pour la communication entre le serveur SnapCenter et les hôtes sur lesquels les plug-ins SnapCenter sont installés.
-
-Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installez le serveur SnapCenter à l'aide de l'assistant d'installation."]
+Vous pouvez personnaliser le numéro de port.
 
 
 
  a| 
 Port de service du planificateur
  a| 
-8154 (HTTPS)
-
+8154
+ a| 
+HTTPS
+ a| 
+ a| 
 Ce port permet d'orchestrer de manière centralisée les flux de travail du planificateur SnapCenter pour tous les plug-ins gérés au sein de l'hôte du serveur SnapCenter.
 
-Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installez le serveur SnapCenter à l'aide de l'assistant d'installation."]
+Vous pouvez personnaliser le numéro de port.
 
 
 
  a| 
 Port RabbitMQ
  a| 
-5672 (tcp)
-
+5672
+ a| 
+TCP
+ a| 
+ a| 
 Il s'agit du port par défaut sur lequel RabbitMQ écoute et il est utilisé pour la communication du modèle éditeur-abonné entre le service Planificateur et SnapCenter.
 
 
@@ -81,78 +95,85 @@ Il s'agit du port par défaut sur lequel RabbitMQ écoute et il est utilisé pou
  a| 
 Port MySQL
  a| 
-3306 (HTTPS), bidirectionnel, personnalisable
-
-Le port est utilisé pour la communication entre SnapCenter et la base de données de référentiel MySQL.
-
-Vous pouvez créer des connexions sécurisées entre le serveur SnapCenter et le serveur MySQL. link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["En savoir plus >>"]
-
-Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installez le serveur SnapCenter à l'aide de l'assistant d'installation."]
+3306
+ a| 
+HTTPS
+ a| 
+ a| 
+Le port est utilisé pour communiquer avec la base de données du référentiel SnapCenter. Vous pouvez créer des connexions sécurisées du serveur SnapCenter au serveur MySQL. link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["En savoir plus >>"]
 
 
 
  a| 
 Hôtes du plug-in Windows
  a| 
-135, 445 (TCP)
-
-En plus des ports 135 et 445, la plage de ports dynamiques spécifiée par Microsoft doit également être ouverte. Les opérations d'installation à distance utilisent le service Windows Management Instrumentation (WMI), qui recherche dynamiquement cette plage de ports.
-
-Pour plus d'informations sur la plage de ports dynamiques prise en charge, reportez-vous à la section https://support.microsoft.com/kb/832017["Présentation du service et configuration requise du port réseau pour Windows"^]
-
-Les ports sont utilisés pour la communication entre le serveur SnapCenter et l'hôte sur lequel le plug-in est installé. Pour envoyer les binaires de modules enfichables aux hôtes du plug-in Windows, les ports doivent être ouverts uniquement sur l'hôte du plug-in et ils peuvent être fermés après l'installation.
+135, 445
+ a| 
+TCP
+ a| 
+ a| 
+Ce port est utilisé pour la communication entre le serveur SnapCenter et l'hôte sur lequel le plug-in est installé. La plage de ports dynamique supplémentaire spécifiée par Microsoft doit également être ouverte.
 
 
 
  a| 
 Hôtes du plug-in Linux ou AIX
  a| 
-22 (SSH)
-
-Les ports sont utilisés pour la communication entre le serveur SnapCenter et l'hôte sur lequel le plug-in est installé. Les ports sont utilisés par SnapCenter pour copier les binaires de package plug-in vers les hôtes du plug-in Linux ou AIX et doivent être ouverts ou exclus du pare-feu ou des tables iptables.
+22
+ a| 
+SSH
+ a| 
+Unidirectionnel
+ a| 
+Ce port est utilisé pour la communication entre le serveur SnapCenter et l'hôte, lancé du serveur à l'hôte client.
 
 
 
  a| 
-Package de plug-ins SnapCenter pour Windows, offre de plug-ins SnapCenter pour Linux ou offre de plug-ins SnapCenter pour AIX
+Module de plug-ins SnapCenter pour Windows, Linux ou AIX
  a| 
-8145 (HTTPS), bidirectionnel, personnalisable
+8145
+ a| 
+HTTPS
+ a| 
+Bidirectionnel
+ a| 
+Ce port est utilisé pour la communication entre SMCore et les hôtes sur lesquels le package de plug-ins est installé. Personnalisable.
 
-Le port est utilisé pour la communication entre SMCore et les hôtes sur lesquels le package plug-ins est installé.
-
-Le chemin de communication doit également être ouvert entre la LIF de management du SVM et le serveur SnapCenter.
-
-Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html["Ajoutez des hôtes et installez le plug-in SnapCenter pour Microsoft Windows"] ou https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["Ajoutez des hôtes et installez le module de plug-ins SnapCenter pour Linux ou AIX."]
+Vous pouvez personnaliser le numéro de port.
 
 
 
  a| 
 Plug-in SnapCenter pour bases de données Oracle
  a| 
-27216, personnalisable
-
+27216
+ a| 
+ a| 
+ a| 
 Le port JDBC par défaut est utilisé par le plug-in pour Oracle pour se connecter à la base de données Oracle.
-
-Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["Ajoutez des hôtes et installez le module de plug-ins SnapCenter pour Linux ou AIX."]
 
 
 
  a| 
 Plug-in SnapCenter pour base de données Exchange
  a| 
-909, personnalisable
-
+909
+ a| 
+ a| 
+ a| 
 Le NET par défaut. Le port TCP est utilisé par le plug-in pour Windows pour se connecter aux rappels Exchange VSS.
-
-Pour personnaliser le port, voir link:../protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html["Ajoutez des hôtes et installez le plug-in pour Exchange"].
 
 
 
  a| 
 Plug-ins pris en charge par NetApp pour SnapCenter
  a| 
-9090 (HTTPS), fixe
-
+9090
+ a| 
+HTTPS
+ a| 
+ a| 
 Il s'agit d'un port interne utilisé uniquement sur l'hôte personnalisé du plug-in ; aucune exception de pare-feu n'est requise.
 
 La communication entre le serveur SnapCenter et les plug-ins personnalisés est routée via le port 8145.
@@ -162,31 +183,49 @@ La communication entre le serveur SnapCenter et les plug-ins personnalisés est 
  a| 
 Cluster ONTAP ou port de communication SVM
  a| 
-443 (HTTPS), bidirectional80 (HTTP), bidirectionnel
+* 443 (HTTPS)
+* 80 (HTTP)
 
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+Bidirectionnel
+ a| 
 Le port est utilisé par le SAL (Storage abstraction Layer) pour la communication entre l'hôte exécutant le serveur SnapCenter et le SVM. Le port est actuellement utilisé par le SAL sur SnapCenter pour les hôtes du plug-in Windows pour la communication entre l'hôte du plug-in SnapCenter et le SVM.
 
 
 
  a| 
-Plug-in SnapCenter pour base de données SAP HANA vCode Spell Checkerports
+Plug-in SnapCenter pour base de données SAP HANA
  a| 
-3instance_number13 ou 3instance_number15, HTTP ou HTTPS, bidirectionnel et personnalisable
+* 3instance_number13
+* 3instance_number15
 
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+Bidirectionnel
+ a| 
 Pour un seul tenant de conteneur de base de données multitenant (MDC), le numéro de port se termine par 13 ; pour non MDC, le numéro de port se termine par 15.
 
-Par exemple, 32013 est le numéro de port pour l'instance 20 et 31015 est le numéro de port pour l'instance 10.
-
-Pour personnaliser le port, voir https://docs.netapp.com/us-en/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html["Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants."]
+Vous pouvez personnaliser le numéro de port.
 
 
 
  a| 
-Port de communication du contrôleur de domaine
+Plug-in SnapCenter pour PostgreSQL
  a| 
-Reportez-vous à la documentation Microsoft pour identifier les ports devant être ouverts dans le pare-feu sur un contrôleur de domaine afin que l'authentification fonctionne correctement.
+5432
+ a| 
+ a| 
+ a| 
+Ce port est le port PostgreSQL par défaut utilisé pour la communication entre le plug-in pour PostgreSQL et le cluster PostgreSQL.
 
-Il est nécessaire d'ouvrir les ports Microsoft requis sur le contrôleur de domaine pour que le serveur SnapCenter, les hôtes Plug-in ou tout autre client Windows puisse authentifier les utilisateurs.
+Vous pouvez personnaliser le numéro de port.
 
 |===
 Pour modifier les détails du port, voir link:../admin/concept_manage_hosts.html#modify-plug-in-hosts["Modifier les hôtes du plug-in"].

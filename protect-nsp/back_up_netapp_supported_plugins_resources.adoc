@@ -15,6 +15,6 @@ Le workflow de sauvegarde comprend la planification, l'identification des ressou
 
 Le workflow suivant montre la séquence dans laquelle vous devez effectuer l'opération de sauvegarde :
 
-image::../media/scc_backup_workflow.png[Workflow de sauvegarde]
+image::../media/scc_backup_workflow.gif[Workflow de sauvegarde]
 
 Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide du cmdlet SnapCenter ou consultez le https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"]

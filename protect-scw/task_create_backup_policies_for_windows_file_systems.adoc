@@ -47,25 +47,12 @@ Vous pouvez utiliser L'API GET pour afficher la valeur de la clé. L'API DÉFINI
 
 
 
-
-NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sauvegarde SnapCenter et les paramètres SnapLock secondaires sont gérés par ONTAP.
-
 .Étapes
-. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
-. Dans la page Paramètres, cliquez sur *stratégies*.
-. Pour déterminer si vous pouvez utiliser une stratégie existante, sélectionnez le nom de la stratégie, puis cliquez sur *Détails*.
-+
-Après avoir passé en revue les stratégies existantes, vous pouvez effectuer l'une des opérations suivantes :
-
-+
-** Utiliser une stratégie existante.
-** Copier une stratégie existante et modifier la configuration de la règle.
-** Création d'une nouvelle règle.
-
-
-. Pour créer une nouvelle stratégie, cliquez sur *Nouveau*.
-. Dans la page Nom, entrez le nom de la stratégie et une description.
-. Dans la page Options de sauvegarde, effectuez les tâches suivantes :
+. Dans le volet de navigation de gauche, sélectionnez *Paramètres*.
+. Dans la page Paramètres, sélectionnez *stratégies*.
+. Sélectionnez *Nouveau*.
+. Dans la page Nom, entrez le nom et les détails de la stratégie.
+. Dans la page sauvegarde et réplication, effectuez les tâches suivantes :
 +
 .. Sélectionnez un paramètre de sauvegarde.
 +
@@ -94,52 +81,28 @@ La stratégie spécifie uniquement la fréquence de sauvegarde. La planification
 
 NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
 
-
-
-. Sur la page Retention, spécifiez les paramètres de conservation pour les sauvegardes à la demande et pour chaque fréquence d'horaire sélectionnée.
+.. Sélectionnez un libellé de stratégie.
 +
-|===
-| Option | Description 
-
-
- a| 
-Nombre total de copies Snapshot à conserver
- a| 
-Choisissez cette option si vous souhaitez spécifier le nombre de magasins SnapCenter d'instantanés avant de les supprimer automatiquement.
-
-
-
- a| 
-Supprimez les copies Snapshot antérieures à
- a| 
-Sélectionnez cette option si vous souhaitez spécifier le nombre de jours pendant lesquels SnapCenter conserve une copie de sauvegarde avant de la supprimer.
-
-
-
- a| 
-Période de verrouillage des copies Snapshot
- a| 
-Sélectionnez période de verrouillage des instantanés, puis sélectionnez jours, mois ou années.
-
-La période de conservation SnapLock doit être inférieure à 100 ans.
-
-|===
-+
-
-IMPORTANT: Vous devez définir le nombre de rétention sur 2 ou plus. La valeur minimale pour le nombre de rétention est 2.
+Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
 
 +
 
-NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
 
-. Dans la page réplication, spécifiez la réplication vers le système de stockage secondaire :
+
+
+. Dans la section Sélectionner les options de réplication secondaire, sélectionnez l'une des options de réplication secondaires suivantes ou les deux :
++
+
+NOTE: Vous devez sélectionner les options de réplication secondaires pour *période de verrouillage de copie d'instantané secondaire* pour être effectif.
+
 +
 |===
 | Pour ce champ... | Procédez comme ça... 
 
 
  a| 
-*Mettre à jour SnapMirror après avoir créé une copie Snapshot locale*
+Mettez à jour SnapMirror après avoir créé une copie Snapshot locale
  a| 
 Sélectionnez cette option pour créer des copies miroir des jeux de sauvegarde sur un autre volume (SnapMirror).
 
@@ -165,18 +128,6 @@ Pour plus d'informations sur le coffre-fort SnapLock, voir https://docs.netapp.c
 
 
  a| 
-Deuxième étiquette de police
- a| 
-Sélectionnez une étiquette Snapshot.
-
-Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
-
-
-NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
-
-
-
- a| 
 Nombre de tentatives d'erreur
  a| 
 Saisissez le nombre de tentatives de réplication qui doivent se produire avant l'interruption du processus.
@@ -185,6 +136,55 @@ Saisissez le nombre de tentatives de réplication qui doivent se produire avant 
 +
 
 NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter d'atteindre la limite maximale des snapshots sur le stockage secondaire.
+
+. Dans la page Paramètres de conservation, spécifiez les paramètres de conservation des sauvegardes à la demande et pour chaque fréquence de planification sélectionnée.
++
+|===
+| Option | Description 
+
+
+ a| 
+Copies Snapshot totales à conserver
+ a| 
+Choisissez cette option si vous souhaitez spécifier le nombre de magasins SnapCenter d'instantanés avant de les supprimer automatiquement.
+
+
+
+ a| 
+Conservation des copies Snapshot pour
+ a| 
+Sélectionnez cette option si vous souhaitez spécifier le nombre de jours pendant lesquels SnapCenter conserve une copie de sauvegarde avant de la supprimer.
+
+
+
+ a| 
+Période de verrouillage des copies Snapshot principales
+ a| 
+Sélectionnez période de verrouillage des instantanés, puis sélectionnez jours, mois ou années.
+
+La période de conservation SnapLock doit être inférieure à 100 ans.
+
+
+
+ a| 
+Période de verrouillage des copies Snapshot secondaires
+ a| 
+Sélectionnez *période de verrouillage de copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
+
+Pour que cette option soit efficace, vous devez effectuer les tâches suivantes :
+
+** Sélectionnez la *période de verrouillage de la copie d'instantané primaire*.
+** Sélectionnez l'une des options de réplication secondaires ou les deux.
+
+
+|===
++
+
+IMPORTANT: Vous devez définir le nombre de rétention sur 2 ou plus. La valeur minimale pour le nombre de rétention est 2.
+
++
+
+NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
 
 . Dans la page script, entrez le chemin d'accès du prescripteur ou du PostScript que vous souhaitez que le serveur SnapCenter s'exécute avant ou après l'opération de sauvegarde, respectivement, et un délai d'attente que SnapCenter attend pour que le script s'exécute avant l'expiration du délai.
 +

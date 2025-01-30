@@ -63,5 +63,5 @@ Le détail des sauvegardes et des clones est affiché sous forme de tableau.
 NOTE: Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent sur le stockage secondaire.
 
 . Pour supprimer un clone, sélectionnez-le dans le tableau, puis cliquez sur image:../media/delete_icon.gif["Icône Supprimer"].
-. Pour fractionner un clone, sélectionnez le clone dans le tableau, puis cliquez sur image:../media/split_cone.gif["Icône de répartition des clones"].
+. Si vous souhaitez diviser un clone, sélectionnez-le dans le tableau, puis cliquez sur image:../media/split_clone.gif["Icône de répartition des clones"].
 

@@ -26,7 +26,7 @@ Vous devez utiliser la page SnapCenter Ajouter un hôte pour ajouter des hôtes,
 * La documentation d'administration contient des informations sur la gestion des hôtes.
 * Si vous utilisez le compte de service géré de groupe (GMSA), vous devez configurer GMSA avec des privilèges d'administration.
 +
-link:../protect-postgresql/configure-gMSA-on-windows-server-2012-or-later.html["Configurez le compte de service géré de groupe sur Windows Server 2016 ou version ultérieure pour PostgreSQL"^]
+link:../protect-postgresql/configure-gMSA-on-windows-server-2012-or-later.html["Configurez le compte de service géré de groupe sur Windows Server 2016 ou version ultérieure pour PostgreSQL"]
 
 
 

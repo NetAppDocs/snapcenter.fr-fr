@@ -22,4 +22,4 @@ Il est possible de cloner des bases de données pour les raisons suivantes :
 
 Le workflow suivant affiche la séquence dans laquelle vous devez effectuer l'opération de clonage :
 
-image::../media/sco_scc_wfs_clone_workflow.png[workflow de clonage]
+image::../media/sco_scc_wfs_clone_workflow.gif[workflow de clonage]

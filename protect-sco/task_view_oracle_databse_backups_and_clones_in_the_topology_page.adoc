@@ -80,11 +80,11 @@ NOTE: Vous ne pouvez ni renommer, ni supprimer les sauvegardes qui se trouvent s
 ** Si vous avez catalogué la sauvegarde à l'aide d'Oracle Recovery Manager (RMAN), vous ne pouvez pas renommer ces sauvegardes cataloguées.
 
 
-. Pour supprimer un clone, sélectionnez-le dans le tableau, puis cliquez sur image:../media/delete_icon.gif[""].
+. Si vous souhaitez supprimer un clone, sélectionnez-le dans la table, puis cliquez sur image:../media/delete_icon.gif["icône supprimer"].
 
 
 Si la valeur attribuée à SnapmirrorStatusUpdateWaitTime est inférieure, les copies de sauvegarde Mirror et Vault ne sont pas répertoriées sur la page topologique, même si les volumes de données et de journaux sont protégés avec succès. Vous devez augmenter la valeur attribuée à SnapmirrorStatusUpdateWaitTime à l'aide de l'applet de commande _set-SmConfigSettings_ PowerShell.
 
 Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_.
 
-Vous pouvez également vous reporter à https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["Guide de référence sur les commandes du logiciel SnapCenter"^] ou https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Vous pouvez également vous reporter à https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["Guide de référence sur les commandes du logiciel SnapCenter"^] ou https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

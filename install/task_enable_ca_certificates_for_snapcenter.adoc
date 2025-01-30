@@ -31,10 +31,10 @@ Les informations relatives aux paramètres pouvant être utilisés avec la cmdle
 
 L'hôte de l'onglet hôtes gérés affiche un cadenas et la couleur du cadenas indique l'état de la connexion entre le serveur SnapCenter et l'hôte du plug-in.
 
-* *image:../media/enable_ca_issues_icon.png[""]* Indique qu'aucun certificat d'autorité de certification n'est activé ou affecté à l'hôte du plug-in.
-* *image:../media/enable_ca_good_icon.png[""]* Indique que le certificat CA a été validé avec succès.
-* *image:../media/enable_ca_failed_icon.png[""]* Indique que le certificat CA n'a pas pu être validé.
-* *image:../media/enable_ca_undefined_icon.png[""]* indique que les informations de connexion n'ont pas pu être récupérées.
+* * *image:../media/enable_ca_issues_icon.png["icône problèmes"]* Indique qu'aucun certificat d'autorité de certification n'est activé ou attribué à l'hôte du plug-in.
+* * *image:../media/enable_ca_good_icon.png["bonne icône"]Indique que le certificat de l'autorité de certification a été validé avec succès.
+* * *image:../media/enable_ca_failed_icon.png["icône échec"]Indique que le certificat de l'autorité de certification n'a pas pu être validé.
+* * *image:../media/enable_ca_undefined_icon.png["icône non définie"]* indique que les informations de connexion n'ont pas pu être récupérées.
 
 
 

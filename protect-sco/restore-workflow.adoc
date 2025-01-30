@@ -15,4 +15,4 @@ Le workflow de restauration inclut la planification, l'exécution des opération
 
 Le flux de travail suivant montre l'ordre dans lequel vous devez effectuer l'opération de restauration :
 
-image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_workflow]
+image::../media/all_plug_ins_restore_workflow.gif[all_plug-ins_restore_workflow]

@@ -15,7 +15,7 @@ Vous pouvez utiliser SnapCenter pour restaurer les bases de données SQL Server 
 
 Le workflow suivant montre la séquence dans laquelle vous devez effectuer les opérations de restauration de la base de données :
 
-image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_workflow]
+image::../media/all_plug_ins_restore_workflow.gif[all_plug-ins_restore_workflow]
 
 Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration, de restauration, de vérification et de clonage. Pour plus d'informations sur les applets de commande PowerShell, utilisez l'aide du cmdlet SnapCenter ou consultez le https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"]
 

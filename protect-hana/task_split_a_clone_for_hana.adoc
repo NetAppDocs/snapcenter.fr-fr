@@ -51,7 +51,7 @@ Sélectionnez *Path* dans la liste vue.
 +
 La page topologie de ressources s'affiche.
 
-. Dans la vue *gérer les copies*, sélectionnez la ressource clonée (par exemple, la base de données ou la LUN), puis cliquez sur *image:../media/split_cone.gif["Icône de fractionnement de clone"]*.
+. Dans la vue *gérer les copies*, sélectionnez la ressource clonée (par exemple, la base de données ou la LUN), puis cliquez sur * *image:../media/split_clone.gif["Icône de fractionnement de clone"].
 . Vérifiez la taille estimée du clone à diviser et l'espace requis disponible sur l'agrégat, puis cliquez sur *Start*.
 . Surveillez la progression de l'opération en cliquant sur *moniteur* > *travaux*.
 +

@@ -181,12 +181,12 @@ Sélectionnez *autre*, puis entrez la commande à exécuter sur l'hôte pour cr�
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
 +
 
-NOTE: Vous pouvez également créer une stratégie en cliquant sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Vous pouvez également créer une police en cliquant sur * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"].
 
 +
 Les stratégies sont répertoriées dans la section Configuration des planifications pour les stratégies sélectionnées.
 
-.. Dans la colonne configurer les programmes, cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* pour la stratégie que vous souhaitez configurer.
+.. Dans la colonne configurer les plannings, cliquez sur * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]pour la stratégie que vous souhaitez configurer.
 .. Dans la boîte de dialogue Ajouter des planifications pour la stratégie _policy_name_, configurez le programme, puis cliquez sur *OK*.
 +
 Où, nom_stratégie est le nom de la règle que vous avez sélectionnée.

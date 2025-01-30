@@ -15,32 +15,19 @@ Chaque version de SnapCenter contient un serveur SnapCenter et un pack de plug-i
 
 Le workflow montre les différentes tâches nécessaires à la mise à niveau du serveur SnapCenter et des modules de plug-in.
 
-image::../media/upgrade_workflow.png[mise à niveau du workflow]
+image::../media/upgrade_workflow.gif[mise à niveau du workflow]
 
 
 
 == Chemins de mise à niveau pris en charge
 
+Le chemin de mise à niveau vous permet de savoir à partir de quelles versions antérieures de SnapCenter vous pouvez mettre à niveau vers les dernières versions de SnapCenter et quelles versions des plug-ins sont prises en charge.
+
 |===
 | Si vous utilisez la version du serveur SnapCenter... | Vous pouvez directement mettre à niveau SnapCenter Server vers... | Versions de plug-in prises en charge 
 
 
-.2+| 4.9 | 5.0  a| 
-* 4.9
-* 5.0
-
-
-
-
-| 6,0  a| 
-* 6,0
-
-
-
-
-.2+| 5.0  a| 
-6,0
- a| 
+.3+| 5.0 | 6,0  a| 
 * 5.0
 * 6,0
 
@@ -53,14 +40,31 @@ image::../media/upgrade_workflow.png[mise à niveau du workflow]
 
 
 
-| 6,0 | 6.0.1  a| 
+| 6,1  a| 
+* 6,1
+
+
+
+
+.2+| 6,0  a| 
+6.0.1
+ a| 
 * 6,0
 * 6.0.1
 
 
+
+
+| 6,1  a| 
+* 6,1
+
+
+
+
+| 6.0.1 | 6,1  a| 
+* 6.0.1
+* 6,1
+
+
 |===
-
-IMPORTANT: Par exemple, si vous utilisez SnapCenter version 4.9 et que vous souhaitez effectuer une mise à niveau vers 6.0.1, vous devez d'abord mettre à niveau vers 5.0, puis effectuer une mise à niveau par déploiement vers 6.0.
-
-
-NOTE: Pour plus d'informations sur la mise à niveau du plug-in SnapCenter pour VMware vSphere, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["Mettez à niveau le plug-in SnapCenter pour VMware vSphere"^].
+Pour plus d'informations sur la mise à niveau du plug-in SnapCenter pour VMware vSphere, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["Mettez à niveau le plug-in SnapCenter pour VMware vSphere"^].

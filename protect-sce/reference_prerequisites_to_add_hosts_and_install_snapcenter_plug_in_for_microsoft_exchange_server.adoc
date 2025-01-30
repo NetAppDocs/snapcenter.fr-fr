@@ -81,9 +81,12 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-* .NET Core commençant par la version 8.0.5 et incluant tous les correctifs .NET 8 ultérieurs
+* ASP.NET Core Runtime 8.0.12 (et tous les correctifs 8.0.x suivants) Hosting Bundle
 * PowerShell Core 7.4.2
 * Java 11 Oracle Java et OpenJDK
++
+Java 11 Oracle Java et OpenJDK sont requis uniquement pour SAP HANA, IBM DB2, PostgreSQL, MySQL, les plug-ins pris en charge par NetApp et d'autres applications personnalisées qui peuvent être installées sur l'hôte Windows.
+
 
 
 Pour obtenir les dernières informations sur les versions prises en charge, consultez le https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
@@ -165,9 +168,12 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-* .NET Core commençant par la version 8.0.5 et incluant tous les correctifs .NET 8 ultérieurs
+* ASP.NET Core Runtime 8.0.12 (et tous les correctifs 8.0.x suivants) Hosting Bundle
 * PowerShell Core 7.4.2
 * Java 11 Oracle Java et OpenJDK
++
+Java 11 Oracle Java et OpenJDK sont requis uniquement pour SAP HANA, IBM DB2, PostgreSQL, MySQL, les plug-ins pris en charge par NetApp et d'autres applications personnalisées qui peuvent être installées sur l'hôte Windows.
+
 
 
 Pour obtenir les dernières informations sur les versions prises en charge, consultez le https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].

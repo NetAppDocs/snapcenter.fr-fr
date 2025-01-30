@@ -28,7 +28,7 @@ Par exemple, si la base de données de production est db1, la base de données c
 La page topologie de ressource ou de groupe de ressources s'affiche.
 
 . Dans la vue gérer les copies, sélectionnez *clones* dans les systèmes de stockage primaire ou secondaire (mis en miroir ou répliqué).
-. Sélectionnez le clone, puis cliquez sur image:../media/delete_icon.gif[""].
+. Sélectionnez le clone, puis cliquez sur image:../media/delete_icon.gif["icône supprimer"].
 +
 Si vous supprimez des clones de base de données SAP HANA, effectuez les opérations suivantes dans la page Delete Clone :
 

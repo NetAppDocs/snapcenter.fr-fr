@@ -29,6 +29,7 @@ SnapCenter peut être déployé de plusieurs manières :
 ** Les données qui résident dans les systèmes primaires ONTAP FAS, AFF ou ASA et qui sont répliquées vers les systèmes secondaires ONTAP FAS, AFF ou ASA
 ** Les données qui résident dans les systèmes primaires ONTAP Select
 ** Les données qui se trouvent sur les systèmes primaires et secondaires ONTAP FAS, AFF ou ASA et qui sont protégées pour le stockage objet local StorageGRID
+** Les données qui se trouvent sur les systèmes principaux et secondaires ONTAP ASA r2
 
 
 * Sur site, dans un cloud hybride, pour protéger ce qui suit :
@@ -89,7 +90,7 @@ Pour plus d'informations sur les API REST, voir https://docs.netapp.com/us-en/sn
 Pour plus d'informations sur les applets de commande Windows, reportez-vous à la section https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
 
 +
-Pour plus d'informations sur les commandes UNIX, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["Guide de référence sur les commandes du logiciel SnapCenter"^].
+Pour plus d'informations sur les commandes UNIX, voir https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["Guide de référence sur les commandes du logiciel SnapCenter"^].
 
 * Tableau de bord et reporting centralisés pour la protection des données
 * Contrôle d'accès basé sur des rôles (RBAC) pour la sécurité et la délégation.
@@ -111,10 +112,10 @@ Vous pouvez restaurer le serveur SnapCenter en cas d'incident, comme une corrupt
 
 * SnapLock
 +
-SnapLock est une solution de conformité haute performance qui permet aux entreprises qui utilisent le stockage WORM (Write Once, Read Many) de conserver les fichiers sous leur forme non modifiée à des fins réglementaires et de gouvernance.
+SnapLock est une solution de conformité haute performance qui permet aux entreprises qui utilisent le stockage WORM (Write Once, Read Many) de conserver les fichiers sous leur forme non modifiée à des fins réglementaires et de gouvernance. Pour plus d'informations sur SnapLock, reportez-vous àla section https://docs.netapp.com/us-en/ontap/snaplock/["Qu'est-ce que SnapLock"].
 
 +
-Pour plus d'informations sur SnapLock, reportez-vous à la section https://docs.netapp.com/us-en/ontap/snaplock/["Qu'est-ce que SnapLock"]
+Le verrouillage des snapshots empêche leur suppression accidentelle ou malveillante. SnapCenter vous permet de spécifier la période de verrouillage à la fois pour les snapshots principaux et secondaires.
 
 * Synchronisation active SnapMirror (initialement lancée sous la forme SnapMirror Business Continuity [SM-BC])
 +

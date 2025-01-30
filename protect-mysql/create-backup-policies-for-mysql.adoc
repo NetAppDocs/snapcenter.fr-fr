@@ -35,53 +35,140 @@ En outre, vous pouvez spécifier des paramètres de réplication, de script et d
 
 
 
-
-NOTE: Les paramètres SnapLock principaux sont gérés dans la stratégie de sauvegarde SnapCenter et les paramètres SnapLock secondaires sont gérés par ONTAP.
-
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
 . Dans la page Paramètres, cliquez sur *stratégies*.
 . Cliquez sur *Nouveau*.
-. Dans la page Nom, entrez le nom et la description de la stratégie.
+. Dans la page Nom, entrez le nom et les détails de la stratégie.
 . Dans la page Type de stratégie, effectuez les opérations suivantes :
 +
 .. Sélectionnez le type de stockage.
-.. Dans la section *Paramètres de sauvegarde personnalisés*, indiquez tous les paramètres de sauvegarde spécifiques qui doivent être transmis au plug-in au format clé-valeur.
+.. Dans la section Paramètres de sauvegarde personnalisés, indiquez tous les paramètres de sauvegarde spécifiques qui doivent être transmis au plug-in au format clé-valeur.
 +
 Vous pouvez fournir plusieurs valeurs de clé à transmettre au plug-in.
 
 
 
-. Dans la page instantané, spécifiez le type d'horaire en sélectionnant *sur demande*, *horaire*, *quotidien*, *hebdomadaire* ou *mensuel*.
+. Dans la page instantané et réplication, effectuez les opérations suivantes :
++
+.. Spécifiez le type d'horaire en sélectionnant *On Demand*, *Hourly*, *Daily*, *Weekly* ou *Monthly*.
 +
 
-NOTE: Vous pouvez spécifier la planification (date de début, date de fin et fréquence) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais aussi d'affecter des programmes de sauvegarde différents à chaque stratégie.
-
-+
-image::../media/backup_settings.gif[réglage de sauvegarde]
+NOTE: Vous pouvez spécifier la planification (date de début, date de fin et fréquence) de l'opération de sauvegarde lors de la création d'un groupe de ressources. Cela vous permet de créer des groupes de ressources partageant la même stratégie et la même fréquence de sauvegarde, mais vous permet d'affecter des programmes de sauvegarde différents à chaque stratégie.
 
 +
 
 NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'heure d'été (DST).
 
-. Dans la section Paramètres de l'instantané, spécifiez le nombre d'instantanés que vous souhaitez conserver.
-. Dans la page Retention, spécifiez les paramètres de conservation pour le type de sauvegarde et le type de programme sélectionné dans la page Type de sauvegarde :
+.. Dans la section Paramètres de l'instantané, spécifiez les paramètres de rétention pour le type de sauvegarde et le type de planification sélectionné dans la page *Type de sauvegarde* :
 +
 |===
 | Les fonctions que vous recherchez... | Alors... 
 
 
  a| 
-Conserver un certain nombre de snapshots
+Conserver un certain nombre d'instantanés
  a| 
 Sélectionnez *copies à conserver*, puis indiquez le nombre d'instantanés que vous souhaitez conserver.
 
 Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
+
+NOTE: Si vous prévoyez d'activer la réplication SnapVault, vous devez définir le nombre de rétention sur 2 ou plus. Si vous définissez le nombre de rétention sur 1, l'opération de conservation peut échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
+
+
+NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+
+
+
+ a| 
+Conserver les instantanés pendant un certain nombre de jours
+ a| 
+Sélectionnez *conserver les copies pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les instantanés avant de les supprimer.
+
+
+
+ a| 
+Période de verrouillage des copies Snapshot principales
+ a| 
+Sélectionnez période de verrouillage des instantanés, puis sélectionnez jours, mois ou années.
+
+La période de conservation SnapLock doit être inférieure à 100 ans.
+
+
+
+ a| 
+Période de verrouillage des copies Snapshot secondaires
+ a| 
+Sélectionnez *période de verrouillage de copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
+
+Pour que cette option soit efficace, vous devez effectuer les tâches suivantes :
+
+*** Sélectionnez la *période de verrouillage de la copie d'instantané primaire*.
+*** Sélectionnez l'une des options de réplication secondaires ou les deux.
+
+
+|===
+.. Sélectionnez un libellé de stratégie.
++
+Selon l'étiquette de règle que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à l'étiquette.
+
++
+
+NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+
+
+
+. Dans la section Sélectionner les options de réplication secondaire, sélectionnez l'une des options de réplication secondaires suivantes ou les deux :
++
+
+NOTE: Vous devez sélectionner les options de réplication secondaires pour *période de verrouillage de copie d'instantané secondaire* pour être effectif.
+
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+*Mettre à jour SnapMirror après avoir créé une copie Snapshot locale*
+ a| 
+Sélectionnez ce champ pour créer des copies en miroir des jeux de sauvegarde sur un autre volume (réplication SnapMirror).
+
+Si la relation de protection dans ONTAP est de type miroir et coffre-fort et si vous sélectionnez uniquement cette option, le snapshot créé sur le primaire ne sera pas transféré vers la destination, mais sera répertorié dans la destination. Si cet instantané est sélectionné à partir de la destination pour effectuer une opération de restauration, le message d'erreur suivant s'affiche : l'emplacement secondaire n'est pas disponible pour la sauvegarde en miroir/en coffre-fort sélectionnée.
+
+Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal.
+
+Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
+
+Voir link:view-mysql-database-backups-and-clones-in-the-topology-page.html["Afficher les sauvegardes et clones liés aux ressources MySQL dans la page topologie"].
+
+
+
+ a| 
+*Mettre à jour SnapVault après avoir créé une copie Snapshot locale*
+ a| 
+Sélectionnez cette option pour effectuer la réplication de sauvegarde disque à disque (sauvegardes SnapVault).
+
+Lors de la réplication secondaire, le délai d'expiration SnapLock charge le délai d'expiration du SnapLock principal. Si vous cliquez sur le bouton *Rafraîchir* de la page topologie, l'heure d'expiration SnapLock secondaire et primaire est actualisée à partir de ONTAP.
+
+Lorsque SnapLock est configuré uniquement sur le serveur secondaire à partir de ONTAP appelé coffre-fort SnapLock, cliquez sur le bouton *Actualiser* de la page topologie pour actualiser la période de verrouillage sur le serveur secondaire extrait de ONTAP.
+
+Pour plus d'informations sur le coffre-fort SnapLock, reportez-vous à la section archivage des snapshots en mode WORM sur un coffre-fort
+destination
+
+Voir link:view-mysql-database-backups-and-clones-in-the-topology-page.html["Afficher les sauvegardes et clones liés aux ressources MySQL dans la page topologie"].
+
+
+
+ a| 
+*Nombre de tentatives d'erreur*
+ a| 
+Saisissez le nombre maximal de tentatives de réplication pouvant être autorisées avant l'arrêt de l'opération.
+
 |===
 +
 
-IMPORTANT: Dans le cas des sauvegardes basées sur des copies Snapshot, vous devez définir le nombre de rétention à 2 ou plus si vous prévoyez d'activer la réplication SnapVault. Si vous définissez le nombre de rétention sur 1, l'opération de rétention risque d'échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
+NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter d'atteindre la limite maximale des snapshots sur le stockage secondaire.
 
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 

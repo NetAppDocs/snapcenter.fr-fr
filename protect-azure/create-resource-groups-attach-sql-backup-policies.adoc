@@ -49,7 +49,7 @@ Cochez cette case et entrez un format de nom personnalisé à utiliser pour le n
 . Dans la page stratégies, effectuez les opérations suivantes :
 +
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
-.. Dans la colonne configurer les programmes, cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]* pour la stratégie que vous souhaitez configurer.
+.. Dans la colonne configurer les plannings, cliquez sur * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]pour la stratégie que vous souhaitez configurer.
 .. Dans la boîte de dialogue Ajouter des planifications pour la stratégie _policy_name_, configurez le programme, puis cliquez sur *OK*.
 .. Sélectionnez le planificateur Microsoft SQL Server.
 
@@ -57,7 +57,7 @@ Cochez cette case et entrez un format de nom personnalisé à utiliser pour le n
 . Dans la page Vérification, effectuez les opérations suivantes :
 +
 .. Sélectionnez le serveur de vérification.
-.. Sélectionnez la stratégie pour laquelle vous souhaitez configurer votre planning de vérification, puis cliquez sur *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Sélectionnez la stratégie pour laquelle vous souhaitez configurer votre planning de vérification, puis cliquez sur * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"].
 .. Sélectionnez *Exécuter la vérification après la sauvegarde* ou *Exécuter la vérification planifiée*.
 .. Cliquez sur *OK*.
 

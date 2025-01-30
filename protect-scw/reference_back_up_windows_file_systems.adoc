@@ -17,6 +17,8 @@ Vous pouvez planifier plusieurs sauvegardes pour les exécuter simultanément su
 
 Le workflow suivant montre l'ordre dans lequel vous devez effectuer les opérations de sauvegarde :
 
+image::../media/sce_backup_workflow.gif[workflow de sauvegarde]
+
 image::../media/sce_backup_workflow.gif[Workflow de sauvegarde de la base de données Exchange]
 
 Vous pouvez également utiliser les applets de commande PowerShell manuellement ou dans des scripts pour réaliser des opérations de sauvegarde, de restauration et de clonage. L'aide du cmdlet SnapCenter ou le https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^] contient des informations détaillées sur les applets de commande PowerShell.

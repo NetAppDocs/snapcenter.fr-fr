@@ -14,6 +14,7 @@ summary: 'Si une ressource ne fait pas encore partie d"un groupe de ressources, 
 Si une ressource ne fait pas encore partie d'un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.
 
 .Description de la tâche
+* Pour optimiser l'opération de sauvegarde, vous devez créer un enregistrement de recherche inverse des noms de cluster Windows et des adresses IP dans le serveur DNS.
 * Pour l'authentification des informations d'identification Windows, vous devez configurer vos informations d'identification avant d'installer les plug-ins.
 * Pour l'authentification de l'instance SQL Server, vous devez ajouter les informations d'identification après l'installation des plug-ins.
 * Pour l'authentification GMSA, vous devez configurer GMSA lors de l'enregistrement de l'hôte avec SnapCenter dans la page *Ajouter hôte* ou *Modifier hôte* pour activer et utiliser le GMSA.
@@ -51,12 +52,12 @@ Par exemple, clienttext_policy_hostname ou Resource_hostname. Par défaut, un ho
 +
 .. Dans la section stratégies, sélectionnez une ou plusieurs stratégies dans la liste déroulante.
 +
-Vous pouvez créer une stratégie en sélectionnant *image:../media/add_policy_from_resourcegroup.gif[""]* pour démarrer l'assistant de règles.
+Vous pouvez créer une stratégie en sélectionnant * * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]pour lancer l'assistant de stratégie.
 
 +
 Dans la section *configurer les plannings pour les stratégies sélectionnées*, les stratégies sélectionnées sont répertoriées.
 
-.. Sélectionnez *image:../media/add_policy_from_resourcegroup.gif[""]* Dans la colonne configurer les programmes de la stratégie pour laquelle vous souhaitez configurer un planning.
+.. Sélectionnez * * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]dans la colonne configurer les plannings pour la stratégie pour laquelle vous souhaitez configurer un planning.
 .. Dans *Ajouter des horaires pour la police* `policy_name` Configurez la planification, puis sélectionnez *OK*.
 +
 Ici `policy_name` est le nom de la stratégie que vous avez sélectionnée.
@@ -78,7 +79,7 @@ Vous pouvez sélectionner plusieurs serveurs de vérification (hôte local ou h�
 NOTE: La version du serveur de vérification doit être égale ou supérieure à la version de l'édition du serveur SQL qui héberge la base de données primaire.
 
 .. Sélectionnez *Charger les localisateurs secondaires pour vérifier les sauvegardes sur le système de stockage secondaire* afin de vérifier vos sauvegardes sur le système de stockage secondaire.
-.. Sélectionnez la stratégie pour laquelle vous souhaitez configurer votre planning de vérification, puis sélectionnez *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Sélectionnez la stratégie pour laquelle vous souhaitez configurer votre planning de vérification, puis sélectionnez * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"].
 .. Dans la boîte de dialogue Ajouter des programmes de vérification _policy_name_, effectuez les opérations suivantes :
 +
 |===

@@ -22,7 +22,8 @@ Lorsqu'une règle avec sauvegarde Azure NetApp Files est activée et associée �
 == Limites
 
 * Les fonctionnalités de stockage objet pour les systèmes de stockage FAS ou AFF ONTAP et FSxN ne sont pas prises en charge.
-* Les workflows de montage et de catalogue Oracle et SAP HANA ne sont pas pris en charge.
+* Les workflows de montage et de catalogue Oracle et SAP HANA ne sont pas pris en charge pour les sauvegardes de stockage objet, mais pour les copies Snapshot.
+* Les clones PDB Oracle ne sont pas pris en charge pour les sauvegardes de stockage objet, mais pour les snapshots.
 * La vérification des sauvegardes à partir du stockage objet, la prise en charge de l'API REST, la gestion du cycle de vie des clones à partir du stockage objet et les fonctionnalités de reporting pour les sauvegardes de stockage objet ne sont pas prises en charge.
 * La restauration à partir de sauvegardes du stockage Azure Blob Storage vers Azure NetApp Files n'est pas prise en charge. Vous pouvez également utiliser l'option de clonage.
 * La répartition des clones n'est pas prise en charge.

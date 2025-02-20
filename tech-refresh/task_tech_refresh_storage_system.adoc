@@ -31,12 +31,6 @@ La mise à jour technologique du stockage est prise en charge pour remplacer le 
 * Actualisation du stockage secondaire
 
 
-Les autres scénarios pris en charge sont :
-
-* Changement de nom SVM
-* Modification du nom du volume
-
-
 
 
 == Mettre à jour les sauvegardes du stockage primaire

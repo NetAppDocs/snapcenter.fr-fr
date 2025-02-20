@@ -116,7 +116,7 @@ SnapCenter se reflète désormais comme une personne de confiance avec le nom d'
 
 La fonctionnalité MFA de SnapCenter peut également être activée au moyen d'API REST.
 
-Pour plus d'informations sur le dépannage, reportez-vous à la section https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["Les tentatives de connexion simultanées dans plusieurs onglets indiquent une erreur MFA"].
+Pour obtenir des informations de dépannage, reportez-vous à la section https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["Les tentatives de connexion simultanées dans plusieurs onglets indiquent une erreur MFA"].
 
 
 
@@ -143,8 +143,8 @@ Vous devez mettre à jour les métadonnées MFA SnapCenter dans AD FS en cas de 
 .Étapes
 . Dans l'hôte AD FS, ouvrez l'assistant de gestion AD FS et effectuez les opérations suivantes :
 +
-.. Cliquez sur *confiance de la partie de confiance*.
-.. Cliquez avec le bouton droit de la souris sur la confiance de la partie de confiance créée pour SnapCenter et cliquez sur *Supprimer*.
+.. Sélectionnez *fiducies de partie utilisatrice*.
+.. Cliquez avec le bouton droit de la souris sur la confiance de la partie utilisatrice qui a été créée pour SnapCenter et sélectionnez *Supprimer*.
 +
 Le nom défini par l'utilisateur de la confiance de la partie utilisatrice s'affiche.
 

@@ -136,4 +136,4 @@ Les initiateurs doivent être FC ou Microsoft iSCSI, mais pas les deux.
 
 Avant de pouvoir utiliser des LUN RDM FC pour partager le stockage entre les nœuds d'un cluster Microsoft, vous devez d'abord créer le disque quorum partagé et le disque de stockage partagé, puis les ajouter aux deux machines virtuelles du cluster.
 
-Le disque partagé n'est pas créé à l'aide du plug-in pour Windows. Vous devez créer, puis ajouter le LUN partagé à chaque machine virtuelle du cluster. Pour plus d'informations, reportez-vous à la section https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.mscs.doc/GUID-1A2476C0-CA66-4B80-B6F9-8421B6983808.html["Machines virtuelles de clusters sur des hôtes physiques"^].
+Le disque partagé n'est pas créé à l'aide du plug-in pour Windows. Vous devez créer, puis ajouter le LUN partagé à chaque machine virtuelle du cluster. Pour plus d'informations, voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-7/setup-for-failover-clustering-and-microsoft-cluster-service.html["Machines virtuelles de clusters sur des hôtes physiques"^].

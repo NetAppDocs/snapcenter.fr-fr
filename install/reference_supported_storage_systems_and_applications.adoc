@@ -14,9 +14,9 @@ summary: Vous devez connaître le système de stockage, les applications et les 
 Vous devez connaître le système de stockage, les applications et les bases de données pris en charge.
 
 * SnapCenter prend en charge ONTAP 9.12.1 et versions ultérieures pour protéger vos données.
-* SnapCenter 6.1 prend en charge les systèmes NetApp ASA r2 (ASA A1K, ASA A70 et ASA A90) qui exécutent ONTAP 9.16.1.
+* SnapCenter 6.1 prend en charge les systèmes NetApp ASA r2 qui exécutent ONTAP 9.16.1.
 +
-Les systèmes ASA r2 offrent une solution matérielle et logicielle unifiée pour les environnements SAN et basée sur des plateformes 100 % Flash. Les systèmes ASA r2 sont différents des autres systèmes ONTAP (ASA, AFF et FAS) lors de l'implémentation de la couche de stockage, des protocoles pris en charge et des fonctions ONTAP.
+Les systèmes ASA r2 offrent une solution matérielle et logicielle unifiée pour les environnements SAN et basée sur des plateformes 100 % Flash.
 
 +
 Pour plus d'informations sur les systèmes ASA r2, reportez-vous àla section https://docs.netapp.com/us-en/asa-r2/index.html["Documentation de ASA r2"^].

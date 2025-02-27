@@ -9850,8 +9850,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="5444e411b400fd0c1d17ad74b8d82bff" category="paragraph">+.NET Framework 8.0.12 fonctionnalités+</block>
   <block id="8c16affd19f6d2610f039e0bf745fe04" category="list-text">.NET Framework 8.0.12 (et tous les correctifs 8.0.x suivants)</block>
   <block id="36ab4d2d051baac565e5a2261da2c98d" category="admonition">Le noyau ASP.NET nécessite IIS_IUSRS pour accéder au système de fichiers temporaires dans le serveur SnapCenter sous Windows.</block>
-  <block id="78f63cd4c898dfa4fb35e6755c784b8e" category="list-text">SnapCenter 6.1 prend en charge les systèmes NetApp ASA r2 (ASA A1K, ASA A70 et ASA A90) qui exécutent ONTAP 9.16.1.</block>
-  <block id="a96666c23540f7c6d0da8ca6ab7b57d5" category="paragraph">Les systèmes ASA r2 offrent une solution matérielle et logicielle unifiée pour les environnements SAN et basée sur des plateformes 100 % Flash. Les systèmes ASA r2 sont différents des autres systèmes ONTAP (ASA, AFF et FAS) lors de l'implémentation de la couche de stockage, des protocoles pris en charge et des fonctions ONTAP.</block>
   <block id="1bb71df56b7ae979d57d7cedfffe49f5" category="inline-link">Documentation de ASA r2</block>
   <block id="5cbf1300bdf2b6a56588b252b251a998" category="paragraph">Pour plus d'informations sur les systèmes ASA r2, reportez-vous àla section<block ref="d94cf7303df26cfd7838987d91518061" category="inline-link-rx"></block>.</block>
   <block id="de14602aec2aa05e977975d7781f0163" category="paragraph">Pour plus d'informations sur la liste des autorisations, reportez-vous à la section <block ref="d791b2cd4a5fa29c456ec537e56c834d" category="inline-link-macro-rx"></block>.</block>
@@ -10060,4 +10058,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">Sélectionnez *fiducies de partie utilisatrice*.</block>
   <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">Cliquez avec le bouton droit de la souris sur la confiance de la partie utilisatrice qui a été créée pour SnapCenter et sélectionnez *Supprimer*.</block>
   <block id="c6cd54ad2b3bca5fe6357919d1ec62e7" category="list-text">Vous devez installer ASP.NET Core Runtime 8.0.12 (et tous les correctifs 8.0.x suivants) Hosting Bundle et PowerShell 7.4.2 ou version ultérieure.</block>
+  <block id="088d994d276e3b7e6090022acb48aaf7" category="list-text">SnapCenter 6.1 prend en charge les systèmes NetApp ASA r2 qui exécutent ONTAP 9.16.1.</block>
+  <block id="a1c01ec21d4b8df32fe29facff7e7688" category="paragraph">Les systèmes ASA r2 offrent une solution matérielle et logicielle unifiée pour les environnements SAN et basée sur des plateformes 100 % Flash.</block>
 </blocks>

@@ -1,17 +1,17 @@
 ---
 permalink: install/task_add_an_rbac_role_using_security_login_commands.html 
 sidebar: sidebar 
-keywords: RBAC roles, add, ONTAP RBAC role 
-summary: Vous pouvez utiliser les commandes de connexion de sécurité pour ajouter un rôle RBAC ONTAP lorsque vos systèmes de stockage exécutent clustered ONTAP. 
+keywords: RBAC roles, add, NetApp ONTAP RBAC role 
+summary: Vous pouvez utiliser les commandes de connexion de sécurité pour ajouter un rôle NetApp ONTAP RBAC lorsque vos systèmes de stockage exécutent clustered NetApp ONTAP. 
 ---
-= Ajoutez un rôle RBAC ONTAP à l'aide des commandes de connexion de sécurité
+= Ajoutez un rôle NetApp ONTAP RBAC à l'aide de commandes de connexion de sécurité
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Vous pouvez utiliser les commandes de connexion de sécurité pour ajouter un rôle RBAC ONTAP lorsque vos systèmes de stockage exécutent clustered ONTAP.
+Vous pouvez utiliser les commandes de connexion de sécurité pour ajouter un rôle NetApp ONTAP RBAC lorsque vos systèmes de stockage exécutent clustered ONTAP.
 
 .Avant de commencer
 * Avant de créer un rôle RBAC ONTAP pour les systèmes de stockage exécutant clustered ONTAP, vous devez identifier les éléments suivants :
@@ -37,12 +37,12 @@ Vous devez toujours attribuer les privilèges All-Access en premier.
 
 *À propos de cette tâche*
 
-Pour simplifier la configuration de ces rôles sur les systèmes de stockage, vous pouvez utiliser l'outil RBAC utilisateur Creator pour Data ONTAP, disponible sur le forum des communautés NetApp.
+Pour simplifier la configuration de ces rôles sur les systèmes de stockage, vous pouvez utiliser l'outil RBAC User Creator for NetApp ONTAP, disponible sur le forum des communautés NetApp.
 
-Cet outil gère automatiquement la configuration correcte des privilèges ONTAP. Par exemple, l'outil Créateur d'utilisateurs RBAC pour Data ONTAP ajoute automatiquement les privilèges dans le bon ordre afin que les privilèges All-Access s'affichent en premier. Si vous ajoutez d'abord les privilèges en lecture seule, puis ajoutez les privilèges All-Access, ONTAP marque les privilèges All-Access en tant que doublons et les ignore.
+Cet outil gère automatiquement la configuration correcte des privilèges ONTAP. Par exemple, l'outil RBAC User Creator for NetApp ONTAP ajoute automatiquement le Privileges dans le bon ordre afin que le Privileges tout accès apparaisse en premier. Si vous ajoutez d'abord les privilèges en lecture seule, puis ajoutez les privilèges All-Access, ONTAP marque les privilèges All-Access en tant que doublons et les ignore.
 
 
-NOTE: Si vous mettez à niveau SnapCenter ou ONTAP ultérieurement, vous devez exécuter à nouveau l'outil Créateur d'utilisateurs RBAC pour Data ONTAP afin de mettre à jour les rôles utilisateur que vous avez créés précédemment. Les rôles utilisateur créés pour une version antérieure de SnapCenter ou ONTAP ne fonctionnent pas correctement avec les versions mises à niveau. Lorsque vous exécutez de nouveau l'outil, il gère automatiquement la mise à niveau. Il n'est pas nécessaire de recréer les rôles.
+NOTE: Si vous mettez ultérieurement à niveau SnapCenter ou ONTAP, vous devez exécuter à nouveau l'outil RBAC User Creator for NetApp ONTAP pour mettre à jour les rôles utilisateur que vous avez créés précédemment. Les rôles utilisateur créés pour une version antérieure de SnapCenter ou ONTAP ne fonctionnent pas correctement avec les versions mises à niveau. Lorsque vous exécutez de nouveau l'outil, il gère automatiquement la mise à niveau. Il n'est pas nécessaire de recréer les rôles.
 
 Plus d'informations sur la configuration des rôles RBAC ONTAP, consultez le http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["Guide de l'authentification de l'administrateur ONTAP 9 et de l'alimentation RBAC"^].
 

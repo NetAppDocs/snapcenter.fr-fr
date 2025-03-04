@@ -14,18 +14,10 @@ summary: 'Si vous devez réamorcer une copie de réplica, par exemple lorsqu"une
 Si vous devez réamorcer une copie de réplica, par exemple lorsqu'une copie est corrompue, vous pouvez réamorcer la dernière sauvegarde à l'aide de la fonction de réamorçage dans SnapCenter.
 
 .Avant de commencer
-* Vous devez utiliser SnapCenter Server 4.1 ou version ultérieure et Plug-in pour Exchange 4.1 ou version ultérieure.
-+
-Le réamorçage d'une réplique n'est pas pris en charge dans les versions SnapCenter antérieures à 4.1.
+Vous devez avoir créé une sauvegarde de la base de données à réamorçage.
 
-* Vous devez avoir créé une sauvegarde de la base de données à réamorçage.
++ pour éviter de prendre du retard entre les nœuds, vous pouvez soit créer une nouvelle sauvegarde avant d'effectuer une opération de réamorçage, soit choisir l'hôte avec la dernière sauvegarde.
 
-
-|===
-
-
-| *Meilleure pratique:* pour éviter d'être retardé entre les nœuds, nous vous recommandons soit de créer une nouvelle sauvegarde avant d'effectuer une opération de réamorçage, soit de choisir l'hôte avec la dernière sauvegarde. 
-|===
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez *le plug-in Microsoft Exchange Server* dans la liste.
 . Sur la page Ressources, sélectionnez l'option appropriée dans la liste Afficher :

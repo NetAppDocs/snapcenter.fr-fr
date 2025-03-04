@@ -22,8 +22,7 @@ NOTE: L'utilisation de l'UC du système est élevée lorsque la tâche de collec
 
 La collecte de données EMS est activée par défaut et s'exécute tous les sept jours après la date d'installation. Vous pouvez désactiver la collecte de données à tout moment à l'aide de la cmdlet PowerShell _Disable-SmDataCollectionEMS_.
 
-*Étapes*
-
+.Étapes
 . À partir d'une ligne de commande PowerShell, établissez une session avec SnapCenter en entrant _Open-SmConnection_.
 . Désactivez la collecte de données EMS en entrant _Disable-SmDataCollectionEms_.
 
@@ -34,10 +33,9 @@ La collecte de données EMS est activée par défaut et s'exécute tous les sept
 
 La collecte de données EMS est activée par défaut et est planifiée pour s'exécuter tous les sept jours à compter de la date d'installation. Si vous l'avez désactivé, vous pouvez relancer la collecte de données EMS en utilisant la commande _Enable-SmDataCollectionEMS_ cmdlet.
 
-L'autorisation Generate-autosupport-log des événements Data ONTAP a été accordée à l'utilisateur de SVM (Storage Virtual machine).
+L'autorisation event NetApp ONTAP generate-AutoSupport-log a été accordée à l'utilisateur SVM (Storage Virtual machine).
 
-*Étapes*
-
+.Étapes
 . À partir d'une ligne de commande PowerShell, établissez une session avec SnapCenter en entrant _Open-SmConnection_.
 . Activez la collecte de données EMS en entrant _Enable-SmDataCollectionEMS_.
 
@@ -48,8 +46,7 @@ L'autorisation Generate-autosupport-log des événements Data ONTAP a été acco
 
 Vous pouvez utiliser les applets de commande PowerShell pour modifier la planification de la collecte de données EMS ou la machine virtuelle de stockage cible (SVM).
 
-*Étapes*
-
+.Étapes
 . À partir d'une ligne de commande PowerShell, pour établir une session avec SnapCenter, entrez l'applet de commande _Open-SmConnection_.
 . Pour modifier la cible de collecte de données EMS, entrez la commande _set-SmDataCollectionEmsTarget_ cmdlet.
 . Pour modifier le planning de collecte de données EMS, entrez la commande _set-SmDataCollectionEmsSchedule_ cmdlet.
@@ -61,8 +58,7 @@ Vous pouvez utiliser les applets de commande PowerShell pour modifier la planifi
 
 Vous pouvez surveiller l'état de votre collecte de données EMS à l'aide de plusieurs applets de commande PowerShell. Vous pouvez obtenir des informations sur le planning, la cible de machine virtuelle de stockage et l'état.
 
-*Étapes*
-
+.Étapes
 . À partir d'une ligne de commande PowerShell, établissez une session avec SnapCenter en entrant _Open-SmConnection_.
 . Récupérez des informations sur le planning de collecte de données EMS en entrant _get-SmDataCollectionEmsSchedule_.
 . Récupérez des informations sur l'état de la collecte de données EMS en entrant _get-SmDataCollectionEmsStatus_.

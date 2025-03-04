@@ -224,7 +224,7 @@ Conservation des copies de sauvegarde pendant un nombre spécifique de jours.
 IMPORTANT: Par défaut, la valeur du nombre de rétention est définie sur 2. Si vous définissez le nombre de rétention sur 1, l'opération de rétention risque d'échouer, car le premier snapshot est l'instantané de référence de la relation SnapVault jusqu'à ce qu'un nouvel instantané soit répliqué sur la cible.
 
 
-NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+NOTE: La valeur de rétention maximale est 1018. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version NetApp ONTAP sous-jacente.
 
 . Durée de conservation des snapshots
 +
@@ -237,13 +237,7 @@ La période de conservation SnapLock doit être inférieure à 100 ans.
 
 . Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané secondaire, sélectionnez *période de verrouillage de la copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
 +
-Pour que cette option soit efficace, vous devez effectuer les tâches suivantes :
-
-+
-** Sélectionnez la *période de verrouillage de la copie d'instantané primaire*.
-** Sélectionnez l'une des options de réplication secondaires ou les deux.
-+
-Dans cet exemple, la rétention des snapshots du journal est de 2 :
+Dans cet exemple, la conservation des snapshots de journal est de 2 :
 
 +
 .Montrer l'exemple
@@ -254,8 +248,6 @@ Set-SmPolicy -PolicyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'CSQL' 
 ====
 +
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter conserve les copies Snapshot de la base de données"]
-
-
 
 . Sélectionnez un libellé d'instantané
 +

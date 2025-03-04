@@ -30,10 +30,7 @@ Exemples de fichiers de configuration SnapCenter : SnapDriveService.exe.config, 
 .Description de la tâche
 * Lors de la mise à niveau, un script SQL est exécuté pour mettre à jour les données Exchange dans la base de données NSM, qui convertit le nom abrégé DAG et hôte en FQDN. Cette fonctionnalité est applicable uniquement si vous utilisez SnapCenter Server avec le plug-in Exchange.
 * Avant de lancer l'opération de mise à niveau, si vous avez placé manuellement l'hôte serveur en mode maintenance, vous devez sortir manuellement l'hôte serveur du mode maintenance en cliquant sur *hosts* > *Activate Schedule*.
-* Pour le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server et le plug-in SnapCenter pour Microsoft Windows, il est recommandé de mettre à niveau le serveur et les hôtes du plug-in vers la version 4.7 pour que LE CHEMIN_SCRIPTS s'exécute.
-+
-Pour les programmes de sauvegarde et de vérification existants avec les prescripteurs et les postscripts activés dans la stratégie, les opérations de sauvegarde continueront de fonctionner après la mise à niveau.
-
+* Pour les programmes de sauvegarde et de vérification existants avec les prescripteurs et les postscripts activés dans la stratégie, les opérations de sauvegarde continueront de fonctionner après la mise à niveau.
 +
 Dans la page *Détails du travail*, un message d'avertissement recommande au client de copier les scripts dans LE CHEMIN_SCRIPTS et de modifier la stratégie pour fournir un chemin relatif au CHEMIN_SCRIPTS. Pour le travail de cycle de vie du clone, un message d'avertissement s'affiche au niveau du sous-travail.
 

@@ -29,7 +29,7 @@ NOTE: Si les commandes n'existent pas dans la liste de commandes, l'opération �
 
 .Description de la tâche
 * Vous ne pouvez pas protéger les instances MySQL clonées.
-* Pour plus d'informations sur les limites des opérations de fractionnement de clonage, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guide de gestion du stockage logique ONTAP 9"^].
+* Pour plus d'informations sur les opérations de fractionnement de volume FlexClone, reportez-vous à https://docs.netapp.com/us-en/ontap/volumes/split-flexclone-from-parent-task.html["Séparer un volume FlexClone de son volume parent"]la section, .
 * Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots du coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
 
 

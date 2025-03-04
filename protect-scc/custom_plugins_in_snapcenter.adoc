@@ -42,7 +42,7 @@ Pour les plug-ins créés dans un style NATIF, assurez-vous de ne pas fournir l'
  a| 
 Version
  a| 
-Version du plug-in. Peut inclure des versions majeures et mineures. Par exemple, 1.0, 1.1, 2.0, 2.1
+Version du plug-in. Peut inclure des versions majeures et mineures. Par exemple, 5.0, 6.0, 6.1
 
 
 

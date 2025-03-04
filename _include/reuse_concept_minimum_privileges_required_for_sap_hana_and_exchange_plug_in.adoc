@@ -4,7 +4,7 @@
 
 Les privilèges minimum ONTAP requis varient en fonction des plug-ins SnapCenter utilisés pour la protection des données.
 
-* Commandes All-Access : privilèges minimum requis pour ONTAP 8.3.0 et versions ultérieures
+* Commandes All-Access : privilèges minimum requis pour ONTAP 9.12.1 et versions ultérieures
 +
 ** event generate-autosupport-log
 ** l'historique des tâches s'affiche

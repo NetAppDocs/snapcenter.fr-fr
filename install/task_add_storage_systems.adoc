@@ -130,9 +130,6 @@ Si un nouveau SVM est ajouté au cluster ONTAP à l'aide de l'interface graphiqu
 
 
 
-
-NOTE: Si vous avez mis à niveau les systèmes de stockage FAS ou AFF vers une baie 100 % SAN (ASA), vous devez actualiser la connexion de stockage dans le serveur SnapCenter pour refléter le nouveau type de stockage dans SnapCenter.
-
 *Après la fin*
 
 Un administrateur de cluster doit activer AutoSupport sur chaque nœud du système de stockage pour envoyer des notifications par e-mail à partir de tous les systèmes de stockage auxquels SnapCenter a accès, en exécutant la commande suivante depuis la ligne de commande du système de stockage :

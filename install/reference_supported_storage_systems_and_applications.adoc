@@ -14,6 +14,9 @@ summary: Vous devez connaître le système de stockage, les applications et les 
 Vous devez connaître le système de stockage, les applications et les bases de données pris en charge.
 
 * SnapCenter prend en charge ONTAP 9.12.1 et versions ultérieures pour protéger vos données.
++
+Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+
 * SnapCenter 6.1 prend en charge les systèmes NetApp ASA r2 qui exécutent ONTAP 9.16.1.
 +
 Les systèmes ASA r2 offrent une solution matérielle et logicielle unifiée pour les environnements SAN et basée sur des plateformes 100 % Flash.
@@ -21,7 +24,7 @@ Les systèmes ASA r2 offrent une solution matérielle et logicielle unifiée pou
 +
 Pour plus d'informations sur les systèmes ASA r2, reportez-vous àla section https://docs.netapp.com/us-en/asa-r2/index.html["Documentation de ASA r2"^].
 
-* SnapCenter prend en charge Amazon FSX pour NetApp ONTAP afin de protéger vos données contre la version 4.5 des correctifs P1 du logiciel SnapCenter.
+* SnapCenter prend en charge Amazon FSX for NetApp ONTAP pour protéger vos données.
 +
 Si vous utilisez Amazon FSX pour NetApp ONTAP, assurez-vous que les plug-ins hôtes du serveur SnapCenter sont mis à niveau vers 4.5 P1 ou une version ultérieure pour réaliser les opérations de protection des données.
 

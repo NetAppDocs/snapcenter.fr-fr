@@ -11,13 +11,13 @@ summary: Une licence standard basée sur le contrôleur SnapCenter est requise s
 
 
 [role="lead"]
-Une licence standard basée sur le contrôleur SnapCenter est requise si vous utilisez des contrôleurs de stockage FAS, AFF ou All SAN Array (ASA).
+Une licence standard basée sur le contrôleur SnapCenter est requise si vous utilisez des contrôleurs de stockage FAS, AFF ou ASA.
 
 La licence basée sur le contrôleur présente les caractéristiques suivantes :
 
 * Droits SnapCenter Standard inclus dans l'achat des bundles Premium ou Flash (non inclus dans le pack de base)
 * Utilisation illimitée du stockage
-* Activé en l'ajoutant directement au contrôleur de stockage FAS, AFF ou ASA via ONTAP System Manager ou la ligne de commandes du cluster de stockage
+* Vous pouvez l'ajouter directement au contrôleur de stockage FAS, AFF ou ASA via ONTAP System Manager ou l'interface de ligne de commande ONTAP.
 +
 
 NOTE: Vous n'entrez aucune information de licence dans l'interface graphique de SnapCenter pour les licences basées sur le contrôleur SnapCenter.
@@ -162,7 +162,7 @@ All-Flash Optimized: false
 
 == Étape 4 : récupérez le numéro de série de la licence basée sur le contrôleur
 
-Si vous utilisez du stockage FAS ou AFF, vous pouvez récupérer la licence basée sur le contrôleur SnapCenter depuis le site de support NetApp avant de pouvoir l'installer via la ligne de commandes ONTAP.
+Si vous utilisez un stockage FAS, ASA ou AFF, vous pouvez récupérer la licence basée sur le contrôleur SnapCenter sur le site de support NetApp avant de l'installer à l'aide de la ligne de commande ONTAP.
 
 .Avant de commencer
 * Vous devez disposer d'identifiants de connexion valides au site du support NetApp.

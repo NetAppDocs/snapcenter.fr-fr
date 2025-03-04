@@ -86,7 +86,7 @@ NOTE: Vous ne devez pas utiliser de caractère générique (*) pour autoriser to
 
 == Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte Linux
 
-Les versions SnapCenter 2.0 et ultérieures permettent à un utilisateur non-root d'installer le package de plug-ins SnapCenter pour Linux et de démarrer le processus de plug-in. Les processus de plug-in s'exécutent en tant qu'utilisateur non racine efficace. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.
+SnapCenter permet à un utilisateur non root d'installer le package de plug-ins SnapCenter pour Linux et de démarrer le processus de plug-in. Les processus de plug-in s'exécutent en tant qu'utilisateur non racine efficace. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.
 
 *Ce dont vous aurez besoin*
 

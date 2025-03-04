@@ -171,12 +171,6 @@ Période de verrouillage des copies Snapshot secondaires
  a| 
 Sélectionnez *période de verrouillage de copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
 
-Pour que cette option soit efficace, vous devez effectuer les tâches suivantes :
-
-** Sélectionnez la *période de verrouillage de la copie d'instantané primaire*.
-** Sélectionnez l'une des options de réplication secondaires ou les deux.
-
-
 |===
 +
 
@@ -184,7 +178,7 @@ IMPORTANT: Vous devez définir le nombre de rétention sur 2 ou plus. La valeur 
 
 +
 
-NOTE: La valeur maximale de rétention est de 1018 pour les ressources sur ONTAP 9.4 ou version ultérieure et de 254 pour les ressources sur ONTAP 9.3 ou version antérieure. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
+NOTE: La valeur de rétention maximale est 1018. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version ONTAP sous-jacente.
 
 . Dans la page script, entrez le chemin d'accès du prescripteur ou du PostScript que vous souhaitez que le serveur SnapCenter s'exécute avant ou après l'opération de sauvegarde, respectivement, et un délai d'attente que SnapCenter attend pour que le script s'exécute avant l'expiration du délai.
 +

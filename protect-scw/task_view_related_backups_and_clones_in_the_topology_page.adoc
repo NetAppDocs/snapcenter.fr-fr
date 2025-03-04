@@ -25,7 +25,6 @@ NOTE: Les clones d'une sauvegarde d'un miroir flexible de version sur un volume 
 * image:../media/topology_vault_secondary_storage.gif["icône de coffre-fort secondaire"] Affiche le nombre de sauvegardes et de clones répliqués sur le système de stockage secondaire à l'aide de la technologie SnapVault.
 +
 ** Le nombre de sauvegardes affichées inclut les sauvegardes supprimées du stockage secondaire. Par exemple, si vous avez créé 6 sauvegardes à l'aide d'une stratégie pour ne conserver que 4 sauvegardes, le nombre de sauvegardes affichées est 6.
-** Si vous avez effectué une mise à niveau à partir de SnapCenter 1.1, les clones du système secondaire (mise en miroir ou coffre-fort) ne sont pas affichés sous copies miroir ou copies du coffre-fort dans la page topologie. Tous les clones créés à l'aide de SnapCenter 1.1 sont affichés sous les copies locales dans SnapCenter 3.0.
 
 
 

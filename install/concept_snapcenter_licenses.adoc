@@ -20,11 +20,11 @@ SnapCenter nécessite plusieurs licences pour permettre la protection des donné
  a| 
 Contrôleur SnapCenter standard
  a| 
-Requis pour les baies FAS, AFF et ASA
+Requis pour FAS, AFF, ASA
 
-La licence standard SnapCenter est basée sur le contrôleur et est incluse dans ONTAP One. Si vous disposez de la licence SnapManager Suite, vous bénéficiez également des droits de licence SnapCenter Standard. Si vous souhaitez installer SnapCenter en version d'essai avec un système de stockage FAS, AFF ou ASA, vous pouvez obtenir une licence d'évaluation ONTAP One en contactant l'ingénieur commercial.
+La licence standard SnapCenter est basée sur le contrôleur et est incluse dans NetApp ONTAP One. Si vous disposez de la licence SnapManager Suite, vous bénéficiez également des droits de licence SnapCenter Standard. Si vous souhaitez installer SnapCenter en version d'essai avec un système de stockage FAS, AFF ou ASA, vous pouvez obtenir une licence d'évaluation NetApp ONTAP One en contactant l'ingénieur commercial.
 
-Pour plus d'informations sur les licences incluses avec ONTAP One, reportez-vous à la section https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["Licences incluses avec ONTAP One"].
+Pour plus d'informations sur les licences incluses avec NetApp ONTAP One, reportez-vous à la section https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["Licences incluses avec NetApp ONTAP One"].
 
 
 NOTE: SnapCenter fait également partie du pack de protection des données. Si vous avez acheté A400 ou une version ultérieure, vous devez acheter le pack de protection des données.

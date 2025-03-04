@@ -6,8 +6,6 @@ summary: Les informations relatives aux différentes opérations effectuées à 
 ---
 = Gérer le référentiel du serveur SnapCenter
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]

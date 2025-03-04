@@ -64,7 +64,7 @@ NOTE: Dans le cas d'une configuration Flex ASM (où la cardinalité est inférie
 
 Même si vous avez activé avec force la restauration sur place, SnapCenter effectue des restaurations de connexion et de copie dans les scénarios suivants :
 
-* Restaurez les données à partir d'un système de stockage secondaire et si Data ONTAP est antérieur à 8.3
+* Restauration à partir d'un système de stockage secondaire
 * Restauration des groupes de disques ASM présents sur les nœuds d'une configuration Oracle RAC sur laquelle l'instance de base de données n'est pas configurée
 * Dans la configuration d'Oracle RAC, sur l'un des nœuds homologues si l'instance ASM ou l'instance de cluster n'est pas exécutée ou si le nœud homologue est arrêté
 * Restauration des fichiers de contrôle uniquement
@@ -81,7 +81,7 @@ Même si vous avez activé avec force la restauration sur place, SnapCenter effe
 Si l'infrastructure de la base de données est similaire à la sauvegarde et qu'aucune modification de configuration n'a été apportée sur la pile de stockage et de base de données, une restauration sur place est effectuée, dans laquelle la restauration du fichier ou de la LUN est effectuée sur ONTAP. SnapCenter prend uniquement en charge SFSR (Single File SnapRestore) dans le cadre de la méthode de restauration sur place.
 
 
-NOTE: Data ONTAP 8.3 ou version ultérieure prend en charge la restauration sur place à partir d'un emplacement secondaire.
+NOTE: NetApp ONTAP prend en charge la restauration sur place à partir d'un emplacement secondaire.
 
 Si vous souhaitez effectuer une restauration sur place sur la base de données, assurez-vous que vous ne disposez que de fichiers de données sur le groupe de disques ASM. Vous devez créer une sauvegarde après avoir apporté des modifications au groupe de disques ASM ou à la structure physique de la base de données. Une fois la restauration sur place effectuée, le groupe de disques contiendra le même nombre de fichiers de données qu'au moment de la sauvegarde.
 

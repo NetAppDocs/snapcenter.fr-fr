@@ -6,8 +6,6 @@ summary: Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de 
 ---
 = Séparer un clone
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]
@@ -22,7 +20,7 @@ Par exemple, après avoir créé clone1 à partir d'une sauvegarde de base de do
 Après avoir divisé le clone2, vous pouvez effectuer l'opération de fractionnement de clone sur clone1 car clone1 n'est plus le clone intermédiaire.
 
 * Lorsque vous fractionnez un clone, les copies de sauvegarde et les tâches de clonage du clone sont supprimées.
-* Pour plus d'informations sur les limites des opérations de fractionnement de clonage, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guide de gestion du stockage logique ONTAP 9"^].
+* Pour plus d'informations sur les opérations de fractionnement de volume FlexClone, reportez-vous à la section, https://docs.netapp.com/us-en/ontap/volumes/split-flexclone-from-parent-task.html["Séparer un volume FlexClone de son volume parent"^].
 * Assurez-vous que le volume ou l'agrégat du système de stockage est en ligne.
 
 

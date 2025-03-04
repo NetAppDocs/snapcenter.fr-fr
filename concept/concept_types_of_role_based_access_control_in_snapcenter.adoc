@@ -65,7 +65,7 @@ De même, si vous souhaitez effectuer des opérations de protection des données
 
 == Plug-in SnapCenter pour VMware vSphere RBAC
 
-Si vous utilisez le plug-in SnapCenter pour la protection de données cohérente avec les machines virtuelles, vCenter Server offre un niveau supplémentaire de contrôle d'accès basé sur des rôles (RBAC). Le plug-in SnapCenter prend en charge le RBAC de vCenter Server et le RBAC d'Data ONTAP.
+Si vous utilisez le plug-in SnapCenter pour la protection de données cohérente avec les machines virtuelles, vCenter Server offre un niveau supplémentaire de contrôle d'accès basé sur des rôles (RBAC). Le plug-in SnapCenter VMware prend en charge le RBAC vCenter Server et NetApp ONTAP RBAC.
 
 Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["Plug-in SnapCenter pour VMware vSphere RBAC"^]
 

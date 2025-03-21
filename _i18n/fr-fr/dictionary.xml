@@ -8034,7 +8034,6 @@ NetApp® Single Mailbox Recovery a pris fin le 12 mai 2023. NetApp continuera d'
   <block id="98950caea953c79d817eba870ba7ae48" category="summary">Créez les informations d'identification Azure dans SnapCenter pour accéder au compte Azure NetApp.</block>
   <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">Créez les informations d'identification Azure dans SnapCenter</block>
   <block id="df807c6f76450e7af962b9ec2ffe867e" category="paragraph">Vous devez créer les identifiants Azure dans SnapCenter pour accéder au compte Azure NetApp.</block>
-  <block id="c564c60262d5040cb9b4b2cb05c8532d" category="paragraph">Avant de créer les informations d'identification Azure, assurez-vous d'avoir créé le principal de service dans Azure. L'ID de locataire, l'ID client et la clé secrète associés au principal de service seront requis pour créer les informations d'identification Azure.</block>
   <block id="aeec85b47cdcde0a1bea1e8a52e7efae" category="paragraph">Sélectionnez *Azure Credential* dans la liste déroulante.</block>
   <block id="7131a7a6bfe81200d21d5a33c64847b6" category="paragraph">ID locataire</block>
   <block id="797fc8989dfaa45ed85ce3b352fc0fb9" category="paragraph">Entrez l'ID du locataire.</block>
@@ -10070,4 +10069,11 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">Pour plus d'informations sur les opérations de répartition des volumes FlexClone, voir, <block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
   <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">La valeur de rétention maximale est 1018. Les sauvegardes échouent si la conservation est définie sur une valeur supérieure à celle prise en charge par la version NetApp ONTAP sous-jacente.</block>
   <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">Dans cet exemple, la conservation des snapshots de journal est de 2 :</block>
+  <block id="ab6d9fe11358cebc1d2cc02fa1c47496" category="list-text">Vérifiez que vous avez créé le principal de service dans Azure.</block>
+  <block id="6f346066b074941885d0989051206e4e" category="list-text">Assurez-vous que vous disposez de l'ID locataire, de l'ID client et de la clé secrète associés à l'entité de service.</block>
+  <block id="db4af27eace345776f29f9a3dbb3b5ff" category="list-text">L'ID de locataire est disponible sur le portail Azure sur la page de présentation de l'identifiant Entra.</block>
+  <block id="dc2337ddc542969fd93e297dc61108a9" category="list-text">L'ID client est également connu sous le nom d'ID de l'application pour le principal d'application/de service d'entreprise. Vous trouverez ces informations sur le portail Azure sur la page de présentation de l'application d'entreprise que vous avez créée pour agir en tant que responsable de service pour SnapCenter.</block>
+  <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">La clé secrète du client est également appelée valeur secrète. Vous pouvez créer ce secret de client dans le portail Azure en accédant à *enregistrements d'applications* sous Entra ID. Après avoir sélectionné l'application Enterprise que vous avez créée, accédez à *certificats et secrets*, puis à *Nouveau secret client*.</block>
+  <block id="732f79401041a0ecc8df586c30756a84" category="admonition">La valeur secrète est uniquement accessible lors de sa création. Vous ne pouvez pas y accéder ultérieurement.</block>
+  <block id="f221207f0adcd828979d33693cf006d5" category="list-text">Le responsable de service doit obtenir des autorisations. Le rôle de Contributor permettra au principal de service d'effectuer les actions requises dans Azure. Ceci peut être accordé à partir de la page contrôle d'accès (IAM) de la page abonnement.</block>
 </blocks>

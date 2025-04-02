@@ -3888,7 +3888,6 @@
   <block id="f367d650e57088caf7b808e01235016d" category="inline-link">Comment restaurer à partir d'un stockage secondaire dans SMBR avec SnapCenter</block>
   <block id="41b4c689a8b0e3ba8bfecb2a1e608e46" category="list-text"><block ref="41b4c689a8b0e3ba8bfecb2a1e608e46" category="inline-link-rx"></block></block>
   <block id="f004280f6db6ea5f9302c9851388d751" category="inline-link">Restauration de Microsoft Exchange Mail à partir de SnapVault à l'aide de SMBR</block>
-  <block id="1b0fb59a5bc951f7dc82cb43fe362145" category="list-text"><block ref="00a76af185a73b84e54e96058031aef5" category="inline-link-rx"></block></block>
   <block id="ba8cc99b4cfaa3f9d3c3f0a8380082c0" category="doc">Annuler les opérations de restauration de la base de données Exchange</block>
   <block id="309792b343a6affaca1b564ebe6d92a5" category="summary">Le plug-in SnapCenter pour Microsoft Exchange Server est un composant côté hôte du logiciel NetApp SnapCenter qui permet de gérer la protection des données des bases de données Exchange avec reconnaissance des applications. Le plug-in pour Exchange automatise la sauvegarde et la restauration des bases de données Exchange dans votre environnement SnapCenter.</block>
   <block id="c41e777bd921bd5fc9079273c0ed35db" category="doc">Présentation du plug-in SnapCenter pour Microsoft Exchange Server</block>
@@ -6976,7 +6975,6 @@
   <block id="a8d03bc12fa704a66e02c6802c0766f8" category="summary">Lorsque le plug-in SnapCenter pour SQL Server est arrêté, effectuez les étapes manuelles suivantes pour restaurer le plug-in.</block>
   <block id="112fa4c1243fe1af31b4cf57c26ced23" category="list-text">Placez le plug-in SnapCenter pour SQL Server sur un autre hôte à l'aide de la page *Ajouter hôte* ou *Modifier hôte*. Voir <block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Étapes</block>
-  <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph">Voir la <block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block> vidéo.</block>
   <block id="94c4200231b3891f27561beda5d4e31f" category="doc">Reprise d'activité SnapCenter</block>
   <block id="1da5a00a663269fc81a2098b0d91e4d6" category="paragraph">Vous pouvez restaurer le serveur SnapCenter en cas d'incidents tels que la corruption de ressources ou la panne du serveur grâce à la fonction de reprise après incident SnapCenter. Vous pouvez restaurer le référentiel SnapCenter, les planifications de serveur et les composants de configuration de serveur. Vous pouvez également restaurer le plug-in SnapCenter pour SQL Server et le plug-in SnapCenter pour le stockage SQL Server.</block>
   <block id="68e856b5be6554a8e4ee8b393b327b0b" category="paragraph">Cette section décrit les deux types de reprise sur incident dans SnapCenter :</block>
@@ -10076,4 +10074,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">La clé secrète du client est également appelée valeur secrète. Vous pouvez créer ce secret de client dans le portail Azure en accédant à *enregistrements d'applications* sous Entra ID. Après avoir sélectionné l'application Enterprise que vous avez créée, accédez à *certificats et secrets*, puis à *Nouveau secret client*.</block>
   <block id="732f79401041a0ecc8df586c30756a84" category="admonition">La valeur secrète est uniquement accessible lors de sa création. Vous ne pouvez pas y accéder ultérieurement.</block>
   <block id="f221207f0adcd828979d33693cf006d5" category="list-text">Le responsable de service doit obtenir des autorisations. Le rôle de Contributor permettra au principal de service d'effectuer les actions requises dans Azure. Ceci peut être accordé à partir de la page contrôle d'accès (IAM) de la page abonnement.</block>
+  <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
+  <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">Voir la <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> vidéo.</block>
 </blocks>

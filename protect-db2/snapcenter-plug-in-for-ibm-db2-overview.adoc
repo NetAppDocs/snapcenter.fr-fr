@@ -26,4 +26,4 @@ Lorsque le plug-in pour IBM DB2 Database est installé, vous pouvez utiliser Sna
 
 Le plug-in SnapCenter pour DB2 prend en charge NFS et SAN sur les infrastructures de stockage de fichiers ONTAP et Azure NetApp.
 
-VMDK ou l'organisation du stockage virtuel n'est pas pris en charge.
+L'organisation du stockage virtuel VMDK, vVol et RDM est prise en charge.

@@ -19,4 +19,4 @@ Une fois le cluster Plug-in pour PostgreSQL installé, vous pouvez utiliser Snap
 
 Le plug-in SnapCenter pour PostgreSQL prend en charge les protocoles NFS et SAN sur les infrastructures de stockage de fichiers ONTAP et Azure NetApp.
 
-VMDK ou l'organisation du stockage virtuel est pris en charge.
+L'organisation du stockage virtuel VMDK, vVol et RDM est prise en charge.

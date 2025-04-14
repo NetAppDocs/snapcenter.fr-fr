@@ -19,6 +19,6 @@ Une fois le plug-in pour la base de données MySQL installé, vous pouvez utilis
 
 Le plug-in SnapCenter pour MySQL prend en charge NFS et SAN sur les infrastructures de stockage de fichiers ONTAP et Azure NetApp.
 
-VMDK ou l'organisation du stockage virtuel est pris en charge.
+L'organisation du stockage virtuel VMDK, vVol et RDM est prise en charge.
 
 Les liens symboliques ne sont pas pris en charge.

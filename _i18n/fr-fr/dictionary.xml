@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="7608e75619cff3eeb4e8bce40481b456" category="doc">Documentation du logiciel SnapCenter</block>
   <block id="b880dba5b80385d6a4d3f5ff54d8ef78" category="summary">Vous devez utiliser la page hôte SnapCenterAdd pour ajouter des hôtes, puis installer les modules de plug-in. Les plug-ins sont automatiquement installés sur les hôtes distants. Vous pouvez ajouter un hôte et installer les modules d'extension pour un hôte individuel ou pour un cluster.</block>
   <block id="d959bbdfecd7dd6a3f75f5a871cbbe02" category="doc">Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants</block>
   <block id="d428ebb7ac02e1484781b38a799a4f99" category="paragraph">*Ce dont vous aurez besoin*</block>
@@ -2047,7 +2046,6 @@
   <block id="f941c9928875d5c135400e5e701b2e64" category="list-text">Sélectionnez le disque à supprimer, puis cliquez sur *Supprimer*.</block>
   <block id="81e227d12bf96597e8ddcc7529b4ebbd" category="list-text">Dans la boîte de dialogue Supprimer le disque, cliquez sur *OK*.</block>
   <block id="35cd5a8c25ff69e6886fc098109317e7" category="paragraph">SnapCenter supprime le disque.</block>
-  <block id="14c90652b0a2e523d6e8630706107e75" category="summary">Le logiciel SnapCenter peut être utilisé sur plusieurs navigateurs.</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">Navigateurs pris en charge</block>
   <block id="cf3152e36e70eecd5ed2d294f623eb90" category="summary">Si votre hôte SnapCenter fait partie d'un environnement FC/iSCSI, vous devrez peut-être installer des logiciels supplémentaires sur le système pour autoriser l'accès au stockage ONTAP.</block>
   <block id="8e9816159074c93c5490453d542c7149" category="doc">Exigences relatives à l'hôte SAN</block>
@@ -4803,7 +4801,6 @@
   <block id="0d73a80a294d9fcca263cef71862af94" category="paragraph">Restauration complète du volume</block>
   <block id="df44602e169cb1f9dbb6288c7e86985e" category="paragraph">Le rôle de la visionneuse de sauvegarde et de clonage dispose d'une vue en lecture seule de toutes les autorisations. Ce rôle est également doté d'autorisations pour la découverte, le reporting et l'accès au Tableau de bord.</block>
   <block id="969d7fda8acd2ab121789be3a975bbb4" category="paragraph">Le rôle d'administrateur de l'infrastructure possède des autorisations pour la gestion des hôtes, la gestion du stockage, le provisionnement, les groupes de ressources, les rapports d'installation à distance, Et l'accès au Tableau de bord.</block>
-  <block id="0344fda8fff2d8c5a125ffa5ba5f19a7" category="summary">Le logiciel SnapCenter est une plateforme simple, centralisée et évolutive qui protège les données de vos applications, bases de données, systèmes de fichiers hôtes et machines virtuelles qui s'exécutent sur les systèmes ONTAP à partir de n'importe quel point du cloud hybride.</block>
   <block id="6309043436d4e7e5bad9a81c89ff15e4" category="doc">Présentation de SnapCenter</block>
   <block id="edaafea0543ae64ebb79a2ed2e7a055b" category="paragraph">SnapCenter exploite les technologies NetApp Snapshot, SnapRestore, FlexClone, SnapMirror et SnapVault pour offrir les avantages suivants :</block>
   <block id="6d02db19251dfec578c356202bfb1bdc" category="list-text">Des sauvegardes sur disque rapides, compactes et cohérentes au niveau des applications</block>
@@ -9996,8 +9993,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="4a3f09c73e2dacacbebddfd96cac1948" category="inline-link">Notes de version du logiciel SnapCenter 6.1</block>
   <block id="77400fe4524142ac29310162939726cb" category="paragraph">Pour plus d'informations sur les problèmes connus, les limitations, les problèmes résolus et les commandes nouvelles et modifiées, reportez-vous au<block ref="5c68c6454568b27710c4196bb910da4f" category="inline-link-rx"></block> . Vous devez vous connecter avec votre compte NetApp ou créer un compte pour accéder aux notes de version.</block>
   <block id="d6eb82c324cab2f36e345863fad95090" category="cell">6,1</block>
-  <block id="e62d168588d6c1af2fbd37668a7343da" category="summary">La version 6.1 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations.</block>
-  <block id="0220307da5eec95fc03c435ffbbc2bfa" category="doc">Nouveautés du logiciel SnapCenter 6.1</block>
   <block id="1e095c69621645fccc8f12cd7f35f6fc" category="inline-link-macro">Prise en charge des systèmes ASA r2</block>
   <block id="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="cell"><block ref="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="inline-link-macro-rx"></block></block>
   <block id="cc753d144910e12701641281c8cb88ed" category="paragraph">SnapCenter prend désormais en charge les systèmes ASA r2 qui offrent une expérience simplifiée adaptée aux besoins des clients SAN uniquement.</block>
@@ -10006,8 +10001,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="92d37724657724129ae0451584c728aa" category="inline-link">Suppression du plug-in SnapCenter pour VMware vSphere</block>
   <block id="79cfb9f00fa8ea603f631e679e453fad" category="paragraph">Pour plus d'informations sur la désinstallation du plug-in SnapCenter pour VMware vSphere, reportez-vous à la section<block ref="cae8a6db54fa4da6d80207fee61e78d1" category="inline-link-rx"></block>.</block>
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">Si vous souhaitez mettre à niveau plusieurs hôtes, sélectionnez tous les hôtes, cliquez sur <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>, puis cliquez sur *mettre à niveau* &gt; *OK*.</block>
-  <block id="eafbda6a16d2997896c70ba8ded3db33" category="sidebar">Le logiciel SnapCenter est une plateforme simple, centralisée et évolutive qui protège les données de vos applications, bases de données, systèmes de fichiers hôtes et machines virtuelles qui s'exécutent sur les systèmes ONTAP à partir de n'importe quel point du cloud hybride. Cette bibliothèque de documentation contient des informations sur la version 6.1.</block>
-  <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">Documents relatifs au logiciel SnapCenter 6.1</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">Les workflows de montage et de catalogue Oracle et SAP HANA ne sont pas pris en charge pour les sauvegardes de stockage objet, mais pour les copies Snapshot.</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">Les clones PDB Oracle ne sont pas pris en charge pour les sauvegardes de stockage objet, mais pour les snapshots.</block>
   <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">Le disque partagé n'est pas créé à l'aide du plug-in pour Windows. Vous devez créer, puis ajouter le LUN partagé à chaque machine virtuelle du cluster. Pour plus d'informations, voir<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>.</block>
@@ -10075,4 +10068,11 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
   <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">Voir la <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> vidéo.</block>
   <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">L'organisation du stockage virtuel VMDK, vVol et RDM est prise en charge.</block>
+  <block id="e5385a9de21528bfedd644f4c0331eb1" category="summary">Le logiciel SnapCenter est une plateforme simple, centralisée et évolutive qui protège les données de vos applications, bases de données, systèmes de fichiers hôtes et machines virtuelles qui s'exécutent sur les systèmes ONTAP à partir de n'importe quel point du cloud hybride.</block>
+  <block id="0d391616b89aaac354c13202aaccb4ba" category="summary">Le logiciel SnapCenter peut être utilisé sur plusieurs navigateurs.</block>
+  <block id="68578ccfcf5117ca8a9a2d7d884e320f" category="summary">La version 6.1 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalités et améliorations.</block>
+  <block id="600ede45d5c4a07242a73e3a5a885e15" category="doc">Nouveautés du logiciel SnapCenter 6.1</block>
+  <block id="8f13c7650e8ef95e186d64196ea879a5" category="sidebar">Le logiciel SnapCenter est une plateforme simple, centralisée et évolutive qui protège les données de manière cohérente au niveau des applications, des bases de données, des systèmes de fichiers hôtes et des machines virtuelles qui s'exécutent sur les systèmes ONTAP à partir de n'importe quel point du cloud hybride. Cette bibliothèque de documentation contient des informations sur la version 6.1.</block>
+  <block id="8127605cde4cee83a23b35f1207c7572" category="sidebar">Documentation du logiciel SnapCenter</block>
+  <block id="f3e84c2e19a0aa80c716ba1fc7f07e0e" category="sidebar">Documents relatifs au logiciel SnapCenter 6.1</block>
 </blocks>

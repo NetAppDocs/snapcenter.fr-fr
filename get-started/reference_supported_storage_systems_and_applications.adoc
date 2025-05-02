@@ -1,0 +1,75 @@
+---
+permalink: get-started/reference_supported_storage_systems_and_applications.html 
+sidebar: sidebar 
+keywords: storage system, ONTAP version, ASA r2 systems 
+summary: Vous devez connaître le système de stockage, les applications et les bases de données pris en charge. 
+---
+= Systèmes de stockage et applications pris en charge par SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les systèmes de stockage, les applications et les bases de données pris en charge par SnapCenter.
+
+
+
+== Systèmes de stockage pris en charge
+
+* NetApp ONTAP 9.12.1 et versions ultérieures
+* Azure NetApp Files
+* Amazon FSX pour NetApp ONTAP
++
+Prise en charge du protocole NVMe (non-volatile Memory Express) sur TCP (transport Control Protocol).
+
++
+Pour plus d'informations sur Amazon FSX pour NetApp ONTAP, consultez https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Documentation Amazon FSX pour NetApp ONTAP"^].
+
+* Systèmes NetApp ASA r2 exécutant NetApp ONTAP 9.16.1.
++
+Les systèmes ASA r2 offrent une solution matérielle et logicielle unifiée pour les environnements SAN et basée sur des plateformes 100 % Flash. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["En savoir plus sur les systèmes ASA r2"].
+
++
+
+NOTE: SnapCenter prend uniquement en charge VMware Virtual machine File System (VMFS) sur les systèmes ASA r2.
+
++
+|===
+| Opérations prises en charge | Opérations non prises en charge 
+
+
+ a| 
+** Création de sauvegardes primaires d'applications sur VMDK
+** Transfert des snapshots de groupes de cohérence vers le système de stockage secondaire
+** Restauration des sauvegardes et restauration à partir d'un autre emplacement
++
+*** Restauration sur place à partir du stockage principal et secondaire à l'aide de VMware vMotion
+*** Connectez et copiez la restauration à partir du stockage principal et secondaire
+
+
+** Clonage des sauvegardes et clonage vers un autre emplacement
+
+ a| 
+** RDM (Raw Device Mapping)
+** Volumes d'application pour Oracle
+** NDV SAP HANA
+** LockVault
+** Copies Snapshot à toute épreuve
+** Groupe Flex
+** Groupe de cohérence hiérarchique
+** Migration de ONTAP 9.x vers des systèmes ASA r2
+** Modification du nom des snapshots
+** Le provisionnement secondaire du répertoire de journaux de l'hôte de plug-in SQL n'est pas pris en charge par SnapCenter. La configuration doit être effectuée manuellement via l'interface de ligne de commandes ONTAP ou System Manager.
+
+
+|===
+
+
+
+
+== Applications et bases de données prises en charge
+
+SnapCenter prend en charge la protection de différentes applications et bases de données. Pour plus d'informations sur les applications et bases de données prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+
+SnapCenter prend en charge la protection des charges de travail Oracle et Microsoft SQL dans le cloud VMware sur les environnements SDDC (Software-Defined Data Center) Amazon Web Services (AWS). https://community.netapp.com/t5/Tech-ONTAP-Blogs/Protect-Oracle-MS-SQL-workloads-using-NetApp-SnapCenter-in-VMware-Cloud-on-AWS/ba-p/449168["En savoir plus"^].

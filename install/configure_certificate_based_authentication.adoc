@@ -1,0 +1,256 @@
+---
+permalink: install/configure_certificate_based_authentication.html 
+sidebar: sidebar 
+keywords: exporting certificates, enable certificate-based authentication, certificate-based authentication, configure CA signed key pair, configure root, configure intermediate certificates, security,authentication, export CA certificates 
+summary: Exporter les certificats SnapCenter. 
+---
+= Configurer l'authentification basée sur un certificat
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'authentification basée sur certificat améliore la sécurité en vérifiant l'identité du serveur SnapCenter et des hôtes de plug-in, garantissant ainsi une communication sécurisée et chiffrée.
+
+
+
+== Activer l'authentification basée sur un certificat
+
+Pour activer l'authentification basée sur certificat pour le serveur SnapCenter et les hôtes de plug-in Windows, exécutez l'applet de commande PowerShell suivante.  Pour les hôtes plug-in Linux, l'authentification basée sur certificat sera activée lorsque vous activez le protocole SSL bidirectionnel.
+
+* Pour activer l'authentification basée sur un certificat client :
++
+`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="true"}` `-HostName`<<hostname>>
+
+* Pour désactiver l'authentification basée sur des certificats client :
++
+`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="false"}` `-HostName` `<<hostname>>``
+
+
+
+
+
+== Exporter des certificats d'autorité de certification (CA) depuis le serveur SnapCenter
+
+Vous devez exporter les certificats d'autorité de certification du serveur SnapCenter vers les hôtes de plug-in à l'aide de la console MMC (Microsoft Management Console).
+
+.Avant de commencer
+Vous devez avoir configuré le protocole SSL bidirectionnel.
+
+*Étapes*
+
+. Accédez à la console de gestion Microsoft (MMC), puis cliquez sur *fichier* > *Ajouter/Supprimer Snapin*.
+. Dans la fenêtre Ajouter ou supprimer des Snap-ins, sélectionnez *certificats*, puis cliquez sur *Ajouter*.
+. Dans la fenêtre du composant logiciel enfichable certificats, sélectionnez l'option *compte ordinateur*, puis cliquez sur *Terminer*.
+. Cliquez sur *Console Root* > *certificats - ordinateur local* > *personnel* > *certificats*.
+. Cliquez avec le bouton droit de la souris sur le certificat CA fourni, qui est utilisé pour le serveur SnapCenter, puis sélectionnez *toutes les tâches* > *Exporter* pour lancer l'assistant d'exportation.
+. Effectuez les actions suivantes dans l'assistant.
+
+
+|===
+| Pour cette option... | Procédez comme suit... 
+
+
+ a| 
+Exporter la clé privée
+ a| 
+Sélectionnez *non, ne pas exporter la clé privée*, puis cliquez sur *Suivant*.
+
+
+
+ a| 
+Exporter le format de fichier
+ a| 
+Cliquez sur *Suivant*.
+
+
+
+ a| 
+Nom du fichier
+ a| 
+Cliquez sur *Parcourir* et spécifiez le chemin d'accès au fichier pour enregistrer le certificat, puis cliquez sur *Suivant*.
+
+
+
+ a| 
+Exécution de l'assistant d'exportation de certificat
+ a| 
+Vérifiez le résumé, puis cliquez sur *Terminer* pour lancer l'exportation.
+
+|===
+
+NOTE: L'authentification basée sur certificat n'est pas prise en charge pour les configurations SnapCenter HA et le plug-in SnapCenter pour VMware vSphere.
+
+
+
+== Importez le certificat de l'autorité de certification sur les hôtes du plug-in Windows
+
+Pour utiliser le certificat de l'autorité de certification du serveur SnapCenter exporté, vous devez importer le certificat associé sur les hôtes du plug-in Windows SnapCenter à l'aide de la console MMC (Microsoft Management Console).
+
+*Étapes*
+
+. Accédez à la console de gestion Microsoft (MMC), puis cliquez sur *fichier* > *Ajouter/Supprimer Snapin*.
+. Dans la fenêtre Ajouter ou supprimer des Snap-ins, sélectionnez *certificats*, puis cliquez sur *Ajouter*.
+. Dans la fenêtre du composant logiciel enfichable certificats, sélectionnez l'option *compte ordinateur*, puis cliquez sur *Terminer*.
+. Cliquez sur *Console Root* > *certificats - ordinateur local* > *personnel* > *certificats*.
+. Cliquez avec le bouton droit de la souris sur le dossier "personnel", puis sélectionnez *toutes les tâches* > *Importer* pour lancer l'assistant d'importation.
+. Effectuez les actions suivantes dans l'assistant.
+
+
+|===
+| Pour cette option... | Procédez comme suit... 
+
+
+ a| 
+Emplacement du magasin
+ a| 
+Cliquez sur *Suivant*.
+
+
+
+ a| 
+Fichier à importer
+ a| 
+Sélectionnez le certificat du serveur SnapCenter qui se termine par l'extension .cer.
+
+
+
+ a| 
+Magasin de certificats
+ a| 
+Cliquez sur *Suivant*.
+
+
+
+ a| 
+Exécution de l'assistant d'exportation de certificat
+ a| 
+Vérifiez le résumé, puis cliquez sur *Terminer* pour lancer l'importation.
+
+|===
+
+
+== Importez le certificat CA sur les hôtes du plug-in UNIX
+
+Vous devez importer le certificat de l'autorité de certification sur les hôtes du plug-in UNIX.
+
+*À propos de cette tâche*
+
+* Vous pouvez gérer le mot de passe de la base de stockage de clés SPL et l'alias de la paire de clés signées CA utilisée.
+* Le mot de passe de la base de stockage de clés SPL et de tous les mots de passe alias associés à la clé privée doit être le même.
+
+
+*Étapes*
+
+. Vous pouvez récupérer le mot de passe par défaut du magasin de clés SPL dans le fichier de propriétés SPL. Il s'agit de la valeur correspondant à la clé `SPL_KEYSTORE_PASS`.
+. Modifiez le mot de passe du magasin de clés :
+`$ keytool -storepasswd -keystore keystore.jks`
+. Remplacez le mot de passe de tous les alias des entrées de clé privée du magasin de clés par le même mot de passe que celui utilisé pour le magasin de clés :
+`$ keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks`
+. Mettez à jour la même chose pour la clé SPL_KEYSTORE_PASS dans `spl.properties`` fichier.
+. Redémarrez le service après avoir modifié le mot de passe.
+
+
+
+
+=== Configurez les certificats racine ou intermédiaire sur le magasin de confiance SPL
+
+Vous devez configurer les certificats racine ou intermédiaire dans le magasin de confiance SPL. Vous devez ajouter le certificat de l'autorité de certification racine, puis les certificats de l'autorité de certification intermédiaire.
+
+*Étapes*
+
+. Accédez au dossier contenant le magasin de clés SPL : `/var/opt/snapcenter/spl/etc`.
+. Localisez le fichier `keystore.jks`.
+. Répertoriez les certificats ajoutés dans le magasin de clés :
+`$ keytool -list -v -keystore keystore.jks`
+. Ajouter un certificat racine ou intermédiaire :
+`$ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore` `keystore.jks`
+. Redémarrez le service après avoir configuré les certificats racine ou intermédiaire sur le stockage de confiance SPL.
+
+
+
+
+=== Configurez la paire de clés signée CA sur le magasin de confiance SPL
+
+Vous devez configurer la paire de clés signées par l'autorité de certification dans le magasin de confiance SPL.
+
+*Étapes*
+
+. Accédez au dossier contenant le magasin de clés de la SPL `/var/opt/snapcenter/spl/etc`.
+. Localisez le fichier `keystore.jks``.
+. Répertoriez les certificats ajoutés dans le magasin de clés :
+`$ keytool -list -v -keystore keystore.jks`
+. Ajoutez le certificat de l'autorité de certification ayant une clé privée et une clé publique.
+`$ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks` `-deststoretype JKS`
+. Répertorier les certificats ajoutés dans le magasin de clés.
+`$ keytool -list -v -keystore keystore.jks`
+. Vérifiez que le magasin de clés contient l'alias correspondant au nouveau certificat de l'autorité de certification, qui a été ajouté au magasin de clés.
+. Remplacez le mot de passe de la clé privée ajoutée pour le certificat CA par le mot de passe du magasin de clés.
++
+Le mot de passe par défaut de la SPL keystore est la valeur de la clé SPL_KEYSTORE_PASS in `spl.properties` fichier.
+
++
+`$ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks``
+
+. Si le nom d'alias du certificat de l'autorité de certification est long et contient de l'espace ou des caractères spéciaux ("*",","), remplacez le nom d'alias par un nom simple :
+`$ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks``
+. Configurez le nom d'alias à partir du magasin de clés situé dans `spl.properties` fichier.
+Mettez à jour cette valeur par rapport à la clé SPL_CERTIFICATE_ALIAS.
+. Redémarrez le service après avoir configuré la paire de clés signée CA dans la boutique de confiance SPL.
+
+
+
+
+== Exporter les certificats SnapCenter
+
+Vous devez exporter les certificats SnapCenter au format .pfx.
+
+*Étapes*
+
+. Accédez à la console de gestion Microsoft (MMC), puis cliquez sur *fichier* > *Ajouter/Supprimer composant logiciel enfichable*.
+. Dans la fenêtre Ajouter ou supprimer des Snap-ins, sélectionnez *certificats*, puis cliquez sur *Ajouter*.
+. Dans la fenêtre du composant logiciel enfichable certificats, sélectionnez l'option *mon compte utilisateur*, puis cliquez sur *Terminer*.
+. Cliquez sur *Console Root* > *Certificates - Current User* > *Trusted Root Certification autorités* > *Certificates*.
+. Cliquez avec le bouton droit de la souris sur le certificat dont le nom est convivial SnapCenter, puis sélectionnez *toutes les tâches* > *Exporter* pour lancer l'assistant d'exportation.
+. Complétez l'assistant comme suit :
++
+|===
+| Dans cette fenêtre de l'assistant... | Procédez comme suit... 
+
+
+ a| 
+Exporter la clé privée
+ a| 
+Sélectionnez l'option *Oui, exportez la clé privée*, puis cliquez sur *Suivant*.
+
+
+
+ a| 
+Exporter le format de fichier
+ a| 
+N'apportez aucune modification ; cliquez sur *Suivant*.
+
+
+
+ a| 
+Sécurité
+ a| 
+Spécifiez le nouveau mot de passe à utiliser pour le certificat exporté, puis cliquez sur *Suivant*.
+
+
+
+ a| 
+Fichier à exporter
+ a| 
+Spécifiez un nom de fichier pour le certificat exporté (vous devez utiliser .pfx), puis cliquez sur *Suivant*.
+
+
+
+ a| 
+Exécution de l'assistant d'exportation de certificat
+ a| 
+Vérifiez le résumé, puis cliquez sur *Terminer* pour lancer l'exportation.
+
+|===
+

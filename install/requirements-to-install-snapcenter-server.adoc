@@ -1,0 +1,361 @@
+---
+permalink: install/requirements-to-install-snapcenter-server.html 
+sidebar: sidebar 
+keywords: active directory domain, workgroups, multi-domain forests, cross-domain, cross-forest domains, browsers, chrome, IE, Edge, ports, port requirements, host utilities, Microsoft DSM, Windows MPIO 
+summary: 'Vous devez vous assurer que toutes les conditions requises sont remplies avant d"installer le serveur SnapCenter' 
+---
+= Configuration requise pour installer le serveur SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer SnapCenter Server sur un hôte Windows ou Linux, vous devez vérifier et vous assurer que toutes les conditions requises sont remplies pour votre environnement.
+
+
+
+== Configuration requise pour les domaines et les groupes de travail pour l'hôte Windows
+
+Le serveur SnapCenter peut être installé sur un hôte Windows qui se trouve dans un domaine ou dans un groupe de travail.
+
+L'utilisateur ayant admin Privileges est autorisé à installer le serveur SnapCenter.
+
+* Domaine Active Directory : vous devez utiliser un utilisateur de domaine avec des droits d'administrateur local. L'utilisateur de domaine doit être membre du groupe administrateur local sur l'hôte Windows.
+* Groupes de travail : vous devez utiliser un compte local disposant de droits d'administrateur local.
+
+
+Bien que les approbations de domaine, les forêts multidomaines et les approbations interdomaines soient prises en charge, les domaines interforestiers ne sont pas pris en charge. La documentation Microsoft à propos des domaines et des fiducies Active Directory contient des informations supplémentaires.
+
+
+NOTE: Après avoir installé le serveur SnapCenter, vous ne devez pas modifier le domaine dans lequel se trouve l'hôte SnapCenter. Si vous supprimez l'hôte SnapCenter Server du domaine dans lequel il se trouvait lors de l'installation du serveur SnapCenter, puis essayez de désinstaller le serveur SnapCenter, l'opération de désinstallation échoue.
+
+
+
+== Les besoins en termes d'espace et de dimensionnement
+
+Vous devez connaître les exigences en matière d'espace et de dimensionnement.
+
+|===
+| Élément | Configuration requise pour les hôtes Windows | Configuration requise pour l'hôte Linux 
+
+
+ a| 
+Systèmes d'exploitation
+ a| 
+Microsoft Windows
+
+Seules les versions anglaise, allemande, japonaise et chinoise simplifiée des systèmes d'exploitation sont prises en charge.
+
+Pour obtenir les informations les plus récentes sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=121033;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+ a| 
+* Red Hat Enterprise Linux (RHEL) 8 et 9
+* SUSE Linux Enterprise Server (SLES) 15
+
+
+Pour obtenir les informations les plus récentes sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=121032;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+
+
+
+ a| 
+Nombre minimal de processeurs
+ a| 
+4 cœurs
+ a| 
+4 cœurs
+
+
+
+ a| 
+RAM minimale
+ a| 
+8 Go
+
+
+NOTE: Le pool de mémoire tampon du serveur MySQL utilise 20 % de la RAM totale.
+ a| 
+8 Go
+
+
+
+ a| 
+Espace minimal sur le disque dur pour le logiciel et les journaux du serveur SnapCenter
+ a| 
+7 GO
+
+
+NOTE: Si vous disposez du référentiel SnapCenter dans le lecteur où est installé le serveur SnapCenter, il est recommandé d'avoir 15 Go.
+ a| 
+15 GO
+
+
+
+ a| 
+Espace disque minimum pour le référentiel SnapCenter
+ a| 
+8 Go
+
+
+NOTE: REMARQUE : si le serveur SnapCenter se trouve dans le même lecteur que le référentiel SnapCenter, il est recommandé d'avoir 15 Go.
+ a| 
+Sans objet
+
+
+
+ a| 
+Packs logiciels requis
+ a| 
+* ASP.NET Core Runtime 8.0.12 (et tous les correctifs 8.0.x suivants) Hosting Bundle
+* PowerShell 7.4.2 ou version ultérieure
+
+
+Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["Échec de la mise à niveau ou de l'installation de SnapCenter pour les systèmes hérités qui ne disposent pas d'une connexion Internet"^].
+ a| 
+* .NET Framework 8.0.12 (et tous les correctifs 8.0.x suivants)
+* PowerShell 7.4.2 ou version ultérieure
+* Ce serveur Web peut être utilisé comme proxy inverse
+* Devel-PAM
++
+PAM (Pluggable Authentication modules) est un outil de sécurité système qui permet aux administrateurs système de définir une stratégie d'authentification sans avoir à recompiler les programmes qui effectuent l'authentification.
+
+
+
+|===
+
+NOTE: Le noyau ASP.NET nécessite IIS_IUSRS pour accéder au système de fichiers temporaires dans le serveur SnapCenter sous Windows.
+
+
+
+== Exigences relatives à l'hôte SAN
+
+SnapCenter n'inclut pas les utilitaires hôtes ou un DSM. Si l'hôte SnapCenter fait partie d'un environnement SAN (FC/iSCSI), vous devrez peut-être installer et configurer des logiciels supplémentaires sur l'hôte du serveur SnapCenter.
+
+* Utilitaires hôtes : les utilitaires hôtes prennent en charge FC et iSCSI et vous permettent d'utiliser MPIO sur vos serveurs Windows. https://docs.netapp.com/us-en/ontap-sanhost/hu_sanhost_index.html["En savoir plus"^].
+* Microsoft DSM pour Windows MPIO : ce logiciel fonctionne avec les pilotes Windows MPIO pour gérer plusieurs chemins entre les ordinateurs hôtes NetApp et Windows. Un DSM est nécessaire pour les configurations haute disponibilité.
++
+
+NOTE: Si vous utilisiez ONTAP DSM, vous devez migrer vers Microsoft DSM. Pour plus d'informations, voir https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Data_ONTAP_DSM_for_Windows_MPIO/How_to_migrate_from_Data_ONTAP_DSM_4.1p1_to_Microsoft_native_DSM["Comment migrer de ONTAP DSM vers Microsoft DSM"^].
+
+
+
+
+
+== Navigateurs pris en charge
+
+Le logiciel SnapCenter prend en charge Chrome 125 et versions ultérieures, ainsi que Microsoft Edge 110.0.1587.17 et versions ultérieures.
+
+
+
+== Configuration requise pour les ports
+
+Le logiciel SnapCenter nécessite différents ports pour la communication entre les différents composants.
+
+* Les applications ne peuvent pas partager de port.
+* Pour les ports personnalisables, vous pouvez sélectionner un port personnalisé lors de l'installation si vous ne souhaitez pas utiliser le port par défaut.
+* Pour les ports fixes, vous devez accepter le numéro de port par défaut.
+* Pare-feu
++
+** Les pare-feu, proxys ou autres périphériques réseau ne doivent pas interférer avec les connexions.
+** Si vous spécifiez un port personnalisé lors de l'installation de SnapCenter, vous devez ajouter une règle de pare-feu sur l'hôte du plug-in pour ce port pour le chargeur Plug-in SnapCenter.
+
+
+
+
+Le tableau ci-dessous répertorie les différents ports et leurs valeurs par défaut.
+
+|===
+| Nom du port | Numéros de port | Protocole | Direction | Description 
+
+
+ a| 
+Port SnapCenter
+ a| 
+8146
+ a| 
+HTTPS
+ a| 
+Bidirectionnel
+ a| 
+Ce port est utilisé pour la communication entre le client SnapCenter (l'utilisateur SnapCenter) et le serveur SnapCenter et est également utilisé pour la communication entre les hôtes de plug-in et le serveur SnapCenter.
+
+Vous pouvez personnaliser le numéro de port.
+
+
+
+ a| 
+Port de communication SMCore de SnapCenter
+ a| 
+8145
+ a| 
+HTTPS
+ a| 
+Bidirectionnel
+ a| 
+Ce port est utilisé pour la communication entre le serveur SnapCenter et les hôtes sur lesquels les plug-ins SnapCenter sont installés.
+
+Vous pouvez personnaliser le numéro de port.
+
+
+
+ a| 
+Port de service du planificateur
+ a| 
+8154
+ a| 
+HTTPS
+ a| 
+ a| 
+Ce port permet d'orchestrer de manière centralisée les flux de travail du planificateur SnapCenter pour tous les plug-ins gérés au sein de l'hôte du serveur SnapCenter.
+
+Vous pouvez personnaliser le numéro de port.
+
+
+
+ a| 
+Port RabbitMQ
+ a| 
+5672
+ a| 
+TCP
+ a| 
+ a| 
+Il s'agit du port par défaut sur lequel RabbitMQ écoute et il est utilisé pour la communication du modèle éditeur-abonné entre le service Planificateur et SnapCenter.
+
+
+
+ a| 
+Port MySQL
+ a| 
+3306
+ a| 
+HTTPS
+ a| 
+ a| 
+Le port est utilisé pour communiquer avec la base de données du référentiel SnapCenter. Vous pouvez créer des connexions sécurisées du serveur SnapCenter au serveur MySQL. link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["En savoir plus >>"]
+
+
+
+ a| 
+Hôtes du plug-in Windows
+ a| 
+135, 445
+ a| 
+TCP
+ a| 
+ a| 
+Ce port est utilisé pour la communication entre le serveur SnapCenter et l'hôte sur lequel le plug-in est installé. La plage de ports dynamique supplémentaire spécifiée par Microsoft doit également être ouverte.
+
+
+
+ a| 
+Hôtes du plug-in Linux ou AIX
+ a| 
+22
+ a| 
+SSH
+ a| 
+Unidirectionnel
+ a| 
+Ce port est utilisé pour la communication entre le serveur SnapCenter et l'hôte, lancé du serveur à l'hôte client.
+
+
+
+ a| 
+Module de plug-ins SnapCenter pour Windows, Linux ou AIX
+ a| 
+8145
+ a| 
+HTTPS
+ a| 
+Bidirectionnel
+ a| 
+Ce port est utilisé pour la communication entre SMCore et les hôtes sur lesquels le package de plug-ins est installé. Personnalisable.
+
+Vous pouvez personnaliser le numéro de port.
+
+
+
+ a| 
+Plug-in SnapCenter pour bases de données Oracle
+ a| 
+27216
+ a| 
+ a| 
+ a| 
+Le port JDBC par défaut est utilisé par le plug-in pour Oracle pour se connecter à la base de données Oracle.
+
+
+
+ a| 
+Plug-in SnapCenter pour base de données Exchange
+ a| 
+909
+ a| 
+ a| 
+ a| 
+Le NET par défaut. Le port TCP est utilisé par le plug-in pour Windows pour se connecter aux rappels Exchange VSS.
+
+
+
+ a| 
+Plug-ins pris en charge par NetApp pour SnapCenter
+ a| 
+9090
+ a| 
+HTTPS
+ a| 
+ a| 
+Il s'agit d'un port interne utilisé uniquement sur l'hôte personnalisé du plug-in ; aucune exception de pare-feu n'est requise.
+
+La communication entre le serveur SnapCenter et les plug-ins personnalisés est routée via le port 8145.
+
+
+
+ a| 
+Cluster ONTAP ou port de communication SVM
+ a| 
+* 443 (HTTPS)
+* 80 (HTTP)
+
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+Bidirectionnel
+ a| 
+Le port est utilisé par le SAL (Storage abstraction Layer) pour la communication entre l'hôte exécutant le serveur SnapCenter et le SVM. Le port est actuellement utilisé par le SAL sur SnapCenter pour les hôtes du plug-in Windows pour la communication entre l'hôte du plug-in SnapCenter et le SVM.
+
+
+
+ a| 
+Plug-in SnapCenter pour base de données SAP HANA
+ a| 
+* 3instance_number13
+* 3instance_number15
+
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+Bidirectionnel
+ a| 
+Pour un seul tenant de conteneur de base de données multitenant (MDC), le numéro de port se termine par 13 ; pour non MDC, le numéro de port se termine par 15.
+
+Vous pouvez personnaliser le numéro de port.
+
+
+
+ a| 
+Plug-in SnapCenter pour PostgreSQL
+ a| 
+5432
+ a| 
+ a| 
+ a| 
+Ce port est le port PostgreSQL par défaut utilisé pour la communication entre le plug-in pour PostgreSQL et le cluster PostgreSQL.
+
+Vous pouvez personnaliser le numéro de port.
+
+|===

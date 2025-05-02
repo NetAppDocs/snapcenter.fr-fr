@@ -45,7 +45,7 @@ Si la base de données est déplacée, procédez comme suit :
 
 
 
-== Pour les versions 12cR2 à 18c d'Oracle
+== Pour les versions 12cR2 à 18c, 19c ou 21c d'Oracle
 
 .Base de données RAC
 Les bases de données RAC sont découvertes à l'aide de la commande srvctl config. Vous devez avoir les entrées de la base de données dans le fichier /etc/oratab.

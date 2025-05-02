@@ -17,7 +17,7 @@ La version 6.1 du logiciel SnapCenter comprend plusieurs nouvelles fonctionnalit
 | Mise à jour | Description 
 
 
-| link:../install/learn-about-supporting-asa-r2-in-snapcenter.html["Prise en charge des systèmes ASA r2"]  a| 
+| link:../get-started/reference_supported_storage_systems_and_applications.html["Prise en charge des systèmes ASA r2"]  a| 
 SnapCenter prend désormais en charge les systèmes ASA r2 qui offrent une expérience simplifiée adaptée aux besoins des clients SAN uniquement.
 
 

@@ -25,7 +25,7 @@ NOTE: Vous n'entrez aucune information de licence dans l'interface graphique de 
 * Verrouillé pour le numéro de série du contrôleur
 
 
-Pour plus d'informations sur les licences requises, reportez-vous à la section link:../install/concept_snapcenter_licenses.html["Licences SnapCenter"^].
+Pour plus d'informations sur les licences requises, reportez-vous à la section link:../get-started/concept_snapcenter_licenses.html["Licences SnapCenter"].
 
 
 

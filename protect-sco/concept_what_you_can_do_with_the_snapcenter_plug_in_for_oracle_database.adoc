@@ -34,4 +34,6 @@ Le clonage n'est pris en charge qu'au niveau CDB.
 * Planifiez les opérations de sauvegarde et de vérification.
 * Contrôle de toutes les opérations.
 * Afficher les rapports relatifs aux opérations de sauvegarde, de restauration et de clonage.
+* Automatisation de la sauvegarde, de la restauration et de la récupération respectueuses des applications, de la vérification, du montage et Démontez et clonez des opérations de base de données Oracle dans votre environnement SnapCenter
+* Prend en charge les bases de données Oracle pour SAP, mais l'intégration de SAP BR*Tools n'est pas fournie
 

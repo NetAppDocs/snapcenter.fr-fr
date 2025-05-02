@@ -35,7 +35,7 @@ Outre ces fonctionnalités principales, le plug-in pour Windows offre les avanta
 * Sécurité prise en charge par le RBAC et délégation centralisée des rôles
 * Création de copies compactes de systèmes de fichiers de production à des fins de test ou d'extraction de données grâce à la technologie NetApp FlexClone
 +
-Pour plus d'informations sur les licences FlexClone, reportez-vous à link:../install/concept_snapcenter_licenses.html["Licences SnapCenter"^].
+Pour obtenir des informations sur les licences FlexClone, reportez-vous à la section link:../get-started/concept_snapcenter_licenses.html["Licences SnapCenter"^].
 
 * Possibilité d'exécuter plusieurs sauvegardes simultanément sur plusieurs serveurs
 * Les applets de commande PowerShell pour créer des scripts pour les opérations de sauvegarde, de restauration et de clonage

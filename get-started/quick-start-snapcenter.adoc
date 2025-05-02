@@ -1,0 +1,45 @@
+---
+permalink: get-started/quick-start-snapcenter.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Démarrage rapide du logiciel SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le guide de démarrage rapide décrit les étapes de base pour installer et configurer le logiciel SnapCenter.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"] Préparation de l'installation du serveur SnapCenter
+[role="quick-margin-para"]
+Vous devez vous assurer que toutes les conditions requises pour installer le serveur SnapCenter sont remplies.
+
+[role="quick-margin-list"]
+* link:../install/requirements-to-install-snapcenter-server.html["De formation"]
+* link:../install/register_enable_software_access.html["Inscrivez-vous pour accéder au logiciel SnapCenter"]
+* link:../install/enable_multifactor_authentication.html["Activez l'authentification multifacteur"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Installez le serveur SnapCenter
+[role="quick-margin-para"]
+Le serveur SnapCenter peut être installé sur des hôtes Windows ou Linux. Téléchargez le package d'installation du serveur SnapCenter à partir du https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["Site de support NetApp"^] et exécutez le programme d'installation.
+
+[role="quick-margin-list"]
+* link:../install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installez SnapCenter Server sous Windows"]
+* link:../install/install_snapcenter_server_linux.html["Installez SnapCenter Server sous Linux"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"] Configurer le serveur SnapCenter
+[role="quick-margin-para"]
+Après avoir installé le serveur SnapCenter, vous devez le configurer en fonction de votre environnement.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatre"] Installez le plug-in pour votre application
+[role="quick-margin-para"]
+Assurez-vous que toutes les conditions d'installation du plug-in spécifique à l'application sont remplies en fonction de l'application utilisée, puis procédez à l'installation du plug-in correspondant.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinq"] Protégez votre application
+[role="quick-margin-para"]
+Après avoir installé le serveur SnapCenter et les plug-ins nécessaires, vous pouvez lancer la création de sauvegardes d'applications. Ces sauvegardes peuvent ensuite être utilisées à des fins de restauration et de clonage lorsque cela est nécessaire.

@@ -133,7 +133,7 @@ Oui.
 
 
  a| 
-Démarrage des services plug-in
+Démarrer les services de plug-in (s'applique uniquement aux plug-ins s'exécutant sur un hôte Windows)
  a| 
 Oui.
  a| 
@@ -141,7 +141,7 @@ Oui.
  a| 
 Oui.
  a| 
-Oui.
+Non
  a| 
 Oui.
  a| 

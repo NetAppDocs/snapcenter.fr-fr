@@ -1,0 +1,29 @@
+---
+permalink: get-started/snapmirror-active-sync-snapcenter.html 
+sidebar: sidebar 
+keywords: snapmirror active sync 
+summary: 'Vous pouvez restaurer le serveur SnapCenter en cas d"incident, par exemple en cas de corruption des ressources ou de panne serveur, à l"aide de la fonctionnalité de reprise après incident de SnapCenter.' 
+---
+= Synchronisation active SnapMirror dans SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La synchronisation active SnapMirror assure la continuité des services, même en cas de défaillance complète d'un site. Les applications peuvent ainsi basculer en toute transparence au moyen d'une copie secondaire. Aucune intervention manuelle, ni script supplémentaire n'est nécessaire pour déclencher un basculement avec la synchronisation active SnapMirror.
+
+Pour plus d'informations sur la synchronisation active SnapMirror, reportez-vous àla section https://docs.netapp.com/us-en/ontap/smbc/index.html["Présentation de la synchronisation active SnapMirror"].
+
+Pour la synchronisation active SnapMirror, assurez-vous que vous répondez aux différentes exigences en matière de matériel, de logiciels et de configuration du système. Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html["Prérequis"]
+
+Les plug-ins pris en charge pour cette fonctionnalité sont le plug-in SnapCenter pour SQL Server, le plug-in SnapCenter pour Windows, le plug-in SnapCenter pour Oracle Database, le plug-in SnapCenter pour SAP HANA, le plug-in SnapCenter pour Microsoft Exchange Server et le plug-in SnapCenter pour Unix.
+
+
+NOTE: Pour prendre en charge la proximité de l'initiateur hôte dans SnapCenter, la source ou la destination doit être définie dans ONTAP.
+
+Cas d'utilisation non pris en charge par SnapCenter :
+
+* Si vous convertissez les charges de travail de synchronisation active SnapMirror asymétriques en charges de travail symétriques en modifiant la règle sur les relations de synchronisation active SnapMirror de _automatedfailover_ à _automatefailoverduplex_ dans ONTAP, cette règle n'est pas prise en charge dans SnapCenter.
+* En cas de sauvegardes d'un groupe de ressources (déjà protégé dans SnapCenter), puis de modification de la règle de stockage sur les relations de synchronisation active SnapMirror entre _automatedfailover_ et _failetedoverduplex_ dans ONTAP, cette règle n'est pas prise en charge dans SnapCenter.
+

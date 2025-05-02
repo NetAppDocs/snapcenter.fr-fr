@@ -95,3 +95,18 @@ Toutefois, vous pouvez effectuer manuellement une restauration au niveau des fic
 * NVMe n'est pas pris en charge.
 * Le provisionnement n'est pas pris en charge.
 
+
+
+
+== Caractéristiques
+
+* Permet au plug-in pour Oracle Database d'effectuer des opérations de protection des données sur les bases de données Oracle en gérant la pile de stockage hôte sous-jacente sur les systèmes Linux ou AIX
+* Prend en charge les protocoles NFS (Network File System) et SAN (Storage Area Network) sur un système de stockage exécutant ONTAP.
+* Pour les systèmes Linux, les bases de données Oracle sur des LUN VMDK et RDM sont prises en charge lorsque vous déployez le plug-in SnapCenter pour VMware vSphere et que vous enregistrez le plug-in avec SnapCenter.
+* Prend en charge Mount Guard pour AIX sur les systèmes de fichiers SAN et la disposition LVM.
+* Prise en charge du système JFS2 (Enhanced journalised File System) avec consignation en ligne sur les systèmes de fichiers SAN et disposition LVM pour les systèmes AIX uniquement.
++
+Les périphériques SAN natifs, les systèmes de fichiers et les dispositions LVM basées sur des périphériques SAN sont pris en charge.
+
+* Automatise les opérations de sauvegarde, de restauration et de clonage respectueuses des applications pour les systèmes de fichiers UNIX de votre environnement SnapCenter
+

@@ -24,7 +24,7 @@ Vous pouvez ensuite cliquer sur image:../media/filter_icon.gif["icône de filtre
 +
 La page protéger la base de données s'affiche.
 
-. Dans la page Ressources, vous pouvez effectuer les opérations suivantes :
+. Dans la page Ressources, effectuez les opérations suivantes :
 +
 .. Cochez la case et entrez un format de nom personnalisé à utiliser pour le nom du snapshot.
 +
@@ -37,8 +37,7 @@ Par exemple : `customtext_policy_hostname` ou `resource_hostname`. Par défaut, 
 +
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
 +
-
-NOTE: Vous pouvez créer une stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"].
+Vous pouvez créer une stratégie en cliquant sur image:../media/add_policy_from_resourcegroup.gif["ajouter un symbole"].
 
 +
 Dans la section configurer les plannings des stratégies sélectionnées, les stratégies sélectionnées sont répertoriées.

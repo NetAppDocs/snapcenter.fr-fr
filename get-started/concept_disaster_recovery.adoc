@@ -1,0 +1,35 @@
+---
+permalink: get-started/concept_disaster_recovery.html 
+sidebar: sidebar 
+keywords: Disaster Recovery, DR, crash, resource deleted 
+summary: 'Vous pouvez restaurer le serveur SnapCenter en cas d"incident, par exemple en cas de corruption des ressources ou de panne serveur, à l"aide de la fonctionnalité de reprise après incident de SnapCenter.' 
+---
+= Reprise après incident dans SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fonctionnalité de reprise après incident de SnapCenter vous permet de vous remettre en cas d'incidents tels que la corruption de ressources ou les pannes de serveur. Il permet de restaurer le référentiel SnapCenter, les planifications des serveurs, les composants de configuration, ainsi que le plug-in SnapCenter pour SQL Server et son stockage.
+
+Cette section décrit les deux types de reprise sur incident dans SnapCenter :
+
+
+
+== Reprise après incident du serveur SnapCenter
+
+* Les données du serveur SnapCenter sont sauvegardées et peuvent être restaurées sans ajout ou gestion de plug-in au serveur SnapCenter.
+* Le serveur SnapCenter secondaire doit être installé sur le même répertoire d'installation et sur le même port que le serveur SnapCenter principal.
+* Pour l'authentification multifacteur (MFA), pendant la reprise sur incident du serveur SnapCenter, fermez tous les onglets du navigateur et rouvrez un navigateur pour vous reconnecter. Ceci effacera les cookies de session existants ou actifs et mettra à jour les données de configuration correctes.
+* La fonctionnalité de reprise après incident de SnapCenter sauvegarde le serveur SnapCenter à l'aide d'API REST. Voir link:../tech-refresh/task_tech_refresh_server_host.html["Workflows d'API REST pour la reprise après incident d'un serveur SnapCenter"].
+* Le fichier de configuration relatif aux paramètres d'audit n'est pas sauvegardé dans la sauvegarde de reprise sur incident ni sur le serveur DR après l'opération de restauration. Vous devez répéter manuellement les paramètres du journal d'audit.
+
+
+
+
+== Plug-in SnapCenter et reprise après incident du stockage
+
+La reprise sur incident est disponible uniquement pour le plug-in SnapCenter pour SQL Server. Si le plug-in est en panne, passez à un autre hôte SQL et récupérez les données en suivant quelques étapes. Voir link:../protect-scsql/task_disaster_recovery_scsql.html["Reprise après incident du plug-in SnapCenter pour SQL Server"].
+
+SnapCenter utilise ONTAP SnapMirror pour répliquer les données qui peuvent être utilisées pour la reprise d'activité en synchronisant les données sur un site secondaire. Pour initier le basculement, interrompre la réplication SnapMirror. Pendant le retour arrière, inversez la synchronisation pour répliquer les données à partir du site de reprise sur incident vers l'emplacement principal.

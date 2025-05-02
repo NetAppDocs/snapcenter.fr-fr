@@ -390,7 +390,7 @@ Vous devez configurer les informations d'identification utilisées pour effectue
 
 *À propos de cette tâche*
 
-Consultez les différentes méthodes d'authentification prises en charge pour la base de données Oracle. Pour plus d'informations, reportez-vous à la sectionlink:../install/concept_authentication_methods_for_your_credentials.html["Méthodes d'authentification pour vos informations d'identification"^].
+Consultez les différentes méthodes d'authentification prises en charge pour la base de données Oracle. Pour plus d'informations, voir link:../get-started/concept_authentication_methods_for_your_credentials.html["Méthodes d'authentification pour vos informations d'identification"^].
 
 Si vous configurez des informations d'identification pour des groupes de ressources individuels et que le nom d'utilisateur ne dispose pas de privilèges d'administrateur complets, le nom d'utilisateur doit au moins disposer de privilèges de groupe de ressources et de sauvegarde.
 

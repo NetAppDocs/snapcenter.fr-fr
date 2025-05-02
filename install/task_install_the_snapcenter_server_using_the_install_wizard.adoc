@@ -31,8 +31,7 @@ NOTE: Vous ne devez pas installer le serveur SnapCenter sur un hôte doté de se
 
 
 
-*Étapes*
-
+.Étapes
 . Téléchargez le package d'installation du serveur SnapCenter à partir de https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["Site de support NetApp"^].
 . Lancez l'installation du serveur SnapCenter en double-cliquant sur le fichier .exe téléchargé.
 +
@@ -63,23 +62,4 @@ Toutefois, si vous cliquez sur *Annuler* lorsque vous exécutez des opérations 
 +
 Les fichiers journaux sont toujours répertoriés (les plus anciens en premier) dans le dossier %temp% de l'utilisateur admin. Si vous souhaitez rediriger les emplacements des journaux, lancez l'installation du serveur SnapCenter à partir de l'invite de commande :``C:\installer_location\installer_name.exe /log"C:\"``
 
-
-
-
-
-== Enregistrez le produit pour activer le support
-
-Si vous découvrez les produits NetApp et ne possédez pas de compte NetApp, enregistrez le produit pour activer le support.
-
-.Étapes
-. Après avoir installé SnapCenter, accédez à *aide > à propos de*.
-. Dans la boîte de dialogue _a propos de SnapCenter_, notez l'instance SnapCenter, un nombre à 20 chiffres commençant par 971.
-. Cliquez sur https://register.netapp.com[].
-. Cliquez sur *Je ne suis pas un client NetApp enregistré*.
-. Indiquez vos coordonnées pour vous inscrire.
-. Laissez le champ NetApp Reference SN vide.
-. Sélectionnez *SnapCenter* dans la liste déroulante gamme de produits.
-. Sélectionnez le fournisseur de facturation.
-. Entrez l'ID d'instance SnapCenter à 20 chiffres.
-. Cliquez sur *soumettre*.
 

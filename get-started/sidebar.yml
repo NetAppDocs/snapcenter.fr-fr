@@ -1,0 +1,26 @@
+---
+section: get-started
+title: Commencez
+entries:
+- title: En savoir plus sur les logiciels SnapCenter
+  entries:
+  - title: Présentation
+    url: "/get-started/concept_snapcenter_overview.html"
+  - title: Sécurité et authentification
+    url: "/get-started/reference_data_security.html"
+  - title: Contrôle d'accès basé sur des rôles
+    url: "/get-started/rbac-snapcenter.html"
+  - title: Reprise sur incident
+    url: "/get-started/concept_disaster_recovery.html"
+  - title: Licences
+    url: "/get-started/concept_snapcenter_licenses.html"
+  - title: Synchronisation active SnapMirror
+    url: "/get-started/snapmirror-active-sync-snapcenter.html"
+  - title: Concepts clés de la protection des données
+    url: "/get-started/concept_resources_resource_groups_and_policies.html"
+  - title: Systèmes et applications de stockage pris en charge
+    url: "/get-started/reference_supported_storage_systems_and_applications.html"
+  - title: Méthodes d'authentification
+    url: "/get-started/concept_authentication_methods_for_your_credentials.html"
+- title: Démarrage rapide
+  url: "/get-started/quick-start-snapcenter.html"

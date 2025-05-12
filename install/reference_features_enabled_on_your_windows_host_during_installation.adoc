@@ -111,6 +111,7 @@ Mise en file d'attente du message
 NOTE: Assurez-vous qu'aucune autre application n'utilise le service MSMQ créé et géré par SnapCenter.
 
 * RabbitMQ
+* Erlang
 
 
 

@@ -11,7 +11,7 @@ summary: 'Si vous ne souhaitez pas utiliser l"interface graphique de SnapCenter 
 
 
 [role="lead"]
-Si vous ne souhaitez pas utiliser l'interface graphique de SnapCenter pour effectuer des tâches de provisionnement d'hôtes et de récupération d'espace, vous pouvez utiliser les applets de commande PowerShell fournies par le plug-in SnapCenter pour Microsoft Windows. Vous pouvez utiliser les applets de commande directement ou les ajouter aux scripts.
+Si vous ne souhaitez pas utiliser l’interface graphique SnapCenter pour effectuer des tâches de provisionnement d’hôte et de récupération d’espace, vous pouvez utiliser les applets de commande PowerShell. Vous pouvez utiliser les applets de commande directement ou les ajouter aux scripts.
 
 Si vous exécutez les applets de commande sur un hôte de plug-in distant, vous devez exécuter l'applet de commande SnapCenter Open-SMConnection pour ouvrir une connexion au serveur SnapCenter.
 

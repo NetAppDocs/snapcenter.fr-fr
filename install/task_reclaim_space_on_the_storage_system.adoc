@@ -1,7 +1,7 @@
 ---
 permalink: install/task_reclaim_space_on_the_storage_system.html 
 sidebar: sidebar 
-keywords: space 
+keywords: space, storage system, reclaim 
 summary: 'Bien que NTFS surveille l"espace disponible sur une LUN lorsque des fichiers sont supprimés ou modifiés, il ne signale pas les nouvelles informations au système de stockage. Vous pouvez exécuter l"applet de commande PowerShell de récupération d"espace sur l"hôte du plug-in pour Windows afin de vous assurer que les blocs récemment libérés sont marqués comme disponibles dans le stockage.' 
 ---
 = Récupération de l'espace sur le système de stockage

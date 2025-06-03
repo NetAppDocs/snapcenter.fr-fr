@@ -141,3 +141,13 @@ Paramètres à transmettre pour l'installation du serveur SnapCenter :
 
 
 
+
+
+
+== Fonctionnalités activées sur l'hôte Linux lors de l'installation
+
+Le serveur SnapCenter installe les packages logiciels ci-dessous qui peuvent aider au dépannage et à la maintenance du système hôte.
+
+* RabbitMQ
+* Erlang
+

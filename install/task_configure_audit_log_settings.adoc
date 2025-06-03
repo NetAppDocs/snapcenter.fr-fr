@@ -17,8 +17,7 @@ Les journaux d'audit sont sécurisés par la génération d'un résumé signé n
 
 Vous devriez avoir ouvert une session en tant que rôle « SnapCenterAdmin ».
 
-*À propos de cette tâche*
-
+.Description de la tâche
 * Les alertes sont envoyées dans les scénarios suivants :
 +
 ** Le programme de vérification de l'intégrité du journal d'audit ou le serveur Syslog est activé ou désactivé
@@ -40,8 +39,7 @@ Les informations concernant les paramètres pouvant être utilisés avec la cmdl
 
 
 
-*Étapes*
-
+.Étapes
 . Dans la page *Paramètres*, accédez à *Paramètres* > *Paramètres globaux* > *Paramètres du journal d'audit*.
 . Dans la section Journal d'audit, entrez les détails.
 . Entrez le répertoire *Audit log* et le répertoire *Audit checksum log*

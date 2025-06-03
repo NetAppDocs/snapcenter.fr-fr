@@ -1,7 +1,7 @@
 ---
 permalink: install/task_add_an_rbac_role_using_security_login_commands.html 
 sidebar: sidebar 
-keywords: RBAC roles, add, NetApp ONTAP RBAC role 
+keywords: RBAC roles, add, NetApp ONTAP RBAC role, storage system 
 summary: Vous pouvez utiliser les commandes de connexion de sécurité pour ajouter un rôle NetApp ONTAP RBAC lorsque vos systèmes de stockage exécutent clustered NetApp ONTAP. 
 ---
 = Ajoutez un rôle NetApp ONTAP RBAC à l'aide de commandes de connexion de sécurité
@@ -14,30 +14,20 @@ summary: Vous pouvez utiliser les commandes de connexion de sécurité pour ajou
 Vous pouvez utiliser les commandes de connexion de sécurité pour ajouter un rôle NetApp ONTAP RBAC lorsque vos systèmes de stockage exécutent clustered ONTAP.
 
 .Avant de commencer
-* Avant de créer un rôle RBAC ONTAP pour les systèmes de stockage exécutant clustered ONTAP, vous devez identifier les éléments suivants :
-+
-** La ou les tâches que vous souhaitez effectuer
-** Privilèges requis pour effectuer ces tâches
-
-
-* Pour configurer un rôle RBAC, vous devez effectuer les actions suivantes :
-+
-** Accorder des privilèges aux répertoires de commandes et/ou de commandes.
+* Identifiez la tâche (ou les tâches) que vous souhaitez effectuer et les privilèges requis pour effectuer ces tâches.
+* Accorder des privilèges aux répertoires de commandes et/ou de commandes.
 +
 Il existe deux niveaux d'accès pour chaque répertoire de commande/commande : All-Access et read-only.
 
 +
 Vous devez toujours attribuer les privilèges All-Access en premier.
 
-** Attribuez des rôles aux utilisateurs.
-** Varier votre configuration selon que vos plug-ins SnapCenter sont connectés à l'IP d'administration du cluster pour tout le cluster ou directement connectés à un SVM au sein du cluster.
+* Attribuez des rôles aux utilisateurs.
+* Identifiez votre configuration selon que vos plug-ins SnapCenter sont connectés à l'IP de l'administrateur de cluster pour l'ensemble du cluster ou directement connectés à une SVM au sein du cluster.
 
 
-
-
-*À propos de cette tâche*
-
-Pour simplifier la configuration de ces rôles sur les systèmes de stockage, vous pouvez utiliser l'outil RBAC User Creator for NetApp ONTAP, disponible sur le forum des communautés NetApp.
+.Description de la tâche
+Pour simplifier la configuration de ces rôles sur les systèmes de stockage, vous pouvez utiliser l'outil RBAC User Creator pour NetApp ONTAP, publié sur le forum des communautés NetApp.
 
 Cet outil gère automatiquement la configuration correcte des privilèges ONTAP. Par exemple, l'outil RBAC User Creator for NetApp ONTAP ajoute automatiquement le Privileges dans le bon ordre afin que le Privileges tout accès apparaisse en premier. Si vous ajoutez d'abord les privilèges en lecture seule, puis ajoutez les privilèges All-Access, ONTAP marque les privilèges All-Access en tant que doublons et les ignore.
 
@@ -46,11 +36,7 @@ NOTE: Si vous mettez ultérieurement à niveau SnapCenter ou ONTAP, vous devez e
 
 Plus d'informations sur la configuration des rôles RBAC ONTAP, consultez le http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["Guide de l'authentification de l'administrateur ONTAP 9 et de l'alimentation RBAC"^].
 
-
-NOTE: Dans un souci de cohérence, la documentation SnapCenter fait référence aux rôles en tant qu'utilisation des privilèges. L'interface graphique du Gestionnaire système OnCommand utilise le terme _attribute_ au lieu de _Privilege_. Lors de la configuration de rôles RBAC ONTAP, ces deux termes désignent la même chose.
-
-*Étapes*
-
+.Étapes
 . Sur le système de stockage, créez un nouveau rôle en entrant la commande suivante :
 +
 `security login role create <role_name\> -cmddirname "command" -access all –vserver <svm_name\>`

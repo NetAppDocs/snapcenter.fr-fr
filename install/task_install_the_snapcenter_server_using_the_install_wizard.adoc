@@ -1,7 +1,7 @@
 ---
 permalink: install/task_install_the_snapcenter_server_using_the_install_wizard.html 
 sidebar: sidebar 
-keywords: install, snapcenter software, install wizard 
+keywords: install, snapcenter software, install wizard, features enabled 
 summary: 'Vous pouvez exécuter le programme d"installation du serveur SnapCenter pour installer le serveur SnapCenter.' 
 ---
 = Installez le serveur SnapCenter sur l'hôte Windows
@@ -63,3 +63,127 @@ Toutefois, si vous cliquez sur *Annuler* lorsque vous exécutez des opérations 
 Les fichiers journaux sont toujours répertoriés (les plus anciens en premier) dans le dossier %temp% de l'utilisateur admin. Si vous souhaitez rediriger les emplacements des journaux, lancez l'installation du serveur SnapCenter à partir de l'invite de commande :``C:\installer_location\installer_name.exe /log"C:\"``
 
 
+
+
+
+== Fonctionnalités activées sur l'hôte Windows lors de l'installation
+
+Le programme d'installation de SnapCenter Server active les fonctions et les rôles Windows sur votre hôte Windows au cours de l'installation. Ceux-ci peuvent être intéressants pour le dépannage et la maintenance du système hôte.
+
+|===
+| Catégorie | Fonction 
+
+
+ a| 
+Serveur Web
+ a| 
+* Services d'information Internet
+* World Wide Web Services
+* Fonctionnalités HTTP courantes
++
+** Document par défaut
+** Navigation dans le répertoire
+** Erreurs HTTP
+** Redirection HTTP
+** Contenu statique
+** Publication WebDAV
+
+
+* Santé et diagnostics
++
+** Journalisation personnalisée
+** Journalisation HTTP
+** Outils de journalisation
+** Moniteur de demandes
+** Tracé
+
+
+* Fonctionnalités de performances
++
+** Compression du contenu statique
+
+
+* Sécurité
++
+** Sécurité IP
+** Authentification de base
+** Prise en charge centralisée des certificats SSL
+** Authentification de mappage de certificat client
+** Authentification de mappage de certificat de client IIS
+** Restrictions IP et de domaine
+** Filtrage de demandes
+** Autorisation d'URL
+** Authentification Windows
+
+
+* Fonctionnalités de développement d'applications
++
+** Extensibilité .NET 4.5
+** Initialisation de l'application
+** ASP.NET Core Runtime 8.0.12 (et tous les correctifs 8.0.x suivants) Hosting Bundle
+** Côté serveur inclus
+** Protocole WebSocket
+
+
+* Outils de gestion
++
+** Console de gestion IIS
+
+
+
+
+
+
+ a| 
+Outils et scripts de gestion IIS
+ a| 
+* Service de gestion IIS
+* Outils de gestion Web
+
+
+
+
+ a| 
++.NET Framework 8.0.12 fonctionnalités+
+ a| 
+* ASP.NET Core Runtime 8.0.12 (et tous les correctifs 8.0.x suivants) Hosting Bundle
+* Windows communication Foundation (WCF) HTTP Activation45
++
+** Activation TCP
+** Activation HTTP
+
+
+
+
+Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["Échec de la mise à niveau ou de l'installation de SnapCenter pour les systèmes hérités qui ne disposent pas d'une connexion Internet"^].
+
+
+
+ a| 
+Mise en file d'attente du message
+ a| 
+* Services de mise en file d'attente des messages
++
+
+NOTE: Assurez-vous qu'aucune autre application n'utilise le service MSMQ créé et géré par SnapCenter.
+
+* RabbitMQ
+* Erlang
+
+
+
+
+ a| 
+Service d'activation de processus Windows
+ a| 
+* Modèle de processus
+
+
+
+
+ a| 
+API de configuration
+ a| 
+Tout
+
+|===

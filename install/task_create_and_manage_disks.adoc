@@ -55,6 +55,80 @@ Les disques sont répertoriés.
 
 
 
+== Établir une session iSCSI
+
+Si vous utilisez iSCSI pour vous connecter à une LUN, vous devez établir une session iSCSI avant de créer la LUN pour activer la communication.
+
+*Avant de commencer*
+
+* Vous devez avoir défini le nœud du système de stockage comme cible iSCSI.
+* Vous devez avoir démarré le service iSCSI sur le système de stockage. http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["En savoir plus >>"^]
+
+
+*À propos de cette tâche*
+
+Vous pouvez établir une session iSCSI uniquement entre les mêmes versions IP, soit d'IPv6 vers IPv6, soit d'IPv4 vers IPv4.
+
+Vous pouvez utiliser une adresse IPv6 lien-local pour la gestion des sessions iSCSI et pour la communication entre un hôte et une cible uniquement lorsque les deux se trouvent dans le même sous-réseau.
+
+Si vous modifiez le nom d'un initiateur iSCSI, l'accès aux cibles iSCSI est affecté. Après avoir modifié le nom, vous devrez peut-être reconfigurer les cibles auxquelles l'initiateur a accès afin qu'il puisse reconnaître le nouveau nom. Vous devez vous assurer de redémarrer l'hôte après avoir modifié le nom d'un initiateur iSCSI.
+
+Si votre hôte dispose de plusieurs interfaces iSCSI, une fois que vous avez établi une session iSCSI vers SnapCenter à l'aide d'une adresse IP sur la première interface, vous ne pouvez pas établir de session iSCSI à partir d'une autre interface avec une autre adresse IP.
+
+*Étapes*
+
+. Dans le volet de navigation de gauche, cliquez sur *hosts*.
+. Dans la page hôtes, cliquez sur *session iSCSI*.
+. Dans la liste déroulante *Storage Virtual machine*, sélectionnez la machine virtuelle de stockage (SVM) pour la cible iSCSI.
+. Dans la liste déroulante *Host*, sélectionnez l'hôte de la session.
+. Cliquez sur *établir session*.
++
+L'assistant d'établissement de session s'affiche.
+
+. Dans l'assistant établir une session, identifiez la cible :
++
+|===
+| Dans ce champ... | Entrer... 
+
+
+ a| 
+Nom du nœud cible
+ a| 
+Nom du nœud de la cible iSCSI
+
+S'il existe un nom de nœud cible existant, le nom est affiché en lecture seule.
+
+
+
+ a| 
+Adresse du portail cible
+ a| 
+L'adresse IP du portail réseau cible
+
+
+
+ a| 
+Port du portail cible
+ a| 
+Port TCP du portail réseau cible
+
+
+
+ a| 
+Adresse du portail de l'initiateur
+ a| 
+L'adresse IP du portail réseau de l'initiateur
+
+|===
+. Lorsque vous êtes satisfait de vos entrées, cliquez sur *connexion*.
++
+SnapCenter établit la session iSCSI.
+
+. Répétez cette procédure pour établir une session pour chaque cible.
+
+
+
+
 == Créer des disques ou des LUN connectés via FC ou iSCSI
 
 L'hôte Windows voit les LUN de votre système de stockage comme des disques virtuels. Vous pouvez utiliser SnapCenter pour créer et configurer une LUN connectée via FC ou connectée via iSCSI.

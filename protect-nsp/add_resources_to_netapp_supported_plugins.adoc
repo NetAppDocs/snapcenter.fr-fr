@@ -197,5 +197,6 @@ Paramètres de ressource :
 * ORA_TEMP spécifie le répertoire des fichiers temporaires.
 * ORACLE_HOME spécifie le répertoire dans lequel le logiciel Oracle est installé.
 * ARCHIVE_LOG_ONLY indique si les journaux d'archive doivent être sauvegardés ou non.
-* ORACLE_BACKUP_MODE indique s'il faut effectuer une sauvegarde en ligne ou hors ligne.
+* ORACLE_BACKUPMODE spécifie s'il faut effectuer une sauvegarde en ligne ou hors ligne.
+* ORACLE_EXPORT_PARAMETERS spécifie si vous pouvez exporter des variables d'environnement lors de l'exécution de _bin/su_. La valeur de ORACLE_EXPORT_PARAMETERS doit être définie sur *y*.
 

@@ -6767,7 +6767,6 @@
   <block id="04f76259e3406e39f106d09b85354906" category="inline-link">Les sauvegardes SnapCenter pour Exchange ne conservent que la moitié des snapshots sur le volume du journal de destination du coffre-fort</block>
   <block id="67e1d332319e6fe55fd35967c2ec989e" category="admonition">Créez des règles de copie distinctes pour les journaux et les bases de données lors du traitement des volumes Exchange (LUN), et définissez la conservation (conservation) de la règle de journalisation sur deux fois le nombre pour chaque étiquette de la règle de base de données, en utilisant les mêmes étiquettes. Pour plus d'informations, voir<block ref="069d987d34ba2a5b3f4862b42bb7f849" category="inline-link-rx"></block></block>
   <block id="b885eb831c1b0ea66dc957240ef0bacd" category="admonition">Lors de la restauration des fichiers de contrôle, assurez-vous que la structure de répertoires existe ou doit être créée avec les utilisateurs et les groupes appropriés, le cas échéant, pour permettre la copie des fichiers vers l'emplacement cible par le processus de restauration. Si le répertoire n'existe pas, la tâche de restauration échouera.</block>
-  <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">IBM Java n'est pas pris en charge.</block>
   <block id="bb92d00cc055d1fa0c3023946870bfd5" category="paragraph">Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section<block ref="d20f19fe60cd205f06739b1a5caeb450" category="inline-link-rx"></block></block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">Échec de la mise à niveau ou de l'installation de SnapCenter pour les systèmes hérités qui ne disposent pas d'une connexion Internet</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>.</block>
@@ -8723,7 +8722,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="0b12a00876503fb1813afee6ad9b0a76" category="list-text">ORA_TEMP spécifie le répertoire des fichiers temporaires.</block>
   <block id="e1ab4aa639aa539548c7d55759dc7004" category="list-text">ORACLE_HOME spécifie le répertoire dans lequel le logiciel Oracle est installé.</block>
   <block id="57808f9033b6670d0e1ff1ecc8197488" category="list-text">ARCHIVE_LOG_ONLY indique si les journaux d'archive doivent être sauvegardés ou non.</block>
-  <block id="6d6058c414d1170875e11ce8a19484f0" category="list-text">ORACLE_BACKUP_MODE indique s'il faut effectuer une sauvegarde en ligne ou hors ligne.</block>
   <block id="c4e433903376436b2e77e2cfdc6f5913" category="summary">Si une ressource individuelle de plug-ins pris en charge par NetApp ne fait partie d'aucun groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources. Vous pouvez sauvegarder la ressource à la demande ou, si une stratégie est associée à la ressource et qu'une planification est configurée, les sauvegardes sont automatiquement effectuées en fonction de la planification.</block>
   <block id="6ce5278b296a0a5a39af4a4d0cbd927c" category="doc">Sauvegarde de ressources individuelles des plug-ins pris en charge par NetApp</block>
   <block id="37a077fe53864717026a312c9cfed412" category="doc">Sauvegarde des ressources des plug-ins pris en charge par NetApp</block>
@@ -9980,4 +9978,16 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">Installez le serveur SnapCenter</block>
   <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">Configurer le serveur SnapCenter</block>
   <block id="4c975961e88401702aa6aac167300031" category="sidebar">Ajouter et provisionner le système de stockage</block>
+  <block id="81f9b64ab1987ed2d00f4d52a80ca52b" category="paragraph">Pour obtenir les dernières informations sur les versions prises en charge, consultez le<block ref="315018c067f16596ddc2e2de507c24d0" category="inline-link-rx"></block>.</block>
+  <block id="0885e9f12d8cb35b0f02655c34c87004" category="admonition">IBM Java n'est pas pris en charge sur les hôtes Windows et Linux.</block>
+  <block id="48c9a1bf5de7bf57f1efa648f3bc8d17" category="inline-link">Télécharger JAVA pour Windows</block>
+  <block id="a4560fe71d10d98deabf55fdf50b90f0" category="paragraph"><block ref="a4560fe71d10d98deabf55fdf50b90f0" category="inline-link-rx"></block></block>
+  <block id="25827211b51e5a08cc74ddb2f845f386" category="inline-link">Télécharger JAVA pour Linux</block>
+  <block id="0632a773655c14c1b1e9ced88bc550ed" category="paragraph"><block ref="0632a773655c14c1b1e9ced88bc550ed" category="inline-link-rx"></block></block>
+  <block id="ffef625a5852f63e8c97e120b261e871" category="inline-link">Télécharger JAVA pour AIX</block>
+  <block id="1cf0cff6e7cd05dac4238e50abe74627" category="paragraph"><block ref="1cf0cff6e7cd05dac4238e50abe74627" category="inline-link-rx"></block></block>
+  <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">Télécharger JAVA pour tous les systèmes d'exploitation</block>
+  <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
+  <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE spécifie s'il faut effectuer une sauvegarde en ligne ou hors ligne.</block>
+  <block id="849d9298ad9d6def4918273148b3d4bf" category="list-text">ORACLE_EXPORT_PARAMETERS spécifie si vous pouvez exporter des variables d'environnement lors de l'exécution de _bin/su_. La valeur de ORACLE_EXPORT_PARAMETERS doit être définie sur *y*.</block>
 </blocks>

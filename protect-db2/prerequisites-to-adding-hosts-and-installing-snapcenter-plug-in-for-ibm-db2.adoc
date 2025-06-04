@@ -16,7 +16,7 @@ Avant d'ajouter un hôte et d'installer les modules d'extension, vous devez remp
 * Vous devez avoir installé Java 11 sur votre hôte.
 +
 
-NOTE: IBM Java n'est pas pris en charge.
+NOTE: IBM Java n'est pas pris en charge sur les hôtes Windows et Linux.
 
 * Pour Windows, le service de création de plug-in doit être exécuté à l'aide de l'utilisateur Windows « LocalSystem », qui est le comportement par défaut lorsque le plug-in pour IBM DB2 est installé en tant qu'administrateur de domaine.
 * Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré ou si l'utilisateur appartient à un utilisateur de groupe de travail local, vous devez désactiver l'UAC sur l'hôte. Le plug-in SnapCenter pour Microsoft Windows sera déployé par défaut avec le plug-in IBM DB2 sur les hôtes Windows.
@@ -32,7 +32,7 @@ NOTE: IBM Java n'est pas pris en charge.
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
 * Vous devez avoir installé Java 11 sur votre hôte Windows.
 +
-http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
+http://www.java.com/en/download/manual.jsp["Télécharger JAVA pour Windows"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
@@ -46,7 +46,10 @@ https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
 * Vous devez avoir installé Java 11 sur votre hôte Linux.
 +
-http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
+http://www.java.com/en/download/manual.jsp["Télécharger JAVA pour Linux"]
+
++
+https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["Télécharger JAVA pour AIX"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]

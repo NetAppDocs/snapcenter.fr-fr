@@ -16,7 +16,7 @@ Avant d'ajouter un hôte et d'installer les modules d'extension, vous devez remp
 * Vous devez avoir installé Java 11 sur votre hôte.
 +
 
-NOTE: IBM Java n'est pas pris en charge.
+NOTE: IBM Java n'est pas pris en charge sur les hôtes Windows et Linux.
 
 * Vous devez avoir installé le terminal interactif de la base de données SAP HANA (client HDBSQL) sur l'hôte.
 * Pour Windows, Plug-in Creator Service doit être en cours d'exécution à l'aide de l'utilisateur Windows « LocalSystem », ce qui est le comportement par défaut lorsque Plug-in pour SAP HANA Database est installé en tant qu'administrateur de domaine.
@@ -35,7 +35,7 @@ NOTE: IBM Java n'est pas pris en charge.
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
 * Vous devez avoir installé Java 11 sur votre hôte Windows.
 +
-http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
+http://www.java.com/en/download/manual.jsp["Télécharger JAVA pour tous les systèmes d'exploitation"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
@@ -49,7 +49,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
 * Vous devez avoir installé Java 11 sur votre hôte Linux.
 +
-http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
+http://www.java.com/en/download/manual.jsp["Télécharger JAVA pour tous les systèmes d'exploitation"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]

@@ -17,6 +17,10 @@ Avant d'ajouter un hôte et d'installer les packages de plug-ins, vous devez res
 NOTE: Les applications de stockage et Oracle sont prises en charge sous AIX.
 
 * Vous devez avoir installé Java 11 sur votre hôte Linux, Windows ou AIX.
++
+
+NOTE: IBM Java n'est pas pris en charge sur les hôtes Windows et Linux.
+
 * Lors de l'installation d'un plug-in sur un hôte Windows, si vous spécifiez un identifiant qui n'est pas intégré ou si l'utilisateur appartient à un utilisateur de groupe de travail local, vous devez désactiver l'UAC sur l'hôte.
 * Les plug-ins pris en charge par NetApp comme MongoDB, ORASCPM, les applications Oracle, SAP ASE, SAP MaxDB et le plug-in de stockage doivent être disponibles sur l'hôte client à partir duquel l'opération d'ajout d'hôte est effectuée.
 
@@ -34,6 +38,9 @@ Si vous utilisez iSCSI, le service iSCSI doit être en cours d'exécution.
 * Vous devez disposer d'un utilisateur de domaine disposant de privilèges d'administrateur local avec des autorisations de connexion locales sur l'hôte distant.
 * Si vous gérez des nœuds de cluster dans SnapCenter, vous devez disposer d'un utilisateur disposant de privilèges d'administration sur tous les nœuds du cluster.
 * Vous devez sélectionner manuellement le plug-in SnapCenter pour Microsoft Windows.
++
+http://www.java.com/en/download/manual.jsp["Télécharger JAVA pour Windows"]
+
 
 
 
@@ -49,7 +56,10 @@ NOTE: Les applications de stockage et Oracle sont prises en charge sous AIX.
 Si vous utilisez Windows Server 2019 ou Windows Server 2016 pour l'hôte SnapCenter Server, vous devez installer Java 11. La matrice d'interopérabilité (IMT) contient les dernières informations sur les conditions requises.
 
 +
-http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"]
+http://www.java.com/en/download/manual.jsp["Télécharger JAVA pour Linux"]
+
++
+https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["Télécharger JAVA pour AIX"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]

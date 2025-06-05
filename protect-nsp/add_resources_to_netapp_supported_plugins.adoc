@@ -198,5 +198,5 @@ Paramètres de ressource :
 * ORACLE_HOME spécifie le répertoire dans lequel le logiciel Oracle est installé.
 * ARCHIVE_LOG_ONLY indique si les journaux d'archive doivent être sauvegardés ou non.
 * ORACLE_BACKUPMODE spécifie s'il faut effectuer une sauvegarde en ligne ou hors ligne.
-* ORACLE_EXPORT_PARAMETERS spécifie si vous pouvez exporter des variables d'environnement lors de l'exécution de _bin/su_. La valeur de ORACLE_EXPORT_PARAMETERS doit être définie sur *y*.
+* ORACLE_EXPORT_PARAMETERS spécifie si les variables d'environnement définies ci-dessus doivent être réexportées lors de l'exécution de _/bin/su <utilisateur exécutant sqlplus> -c sqlplus /nolog <cmd>_. C'est généralement le cas lorsque l'utilisateur exécutant sqlplus n'a pas défini toutes les variables d'environnement nécessaires à la connexion à la base de données via _connect / as sysdba_.
 

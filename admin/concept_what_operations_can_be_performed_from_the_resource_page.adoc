@@ -16,13 +16,11 @@ Pour découvrir les ressources et exécuter les opérations de protection des do
 À partir de la page Ressources, vous pouvez effectuer les tâches suivantes :
 
 |===
-| Vous pouvez effectuer ces tâches... | Pour Microsoft Exchange Server | Pour Microsoft SQL Server | Pour Microsoft Windows | Pour Oracle Database | Pour les bases de données SAP HANA | Pour les plug-ins personnalisés 
+| Vous pouvez effectuer ces tâches... | Pour Microsoft Exchange Server | Pour Microsoft SQL Server | Pour Microsoft Windows | Pour Oracle Database | Pour les bases de données SAP HANA 
 
 
  a| 
 Déterminer si des ressources sont disponibles pour les sauvegardes
- a| 
-Oui.
  a| 
 Oui.
  a| 
@@ -48,15 +46,11 @@ Oui.
 Oui.
  a| 
 Oui.
- a| 
-Oui.
 
 
 
  a| 
 Effectuez des restaurations à partir des sauvegardes
- a| 
-Oui.
  a| 
 Oui.
  a| 
@@ -82,15 +76,11 @@ Oui.
 Oui.
  a| 
 Oui.
- a| 
-Oui.
 
 
 
  a| 
 Gérer les sauvegardes
- a| 
-Oui.
  a| 
 Oui.
  a| 
@@ -116,15 +106,11 @@ Oui.
 Oui.
  a| 
 Oui.
- a| 
-Oui.
 
 
 
  a| 
 Gestion des règles
- a| 
-Oui.
  a| 
 Oui.
  a| 
@@ -150,8 +136,6 @@ Oui.
 Oui.
  a| 
 Oui.
- a| 
-Oui.
 
 
 
@@ -165,8 +149,6 @@ Non
 Non
  a| 
 Oui.
- a| 
-Non
  a| 
 Non
 
@@ -184,15 +166,11 @@ Non
 Oui.
  a| 
 Non
- a| 
-Non
 
 
 
  a| 
 Afficher les détails
- a| 
-Oui.
  a| 
 Oui.
  a| 

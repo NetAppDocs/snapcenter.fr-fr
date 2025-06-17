@@ -15,6 +15,8 @@ indexpage:
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
     - title: Découvrez SnapCenter
       url: "/get-started/concept_snapcenter_overview.html"
+    - title: Opérations SnapCenter prises en charge pour les systèmes ASA r2
+      url: "/get-started/learn-about-snapcenter-support-for-asa-r2-systems.html"
     - title: Démarrage rapide du logiciel SnapCenter
       url: "/get-started/quick-start-snapcenter.html"
     - title: Mettez à niveau les plug-ins SnapCenter Server et SnapCenter

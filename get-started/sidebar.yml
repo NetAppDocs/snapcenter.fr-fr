@@ -22,5 +22,7 @@ entries:
     url: "/get-started/reference_supported_storage_systems_and_applications.html"
   - title: Méthodes d'authentification
     url: "/get-started/concept_authentication_methods_for_your_credentials.html"
+- title: Opérations SnapCenter prises en charge pour les systèmes ASA r2
+  url: "/get-started/learn-about-snapcenter-support-for-asa-r2-systems.html"
 - title: Démarrage rapide
   url: "/get-started/quick-start-snapcenter.html"

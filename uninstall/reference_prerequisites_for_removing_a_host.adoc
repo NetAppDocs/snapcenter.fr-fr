@@ -16,7 +16,6 @@ Vous pouvez supprimer des hôtes et désinstaller des plug-ins ou des modules ex
 Avant de supprimer un hôte du serveur SnapCenter, vous devez remplir les conditions préalables.
 
 * Vous devez vous connecter en tant qu'administrateur.
-* Si vous utilisez des plug-ins personnalisés SnapCenter, supprimez tous les clones de SnapCenter associés à l'hôte.
 * Vous devez vous assurer que les travaux de découverte ne sont pas en cours d'exécution sur l'hôte.
 * Un rôle avec les autorisations requises doit être attribué pour supprimer tous les objets associés à l'hôte. Dans le cas contraire, l'opération de retrait échoue.
 * Vous devez confirmer l'empreinte si la clé SSH a été modifiée après l'ajout de l'hôte à SnapCenter.

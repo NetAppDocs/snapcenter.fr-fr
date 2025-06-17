@@ -20,7 +20,7 @@ Si vous souhaitez sauvegarder une ressource avec un système de stockage seconda
 NOTE: Lors de la sauvegarde d'un système de fichiers, SnapCenter ne sauvegarde pas les LUN montées sur un point de montage de volume (VMP) dans le système de fichiers en cours de sauvegarde.
 
 
-IMPORTANT: Si vous travaillez dans un contexte de système de fichiers Windows, ne sauvegardez pas les fichiers de base de données. La sauvegarde est ainsi incohérente et risque de perte de données lors de la restauration. Pour protéger les fichiers de base de données, vous devez utiliser le plug-in SnapCenter approprié pour la base de données (par exemple, le plug-in SnapCenter pour Microsoft SQL Server, le plug-in SnapCenter pour Microsoft Exchange Server ou un plug-in personnalisé pour les fichiers de base de données).
+IMPORTANT: Si vous travaillez dans un contexte de système de fichiers Windows, ne sauvegardez pas les fichiers de base de données. La sauvegarde est ainsi incohérente et risque de perte de données lors de la restauration. Pour protéger les fichiers de base de données, vous devez utiliser le plug-in SnapCenter approprié pour la base de données (par exemple, le plug-in SnapCenter pour Microsoft SQL Server ou le plug-in SnapCenter pour Microsoft Exchange Server).
 
 [role="tabbed-block"]
 ====

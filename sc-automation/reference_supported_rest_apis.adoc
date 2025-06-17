@@ -119,7 +119,6 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 * Restaurez une sauvegarde de base de données SQL
 * Restaurez une sauvegarde de base de données Oracle
 * restaurez une sauvegarde d'application personnalisée
-* créez une ressource de plug-in personnalisée
 * Créez une ressource SAP HANA
 * protégez une ressource personnalisée à l'aide du plug-in pour une application personnalisée
 * Protection d'une ressource Microsoft SQL Server à l'aide du plug-in pour Microsoft SQL Server
@@ -272,7 +271,6 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 * Configurez la base de données SAP HANA à l'aide d'une clé
 * Configurez la base de données Oracle à l'aide d'une clé
 * restaurez une sauvegarde d'application personnalisée à l'aide d'une clé
-* créez une ressource de plug-in personnalisée
 * Créez une ressource SAP HANA
 * Créez une ressource de volume d'application Oracle
 * protégez une ressource personnalisée à l'aide du plug-in pour une application personnalisée

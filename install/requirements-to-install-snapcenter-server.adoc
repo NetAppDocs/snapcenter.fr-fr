@@ -305,9 +305,9 @@ Plug-ins pris en charge par NetApp pour SnapCenter
 HTTPS
  a| 
  a| 
-Il s'agit d'un port interne utilisé uniquement sur l'hôte personnalisé du plug-in ; aucune exception de pare-feu n'est requise.
+Il s'agit d'un port interne utilisé uniquement sur l'hôte du plug-in ; aucune exception de pare-feu n'est requise.
 
-La communication entre le serveur SnapCenter et les plug-ins personnalisés est routée via le port 8145.
+La communication entre le serveur SnapCenter et les plug-ins est acheminée via le port 8145.
 
 
 

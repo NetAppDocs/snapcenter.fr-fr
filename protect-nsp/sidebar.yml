@@ -69,11 +69,11 @@ entries:
     - title: Configurez le certificat d'autorité de certification avec les services
         de plug-in d'hôte Windows
       url: "/protect-nsp/configure_CA_certificate_with_Windows_host_plug-in_services.html"
-    - title: Configurez le certificat d'autorité de certification pour le service
-        de plug-ins personnalisés SnapCenter sur l'hôte Linux
+    - title: Configurer le certificat CA pour le service de plug-ins SnapCenter sur
+        l'hôte Linux
       url: "/protect-nsp/configure_CA_certificate_on_Linux_host.html"
-    - title: Configurez le certificat d'autorité de certification pour le service
-        de plug-ins personnalisés SnapCenter sur l'hôte Windows
+    - title: Configurer le certificat CA pour le service de plug-ins SnapCenter sur
+        l'hôte Windows
       url: "/protect-nsp/configure_CA_certificate_on_windows_host.html"
     - title: Activez les certificats CA pour les plug-ins
       url: "/protect-nsp/enable_ca_certificates_for_plug-ins.html"

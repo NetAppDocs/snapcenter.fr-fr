@@ -21,9 +21,9 @@ Pour les environnements cloud, vous pouvez configurer la haute disponibilité à
 ====
 .Configurer la haute disponibilité à l'aide de F5
 --
-L'image de workflow répertorie les étapes de configuration des serveurs SnapCenter pour une haute disponibilité à l'aide de F5 Load Balancer. Pour obtenir des instructions détaillées, reportez-vous à https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["Comment configurer les serveurs SnapCenter pour la haute disponibilité à l'aide de F5 Load Balancer"^]la .
+Pour obtenir des instructions sur la configuration des serveurs SnapCenter pour une haute disponibilité à l'aide de l'équilibreur de charge F5, reportez-vous à  https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["Comment configurer les serveurs SnapCenter pour la haute disponibilité à l'aide de F5 Load Balancer"^] .
 
-image::../media/sc-F5-configure-workflow.gif[Workflow de configuration F5]
+image
 
 Vous devez être membre du groupe administrateurs locaux sur les serveurs SnapCenter (en plus d'être affecté au rôle SnapCenterAdmin) pour utiliser les applets de commande suivantes pour ajouter et supprimer des clusters F5 :
 

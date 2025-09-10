@@ -23,18 +23,11 @@ Avant d'utiliser SnapCenter pour sauvegarder les ressources de la base de donné
 
 
 .Description de la tâche
-* SnapLock
-+
-** Si l'option « conserver les copies de sauvegarde pendant un nombre de jours spécifique » est sélectionnée, la période de conservation SnapLock doit être inférieure ou égale aux jours de conservation mentionnés.
-+
-La spécification d'une période de verrouillage de snapshot empêche la suppression des snapshots jusqu'à l'expiration de la période de conservation. Cela peut entraîner la conservation d'un nombre plus important de snapshots que le nombre spécifié dans la règle.
+Si l'option « conserver les copies de sauvegarde pendant un nombre de jours spécifique » est sélectionnée, la période de conservation SnapLock doit être inférieure ou égale aux jours de conservation mentionnés.
 
-+
-Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
++ La spécification d'une période de verrouillage des instantanés empêche la suppression des instantanés jusqu'à l'expiration de la période de conservation.  Cela pourrait conduire à conserver un nombre d’instantanés supérieur au nombre spécifié dans la politique.
 
-
-
-
++ Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des instantanés SnapLock Vault dans le cadre de la restauration hériteront du délai d'expiration de SnapLock Vault.  L'administrateur de stockage doit nettoyer manuellement les clones après l'expiration de SnapLock .
 
 *Étapes*
 
@@ -167,24 +160,13 @@ Sélectionnez *conserver les copies pour*, puis indiquez le nombre de jours pend
 
 
  a| 
-Période de verrouillage des copies Snapshot principales
+Période de verrouillage de la copie instantanée
  a| 
-Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané principale, sélectionnez *période de verrouillage de la copie d'instantané principale* et sélectionnez jours, mois ou années.
+Sélectionnez la *Période de verrouillage de la copie instantanée* et spécifiez la durée en jours, mois ou années.
 
 La période de conservation SnapLock doit être inférieure à 100 ans.
 
-
-
- a| 
-Période de verrouillage des copies Snapshot secondaires
- a| 
-Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané secondaire, sélectionnez *période de verrouillage de la copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
-
 |===
-+
-
-NOTE: Vous ne pouvez conserver les sauvegardes du journal d'archivage que si vous avez sélectionné les fichiers journaux d'archive dans le cadre de votre sauvegarde.
-
 .. Dans la section Paramètres de conservation des instantanés du journal d'archivage, spécifiez les paramètres de conservation pour le type de sauvegarde et le type de planification sélectionnés dans la page Type de sauvegarde :
 +
 |===
@@ -216,31 +198,17 @@ Sélectionnez *conserver les copies pour*, puis indiquez le nombre de jours pend
 
 
  a| 
-Période de verrouillage des copies Snapshot principales
+Période de verrouillage de la copie instantanée
  a| 
-Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané principale, sélectionnez *période de verrouillage de la copie d'instantané principale* et sélectionnez jours, mois ou années.
+Sélectionnez la *Période de verrouillage de la copie instantanée* et spécifiez la durée en jours, mois ou années.
 
 La période de conservation SnapLock doit être inférieure à 100 ans.
 
-
-
- a| 
-Période de verrouillage des copies Snapshot secondaires
- a| 
-Si vous souhaitez spécifier la période de verrouillage de la copie d'instantané secondaire, sélectionnez *période de verrouillage de la copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
-
 |===
-+
-
-NOTE: Vous ne pouvez conserver les sauvegardes du journal d'archivage que si vous avez sélectionné les fichiers journaux d'archive dans le cadre de votre sauvegarde.
-
 .. Sélectionnez le libellé de la stratégie.
 +
-Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
 
-+
-
-NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+NOTE: Vous pouvez attribuer des étiquettes SnapMirror aux snapshots principaux pour la réplication à distance, permettant ainsi aux snapshots principaux de décharger l'opération de réplication de snapshot de SnapCenter vers les systèmes secondaires ONTAP .  Cela peut être fait sans activer l’option SnapMirror ou SnapVault dans la page de politique.
 
 
 

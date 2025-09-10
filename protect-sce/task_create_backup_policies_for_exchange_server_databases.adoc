@@ -162,17 +162,10 @@ NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'he
 
 .. Sélectionnez le libellé police.
 +
-Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
 
-+
-
-NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
+NOTE: Vous pouvez attribuer des étiquettes SnapMirror aux snapshots principaux pour la réplication à distance, permettant ainsi aux snapshots principaux de décharger l'opération de réplication de snapshot de SnapCenter vers les systèmes secondaires ONTAP .  Cela peut être fait sans activer l’option SnapMirror ou SnapVault dans la page de politique.
 
 .. Dans la section Sélectionner les options de réplication secondaire, sélectionnez l'une des options de réplication secondaires suivantes ou les deux :
-+
-
-NOTE: Vous devez sélectionner les options de réplication secondaires pour *période de verrouillage de copie d'instantané secondaire* pour être effectif. L'option *période de verrouillage de copie d'instantané secondaire* est disponible sur la page Retention.
-
 +
 |===
 | Pour ce champ... | Procédez comme ça... 

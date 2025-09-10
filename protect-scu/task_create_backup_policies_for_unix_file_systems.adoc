@@ -43,18 +43,8 @@ Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des
 +
 .. Spécifiez les paramètres de sauvegarde.
 .. Spécifiez la fréquence d'horaire en sélectionnant *sur demande*, *horaire*, *quotidien*, *hebdomadaire* ou *mensuel*.
-.. Sélectionnez une étiquette Snapshot.
-+
-Selon le libellé de snapshot que vous sélectionnez, ONTAP applique la règle de conservation des snapshots secondaires qui correspond à celui-ci.
-
-+
-
-NOTE: Si vous avez sélectionné *mettre à jour SnapMirror après la création d'une copie Snapshot locale*, vous pouvez éventuellement spécifier l'étiquette de règle secondaire. Toutefois, si vous avez sélectionné *mettre à jour SnapVault après la création d'une copie Snapshot locale*, vous devez spécifier l'étiquette de la stratégie secondaire.
-
 .. Dans la section Sélectionner les options de réplication secondaire, sélectionnez l'une des options de réplication secondaires suivantes ou les deux :
-+
 
-NOTE: Vous devez sélectionner les options de réplication secondaires pour *période de verrouillage de copie d'instantané secondaire* pour être effectif. L'option *période de verrouillage de copie d'instantané secondaire* est disponible sur la page Retention.
 
 +
 |===
@@ -83,12 +73,6 @@ Nombre de tentatives d'erreur
 Saisissez le nombre maximal de tentatives de réplication pouvant être autorisées avant l'arrêt de l'opération.
 
 |===
-+
-
-NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP pour le stockage secondaire afin d'éviter d'atteindre la limite maximale des snapshots sur le stockage secondaire.
-
-
-
 . Dans la page Retention, spécifiez les paramètres de rétention pour le type de sauvegarde et le type de planification sélectionnés dans la page sauvegarde et réplication :
 +
 |===
@@ -100,7 +84,7 @@ NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP pour
  a| 
 Conserver un certain nombre d'instantanés
  a| 
-Sélectionnez *nombre total de copies Snapshot à conserver*, puis indiquez le nombre de snapshots que vous souhaitez conserver.
+Sélectionnez *copies à conserver*, puis indiquez le nombre d'instantanés que vous souhaitez conserver.
 
 Si le nombre d'instantanés dépasse le nombre spécifié, les instantanés sont supprimés avec les plus anciennes copies supprimées en premier.
 
@@ -115,28 +99,22 @@ IMPORTANT: Si vous prévoyez d'activer la réplication SnapVault, vous devez dé
  a| 
 Conserver les instantanés pendant un certain nombre de jours
  a| 
-Sélectionnez *conserver les copies Snapshot pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les snapshots avant de les supprimer.
+Sélectionnez *conserver les copies pour*, puis indiquez le nombre de jours pendant lesquels vous souhaitez conserver les instantanés avant de les supprimer.
 
 
 
  a| 
-Période de verrouillage des copies Snapshot principales
+Période de verrouillage de la copie instantanée
  a| 
-Si vous souhaitez spécifier la période de verrouillage des snapshots pour le stockage primaire, sélectionnez *période de verrouillage des copies d'instantanés primaires*, puis sélectionnez jours, mois ou années.
+Sélectionnez *Période de verrouillage de la copie instantanée* et spécifiez la durée en jours, mois ou années.
 
 La période de conservation SnapLock doit être inférieure à 100 ans.
 
-
-
- a| 
-Période de verrouillage des snapshots secondaires
- a| 
-Sélectionnez *période de verrouillage de copie d'instantané secondaire*, puis sélectionnez jours, mois ou années.
-
 |===
+. Sélectionnez le libellé de la stratégie.
 +
 
-NOTE: Vous ne pouvez conserver les sauvegardes du journal d'archivage que si vous avez sélectionné les fichiers journaux d'archive dans le cadre de votre sauvegarde.
+NOTE: Vous pouvez attribuer des étiquettes SnapMirror aux snapshots principaux pour la réplication à distance, permettant ainsi aux snapshots principaux de décharger l'opération de réplication de snapshot de SnapCenter vers les systèmes secondaires ONTAP .  Cela peut être fait sans activer l’option SnapMirror ou SnapVault dans la page de politique.
 
 . Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript que vous souhaitez exécuter avant ou après l'opération de sauvegarde, respectivement.
 +

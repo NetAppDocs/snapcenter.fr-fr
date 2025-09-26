@@ -26,9 +26,15 @@ NOTE: Les volumes d'application ne prennent en charge que les connexions NFS dir
 ** Dans le champ Nom d'hôte, entrez le nom de l'hôte.
 
 
-. Dans la page Storage Footprint, entrez le nom du système de stockage, sélectionnez un ou plusieurs volumes, puis spécifiez les LUN ou qtrees associés.
+. Dans la page Empreinte de stockage, effectuez les actions suivantes :
 +
-Vous pouvez ajouter plusieurs systèmes de stockage.
+** Sélectionnez le type de stockage.
+** Entrez le nom du système de stockage.
+** Sélectionnez les unités de stockage.
++
+Vous pouvez ajouter plusieurs unités de stockage.
+
+
 
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 . Dans la page Ressources, sélectionnez *Volume d'application* dans la liste *Affichage* pour afficher tous les volumes d'application que vous avez ajoutés.
@@ -60,5 +66,5 @@ Si nécessaire, SnapCenter vous permet d'annuler l'opération de suppression.
 
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in Oracle Database dans la liste.
 . Dans la page Ressources, sélectionnez *Volume d'application* dans la liste *Affichage*.
-. Cliquez sur image:../media/delete_icon.gif["icône supprimer"]l'icône Supprimer] pour modifier les valeurs.
+. Cliquezimage:../media/delete_icon.gif["icône supprimer"] pour supprimer le volume de l'application.
 

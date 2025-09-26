@@ -11,7 +11,7 @@ summary: Vous devez créer des rôles SVM si vous configurez des SVM dans des sy
 
 
 [role="lead"]
-Plusieurs commandes de l'interface de ligne de commande ONTAP doivent être exécutées afin de créer un rôle pour un nouvel utilisateur SVM dans les systèmes ASA r2. Ce rôle est requis si vous configurez les SVM dans les systèmes ASA r2 afin qu'ils puissent être utilisés avec SnapCenter et que vous ne souhaitez pas utiliser le rôle vsadmin.
+Il existe plusieurs commandes ONTAP CLI que vous devez exécuter pour créer un rôle pour un nouvel utilisateur SVM dans les systèmes ASA r2.  Ce rôle est requis si vous configurez des SVM dans des systèmes ASA r2 pour les utiliser avec SnapCenter et que vous ne souhaitez pas utiliser le rôle vsadmin.
 
 *Étapes*
 

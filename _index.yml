@@ -3,16 +3,16 @@ indexpage:
   title: Documentation du logiciel SnapCenter
   keywords: snapcenter server, plug-in, data protection, applications, databases,
     host file systems, VmWare, backup, restore, clone, asa r2
-  lead: Le logiciel SnapCenter est une plateforme simple, centralisée et évolutive
-    qui protège les données de manière cohérente au niveau des applications, des bases
-    de données, des systèmes de fichiers hôtes et des machines virtuelles qui s'exécutent
-    sur les systèmes ONTAP à partir de n'importe quel point du cloud hybride. Cette
-    bibliothèque de documentation contient des informations sur la version 6.1.
+  lead: Le SnapCenter software est une plate-forme simple, centralisée et évolutive
+    qui offre une protection des données cohérente pour les applications, les bases
+    de données, les systèmes de fichiers hôtes et les machines virtuelles exécutés
+    sur les systèmes ONTAP n'importe où dans le cloud hybride.  Cette bibliothèque
+    de documentation inclut des informations pour la version 6.2.
   tiles:
   - title: Commencez
     links:
     - title: Notes de mise à jour
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467
     - title: Découvrez SnapCenter
       url: "/get-started/concept_snapcenter_overview.html"
     - title: Opérations SnapCenter prises en charge pour les systèmes ASA r2
@@ -87,7 +87,7 @@ indexpage:
     - title: Guide de référence de l'applet de commande
       url: https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html
     - title: Guide de référence sur les commandes
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469
     - title: Documentation relative aux versions antérieures de SnapCenter
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: Base de connaissances NetApp - SnapCenter

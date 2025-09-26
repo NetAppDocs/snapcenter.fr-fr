@@ -11,26 +11,34 @@ summary: Vous devez connaître le système de stockage, les applications et les 
 
 
 [role="lead"]
-Les systèmes de stockage ASA r2 sont pris en charge à partir de SnapCenter 6.1.  https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["En savoir plus sur les systèmes ASA r2"]
+Les systèmes de stockage ASA r2 sont pris en charge à partir de SnapCenter 6.1. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["En savoir plus sur les systèmes ASA r2"^] .
 
-SnapCenter exploite les API REST pour effectuer toutes les opérations sur les systèmes ASA r2, qui ne prennent pas en charge les ZAPI.
+SnapCenter prend en charge la protection primaire et secondaire des applications exécutées sur des systèmes physiques et sur des systèmes de fichiers de machines virtuelles (VMFS).  SnapCenter utilise les API REST pour toutes les opérations sur les systèmes ASA r2.  Les systèmes ASA r2 ne prennent pas en charge les ZAPI.
 
 *Opérations prises en charge par SnapCenter pour les systèmes ASA r2*
 
-* Création de sauvegardes primaires d'applications sur VMDK
-* Transfert des snapshots de groupes de cohérence vers le système de stockage secondaire
-* Restauration des sauvegardes des systèmes de stockage principal et secondaire vers l'hôte d'origine ou vers l'hôte alternatif
+* Création de sauvegardes primaires d'applications
+* Déplacement des instantanés de groupe de cohérence hiérarchique vers un système de stockage secondaire
+* Restauration des sauvegardes des systèmes de stockage principal et secondaire vers l'hôte d'origine ou alternatif
 +
 ** Restauration sur place à partir des systèmes de stockage principaux et secondaires à l'aide de VMware vMotion
 ** Connectez et copiez la restauration à partir des systèmes de stockage principal et secondaire
 
 
 * Clonage des sauvegardes sur l'hôte d'origine ou sur l'hôte alternatif
+* RDM (Raw Device Mapping)
+* Protection des volumes d'application pour Oracle
+* Protection de SAP HANA NDV
+* LockVault
+* Provisionnement secondaire du répertoire de journaux de l'hôte du plug-in SQL
 
 
-SnapCenter peut découvrir ou créer des groupes de cohérence ONTAP. Il peut également provisionner et initialiser des relations SnapMirror avec le cluster de destination pour une protection secondaire.
+SnapCenter découvre ou crée des groupes de cohérence ONTAP .  Il configure les relations SnapMirror sur le cluster de destination pour une protection secondaire. https://docs.netapp.com/us-en/ontap/consistency-groups["En savoir plus sur les groupes de cohérence ONTAP"^] .
 
-Pour plus d'informations sur l'activation de la protection secondaire sur les systèmes ASA r2 pour votre application, reportez-vous à :
+
+NOTE: Après la mise à niveau vers SnapCenter 6.2 (serveur et plug-ins) et ONTAP 9.17.1, SnapCenter modifie les groupes de cohérence plats en groupes de cohérence hiérarchiques lors de la première sauvegarde planifiée.
+
+Pour savoir comment activer la protection secondaire sur les systèmes ASA r2 pour votre application, consultez :
 
 * https://docs.netapp.com/us-en/snapcenter/protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html["Activer la protection secondaire pour les ressources Microsoft SQL Server"]
 * https://docs.netapp.com/us-en/snapcenter/protect-hana/create-resource-groups-secondary-protection-for-asa-r2-hana-resources.html["Activer la protection secondaire pour les ressources SAP HANA"]
@@ -44,15 +52,15 @@ Pour plus d'informations sur l'activation de la protection secondaire sur les sy
 
 *Opérations non prises en charge par SnapCenter pour les systèmes ASA r2*
 
-* RDM (Raw Device Mapping)
-* Volumes d'application pour Oracle
-* NDV SAP HANA
-* LockVault
 * Des snapshots inviolables
 * Volumes FlexGroup
-* Groupe de cohérence hiérarchique
 * Migration des systèmes de stockage ASA, AFF ou FAS vers les systèmes de stockage ASA r2
-* Protection des bases de données contenant un mélange de ressources ASA, AFF ou FAS et de ressources ASA r2
+* Protection des bases de données avec un mélange de ressources ASA, AFF ou FAS et de ressources ASA r2
 * Modification du nom des snapshots
-* Provisionnement secondaire du répertoire de journaux de l'hôte du plug-in SQL
+* Provisionnement des ressources Windows
+* Protection secondaire en cas de basculement de synchronisation active SnapMirror
+* Protocole NVMe (Nonvolatile Memory Express) si SnapMirror Active Sync est activé
+* Protection des applications exécutées sur AIX
+* Mise à jour technologique
+* Récupération après sinistre des ressources Microsoft SQL
 

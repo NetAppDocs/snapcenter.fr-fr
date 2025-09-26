@@ -30,7 +30,7 @@ NOTE: La session de connexion n'est valide que pendant 24 heures. Cependant, vou
 
 Vous devez exécuter les commandes suivantes pour établir la connexion avec le serveur SnapCenter, découvrir les instances de base de données Oracle, ajouter une stratégie et un groupe de ressources, sauvegarder et vérifier la sauvegarde.
 
-Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter à la https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["Guide de référence sur les commandes du logiciel SnapCenter"^].
+Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_.  Alternativement, vous pouvez également vous référer à la https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469["Guide de référence sur les commandes du logiciel SnapCenter"^] .
 
 *Étapes*
 

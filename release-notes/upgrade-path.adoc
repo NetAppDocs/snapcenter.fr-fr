@@ -11,20 +11,17 @@ summary: Chemins de mise à niveau pris en charge pour SnapCenter.
 
 
 [role="lead"]
-Le chemin de mise à niveau vous permet de savoir à partir de quelles versions antérieures de SnapCenter vous pouvez mettre à niveau vers les dernières versions de SnapCenter et quelles versions des plug-ins sont prises en charge.
+Le chemin de mise à niveau indique les versions de SnapCenter à partir desquelles vous pouvez effectuer la mise à niveau et les versions de plug-in prises en charge.
+
+
+NOTE: Si vous mettez à niveau SnapCenter Server vers la version 6.2, mettez également à niveau les plug-ins vers la version 6.2.
 
 |===
 | Si vous utilisez la version du serveur SnapCenter... | Vous pouvez directement mettre à niveau SnapCenter Server vers... | Versions de plug-in prises en charge 
 
 
-.3+| 5.0 | 6,0  a| 
-* 5.0
+.3+| 6,0 | 6.0.1  a| 
 * 6,0
-
-
-
-
-| 6.0.1  a| 
 * 6.0.1
 
 
@@ -36,24 +33,28 @@ Le chemin de mise à niveau vous permet de savoir à partir de quelles versions 
 
 
 
-.2+| 6,0  a| 
-6.0.1
+| 6,2  a| 
+* 6,2
+
+
+
+
+.2+| 6.0.1  a| 
+6,1
  a| 
-* 6,0
-* 6.0.1
-
-
-
-
-| 6,1  a| 
 * 6,1
 
 
 
 
-| 6.0.1 | 6,1  a| 
-* 6.0.1
-* 6,1
+| 6,2  a| 
+* 6,2
+
+
+
+
+| 6,1 | 6,2  a| 
+* 6,2
 
 
 |===

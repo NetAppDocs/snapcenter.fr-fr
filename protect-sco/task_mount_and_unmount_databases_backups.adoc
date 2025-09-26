@@ -79,7 +79,7 @@ Si vous montez la sauvegarde d'une base de données ASM, le chemin de montage +d
 `./sccli Get-Smbackup-BackupNamebackup_name`
 
 +
-Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_. Vous pouvez également vous reporter à la https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["Guide de référence sur les commandes du logiciel SnapCenter"^].
+Les informations concernant les paramètres pouvant être utilisés avec la commande et leurs descriptions peuvent être obtenues en exécutant Get-Help _command_name_.  Alternativement, vous pouvez également vous référer à la https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469["Guide de référence sur les commandes du logiciel SnapCenter"^] .
 
 
 

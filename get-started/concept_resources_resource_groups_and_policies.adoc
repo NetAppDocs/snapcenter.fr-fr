@@ -46,6 +46,12 @@ Des prescripteurs et des scripts d'appel peuvent être utilisés dans les opéra
 
 
 
+== Groupe de cohérence (CG)
+
+Un groupe de cohérence est un ensemble de volumes gérés comme une seule unité.  Les CG sont synchronisés pour assurer la cohérence des données entre les unités de stockage et les volumes.  Dans ONTAP, ils offrent une gestion facile et une garantie de protection pour une charge de travail applicative couvrant plusieurs volumes. En savoir plus sur link:https://docs.netapp.com/us-en/ontap/consistency-groups["groupes de cohérence"^] .
+
+
+
 == Utilisation des prescripteurs et des postscripts
 
 Les prescripteurs personnalisés et les postscripts peuvent automatiser vos tâches de protection des données avant ou après le travail. Par exemple, vous pouvez ajouter un script pour vous informer des échecs de travaux ou des avertissements. Avant de les configurer, assurez-vous de bien comprendre les exigences de ces scripts.

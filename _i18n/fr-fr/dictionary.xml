@@ -6933,7 +6933,6 @@ NetApp® Single Mailbox Recovery a pris fin le 12 mai 2023. NetApp continuera d'
   <block id="3d1c64d2c8b1e4058225a78c3ef09fa6" category="list-text">Sélectionnez *OK*.</block>
   <block id="5477ea177e290e8ac1c03a7ee8f2a92b" category="list-text">Sélectionnez *Sauvegarder maintenant*.</block>
   <block id="3f897d901d24f02777ff0994b7823d1a" category="list-text">Les données qui se trouvent sur les systèmes primaires et secondaires ONTAP FAS, AFF ou ASA et qui sont protégées pour le stockage objet local StorageGRID</block>
-  <block id="f7b38c62b0e74d318a255bc3094cf531" category="list-text">Les données qui se trouvent sur les systèmes primaires et secondaires ONTAP FAS, AFF ou ASA et qui sont protégées pour le stockage objet et d'archivage dans le cloud (via l'intégration de la sauvegarde et de la restauration BlueXP)</block>
   <block id="6920404cf085bab5be2132dbc275f33b" category="paragraph">Un groupe de ressources est un ensemble de ressources sur un hôte ou un cluster. L'opération de sauvegarde est effectuée sur toutes les ressources définies dans le groupe de ressources.</block>
   <block id="a833804e6b707a2a653d8b6273573c9f" category="paragraph">Vous pouvez sauvegarder un groupe de ressources à la demande à partir de la page Ressources. Si une stratégie est associée à un groupe de ressources et qu'une planification est configurée, les sauvegardes sont créées en fonction de la planification.</block>
   <block id="45b6721b8137bd82de1f2497a525d57a" category="list-text">Sélectionnez la ressource à sauvegarder.</block>
@@ -7675,7 +7674,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="b69cd8afc7ba47f5300e7eb1864b6e2f" category="admonition">La suppression manuelle d'une licence d'essai n'est nécessaire que si vous utilisez une licence basée sur le contrôleur SnapCenter Standard.</block>
   <block id="24d3d7a47c8a6bc8f8121257c5b3734e" category="summary">Vous devez configurer le certificat de l'autorité de certification avec le serveur SnapCenter sur l'hôte Linux.</block>
   <block id="a4edcfdfc889aead495fa92bc734d112" category="doc">Configurer le certificat CA pour l'hôte Linux</block>
-  <block id="18ae08106eef2261e3ddf3194dc3429d" category="paragraph">Après avoir installé le serveur SnapCenter sous Linux, le programme d'installation crée le certificat auto-signé. Si vous souhaitez utiliser le certificat de l'autorité de certification, vous devez configurer les certificats pour le proxy inverse nginx, la journalisation d'audit et les services SnapCenter.</block>
   <block id="bdb64fa4c7cfc41de86c180fed3a74a3" category="section-title">Configurer le certificat nginx</block>
   <block id="bf5dd606dc54b8a102d4848f6293df53" category="list-text">Accédez à _/etc/nginx/conf.d_ :<block ref="ebff76a76b37531f3434f4bfdc9bd6d2" prefix=" " category="inline-code"></block></block>
   <block id="5b0c642dda05deb86e7125990e1b3d31" category="list-text">Ouvrez *snapcenter.conf* à l'aide de vi ou de n'importe quel éditeur de texte.</block>
@@ -7689,13 +7687,11 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="fa9ee7f4ef8bb2ab6cefea40930760f8" category="list-text">Modifiez les clés *AUDILOG_CERTIFICATE_PATH* et *AUDILOG_CERTIFICATE_PASSWORD* pour inclure respectivement le chemin d'accès au certificat de l'autorité de certification et le mot de passe.</block>
   <block id="d5fd9ad0c29ecbaec9f0a9d6615b47f6" category="paragraph">Seul le format _.pfx_ est pris en charge pour le certificat de journal d'audit.</block>
   <block id="00ee24396aca54b4f6c836a787b63361" category="list-text">Redémarrez le service *snapmanagerweb* :<block ref="c45cb1774a978712d2a7471bbefe6e51" prefix=" " category="inline-code"></block></block>
-  <block id="f3715a4e5728396f7be1bdbaaca98851" category="section-title">Configurer le certificat des services SnapCenter</block>
   <block id="5378454eddc5733c8a37aa2d0f538173" category="list-text">Ouvrez les fichiers de configuration suivants à l'aide de vi ou de n'importe quel éditeur de texte.</block>
   <block id="2d1487edff39ef32df796c3f332e5af4" category="list-text">_INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/SnapManager.Web.UI.dll.config_</block>
   <block id="ec6c7d95279ecbfc15ae033c6b6ce173" category="list-text">_INSTALL_DIR/NetApp/snapcenter/SMCore/SMCoreServiceHost.dll.config_</block>
   <block id="53af01d18c1d8e8c1bf8178140cfbc85" category="list-text">_INSTALL_DIR/NetApp/snapcenter/Scheduler/Scheduler.API.dll.config_</block>
   <block id="9797d0b330551d54a3004ee8339ea2ba" category="list-text">Modifiez les clés *SERVICE_CERTIFICATE_PATH* et *SERVICE_CERTIFICATE_PASSWORD* pour inclure respectivement le chemin du certificat de l'autorité de certification et le mot de passe.</block>
-  <block id="0f278f6bc55db5d981f2fbc237afe8d3" category="paragraph">Seul le format _.pfx_ est pris en charge pour le certificat de services SnapCenter.</block>
   <block id="a3e66f24b77a616cc07a99fbe97c88e2" category="list-text">Enregistrez et fermez les fichiers.</block>
   <block id="66ff4f7d59911f532e5382ba09adb157" category="list-text">Redémarrez tous les services.</block>
   <block id="dd5be82d05db99d06412d2c63b8fe671" category="list-text"><block ref="c45cb1774a978712d2a7471bbefe6e51" prefix="" category="inline-code"></block></block>
@@ -9608,4 +9604,12 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="97e76bbffdf8f08342d1c5a741af4b2a" category="sidebar">Le SnapCenter software est une plate-forme simple, centralisée et évolutive qui offre une protection des données cohérente pour les applications, les bases de données, les systèmes de fichiers hôtes et les machines virtuelles exécutés sur les systèmes ONTAP n'importe où dans le cloud hybride.  Cette bibliothèque de documentation inclut des informations pour la version 6.2.</block>
   <block id="1e0eab11641f75c3ff495410ce40bf66" category="sidebar">Documentation du SnapCenter software 6.2</block>
   <block id="9968307e35346723a7def9d1da87a203" category="paragraph">Pour plus de détails sur les problèmes connus, les limitations, les problèmes résolus et les commandes nouvelles et modifiées, consultez le<block ref="bedfbb0cb9ae5977029e72ca67318671" category="inline-link-rx"></block> . Vous devez vous connecter avec votre compte NetApp ou créer un compte pour accéder aux notes de publication.</block>
+  <block id="ea1c96f839915f73d25b910bbc92b734" category="list-text">Données qui se trouvent sur les systèmes primaires et secondaires ONTAP FAS, AFF ou ASA et protégées dans le stockage d'objets et d'archives dans le cloud à l'aide de l'intégration de sauvegarde et de récupération NetApp</block>
+  <block id="45099ef1959df4e973d03fee8da8217e" category="paragraph">Après avoir installé SnapCenter Server sur Linux, le programme d’installation crée le certificat auto-signé. Si vous souhaitez utiliser le certificat CA, vous devez configurer les certificats pour le proxy inverse nginx, la journalisation d'audit et SnapCenter.</block>
+  <block id="f2c3d774134cb37665bf8a734950fe0b" category="section-title">Configurer le certificat SnapCenter</block>
+  <block id="767f07b2bcd3e25b3f22994ec92e8447" category="paragraph">Seul le format _.pfx_ est pris en charge pour le certificat SnapCenter .</block>
+  <block id="bc2fe31b1e2682a9a79513d792e9c721" category="section-title">BlueXP est désormais NetApp Console</block>
+  <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">La console NetApp , construite sur la base BlueXP améliorée et restructurée, fournit une gestion centralisée du stockage NetApp et des services de données NetApp dans les environnements sur site et cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée, hautement sécurisée et conforme.</block>
+  <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">Notes de version de la console NetApp</block>
+  <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">Pour plus de détails sur ce qui a changé, consultez le<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block> .</block>
 </blocks>

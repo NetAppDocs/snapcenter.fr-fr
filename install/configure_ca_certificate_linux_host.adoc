@@ -11,7 +11,7 @@ summary: 'Vous devez configurer le certificat de l"autorité de certification av
 
 
 [role="lead"]
-Après avoir installé le serveur SnapCenter sous Linux, le programme d'installation crée le certificat auto-signé. Si vous souhaitez utiliser le certificat de l'autorité de certification, vous devez configurer les certificats pour le proxy inverse nginx, la journalisation d'audit et les services SnapCenter.
+Après avoir installé SnapCenter Server sur Linux, le programme d’installation crée le certificat auto-signé. Si vous souhaitez utiliser le certificat CA, vous devez configurer les certificats pour le proxy inverse nginx, la journalisation d'audit et SnapCenter.
 
 
 
@@ -45,7 +45,7 @@ Seul le format _.pfx_ est pris en charge pour le certificat de journal d'audit.
 
 
 
-== Configurer le certificat des services SnapCenter
+== Configurer le certificat SnapCenter
 
 .Étapes
 . Ouvrez les fichiers de configuration suivants à l'aide de vi ou de n'importe quel éditeur de texte.
@@ -60,7 +60,7 @@ La valeur par défaut de _INSTALL_DIR_ est _/opt_.
 
 . Modifiez les clés *SERVICE_CERTIFICATE_PATH* et *SERVICE_CERTIFICATE_PASSWORD* pour inclure respectivement le chemin du certificat de l'autorité de certification et le mot de passe.
 +
-Seul le format _.pfx_ est pris en charge pour le certificat de services SnapCenter.
+Seul le format _.pfx_ est pris en charge pour le certificat SnapCenter .
 
 . Enregistrez et fermez les fichiers.
 . Redémarrez tous les services.

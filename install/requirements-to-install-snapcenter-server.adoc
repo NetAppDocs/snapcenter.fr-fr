@@ -168,7 +168,7 @@ Le tableau ci-dessous répertorie les différents ports et leurs valeurs par dé
 
 
  a| 
-Port SnapCenter
+Port Web SnapCenter
  a| 
 8146
  a| 

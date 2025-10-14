@@ -853,7 +853,6 @@
   <block id="718d9231009edb9654b9f6f52346a835" category="list-text">Les pare-feu, proxys ou autres périphériques réseau ne doivent pas interférer avec les connexions.</block>
   <block id="eceb61ca100437ca326b49341fc1f909" category="list-text">Si vous spécifiez un port personnalisé lors de l'installation de SnapCenter, vous devez ajouter une règle de pare-feu sur l'hôte du plug-in pour ce port pour le chargeur Plug-in SnapCenter.</block>
   <block id="29e256a27c9d420cee02c5cda005de01" category="paragraph">Le tableau ci-dessous répertorie les différents ports et leurs valeurs par défaut.</block>
-  <block id="ed00b70cc595a411eff2cc42510a291f" category="paragraph">Port SnapCenter</block>
   <block id="18622e175ff22b2375f9cbc2314b3285" category="paragraph">Port de communication SMCore de SnapCenter</block>
   <block id="91ca015b30de2a05aff2f16ec93231dd" category="paragraph">Port MySQL</block>
   <block id="4abc501abe98e95144eba2c4d17174ad" category="paragraph">Hôtes du plug-in Windows</block>
@@ -9612,4 +9611,5 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">La console NetApp , construite sur la base BlueXP améliorée et restructurée, fournit une gestion centralisée du stockage NetApp et des services de données NetApp dans les environnements sur site et cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée, hautement sécurisée et conforme.</block>
   <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">Notes de version de la console NetApp</block>
   <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">Pour plus de détails sur ce qui a changé, consultez le<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block> .</block>
+  <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">Port Web SnapCenter</block>
 </blocks>

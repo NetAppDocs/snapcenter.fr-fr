@@ -57,7 +57,7 @@ Systèmes d'exploitation
  a| 
 Microsoft Windows
 
-Pour obtenir les dernières informations sur les versions prises en charge, consultez le https://imt.netapp.com/imt/imt.jsp?components=134502;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les informations les plus récentes sur les versions prises en charge, consultez https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 
 
@@ -88,8 +88,6 @@ Packs logiciels requis
 Java 11 Oracle Java et OpenJDK sont requis uniquement pour SAP HANA, IBM DB2, PostgreSQL, MySQL, les plug-ins pris en charge par NetApp et d'autres applications personnalisées qui peuvent être installées sur l'hôte Windows.
 
 
-
-Pour obtenir les dernières informations sur les versions prises en charge, consultez le https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]
 
@@ -144,7 +142,7 @@ Systèmes d'exploitation
  a| 
 Microsoft Windows
 
-Pour obtenir les dernières informations sur les versions prises en charge, consultez le https://imt.netapp.com/imt/imt.jsp?components=134502;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les informations les plus récentes sur les versions prises en charge, consultez https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 
 
@@ -175,8 +173,6 @@ Packs logiciels requis
 Java 11 Oracle Java et OpenJDK sont requis uniquement pour SAP HANA, IBM DB2, PostgreSQL, MySQL, les plug-ins pris en charge par NetApp et d'autres applications personnalisées qui peuvent être installées sur l'hôte Windows.
 
 
-
-Pour obtenir les dernières informations sur les versions prises en charge, consultez le https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]
 

@@ -47,13 +47,13 @@ Microsoft Windows
 
 Seules les versions anglaise, allemande, japonaise et chinoise simplifiée des systèmes d'exploitation sont prises en charge.
 
-Pour obtenir les informations les plus récentes sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=121033;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les informations les plus récentes sur les versions prises en charge, consultez https://imt.netapp.com/imt/imt.jsp?components=180321;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
  a| 
 * Red Hat Enterprise Linux (RHEL) 8 et 9
 * SUSE Linux Enterprise Server (SLES) 15
 
 
-Pour obtenir les informations les plus récentes sur les versions prises en charge, reportez-vous à la section https://imt.netapp.com/matrix/imt.jsp?components=121032;&solution=1258&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les informations les plus récentes sur les versions prises en charge, consultez https://imt.netapp.com/imt/imt.jsp?components=180320;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 
 

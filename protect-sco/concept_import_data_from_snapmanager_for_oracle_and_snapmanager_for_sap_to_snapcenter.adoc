@@ -35,7 +35,7 @@ SnapCenter ne prend pas en charge Data ONTAP fonctionnant en 7-mode. Vous pouvez
 
 Avant d'importer les données de SnapManager 3.4.x pour Oracle et de SnapManager 3.4.x pour SAP vers SnapCenter, nous vous recommandons de connaître les configurations prises en charge par le plug-in SnapCenter pour base de données Oracle.
 
-Les configurations prises en charge par le plug-in SnapCenter pour la base de données Oracle sont répertoriées dans le https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Les configurations prises en charge par le plug-in SnapCenter pour Oracle Database sont répertoriées dans le https://imt.netapp.com/imt/imt.jsp?components=180320;180338;180332;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 
 

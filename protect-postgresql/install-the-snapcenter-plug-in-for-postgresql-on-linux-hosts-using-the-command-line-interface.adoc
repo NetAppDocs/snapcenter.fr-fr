@@ -17,10 +17,7 @@ Vous devez installer le plug-in SnapCenter pour le cluster PostgreSQL en utilisa
 * Vous devez installer le cluster Plug-in pour PostgreSQL sur chacun des hôtes Linux où réside le client PostgreSQL.
 * L'hôte Linux sur lequel vous installez le plug-in SnapCenter pour le cluster PostgreSQL doit répondre à la configuration logicielle, cluster et système d'exploitation requise.
 +
-La matrice d'interopérabilité (IMT) contient les dernières informations sur les configurations prises en charge.
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
+Le https://imt.netapp.com/imt/imt.jsp?components=180320;180333;&solution=1257&isHWU&src=IMT["Outil de matrice d'interopérabilité (IMT)"] Contient les informations les plus récentes sur les configurations prises en charge.
 
 * Le cluster SnapCenter Plug-in pour PostgreSQL fait partie du package de plug-ins SnapCenter pour Linux. Avant d'installer SnapCenter Plug-ins Package pour Linux, vous devez avoir déjà installé SnapCenter sur un hôte Windows.
 

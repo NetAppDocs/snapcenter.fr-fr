@@ -13,7 +13,7 @@ summary: 'SnapCenter prend en charge un large éventail de types de stockage sur
 [role="lead"]
 SnapCenter prend en charge un large éventail de types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier si la prise en charge de votre type de stockage est disponible avant d'installer le package pour votre hôte.
 
-Le provisionnement et la protection des données SnapCenter sont pris en charge par Windows Server. Pour obtenir les dernières informations sur les versions prises en charge, consultez le https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+La prise en charge du provisionnement et de la protection des données de SnapCenter est disponible sur Windows Server. Pour obtenir les informations les plus récentes sur les versions prises en charge, consultez le https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 |===
 | Machine | Type de stockage | Provisionnement avec | Notes de support 

@@ -17,10 +17,7 @@ Vous devez installer le plug-in SnapCenter pour la base de données MySQL à l'a
 * Vous devez installer le plug-in pour la base de données MySQL sur chacun des hôtes Linux sur lesquels l'instance MySQL doit être protégée.
 * L'hôte Linux sur lequel vous installez le plug-in SnapCenter pour la base de données MySQL doit répondre aux exigences du logiciel, de la base de données et du système d'exploitation.
 +
-La matrice d'interopérabilité (IMT) contient les dernières informations sur les configurations prises en charge.
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121070;&solution=1259&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
+Le https://imt.netapp.com/imt/imt.jsp?components=180320;180330;180338;&solution=1257&isHWU&src=IMT["Outil de matrice d'interopérabilité (IMT)"] Contient les informations les plus récentes sur les configurations prises en charge.
 
 * Le plug-in SnapCenter pour la base de données MySQL fait partie du package de plug-ins SnapCenter pour Linux. Avant d'installer SnapCenter Plug-ins Package pour Linux, vous devez avoir déjà installé SnapCenter sur un hôte Windows.
 

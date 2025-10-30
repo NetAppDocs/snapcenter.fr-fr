@@ -22,7 +22,7 @@ Systèmes d'exploitation
  a| 
 Microsoft Windows
 
-Pour obtenir les dernières informations sur les versions prises en charge, consultez le https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
+Pour obtenir les dernières informations sur les versions prises en charge, consultez le https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^] .
 
 
 
@@ -49,8 +49,6 @@ Packs logiciels requis
 * ASP.NET Core Runtime 8.0.12 (et tous les correctifs 8.0.x suivants) Hosting Bundle
 * PowerShell Core 7.4.2
 
-
-Pour obtenir les dernières informations sur les versions prises en charge, consultez le https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^].
 
 Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]
 

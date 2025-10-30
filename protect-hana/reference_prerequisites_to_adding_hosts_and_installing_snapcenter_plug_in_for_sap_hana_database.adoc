@@ -37,9 +37,6 @@ NOTE: IBM Java n'est pas pris en charge sur les hôtes Windows et Linux.
 +
 http://www.java.com/en/download/manual.jsp["Télécharger JAVA pour tous les systèmes d'exploitation"]
 
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
-
 
 
 
@@ -50,9 +47,6 @@ https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src
 * Vous devez avoir installé Java 11 sur votre hôte Linux.
 +
 http://www.java.com/en/download/manual.jsp["Télécharger JAVA pour tous les systèmes d'exploitation"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["Matrice d'interopérabilité NetApp"]
 
 * Pour les bases de données SAP HANA qui s'exécutent sur un hôte Linux, lors de l'installation du plug-in pour base de données SAP HANA, le plug-in SnapCenter pour UNIX est installé automatiquement.
 * Vous devez avoir *bash* comme shell par défaut pour l'installation du plug-in.

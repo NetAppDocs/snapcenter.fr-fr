@@ -11,14 +11,15 @@ summary: 'Vous pouvez utiliser SnapCenter pour restaurer et récupérer des donn
 
 
 [role="lead"]
-Vous pouvez utiliser SnapCenter pour restaurer des bases de données SQL Server sauvegardées. La restauration de la base de données est un processus en plusieurs phases qui copie toutes les pages de données et de journaux d'une sauvegarde SQL Server spécifiée vers une base de données spécifiée.
+Vous pouvez utiliser SnapCenter pour restaurer les bases de données SQL Server.  La restauration d'une base de données est un processus en plusieurs phases qui copie toutes les données et les pages de journal d'une sauvegarde SQL Server spécifiée vers une base de données spécifiée.
 
-.Description de la tâche
-Vous devez vous assurer que l'instance cible de restauration est configurée avec un utilisateur Active Directory qui appartient au domaine SMB ADactive Directory et dispose des autorisations nécessaires pour définir les autorisations de fichier de manière appropriée. Vous devez configurer les informations d'identification dans SnapCenter au niveau de l'instance.
+.Avant de commencer
+* Configurez l'instance cible avec un utilisateur Active Directory appartenant au domaine Active Directory SMB et disposant des autorisations nécessaires pour définir correctement les permissions des fichiers.
+* Configurez les informations d'identification au niveau de l'instance SnapCenter .
+* Si la base de données SQL se trouve sur un partage CIFS, le compte d'exécution et le compte de service SQL (compte de domaine) de l'hôte du plug-in doivent en faire partie. `BUILTIN\Administrators` groupe du serveur CIFS dans ONTAP.
+* Les configurations SMB ne prennent pas en charge l'authentification SQL pour l'instance cible.  Configurez l'instance cible dans SnapCenter avec un utilisateur Active Directory disposant des autorisations requises.
+* Si le compte de service du plug-in SnapCenter n'est pas un utilisateur Active Directory, assurez-vous qu'un utilisateur disposant d'un contrôle total sur les volumes sources soit disponible lors de la restauration sur un autre hôte.
 
-L'authentification SQL pour l'instance cible ne sera pas prise en charge pour les configurations SMB. L'instance cible doit être configurée dans SnapCenter avec l'utilisateur Active Directory disposant des autorisations requises.
-
-Si le compte de service de services de plug-in SnapCenter n'est pas un utilisateur Active Directory, alors lors de la restauration sur un autre hôte, l'utilisateur qui a le contrôle total sur les volumes source est requis pour qu'il puisse être usurpé et effectuer l'opération requise.
 
 .Étapes
 . Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
@@ -28,8 +29,8 @@ Si le compte de service de services de plug-in SnapCenter n'est pas un utilisate
 . Sélectionnez la sauvegarde dans la table, puis cliquez sur image:../media/restore_icon.gif["icône restaurer"] icône.
 . Dans la page objectif de restauration, sélectionnez l'une des options suivantes :
 +
-.. Sélectionnez *Restaurer la base de données sur le même hôte que celui sur lequel la sauvegarde a été créée* si vous souhaitez restaurer la base de données sur le même serveur SQL sur lequel les sauvegardes sont effectuées.
-.. Sélectionnez *Restaurer la base de données sur un autre hôte* si vous souhaitez que la base de données soit restaurée sur un autre serveur SQL sur le même hôte ou sur un autre hôte sur lequel les sauvegardes sont effectuées.
+.. Sélectionnez *Restaurer la base de données sur le même hôte que celui où la sauvegarde a été créée* pour restaurer la base de données sur le même serveur SQL.
+.. Sélectionnez *Restaurer la base de données sur un autre hôte* si vous souhaitez restaurer la base de données sur un autre serveur SQL, que ce soit sur le même hôte ou sur un autre hôte où les sauvegardes sont effectuées.
 
 
 . Dans la page étendue de la récupération, sélectionnez l'une des options suivantes :

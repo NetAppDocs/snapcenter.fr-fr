@@ -168,6 +168,7 @@ Les opérations de restauration et de reprise suivantes ne sont pas prises en ch
 * Restauration et récupération des espaces de stockage de la base de données du conteneur racine (CDB)
 * Restauration des espaces de stockage temporaires et des espaces de stockage temporaires associés aux BDD
 * Restauration et restauration simultanées de tablespaces à partir de plusieurs bases de données PDB
+* Restauration des fichiers temporaires car le plug-in pour Oracle ne sauvegarde pas les fichiers temporaires.
 * Restauration des sauvegardes des journaux
 * Restauration des sauvegardes dans un emplacement différent
 * Restauration des fichiers journaux de reprise dans toute configuration autre que les bases de données de secours Data Guard ou Active Data Guard

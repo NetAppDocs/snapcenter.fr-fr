@@ -37,6 +37,3 @@ La vérification de la base de données système SQL Server n'est pas prise en c
 * Planification des opérations de sauvegarde et des opérations de clonage
 * Surveillance des opérations de sauvegarde, des opérations de restauration et des opérations de clonage
 
-
-
-NOTE: Le plug-in pour SQL Server ne prend pas en charge la sauvegarde et la restauration des bases de données SQL Server sur les partages SMB.

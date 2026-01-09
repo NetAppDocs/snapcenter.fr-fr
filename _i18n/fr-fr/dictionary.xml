@@ -1767,9 +1767,6 @@
   <block id="623ef35114e69633221d2c9bf99f6cab" category="list-text">Windows communication Foundation (WCF) HTTP Activation45</block>
   <block id="c38d32373eca3e6335e44b42893f0034" category="list-text">Activation TCP</block>
   <block id="cb6ddd90b08469e2479460ec34538fe2" category="list-text">Activation HTTP</block>
-  <block id="c3dbd8c35d4829310dd57365a749f10f" category="paragraph">Mise en file d'attente du message</block>
-  <block id="9c7750973d73f078f45c6bfd80cbfc85" category="list-text">Services de mise en file d'attente des messages</block>
-  <block id="be0efd214f0b56cf8372d18ec1837f53" category="admonition">Assurez-vous qu'aucune autre application n'utilise le service MSMQ créé et géré par SnapCenter.</block>
   <block id="a8e1305e0c86caf1fec261807b3362ef" category="paragraph">Service d'activation de processus Windows</block>
   <block id="494ecde4fb6ee77e99799902ed23cd14" category="list-text">Modèle de processus</block>
   <block id="293616622aeda675821b42e39b4d4e7b" category="paragraph">API de configuration</block>
@@ -3285,7 +3282,6 @@
   <block id="c48d82f0b1e5949ce3d34dc8ac74b4b5" category="paragraph">La vérification de la base de données système SQL Server n'est pas prise en charge. SnapCenter cloner les bases de données pour effectuer une vérification. SnapCenter ne peut pas cloner les bases de données système SQL Server. Par conséquent, la vérification de ces bases de données n'est pas prise en charge.</block>
   <block id="c27ceb4a4892c429a975a62841762540" category="list-text">Planification des opérations de sauvegarde et des opérations de clonage</block>
   <block id="aa71cd3a5a90a32aafb3072b19a68b09" category="list-text">Surveillance des opérations de sauvegarde, des opérations de restauration et des opérations de clonage</block>
-  <block id="c343d8ab7af87f16e58b8e8040d7813a" category="admonition">Le plug-in pour SQL Server ne prend pas en charge la sauvegarde et la restauration des bases de données SQL Server sur les partages SMB.</block>
   <block id="5abc04a0058572b3476c739ab8f716ae" category="summary">Le plug-in SnapCenter pour Microsoft SQL Server prend en charge la détection dans SQL Server 2012 et versions ultérieures, le mappage des LUN asymétriques \(ALM\) pour la haute disponibilité, ainsi que les groupes de disponibilité pour la reprise après incident. Lors de la découverte des ressources, SnapCenter détecte les bases de données sur les hôtes locaux et sur les hôtes distants dans les configurations ALM.</block>
   <block id="142782e834c9014d923c3a1905a8dcdc" category="doc">Prise en charge du mappage des LUN asymétriques dans les clusters Windows</block>
   <block id="2bf8e92ae2c79563e9a8c5f6c833c5a6" category="paragraph">Le plug-in SnapCenter pour Microsoft SQL Server prend en charge la détection dans SQL Server 2012 et versions ultérieures, les configurations ALM (Asymmetric LUN Mapping) pour la haute disponibilité, et les groupes de disponibilité pour la reprise après incident. Lors de la découverte des ressources, SnapCenter détecte les bases de données sur les hôtes locaux et sur les hôtes distants dans les configurations ALM.</block>
@@ -4346,7 +4342,6 @@
   <block id="4abb41aae1dfe9c81afb3c3672df559c" category="paragraph">Linux ou Windows</block>
   <block id="50e95eafa6faf8d2ee3f01921820b42b" category="list-text">Automatise les opérations de sauvegarde, de restauration et de clonage respectueuses des applications pour les bases de données Microsoft SQL Server dans votre environnement SnapCenter.</block>
   <block id="e40237d2b53363bc373f8134071d1be1" category="list-text">Prend en charge les bases de données Microsoft SQL Server sur des LUN VMDK et RDM (Raw Device Mapping) lorsque vous déployez le plug-in SnapCenter pour VMware vSphere et enregistrez le plug-in avec SnapCenter</block>
-  <block id="a7e3ff2bca34971756f1600032ff8b61" category="list-text">Prend uniquement en charge le provisionnement des partages SMB. Elle n'est pas prise en charge pour la sauvegarde des bases de données SQL Server sur les partages SMB.</block>
   <block id="6bff10ef4d0d0d6d7ed28de9adc0169d" category="list-text">Prise en charge de l'importation de sauvegardes depuis SnapManager pour Microsoft SQL Server vers SnapCenter.</block>
   <block id="1b789581aeaa48640561ebae3b263a76" category="list-text">Protège les données respectueuses des applications pour les autres plug-ins exécutés dans les hôtes Windows de votre environnement SnapCenter</block>
   <block id="d764b7be86ece9a7b21fa445a8e1493c" category="list-text">Automatise les opérations de sauvegarde, de restauration et de clonage respectueuses des applications pour les systèmes de fichiers Microsoft dans votre environnement SnapCenter</block>
@@ -7827,7 +7822,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="10dbf6dc6b3b30fd58efded1253516d8" category="paragraph">Plug-in SnapCenter pour base de données Exchange</block>
   <block id="b0ca30368b247fa738c8bdba36dd4d73" category="paragraph">Le NET par défaut. Le port TCP est utilisé par le plug-in pour Windows pour se connecter aux rappels Exchange VSS.</block>
   <block id="cc0974b8a511f2e4b4d021cda6e5e820" category="paragraph">Plug-ins pris en charge par NetApp pour SnapCenter</block>
-  <block id="7eaa993723e57b3bfc99923c196e2e17" category="list-text">RabbitMQ</block>
   <block id="6905661e5d7f8f3e6a4faffbbab0f627" category="cell">Configuration requise pour les hôtes Windows</block>
   <block id="e7074f744b12e993cbdc6c77ee980b3e" category="list-text">Red Hat Enterprise Linux (RHEL) 8 et 9</block>
   <block id="447430d602cceb081264e037425cd96e" category="list-text">SUSE Linux Enterprise Server (SLES) 15</block>
@@ -9608,4 +9602,6 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="9ece03be74b25dcc59b19ce7d0ef2dfb" category="list-text">Sauvegardez tous les fichiers de configuration SnapCenter modifiés (tels que SnapDriveService.exe.config, SMCoreServiceHost.exe.config, etc.) sur l'hôte du serveur SnapCenter ou sur l'hôte du plug-in.</block>
   <block id="def9934ca3f718accf65ee67850cf9eb" category="list-text">Si la colonne État général affiche « Mise à niveau disponible » pour l'un des hôtes de plug-in, cliquez sur le nom de l'hôte de plug-in et procédez comme suit :</block>
   <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">Si vous ne sélectionnez pas *Ignorer les prévérifications*, SnapCenter vérifie si l'hôte du plug-in répond aux exigences.  Si les conditions requises ne sont pas remplies, des messages d'erreur ou d'avertissement s'affichent.  Si l'erreur est liée à l'espace disque ou à la RAM, vous pouvez modifier les valeurs par défaut en mettant à jour soit le fichier web.config situé dans _C:\Program Files\ NetApp\ SnapCenter WebApp_, soit les fichiers de configuration PowerShell situés dans _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_. Si l’erreur est liée aux paramètres restants, vous devez résoudre le problème, puis valider à nouveau les exigences.</block>
+  <block id="ef99553115dfc1718a9b51a970da1ae9" category="paragraph">Spécifie l'extension du fichier journal d'archivage.</block>
+  <block id="7f051ce525ea23f09ed6b21ec49fa590" category="paragraph">Par exemple, si le journal d'archivage est log_backup_0_1.log, spécifiez .log comme extension de fichier.</block>
 </blocks>

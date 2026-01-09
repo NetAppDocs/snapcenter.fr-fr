@@ -128,9 +128,9 @@ ARCHIVE_LOG_EXT
  a| 
 extension_fichier
  a| 
-Spécifie la longueur d'extension du fichier journal d'archives.
+Spécifie l'extension du fichier journal d'archivage.
 
-Par exemple, si le journal d'archives est log_backup_0_0_0_0.161518551942 9 et si la valeur file_extension est 5, l'extension du journal conserve 5 chiffres, soit 16151.
+Par exemple, si le journal d'archivage est log_backup_0_1.log, spécifiez .log comme extension de fichier.
 
 
 

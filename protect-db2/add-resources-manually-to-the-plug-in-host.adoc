@@ -25,7 +25,7 @@ La découverte manuelle n'est pas prise en charge pour les configurations suivan
 
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis le plug-in SnapCenter pour IBM DB2 dans la liste déroulante.
-. Dans la page Ressources, cliquez sur *Ajouter une ressource IBM DB2*.
+. Sur la page Resources, sélectionnez *Add IBM DB2 Resource*.
 . Dans la page Détails de la ressource, effectuez les opérations suivantes :
 +
 |===
@@ -61,21 +61,28 @@ Spécifiez le nom de l'instance, qui est le parent de la base de données.
 
 
  a| 
+Chemins de montage
+ a| 
+Saisissez les chemins de montage où la ressource est montée. Ceci s'applique uniquement aux hôtes Windows.
+
+
+
+ a| 
 Informations d'identification
  a| 
 Sélectionnez les informations d'identification ou ajoutez-les.
 
-Cette option est facultative.
+Ce champ est facultatif.
 
 |===
 . Sur la page fournir l'empreinte du stockage, sélectionnez un type de stockage et choisissez un ou plusieurs volumes, LUN et qtrees, puis cliquez sur *Enregistrer*.
 +
 Facultatif : vous pouvez cliquer sur l'icône *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]pour ajouter d'autres volumes, LUN et qtrees à partir d'autres systèmes de stockage.
 
-. Facultatif : dans la page Paramètres de ressources, pour les ressources sur l'hôte Windows, entrez des paires clé-valeur personnalisées pour le plug-in IBM DB2
+. Facultatif : Sur la page Paramètres des ressources, pour les ressources sur des hôtes Linux où le SnapCenter Plug-in for IBM Db2 est installé, saisissez des paires clé-valeur personnalisées pour le plug-in IBM Db2. Les paires clé-valeur personnalisées ne sont pas prises en charge pour les bases de données IBM Db2 enregistrées en tant que plug-in Windows centralisé.
 . Vérifiez le résumé, puis cliquez sur *Terminer*.
 +
-Les bases de données sont affichées avec des informations telles que le nom d'hôte, les groupes de ressources et les stratégies associés, ainsi que l'état global
+Les bases de données sont affichées avec des informations telles que le nom de l'hôte, les groupes de ressources et les politiques associés, ainsi que l'état général.
 
 
 

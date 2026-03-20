@@ -15,14 +15,14 @@ Un groupe de ressources est le conteneur dans lequel vous devez ajouter des ress
 
 .Description de la tâche
 * Pour créer des sauvegardes de réplication du système SAP HANA, il est recommandé d'ajouter toutes les ressources du système SAP HANA dans un groupe de ressources. Cela garantit une sauvegarde transparente en mode basculement/retour arrière.
-* Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des snapshots de coffre-fort SnapLock dans le cadre de la restauration hériteront de l'heure d'expiration du coffre-fort SnapLock. L'administrateur du stockage doit nettoyer manuellement les clones après l'heure d'expiration du SnapLock.
+* Pour ONTAP 9.12.1 et versions antérieures, les clones créés à partir des snapshots SnapLock Vault lors d'une restauration héritent de la date d'expiration SnapLock Vault. L'administrateur de stockage doit supprimer manuellement les clones après la date d'expiration SnapLock Vault.
 * L'ajout de nouvelles bases de données sans synchronisation active SnapMirror à un groupe de ressources existant contenant des ressources avec la synchronisation active SnapMirror n'est pas pris en charge.
 * L'ajout de nouvelles bases de données à un groupe de ressources existant en mode de basculement de la synchronisation active SnapMirror n'est pas pris en charge. Vous pouvez ajouter des ressources au groupe de ressources uniquement à l'état normal ou de retour arrière.
 
 
 .Étapes
-. Dans le volet de navigation de gauche, cliquez sur *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
-. Dans la page Ressources, cliquez sur *Nouveau groupe de ressources*.
+. Dans le volet de navigation de gauche, sélectionnez *Ressources*, puis sélectionnez le plug-in approprié dans la liste.
+. Sur la page Resources, sélectionnez *New Resource Group*.
 . Dans la page Nom, effectuez les opérations suivantes :
 +
 |===
@@ -49,21 +49,21 @@ Par exemple, si vous ajoutez des RH comme étiquette à plusieurs groupes de res
 
 
  a| 
-Utilisez le format de nom personnalisé pour la copie Snapshot
+Utilisez un format de nom personnalisé pour les snapshots.
  a| 
-Cochez cette case et entrez un format de nom personnalisé à utiliser pour le nom du snapshot.
+Cochez cette case et entrez un format de nom personnalisé que vous souhaitez utiliser pour le nom de l'instantané.
 
-Par exemple, clienttext_Resource group_policy_hostname ou Resource group_hostname. Par défaut, un horodatage est ajouté au nom du Snapshot.
+Par exemple, customtext_resourcegroup_policy_hostname ou resource group_hostname. Par défaut, un horodatage est ajouté au nom de l'instantané.
 
 |===
 . Dans la page Ressources, sélectionnez un nom d'hôte dans la liste déroulante *hôte* et le type de ressource dans la liste déroulante *Type de ressource*.
 +
 Cela aide à filtrer les informations affichées à l'écran.
 
-. Sélectionnez les ressources dans la section *Ressources disponibles*, puis cliquez sur la flèche vers la droite pour les déplacer dans la section *Ressources sélectionnées*.
+. Sélectionnez les ressources dans la section *Ressources disponibles*, puis sélectionnez la flèche droite pour les déplacer vers la section *Ressources sélectionnées*.
 . Dans la page Paramètres de l'application, procédez comme suit :
 +
-.. Cliquez sur la flèche *backups* pour définir des options de sauvegarde supplémentaires :
+.. Sélectionnez la flèche *backups* pour définir des options de sauvegarde supplémentaires :
 +
 Activez la sauvegarde de groupe de cohérence et effectuez les tâches suivantes :
 
@@ -73,9 +73,9 @@ Activez la sauvegarde de groupe de cohérence et effectuez les tâches suivantes
 
 
  a| 
-Permet d'attendre la fin de l'opération Snapshot du groupe de cohérence
+Attendez la fin de l'opération de snapshot de groupe de cohérence
  a| 
-Sélectionnez *urgent*, *Moyen* ou *détendu* pour spécifier le temps d'attente pour l'exécution de l'opération Snapshot.
+Sélectionnez *urgent*, *Moyen* ou *relâché* pour spécifier le temps d'attente pour l'exécution de l'opération de snapshot.
 
 Urgent = 5 secondes, Moyen = 7 secondes et détendu = 20 secondes.
 
@@ -90,8 +90,8 @@ Sélectionnez cette option pour éviter de forcer un point de cohérence WAFL.
 +
 image:../media/application_settings.gif["paramètres de l'application"]
 
-.. Cliquez sur la flèche *scripts* et entrez les commandes pré et post pour les opérations quiesce, Snapshot et unquiesce. Vous pouvez également saisir les pré-commandes à exécuter avant de quitter en cas de défaillance.
-.. Cliquez sur la flèche *configurations personnalisées* et entrez les paires clé-valeur personnalisées requises pour toutes les opérations de protection des données utilisant cette ressource.
+.. Sélectionnez la flèche *Scripts* et saisissez les commandes de pré et post-exécution pour les opérations de quiesce, snapshot et unquiesce. Vous pouvez également saisir les commandes de pré-exécution à exécuter avant de quitter en cas d'échec.
+.. Sélectionnez la flèche *Configurations personnalisées* et saisissez les paires clé-valeur personnalisées requises pour toutes les opérations de protection des données utilisant cette ressource.
 +
 |===
 | Paramètre | Réglage | Description 
@@ -111,9 +111,9 @@ ARCHIVAGE_LOG_RÉTENTION
  a| 
 nombre_de_jours
  a| 
-Indique le nombre de jours pendant lesquels les journaux d'archive sont conservés.
+Spécifie le nombre de jours pendant lesquels les journaux d'archive sont conservés.
 
-Ce paramètre doit être supérieur ou égal à NTAP_SNAPSHOT_ RETENTIONS.
+Cette valeur doit être égale ou supérieure à NTAP_SNAPSHOT_RETENTIONS.
 
 
 
@@ -122,7 +122,7 @@ ARCHIVE_LOG_DIR
  a| 
 change_info_répertoire/logs
  a| 
-Indique le chemin d'accès au répertoire contenant les journaux d'archive.
+Spécifie le chemin d'accès au répertoire qui contient les journaux d'archive.
 
 
 
@@ -131,34 +131,34 @@ ARCHIVE_LOG_EXT
  a| 
 extension_fichier
  a| 
-Spécifie la longueur d'extension du fichier journal d'archives.
+Spécifie une expression régulière qui correspond aux extensions de nom de fichier des fichiers journaux.
 
-Par exemple, si le journal d'archives est log_backup_0_0_0_0.161518551942 9 et si la valeur file_extension est 5, l'extension du journal conserve 5 chiffres, soit 16151.
+Pour les fichiers journaux se terminant par un certain nombre de chiffres, utilisez une expression régulière, telle que  `[0-9+]` ou (à partir de 6.0)  `\d+` (n'importe quelle longueur de chiffres d'au moins un caractère) comme valeur du paramètre, qui représente n'importe quel numéro de séquence de journal dans SAP HANA.
 
 
 
  a| 
-ARCHIVE_LOG_RÉCURSIVE_SE ARCH
+ARCHIVE_LOG_RECURSIVE_SEARCH
  a| 
 (O/N)
  a| 
 Permet la gestion des journaux d'archivage dans les sous-répertoires.
 
-Vous devez utiliser ce paramètre si les journaux d'archivage sont situés sous des sous-répertoires.
+Vous devez utiliser ce paramètre si les journaux d'archivage se trouvent dans des sous-répertoires.
 
 |===
 +
 
-NOTE: Les paires de clé à valeur personnalisée sont prises en charge pour les systèmes du plug-in SAP HANA Linux et ne sont pas prises en charge pour la base de données SAP HANA enregistrée en tant que plug-in centralisé Windows.
+NOTE: Les paires clé-valeur personnalisées sont prises en charge pour le SnapCenter Plug-in pour SAP HANA Database sur les systèmes Linux, mais pas pour les bases de données SAP HANA enregistrées auprès du SnapCenter Plug-in pour Microsoft Windows.
 
-.. Cliquez sur la flèche *outil de copie d'instantanés* pour sélectionner l'outil de création d'instantanés :
+.. Sélectionnez la flèche *Snapshot Copy Tool* pour sélectionner l'outil permettant de créer des instantanés :
 +
 |===
 | Les fonctions que vous recherchez... | Alors... 
 
 
  a| 
-SnapCenter pour utiliser le plug-in pour Windows et placer le système de fichiers dans un état cohérent avant de créer un Snapshot. Pour les ressources Linux, cette option n'est pas applicable.
+SnapCenter pour utiliser le plug-in pour Windows et mettre le système de fichiers dans un état cohérent avant de créer un snapshot. Pour les ressources Linux, cette option n'est pas applicable.
  a| 
 Sélectionnez *SnapCenter avec cohérence du système de fichiers*.
 
@@ -167,14 +167,14 @@ Cette option ne s'applique pas au plug-in SnapCenter pour base de données SAP H
 
 
  a| 
-SnapCenter pour créer une copie Snapshot au niveau du stockage
+SnapCenter pour créer un snapshot au niveau du stockage
  a| 
 Sélectionnez *SnapCenter sans cohérence du système de fichiers*.
 
 
 
  a| 
-Pour saisir la commande à exécuter sur l'hôte pour créer des copies Snapshot.
+Pour saisir la commande à exécuter sur l'hôte afin de créer des copies Snapshot.
  a| 
 Sélectionnez *autre*, puis entrez la commande à exécuter sur l'hôte pour créer un instantané.
 
@@ -186,13 +186,13 @@ Sélectionnez *autre*, puis entrez la commande à exécuter sur l'hôte pour cr�
 .. Sélectionnez une ou plusieurs stratégies dans la liste déroulante.
 +
 
-NOTE: Vous pouvez également créer une police en cliquant sur * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"].
+NOTE: Vous pouvez également créer une politique en sélectionnant *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]*.
 
 +
 Les stratégies sont répertoriées dans la section Configuration des planifications pour les stratégies sélectionnées.
 
-.. Dans la colonne configurer les plannings, cliquez sur * *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]pour la stratégie que vous souhaitez configurer.
-.. Dans la boîte de dialogue Ajouter des planifications pour la stratégie _policy_name_, configurez le programme, puis cliquez sur *OK*.
+.. Dans la colonne Configurer les planifications, sélectionnez *image:../media/add_policy_from_resourcegroup.gif["ajouter un groupe de ressources de formulaire de stratégie"]* pour la stratégie que vous souhaitez configurer.
+.. Dans la boîte de dialogue Ajouter des plannings pour la stratégie _nom_règle_, configurez la planification, puis sélectionnez *OK*.
 +
 Où, nom_stratégie est le nom de la règle que vous avez sélectionnée.
 
@@ -208,5 +208,5 @@ Les planifications de sauvegardes tierces ne sont pas prises en charge lorsqu'el
 +
 Vous devez également spécifier les adresses e-mail de l'expéditeur et du destinataire, ainsi que l'objet de l'e-mail. Le serveur SMTP doit être configuré dans *Paramètres* > *Paramètres globaux*.
 
-. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Passez en revue le résumé, puis sélectionnez *Terminer*.
 

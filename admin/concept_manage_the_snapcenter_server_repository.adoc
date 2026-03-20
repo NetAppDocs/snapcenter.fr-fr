@@ -11,7 +11,7 @@ summary: Les informations relatives aux différentes opérations effectuées à 
 [role="lead"]
 Les informations relatives aux différentes opérations effectuées à partir de SnapCenter sont stockées dans le référentiel de base de données du serveur SnapCenter. Vous devez créer des sauvegardes du référentiel pour protéger le serveur SnapCenter contre la perte de données.
 
-Le référentiel SnapCenter Server est parfois appelé base de données NSM.
+Le référentiel du SnapCenter Server est parfois appelé la base de données NSM. Consultez la  https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^] pour plus de détails sur toutes les cmdlets disponibles.
 
 
 
@@ -40,51 +40,54 @@ Pour une configuration haute disponibilité, vous pouvez provisionner un LUN iSC
 
 == Sauvegarder le référentiel SnapCenter
 
-La sauvegarde du référentiel SnapCenter Server permet de le protéger contre la perte de données. Vous pouvez sauvegarder le référentiel en exécutant l'applet de commande _Protect-SmRepository_.
+La sauvegarde du référentiel du serveur SnapCenter permet de le protéger contre la perte de données. Vous pouvez sauvegarder le référentiel en exécutant le  `Protect-SmRepository` cmdlet.
 
-*À propos de cette tâche*
-
-La cmdlet _Protect-SmRepository_ exécute les tâches suivantes :
+.Description de la tâche
+La  `Protect-SmRepository`cmdlet accomplit les tâches suivantes :
 
 * Crée un groupe de ressources et une stratégie
 * Crée un programme de sauvegarde pour le référentiel SnapCenter
 
 
-*Étapes*
-
+.Étapes
 . Lancer PowerShell.
-. Sur l'hôte du serveur SnapCenter, établissez une session à l'aide de l'applet de commande _Open-SmConnection_, puis saisissez vos informations d'identification.
-. Sauvegardez le référentiel à l'aide de l'applet de commande _Protect-SmRepository_ et des paramètres requis.
+. Sur l’hôte SnapCenter Server, établissez une session à l’aide de l’ `Open-SmConnection` cmdlet et saisissez vos informations d’identification.
+. Sauvegardez le référentiel à l'aide de l' `Protect-SmRepository`applet de commande qui prend les paramètres obligatoires suivants :
++
+.. `-HostName (String)`: Spécifie le nom d'hôte du serveur où se trouve le dépôt SnapCenter.
+.. `-Path (String)` : Spécifie le chemin d'accès du système de fichiers sur le système de stockage NetApp où les sauvegardes du référentiel sont stockées.
+.. `-Schedule (Hashtable)`: Définit la planification de la sauvegarde du référentiel. Elle est généralement définie comme une table de hachage.
+.. `-RetentionCount (Int32)` : Spécifie le nombre de sauvegardes du référentiel à conserver. Lorsque le nombre de sauvegardes dépasse cette valeur, la sauvegarde la plus ancienne est supprimée.
+
+
 
 
 
 
 == Afficher les sauvegardes du référentiel SnapCenter
 
-Vous pouvez afficher la liste des sauvegardes du référentiel de base de données du serveur SnapCenter en exécutant l'applet de commande _get-SmRepositoryBackups_.
+Vous pouvez afficher une liste des sauvegardes du référentiel de base de données SnapCenter Server en exécutant la cmdlet  `Get-SmRepositoryBackups`. Consultez la  https://docs.netapp.com/us-en/snapcenter-cmdlets/Get-SmRepositoryBackups.html["SnapCenter Software Guide de référence des cmdlets - Get-SmRepositoryBackups"^] pour plus de détails.
 
-Les sauvegardes du référentiel sont créées en fonction du programme spécifié dans l'applet de commande _Protect-SmRepository_.
+Les sauvegardes du référentiel sont créées selon la planification spécifiée dans l `Protect-SmRepository`applet de commande.
 
-*Étapes*
-
+.Étapes
 . Lancer PowerShell.
-. À partir de l'invite de commande, entrez l'applet de commande suivante, puis fournissez les informations d'identification pour vous connecter au serveur SnapCenter : _Open-SMConnection_
-. Répertoriez toutes les sauvegardes de base de données SnapCenter disponibles à l'aide de l'applet de commande _get-SmRepositoryBackups_.
+. À partir de l'invite de commandes, saisissez la  `Open-SmConnection` applet de commande et fournissez les informations d'identification pour vous connecter au serveur SnapCenter.
+. Répertoriez toutes les sauvegardes de bases de données SnapCenter disponibles à l `Get-SmRepositoryBackups`aide de l’applet de commande.
 
 
 
 
 == Restaurez le référentiel de base de données SnapCenter
 
-Vous pouvez restaurer le référentiel SnapCenter en exécutant l'applet de commande _Restore-SmRepositoryBackup_.
+Vous pouvez restaurer le SnapCenter repository en exécutant la  `Restore-SmRepositoryBackup` cmdlet.
 
-Lorsque vous restaurez le référentiel SnapCenter, les autres opérations SnapCenter en cours d'exécution seront affectées car, pendant l'opération de restauration, la base de données du référentiel n'est pas accessible.
+Lorsque vous restaurez le référentiel SnapCenter, les autres opérations SnapCenter en cours sont impactées car, pendant l'opération de restauration, la base de données du référentiel n'est pas accessible.
 
-*Étapes*
-
+.Étapes
 . Lancer PowerShell.
-. À partir de l'invite de commande, entrez l'applet de commande suivante, puis fournissez les informations d'identification pour vous connecter au serveur SnapCenter : _Open-SMConnection_
-. Restaurez la sauvegarde du référentiel à l'aide de l'applet de commande _Restore-SmRepositoryBackup_.
+. À partir de l'invite de commandes, saisissez la  `Open-SmConnection` applet de commande et fournissez les informations d'identification pour vous connecter au serveur SnapCenter.
+. Restaurez la sauvegarde du référentiel à l'aide de l' `Restore-SmRepositoryBackup` cmdlet.
 +
 L'applet de commande suivante restaure le référentiel de base de données SnapCenter MySQL à partir des sauvegardes existantes sur LUN iSCSI ou VMDK :
 
@@ -112,8 +115,7 @@ NOTE: La sauvegarde utilisée pour effectuer l'opération de restauration du ré
 
 Vous pouvez migrer le référentiel de base de données du serveur SnapCenter de l'emplacement par défaut vers un autre disque. Vous pouvez migrer le référentiel lorsque vous souhaitez le transférer sur un disque avec plus d'espace.
 
-*Étapes*
-
+.Étapes
 . Arrêtez le service MYSQL57 sous Windows.
 . Localisez le répertoire des données MySQL.
 +
@@ -140,11 +142,10 @@ Le mot de passe de la base de données du référentiel du serveur MySQL est gé
 .Avant de commencer
 Vous devez disposer des privilèges d'administrateur SnapCenter pour réinitialiser le mot de passe.
 
-*Étapes*
-
+.Étapes
 . Lancer PowerShell.
-. À partir de l'invite de commande, entrez la commande suivante, puis fournissez les informations d'identification pour vous connecter au serveur SnapCenter : _Open-SMConnection_
-. Réinitialisez le mot de passe du référentiel : _set-SmRepositoryPassword_
+. À partir de l'invite de commandes, saisissez la  `Open-SmConnection` applet de commande et fournissez les informations d'identification pour vous connecter au serveur SnapCenter.
+. Réinitialisez le mot de passe du référentiel à l'aide de l' `Set-SmRepositoryPassword` cmdlet.
 +
 La commande suivante réinitialise le mot de passe du référentiel :
 
@@ -161,4 +162,4 @@ Successfully updated the MySQL server password.
 
 
 .Informations associées
-Les informations relatives aux paramètres pouvant être utilisés avec la cmdlet et leurs descriptions peuvent être obtenues en exécutant _get-Help nom_commande_. Vous pouvez également vous reporter à la https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].
+Vous pouvez obtenir les informations concernant les paramètres utilisables avec l'applet de commande et leur description en exécutant la  `Get-Help command_name` commande. Vous pouvez également consulter le  https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guide de référence de l'applet de commande du logiciel SnapCenter"^].

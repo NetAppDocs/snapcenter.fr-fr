@@ -9637,4 +9637,7 @@ Par exemple, la conservation est définie sur 7 pour un groupe de ressources ave
   <block id="8d3b5ad5b9f27b4f9781e490487c376e" category="paragraph">Pour obtenir la liste complète des nouvelles fonctionnalités et améliorations, consultez <block ref="333326639e0f94ceb693906a79235ec5" category="inline-link-macro-rx"></block>.</block>
   <block id="2f1352033f9cdf5dbec684bea0d87ee5" category="summary">La version 6.2 du logiciel SnapCenter inclut plusieurs nouvelles fonctionnalités et améliorations.</block>
   <block id="f4090871da1ea3c21c90ff0a2bfe77db" category="paragraph">La version 6.2 du logiciel SnapCenter inclut la fonctionnalité étendue suivante.</block>
+  <block id="e8210c34cf4a643a11f3bfc4c0fd905f" category="paragraph">Autres hyperviseurs</block>
+  <block id="ff968c11eab0f01c02347241d47d4a25" category="paragraph">Linux exécuté sous KVM, Xen, Hyper-V et les hyperviseurs hyperscaler est pris en charge lorsque le système d'exploitation invité dispose d'un accès TCP/IP direct aux ressources de stockage ONTAP requises en utilisant les méthodes suivantes :</block>
+  <block id="19228485fa8108fc9a8c5a7a0e681742" category="admonition">Les banques de données et les présentations de périphériques bruts ne sont pas prises en charge en dehors de VMware.</block>
 </blocks>

@@ -58,6 +58,21 @@ Le datastore vVol peut uniquement être provisionné avec les outils ONTAP pour 
 
 
 
+
+
+ a| 
+Autres hyperviseurs
+ a| 
+Linux exécuté sous KVM, Xen, Hyper-V et les hyperviseurs hyperscaler est pris en charge lorsque le système d'exploitation invité dispose d'un accès TCP/IP direct aux ressources de stockage ONTAP requises en utilisant les méthodes suivantes :
+
+* LUN connectées à l'iSCSI
+* Volumes connectés par NFS
+* NVMe/TCP
+
+
+
+NOTE: Les banques de données et les présentations de périphériques bruts ne sont pas prises en charge en dehors de VMware.
+
 |===
 
 

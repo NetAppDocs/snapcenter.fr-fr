@@ -36,7 +36,7 @@ SnapCenter prend en charge la protection primaire et secondaire des applications
 SnapCenter découvre ou crée des groupes de cohérence ONTAP .  Il configure les relations SnapMirror sur le cluster de destination pour une protection secondaire. https://docs.netapp.com/us-en/ontap/consistency-groups["En savoir plus sur les groupes de cohérence ONTAP"^] .
 
 
-NOTE: Après la mise à niveau vers SnapCenter 6.2 (serveur et plug-ins) et ONTAP 9.17.1, SnapCenter modifie les groupes de cohérence plats en groupes de cohérence hiérarchiques lors de la première sauvegarde planifiée.
+NOTE: Après la mise à niveau vers SnapCenter 6.2.1 (serveur et plug-ins) et ONTAP 9.17.1, SnapCenter remplace les groupes de cohérence plats par des groupes de cohérence hiérarchiques lors de la première sauvegarde planifiée.
 
 Pour savoir comment activer la protection secondaire sur les systèmes ASA r2 pour votre application, consultez :
 

@@ -1,0 +1,28 @@
+---
+permalink: protect-sco/enable-consistency-group-snapshots-resource-group-level.html 
+sidebar: sidebar 
+keywords: consistency group, enable, create, resource group level 
+summary: Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. 
+---
+= Activer les instantanés de groupe de cohérence au niveau du groupe de ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Par défaut, le plug-in SnapCenter pour Oracle Database crée des instantanés de groupe de cohérence au niveau du groupe de disques ASM (Automatic Storage Management) ou du groupe de volumes LVM (Logical Volume Management). En tant que bonne pratique, les bases de données au sein d’un même groupe de ressources ne doivent pas partager de volumes ONTAP entre groupes de disques ASM ou groupes de volumes LVM.
+
+Toutefois, si des groupes de disques ASM ou des groupes de volumes LVM partagent des volumes ONTAP sous-jacents, la capture instantanée du groupe de cohérence peut échouer en raison de conflits d’instantanés dupliqués. Dans ce cas, SnapCenter bascule automatiquement vers des instantanés au niveau du volume.
+
+.Description de la tâche
+Dans les scénarios où des volumes sont partagés entre des groupes de disques ASM ou des groupes de volumes LVM, SnapCenter prend en charge l’activation des instantanés de groupe de cohérence au niveau du groupe de ressources. Cela garantit que tous les groupes de disques ASM ou les groupes de volumes LVM associés aux bases de données du groupe de ressources sont capturés dans un seul instantané de groupe de cohérence. La procédure suivante décrit comment utiliser cette fonctionnalité.
+
+.Étapes
+. Accédez au fichier de configuration suivant sur le serveur SnapCenter :
++
+`C:\Program Files\NetApp\SMCore\SMCoreServiceHost.dll.config`.
+
+. Repérez le  `isCgSnapshotForRg` paramètre et changez sa valeur de *false* à *true*.
+. Redémarrez le  `SMCoreService` service pour que la modification prenne effet.
+

@@ -1,0 +1,14 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter621.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.2.1 
+summary: La version 6.2.1 du logiciel SnapCenter n’apporte aucune nouvelle fonctionnalité ni amélioration et inclut uniquement des correctifs de bogues connus et des mises à jour de version qualifiées pour le serveur SnapCenter et les plug-ins. 
+---
+= Nouveautés du logiciel SnapCenter 6.2.1
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La version 6.2.1 du logiciel SnapCenter n’intègre aucune nouvelle fonctionnalité ni amélioration. Elle comprend uniquement des correctifs de bogues connus et des mises à jour des versions qualifiées pour le serveur SnapCenter et les plug-ins. Consultez la link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 6.2.1 Notes de version"^] pour plus de détails.

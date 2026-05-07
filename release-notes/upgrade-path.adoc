@@ -20,14 +20,8 @@ NOTE: Si vous mettez à niveau SnapCenter Server vers la version 6.2, mettez ég
 | Si vous utilisez la version du serveur SnapCenter... | Vous pouvez directement mettre à niveau SnapCenter Server vers... | Versions de plug-in prises en charge 
 
 
-.3+| 6,0 | 6.0.1  a| 
-* 6,0
+.3+| 6.0.1 | 6,1  a| 
 * 6.0.1
-
-
-
-
-| 6,1  a| 
 * 6,1
 
 
@@ -39,21 +33,28 @@ NOTE: Si vous mettez à niveau SnapCenter Server vers la version 6.2, mettez ég
 
 
 
-.2+| 6.0.1  a| 
-6,1
+| 6.2.1  a| 
+* 6.2.1
+
+
+
+
+.2+| 6,1  a| 
+6,2
  a| 
 * 6,1
-
-
-
-
-| 6,2  a| 
 * 6,2
 
 
 
 
-| 6,1 | 6,2  a| 
+| 6.2.1  a| 
+* 6.2.1
+
+
+
+
+| 6,2 | 6.2.1  a| 
 * 6,2
 
 

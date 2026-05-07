@@ -111,6 +111,8 @@ entries:
   entries:
   - title: Sauvegardez le flux de travail
     url: "/protect-postgresql/back-up-postgresql-resources.html"
+  - title: Configurer les identifiants pour le cluster PostgreSQL
+    url: "/protect-postgresql/configure-credentials-for-postgresql-cluster.html"
   - title: Découverte automatique des clusters
     url: "/protect-postgresql/discover-the-clusters-automatically.html"
   - title: Ajoutez des ressources manuellement au plug-in hôte

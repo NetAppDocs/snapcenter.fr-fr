@@ -13,7 +13,7 @@ summary: 'Avant d"ajouter un hôte et d"installer les modules d"extension, vous 
 [role="lead"]
 Avant d'ajouter un hôte et d'installer les modules d'extension, vous devez remplir toutes les conditions requises. Plug-in SnapCenter pour IBM DB2 pris en charge dans les environnements Windows, Linux et AIX.
 
-* Vous devez avoir installé Java 11 sur votre hôte.
+* Vous devez avoir installé Java 17 sur votre hôte.
 +
 
 NOTE: IBM Java n'est pas pris en charge sur les hôtes Windows et Linux.
@@ -30,9 +30,9 @@ NOTE: IBM Java n'est pas pris en charge sur les hôtes Windows et Linux.
 * Vous devez disposer d'un utilisateur de domaine disposant de privilèges d'administrateur local avec des autorisations de connexion locales sur l'hôte distant.
 * Lors de l'installation du plug-in pour IBM DB2 sur un hôte Windows, le plug-in SnapCenter pour Microsoft Windows est installé automatiquement.
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
-* Vous devez avoir installé Java 11 sur votre hôte Windows.
+* Vous devez avoir installé Java 17 sur votre hôte Windows.
 +
-link:https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html["Télécharger JAVA pour Windows"^]
+link:https://www.oracle.com/java/technologies/downloads/#java17["Télécharger Java pour Windows"^]
 
 
 
@@ -41,12 +41,12 @@ link:https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.htm
 == Hôtes Linux et AIX
 
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
-* Vous devez avoir installé Java 11 sur vos hôtes Linux ou AIX.
+* Vous devez avoir installé Java 17 sur vos hôtes Linux ou AIX.
 +
-link:https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html["Télécharger JAVA pour Linux"^]
+link:https://www.oracle.com/java/technologies/downloads/#java17["Télécharger Java pour Linux"^]
 
 +
-link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["Télécharger JAVA pour AIX"^]
+link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["Télécharger Java pour AIX"^]
 
 * Pour les bases de données IBM DB2 exécutées sur un hôte Linux, lors de l'installation de Plug-in pour IBM DB2, SnapCenter Plug-in pour UNIX est installé automatiquement.
 * Vous devez avoir *bash* comme shell par défaut pour l'installation du plug-in.

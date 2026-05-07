@@ -27,7 +27,7 @@ SnapCenter ne prend pas en charge plusieurs systèmes de stockage portant le mê
 
 
 .Étapes
-. Cliquez sur *SnapCenterPS* pour lancer PowerShell Core.
+. Sélectionnez *SnapCenterPS* pour lancer le PowerShell.
 . Créez une nouvelle connexion au système de stockage à l'aide de l'applet de commande Add-SmStorageConnection.
 +
 [listing]

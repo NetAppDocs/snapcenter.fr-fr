@@ -48,8 +48,8 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-Java 11 Oracle Java et OpenJDK
+Java 17 (Oracle Java et OpenJDK)
 
-Si vous avez mis à niveau JAVA vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version JAVA correcte et le chemin correct.
+Si vous avez mis à jour Java vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version Java correcte et le chemin correct.
 
 |===

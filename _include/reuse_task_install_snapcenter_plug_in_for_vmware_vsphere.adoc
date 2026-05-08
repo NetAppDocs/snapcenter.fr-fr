@@ -10,7 +10,7 @@ Pour plus d'informations sur le déploiement, reportez-vous à la section https:
 
 == Déployer le certificat d'autorité de certification
 
-Pour configurer le certificat d'autorité de certification avec le plug-in SnapCenter pour VMware vSphere, reportez-vous à la section https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["Créez ou importez un certificat SSL"^].
+Pour configurer le certificat CA avec SnapCenter Plug-in for VMware vSphere, voir https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere["Créez ou importez un certificat SSL"^].
 
 
 

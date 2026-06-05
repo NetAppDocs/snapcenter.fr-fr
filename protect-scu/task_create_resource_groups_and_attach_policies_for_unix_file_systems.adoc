@@ -63,12 +63,12 @@ NOTE: Les ressources sont répertoriées dans la section Ressources disponibles 
 *** Sélectionnez *cohérence système de fichiers* si vous voulez vous assurer que les données mises en cache des systèmes de fichiers sont vidées avant de créer la sauvegarde et qu'aucune opération d'entrée ou de sortie n'est autorisée sur le système de fichiers lors de la création de la sauvegarde.
 +
 
-NOTE: Pour une cohérence avec le système de fichiers, des snapshots de groupes de cohérence seront créés pour les LUN impliqués dans le groupe de volumes.
+NOTE: Pour la cohérence du système de fichiers, des instantanés de groupe de cohérence sont pris pour les LUNs impliqués dans le groupe de volumes.
 
 *** Sélectionnez *cohérence de panne* si vous souhaitez vous assurer que les données en cache des systèmes de fichiers sont vidées avant de créer la sauvegarde.
 +
 
-NOTE: Si vous avez ajouté des systèmes de fichiers différents dans le groupe de ressources, tous les volumes provenant de systèmes de fichiers différents du groupe de ressources seront placés dans un groupe de cohérence.
+NOTE: Si vous avez ajouté différents systèmes de fichiers au groupe de ressources, alors tous les volumes de ces différents systèmes de fichiers dans le groupe de ressources sont placés dans un groupe de cohérence. Pour les sauvegardes cohérentes en cas de panne, un instantané de groupe de cohérence est pris par défaut même s'il n'y a qu'un seul système de fichiers ou volume.
 
 
 

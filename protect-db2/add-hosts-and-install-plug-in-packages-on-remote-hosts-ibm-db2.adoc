@@ -129,7 +129,7 @@ NOTE: GMSA sera utilisé comme compte de service de connexion uniquement pour le
 |===
 . Cliquez sur *soumettre*.
 +
-Si vous n'avez pas coché la case *Ignorer les prévérifications*, l'hôte est validé afin de vérifier s'il répond aux exigences d'installation du plug-in. L'espace disque, la RAM, la version de PowerShell, la version de .NET, l'emplacement (pour les plug-ins Windows), ainsi que Java 17, Java 11 (pour SnapCenter 6.2 uniquement) pour les plug-ins Windows et Linux sont validés par rapport aux exigences minimales. Si les exigences minimales ne sont pas satisfaites, des messages d'erreur ou d'avertissement appropriés s'affichent.
+Si vous n'avez pas coché la case *Ignorer les prévérifications*, l'hôte est validé afin de vérifier s'il répond aux exigences d'installation du plug-in. L'espace disque, la RAM, la version de PowerShell, la version de .NET, l'emplacement (pour les plug-ins Windows), ainsi que Java 17 (pour SnapCenter 6.2.1 et versions ultérieures) ou Java 11 (pour SnapCenter 6.2 et versions antérieures) pour les plug-ins Windows et Linux sont vérifiés par rapport aux exigences minimales. Si les exigences minimales ne sont pas satisfaites, des messages d'erreur ou d'avertissement appropriés s'affichent.
 
 +
 Si l'erreur est liée à l'espace disque ou à la RAM, vous pouvez mettre à jour le fichier web.config situé à l'adresse C:\Program Files\NetApp\SnapCenter WebApp pour modifier les valeurs par défaut. Si l'erreur est liée à d'autres paramètres, vous devez corriger le problème.

@@ -17,7 +17,8 @@ Avant d'utiliser les plug-ins pris en charge par SnapCenter NetApp, l'administra
 * Connectez-vous au serveur SnapCenter.
 * Configurez l'environnement SnapCenter en ajoutant des connexions au système de stockage et en créant des identifiants, le cas échéant.
 * Ajoutez des hôtes, et installez et téléchargez les plug-ins.
-* Le cas échéant, installez Java 17, Java 11 (pour SnapCenter 6.2 uniquement) sur l'hôte du plug-in.
+* Le cas échéant, installez Java 17 (Oracle Java ou OpenJDK) pour SnapCenter 6.2.1 et versions ultérieures ou
+* Java 11 pour SnapCenter 6.2 et versions antérieures sur l'hôte du plug-in.
 * Si vous disposez de plusieurs chemins d'accès aux données (LIF) ou d'une configuration dNFS, vous pouvez effectuer les opérations suivantes à l'aide de l'interface de ligne de commandes SnapCenter sur l'hôte de base de données :
 +
 ** Par défaut toutes les adresses IP de l'hôte de base de données sont ajoutées à la règle d'exportation du stockage NFS dans la machine virtuelle de stockage (SVM) pour les volumes clonés. Si vous souhaitez avoir une adresse IP spécifique ou restreindre à un sous-ensemble d'adresses IP, exécutez l'interface de ligne de commande set-PreferredHostIPsInStorageExportPolicy.

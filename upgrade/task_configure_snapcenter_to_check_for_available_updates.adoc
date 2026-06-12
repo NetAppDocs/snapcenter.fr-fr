@@ -14,13 +14,13 @@ summary: 'SnapCenter communique régulièrement avec le site de support NetApp p
 SnapCenter communique régulièrement avec le site de support NetApp pour vous informer des mises à jour logicielles disponibles. Vous pouvez également créer un planning pour spécifier l'intervalle dans lequel vous souhaitez recevoir des informations sur les mises à jour disponibles.
 
 .Étapes
-. Dans le volet de navigation de gauche, cliquez sur *Paramètres*.
-. Dans la page *Paramètres*, cliquez sur *logiciel*.
+. Dans le volet de navigation de gauche, sélectionnez *Paramètres*.
+. Dans la page *Paramètres*, sélectionnez *Logiciel*.
 +
 La page logiciels disponibles affiche les modules d'extension disponibles, les versions disponibles et leur état d'installation.
 
-. Cliquez sur *Rechercher les mises à jour* pour voir si des versions plus récentes de modules enfichables sont disponibles.
-. Cliquez sur *Programmer les mises à jour* pour créer un programme afin de spécifier l'intervalle dans lequel vous souhaitez recevoir des informations sur les mises à jour disponibles :
+. Sélectionnez *Rechercher les mises à jour* pour voir si des versions plus récentes des modules d'extension sont disponibles.
+. Sélectionnez *Planifier les mises à jour* pour créer une planification et spécifier l'intervalle auquel vous souhaitez recevoir des informations sur les mises à jour disponibles :
 +
 .. Sélectionnez l'intervalle dans *Rechercher les mises à jour*.
 .. Sélectionnez les informations d'identification Windows pour l'administration du serveur SnapCenter et cliquez sur *OK*.

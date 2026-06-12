@@ -16,7 +16,8 @@ Avant d'ajouter un hôte et d'installer les packages de plug-ins, vous devez res
 
 NOTE: Les applications de stockage et Oracle sont prises en charge sous AIX.
 
-* Vous devez avoir installé Java 17, Java 11 (pour SnapCenter 6.2 uniquement) sur votre hôte Linux, Windows ou AIX.
+* Vous devez avoir installé Java 17 (Oracle Java ou OpenJDK) pour SnapCenter 6.2.1 et versions ultérieures ou
+* Java 11 pour SnapCenter 6.2 et versions antérieures sur votre hôte Linux, Windows ou AIX.
 +
 
 NOTE: IBM Java n'est pas pris en charge sur les hôtes Windows et Linux.
@@ -51,9 +52,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Télécharger J
 NOTE: Les applications de stockage et Oracle sont prises en charge sous AIX.
 
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
-* Vous devez avoir installé Java 17, Java 11 (pour SnapCenter 6.2 uniquement) sur votre hôte Linux.
+* Vous devez avoir installé Java 17 (Oracle Java ou OpenJDK) pour SnapCenter 6.2.1 et versions ultérieures ou
+* Java 11 pour SnapCenter 6.2 et les versions antérieures sur votre hôte Linux.
 +
-Si vous utilisez Windows Server 2019 ou Windows Server 2016 pour l’hôte du serveur SnapCenter, vous devez installer Java 17, Java 11 (pour SnapCenter 6.2 uniquement).
+Si vous utilisez Windows Server 2019 ou Windows Server 2016 pour l’hôte du serveur SnapCenter, vous devez installer Java 17 (Oracle Java ou OpenJDK) pour SnapCenter 6.2.1 et versions ultérieures ou Java 11 pour SnapCenter 6.2 et versions antérieures.
 
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Télécharger Java pour Linux"]
@@ -140,7 +142,9 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-Java 17, Java 11 (pour SnapCenter 6.2 uniquement), IBM Java
+* Java 17 pour SnapCenter 6.2.1 et versions ultérieures, IBM Java ou
+* Java 11 pour SnapCenter 6.2 et versions antérieures, IBM Java
+
 
 Si vous avez mis à jour Java vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version Java correcte et le chemin correct.
 

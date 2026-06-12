@@ -23,13 +23,14 @@ Le plug-in SnapCenter pour base de données Oracle peut être installé par un u
 Le module de plug-ins SnapCenter pour AIX résout automatiquement le lien symbolique au niveau du fichier, mais pas les liens symboliques au niveau du répertoire pour obtenir le chemin absolu JAVA_HOME.
 
 * Créez des informations d'identification avec le mode d'authentification sous Linux ou AIX pour l'utilisateur d'installation.
-* Vous devez avoir installé Java 17, Java 11 (pour SnapCenter 6.2 uniquement) sur votre hôte Linux ou AIX.
+* Vous devez avoir installé Java 17 (pour SnapCenter 6.2.1 et versions ultérieures) ou
+* Java 11 (pour SnapCenter 6.2 et versions antérieures) sur votre hôte Linux ou AIX.
 +
 ** Java d'Oracle et d'OpenJDK est pris en charge pour Linux.
 ** IBM Java pour AIX. Vous pouvez le télécharger depuis https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?version=17&os=AIX["Téléchargements IBM Semeru RunTimes"^].
 +
 
-NOTE: Assurez-vous d'avoir installé uniquement l'édition certifiée de Java 17, Java 11 (pour SnapCenter 6.2 uniquement) sur l'hôte Linux.
+NOTE: Assurez-vous d'avoir installé uniquement l'édition certifiée de Java 17 (pour SnapCenter 6.2.1 et versions ultérieures) ou de Java 11 (pour SnapCenter 6.2 et versions antérieures) sur l'hôte Linux.
 
 
 
@@ -91,10 +92,12 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-Java 17 (Oracle ou OpenJDK), Java 11 (pour SnapCenter 6.2 uniquement)
+* Java 17 (Oracle ou OpenJDK) pour SnapCenter 6.2.1 et versions ultérieures ou
+* Java 11 pour SnapCenter 6.2 et versions antérieures
 
 
-NOTE: Assurez-vous d'avoir installé uniquement l'édition certifiée de Java 17, Java 11 (pour SnapCenter 6.2 uniquement) sur l'hôte Linux.
+
+NOTE: Assurez-vous d'avoir installé uniquement l'édition certifiée de Java 17 pour SnapCenter 6.2.1 et versions ultérieures ou Java 11 pour SnapCenter 6.2 et versions antérieures sur l'hôte Linux.
 
 Si vous avez mis à jour Java vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version Java correcte et le chemin correct.
 
@@ -219,7 +222,9 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-IBM Java 17, IBM Java 11 (pour SnapCenter 6.2 uniquement)
+* IBM Java 17 pour SnapCenter 6.2.1 et versions ultérieures ou
+* IBM Java 11 pour SnapCenter 6.2 et versions antérieures
+
 
 Si vous avez mis à jour Java vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version Java correcte et le chemin correct.
 

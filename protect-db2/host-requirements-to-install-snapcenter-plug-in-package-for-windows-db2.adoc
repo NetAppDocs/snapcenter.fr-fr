@@ -48,7 +48,8 @@ Packs logiciels requis
  a| 
 * ASP.NET Core Runtime 8.0.24 (et tous les correctifs 8.0.x ultérieurs) Hosting Bundle
 * PowerShell 7.4.13
-* Java 17 (Oracle Java ou OpenJDK), Java 11 (pour SnapCenter 6.2 uniquement)
+* Java 17 (Oracle Java ou OpenJDK) pour SnapCenter 6.2.1 et versions ultérieures ou
+* Java 11 pour SnapCenter 6.2 et versions antérieures
 
 
 Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous à la section https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["La mise à niveau ou l'installation de SnapCenter échoue pour les systèmes existants qui ne disposent pas de connexion Internet."]

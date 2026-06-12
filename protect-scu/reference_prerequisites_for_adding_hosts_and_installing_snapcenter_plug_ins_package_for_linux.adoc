@@ -23,10 +23,11 @@ NOTE: La clé RSA est le seul format de clé SSH pris en charge pour SnapCenter.
 Le plug-in SnapCenter pour systèmes de fichiers Unix peut être installé par un utilisateur non root. Cependant, vous devez configurer les privilèges sudo pour que l'utilisateur non-root installe et démarre le processus de plug-in. Après l'installation du plug-in, les processus s'exécutent en tant qu'utilisateur non-racine efficace.
 
 * Créez des informations d'identification avec le mode d'authentification Linux pour l'utilisateur d'installation.
-* Vous devez avoir installé Java 17, Java 11 (pour SnapCenter 6.2 uniquement) sur votre hôte Linux.
+* Vous devez avoir installé Java 17 pour SnapCenter 6.2.1 et versions ultérieures ou
+* Java 11 pour SnapCenter 6.2 et les versions antérieures sur votre hôte Linux.
 +
 
-NOTE: Assurez-vous d'avoir installé uniquement l'édition certifiée de Java 17, Java 11 (pour SnapCenter 6.2 uniquement) sur l'hôte Linux.
+NOTE: Assurez-vous d'avoir installé uniquement l'édition certifiée de Java 17 pour SnapCenter 6.2.1 et versions ultérieures ou Java 11 pour SnapCenter 6.2 et versions antérieures sur l'hôte Linux.
 
 +
 Pour plus d'informations sur les téléchargements Java, consultez link:https://www.oracle.com/java/technologies/downloads/#java17["Téléchargez Java pour tous les systèmes d'exploitation"^].
@@ -74,10 +75,12 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
  a| 
 Packs logiciels requis
  a| 
-Java 17 (Oracle Java ou OpenJDK), Java 11 (pour SnapCenter 6.2 uniquement)
+* Java 17 (Oracle Java ou OpenJDK) pour SnapCenter 6.2.1 et versions ultérieures ou
+* Java 11 pour SnapCenter 6.2 et versions antérieures
 
 
-NOTE: Assurez-vous d'avoir installé uniquement l'édition certifiée de Java 17, Java 11 (pour SnapCenter 6.2 uniquement) sur l'hôte Linux.
+
+NOTE: Assurez-vous d'avoir installé uniquement l'édition certifiée de Java 17 pour SnapCenter 6.2.1 et versions ultérieures ou Java 11 pour SnapCenter 6.2 et versions antérieures sur l'hôte Linux.
 
 Si vous avez mis à jour Java vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version Java correcte et le chemin correct.
 

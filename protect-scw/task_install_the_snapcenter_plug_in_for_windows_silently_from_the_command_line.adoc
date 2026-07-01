@@ -14,10 +14,12 @@ summary: 'Vous pouvez installer le plug-in SnapCenter pour Microsoft Windows loc
 Vous pouvez installer le plug-in SnapCenter pour Microsoft Windows localement sur un hôte Windows si vous ne pouvez pas installer le plug-in à distance à partir de l'interface graphique SnapCenter. Vous pouvez exécuter le programme d'installation du plug-in SnapCenter pour Microsoft Windows sans surveillance, en mode silencieux, à partir de la ligne de commande Windows.
 
 .Avant de commencer
-* Vous devez avoir installé le pack d'hébergement ASP.NET Core Runtime 8.0.24 (et tous les correctifs 8.0.x ultérieurs).
-* Vous devez avoir installé PowerShell 7.4.13 ou une version ultérieure.
+* Vous devez avoir installé ASP.NET Core Runtime 10.0.7 Hosting Bundle (ou une version ultérieure).
+* Vous devez avoir installé PowerShell 7.6.1 (ou une version ultérieure).
 * Vous devez être un administrateur local sur l'hôte.
 
+
+Consultez la link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["Notes de version de SnapCenter Software"^] pour connaître les dernières versions qualifiées d'ASP.NET Core et de PowerShell pour votre version spécifique de SnapCenter.
 
 .Étapes
 . Téléchargez le plug-in SnapCenter pour Microsoft Windows à partir de votre emplacement d'installation.

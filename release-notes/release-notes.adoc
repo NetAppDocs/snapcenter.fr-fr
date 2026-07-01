@@ -11,10 +11,12 @@ summary: Fournit des informations importantes sur cette version de SnapCenter Se
 
 
 [role="lead"]
-Découvrez les nouvelles fonctionnalités et améliorations disponibles dans SnapCenter 6.2 et 6.2.1.
+Découvrez les nouvelles fonctionnalités améliorées disponibles dans SnapCenter 6.2, 6.2.1 et 6.2.2.
+
+Pour obtenir la liste complète des nouvelles fonctionnalités et améliorations, veuillez consulter link:what's-new-in-snapcenter622.html["Nouveautés de la version SnapCenter 6.2.2"].
 
 Pour obtenir la liste complète des nouvelles fonctionnalités et améliorations, veuillez consulter link:what's-new-in-snapcenter621.html["Nouveautés de la version SnapCenter 6.2.1"].
 
 Pour obtenir la liste complète des nouvelles fonctionnalités et améliorations, veuillez consulter link:what's-new-in-snapcenter62.html["Quoi de neuf dans SnapCenter 6.2"].
 
-Pour plus de détails sur les problèmes connus, les limitations, les problèmes résolus et les commandes nouvelles et modifiées, consultez  https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software Notes de version 6.2.1"^]. Vous devez vous connecter avec votre compte NetApp ou en créer un pour accéder aux notes de version.
+Pour plus de détails sur les problèmes connus, les limitations, les problèmes résolus et les commandes nouvelles et modifiées, consultez  https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software Notes de version 6.2.2"^]. Vous devez vous connecter avec votre compte NetApp ou en créer un pour accéder aux notes de version.

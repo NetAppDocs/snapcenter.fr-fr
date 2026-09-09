@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retain transaction log backups 
 summary: Le plug-in SnapCenter pour Microsoft SQL Server requiert des sauvegardes de journal des transactions pour effectuer des opérations de restauration à chaud, qui restaurent votre base de données à un moment donné entre deux sauvegardes complètes. 
 ---
-= Durée de conservation des sauvegardes du journal des transactions sur le système de stockage source
+= Combien de temps conserver les sauvegardes du journal des transactions dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

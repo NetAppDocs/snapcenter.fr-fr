@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 'Le plug-in pour Windows s"intègre à la technologie NetApp Snapshot sur le système de stockage. Pour utiliser le plug-in pour Windows, utilisez l"interface SnapCenter.' 
 ---
-= Le plug-in SnapCenter pour Windows
+= SnapCenter Plug-in pour les fonctionnalités de Microsoft Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

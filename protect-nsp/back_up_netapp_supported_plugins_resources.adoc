@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup 
 summary: 'Le workflow de sauvegarde comprend la planification, l"identification des ressources de sauvegarde, la gestion des stratégies de sauvegarde, la création de groupes de ressources et la connexion de stratégies, la création de sauvegardes et le contrôle des opérations.' 
 ---
-= Sauvegarde des ressources des plug-ins pris en charge par NetApp
+= Flux de travail de sauvegarde SnapCenter pour les ressources des plug-ins pris en charge NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

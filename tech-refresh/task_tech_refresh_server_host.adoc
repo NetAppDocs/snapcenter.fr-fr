@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, SnapCenter Server, cmdlet, APIs, F5, rollback, decommission, disaster recovery, standalone 
 summary: 'Installez la même version du serveur SnapCenter sur le nouvel hôte, puis exécutez les API ou exécutez les applets de commande pour sauvegarder le SnapCenter à partir de l"ancien serveur et le restaurer sur le nouveau serveur.' 
 ---
-= Mise à jour technologique de l'hôte du serveur SnapCenter
+= Effectuez une mise à jour technique de l’hôte du serveur SnapCenter
 :allow-uri-read: 
 
 
@@ -55,6 +55,7 @@ NOTE: Si vous avez mis à jour manuellement le fichier web.config dans l'ancien 
 
 
 
+[[tech-refresh-of-a-node-in-f5-cluster]]
 == Mise à jour technologique d'un nœud dans un cluster F5
 
 Vous pouvez procéder à une actualisation technologique de n'importe quel nœud du cluster F5 en supprimant le nœud et en ajoutant le nouveau nœud. Si le nœud qui doit être actualisé est actif, activez un autre nœud du cluster, puis supprimez-le.
@@ -66,22 +67,26 @@ NOTE: Si l'url du cluster F5 change, l'url peut être mise à jour dans tous les
 
 
 
+[[decommissioning-the-old-snapcenter-server-host]]
 == Mise hors service de l'ancien hôte du serveur SnapCenter
 
 Vous pouvez supprimer l'ancien hôte du serveur SnapCenter après avoir vérifié que le nouveau serveur SnapCenter est en cours d'exécution et que tous les hôtes du plug-in peuvent communiquer avec le nouvel hôte du serveur SnapCenter.
 
 
 
+[[rollback-to-the-old-snapcenter-server-host]]
 == Restauration vers l'ancien hôte du serveur SnapCenter
 
 En cas de problème, vous pouvez ramener l'ancien hôte du serveur SnapCenter en mettant à jour l'URL du serveur SnapCenter dans tous les hôtes à l'aide de l'API: `/<snapcenter_version>/server/configureurl` Ou de l'applet de commande: _Set-SmServerConfig_.
 
 
 
+[[disaster-recovery]]
 == Reprise après incident
 
 
 
+[[disaster-recovery-of-standalone-snapcenter-host]]
 === Reprise après incident d'un hôte SnapCenter autonome
 
 Vous pouvez effectuer une reprise sur incident en restaurant la sauvegarde du serveur sur le nouvel hôte.
@@ -115,6 +120,7 @@ NOTE: Les entrées du serveur _etc/host_ ne seront pas restaurées. Vous pouvez 
 
 
 
+[[disaster-recovery-of-snapcenter-f5-cluster]]
 === Reprise après incident du cluster SnapCenter F5
 
 Vous pouvez effectuer une reprise sur incident en restaurant la sauvegarde du serveur sur le nouvel hôte, puis en convertissant l'hôte autonome en cluster.

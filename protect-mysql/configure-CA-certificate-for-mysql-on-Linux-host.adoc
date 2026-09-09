@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 'Configurer le certificat CA pour le service SnapCenter MySQL lug-ins sur l"hôte Linux' 
 ---
-= Configurez le certificat CA pour le service SnapCenter MySQL Plug-ins sur l'hôte Linux
+= Configurez le plug-in SnapCenter pour le certificat d'autorité de certification (CA) MySQL sur un hôte Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ Les plug-ins utilisent le fichier « keystore.jks », qui se trouve dans _/opt/N
 
 
 
+[[manage-password-for-plug-in-keystore-and-alias-of-the-ca-signed-key-pair-in-use]]
 == Gérer le mot de passe du magasin de clés du plug-in et l'alias de la paire de clés signée par l'autorité de certification en cours d'utilisation
 
 .Étapes
@@ -41,6 +42,7 @@ NOTE: Le mot de passe du magasin de clés du plug-in et de tous les mots de pass
 
 
 
+[[configure-root-or-intermediate-certificates-to-plug-in-trust-store]]
 == Configurer les certificats racine ou intermédiaires pour le plug-in trust-store
 
 Vous devez configurer les certificats racine ou intermédiaires sans la clé privée pour connecter le magasin de confiance.
@@ -63,6 +65,7 @@ NOTE: Vous devez ajouter le certificat de l'autorité de certification racine, p
 
 
 
+[[configure-ca-signed-key-pair-to-plug-in-trust-store]]
 == Configurer la paire de clés signée par l'autorité de certification pour le plug-in trust-store
 
 Vous devez configurer la paire de clés signée par l'autorité de certification dans le magasin de confiance du plug-in.
@@ -101,6 +104,7 @@ Mettez cette valeur à jour par rapport à la clé SCC_CERTIFICATE_ALIAS.
 
 
 
+[[configure-certificate-revocation-list-crl-for-plug-ins]]
 == Configurer la liste de révocation de certificats (CRL) pour les plug-ins
 
 .Description de la tâche

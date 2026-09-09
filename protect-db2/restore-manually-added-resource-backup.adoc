@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 'Vous pouvez utiliser SnapCenter pour restaurer et récupérer des données à partir d"une ou plusieurs sauvegardes.' 
 ---
-= Restaurer une sauvegarde de ressource ajoutée manuellement
+= Restaurez une sauvegarde de ressource ajoutée manuellement avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: role, create, permission 
 summary: 'En plus d"utiliser les rôles SnapCenter existants, vous pouvez créer vos propres rôles et personnaliser les autorisations.' 
 ---
-= Créer un rôle
+= Créer un rôle dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

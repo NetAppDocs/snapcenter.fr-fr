@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: audit, log, configure 
 summary: 'Vous pouvez configurer pour consigner les événements de sécurité des plates-formes logicielles et de tous les logiciels qui s"exécutent sur ces plates-formes.' 
 ---
-= Configurer les paramètres du journal d'audit
+= Configurer les paramètres du journal des audits dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
 summary: 'Les ressources sont des bases de données Oracle sur l"hôte géré par SnapCenter. Vous pouvez ajouter ces bases de données à des groupes de ressources pour exécuter des opérations de protection des données après avoir découvert les bases de données disponibles.' 
 ---
-= Découvrez les bases de données Oracle disponibles pour la sauvegarde
+= Découvrez les bases de données Oracle disponibles pour la sauvegarde dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ Pour plus d'informations, voir https://docs.netapp.com/us-en/sc-plugin-vmware-vs
 
 
 
+[[step-1-prevent-snapcenter-from-discovering-non-database-entries]]
 == Étape 1 : empêcher SnapCenter de découvrir des entrées ne provenant pas de la base de données
 
 Vous pouvez empêcher SnapCenter de découvrir les entrées non-base de données ajoutées dans le fichier oratab.
@@ -66,6 +67,7 @@ IMPORTANT: Il est toujours recommandé de sauvegarder le fichier sc_oratab.confi
 
 
 
+[[step-2-discover-resources]]
 == Étape 2 : découverte des ressources
 
 Après avoir installé le plug-in, toutes les bases de données de cet hôte sont automatiquement découvertes et affichées sur la page Ressources.

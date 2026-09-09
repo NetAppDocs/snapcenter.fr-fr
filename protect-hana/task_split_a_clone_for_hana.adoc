@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split clone, snapcenter 
 summary: Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent. 
 ---
-= Séparer un clone
+= Divisez un clone SnapCenter pour une base de données SAP HANA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

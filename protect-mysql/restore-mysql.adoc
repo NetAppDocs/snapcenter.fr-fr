@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations. 
 ---
-= Restaurer le flux de travail
+= Flux de travail de restauration MySQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

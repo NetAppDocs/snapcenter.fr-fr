@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 'Les ressources sont les bases de données, les instances d"application, les groupes de disponibilité et des composants similaires gérés par les plug-ins que vous avez installés. Vous pouvez ajouter ces ressources aux groupes de ressources de sorte que vous puissiez effectuer des tâches de protection des données, mais vous devez d"abord identifier les ressources disponibles. La détermination des ressources disponibles permet également de vérifier que l"installation du plug-in s"est déroulée correctement.' 
 ---
-= Déterminer si des ressources sont disponibles pour les sauvegardes
+= Déterminez si les ressources SQL Server sont disponibles pour la sauvegarde dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

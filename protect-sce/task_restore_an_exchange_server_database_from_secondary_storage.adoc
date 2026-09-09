@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Vous pouvez restaurer une base de données Exchange Server sauvegardée à partir du stockage secondaire (miroir ou coffre-fort).' 
 ---
-= Restaurer une base de données Exchange Server à partir du stockage secondaire
+= Restaurez une base de données Exchange à partir d'un stockage secondaire dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

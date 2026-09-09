@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: IBM Db2 
 summary: 'Avant d"installer le package de plug-ins SnapCenter pour Windows, vous devez connaître les exigences en matière d"espace système hôte de base et de dimensionnement.' 
 ---
-= Configuration requise pour l'hôte pour installer le module de plug-ins SnapCenter pour Windows
+= Configuration requise pour installer le package de plug-ins SnapCenter pour Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

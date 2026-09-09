@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter overview 
 summary: 'Le logiciel SnapCenter est une plateforme simple, centralisée et évolutive qui protège les données de vos applications, bases de données, systèmes de fichiers hôtes et machines virtuelles qui s"exécutent sur les systèmes ONTAP à partir de n"importe quel point du cloud hybride.' 
 ---
-= Présentation de SnapCenter
+= En savoir plus sur les logiciels SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,6 +49,7 @@ Vous pouvez installer SnapCenter sur site ou sur un cloud public pour protéger 
 
 
 
+[[key-features]]
 == Fonctionnalités clés
 
 SnapCenter offre les principales fonctionnalités suivantes :
@@ -94,6 +95,7 @@ SnapCenter fournit des API REST pour la plupart des fonctionnalités pour l'int�
 
 
 
+[[snapcenter-architecture-and-components]]
 == Architecture et composants de SnapCenter
 
 SnapCenter utilise une conception en couches avec un serveur de gestion central et des hôtes de plug-in.  Le serveur et les hôtes du plug-in peuvent se trouver à des emplacements différents.
@@ -104,6 +106,7 @@ SnapCenter inclut le serveur SnapCenter, le package de plug-in SnapCenter pour W
 
 
 
+[[snapcenter-server]]
 === Serveur SnapCenter
 
 Le serveur SnapCenter prend en charge les systèmes d'exploitation Microsoft Windows et Linux (RHEL 8.x, RHEL 9.x, SLES 15 SP5). Le serveur SnapCenter comprend un serveur Web, une interface utilisateur HTML5 centralisée, des applets de commande PowerShell, des API REST et le référentiel SnapCenter.
@@ -112,6 +115,7 @@ SnapCenter stocke les informations sur ses opérations dans le référentiel Sna
 
 
 
+[[snapcenter-plug-ins]]
 === Plug-ins SnapCenter
 
 Chaque plug-in SnapCenter prend en charge des environnements, des bases de données et des applications spécifiques.
@@ -293,6 +297,7 @@ Pour protéger les bases de données, les systèmes de fichiers, les machines vi
 
 
 
+[[snapcenter-repository]]
 === Référentiel SnapCenter
 
 Le référentiel SnapCenter, parfois appelé base de données NSM, stocke des informations et des métadonnées pour chaque opération SnapCenter.

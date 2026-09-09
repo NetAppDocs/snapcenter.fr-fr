@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mfa, authentication, multifactor authentication 
 summary: 'SnapCenter utilise des fonctionnalités de sécurité et d"authentification strictes pour sécuriser vos données.' 
 ---
-= Gestion de l'authentification multifacteur (MFA)
+= Gérez l'authentification multifacteur dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Vous pouvez gérer la fonctionnalité d'authentification multifacteur (MFA) dans
 
 
 
+[[enable-multi-factor-authentication-mfa]]
 == Prise en charge de l'authentification multifacteur (MFA)
 
 Vous pouvez activer la fonctionnalité MFA pour SnapCenter Server à l'aide des commandes PowerShell.
@@ -120,6 +121,7 @@ Pour obtenir des informations de dépannage, reportez-vous à la section https:/
 
 
 
+[[update-ad-fs-mfa-metadata]]
 == Mettre à jour les métadonnées AD FS MFA
 
 Vous devez mettre à jour les métadonnées AD FS MFA dans SnapCenter en cas de modification du serveur AD FS, telles que la mise à niveau, le renouvellement du certificat CA, la reprise sur incident, etc.
@@ -136,6 +138,7 @@ Vous devez mettre à jour les métadonnées AD FS MFA dans SnapCenter en cas de 
 
 
 
+[[update-snapcenter-mfa-metadata]]
 == Mettre à jour les métadonnées MFA de SnapCenter
 
 Vous devez mettre à jour les métadonnées MFA SnapCenter dans AD FS en cas de modification du serveur ADFS, comme la réparation, le renouvellement du certificat CA, la reprise sur incident, etc.
@@ -159,6 +162,7 @@ Voir link:../install/enable_multifactor_authentication.html["Activer l'authentif
 
 
 
+[[disable-multi-factor-authentication-mfa]]
 == Désactivation de l'authentification multifacteur (MFA)
 
 .Étapes

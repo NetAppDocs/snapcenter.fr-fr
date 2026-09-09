@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Monitor jobs, schedules, events, logs 
 summary: Vous pouvez surveiller la progression de vos travaux, obtenir des informations sur les tâches planifiées et vérifier les événements et les journaux à partir de la page Monitor. 
 ---
-= Surveillez les tâches, les plannings, les événements et les journaux
+= Surveillez les tâches, les calendriers, les événements et les journaux de SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Vous pouvez surveiller la progression de vos travaux, obtenir des informations s
 
 
 
+[[monitor-jobs]]
 == Surveiller les tâches
 
 Vous pouvez afficher des informations sur les tâches de sauvegarde, de clonage, de restauration et de vérification SnapCenter. Vous pouvez filtrer cette vue en fonction de la date de début et de fin, du type de tâche, du groupe de ressources, de la stratégie ou du plug-in SnapCenter. Vous pouvez également obtenir des détails supplémentaires et des fichiers journaux pour les travaux spécifiés.
@@ -33,6 +34,7 @@ Vous pouvez effectuer les tâches suivantes associées aux tâches de surveillan
 
 
 
+[[manage-scheduled-backup-jobs]]
 === Gérer les tâches de sauvegarde planifiées
 
 À partir de la version SnapCenter 6.0.1, un nouveau paramètre *JobConcurrencyThreshold* a été introduit, qui définit un seuil pour le nombre de travaux programmés pouvant s'exécuter à tout moment. Cela vous permet de contrôler le nombre de sauvegardes que vous souhaitez exécuter en fonction de la configuration matérielle de votre système.
@@ -50,6 +52,7 @@ NOTE: Si vous activez *JobConcurrencyThreshold* pour gérer des tâches simultan
 
 
 
+[[manage-stale-jobs]]
 === Gérer les tâches obsolètes
 
 Les travaux obsolètes sont créés à la suite d'interruptions dans SnapCenter ou de mises à jour incorrectes des travaux. À partir de la version SnapCenter 6.0.1, un planning prédéfini est introduit pour nettoyer ces tâches obsolètes bloquées pendant plus de 72 heures. Vous pouvez modifier la fréquence de programmation en modifiant le paramètre configurable *CleanUpStaleJobsIntervalHours*.
@@ -64,6 +67,7 @@ Vous pouvez déclencher le nettoyage à la demande en exécutant le programme à
 
 
 
+[[monitor-schedules]]
 == Surveiller les plannings
 
 Vous pouvez afficher les horaires actuels pour déterminer le moment où l'opération démarre, le moment où elle a été exécutée pour la dernière fois et le moment où elle s'exécute ensuite. Vous pouvez également déterminer l'hôte sur lequel l'opération s'exécute, ainsi que le groupe de ressources et les informations de stratégie de l'opération.
@@ -78,6 +82,7 @@ Vous pouvez afficher les horaires actuels pour déterminer le moment où l'opér
 
 
 
+[[monitor-events]]
 == Contrôle des événements
 
 Vous pouvez afficher la liste des événements SnapCenter dans le système, par exemple lorsqu'un utilisateur crée un groupe de ressources ou lorsqu'il lance des activités, comme par exemple lors de la création d'une sauvegarde planifiée. Vous pouvez afficher les événements pour déterminer si une opération telle qu'une sauvegarde ou une restauration est en cours.
@@ -96,6 +101,7 @@ Toutes les informations sur le travail s'affichent sur la page événements. Par
 
 
 
+[[monitor-logs]]
 == Surveiller les journaux
 
 Vous pouvez afficher et télécharger les journaux du serveur SnapCenter, les journaux des agents de l'hôte SnapCenter et les journaux des plug-ins. Vous pouvez afficher les journaux pour faciliter le dépannage.
@@ -146,6 +152,7 @@ NOTE: Pour accéder aux informations d'intégrité ou de configuration après la
 
 
 
+[[remove-jobs-and-logs-from-snapcenter]]
 == Supprimer les travaux et les journaux de SnapCenter
 
 Vous pouvez supprimer des tâches de sauvegarde, de restauration, de clonage et de vérification ainsi que des journaux de SnapCenter. SnapCenter stocke les journaux des tâches qui ont réussi et échoué indéfiniment, sauf si vous les supprimez. Il se peut que vous souhaitiez les supprimer pour réapprovisionner le stockage.

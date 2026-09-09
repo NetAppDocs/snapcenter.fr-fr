@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: Options de conservation des sauvegardes. 
 ---
-= Options de conservation des sauvegardes
+= Options de conservation des sauvegardes dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split, PDB, cloned PDB 
 summary: 'Vous pouvez utiliser SnapCenter pour fractionner une base de données enfichable clonée \(PDB\).' 
 ---
-= Séparer le clone d'une base de données enfichable
+= Diviser un clone de base de données enfichable dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

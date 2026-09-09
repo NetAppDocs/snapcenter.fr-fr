@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, cli, commands 
 summary: 'Le workflow de sauvegarde comprend la planification, l"identification des ressources de sauvegarde, la création de stratégies de sauvegarde, la création de groupes de ressources et la connexion de stratégies, la création de sauvegardes et le contrôle des opérations.' 
 ---
-= Sauvegarder les bases de données Oracle à l'aide des commandes UNIX
+= Sauvegardez les bases de données Oracle à l'aide des commandes UNIX dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

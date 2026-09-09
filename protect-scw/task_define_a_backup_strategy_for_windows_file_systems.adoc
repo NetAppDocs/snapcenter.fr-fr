@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup strategy 
 summary: 'En définissant une stratégie de sauvegarde avant de créer vos sauvegardes, vous obtenez les sauvegardes dont vous avez besoin pour restaurer ou cloner vos systèmes de fichiers. Votre contrat de niveau de service (SLA), votre objectif de délai de restauration (RTO) et votre objectif de point de restauration (RPO) déterminent largement votre stratégie de sauvegarde.' 
 ---
-= Définir une stratégie de sauvegarde pour les systèmes de fichiers Windows
+= Stratégie de sauvegarde pour les systèmes de fichiers Windows dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ Un SLA définit le niveau de service attendu et traite de nombreux problèmes li
 
 
 
+[[backup-schedules-for-windows-file-systems]]
 == Planifications de sauvegarde pour les systèmes de fichiers Windows
 
 La fréquence de sauvegarde est spécifiée dans les stratégies ; un planning de sauvegarde est spécifié dans la configuration du groupe de ressources. Le facteur le plus important dans la détermination d'une fréquence ou d'un planning de sauvegarde est le taux de changement pour la ressource et l'importance des données. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. Parmi les autres facteurs figurent l'importance de la ressource pour votre organisation, votre contrat de niveau de service (SLA) et votre objectif de point de récupération (RPO).
@@ -39,12 +40,14 @@ Les planifications de sauvegarde (exactement quand les sauvegardes doivent être
 
 
 
+[[number-of-backups-needed-for-windows-file-systems]]
 == Nombre de sauvegardes nécessaires pour les systèmes de fichiers Windows
 
 Les facteurs déterminant le nombre de sauvegardes nécessaires incluent la taille du système de fichiers Windows, le nombre de volumes utilisés, le taux de changement du système de fichiers et votre contrat de niveau de service.
 
 
 
+[[backup-naming-convention-for-windows-file-systems]]
 == convention de dénomination des sauvegardes pour les systèmes de fichiers Windows
 
 Les sauvegardes du système de fichiers Windows utilisent la nomenclature établie par défaut des snapshots. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots pour vous aider à identifier la date de création des copies.
@@ -68,6 +71,7 @@ Lors de la création d'une sauvegarde, vous pouvez également ajouter une balise
 
 
 
+[[backup-retention-options]]
 == Options de conservation des sauvegardes
 
 Vous pouvez choisir le nombre de jours pendant lesquels vous souhaitez conserver les copies de sauvegarde ou spécifier le nombre de copies de sauvegarde à conserver, dans un maximum de 255 copies ONTAP. Par exemple, votre entreprise peut avoir besoin de conserver 10 jours de copies de sauvegarde ou 130 copies de sauvegarde.

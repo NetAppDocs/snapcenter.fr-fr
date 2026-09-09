@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, workflow 
 summary: 'Le workflow de restauration inclut la planification, l"exécution des opérations de restauration et le contrôle des opérations.' 
 ---
-= Restaurer le flux de travail
+= Workflow de restauration de base de données Oracle dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

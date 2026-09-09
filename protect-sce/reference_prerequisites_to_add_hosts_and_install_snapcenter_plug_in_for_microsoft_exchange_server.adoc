@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 'Avant d"ajouter un hôte et d"installer les modules d"extension, vous devez remplir toutes les conditions requises.' 
 ---
-= Conditions préalables à l'ajout d'hôtes et à l'installation du plug-in SnapCenter pour Microsoft Exchange Server
+= Prérequis pour installer le plug-in SnapCenter pour Microsoft Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -44,6 +44,7 @@ Pour identifier la plage de ports, exécutez les commandes suivantes :
 ====
 
 
+[[host-requirements-to-install-snapcenter-plug-ins-package-for-windows]]
 == Configuration requise pour l'hôte pour installer le module de plug-ins SnapCenter pour Windows
 
 Avant d'installer le package de plug-ins SnapCenter pour Windows, vous devez connaître les exigences en matière d'espace système hôte de base et de dimensionnement.
@@ -93,6 +94,7 @@ Pour obtenir des informations de dépannage spécifiques à .NET, reportez-vous 
 |===
 
 
+[[exchange-server-privileges-required]]
 == Privilèges Exchange Server requis
 
 Pour permettre à SnapCenter d'ajouter un serveur Exchange ou un DAG et d'installer le plug-in SnapCenter pour Microsoft Exchange Server sur un hôte ou un DAG, vous devez configurer SnapCenter avec les informations d'identification d'un utilisateur disposant d'un ensemble minimal de privilèges et d'autorisations.

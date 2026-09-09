@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, resource group, back up, database 
 summary: 'Vous pouvez sauvegarder le groupe de ressources contenant uniquement des volumes d"application ou une combinaison de volumes d"application et de bases de données.' 
 ---
-= Sauvegarder le groupe de ressources des volumes d'application
+= Sauvegardez un groupe de ressources de volumes d'application dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

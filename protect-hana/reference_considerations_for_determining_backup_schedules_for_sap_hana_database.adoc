@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 'Le facteur le plus important dans la détermination d"un planning de sauvegarde est le taux de modification de la ressource. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. D"autres facteurs entrent en ligne de compte l"importance de la ressource pour votre entreprise, votre accord de niveau de service \(SLA\) et votre objectif de point de récupération \(RPO\).' 
 ---
-= Considérations relatives à la détermination des planifications de sauvegarde pour les bases de données SAP HANA
+= Facteurs de planification de sauvegarde pour les bases de données SAP HANA dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

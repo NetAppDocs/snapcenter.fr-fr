@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups 
 summary: Un groupe de ressources est le conteneur auquel vous pouvez ajouter plusieurs systèmes de fichiers que vous souhaitez protéger. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de tâche de protection des données que vous souhaitez exécuter, puis spécifier la planification de sauvegarde. 
 ---
-= Créez des groupes de ressources pour les systèmes de fichiers Windows
+= Créer des groupes de ressources SnapCenter pour les systèmes de fichiers Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: topology, unix file systems, 
 summary: 'Lorsque vous préparez la sauvegarde, la restauration ou le clonage d"une ressource, il peut être utile d"afficher une représentation graphique de toutes les sauvegardes, systèmes de fichiers restaurés et clones sur le stockage primaire et secondaire.' 
 ---
-= Afficher les systèmes de fichiers Unix protégés dans la page topologie
+= Afficher les systèmes de fichiers UNIX protégés dans la page Topologie de SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

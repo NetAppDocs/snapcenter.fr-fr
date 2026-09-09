@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Si une base de données ne fait pas partie d"un groupe de ressources, vous pouvez sauvegarder la base de données ou le groupe de disponibilité de base de données à partir de la page Ressources.' 
 ---
-= Sauvegarde des bases de données Exchange
+= Sauvegardez les bases de données Exchange avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

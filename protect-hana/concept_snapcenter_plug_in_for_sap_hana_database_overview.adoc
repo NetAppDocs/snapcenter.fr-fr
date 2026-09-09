@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: Le plug-in SnapCenter pour base de données SAP HANA est un composant côté hôte du logiciel NetApp SnapCenter qui permet de gérer la protection des données des bases de données SAP HANA avec cohérence applicative. Le plug-in pour base de données SAP HANA automatise la sauvegarde, la restauration et le clonage des bases de données SAP HANA dans votre environnement SnapCenter. 
 ---
-= Présentation du plug-in SnapCenter pour les bases de données SAP HANA
+= Découvrez le plug-in SnapCenter pour la base de données SAP HANA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

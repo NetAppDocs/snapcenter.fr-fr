@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 'Configurez le certificat d"autorité de certification avec les services de plug-in d"hôte Windows' 
 ---
-= Configurez le certificat d'autorité de certification avec les services de plug-in d'hôte Windows
+= Configurer un certificat d'autorité de certification avec les services de plug-in hôte Windows dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

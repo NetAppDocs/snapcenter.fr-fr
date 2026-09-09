@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install workflow, NetApp supported plug-in 
 summary: Vous devez installer et configurer les plug-ins pris en charge par SnapCenter NetApp si vous souhaitez protéger les ressources des plug-ins pris en charge par NetApp. 
 ---
-= Workflow d'installation des plug-ins pris en charge par SnapCenter NetApp
+= Processus d'installation pour les plug-ins pris en charge par SnapCenter NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

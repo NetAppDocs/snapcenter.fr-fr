@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, NetApp supported plug-ins 
 summary: 'Vous pouvez sauvegarder un groupe de ressources à la demande à partir de la page Ressources. Si une stratégie est associée à un groupe de ressources et qu"une planification est configurée, les sauvegardes sont automatiquement effectuées en fonction de la planification.' 
 ---
-= Sauvegarder les groupes de ressources des plug-ins pris en charge par NetApp
+= Sauvegardez les groupes de ressources des plug-ins NetApp pris en charge dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

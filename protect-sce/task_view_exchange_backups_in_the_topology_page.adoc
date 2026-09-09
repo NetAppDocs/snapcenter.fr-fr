@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Lorsque vous préparez à sauvegarder une ressource, il est parfois utile d"afficher une représentation graphique de toutes les sauvegardes des stockages primaire et secondaire.' 
 ---
-= Afficher les sauvegardes Exchange sur la page topologie
+= Afficher les sauvegardes Exchange dans la page Topologie de SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

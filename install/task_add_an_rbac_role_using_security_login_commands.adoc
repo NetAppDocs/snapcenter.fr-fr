@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: RBAC roles, add, NetApp ONTAP RBAC role, storage system 
 summary: Vous pouvez utiliser les commandes de connexion de sécurité pour ajouter un rôle NetApp ONTAP RBAC lorsque vos systèmes de stockage exécutent clustered NetApp ONTAP. 
 ---
-= Ajoutez un rôle NetApp ONTAP RBAC à l'aide de commandes de connexion de sécurité
+= Ajoutez un rôle RBAC ONTAP pour SnapCenter à l'aide des commandes de connexion de sécurité
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

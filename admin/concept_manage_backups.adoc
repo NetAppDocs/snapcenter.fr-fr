@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage backups 
 summary: Vous pouvez renommer et supprimer des sauvegardes. Vous pouvez également supprimer plusieurs sauvegardes simultanément. 
 ---
-= Gérer les sauvegardes
+= Gérez les sauvegardes dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Vous pouvez renommer et supprimer des sauvegardes. Vous pouvez également suppri
 
 
 
+[[rename-backups]]
 == Renommer les sauvegardes
 
 Vous pouvez renommer les sauvegardes si vous voulez fournir un meilleur nom pour améliorer la capacité de recherche.
@@ -40,6 +41,7 @@ Si vous avez catalogué les sauvegardes des bases de données Oracle à l'aide d
 
 
 
+[[delete-backups]]
 == Supprimer les sauvegardes
 
 Vous pouvez supprimer des sauvegardes si vous n'avez plus besoin de sauvegarder pour d'autres opérations de protection des données.
@@ -79,6 +81,7 @@ NOTE: Si certaines sauvegardes de base de données obsolètes se trouvent dans S
 
 
 
+[[remove-protection]]
 == Déposer la protection
 
 Supprimer la protection supprime toutes les sauvegardes et détache toutes les règles. Avant de supprimer la protection, assurez-vous que les sauvegardes ne sont pas montées et qu'aucun clone n'est associé à la sauvegarde.

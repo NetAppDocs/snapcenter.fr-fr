@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, back up, databases, Azure NetApp Files 
 summary: Sauvegardez la ressource à partir de la page Ressources. 
 ---
-= Sauvegarde des bases de données Oracle exécutées sur Azure NetApp Files
+= Sauvegardez les bases de données Oracle sur Azure NetApp Files avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

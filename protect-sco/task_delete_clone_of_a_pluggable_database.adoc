@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, PDB, clone PDB 
 summary: 'Vous pouvez supprimer le clone d"une base de données enfichable \(PDB\) si vous n"en avez plus besoin.' 
 ---
-= Supprimer le clone d'une base de données enfichable
+= Supprimer un clone d'une base de données pluggable dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

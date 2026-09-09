@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage hosts 
 summary: 'Vous pouvez ajouter des hôtes et installer des packages plug-in SnapCenter, ajouter un serveur de vérification, supprimer des hôtes, migrer des tâches de sauvegarde et mettre à jour l"hôte pour mettre à niveau des modules plug-in ou ajouter de nouveaux modules plug-in. Selon le plug-in que vous utilisez, vous pouvez également provisionner des disques, gérer des partages SMB, gérer les groupes initiateurs \(igroups\), gérer des sessions iSCSI et migrer des données.' 
 ---
-= Gérer les hôtes
+= Gérez les hôtes dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -248,6 +248,7 @@ Non
 |===
 
 
+[[refresh-virtual-machine-information]]
 == Actualiser les informations de la machine virtuelle
 
 Vous devez actualiser les informations de votre machine virtuelle lorsque les informations d'identification de VMware vCenter changent ou que l'hôte de la base de données ou du système de fichiers redémarre. La mise à jour des informations de votre machine virtuelle dans SnapCenter établit la communication avec VMware vSphere vCenter et obtient les informations d'identification vCenter.
@@ -265,6 +266,7 @@ NOTE: Les disques RDM sont gérés par le plug-in SnapCenter pour Microsoft Wind
 
 
 
+[[modify-plug-in-hosts]]
 == Modifier les hôtes du plug-in
 
 Après l'installation d'un plug-in, vous pouvez modifier les détails sur les hôtes du plug-in, le cas échéant. Vous pouvez modifier les informations d'identification, le chemin d'installation, les plug-ins, les détails du répertoire des journaux du plug-in SnapCenter pour Microsoft SQL Server, le compte de service géré de groupe (GMSA) et le port du plug-in.
@@ -311,6 +313,7 @@ L'hôte est validé et ajouté au serveur SnapCenter.
 
 
 
+[[start-or-restart-plug-in-services]]
 == Démarrez ou redémarrez les services du plug-in
 
 Le démarrage des services du plug-in SnapCenter vous permet de démarrer les services s'ils ne sont pas en cours d'exécution ou de les redémarrer s'ils sont en cours d'exécution. Il se peut que vous souhaitiez redémarrer les services une fois la maintenance effectuée.
@@ -330,6 +333,7 @@ Vous pouvez démarrer ou redémarrer le service de plusieurs hôtes simultanéme
 
 
 
+[[suspend-schedules-for-host-maintenance]]
 == Suspendre les planifications pour la maintenance de l'hôte
 
 Lorsque vous souhaitez empêcher l'hôte d'exécuter des tâches SnapCenter planifiées, vous pouvez placer votre hôte en mode maintenance. Avant de mettre à niveau les plug-ins ou si vous effectuez des tâches de maintenance sur les hôtes,

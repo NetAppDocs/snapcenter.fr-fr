@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, storage system, 
 summary: 'Effectuez une mise à jour technologique du système de stockage en déplaçant les données de l"ancien stockage vers le nouveau stockage, en montant le nouveau stockage sur les hôtes respectifs, puis en faisant passer les bases de données.' 
 ---
-= Mise à jour technologique du système de stockage
+= Effectuez une mise à niveau technologique d'un système de stockage dans SnapCenter
 :allow-uri-read: 
 
 
@@ -33,6 +33,7 @@ La mise à jour technologique du stockage est prise en charge pour remplacer le 
 
 
 
+[[update-the-backups-of-the-primary-storage]]
 == Mettre à jour les sauvegardes du stockage primaire
 
 Une fois le stockage actualisé en mode technologique, vous devez exécuter l'API ou le cmdlet de mise à jour technologique pour mettre à jour les anciennes sauvegardes dans SnapCenter avec les nouveaux détails du stockage.
@@ -104,6 +105,7 @@ Cette opération permet d'effectuer le contrôle de l'existence des snapshots su
 
 
 
+[[update-the-backups-of-the-secondary-storage]]
 == Mettre à jour les sauvegardes du stockage secondaire
 
 Une fois le stockage actualisé en mode technologique, vous devez exécuter l'API ou le cmdlet de mise à jour technologique pour mettre à jour les anciennes sauvegardes dans SnapCenter avec les nouveaux détails du stockage.

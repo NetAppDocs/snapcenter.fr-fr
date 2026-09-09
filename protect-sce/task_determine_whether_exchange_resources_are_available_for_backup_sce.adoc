@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 'Les ressources sont les bases de données, les groupes de disponibilité de base de données Exchange gérés par les plug-ins que vous avez installés. Vous pouvez ajouter ces ressources aux groupes de ressources de sorte que vous puissiez effectuer des tâches de protection des données, mais vous devez d"abord identifier les ressources disponibles. La détermination des ressources disponibles permet également de vérifier que l"installation du plug-in s"est déroulée correctement.' 
 ---
-= Déterminez si des ressources Exchange sont disponibles pour la sauvegarde
+= Déterminez si les ressources Exchange sont disponibles pour la sauvegarde dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

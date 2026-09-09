@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Resources page 
 summary: Pour découvrir les ressources et exécuter les opérations de protection des données, consultez la page Ressources. Les opérations que vous pouvez effectuer diffèrent en fonction du plug-in que vous utilisez pour gérer vos ressources. 
 ---
-= Opérations prises en charge à partir de la page Ressources
+= Opérations prises en charge depuis la page SnapCenter Ressources
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

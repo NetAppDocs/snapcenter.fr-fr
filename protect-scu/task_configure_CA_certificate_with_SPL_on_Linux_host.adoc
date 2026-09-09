@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, SPL, Plug-in loader service, CA certificate, certificate 
 summary: 'Configurer le certificat CA avec le service SnapCenter Plug-in Loader sur l"hôte Linux' 
 ---
-= Configurez le certificat CA avec le service SnapCenter Plug-in Loader (SPL) sur un hôte Linux
+= Configurez un certificat d'autorité de certification avec le service SnapCenter Plug-in Loader sur un hôte Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ IMPORTANT: SPL utilise le fichier « keystore.jks », qui se trouve dans '/var/o
 
 
 
+[[manage-password-for-spl-keystore-and-alias-of-the-ca-signed-key-pair-in-use]]
 == Gérer le mot de passe pour le magasin de clés SPL et l'alias de la paire de clés signée CA utilisée
 
 *Étapes*
@@ -43,6 +44,7 @@ NOTE: Le mot de passe du magasin de clés SPL et de tous les mots de passe d'ali
 
 
 
+[[configure-root-or-intermediate-certificates-to-spl-trust-store]]
 == Configurez les certificats racine ou intermédiaire sur le magasin de confiance SPL
 
 Vous devez configurer les certificats racine ou intermédiaire sans la clé privée dans le stockage de confiance SPL.
@@ -65,6 +67,7 @@ NOTE: Vous devez ajouter le certificat de l'autorité de certification racine, p
 
 
 
+[[configure-ca-signed-key-pair-to-spl-trust-store]]
 == Configurez la paire de clés signée CA sur le magasin de confiance SPL
 
 Vous devez configurer la paire de clés signée CA dans le magasin de confiance SPL.
@@ -101,6 +104,7 @@ Mettez à jour cette valeur par rapport à la clé SPL_CERTIFICATE_ALIAS.
 
 
 
+[[configure-certificate-revocation-list-crl-for-spl]]
 == Configurer la liste de révocation de certificats (CRL) pour SPL
 
 Vous devez configurer la CRL pour SPL

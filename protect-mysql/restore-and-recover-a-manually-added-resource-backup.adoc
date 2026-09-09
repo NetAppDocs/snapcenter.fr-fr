@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: 'Vous pouvez utiliser SnapCenter pour restaurer et récupérer des données à partir d"une ou plusieurs sauvegardes.' 
 ---
-= Restaurez et restaurez une sauvegarde de ressources ajoutée manuellement
+= Restaurez et récupérez une sauvegarde de ressource MySQL ajoutée manuellement
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

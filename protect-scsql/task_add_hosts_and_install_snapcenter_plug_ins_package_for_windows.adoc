@@ -34,7 +34,7 @@ Vous ne pouvez pas ajouter un serveur SnapCenter en tant qu'hôte de plug-in à 
 
 Vous pouvez ajouter un hôte et installer les modules d'extension pour un hôte individuel ou pour un cluster. Si vous installez les plug-ins sur un cluster ou Windows Server Failover Clustering (WSFC), les plug-ins sont installés sur tous les nœuds du cluster.
 
-Pour plus d'informations sur la gestion des hôtes, reportez-vous à la section link:../admin/concept_manage_hosts.html["Gérer les hôtes"^].
+Pour plus d'informations sur la gestion des hôtes, voir link:../admin/concept_manage_hosts.html["Gérez les hôtes dans SnapCenter"^].
 
 .Étapes
 . Dans le volet de navigation de gauche, sélectionnez *hosts*.

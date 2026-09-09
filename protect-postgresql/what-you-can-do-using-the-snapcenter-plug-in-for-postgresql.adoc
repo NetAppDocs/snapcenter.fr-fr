@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: Lorsque vous installez le plug-in pour PostgreSQL dans votre environnement, vous pouvez utiliser SnapCenter pour sauvegarder, restaurer et cloner PostgreSQL et leurs ressources. Vous pouvez également effectuer des tâches prenant en charge ces opérations. 
 ---
-= Ce que vous pouvez faire à l'aide du plug-in SnapCenter pour PostgreSQL
+= Fonctionnalités du plug-in SnapCenter pour PostgreSQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

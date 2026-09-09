@@ -15,12 +15,14 @@ Les ressources disponibles via l'API REST de SnapCenter sont organisées par cat
 
 
 
+[[auth]]
 == Auth
 
 Vous pouvez utiliser cette API pour vous connecter au serveur SnapCenter. Cette API renvoie un jeton d'autorisation d'utilisateur utilisé pour authentifier les requêtes suivantes.
 
 
 
+[[domains]]
 == Domaines
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -33,6 +35,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[jobs]]
 == Emplois
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -44,6 +47,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[settings]]
 == Paramètres
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -59,6 +63,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[hosts]]
 == Hôtes
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -89,6 +94,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[resources]]
 == Ressources
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -143,6 +149,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[backups]]
 == Sauvegardes
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -160,6 +167,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[clones]]
 == Clones
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -176,6 +184,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[clone-split]]
 == Répartition des clones
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -187,6 +196,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[resource-groups]]
 == Groupes de ressources
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -207,6 +217,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[policies]]
 == Stratégies
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -223,6 +234,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[storage]]
 == Stockage
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -239,6 +251,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[share]]
 == Partagez
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -251,6 +264,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[plugins]]
 == Plug-ins
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -293,6 +307,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[reports]]
 == Rapports
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -304,6 +319,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[alerts]]
 == Alertes
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -315,6 +331,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[rbac]]
 == RBAC
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -333,6 +350,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[configuration]]
 == Configuration
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -343,6 +361,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[certificatesettings]]
 == CertificateSettings
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -353,6 +372,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[repository]]
 == Référentiel
 
 Vous pouvez utiliser des API pour effectuer différentes opérations.
@@ -366,6 +386,7 @@ Vous pouvez utiliser des API pour effectuer différentes opérations.
 
 
 
+[[version]]
 == Version
 
 Vous pouvez utiliser cette API pour afficher la version de SnapCenter.

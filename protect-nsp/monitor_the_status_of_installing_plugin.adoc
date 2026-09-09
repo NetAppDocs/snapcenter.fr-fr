@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, NetApp supported plug-in 
 summary: 'Vous pouvez contrôler la progression de l"installation du module d"extension SnapCenter à l"aide de la page travaux. Vous pouvez vérifier la progression de l"installation pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
-= Surveillez l'état d'installation des plug-ins pris en charge par NetApp
+= Surveillez l’état d’installation des plug-ins pris en charge par NetApp dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -15,6 +15,7 @@ Vous devez connaître les systèmes de stockage, les applications et les bases d
 
 
 
+[[supported-storage-systems]]
 == Systèmes de stockage pris en charge
 
 * NetApp ONTAP 9.12.1 et versions ultérieures
@@ -34,6 +35,7 @@ Vous devez utiliser ONTAP 9.17.1 si vous utilisez SnapCenter Server 6.2 et les p
 
 
 
+[[supported-applications-and-databases]]
 == Applications et bases de données prises en charge
 
 SnapCenter prend en charge la protection de différentes applications et bases de données.

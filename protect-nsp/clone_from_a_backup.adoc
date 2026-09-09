@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone 
 summary: 'Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d"une sauvegarde principale ou secondaire. Les fonctionnalités des opérations de clonage dépendent du plug-in que vous utilisez.' 
 ---
-= Cloner à partir d'une sauvegarde
+= Cloner à partir d'une sauvegarde dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

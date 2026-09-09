@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policies, policies, unix file systems, file systems 
 summary: Créez une stratégie de sauvegarde pour les systèmes de fichiers Unix que vous souhaitez sauvegarder. 
 ---
-= Créez des règles de sauvegarde pour les systèmes de fichiers Unix
+= Créez des politiques de sauvegarde pour les systèmes de fichiers UNIX dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

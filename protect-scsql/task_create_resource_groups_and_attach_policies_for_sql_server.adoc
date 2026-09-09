@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: run as 
 summary: Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger ensemble. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. Un groupe de ressources est requis pour toute tâche de protection des données. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de travail de protection des données que vous souhaitez exécuter. 
 ---
-= Créez des groupes de ressources et associez des stratégies pour SQL Server
+= Créez des groupes de ressources et associez des stratégies pour SQL Server dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Exchange Server 
 summary: 'Vous pouvez surveiller la progression des différentes opérations de sauvegarde à l"aide de la page SnapCenterJobs. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
-= Surveiller les opérations de sauvegarde
+= Surveillez les opérations de sauvegarde SnapCenter pour le Serveur Exchange
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,6 +49,7 @@ Le bouton *Afficher les journaux* affiche les journaux détaillés de l'opérati
 
 
 
+[[monitor-operations-in-the-activity-pane]]
 == Surveiller les opérations dans le volet activité
 
 Le volet activité affiche les cinq opérations les plus récentes effectuées. Le volet activité s'affiche également lorsque l'opération a été lancée et que l'état de l'opération a été défini.

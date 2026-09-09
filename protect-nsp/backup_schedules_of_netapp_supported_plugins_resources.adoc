@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-in 
 summary: 'Le facteur le plus important dans la détermination d"un planning de sauvegarde est le taux de modification de la ressource. Le nombre de journaux d"archivage que SnapCenter doit utiliser pour la restauration, donc le plus souvent pour les sauvegardes, accélère les opérations de restauration.' 
 ---
-= Plannings de sauvegarde des ressources de plug-in NetApp prises en charge
+= Planifications de sauvegarde SnapCenter pour les ressources des plug-ins pris en charge par NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

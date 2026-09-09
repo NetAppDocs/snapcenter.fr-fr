@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, prerequisites, plug-in, plug-in packages 
 summary: 'Vous pouvez supprimer un hôte si vous ne souhaitez plus utiliser SnapCenter pour gérer ses tâches de protection des données. Par exemple, vous pouvez supprimer un hôte s"il ne contient plus de données à protéger. Avant de supprimer un hôte du serveur SnapCenter, vous devez effectuer les tâches préalables requises.' 
 ---
-= Conditions préalables à la suppression d'un hôte
+= Prérequis pour supprimer un hôte de SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,6 +24,7 @@ Avant de supprimer un hôte du serveur SnapCenter, vous devez remplir les condit
 
 
 
+[[prerequisites-to-remove-a-host-using-role-based-access-control]]
 == Conditions préalables pour supprimer un hôte à l'aide du contrôle d'accès basé sur les rôles
 
 * Vous devez avoir ouvert une session à l'aide d'un rôle RBAC qui dispose d'autorisations en lecture, suppression de l'hôte, installation, désinstallation du plug-in et suppression d'objets.
@@ -37,6 +38,7 @@ Les objets peuvent être clonés, sauvegarde, groupe de ressources, système de 
 
 
 
+[[prerequisites-to-remove-a-host-with-clones-created-from-clone-lifecycle-operation]]
 == Conditions préalables pour supprimer un hôte avec clones créés à partir de l'opération de cycle de vie du clonage
 
 * Vous devez avoir créé des tâches de clonage avec la gestion du cycle de vie des clones pour les bases de données SQL.

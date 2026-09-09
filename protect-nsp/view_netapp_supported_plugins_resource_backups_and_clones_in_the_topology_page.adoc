@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: view NetApp supported plug-in resource 
 summary: 'Lorsque vous préparez une sauvegarde ou le clonage d"une ressource, vous trouverez peut-être utile d"afficher une représentation graphique de toutes les sauvegardes et clones sur le stockage primaire et secondaire. Sur la page topologie, vous pouvez voir toutes les sauvegardes et clones disponibles pour la ressource ou le groupe de ressources sélectionné. Vous pouvez afficher les détails de ces sauvegardes et clones, puis les sélectionner pour effectuer des opérations de protection des données.' 
 ---
-= Consultez la page topologie des plug-ins pris en charge par NetApp, ainsi que les sauvegardes et clones liés aux ressources
+= Afficher les sauvegardes et les clones des ressources des plug-ins pris en charge par NetApp dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -49,6 +49,7 @@ Le bouton *Afficher les journaux* affiche les journaux détaillés de l'opérati
 
 
 
+[[monitor-data-protection-operations-on-sql-resources-in-the-activity-pane]]
 == Surveiller les opérations de protection des données sur les ressources SQL dans le volet activité
 
 Le volet activité affiche les cinq opérations les plus récentes effectuées. Le volet activité s'affiche également lorsque l'opération a été lancée et que l'état de l'opération a été défini.

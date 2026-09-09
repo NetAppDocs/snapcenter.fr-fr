@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: Comment SnapCenter découvre les bases de données Oracle. 
 ---
-= Nomenclature établie des sauvegardes
+= SnapCenter conventions d'appellation de sauvegarde
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, NetApp supported plug-ins 
 summary: 'Le workflow de clonage inclut la réalisation de l"opération de clonage et le contrôle de l"opération.' 
 ---
-= Cloner les sauvegardes de ressources de plug-ins pris en charge par NetApp
+= SnapCenter workflow de clonage pour les sauvegardes de ressources des plug-ins pris en charge par NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

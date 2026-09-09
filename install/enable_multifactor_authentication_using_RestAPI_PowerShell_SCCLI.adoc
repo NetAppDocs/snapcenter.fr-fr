@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mfa, authentication, multifactor authentication 
 summary: Vous pouvez utiliser des interfaces REST API, PowerShell et SCCLI pour gérer votre MFA. 
 ---
-= Gérez l'authentification multifacteur (MFA) avec l'API REST, PowerShell et SCCLI
+= Gérez la MFA dans SnapCenter à l'aide de l'API REST, de PowerShell et de SCCLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ La connexion MFA est prise en charge depuis le navigateur, l'API REST, PowerShel
 
 
 
+[[setup-ad-fs-as-oauthoidc]]
 == Configurer AD FS comme OAuth/OIDC
 
 *Configurer AD FS à l'aide de l'assistant GUI de Windows*
@@ -95,6 +96,7 @@ Configurez OpenID Connect pour fournir un nom d'utilisateur comme sinistres.
 
 
 
+[[create-application-group-using-powershell-commands]]
 == Créez un groupe d'applications à l'aide des commandes PowerShell
 
 Vous pouvez créer le groupe d'applications, l'API Web et ajouter la portée et les revendications à l'aide des commandes PowerShell. Ces commandes sont disponibles au format de script automatisé. Pour plus d'informations, voir <link to KB article>.
@@ -174,6 +176,7 @@ Vous pouvez créer le groupe d'applications, l'API Web et ajouter la portée et 
 
 
 
+[[update-access-token-expiry-time]]
 == Mettre à jour l'heure d'expiration du jeton d'accès
 
 Vous pouvez mettre à jour l'heure d'expiration du jeton d'accès à l'aide de la commande PowerShell.
@@ -193,6 +196,7 @@ Pour mettre à jour l'heure d'expiration du jeton d'accès pour un groupe d'appl
 
 
 
+[[get-the-bearer-token-from-ad-fs]]
 == Obtenez le jeton porteur auprès d'AD FS
 
 Vous devez remplir les paramètres mentionnés ci-dessous dans n'importe quel client REST (tel que Postman) et vous invite à saisir les informations d'identification de l'utilisateur. En outre, vous devez entrer l'authentification second facteur (quelque chose que vous avez et quelque chose que vous êtes) pour obtenir le jeton porteur.

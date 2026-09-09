@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle, preparation for protection, prerequisites 
 summary: 'Avant d"effectuer des opérations de protection des données telles que la sauvegarde, le clonage ou la restauration, vous devez définir votre stratégie et configurer l"environnement. Vous pouvez également configurer le serveur SnapCenter pour qu"il utilise la technologie SnapMirror et SnapVault.' 
 ---
-= Préparez-vous à la protection des bases de données Oracle
+= Prérequis pour la protection des bases de données Oracle avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

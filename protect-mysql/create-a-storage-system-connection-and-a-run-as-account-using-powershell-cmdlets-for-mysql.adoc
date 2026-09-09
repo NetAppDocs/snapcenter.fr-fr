@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 'Vous devez créer une connexion de machine virtuelle de stockage (SVM) et un identifiant avant d"utiliser les applets de commande PowerShell pour sauvegarder, restaurer ou cloner les bases de données MySQL.' 
 ---
-= Créez une connexion au système de stockage et des informations d'identification à l'aide des applets de commande PowerShell pour MySQL
+= Créez une connexion à un système de stockage et un identifiant à l'aide des cmdlets SnapCenter PowerShell pour MySQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

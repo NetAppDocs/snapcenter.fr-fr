@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
 summary: 'La définition d"une stratégie de sauvegarde vous permet de restaurer ou de cloner vos bases de données avec succès.' 
 ---
-= Définir une stratégie de sauvegarde pour les bases de données Oracle
+= Définissez une stratégie de sauvegarde pour les bases de données Oracle dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,6 +22,7 @@ Votre contrat de niveau de service (SLA), votre objectif de délai de restaurati
 
 
 
+[[supported-oracle-database-configurations-for-backups]]
 == Configurations de base de données Oracle prises en charge pour les sauvegardes
 
 SnapCenter prend en charge la sauvegarde de différentes configurations de bases de données Oracle.
@@ -64,12 +65,14 @@ Pour obtenir les informations les plus récentes sur les versions d'Oracle prise
 
 
 
+[[types-of-backup-supported-for-oracle-databases]]
 == Types de sauvegarde pris en charge pour les bases de données Oracle
 
 Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer. SnapCenter prend en charge les types de sauvegarde en ligne et hors ligne pour les bases de données Oracle.
 
 
 
+[[online-backup]]
 === Sauvegarde en ligne
 
 Une sauvegarde créée lorsque la base de données est en ligne est appelée sauvegarde en ligne. Également appelée sauvegarde à chaud, une sauvegarde en ligne vous permet de créer une sauvegarde de la base de données sans l'arrêter.
@@ -83,6 +86,7 @@ Dans le cadre de la sauvegarde en ligne, vous pouvez créer une sauvegarde des f
 
 
 
+[[offline-backup]]
 === Sauvegarde hors ligne
 
 Une sauvegarde créée lorsque la base de données est à l'état monté ou arrêté est appelée sauvegarde hors ligne. Une sauvegarde hors ligne est également appelée sauvegarde à froid. Vous pouvez inclure uniquement les fichiers de données et les fichiers de contrôle dans les sauvegardes hors ligne. Vous pouvez créer une sauvegarde de montage hors ligne ou d'arrêt hors ligne.
@@ -99,6 +103,7 @@ L'état de la base de données passe à l'état requis pour créer une sauvegard
 
 
 
+[[how-snapcenter-discovers-oracle-databases]]
 == Comment SnapCenter détecte les bases de données Oracle
 
 Les « ressources » sont des bases de données Oracle sur l'hôte gérées par SnapCenter. Vous pouvez ajouter ces bases de données à des groupes de ressources pour exécuter des opérations de protection des données après avoir découvert les bases de données disponibles. Il est important de noter que le processus suivi par SnapCenter permet de découvrir différents types et versions des bases de données Oracle.
@@ -169,6 +174,7 @@ NOTE: S'il y a des entrées de base de données Oracle 12__c__R2 et 18__c__ dans
 
 
 
+[[preferred-nodes-in-rac-setup]]
 == Nœuds préférés dans la configuration RAC
 
 Dans la configuration Oracle Real application clusters (RAC), vous pouvez spécifier les noeuds préférés sur lesquels l'opération de sauvegarde sera effectuée. Si vous ne spécifiez pas le nœud préféré, SnapCenter attribue automatiquement un nœud en tant que nœud préféré et la sauvegarde est créée sur ce nœud.
@@ -181,6 +187,7 @@ Dans une configuration Flex ASM, les nœuds Leaf ne seront pas répertoriés com
 
 
 
+[[required-database-state]]
 === État requis de la base de données
 
 Les instances de base de données RAC sur les nœuds préférés doivent être dans l'état requis pour que la sauvegarde puisse se terminer correctement :
@@ -192,6 +199,7 @@ Les instances de base de données RAC sur les nœuds préférés doivent être d
 
 
 
+[[how-to-catalog-backups-with-oracle-recovery-manager]]
 == Comment cataloguer les sauvegardes avec Oracle Recovery Manager
 
 Les sauvegardes des bases de données Oracle peuvent être cataloguées à l'aide d'Oracle Recovery Manager (RMAN) pour stocker les informations de sauvegarde dans le référentiel Oracle RMAN.
@@ -233,6 +241,7 @@ Les informations concernant les paramètres pouvant être utilisés avec la comm
 
 
 
+[[backup-schedules]]
 == Planifications de sauvegarde
 
 La fréquence de sauvegarde (type de planification) est spécifiée dans les stratégies ; un planning de sauvegarde est spécifié dans la configuration du groupe de ressources. Le facteur le plus important dans la détermination d'une fréquence ou d'un planning de sauvegarde est le taux de changement pour la ressource et l'importance des données. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. Parmi les autres facteurs figurent l'importance de la ressource pour votre organisation, votre contrat de niveau de service (SLA) et votre objectif de point de récupération (RPO).
@@ -255,6 +264,7 @@ Les planifications de sauvegarde (exactement quand les sauvegardes doivent être
 
 
 
+[[backup-naming-conventions]]
 == Nomenclature établie des sauvegardes
 
 Vous pouvez utiliser la nomenclature établie par défaut des snapshots ou une nomenclature établie personnalisée. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots pour vous aider à identifier la date de création des copies.
@@ -280,6 +290,7 @@ Vous pouvez également spécifier le format du nom de l'instantané tout en prot
 
 
 
+[[backup-retention-options]]
 == Options de conservation des sauvegardes
 
 Vous pouvez choisir le nombre de jours pendant lesquels vous souhaitez conserver les copies de sauvegarde ou spécifier le nombre de copies de sauvegarde à conserver, dans un maximum de 255 copies ONTAP. Par exemple, votre entreprise peut avoir besoin de conserver 10 jours de copies de sauvegarde ou 130 copies de sauvegarde.
@@ -295,6 +306,7 @@ NOTE: Pour la conservation à long terme des copies de sauvegarde, nous vous rec
 
 
 
+[[verify-backup-copy-using-the-primary-or-secondary-storage-volume]]
 == Vérifiez la copie de sauvegarde à l'aide du volume de stockage primaire ou secondaire
 
 Vous pouvez vérifier les copies de sauvegarde sur le volume de stockage primaire ou sur le volume de stockage secondaire SnapMirror ou SnapVault. La vérification à l'aide d'un volume de stockage secondaire réduit la charge sur le volume de stockage primaire.

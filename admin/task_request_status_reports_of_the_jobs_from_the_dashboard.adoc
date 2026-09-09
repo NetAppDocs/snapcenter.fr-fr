@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: dashboard, snapcenter 
 summary: Vous pouvez demander des rapports sur les tâches de sauvegarde, de restauration et de clonage à partir de la page Tableau de bord. Cette fonction est utile si vous souhaitez identifier le nombre total de tâches réussies ou ayant échoué dans votre environnement SnapCenter. 
 ---
-= Rapports d'état des requêtes des travaux à partir du tableau de bord
+= Demandez des rapports d'état des tâches depuis le tableau de bord SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: gMSA 
 summary: 'Windows Server 2016 ou version ultérieure vous permet de créer un compte de service géré de groupe \(GMSA\) qui fournit une gestion automatisée des mots de passe de compte de service à partir d"un compte de domaine géré.' 
 ---
-= Configurez GMSA sur Windows Server 2016 ou version ultérieure
+= Configurez un gMSA pour SnapCenter sur Windows Server 2016 ou version ultérieure
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

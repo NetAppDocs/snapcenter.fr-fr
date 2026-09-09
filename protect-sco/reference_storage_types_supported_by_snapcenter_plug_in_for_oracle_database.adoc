@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage types, iSCSI, NFS, RDM, VMDK, NFS, LVM, ASM, SAN filesystem 
 summary: 'SnapCenter prend en charge un large éventail de types de stockage sur les serveurs physiques et virtuels. Vous devez vérifier la prise en charge de votre type de stockage avant d"installer SnapCenter Plug-ins Package pour Linux ou SnapCenter Plug-ins Package pour AIX.' 
 ---
-= Types de stockage pris en charge par le plug-in pour Oracle Database
+= Types de stockage pris en charge par le plug-in SnapCenter pour base de données Oracle
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ SnapCenter ne prend pas en charge le provisionnement du stockage pour Linux et A
 
 
 
+[[storage-types-supported-on-linux]]
 == Types de stockage pris en charge sous Linux
 
 Le tableau suivant répertorie les types de stockage pris en charge par Linux.
@@ -76,6 +77,7 @@ NOTE: Les banques de données et les présentations de périphériques bruts ne 
 |===
 
 
+[[storage-types-supported-on-aix]]
 == Types de stockage pris en charge sous AIX
 
 Le tableau suivant répertorie les types de stockage pris en charge sous AIX.

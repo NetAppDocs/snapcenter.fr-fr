@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Vous pouvez créer une stratégie de sauvegarde pour les ressources Exchange ou pour les groupes de ressources avant d"utiliser SnapCenter pour sauvegarder les ressources Microsoft Exchange Server, ou vous pouvez créer une stratégie de sauvegarde au moment de créer un groupe de ressources ou de sauvegarder une seule ressource.' 
 ---
-= Créer des stratégies de sauvegarde pour les bases de données Exchange Server
+= Créez des stratégies de sauvegarde pour les bases de données Serveur Exchange dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

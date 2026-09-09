@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup copy verification 
 summary: 'Vous pouvez vérifier les copies de sauvegarde sur le volume de stockage primaire ou sur le volume de stockage secondaire SnapMirror ou SnapVault. La vérification à l"aide d"un volume de stockage secondaire réduit la charge sur le volume de stockage primaire.' 
 ---
-= Vérification de la copie de sauvegarde à l'aide du volume de stockage principal ou secondaire pour le plug-in pour SQL Server
+= Vérification de la copie de sauvegarde pour le plug-in SnapCenter pour SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

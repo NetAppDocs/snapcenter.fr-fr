@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Multiple databases 
 summary: 'Vous pouvez placer toutes les bases de données sur le même volume, car la stratégie de sauvegarde a une option permettant de définir le maximum de bases de données par sauvegarde \(la valeur par défaut est 100\).' 
 ---
-= Plusieurs bases de données sur un même volume
+= Plusieurs bases de données sur le même volume dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

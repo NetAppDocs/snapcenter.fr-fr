@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 'Le workflow de clonage inclut la réalisation de l"opération de clonage et le contrôle de l"opération.' 
 ---
-= Workflow de clonage
+= SnapCenter workflow de clonage de base de données SAP HANA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

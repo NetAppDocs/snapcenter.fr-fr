@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server 
 summary: 'Vous pouvez utiliser SnapCenter pour effectuer différents types d"opérations de restauration sur les ressources SQL Server.' 
 ---
-= Types d'opérations de restauration
+= Types d'opérations de restauration SQL Server dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,6 +28,7 @@ NOTE: SnapCenter ne prend pas en charge la SnapRestore basée sur les volumes.
 
 
 
+[[restore-up-to-the-minute]]
 == Restaurez vos données en quelques minutes
 
 Dans le cadre d'une opération de restauration en moins d'une minute (sélectionnée par défaut), les bases de données sont restaurées jusqu'au point de défaillance. Pour cela, SnapCenter effectue la séquence suivante :
@@ -48,12 +49,14 @@ Si vous n'avez pas besoin de conserver une capacité de restauration à la minut
 
 
 
+[[example-of-an-up-to-the-minute-restore-operation]]
 == Exemple d'une opération de restauration en moins d'une minute
 
 Supposons que vous exécutez la sauvegarde SQL Server tous les jours à midi et le mercredi à 4:00 vous devez effectuer une restauration à partir d'une sauvegarde. Pour une raison quelconque, la sauvegarde du mercredi midi a échoué à la vérification, donc vous décidez de restaurer à partir de la sauvegarde du mardi midi. Après cela, si la sauvegarde est restaurée, tous les journaux de transactions sont transférés et appliqués aux bases de données restaurées, en commençant par ceux qui n'ont pas été validées lors de la création de la sauvegarde de mardi et en passant par le dernier journal de transactions écrit le mercredi à 4:00 (si les journaux de transactions ont été sauvegardés).
 
 
 
+[[restore-to-a-previous-point-in-time]]
 == Restauration à un point précédent dans le temps
 
 Dans le cadre d'une opération de restauration instantanée, les bases de données ne sont restaurées qu'à une heure spécifique par le passé. Une opération de restauration à un point dans le temps se produit dans les situations de restauration suivantes :
@@ -75,6 +78,7 @@ Si vous appliquez des sauvegardes du journal de transactions, vous pouvez égale
 
 
 
+[[example-of-a-point-in-time-restore-operation]]
 == Exemple d'opération de restauration instantanée
 
 Supposons que vous effectuez des sauvegardes de base de données complètes une fois à minuit et qu'une sauvegarde du journal de transactions est effectuée toutes les heures. La base de données tombe en panne à 9:45, mais vous sauvegardez toujours les journaux de transaction de la base de données défaillante. Vous pouvez choisir l'un des scénarios de restauration instantanée suivants :

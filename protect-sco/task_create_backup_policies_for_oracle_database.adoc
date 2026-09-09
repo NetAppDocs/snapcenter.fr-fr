@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policies, policies 
 summary: 'Avant d"utiliser SnapCenter pour sauvegarder les ressources de la base de données Oracle, vous devez créer une stratégie de sauvegarde pour la ressource ou le groupe de ressources à sauvegarder. Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes. Vous pouvez également spécifier les paramètres de réplication, de script et de type de sauvegarde. La création d"une stratégie permet de gagner du temps lorsque vous souhaitez réutiliser la stratégie sur une autre ressource ou un autre groupe de ressources.' 
 ---
-= Créez des règles de sauvegarde pour les bases de données Oracle
+= Créez des politiques de sauvegarde pour les bases de données Oracle dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, back up 
 summary: 'Vous pouvez sauvegarder le volume d"application à partir de la page Ressources si le volume d"application ne fait partie d"aucun groupe de ressources.' 
 ---
-= Sauvegarder le volume d'application
+= Sauvegardez un volume d'application dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 'Avant d"installer le module de plug-ins SnapCenter pour Linux, vous devez connaître certains besoins en espace système hôte de base et en dimensionnement.' 
 ---
-= Configuration requise pour l'installation du module de plug-ins SnapCenter pour Linux
+= Configuration requise pour l'hôte avant l'installation du SnapCenter Plug-ins Package pour Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

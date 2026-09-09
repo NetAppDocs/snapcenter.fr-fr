@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Server, NetApp supported plug-in 
 summary: 'Vous pouvez contrôler la progression des différentes opérations de sauvegarde à l"aide de la page tâches SnapCenter. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
-= Surveillez les opérations de sauvegarde des ressources prises en charge par les plug-ins NetApp
+= Surveillez les opérations de sauvegarde pour les ressources de plug-in prises en charge par NetApp dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

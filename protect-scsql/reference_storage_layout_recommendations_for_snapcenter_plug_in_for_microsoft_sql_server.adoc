@@ -19,6 +19,7 @@ Dans ce cas, les LUN peuvent inclure des disques VMware RDM et des LUN iSCSI à 
 
 
 
+[[lun-and-vmdk-requirements]]
 == Exigences relatives aux LUN et aux VMDK
 
 Vous pouvez choisir d'utiliser des LUN ou des VMDK dédiés pour optimiser les performances et la gestion des bases de données suivantes :
@@ -36,6 +37,7 @@ Pour le répertoire du journal, vous devez créer une LUN ou un VMDK distinct de
 
 
 
+[[lun-and-vmdk-sample-layouts]]
 == Exemples de dispositions des LUN et VMDK
 
 Le graphique suivant explique comment configurer l'organisation du stockage pour les bases de données volumineuses sur les LUN :

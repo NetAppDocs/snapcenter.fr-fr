@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Active Directory 
 summary: Vous devez enregistrer Active Directory avec le serveur SnapCenter pour gérer les hôtes, les utilisateurs et les groupes de plusieurs domaines Active Directory non fiables. 
 ---
-= Enregistrer des domaines Active Directory non fiables
+= Enregistrez les domaines Active Directory non approuvés avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

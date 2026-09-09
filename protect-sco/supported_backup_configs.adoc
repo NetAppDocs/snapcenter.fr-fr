@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
 summary: SnapCenter prend en charge la sauvegarde de différentes configurations de bases de données Oracle. 
 ---
-= Configurations de base de données Oracle prises en charge pour les sauvegardes
+= Configurations de base de données Oracle prises en charge pour les sauvegardes dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

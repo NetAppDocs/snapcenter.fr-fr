@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 'La sauvegarde d"une base de données inclut l"établissement d"une connexion avec le serveur SnapCenter, l"ajout de ressources, l"ajout d"une stratégie, la création d"un groupe de ressources de sauvegarde et la sauvegarde.' 
 ---
-= Sauvegarde des bases de données DB2
+= Sauvegardez les bases de données IBM Db2 avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

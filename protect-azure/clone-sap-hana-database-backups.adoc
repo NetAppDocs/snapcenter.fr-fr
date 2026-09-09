@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database, clone, database, backups 
 summary: Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. 
 ---
-= Clonez la sauvegarde de la base de données SAP HANA
+= Cloner les sauvegardes de la base de données SAP HANA avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

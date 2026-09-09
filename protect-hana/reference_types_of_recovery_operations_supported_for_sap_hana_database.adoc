@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recovery operations 
 summary: 'SnapCenter permet d"effectuer différents types d"opérations de restauration pour les bases de données SAP HANA.' 
 ---
-= Types d'opérations de récupération pris en charge pour les bases de données SAP HANA
+= Types d'opérations de récupération pour les bases de données SAP HANA dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

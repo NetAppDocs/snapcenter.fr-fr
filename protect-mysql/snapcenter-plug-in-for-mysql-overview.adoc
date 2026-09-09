@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: Le plug-in SnapCenter pour MySQL est un composant du logiciel NetApp SnapCenter côté hôte qui permet une gestion de la protection des données des bases de données MySQL intégrant la cohérence applicative. Le plug-in pour la base de données MySQL automatise la sauvegarde, la restauration et le clonage des bases de données MySQL dans votre environnement SnapCenter. 
 ---
-= Présentation du plug-in SnapCenter pour MySQL
+= Découvrez le plug-in SnapCenter pour MySQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

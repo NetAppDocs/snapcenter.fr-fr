@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, NetApp supported plug-in 
 summary: 'Avant d"utiliser SnapCenter pour sauvegarder des ressources spécifiques au plug-in pris en charge par NetApp, vous devez créer une stratégie de sauvegarde pour le groupe de ressources ou de ressources que vous souhaitez sauvegarder.' 
 ---
-= Créez des règles pour les ressources des plug-ins pris en charge par NetApp
+= Créez des stratégies SnapCenter pour les ressources de plug-in prises en charge par NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

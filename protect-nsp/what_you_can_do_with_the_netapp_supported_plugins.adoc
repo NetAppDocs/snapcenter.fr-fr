@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: Vous pouvez utiliser les plug-ins pris en charge par NetApp pour vos opérations de protection des données. 
 ---
-= Avantages des plug-ins pris en charge par NetApp
+= Découvrez les plug-ins pris en charge par NetApp dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mount, unmount, backup, ASM, asm_diskstring 
 summary: 'Vous pouvez monter une ou plusieurs sauvegardes de données et de journaux uniquement si vous souhaitez accéder aux fichiers de la sauvegarde. Vous pouvez monter la sauvegarde sur le même hôte où la sauvegarde a été créée ou sur un hôte distant ayant le même type de configuration Oracle et d"hôte. Si vous avez monté les sauvegardes manuellement, vous devez les démonter manuellement une fois l"opération terminée. Vous ne pouvez monter la sauvegarde de base de données qu"une seule fois sur un hôte pour une base de données spécifique. Lors de l"exécution d"une opération, vous ne pouvez monter qu"une seule sauvegarde.' 
 ---
-= Monter et démonter les sauvegardes de base de données
+= Monter et démonter les sauvegardes de bases de données dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: Dans une configuration Flex ASM, vous ne pouvez pas effectuer une opérati
 
 
 
+[[mount-a-database-backup]]
 == Montez une sauvegarde de base de données
 
 Vous devez monter manuellement une sauvegarde de base de données si vous souhaitez accéder aux fichiers de la sauvegarde.
@@ -85,6 +86,7 @@ Les informations concernant les paramètres pouvant être utilisés avec la comm
 
 
 
+[[unmount-a-database-backup]]
 == Démontez une sauvegarde de base de données
 
 Vous pouvez démonter manuellement une sauvegarde de base de données montée lorsque vous ne souhaitez plus accéder aux fichiers de la sauvegarde.

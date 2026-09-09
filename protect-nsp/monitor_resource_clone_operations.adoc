@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone 
 summary: 'Vous pouvez contrôler la progression des opérations de clonage SnapCenter à l"aide de la page tâches. Vous pouvez vérifier la progression d"une opération pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
-= Monitor NetApp prend en charge les opérations de clonage de ressources du plug-in
+= Surveillez les opérations de clonage de ressources de plug-in prises en charge par NetApp dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

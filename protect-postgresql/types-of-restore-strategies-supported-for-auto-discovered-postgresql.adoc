@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: 'Vous devez définir une stratégie pour pouvoir effectuer les opérations de restauration à l"aide de SnapCenter. Il existe deux types de stratégies de restauration pour les clusters PostgreSQL découverts automatiquement.' 
 ---
-= Type de stratégie de restauration pris en charge pour PostgreSQL découvert automatiquement
+= Stratégies de restauration pour PostgreSQL détecté automatiquement dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

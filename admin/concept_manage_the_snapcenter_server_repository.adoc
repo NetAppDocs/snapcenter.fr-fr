@@ -15,6 +15,7 @@ Le référentiel du SnapCenter Server est parfois appelé la base de données NS
 
 
 
+[[prerequisites-for-protecting-the-snapcenter-repository]]
 == Conditions préalables à la protection du référentiel SnapCenter
 
 Votre environnement doit respecter certaines conditions préalables pour la protection du référentiel SnapCenter.
@@ -38,6 +39,7 @@ Pour une configuration haute disponibilité, vous pouvez provisionner un LUN iSC
 
 
 
+[[back-up-the-snapcenter-repository]]
 == Sauvegarder le référentiel SnapCenter
 
 La sauvegarde du référentiel du serveur SnapCenter permet de le protéger contre la perte de données. Vous pouvez sauvegarder le référentiel en exécutant le  `Protect-SmRepository` cmdlet.
@@ -64,6 +66,7 @@ La  `Protect-SmRepository`cmdlet accomplit les tâches suivantes :
 
 
 
+[[view-backups-of-the-snapcenter-repository]]
 == Afficher les sauvegardes du référentiel SnapCenter
 
 Vous pouvez afficher une liste des sauvegardes du référentiel de base de données SnapCenter Server en exécutant la cmdlet  `Get-SmRepositoryBackups`. Consultez la  https://docs.netapp.com/us-en/snapcenter-cmdlets/Get-SmRepositoryBackups.html["SnapCenter Software Guide de référence des cmdlets - Get-SmRepositoryBackups"^] pour plus de détails.
@@ -78,6 +81,7 @@ Les sauvegardes du référentiel sont créées selon la planification spécifié
 
 
 
+[[restore-the-snapcenter-database-repository]]
 == Restaurez le référentiel de base de données SnapCenter
 
 Vous pouvez restaurer le SnapCenter repository en exécutant la  `Restore-SmRepositoryBackup` cmdlet.
@@ -111,6 +115,7 @@ NOTE: La sauvegarde utilisée pour effectuer l'opération de restauration du ré
 
 
 
+[[migrate-the-snapcenter-repository]]
 == Migrer le référentiel SnapCenter
 
 Vous pouvez migrer le référentiel de base de données du serveur SnapCenter de l'emplacement par défaut vers un autre disque. Vous pouvez migrer le référentiel lorsque vous souhaitez le transférer sur un disque avec plus d'espace.
@@ -135,6 +140,7 @@ Vous pouvez généralement trouver le répertoire de données à l'adresse C:\Pr
 
 
 
+[[reset-the-snapcenter-repository-password]]
 == Réinitialisez le mot de passe du référentiel SnapCenter
 
 Le mot de passe de la base de données du référentiel du serveur MySQL est généré automatiquement lors de l'installation du serveur SnapCenter à partir de SnapCenter 4.2. Ce mot de passe généré automatiquement n'est en aucun cas connu de l'utilisateur SnapCenter. Si vous souhaitez accéder à la base de données du référentiel, vous devez réinitialiser le mot de passe.

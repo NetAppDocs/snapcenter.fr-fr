@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, overview, add, modify, delete, Oracle database 
 summary: 'Vous devez ajouter manuellement les volumes d"application.' 
 ---
-= Ajout de volumes d'application
+= Ajouter des volumes d'application pour les bases de données Oracle dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -42,6 +42,7 @@ Vous pouvez ajouter plusieurs unités de stockage.
 
 
 
+[[modify-application-volume]]
 == Modifier le volume de l'application
 
 Vous pouvez modifier toutes les valeurs que vous avez spécifiées lors de l'ajout du volume d'application, si aucune sauvegarde n'est créée. Si la sauvegarde est créée, vous ne pouvez modifier que les détails du système de stockage.
@@ -56,6 +57,7 @@ Vous pouvez modifier toutes les valeurs que vous avez spécifiées lors de l'ajo
 
 
 
+[[delete-application-volume]]
 == Supprimer le volume de l'application
 
 Lorsque vous supprimez un volume d'application, en cas de sauvegardes associées au volume d'application, le volume d'application est mis en mode maintenance. Aucune sauvegarde nouvelle n'est créée et aucune sauvegarde antérieure n'est conservée. Si aucune sauvegarde n'est associée, toutes les métadonnées seront supprimées.

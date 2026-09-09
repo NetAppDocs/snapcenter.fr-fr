@@ -92,6 +92,7 @@ Si vous souhaitez ajouter l'hôte de plug-in dans SnapCenter s'exécutant sur un
 
 
 
+[[log-in-to-snapcenter-using-multi-factor-authentication-mfa]]
 == Connexion au SnapCenter à l'aide de l'authentification multifacteur (MFA)
 
 Le serveur SnapCenter prend en charge l'authentification multifacteur pour le compte de domaine, qui fait partie de l'annuaire actif.
@@ -125,6 +126,7 @@ Le compte utilisateur doit exister dans Active Directory (AD)
 
 
 
+[[modify-the-snapcenter-default-gui-session-timeout]]
 == Modifiez le délai d'expiration de la session de l'interface utilisateur graphique SnapCenter par défaut
 
 Vous pouvez modifier le délai d'expiration de la session de l'interface graphique SnapCenter pour la rendre inférieure ou supérieure au délai d'expiration par défaut de 20 minutes.
@@ -140,6 +142,7 @@ Comme fonction de sécurité, après une période par défaut de 15 minutes d'in
 
 
 
+[[secure-the-snapcenter-web-server-by-disabling-ssl-3-0]]
 == Sécurisez le serveur Web SnapCenter en désactivant SSL 3.0
 
 Pour des raisons de sécurité, vous devez désactiver le protocole SSL (Secure Socket Layer) 3.0 dans Microsoft IIS si celui-ci est activé sur votre serveur Web SnapCenter.

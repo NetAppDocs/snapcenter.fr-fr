@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Vous pouvez annuler les opérations de sauvegarde en cours d"exécution, en file d"attente ou non réactives.' 
 ---
-= Annuler les opérations de sauvegarde des bases de données Oracle
+= Annuler les opérations de sauvegarde de la base de données Oracle dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

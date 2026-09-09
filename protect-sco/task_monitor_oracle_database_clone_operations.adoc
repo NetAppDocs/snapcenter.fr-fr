@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, monitor 
 summary: 'Vous pouvez contrôler la progression des opérations de clonage SnapCenter à l"aide de la page tâches. Vous pouvez vérifier la progression d"une opération pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
-= Surveillez les opérations de clonage de bases de données Oracle
+= Surveillez les opérations de clonage de bases de données Oracle dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, upgrade snapcenter server, windows 
 summary: 'Vous pouvez utiliser le fichier exécutable du programme d"installation du serveur SnapCenter pour mettre à niveau le serveur SnapCenter.' 
 ---
-= Mettez à niveau le serveur SnapCenter sur l'hôte Windows
+= Mettre à niveau le serveur SnapCenter sur un hôte Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Vous pouvez utiliser les applets de commande PowerShell pour restaurer une réplique défectueuse en utilisant la copie la plus récente sur le même hôte ou la copie la plus récente depuis un autre hôte. 
 ---
-= Réamorçage d'une réplique à l'aide des applets de commande PowerShell pour la base de données Exchange
+= Réinitialiser un réplica Exchange à l'aide des cmdlets SnapCenter PowerShell
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

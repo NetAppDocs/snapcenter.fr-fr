@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, new customer, NetApp account, enable support 
 summary: 'Si vous ne disposez pas d"un compte NetApp, vous devez enregistrer le produit pour activer le support.' 
 ---
-= Enregistrer SnapCenter
+= Enregistrez SnapCenter pour activer la prise en charge
 :allow-uri-read: 
 
 

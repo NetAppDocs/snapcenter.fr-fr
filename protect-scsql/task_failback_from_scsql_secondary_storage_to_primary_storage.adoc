@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: failback, snapcenter 
 summary: Une fois le stockage primaire du plug-in SnapCenter pour SQL Server de nouveau en ligne, il est préférable de revenir au stockage primaire. 
 ---
-= Rétablissement du plug-in SnapCenter pour le stockage secondaire SQL Server vers le stockage primaire
+= Rétablir le stockage principal pour le plug-in SnapCenter pour SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Avant de restaurer une base de données Oracle, vous devez vous assurer que les prérequis sont terminés. 
 ---
-= Conditions requises pour la restauration d'une base de données Oracle
+= SnapCenter exigences pour la restauration d'une base de données Oracle
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

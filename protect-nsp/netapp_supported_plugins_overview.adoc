@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 'Développez des plug-ins pris en charge par NetApp pour les applications que vous utilisez, puis utilisez SnapCenter pour sauvegarder, restaurer ou cloner ces applications. Comme d"autres plug-ins SnapCenter, vos plug-ins pris en charge par NetApp font office de composants côté hôte du logiciel NetApp SnapCenter, ce qui permet une protection des données compatible avec les applications et une gestion des ressources.' 
 ---
-= Présentation des plug-ins pris en charge par NetApp
+= Découvrez les plug-ins pris en charge par NetApp pour SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

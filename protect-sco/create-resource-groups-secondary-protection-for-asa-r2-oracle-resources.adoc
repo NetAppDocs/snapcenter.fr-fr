@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
 summary: Un groupe de ressources est un conteneur dans lequel vous ajoutez des ressources que vous souhaitez sauvegarder et protéger. Un groupe de ressources vous permet de sauvegarder simultanément toutes les données associées à une application donnée. 
 ---
-= Créez des groupes de ressources et activez la protection secondaire des ressources Oracle sur les systèmes ASA r2
+= Créer des groupes de ressources SnapCenter pour la protection secondaire ASA r2 des ressources Oracle
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

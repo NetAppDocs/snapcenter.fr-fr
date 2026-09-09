@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'La définition d"une stratégie de sauvegarde avant de créer vos tâches de sauvegarde vous permet de vous assurer que vous disposez des sauvegardes dont vous avez besoin pour restaurer correctement vos bases de données. Votre contrat de niveau de service (SLA), votre objectif de délai de restauration (RTO) et votre objectif de point de restauration (RPO) déterminent largement votre stratégie de sauvegarde.' 
 ---
-= Définir une stratégie de sauvegarde pour les ressources Exchange Server
+= Définissez une stratégie de sauvegarde pour les ressources Serveur Exchange dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ Un SLA définit le niveau de service attendu et traite de nombreux problèmes li
 
 
 
+[[types-of-backups-supported-for-exchange-database]]
 == Types de sauvegardes pris en charge pour la base de données Exchange
 
 Pour sauvegarder des boîtes aux lettres Exchange avec SnapCenter, il vous faut choisir le type de ressource, comme les bases de données et les groupes de disponibilité de base de données. Elle permet de créer des copies en ligne en lecture seule des volumes sur lesquels résident les ressources.
@@ -55,6 +56,7 @@ Les journaux tronqués déjà engagés dans la base de données ne sont pas sauv
 |===
 
 
+[[backup-schedules-for-database-plug-ins]]
 == Planifications de sauvegarde pour les plug-ins de bases de données
 
 La fréquence de sauvegarde (type de planification) est spécifiée dans les stratégies ; un planning de sauvegarde est spécifié dans la configuration du groupe de ressources. Le facteur le plus important dans la détermination d'une fréquence ou d'un planning de sauvegarde est le taux de changement pour la ressource et l'importance des données. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. Parmi les autres facteurs figurent l'importance de la ressource pour votre organisation, votre contrat de niveau de service (SLA) et votre objectif de point de récupération (RPO).
@@ -77,12 +79,14 @@ Les planifications de sauvegarde (exactement quand les sauvegardes doivent être
 
 
 
+[[number-of-backup-jobs-needed-for-databases]]
 == Nombre de tâches de sauvegarde nécessaires pour les bases de données
 
 Les facteurs qui déterminent le nombre de tâches de sauvegarde dont vous avez besoin incluent la taille de la ressource, le nombre de volumes utilisés, le taux de changement de la ressource et votre contrat de niveau de service.
 
 
 
+[[backup-naming-conventions]]
 == Nomenclature établie des sauvegardes
 
 Vous pouvez utiliser la nomenclature établie par défaut des snapshots ou une nomenclature établie personnalisée. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots pour vous aider à identifier la date de création des copies.
@@ -108,6 +112,7 @@ Vous pouvez également spécifier le format du nom de l'instantané tout en prot
 
 
 
+[[backup-retention-options]]
 == Options de conservation des sauvegardes
 
 Vous pouvez choisir le nombre de jours pendant lesquels vous souhaitez conserver les copies de sauvegarde ou spécifier le nombre de copies de sauvegarde à conserver, dans un maximum de 255 copies ONTAP. Par exemple, votre entreprise peut avoir besoin de conserver 10 jours de copies de sauvegarde ou 130 copies de sauvegarde.
@@ -123,6 +128,7 @@ NOTE: Pour la conservation à long terme des copies de sauvegarde, nous vous rec
 
 
 
+[[how-long-to-retain-transaction-log-backups-on-the-source-storage-volume-for-exchange-server]]
 == Durée de conservation des sauvegardes du journal des transactions sur le volume de stockage source pour Exchange Server
 
 Le plug-in SnapCenter pour Microsoft Exchange Server nécessite des sauvegardes de journal de transactions pour effectuer des opérations de restauration à chaud, qui restaurent votre base de données à un moment donné entre deux sauvegardes complètes.

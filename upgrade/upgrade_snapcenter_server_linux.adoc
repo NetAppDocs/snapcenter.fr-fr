@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, upgrade snapcenter server, linux 
 summary: 'Vous pouvez utiliser le fichier d"installation du serveur SnapCenter pour mettre à niveau le serveur SnapCenter.' 
 ---
-= Mettez à niveau le serveur SnapCenter sur un hôte Linux
+= Mettre à niveau le serveur SnapCenter sur un hôte Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

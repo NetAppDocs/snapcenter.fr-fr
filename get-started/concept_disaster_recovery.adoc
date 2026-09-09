@@ -17,6 +17,7 @@ Cette section décrit les deux types de reprise sur incident dans SnapCenter :
 
 
 
+[[snapcenter-server-dr]]
 == Reprise après incident du serveur SnapCenter
 
 * Les données du serveur SnapCenter sont sauvegardées et peuvent être restaurées sans ajout ou gestion de plug-in au serveur SnapCenter.
@@ -28,6 +29,7 @@ Cette section décrit les deux types de reprise sur incident dans SnapCenter :
 
 
 
+[[snapcenter-plug-in-and-storage-dr]]
 == Plug-in SnapCenter et reprise après incident du stockage
 
 La reprise sur incident est disponible uniquement pour le plug-in SnapCenter pour SQL Server. Si le plug-in est en panne, passez à un autre hôte SQL et récupérez les données en suivant quelques étapes. Voir link:../protect-scsql/task_disaster_recovery_scsql.html["Reprise après incident du plug-in SnapCenter pour SQL Server"].

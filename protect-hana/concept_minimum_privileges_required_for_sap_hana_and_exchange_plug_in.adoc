@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Minimum ONTAP privileges 
 summary: Les privilèges minimum ONTAP requis varient en fonction des plug-ins SnapCenter utilisés pour la protection des données. 
 ---
-= Privilèges ONTAP minimum requis pour le plug-in SAP HANA
+= Privilèges ONTAP minimaux requis pour le plug-in SnapCenter pour la base de données SAP HANA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

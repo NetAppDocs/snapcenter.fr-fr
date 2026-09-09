@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Si vous devez réamorcer une copie de réplica, par exemple lorsqu"une copie est corrompue, vous pouvez réamorcer la dernière sauvegarde à l"aide de la fonction de réamorçage dans SnapCenter.' 
 ---
-= Réamorçage d'un réplica de nœud Exchange passif
+= Réensemencer une réplique de nœud Exchange passif dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

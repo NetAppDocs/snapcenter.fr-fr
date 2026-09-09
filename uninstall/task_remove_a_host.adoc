@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, remove, remove host 
 summary: 'Lorsque le serveur SnapCenter supprime un hôte, il supprime d"abord la sauvegarde, les clones, les tâches de clonage, les groupes de ressources et les ressources répertoriées pour cet hôte sur la page Ressources SnapCenter, puis désinstalle les modules du plug-in sur l"hôte.' 
 ---
-= Supprimer un hôte
+= Supprimer un hôte de SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

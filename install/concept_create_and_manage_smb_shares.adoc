@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SMB shares 
 summary: 'Pour configurer un partage SMB3 sur un SVM, vous pouvez utiliser l"interface utilisateur SnapCenter ou les applets de commande PowerShell.' 
 ---
-= Création et gestion de partages SMB
+= Créer et gérer des partages SMB dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ TIP: Si vous vous sentez à l'aise de le faire, vous pouvez créer vos propres m
 
 
 
+[[create-an-smb-share]]
 == Créez un partage SMB
 
 La page partages SnapCenter permet de créer un partage SMB3 sur un SVM.
@@ -84,6 +85,7 @@ SnapCenter crée le partage SMB sur le SVM.
 
 
 
+[[delete-an-smb-share]]
 == Supprime un partage SMB
 
 Vous pouvez supprimer un partage SMB lorsque vous n'en avez plus besoin.

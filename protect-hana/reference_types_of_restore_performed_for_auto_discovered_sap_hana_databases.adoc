@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Databases 
 summary: 'SnapCenter prend en charge les types de SnapRestore \(VBSR\) basée sur des volumes, SnapRestore de fichiers uniques et de restauration de connexion et de copie pour les bases de données SAP HANA automatiquement découvertes.' 
 ---
-= Types d'opérations de restauration des bases de données SAP HANA découvertes automatiquement
+= Opérations de restauration pour les bases de données SAP HANA détectées automatiquement dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ SnapCenter prend en charge la technologie SnapRestore (VBSR) basée sur des volu
 
 
 
+[[volume-based-snaprestore-vbsr-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == La technologie SnapRestore basée sur les volumes (VBSR) est effectuée dans des environnements NFS pour les scénarios suivants :
 
 * Lorsque la sauvegarde sélectionnée pour la restauration est prise sur des versions antérieures à SnapCenter 4.3 et uniquement si l'option **ressource complète** est sélectionnée
@@ -23,6 +24,7 @@ SnapCenter prend en charge la technologie SnapRestore (VBSR) basée sur des volu
 
 
 
+[[single-file-snaprestore-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == Single File SnapRestore s'effectue dans des environnements NFS pour les scénarios suivants :
 
 * Lorsque la sauvegarde sélectionnée pour la restauration est prise dans SnapCenter 4.3 et que seule l'option *ressource complète* est sélectionnée
@@ -32,6 +34,7 @@ SnapCenter prend en charge la technologie SnapRestore (VBSR) basée sur des volu
 
 
 
+[[single-file-snaprestore-is-performed-in-san-environments-for-the-following-scenarios]]
 == Single File SnapRestore s'effectue dans des environnements SAN pour les scénarios suivants :
 
 * Lorsque des sauvegardes sont effectuées sur des versions antérieures à SnapCenter 4.3 et uniquement si l'option *ressource complète* est sélectionnée
@@ -41,6 +44,7 @@ SnapCenter prend en charge la technologie SnapRestore (VBSR) basée sur des volu
 
 
 
+[[connect-and-copy-based-restore-is-performed-in-san-environments-for-the-following-scenario]]
 == La restauration par connexion ou copie s'effectue dans des environnements SAN pour le scénario suivant :
 
 * Pour MDC, lorsque la sauvegarde sélectionnée pour la restauration est prise dans SnapCenter 4.3 et que l'option *base de données locataire* est sélectionnée

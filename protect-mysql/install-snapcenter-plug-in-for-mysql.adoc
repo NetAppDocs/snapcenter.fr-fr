@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installing 
 summary: Vous devez installer et configurer le plug-in SnapCenter pour MySQL si vous voulez protéger MySQL. 
 ---
-= Workflow d'installation du plug-in SnapCenter pour MySQL
+= SnapCenter Plug-in pour le flux de travail d'installation et de configuration de MySQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

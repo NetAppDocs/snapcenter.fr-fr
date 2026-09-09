@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup jobs 
 summary: 'Les facteurs déterminant le nombre de tâches de sauvegarde dont vous avez besoin incluent la taille de la ressource, le nombre de volumes utilisés, le taux de changement de la ressource et votre contrat de niveau de service \(SLA\).' 
 ---
-= Nombre de tâches de sauvegarde nécessaires
+= Nombre de tâches de sauvegarde nécessaires dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

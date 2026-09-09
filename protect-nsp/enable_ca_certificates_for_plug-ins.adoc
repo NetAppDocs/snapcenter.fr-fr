@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, ca certificates 
 summary: 'Vous devez configurer les certificats d"autorité de certification et déployer les certificats d"autorité de certification dans le serveur SnapCenter et les hôtes de plug-in correspondants.' 
 ---
-= Activez les certificats CA pour les plug-ins
+= Activer les certificats d'autorité de certification pour les plug-ins SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter software, install wizard, features enabled 
 summary: 'Vous pouvez exécuter le programme d"installation du serveur SnapCenter pour installer le serveur SnapCenter.' 
 ---
-= Installez le serveur SnapCenter sur l'hôte Windows
+= Installez le serveur SnapCenter sur un hôte Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -66,6 +66,7 @@ Les fichiers journaux sont toujours répertoriés (les plus anciens en premier) 
 
 
 
+[[features-enabled-on-windows-host-during-installation]]
 == Fonctionnalités activées sur l'hôte Windows lors de l'installation
 
 Le programme d'installation de SnapCenter Server active les fonctions et les rôles Windows sur votre hôte Windows au cours de l'installation. Ceux-ci peuvent être intéressants pour le dépannage et la maintenance du système hôte.

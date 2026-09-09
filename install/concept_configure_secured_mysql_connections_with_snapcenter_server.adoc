@@ -15,6 +15,7 @@ Vous pouvez générer des certificats SSL (Secure Sockets Layer) et des fichiers
 
 
 
+[[configure-secured-mysql-connections-for-standalone-snapcenter-server-configurations]]
 == Configurez des connexions MySQL sécurisées pour des configurations serveur SnapCenter autonomes
 
 Vous pouvez générer des certificats SSL (Secure Sockets Layer) et des fichiers de clés, si vous souhaitez sécuriser la communication entre le serveur SnapCenter et le serveur MySQL. Vous devez configurer les certificats et les fichiers de clé dans le serveur MySQL et le serveur SnapCenter.
@@ -128,6 +129,7 @@ L'exemple suivant montre les chemins mis à jour dans la section [client] du fic
 
 
 
+[[configure-secured-mysql-connections-for-ha-configurations]]
 == Configurez les connexions MySQL sécurisées pour les configurations haute disponibilité
 
 Si vous souhaitez sécuriser la communication entre le serveur SnapCenter et les serveurs MySQL, vous pouvez générer des certificats SSL (Secure Sockets Layer) et des fichiers clés pour les nœuds HA (High Availability). Vous devez configurer les certificats et les fichiers de clé dans les serveurs MySQL et sur les nœuds HA.

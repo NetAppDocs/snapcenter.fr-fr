@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 'Avant d"utiliser SnapCenter pour sauvegarder les ressources de la base de données IBM DB2, vous devez créer une stratégie de sauvegarde pour le groupe de ressources ou de ressources que vous souhaitez sauvegarder. Une stratégie de sauvegarde est un ensemble de règles qui régit la gestion, la planification et la conservation des sauvegardes.' 
 ---
-= Créez des stratégies de sauvegarde pour IBM DB2
+= Créer des politiques de sauvegarde pour IBM Db2 dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

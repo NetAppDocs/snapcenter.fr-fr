@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 'Vous devez vous assurer que l"hôte répond à la configuration requise avant d"installer le module de plug-ins SnapCenter pour Linux.' 
 ---
-= Configuration requise pour l'hôte pour l'installation du pack de plug-ins SnapCenter pour Linux et AIX
+= Configuration requise pour le package de plug-ins SnapCenter pour Linux et AIX
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

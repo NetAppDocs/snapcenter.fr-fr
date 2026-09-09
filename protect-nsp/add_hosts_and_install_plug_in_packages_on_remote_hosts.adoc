@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add hostsNetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 'Vous devez utiliser la page hôte SnapCenterAdd pour ajouter des hôtes, puis installer les modules de plug-in. Les plug-ins sont automatiquement installés sur les hôtes distants. Vous pouvez ajouter un hôte et installer les modules d"extension pour un hôte individuel ou pour un cluster.' 
 ---
-= Ajoutez des hôtes et installez des modules plug-ins sur des hôtes distants
+= Ajouter des hôtes et installer des packages de plug-ins SnapCenter sur les hôtes distants
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

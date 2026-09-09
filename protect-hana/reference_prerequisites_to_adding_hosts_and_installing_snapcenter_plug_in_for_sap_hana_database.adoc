@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 'Avant d"ajouter un hôte et d"installer les modules d"extension, vous devez remplir toutes les conditions requises. Le plug-in SnapCenter pour base de données SAP HANA est disponible dans les environnements Windows et Linux.' 
 ---
-= Conditions préalables pour l'ajout d'hôtes et l'installation du plug-in SnapCenter pour la base de données SAP HANA
+= Prérequis d’hôte et d’installation pour le plug-in SnapCenter pour la base de données SAP HANA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,6 +28,7 @@ NOTE: IBM Java n'est pas pris en charge sur les hôtes Windows et Linux.
 
 
 
+[[windows-hosts]]
 == Hôtes Windows
 
 * Vous devez disposer d'un utilisateur de domaine disposant de privilèges d'administrateur local avec des autorisations de connexion locales sur l'hôte distant.
@@ -41,6 +42,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Téléchargez J
 
 
 
+[[linux-hosts]]
 == Hôtes Linux
 
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
@@ -54,6 +56,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Téléchargez J
 
 
 
+[[supplemental-commands]]
 == Commandes supplémentaires
 
 Pour exécuter une commande supplémentaire sur le plug-in SnapCenter pour SAP HANA, vous devez l'inclure dans le fichier _allowed_commands.config_.
@@ -87,6 +90,7 @@ NOTE: Vous ne devez pas utiliser de caractère générique (*) pour autoriser to
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 == Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte Linux
 
 Les versions SnapCenter 2.0 et ultérieures permettent à un utilisateur non-root d'installer le package de plug-ins SnapCenter pour Linux et de démarrer le processus de plug-in. Les processus de plug-in s'exécutent en tant qu'utilisateur non racine efficace. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.

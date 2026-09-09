@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 'Vous devez définir une stratégie pour pouvoir effectuer les opérations de restauration à l"aide de SnapCenter. Il existe deux types de stratégies de restauration pour les bases de données IBM DB2 découvertes automatiquement.' 
 ---
-= Type de stratégie de restauration pris en charge pour IBM DB2 détecté automatiquement
+= Stratégies de restauration pour IBM Db2 détecté automatiquement dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

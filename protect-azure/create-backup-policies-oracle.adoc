@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, Oracle, backup policies 
 summary: Créez une stratégie de sauvegarde pour le groupe de ressources ou de ressources que vous souhaitez sauvegarder. 
 ---
-= Créez des règles de sauvegarde pour les bases de données Oracle
+= Créez des politiques de sauvegarde pour les bases de données Oracle dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

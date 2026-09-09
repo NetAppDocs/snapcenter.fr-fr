@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL,run as 
 summary: 'Vous pouvez utiliser SnapCenter pour cloner une sauvegarde. Vous pouvez cloner à partir d"une sauvegarde principale ou secondaire.' 
 ---
-= Cloner une sauvegarde PostgreSQL
+= Cloner une sauvegarde PostgreSQL dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 'Vous devez définir une stratégie pour pouvoir effectuer les opérations de restauration à l"aide de SnapCenter. Il existe deux types de stratégies de restauration pour les ressources de plug-in prises en charge par NetApp ajoutées manuellement. Vous ne pouvez pas restaurer les ressources de plug-in NetApp ajoutées manuellement.' 
 ---
-= Types de stratégies de restauration prises en charge pour les ressources de plug-in prises en charge par NetApp ajoutées manuellement
+= NetApp stratégies de restauration des ressources de plug-ins prises en charge dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: Vous ne pouvez pas restaurer les ressources de plug-in NetApp ajoutées ma
 
 
 
+[[complete-resource-restore]]
 == Restauration des ressources terminée
 
 * Restauration de tous les volumes, qtrees et LUN d'une ressource
@@ -28,6 +29,7 @@ NOTE: Si la ressource contient des volumes ou des qtrees, les snapshots pris apr
 
 
 
+[[file-level-restore]]
 == Restauration au niveau des fichiers
 
 * Restaure les fichiers à partir de volumes, de qtrees ou de répertoires

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone 
 summary: Vous pouvez utiliser SnapCenter pour cloner une sauvegarde du système de fichiers Windows. Pour copier un fichier qui a été supprimé ou modifié par erreur, vous pouvez cloner une sauvegarde et accéder à ce fichier dans le clone. 
 ---
-= Clonage à partir d'une sauvegarde du système de fichiers Windows
+= Cloner une sauvegarde de système de fichiers Windows avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

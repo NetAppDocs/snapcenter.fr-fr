@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup naming conventions 
 summary: Vous pouvez utiliser la nomenclature établie par défaut des snapshots ou une nomenclature établie personnalisée. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots pour vous aider à identifier la date de création des copies. 
 ---
-= Conventions de nom de sauvegarde pour le plug-in pour bases de données SAP HANA
+= Conventions d'appellation des sauvegardes pour le plug-in SnapCenter pour les bases de données SAP HANA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

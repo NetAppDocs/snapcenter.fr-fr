@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, snapcenter server, plug-ins, workflow, upgrade path 
 summary: Décrit la mise à niveau du serveur SnapCenter et des plug-ins, ainsi que les chemins de mise à niveau pris en charge 
 ---
-= Mise à niveau du workflow
+= SnapCenter Flux de travail de mise à niveau du serveur
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ image::../media/upgrade_workflow.gif[mise à niveau du workflow]
 
 
 
+[[supported-upgrade-paths]]
 == Chemins de mise à niveau pris en charge
 
 Cette section indique les versions de SnapCenter à partir desquelles vous pouvez effectuer une mise à niveau et les versions de plug-in prises en charge.

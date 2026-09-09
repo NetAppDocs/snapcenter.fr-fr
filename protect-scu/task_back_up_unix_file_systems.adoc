@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, Unix file system, policy, schedule, resources 
 summary: 'Si une ressource ne fait pas partie d"un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.' 
 ---
-= Sauvegardez les systèmes de fichiers Unix
+= Sauvegardez les systèmes de fichiers UNIX avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

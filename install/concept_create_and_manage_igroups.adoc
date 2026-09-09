@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: igroup 
 summary: Vous créez des groupes initiateurs pour spécifier les hôtes pouvant accéder à une LUN donnée sur le système de stockage. SnapCenter permet de créer, renommer, modifier ou supprimer un groupe initiateur sur un hôte Windows. 
 ---
-= Création et gestion des igroups
+= Créer et gérer des igroups dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Vous créez des groupes initiateurs pour spécifier les hôtes pouvant accéder 
 
 
 
+[[create-an-igroup]]
 == Créer un groupe initiateur
 
 Vous pouvez utiliser SnapCenter pour créer un groupe initiateur sur un hôte Windows. Le groupe initiateur sera disponible dans l'assistant de création de disque ou de connexion de disque lorsque vous mappez le groupe initiateur sur une LUN.
@@ -72,6 +73,7 @@ SnapCenter crée le groupe initiateur sur le système de stockage.
 
 
 
+[[rename-an-igroup]]
 == Renommer un groupe initiateur
 
 Vous pouvez utiliser SnapCenter pour renommer un groupe initiateur existant.
@@ -87,6 +89,7 @@ Vous pouvez utiliser SnapCenter pour renommer un groupe initiateur existant.
 
 
 
+[[modify-an-igroup]]
 == Modifier un groupe initiateur
 
 Vous pouvez utiliser SnapCenter pour ajouter des initiateurs à un groupe initiateur existant. Lors de la création d'un groupe initiateur, vous ne pouvez ajouter qu'un seul hôte. Si vous souhaitez créer un groupe initiateur pour un cluster, vous pouvez le modifier pour ajouter d'autres nœuds à ce groupe initiateur.
@@ -103,6 +106,7 @@ Vous pouvez utiliser SnapCenter pour ajouter des initiateurs à un groupe initia
 
 
 
+[[delete-an-igroup]]
 == Supprimez un groupe initiateur
 
 Lorsque vous n'en avez plus besoin, vous pouvez utiliser SnapCenter pour supprimer un groupe initiateur.

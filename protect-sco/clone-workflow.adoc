@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone operation, clone, workflow 
 summary: 'Le workflow de clonage inclut la planification, la réalisation de l"opération de clonage et le contrôle de l"opération.' 
 ---
-= Workflow de clonage
+= SnapCenter workflow de clonage pour les bases de données Oracle
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, workflow 
 summary: 'Vous pouvez créer une sauvegarde d"une ressource (base de données) ou d"un groupe de ressources.' 
 ---
-= Présentation de la procédure de sauvegarde
+= SnapCenter workflow de sauvegarde pour les bases de données Oracle
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: plug-in for IBM Db2 
 summary: 'Vous pouvez annuler les opérations de sauvegarde mises en file d"attente.' 
 ---
-= Annulez les opérations de sauvegarde pour IBM DB2
+= Annuler les opérations de sauvegarde IBM Db2 dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,8 +13,7 @@ summary: 'Vous pouvez annuler les opérations de sauvegarde mises en file d"atte
 [role="lead"]
 Vous pouvez annuler les opérations de sauvegarde mises en file d'attente.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Pour annuler des opérations, vous devez être connecté en tant qu'administrateur SnapCenter ou propriétaire du travail.
 * Vous pouvez annuler une opération de sauvegarde à partir de la page *Monitor* ou du volet *Activity*.
 * Vous ne pouvez pas annuler une opération de sauvegarde en cours d'exécution.
@@ -23,8 +22,7 @@ Vous pouvez annuler les opérations de sauvegarde mises en file d'attente.
 * Si vous avez sélectionné *tous les membres de ce rôle peuvent voir et fonctionner sur d'autres objets membres* dans la page utilisateurs\groupes lors de la création d'un rôle, vous pouvez annuler les opérations de sauvegarde en file d'attente d'autres membres tout en utilisant ce rôle.
 
 
-*Étapes*
-
+.Étapes
 . Effectuez l'une des opérations suivantes :
 +
 |===
@@ -34,8 +32,8 @@ Vous pouvez annuler les opérations de sauvegarde mises en file d'attente.
  a| 
 Page moniteur
  a| 
-.. Dans le volet de navigation de gauche, cliquez sur *moniteur* > *travaux*.
-.. Sélectionnez l'opération, puis cliquez sur *Annuler le travail*.
+.. Dans le volet de navigation de gauche, sélectionnez *Monitor* > *Jobs*.
+.. Sélectionnez l'opération, puis sélectionnez *Annuler la tâche*.
 
 
 
@@ -43,9 +41,9 @@ Page moniteur
  a| 
 Volet activité
  a| 
-.. Après avoir lancé l'opération de sauvegarde, cliquez sur * *image:../media/activity_pane_icon.gif["icône du volet activité"]dans le volet activité pour afficher les cinq opérations les plus récentes.
+.. Après avoir lancé l'opération de sauvegarde, sélectionnez *image:../media/activity_pane_icon.gif["icône du volet activité"]* dans le volet Activité pour afficher les cinq opérations les plus récentes.
 .. Sélectionner l'opération.
-.. Dans la page Détails du travail, cliquez sur *Annuler le travail*.
+.. Dans la page Détails du travail, sélectionnez *Annuler le travail*.
 
 
 |===

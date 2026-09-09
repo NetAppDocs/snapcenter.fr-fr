@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: environment variable, predefined, prescript, postscript, clone 
 summary: 'SnapCenter vous permet d"utiliser les variables d"environnement prédéfinies lorsque vous exécutez le prescripteur et le PostScript lors du clonage d"une base de données.' 
 ---
-= Variables d'environnement prédéfinies pour le prescripteur et le post-script spécifiques au clone
+= SnapCenter variables d'environnement prescript et postscript pour clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

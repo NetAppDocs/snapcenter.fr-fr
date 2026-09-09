@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, configure, CA certificate, linux, linux host 
 summary: 'Vous devez configurer le certificat de l"autorité de certification avec le serveur SnapCenter sur l"hôte Linux.' 
 ---
-= Configurer le certificat CA pour l'hôte Linux
+= Configurer un certificat d'autorité de certification pour SnapCenter sur un hôte Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Après avoir installé SnapCenter Server sur Linux, le programme d’installatio
 
 
 
+[[configure-nginx-certificate]]
 == Configurer le certificat nginx
 
 .Étapes
@@ -28,6 +29,7 @@ Après avoir installé SnapCenter Server sur Linux, le programme d’installatio
 
 
 
+[[configure-audit-log-certificate]]
 == Configurer le certificat du journal d'audit
 
 .Étapes
@@ -45,6 +47,7 @@ Seul le format _.pfx_ est pris en charge pour le certificat de journal d'audit.
 
 
 
+[[configure-snapcenter-certificate]]
 == Configurer le certificat SnapCenter
 
 .Étapes

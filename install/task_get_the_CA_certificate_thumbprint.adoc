@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, certificate thumbprint 
 summary: 'Une empreinte de certificat est une chaîne hexadécimale qui identifie un certificat. Une empreinte est calculée à partir du contenu du certificat à l"aide d"un algorithme d"empreinte.' 
 ---
-= Obtenez le certificat CA imprimé
+= Obtenez l'empreinte digitale du certificat CA dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

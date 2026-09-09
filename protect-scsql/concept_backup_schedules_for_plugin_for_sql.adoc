@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup schedules 
 summary: 'La fréquence de sauvegarde \(type de planification\) est spécifiée dans les stratégies ; un planning de sauvegarde est spécifié dans la configuration du groupe de ressources.' 
 ---
-= Planifications de sauvegarde pour le plug-in pour SQL Server
+= Planification des sauvegardes pour le plug-in SnapCenter pour SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

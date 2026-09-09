@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter 
 summary: 'Vous pouvez installer simultanément les modules SnapCenter Plug-in pour Linux ou Windows sur plusieurs hôtes à l"aide de l"applet de commande Install-SmHostPackage PowerShell.' 
 ---
-= Installez les modules de plug-in SnapCenter pour Linux, Windows ou AIX sur plusieurs hôtes distants à l'aide d'applets de commande
+= Installez des packages de plug-ins SnapCenter sur plusieurs hôtes distants à l'aide d'applets de commande
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

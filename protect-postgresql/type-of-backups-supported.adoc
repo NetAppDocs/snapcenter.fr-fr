@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer. SnapCenter prend en charge les types de sauvegarde basés sur la copie Snapshot pour les clusters PostgreSQL. 
 ---
-= Types de sauvegardes pris en charge
+= Types de sauvegardes prises en charge par le plug-in SnapCenter pour PostgreSQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer.
 
 
 
+[[snapshot-copy-based-backup]]
 == Sauvegarde basée sur des copies Snapshot
 
 Les sauvegardes basées sur des copies Snapshot utilisent la technologie NetApp Snapshot pour créer des copies en ligne en lecture seule des volumes sur lesquels résident les clusters PostgreSQL.

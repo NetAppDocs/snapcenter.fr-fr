@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage policies 
 summary: 'Vous pouvez détacher des stratégies d"une ressource ou d"un groupe de ressources, modifier, supprimer, afficher et copier.' 
 ---
-= Gestion des règles
+= Gérez les stratégies dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Vous pouvez détacher des stratégies d'une ressource ou d'un groupe de ressourc
 
 
 
+[[modify-policies]]
 == Modifier des règles
 
 Vous pouvez modifier les options de réplication, les paramètres de rétention des snapshots, le nombre de tentatives d'erreur ou les informations relatives aux scripts lorsqu'une règle est attachée à un groupe de ressources ou de ressources. Vous ne pouvez modifier le type de planification (fréquence) qu'après avoir désolidariser une stratégie.
@@ -59,6 +60,7 @@ Par exemple, si une stratégie spécifie des sauvegardes horaires et que vous so
 
 
 
+[[detach-policies]]
 == Détacher les polices
 
 Vous pouvez détacher des stratégies d'une ressource ou d'un groupe de ressources à chaque fois que vous ne souhaitez plus que ces stratégies régissent la protection des données pour les ressources. Vous devez détacher une stratégie avant de pouvoir la supprimer ou avant de modifier le type de planification.
@@ -74,6 +76,7 @@ Vous pouvez détacher des stratégies d'une ressource ou d'un groupe de ressourc
 
 
 
+[[delete-policies]]
 == Supprimer des règles
 
 Si vous n'avez plus besoin de règles, vous pouvez les supprimer.

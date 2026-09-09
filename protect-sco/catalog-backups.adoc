@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: Comment SnapCenter découvre les bases de données Oracle. 
 ---
-= Comment cataloguer les sauvegardes avec Oracle Recovery Manager
+= Comment SnapCenter catalogue les sauvegardes à l'aide d'Oracle RMAN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,12 +21,14 @@ Si vous souhaitez cataloguer les sauvegardes d'une base de données RAC, assurez
 
 
 
+[[external-catalog-database]]
 == Base de données de catalogue externe
 
 Par défaut, le fichier de contrôle de la base de données cible est utilisé pour le catalogage. Si vous souhaitez ajouter une base de données de catalogue externe, vous pouvez la configurer en spécifiant les informations d'identification et le nom de support réseau transparent (TNS) du catalogue externe à l'aide de l'assistant Paramètres de base de données de l'interface utilisateur graphique de SnapCenter. Vous pouvez également configurer la base de données du catalogue externe à partir de l'interface CLI en exécutant la commande Configure-SmOracleDatabase avec les options -OracleRmanCatalCredentialName et -OracleRmanCatalTnsName.
 
 
 
+[[rman-command]]
 == Commande RMAN
 
 Si vous avez activé l'option de catalogage lors de la création d'une stratégie de sauvegarde Oracle à partir de l'interface utilisateur graphique SnapCenter, les sauvegardes sont cataloguées à l'aide d'Oracle RMAN dans le cadre de l'opération de sauvegarde. Vous pouvez également procéder au catalogage différé des sauvegardes en exécutant `Catalog-SmBackupWithOracleRMAN` commande.
@@ -35,6 +37,7 @@ Une fois les sauvegardes catalogués, vous pouvez exécuter `Get-SmBackupDetails
 
 
 
+[[naming-format]]
 == Format de dénomination
 
 Si le nom du groupe de disques ASM est supérieur ou égal à 16 caractères, à partir de SnapCenter 3.0, le format de nommage utilisé pour la sauvegarde est SC_HASHCODEofDISKGROUP_DBSID_BACKUPID. Cependant, si le nom du groupe de disques est inférieur à 16 caractères, le format de nommage utilisé pour la sauvegarde est DISKGROUPNAME_DBSID_BACKUPID, qui est le même format que celui utilisé dans SnapCenter 2.0.
@@ -43,6 +46,7 @@ Le HASHCODEofDISKGROUP est un nombre généré automatiquement (2 à 10 chiffres
 
 
 
+[[crosscheck-operations]]
 == Opérations de contre-vérification
 
 Vous pouvez effectuer des vérifications croisées pour mettre à jour les informations de référentiel RMAN obsolètes concernant les sauvegardes dont les enregistrements de référentiel ne correspondent pas à leur état physique. Par exemple, si un utilisateur supprime les journaux archivés du disque à l'aide d'une commande du système d'exploitation, le fichier de contrôle indique toujours que les journaux sont sur le disque, alors qu'en fait ils ne le sont pas.
@@ -53,6 +57,7 @@ L'opération crosscheck vous permet de mettre à jour le fichier de contrôle av
 
 
 
+[[remove-catalog-information]]
 == Supprimer les informations du catalogue
 
 Vous pouvez supprimer les informations de catalogue en exécutant la commande uncatalog-SmBackupWithOracleRMAN. Vous ne pouvez pas supprimer les informations du catalogue à l'aide de l'interface graphique de SnapCenter. Toutefois, les informations d'une sauvegarde cataloguée sont supprimées lors de la suppression de la sauvegarde ou lors de la suppression de la rétention et du groupe de ressources associés à cette sauvegarde cataloguée.

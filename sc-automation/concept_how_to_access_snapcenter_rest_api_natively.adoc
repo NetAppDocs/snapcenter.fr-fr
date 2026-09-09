@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST APIs, swagger 
 summary: Accès natif aux API REST. Les API REST sont exposées via la page Web de swagger. 
 ---
-= Comment accéder de manière native à l'API REST de SnapCenter
+= Accès natif à l’API REST SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

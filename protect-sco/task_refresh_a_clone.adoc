@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: refresh clone, clone 
 summary: Vous pouvez actualiser le clone en exécutant la commande Actualiser-SmClone. Cette commande crée une sauvegarde de la base de données, supprime le clone existant et crée un clone portant le même nom. 
 ---
-= Actualiser un clone
+= Actualiser un clone pour les bases de données Oracle dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

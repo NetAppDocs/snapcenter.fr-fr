@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, Unix file systems 
 summary: En cas de perte de données, vous pouvez utiliser SnapCenter pour restaurer les données. 
 ---
-= Restaurer les systèmes de fichiers Unix
+= Restaurez les systèmes de fichiers UNIX dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

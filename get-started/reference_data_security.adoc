@@ -37,6 +37,7 @@ Au bout de 20 minutes d'inactivité, SnapCenter vous déconnecte et vous devez v
 
 
 
+[[ca-certificate-overview]]
 == Présentation du certificat CA
 
 Le programme d'installation du serveur SnapCenter active la prise en charge centralisée du certificat SSL pendant l'installation. Pour améliorer la communication sécurisée entre le serveur et le plug-in, SnapCenter prend en charge l'utilisation des certificats d'autorité de certification autorisés fournis par le client.
@@ -47,18 +48,21 @@ Vous pouvez également déployer le certificat d'autorité de certification pour
 
 
 
+[[two-way-ssl-communication]]
 == Communication SSL bidirectionnelle
 
 La communication SSL bidirectionnelle sécurise la communication mutuelle entre le serveur SnapCenter et les plug-ins.
 
 
 
+[[certificate-based-authentication-overview]]
 == Présentation de l'authentification basée sur certificat
 
 L'authentification basée sur certificat vérifie l'authenticité des utilisateurs qui tentent d'accéder à l'hôte du plug-in SnapCenter. L'utilisateur doit exporter le certificat du serveur SnapCenter sans clé privée et l'importer dans le magasin de confiance hôte du plug-in. L'authentification basée sur certificat fonctionne uniquement si la fonction SSL bidirectionnelle est activée.
 
 
 
+[[multi-factor-authentication-mfa]]
 == Authentification multifacteur (MFA)
 
 L'authentification multifacteur fait appel à un fournisseur d'identité tiers via le langage SAML pour gérer les sessions utilisateur. Cette fonctionnalité améliore la sécurité de l'authentification en ayant la possibilité d'utiliser plusieurs facteurs tels que le TOTP, la biométrie, les notifications push, etc., ainsi que le nom d'utilisateur et le mot de passe existants. De plus, il permet au client d'utiliser ses propres fournisseurs d'identité d'utilisateur pour obtenir un identifiant d'utilisateur unifié (SSO) dans son portefeuille.

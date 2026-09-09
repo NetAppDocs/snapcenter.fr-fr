@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 'Si une ressource ne fait pas encore partie d"un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.' 
 ---
-= Sauvegardez MySQL
+= Sauvegardez une ressource MySQL avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: prerequisites, iSCSI, host requirement for Linux, sudo privileges, non-root user, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
 summary: 'Avant d"ajouter un hôte et d"installer les packages de plug-ins, vous devez respecter toutes les exigences.' 
 ---
-= Conditions préalables à l'ajout d'hôtes et à l'installation de Plug-ins Package pour Linux
+= Prérequis pour l'ajout d'hôtes et l'installation du package de plug-ins SnapCenter pour Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -36,6 +36,7 @@ Pour plus d'informations sur les téléchargements Java, consultez link:https://
 
 
 
+[[linux-host-requirements]]
 == Configuration requise pour l'hôte Linux
 
 Vous devez vous assurer que l'hôte répond à la configuration requise avant d'installer le module de plug-ins SnapCenter pour Linux.

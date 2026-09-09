@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup 
 summary: 'Si une ressource ne fait pas encore partie d"un groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources.' 
 ---
-= Sauvegarde des ressources SQL
+= Sauvegardez les ressources SQL dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

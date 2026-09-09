@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: PDB, pluggable database, restore, CDB, PITR, point-in-time recovery, RMAN 
 summary: 'Vous pouvez restaurer et récupérer une base de données enfichable (PDB) qui a été corrompue ou supprimée sans affecter les autres PDB dans la base de données conteneur \(CDB\). SnapCenter utilise RMAN pour effectuer une récupération ponctuelle \(PITI\) du PDB.' 
 ---
-= Restaurez et récupérez une base de données enfichable à l'aide d'une récupération ponctuelle
+= Restaurez une base de données enfichable à l'aide d'une restauration à un point dans le temps dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

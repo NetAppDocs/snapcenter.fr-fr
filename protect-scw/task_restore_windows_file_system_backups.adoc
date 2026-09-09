@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore 
 summary: 'Vous pouvez utiliser SnapCenter pour restaurer les sauvegardes du système de fichiers. La restauration du système de fichiers est un processus en plusieurs phases qui copie toutes les données d"une sauvegarde spécifiée vers l"emplacement d"origine du système de fichiers.' 
 ---
-= Restaurez les sauvegardes du système de fichiers Windows
+= Restaurez les sauvegardes du système de fichiers Windows avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

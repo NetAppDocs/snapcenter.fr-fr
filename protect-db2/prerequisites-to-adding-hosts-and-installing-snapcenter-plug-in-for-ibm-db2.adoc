@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials, Windows, Linux, AIX 
 summary: 'Avant d"ajouter un hôte et d"installer les modules d"extension, vous devez remplir toutes les conditions requises. Plug-in SnapCenter pour IBM DB2 pris en charge dans les environnements Windows, Linux et AIX.' 
 ---
-= Conditions préalables à l'ajout d'hôtes et à l'installation du module Plug-ins pour Windows, Linux ou AIX
+= Prérequis pour ajouter des hôtes et installer le SnapCenter Plug-in pour IBM Db2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ NOTE: IBM Java n'est pas pris en charge sur les hôtes Windows et Linux.
 
 
 
+[[windows-hosts]]
 == Hôtes Windows
 
 * Vous devez disposer d'un utilisateur de domaine disposant de privilèges d'administrateur local avec des autorisations de connexion locales sur l'hôte distant.
@@ -38,6 +39,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Télécharger J
 
 
 
+[[linux-and-aix-hosts]]
 == Hôtes Linux et AIX
 
 * Vous devez avoir activé la connexion SSH par mot de passe pour l'utilisateur root ou non-root.
@@ -54,6 +56,7 @@ link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license
 
 
 
+[[supplemental-commands]]
 == Commandes supplémentaires
 
 Pour exécuter une commande supplémentaire sur le plug-in SnapCenter pour IBM DB2, vous devez l'inclure dans le fichier _allowed_commands.config_.
@@ -87,6 +90,7 @@ NOTE: Vous ne devez pas utiliser de caractère générique (*) pour autoriser to
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 == Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte Linux
 
 SnapCenter permet à un utilisateur non root d'installer le package de plug-ins SnapCenter pour Linux et de démarrer le processus de plug-in. Les processus de plug-in s'exécutent en tant qu'utilisateur non racine efficace. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.
@@ -168,6 +172,7 @@ IMPORTANT: Cet exemple ne doit être utilisé que comme référence pour la cré
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-aix-host]]
 == Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte AIX
 
 SnapCenter 4.4 et version ultérieure permet à un utilisateur non-root d'installer le module de plug-ins SnapCenter pour AIX et de démarrer le processus de plug-in. Les processus de plug-in s'exécutent en tant qu'utilisateur non racine efficace. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.

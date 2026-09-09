@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recovery operations 
 summary: 'SnapCenter vous permet d"effectuer différents types d"opérations de restauration pour PostgreSQL.' 
 ---
-= Types d'opérations de restauration pris en charge pour les clusters PostgreSQL
+= Opérations de récupération pour les clusters PostgreSQL dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

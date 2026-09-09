@@ -4,37 +4,39 @@ title: Gestion de SnapCenter Server et des plug-ins
 entries:
 - title: Voir le tableau de bord
   entries:
-  - title: Présentation du tableau de bord
+  - title: Découvrez le tableau de bord SnapCenter
     url: "/admin/concept_overview_of_dashboard.html"
-  - title: Comment afficher les informations sur le tableau de bord
+  - title: Consultez les informations sur le tableau de bord SnapCenter
     url: "/admin/task_how_to_view_information_on_the_dashboard.html"
-  - title: Rapports d'état des requêtes des travaux à partir du tableau de bord
+  - title: Demandez des rapports d'état des tâches depuis le tableau de bord SnapCenter
     url: "/admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html"
-  - title: Demander des rapports d'état de protection à partir du tableau de bord
+  - title: Demandez des rapports sur l’état de la protection depuis le tableau de
+      bord SnapCenter
     url: "/admin/task_request_reports_of_the_protection_status_from_the_dashboard.html"
-- title: Gérer le RBAC
+- title: Gérez le contrôle d'accès basé sur les rôles (RBAC) dans SnapCenter
   url: "/admin/task_manage_rbac.html"
-- title: Gérer les hôtes
+- title: Gérez les hôtes dans SnapCenter
   url: "/admin/concept_manage_hosts.html"
-- title: Opérations prises en charge à partir de la page Ressources
+- title: Opérations prises en charge depuis la page SnapCenter Ressources
   url: "/admin/concept_what_operations_can_be_performed_from_the_resource_page.html"
-- title: Gestion des règles
+- title: Gérez les stratégies dans SnapCenter
   url: "/admin/concept_manage_policies.html"
-- title: Gérer les groupes de ressources
+- title: Gérer les groupes de ressources dans SnapCenter
   url: "/admin/task_manage_resource_groups.html"
-- title: Gérer les sauvegardes
+- title: Gérez les sauvegardes dans SnapCenter
   url: "/admin/concept_manage_backups.html"
-- title: Supprimer les clones
+- title: Supprimer les clones SnapCenter
   url: "/admin/task_delete_clones.html"
-- title: Surveillez les tâches, les plannings, les événements et les journaux
+- title: Surveillez les tâches, les calendriers, les événements et les journaux de
+    SnapCenter
   url: "/admin/concept_monitor_jobs_schedules_events_and_logs.html"
-- title: Présentation des fonctionnalités de reporting SnapCenter
+- title: Découvrez les fonctionnalités de reporting de SnapCenter
   url: "/admin/concept_overview_of_snapcenter_reports.html"
 - title: Gérer le référentiel du serveur SnapCenter
   url: "/admin/concept_manage_the_snapcenter_server_repository.html"
-- title: Gérer les ressources des domaines non fiables
+- title: Gérer les ressources SnapCenter dans des domaines non fiables
   url: "/admin/concept_manage_resources_of_untrusted_domains.html"
-- title: Gestion du système de stockage
+- title: Gérez le système de stockage dans SnapCenter
   url: "/admin/concept_manage_the_storage_system.html"
-- title: Gérer la collecte de données EMS
+- title: Gérer la collecte de données EMS dans SnapCenter
   url: "/admin/concept_manage_ems_data_collection.html"

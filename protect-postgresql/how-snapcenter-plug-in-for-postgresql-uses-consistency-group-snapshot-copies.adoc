@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: 'Vous pouvez utiliser le plug-in pour créer des snapshots de groupes de ressources. Un groupe de cohérence est un conteneur qui peut héberger plusieurs volumes, de sorte que vous puissiez les gérer comme une entité unique. Un groupe de cohérence est une copie instantanée de plusieurs volumes, fournissant ainsi des copies cohérentes d"un groupe de volumes.' 
 ---
-= Comment le plug-in SnapCenter pour PostgreSQL utilise les snapshots de groupes de cohérence
+= Comment le plug-in SnapCenter pour PostgreSQL utilise les copies Snapshot de groupe de cohérence
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

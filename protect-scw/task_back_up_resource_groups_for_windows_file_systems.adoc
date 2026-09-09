@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backing up 
 summary: 'Un groupe de ressources est un ensemble de ressources sur un hôte ou un cluster. Une opération de sauvegarde sur le groupe de ressources est effectuée sur toutes les ressources définies dans le groupe de ressources. Vous pouvez sauvegarder un groupe de ressources à la demande à partir de la page Ressources. Si une stratégie est associée à un groupe de ressources et qu"une planification est configurée, les sauvegardes sont automatiquement effectuées en fonction de la planification.' 
 ---
-= Sauvegarder des groupes de ressources pour les systèmes de fichiers Windows
+= Sauvegardez les groupes de ressources du système de fichiers Windows dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

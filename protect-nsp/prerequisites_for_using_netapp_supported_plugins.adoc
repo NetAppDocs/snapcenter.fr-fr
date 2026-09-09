@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials 
 summary: 'Avant d"utiliser les plug-ins pris en charge par SnapCenter NetApp, l"administrateur SnapCenter doit installer et configurer le serveur SnapCenter et effectuer les tâches requises.' 
 ---
-= Conditions préalables à l'utilisation des plug-ins pris en charge par NetApp
+= Prérequis pour l'utilisation des plug-ins pris en charge par NetApp avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

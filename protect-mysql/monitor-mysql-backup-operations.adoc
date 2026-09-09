@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Server 
 summary: 'Vous pouvez contrôler la progression des différentes opérations de sauvegarde à l"aide de la page tâches SnapCenter. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
-= Surveillez les opérations de sauvegarde MySQL
+= Surveillez les opérations de sauvegarde MySQL dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,6 +49,7 @@ Le bouton *Afficher les journaux* affiche les journaux détaillés de l'opérati
 
 
 
+[[monitor-data-protection-operations-on-mysql-instances-in-the-activity-pane]]
 == Surveillez les opérations de protection des données sur les instances MySQL dans le volet activité
 
 Le volet activité affiche les cinq opérations les plus récentes effectuées. Le volet activité s'affiche également lorsque l'opération a été lancée et que l'état de l'opération a été défini.

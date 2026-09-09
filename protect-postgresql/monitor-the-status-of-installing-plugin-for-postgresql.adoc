@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, install, snapCenter plug-in for postgresql 
 summary: 'Vous pouvez contrôler la progression de l"installation du module d"extension SnapCenter à l"aide de la page travaux. Vous pouvez vérifier la progression de l"installation pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
-= Surveillez l'état d'installation du plug-in pour PostgreSQL
+= Surveillez l'état de l'installation du plug-in SnapCenter pour PostgreSQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST API, Swagger 
 summary: 'Les API REST sont exposées via la page Web de swagger. Vous pouvez accéder à la page Web swagger pour afficher les API REST du serveur SnapCenter et pour émettre manuellement un appel d"API. Vous pouvez utiliser des API REST pour gérer votre SnapCenter Server ou effectuer des opérations de protection des données.' 
 ---
-= Comment accéder aux API REST à l'aide de la page Web de l'API swagger
+= Accédez aux API REST de SnapCenter via la page web Swagger
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

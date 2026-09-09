@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, windows plug-ins, powershell cmdlet 
 summary: 'Vous pouvez désinstaller des modules externes individuels ou désinstaller des modules externes d"un ou plusieurs hôtes à l"aide de l"applet de commande Uninstall-SmHostPackage sur l"interface de ligne de commande de l"hôte SnapCenter Server.' 
 ---
-= Désinstallez les plug-ins Windows à l'aide de l'applet de commande PowerShell
+= Désinstallez les plug-ins Windows SnapCenter à l'aide de PowerShell
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

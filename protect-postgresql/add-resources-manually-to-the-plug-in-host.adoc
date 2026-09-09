@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Postgresql 
 summary: 'La découverte automatique n"est pas prise en charge pour certaines instances PostgreSQL. Vous devez ajouter ces ressources manuellement.' 
 ---
-= Ajoutez des ressources manuellement au plug-in hôte
+= Ajoutez manuellement les ressources PostgreSQL SnapCenter à l'hôte du plug-in
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

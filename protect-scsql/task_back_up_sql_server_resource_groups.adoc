@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server 
 summary: 'Vous pouvez sauvegarder un groupe de ressources à la demande à partir de la page Ressources. Si une stratégie est associée à un groupe de ressources et qu"une planification est configurée, les sauvegardes sont automatiquement effectuées en fonction de la planification.' 
 ---
-= Sauvegardez les groupes de ressources SQL Server
+= Sauvegardez les groupes de ressources SQL Server dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

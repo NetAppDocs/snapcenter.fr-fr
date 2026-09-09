@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage resource groups 
 summary: Vous pouvez effectuer diverses opérations sur des groupes de ressources. 
 ---
-= Gérer les groupes de ressources
+= Gérer les groupes de ressources dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -39,6 +39,7 @@ Cette opération n'est prise en charge que pour les groupes de ressources SQL (q
 
 
 
+[[stop-and-resume-operations-on-resource-groups]]
 == Arrêter et reprendre les opérations sur les groupes de ressources
 
 Vous pouvez désactiver temporairement les opérations planifiées de démarrer sur un groupe de ressources. Vous pouvez activer ces opérations plus tard que vous le souhaitez.
@@ -55,6 +56,7 @@ Si vous souhaitez reprendre les opérations sur le groupe de ressources que vous
 
 
 
+[[delete-resource-groups]]
 == Supprimer des groupes de ressources
 
 Vous pouvez supprimer un groupe de ressources si vous n'avez plus besoin de protéger les ressources du groupe de ressources. Vous devez vous assurer que les groupes de ressources sont supprimés avant de supprimer des plug-ins de SnapCenter.

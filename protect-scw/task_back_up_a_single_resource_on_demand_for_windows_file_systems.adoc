@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backing up 
 summary: Si une ressource ne se trouve pas dans un groupe de ressources, vous pouvez sauvegarder la ressource à la demande à partir de la page Ressources. 
 ---
-= Sauvegarder une seule ressource à la demande pour les systèmes de fichiers Windows
+= Sauvegardez une ressource du système de fichiers Windows à la demande dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

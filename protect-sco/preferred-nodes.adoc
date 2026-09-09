@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: Comment SnapCenter découvre les bases de données Oracle. 
 ---
-= Nœuds préférés dans la configuration RAC
+= Comment SnapCenter utilise les nœuds préférés dans une configuration RAC
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,12 +26,14 @@ Le nœud 3 ne sera pas utilisé pour la sauvegarde, car il ne figure pas dans la
 
 
 
+[[flex-asm-setup]]
 == Configuration de Flex ASM
 
 Dans une configuration Flex ASM, les nœuds Leaf ne seront pas répertoriés comme nœuds préférés si la cardinalité est inférieure au nombre de nœuds du cluster RAC. En cas de modification des rôles de nœud de cluster Flex ASM, vous devez découvrir manuellement afin que les nœuds préférés soient actualisés.
 
 
 
+[[required-database-state]]
 == État requis de la base de données
 
 Les instances de base de données RAC sur les nœuds préférés doivent être dans l'état requis pour que la sauvegarde puisse se terminer correctement :

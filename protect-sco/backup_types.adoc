@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
 summary: Types de sauvegarde pris en charge pour les bases de données Oracle. 
 ---
-= Types de sauvegarde pris en charge pour les bases de données Oracle
+= Types de sauvegarde pris en charge pour les bases de données Oracle dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Le type de sauvegarde spécifie le type de sauvegarde que vous souhaitez créer.
 
 
 
+[[online-backup]]
 == Sauvegarde en ligne
 
 Une sauvegarde créée lorsque la base de données est en ligne est appelée sauvegarde en ligne. Également appelée sauvegarde à chaud, une sauvegarde en ligne vous permet de créer une sauvegarde de la base de données sans l'arrêter.
@@ -28,6 +29,7 @@ Dans le cadre de la sauvegarde en ligne, vous pouvez créer une sauvegarde des f
 
 
 
+[[offline-backup]]
 == Sauvegarde hors ligne
 
 Une sauvegarde créée lorsque la base de données est à l'état monté ou arrêté est appelée sauvegarde hors ligne. Une sauvegarde hors ligne est également appelée sauvegarde à froid. Vous pouvez inclure uniquement les fichiers de données et les fichiers de contrôle dans les sauvegardes hors ligne. Vous pouvez créer une sauvegarde de montage hors ligne ou d'arrêt hors ligne.

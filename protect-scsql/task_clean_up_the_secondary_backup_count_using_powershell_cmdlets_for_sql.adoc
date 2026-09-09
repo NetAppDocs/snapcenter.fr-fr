@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backups 
 summary: 'Vous pouvez utiliser l"applet de commande Remove-SmBackup pour nettoyer le nombre de sauvegardes secondaires sans snapshots. Vous pouvez utiliser cette applet de commande lorsque le nombre total de snapshots affichés dans la topologie gérer les copies ne correspond pas au paramètre de conservation des snapshots de stockage secondaire.' 
 ---
-= Nettoyez le nombre de sauvegardes secondaires à l'aide des applets de commande PowerShell
+= Nettoyez le nombre de sauvegardes secondaires SQL Server dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

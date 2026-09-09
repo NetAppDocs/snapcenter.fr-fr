@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: postgresql 
 summary: 'Avant d"installer le package de plug-ins SnapCenter pour Windows, vous devez connaître les exigences en matière d"espace système hôte de base et de dimensionnement.' 
 ---
-= Configuration requise pour l'hôte pour installer le module de plug-ins SnapCenter pour Windows
+= SnapCenter Plug-in pour les exigences de l'hôte PostgreSQL sous Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

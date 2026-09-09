@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP cluster role, privileges 
 summary: 'Vous devez créer un rôle de cluster ONTAP avec des privilèges minimaux afin de ne pas avoir à utiliser le rôle d"administrateur ONTAP pour effectuer des opérations dans SnapCenter.' 
 ---
-= Créez des rôles de cluster ONTAP avec des privilèges minimaux
+= Créez un rôle de cluster ONTAP avec des privilèges minimaux pour SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: Vous devez répéter cette commande pour chaque autorisation.
 
 
 
+[[ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions]]
 == Commandes CLI ONTAP permettant de créer des rôles de cluster et d'attribuer des autorisations
 
 Vous devez exécuter plusieurs commandes CLI ONTAP pour créer des rôles de cluster et attribuer des autorisations.

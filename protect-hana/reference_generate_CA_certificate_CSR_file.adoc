@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 'Vous pouvez générer une requête de signature de certificat (RSC) et importer le certificat.' 
 ---
-= Générer le fichier CSR de certificat CA
+= Génération de fichier CSR de certificat CA dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

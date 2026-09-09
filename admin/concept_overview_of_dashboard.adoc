@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: dashboard 
 summary: 'Dans le volet de navigation de gauche de SnapCenter, le tableau de bord fournit un premier aperçu de l"état de santé de votre système, notamment les activités récentes des tâches, les alertes, le résumé de la protection, l"efficacité et l"utilisation du stockage, l"état des tâches SnapCenter \(sauvegarde, clonage, restauration\), l"état de la configuration pour les hôtes de cluster autonomes et Windows, Nombre de SVM (Storage Virtual machine) gérés par SnapCenter, et capacité de licence.' 
 ---
-= Présentation du tableau de bord
+= Découvrez le tableau de bord SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ Dans de nombreux cas, vous pouvez afficher plus d'informations sur un affichage 
 
 
 
+[[recent-job-activities]]
 == Activités récentes du poste
 
 La mosaïque activités de travail récentes affiche l'activité de tâche la plus récente à partir de toutes les tâches de sauvegarde, de restauration et de clonage auxquelles vous avez accès. Les travaux de cet écran ont l'un des États suivants : terminé, Avertissement, échec, exécution, en file d'attente, Et annulée.
@@ -29,6 +30,7 @@ Cliquez sur *Afficher tout* pour afficher l'historique de tous les travaux SnapC
 
 
 
+[[alerts]]
 == Alertes
 
 La mosaïque alertes affiche les dernières alertes critiques et d'avertissement non résolues pour les hôtes et le serveur SnapCenter.
@@ -39,6 +41,7 @@ En cliquant sur une alerte spécifique, vous accédez à la page alertes pour en
 
 
 
+[[latest-protection-summary]]
 == Dernière synthèse de la protection
 
 La dernière mosaïque de résumé de la protection vous donne l'état de protection pour toutes les entités auxquelles vous avez accès. Par défaut, l'affichage indique l'état de tous les plug-ins. Des informations d'état sont fournies pour les ressources sauvegardées sur un stockage primaire comme snapshots et sur un stockage secondaire à l'aide des technologies SnapMirror et SnapVault. La disponibilité des informations d'état de protection pour le stockage secondaire dépend du type de plug-in sélectionné.
@@ -98,6 +101,7 @@ NOTE: Si vous utilisez SnapCenter Server 4.2 et une version antérieure du plug-
 
 
 
+[[jobs]]
 == Emplois
 
 La mosaïque travaux fournit un récapitulatif des tâches de sauvegarde, de restauration et de clonage auxquelles vous avez accès. Vous pouvez personnaliser l'intervalle de temps de n'importe quel rapport à l'aide du menu déroulant. Les options de période sont fixées aux 24 dernières heures, aux 7 derniers jours et aux 30 derniers jours. Le rapport par défaut affiche les tâches de protection des données exécutées au cours des 7 derniers jours.
@@ -137,6 +141,7 @@ Nombre de travaux en cours d'exécution.
 |===
 
 
+[[storage]]
 == Stockage
 
 Le module stockage affiche le stockage primaire et secondaire consommé par les tâches de protection sur une période de 90 jours, décrit sous forme graphique les tendances de consommation et calcule les économies en termes de stockage primaire. Les informations de stockage sont mises à jour toutes les 24 heures à 12 h du matin
@@ -152,6 +157,7 @@ NOTE: Si vous utilisez SnapCenter Server 4.2 et une version antérieure du plug-
 
 
 
+[[configuration]]
 == Configuration
 
 La mosaïque de configuration fournit des informations d'état consolidées pour tous les hôtes de cluster Windows et autonomes actifs que SnapCenter gère et auxquels vous avez accès. Cela inclut les informations sur l'état du plug-in associées à ces hôtes.

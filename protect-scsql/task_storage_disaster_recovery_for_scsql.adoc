@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disaster recovery 
 summary: Vous pouvez restaurer le plug-in SnapCenter pour stockage SQL Server en activant le mode DR pour le stockage sur la page Paramètres globaux. 
 ---
-= Stockage de reprise après incident pour le plug-in SnapCenter pour SQL Server
+= Récupérer le plug-in SnapCenter pour le stockage SQL Server après une catastrophe
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

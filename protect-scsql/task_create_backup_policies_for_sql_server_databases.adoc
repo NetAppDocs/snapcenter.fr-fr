@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: 'Vous pouvez créer une stratégie de sauvegarde pour la ressource ou le groupe de ressources avant d"utiliser SnapCenter pour sauvegarder les ressources SQL Server, ou vous pouvez créer une stratégie de sauvegarde au moment où vous créez un groupe de ressources ou sauvegardez une seule ressource.' 
 ---
-= Créer des stratégies de sauvegarde pour les bases de données SQL Server
+= Créez des stratégies de sauvegarde pour les bases de données SQL Server dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -58,6 +58,7 @@ Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des
 
 
 
+[[step-1-create-policy-name]]
 == Étape 1 : création d'un nom de stratégie
 
 . Dans le volet de navigation de gauche, sélectionnez *Paramètres*.
@@ -68,6 +69,7 @@ Pour ONTAP 9.12.1 et les versions antérieures, les clones créés à partir des
 
 
 
+[[step-2-configure-policy-options]]
 == Étape 2 : configuration des options de stratégie
 
 . Dans la page Type de stratégie, effectuez les opérations suivantes :
@@ -129,6 +131,7 @@ NOTE: Microsoft SQL ne prend pas en charge l'option *copie uniquement sauvegarde
 
 
 
+[[step-3-configure-availability-group-settings]]
 == Étape 3 : configurer les paramètres du groupe de disponibilité
 
 . Dans la section Paramètres du groupe de disponibilité, effectuez les opérations suivantes :
@@ -158,6 +161,7 @@ NOTE: Dans les configurations en cluster, les sauvegardes sont conservées sur c
 
 
 
+[[step-4-configure-snapshot-and-replication-settings]]
 == Étape 4 : configurer les paramètres de Snapshot et de réplication
 
 . Dans la page instantané et réplication, effectuez les opérations suivantes :
@@ -180,6 +184,7 @@ NOTE: Si vous avez prévu 2 h 00, l'horaire ne sera pas déclenché pendant l'he
 
 
 
+[[step-5-configure-up-to-the-minute-retention-settings]]
 == Étape 5 : configurez les paramètres de conservation à chaud
 
 . Dans la section Paramètres de rétention à la minute, en fonction du type de sauvegarde sélectionné dans la page Type de sauvegarde, effectuez une ou plusieurs des opérations suivantes :
@@ -206,6 +211,7 @@ Conservation des copies de sauvegarde pendant un nombre spécifique de jours.
 ====
 
 
+[[step-6-configure-snapshot-settings]]
 == Étape 6 : configurer les paramètres de snapshot
 
 . Pour les paramètres de conservation de sauvegarde complète, effectuez les opérations suivantes :
@@ -246,6 +252,7 @@ NOTE: Vous pouvez attribuer des étiquettes SnapMirror aux snapshots principaux 
 
 
 
+[[step-7-configure-secondary-replication-options]]
 == Étape 7 : configurer les options de réplication secondaire
 
 . Dans la section Sélectionner les options de réplication secondaire, sélectionnez l'une des options de réplication secondaires suivantes ou les deux :
@@ -299,6 +306,7 @@ Voir link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topolo
 ====
 
 
+[[step-8-configure-script-settings]]
 == Étape 8 : configurer les paramètres de script
 
 . Dans la page script, entrez le chemin d'accès et les arguments du prescripteur ou du PostScript qui doivent être exécutés avant ou après l'opération de sauvegarde, respectivement.
@@ -317,6 +325,7 @@ NOTE: Vous devez configurer la règle de conservation SnapMirror dans ONTAP de s
 
 
 
+[[step-9-configure-verification-settings]]
 == Étape 9 : configurer les paramètres de vérification
 
 Dans la page Vérification, effectuez les opérations suivantes :
@@ -361,6 +370,7 @@ NOTE: Le chemin prescripteurs ou postscripts ne doit pas inclure de disques ou d
 
 
 
+[[step-10-review-summary]]
 == Étape 10 : passez en revue le résumé
 
 . Passez en revue le résumé, puis sélectionnez *Terminer*.

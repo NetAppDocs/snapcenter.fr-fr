@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Server, monitor, backup, activity pane, data protection 
 summary: 'Vous pouvez contrôler la progression des différentes opérations de sauvegarde à l"aide de la page tâches SnapCenter. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
-= Surveiller la sauvegarde des systèmes de fichiers Unix
+= Surveillez les opérations de sauvegarde des systèmes de fichiers UNIX dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Découvrez comment surveiller la progression des opérations de sauvegarde et de
 
 
 
+[[monitor-unix-file-systems-backup-operations]]
 == Surveillez les opérations de sauvegarde des systèmes de fichiers Unix
 
 Vous pouvez surveiller la progression des différentes opérations de sauvegarde à l'aide de la page SnapCenterJobs. Vous pouvez vérifier la progression pour déterminer quand elle est terminée ou s'il y a un problème.
@@ -55,6 +56,7 @@ Le bouton *Afficher les journaux* affiche les journaux détaillés de l'opérati
 
 
 
+[[monitor-data-protection-operations-in-the-activity-pane]]
 == Surveiller les opérations de protection des données dans le volet activité
 
 Le volet activité affiche les cinq opérations les plus récentes effectuées. Le volet activité s'affiche également lorsque l'opération a été lancée et que l'état de l'opération a été défini.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-in, resources, NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: Vous devez ajouter les ressources à sauvegarder ou à cloner. Selon votre environnement, les ressources peuvent être des instances de base de données ou des collections que vous souhaitez sauvegarder ou cloner. 
 ---
-= Ajoutez des ressources aux plug-ins NetApp pris en charge
+= Ajoutez des ressources aux plug-ins NetApp pris en charge pour SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -101,12 +101,14 @@ Après avoir ajouté les ressources, vous pouvez modifier les détails de la res
 
 
 
+[[parameters-to-configure-the-resource]]
 == Paramètres de configuration de la ressource
 
 Si vous ajoutez les plug-ins manuellement, vous pouvez utiliser les paramètres suivants pour configurer la ressource dans la page Paramètres de ressource.
 
 
 
+[[plug-in-for-mongodb]]
 === Plug-in pour MongoDB
 
 Paramètres de ressource :
@@ -130,6 +132,7 @@ Vous devez fournir les paramètres suivants dans le fichier n MongoDB.properties
 
 
 
+[[plug-in-for-maxdb]]
 === Plug-in pour MaxDB
 
 Paramètres de ressource :
@@ -163,6 +166,7 @@ Si LE paramètre MAXDB_BACKUP_TEMPLATES est défini, vous devez également défi
 
 
 
+[[plug-in-for-sap-ase]]
 === Plug-in pour SAP ASE
 
 Paramètres de ressource :
@@ -187,6 +191,7 @@ Vous devez spécifier chaque base de données nécessitant un vidage de transact
 
 
 
+[[plug-in-for-oracle-applications-orascpm]]
 === Plug-in pour applications Oracle (ORASCPM)
 
 Paramètres de ressource :

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, snapcenter 
 summary: 'Vous pouvez contrôler la progression de l"installation du module d"extension SnapCenter à l"aide de la page travaux. Vous pouvez vérifier la progression de l"installation pour déterminer quand elle est terminée ou s"il y a un problème.' 
 ---
-= Contrôler l'état de l'installation du plug-in pour SQL Server
+= Surveillez l'état d'installation du SnapCenter Plug-in pour SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split clone, snapcenter 
 summary: Vous pouvez utiliser SnapCenter pour séparer une ressource clonée de la ressource parent. Le clone divisé devient indépendant de la ressource parent. 
 ---
-= Séparer un clone
+= Diviser un clone de système de fichiers UNIX dans SnapCenter
 :allow-uri-read: 
 
 

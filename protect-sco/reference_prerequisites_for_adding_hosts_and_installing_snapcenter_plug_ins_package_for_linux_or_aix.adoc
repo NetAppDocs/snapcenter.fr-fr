@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: prerequisites, iSCSI, Oracle path, host requirement for Linux, sudo privileges, non-root user, host requirements for AIX, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
 summary: 'Avant d"ajouter un hôte et d"installer les packages de plug-ins, vous devez respecter toutes les exigences.' 
 ---
-= Conditions préalables pour l'ajout d'hôtes et l'installation de Plug-ins Package pour Linux ou AIX
+= Prérequis pour ajouter des hôtes et installer le package de plug-ins SnapCenter pour Linux ou AIX
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,6 +49,7 @@ NOTE: Le mappage UUID dans le fichier /etc/fstab n'est pas pris en charge par Sn
 
 
 
+[[linux-host-requirements]]
 == Configuration requise pour l'hôte Linux
 
 Vous devez vous assurer que l'hôte répond à la configuration requise avant d'installer le module de plug-ins SnapCenter pour Linux.
@@ -104,6 +105,7 @@ Pour obtenir les dernières informations sur les versions prises en charge, cons
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 === Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte Linux
 
 Les versions SnapCenter 2.0 et ultérieures permettent à un utilisateur non-root d'installer le package de plug-ins SnapCenter pour Linux et de démarrer le processus de plug-in. Les processus de plug-in s'exécutent en tant qu'utilisateur non racine efficace. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.
@@ -182,6 +184,7 @@ IMPORTANT: Cet exemple ne doit être utilisé que comme référence pour la cré
 
 
 
+[[aix-host-requirements]]
 == Configuration requise pour l'hôte AIX
 
 Vous devez vous assurer que l'hôte répond aux exigences requises avant d'installer le module de plug-ins SnapCenter pour AIX.
@@ -230,6 +233,7 @@ Pour obtenir les dernières informations sur les versions prises en charge, cons
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-aix-host]]
 === Configurez les privilèges sudo pour les utilisateurs non-root pour l'hôte AIX
 
 SnapCenter 4.4 et version ultérieure permet à un utilisateur non-root d'installer le module de plug-ins SnapCenter pour AIX et de démarrer le processus de plug-in. Les processus de plug-in s'exécutent en tant qu'utilisateur non racine efficace. Vous devez configurer les privilèges sudo pour que l'utilisateur non-root puisse accéder à plusieurs chemins.
@@ -307,6 +311,7 @@ IMPORTANT: Cet exemple ne doit être utilisé que comme référence pour la cré
 
 
 
+[[set-up-credentials]]
 == Configurez les informations d'identification
 
 SnapCenter utilise des identifiants pour authentifier les utilisateurs pour les opérations SnapCenter. Vous devez créer des informations d'identification pour l'installation du module d'extension sur des hôtes Linux ou AIX.
@@ -380,6 +385,7 @@ Une fois les informations d'identification terminées, vous pouvez affecter la m
 
 
 
+[[configure-credentials-for-an-oracle-database]]
 == Configurer les informations d'identification d'une base de données Oracle
 
 Vous devez configurer les informations d'identification utilisées pour effectuer des opérations de protection des données sur les bases de données Oracle.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations. 
 ---
-= Restaurer le flux de travail
+= Workflow de restauration et de récupération de la base de données SAP HANA dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

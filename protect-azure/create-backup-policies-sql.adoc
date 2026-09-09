@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, sql, backup policies 
 summary: Créez une stratégie de sauvegarde pour le groupe de ressources ou de ressources que vous souhaitez sauvegarder. 
 ---
-= Créer des stratégies de sauvegarde pour les bases de données SQL Server
+= Créez des stratégies de sauvegarde pour les bases de données SQL Server dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

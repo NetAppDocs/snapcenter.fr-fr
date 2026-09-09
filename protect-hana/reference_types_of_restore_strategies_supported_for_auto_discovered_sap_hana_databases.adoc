@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Databases 
 summary: 'Vous devez définir une stratégie pour pouvoir effectuer les opérations de restauration à l"aide de SnapCenter. Il existe deux types de stratégies de restauration pour les bases de données SAP HANA automatiquement découvertes.' 
 ---
-= Types de stratégies de restauration pris en charge pour les bases de données SAP HANA automatiquement découvertes
+= SnapCenter stratégies de restauration pour les bases de données SAP HANA détectées automatiquement
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Vous devez définir une stratégie pour pouvoir effectuer les opérations de res
 
 
 
+[[complete-resource-restore]]
 == Restauration des ressources terminée
 
 * Restauration de tous les volumes, qtrees et LUN d'une ressource
@@ -30,6 +31,7 @@ NOTE: Si la ressource contient des volumes ou des qtrees, les snapshots pris apr
 
 
 
+[[tenant-database]]
 == Base de données des locataires
 
 * Restaure la base de données des locataires

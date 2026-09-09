@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, resource group 
 summary: Une opération de sauvegarde sur le groupe de ressources est effectuée sur toutes les ressources définies dans le groupe de ressources. 
 ---
-= Sauvegardez les groupes de ressources des systèmes de fichiers Unix
+= Sauvegardez les groupes de ressources des systèmes de fichiers UNIX SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

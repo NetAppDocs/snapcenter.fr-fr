@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 'Vous pouvez installer le plug-in SnapCenter pour Microsoft SQL Server simultanément sur plusieurs hôtes à l"aide de l"applet de commande Install-SmHostPackage PowerShell.' 
 ---
-= Installez le plug-in SnapCenter pour Microsoft SQL Server sur plusieurs hôtes distants à l'aide d'applets de commande
+= Installez le plug-in SnapCenter pour Microsoft SQL Server sur plusieurs hôtes à l'aide de cmdlets
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

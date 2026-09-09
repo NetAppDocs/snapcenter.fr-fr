@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup naming conventions 
 summary: Vous pouvez utiliser la nomenclature établie par défaut des snapshots ou une nomenclature établie personnalisée. La convention de dénomination des sauvegardes par défaut ajoute un horodatage aux noms des snapshots pour vous aider à identifier la date de création des copies. 
 ---
-= Conventions de nom de sauvegarde du plug-in pour SQL Server
+= Conventions d'appellation de sauvegarde pour le plug-in SnapCenter pour SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

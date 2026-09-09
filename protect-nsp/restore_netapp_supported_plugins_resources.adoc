@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Le workflow de restauration et de reprise comprend la planification, la réalisation des opérations de restauration et la surveillance des opérations. 
 ---
-= Restaurez les ressources de plug-in prises en charge par NetApp
+= Flux de travail de restauration des plug-ins pris en charge par NetApp dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

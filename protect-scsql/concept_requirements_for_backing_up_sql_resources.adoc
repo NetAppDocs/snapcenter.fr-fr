@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Requirements 
 summary: Avant de sauvegarder une ressource SQL, vous devez vous assurer que plusieurs exigences sont respectées. 
 ---
-= Conditions requises pour la sauvegarde des ressources SQL
+= Exigences relatives à la sauvegarde des ressources SQL dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

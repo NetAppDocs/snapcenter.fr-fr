@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unix file systems, preparation for protection, prerequisites 
 summary: 'Avant d"effectuer toute opération de protection des données, telle que des opérations de sauvegarde, de clonage ou de restauration, vous devez configurer votre environnement.' 
 ---
-= Préparez-vous à protéger les systèmes de fichiers Unix
+= Prérequis pour la protection des systèmes de fichiers UNIX avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

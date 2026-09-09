@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource group 
 summary: Un groupe de ressources est requis pour toute tâche de protection des données. Vous devez également associer une ou plusieurs stratégies au groupe de ressources pour définir le type de tâche de protection des données que vous souhaitez exécuter et la planification de protection. 
 ---
-= Créez des groupes de ressources et associez des stratégies pour les serveurs Exchange
+= Créez des groupes de ressources et associez des stratégies pour les serveurs Exchange dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

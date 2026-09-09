@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter reports 
 summary: 'SnapCenter propose toute une gamme d"options de création de rapports qui vous permettent de surveiller et de gérer l"état de santé de votre système et sa réussite.' 
 ---
-= Présentation des fonctionnalités de reporting SnapCenter
+= Découvrez les fonctionnalités de reporting de SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -55,6 +55,7 @@ Tout autre utilisateur autre que l'administrateur pourra voir ou modifier le pla
 |===
 
 
+[[access-reports]]
 == Accédez aux rapports
 
 Le tableau de bord de SnapCenter vous permet d'obtenir une brève présentation de l'état de santé de votre système. Le tableau de bord vous permet d'accéder à davantage d'informations. Vous pouvez également accéder directement aux rapports détaillés.
@@ -67,6 +68,7 @@ Vous pouvez accéder aux rapports par l'une des méthodes suivantes :
 
 
 
+[[filter-your-report]]
 == Filtrez votre rapport
 
 Vous pouvez filtrer les données de votre rapport en fonction d'une plage de paramètres, en fonction du niveau de détail et de la durée des informations dont vous avez besoin.
@@ -91,6 +93,7 @@ Vous pouvez filtrer les données de votre rapport en fonction d'une plage de par
 
 
 
+[[export-or-print-reports]]
 == Exporter ou imprimer des rapports
 
 L'exportation de rapports SnapCenter vous permet d'afficher le rapport dans divers formats de rechange. Vous pouvez également imprimer des rapports.
@@ -110,6 +113,7 @@ L'exportation de rapports SnapCenter vous permet d'afficher le rapport dans dive
 
 
 
+[[set-the-smtp-server-for-email-notifications]]
 == Configurez le serveur SMTP pour les notifications par e-mail
 
 Vous pouvez spécifier le serveur SMTP à utiliser pour envoyer des rapports de tâches de protection des données à vous-même ou à d'autres personnes. Vous pouvez également envoyer un e-mail de test pour vérifier la configuration. Les paramètres sont appliqués globalement à toute tâche SnapCenter pour laquelle vous configurez la notification par e-mail.
@@ -126,6 +130,7 @@ Cette option permet de configurer le serveur SMTP pour l'envoi de tous les rappo
 
 
 
+[[configure-the-option-to-email-reports]]
 == Configurez l'option pour envoyer des rapports par e-mail
 
 Si vous souhaitez que des mises à jour régulières des tâches de protection des données SnapCenter vous soient envoyées ou à d'autres personnes afin de surveiller l'état de ces mises à jour, vous pouvez configurer l'option pour envoyer les rapports SnapCenter par e-mail lorsque vous créez un groupe de ressources.

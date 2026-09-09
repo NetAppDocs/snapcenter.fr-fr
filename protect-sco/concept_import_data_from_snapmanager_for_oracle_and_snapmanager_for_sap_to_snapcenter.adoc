@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import, SnapManager for Oracle, SnapManager for SAP 
 summary: Importer des données à partir de SnapManager pour Oracle et de SnapManager pour SAP vers SnapCenter vous permet de continuer à utiliser vos données des versions précédentes. 
 ---
-= Importation des données depuis SnapManager for Oracle et SnapManager for SAP vers SnapCenter
+= Comment SnapCenter importe des données depuis SnapManager pour Oracle et SAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -31,6 +31,7 @@ SnapCenter ne prend pas en charge Data ONTAP fonctionnant en 7-mode. Vous pouvez
 
 
 
+[[configurations-supported-for-importing-data]]
 == Configurations prises en charge pour l'importation de données
 
 Avant d'importer les données de SnapManager 3.4.x pour Oracle et de SnapManager 3.4.x pour SAP vers SnapCenter, nous vous recommandons de connaître les configurations prises en charge par le plug-in SnapCenter pour base de données Oracle.
@@ -39,6 +40,7 @@ Les configurations prises en charge par le plug-in SnapCenter pour Oracle Databa
 
 
 
+[[what-gets-imported-to-snapcenter]]
 == Ce qui est importé dans SnapCenter
 
 Vous pouvez importer des profils, des plannings et des opérations effectués à l'aide des profils.
@@ -195,6 +197,7 @@ Cependant, vous devez mettre à jour manuellement le serveur SMTP à l'aide de l
 |===
 
 
+[[what-does-not-get-imported-to-snapcenter]]
 == Ce qui n'est pas importé dans SnapCenter
 
 L'outil d'importation n'importe pas tout dans SnapCenter.
@@ -216,6 +219,7 @@ Après l'importation, vous devez modifier manuellement la stratégie corresponda
 
 
 
+[[prepare-to-import-data]]
 == Préparez-vous à importer des données
 
 Avant d'importer des données dans SnapCenter, vous devez effectuer certaines tâches pour que l'opération d'importation puisse réussir.
@@ -268,6 +272,7 @@ Si le FQDN n'est pas affiché, vous devez modifier /etc/hosts pour spécifier le
 
 
 
+[[import-data]]
 == Importer des données
 
 Vous pouvez importer des données en exécutant l'outil d'importation à partir de l'hôte de la base de données.

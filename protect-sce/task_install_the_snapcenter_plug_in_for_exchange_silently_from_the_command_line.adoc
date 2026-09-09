@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Vous devez installer le plug-in pour Exchange à partir de l"interface utilisateur SnapCenter. Cependant, si vous ne pouvez pas pour une raison quelconque, vous pouvez exécuter le programme d"installation de Plug-in pour Exchange sans surveillance en mode silencieux à partir de la ligne de commande Windows.' 
 ---
-= Installez le plug-in SnapCenter pour l'échange silencieusement à partir de la ligne de commande
+= Installez le plug-in SnapCenter pour Exchange à partir de la ligne de commandes
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

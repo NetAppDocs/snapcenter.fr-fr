@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: requirements, prerequisites 
 summary: Avant de sauvegarder une base de données Oracle, assurez-vous que les prérequis sont terminés. 
 ---
-= Conditions requises pour la sauvegarde d'une base de données Oracle
+= Exigences pour la sauvegarde d'une base de données Oracle avec SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

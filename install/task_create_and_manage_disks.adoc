@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disks, create, manage, clustered disks, view 
 summary: 'L"hôte Windows considère que des LUN de votre système de stockage sont des disques virtuels. Vous pouvez utiliser SnapCenter pour créer et configurer une LUN connectée via FC ou connectée via iSCSI.' 
 ---
-= Création et gestion des disques
+= Créer et gérer des disques dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,6 +23,7 @@ NOTE: La SnapCenter ne prend pas en charge la modification du nom d'un disque. L
 
 
 
+[[view-the-disks-on-a-host]]
 == Afficher les disques d'un hôte
 
 Vous pouvez afficher les disques sur chaque hôte Windows que vous gérez avec SnapCenter.
@@ -39,6 +40,7 @@ Les disques sont répertoriés.
 
 
 
+[[view-clustered-disks]]
 == Afficher les disques en cluster
 
 Vous pouvez afficher les disques en cluster sur le cluster que vous gérez à l'aide de SnapCenter. Les disques en cluster sont affichés uniquement lorsque vous sélectionnez le cluster dans la liste déroulante hôtes.
@@ -55,6 +57,7 @@ Les disques sont répertoriés.
 
 
 
+[[establish-an-iscsi-session]]
 == Établir une session iSCSI
 
 Si vous utilisez iSCSI pour vous connecter à une LUN, vous devez établir une session iSCSI avant de créer la LUN pour activer la communication.
@@ -129,6 +132,7 @@ SnapCenter établit la session iSCSI.
 
 
 
+[[create-fc-connected-or-iscsi-connected-luns-or-disks]]
 == Créer des disques ou des LUN connectés via FC ou iSCSI
 
 L'hôte Windows voit les LUN de votre système de stockage comme des disques virtuels. Vous pouvez utiliser SnapCenter pour créer et configurer une LUN connectée via FC ou connectée via iSCSI.
@@ -359,6 +363,7 @@ SnapCenter crée le LUN et le connecte au disque ou au chemin de disque spécifi
 
 
 
+[[resize-a-disk]]
 == Redimensionner un disque
 
 Vous pouvez augmenter ou réduire la taille d'un disque en fonction de l'évolution des besoins de votre système de stockage.
@@ -398,6 +403,7 @@ SnapCenter redimensionne le disque.
 
 
 
+[[connect-a-disk]]
 == Connectez un disque
 
 Vous pouvez utiliser l'assistant de connexion de disque pour connecter une LUN existante à un hôte ou pour reconnecter une LUN qui a été déconnectée.
@@ -580,6 +586,7 @@ SnapCenter connecte le LUN au chemin de lecteur ou de lecteur spécifié sur l'h
 
 
 
+[[disconnect-a-disk]]
 == Déconnectez un disque
 
 Vous pouvez déconnecter une LUN d'un hôte sans affecter le contenu de la LUN, à une exception près : si vous déconnectez un clone avant sa mise hors service, vous perdez le contenu du clone.
@@ -613,6 +620,7 @@ SnapCenter déconnecte le disque.
 
 
 
+[[delete-a-disk]]
 == Supprimer un disque
 
 Vous pouvez supprimer un disque lorsque vous n'en avez plus besoin. Après avoir supprimé un disque, vous ne pouvez plus le supprimer.

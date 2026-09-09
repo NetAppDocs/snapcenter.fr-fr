@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, NetApp supported plug-ins, NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 'Si une ressource individuelle de plug-ins pris en charge par NetApp ne fait partie d"aucun groupe de ressources, vous pouvez sauvegarder la ressource à partir de la page Ressources. Vous pouvez sauvegarder la ressource à la demande ou, si une stratégie est associée à la ressource et qu"une planification est configurée, les sauvegardes sont automatiquement effectuées en fonction de la planification.' 
 ---
-= Sauvegarde de ressources individuelles des plug-ins pris en charge par NetApp
+= Sauvegardez les ressources individuelles des plug-ins pris en charge par NetApp dans SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

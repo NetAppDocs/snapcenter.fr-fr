@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: 'Vous pouvez créer une nouvelle stratégie de sauvegarde pour les ressources avant d"utiliser SnapCenter pour sauvegarder des systèmes de fichiers Windows, ou vous pouvez créer une nouvelle stratégie de sauvegarde au moment de créer un groupe de ressources ou de sauvegarder une ressource.' 
 ---
-= Créez des stratégies de sauvegarde pour les systèmes de fichiers Windows
+= Créer des stratégies de sauvegarde SnapCenter pour les systèmes de fichiers Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

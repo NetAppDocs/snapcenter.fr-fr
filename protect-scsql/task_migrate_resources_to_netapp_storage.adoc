@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_migrate_resources_to_netapp_storage.html 
 sidebar: sidebar 
 keywords: migrate resources 
-summary: 'Une fois votre système de stockage NetApp provisionné à l"aide du plug-in SnapCenter pour Microsoft Windows, vous pouvez migrer vos ressources vers le système de stockage NetApp ou d"un LUN NetApp vers un autre LUN NetApp à l"aide de l"interface graphique utilisateur SnapCenter \(GUI\) ou des applets de commande PowerShell.' 
+summary: 'Une fois votre système de stockage NetApp provisionné à l"aide du plug-in SnapCenter pour Microsoft Windows, vous pouvez migrer vos ressources vers le système de stockage NetApp ou d"un LUN NetApp vers un autre LUN NetApp à l"aide de l"interface graphique SnapCenter ou des applets de commande PowerShell.' 
 ---
 = Migrez les ressources vers le stockage NetApp dans SnapCenter
 :allow-uri-read: 

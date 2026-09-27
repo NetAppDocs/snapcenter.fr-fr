@@ -2,7 +2,7 @@
 permalink: protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html 
 sidebar: sidebar 
 keywords: snapcenter 
-summary: 'Vous pouvez cloner une sauvegarde du système de fichiers à partir d"un stockage primaire ou secondaire. Vous pouvez également choisir la destination qui répond à vos besoins : l"emplacement de sauvegarde d"origine ou une destination différente sur le même hôte ou sur un hôte différent. La destination doit se trouver sur le même volume que la sauvegarde source clone.' 
+summary: Vous pouvez cloner une sauvegarde de système de fichiers depuis le stockage principal ou secondaire. Vous pouvez également choisir la destination qui répond à vos besoins, qu’il s’agisse de l’emplacement de sauvegarde d’origine ou d’une autre destination sur le même hôte ou sur un hôte différent. La destination doit se trouver sur le même volume que la sauvegarde source du clone. 
 ---
 = SnapCenter sources et destinations de clonage pour les systèmes de fichiers Windows
 :allow-uri-read: 

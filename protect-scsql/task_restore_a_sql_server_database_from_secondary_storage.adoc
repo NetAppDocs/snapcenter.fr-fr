@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html 
 sidebar: sidebar 
 keywords: restore operation 
-summary: 'Vous pouvez restaurer les bases de données SQL Server sauvegardées à partir des LUN physiques \(RDM, iSCSI ou FCP\) sur un système de stockage secondaire. La fonction Restaurer est un processus multiphase qui copie toutes les données et toutes les pages de journal à partir d"une sauvegarde SQL Server spécifiée résidant sur le système de stockage secondaire vers une base de données spécifiée.' 
+summary: 'Vous pouvez restaurer les bases de données SQL Server sauvegardées à partir des LUN physiques (RDM, iSCSI ou FCP) sur un système de stockage secondaire. La fonction Restaurer est un processus multiphase qui copie toutes les données et toutes les pages de journal à partir d"une sauvegarde SQL Server spécifiée résidant sur le système de stockage secondaire vers une base de données spécifiée.' 
 ---
 = Restaurez une base de données SQL Server à partir d'un stockage secondaire dans SnapCenter
 :allow-uri-read: 

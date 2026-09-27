@@ -2,7 +2,7 @@
 permalink: protect-hana/task_prepare_multitenant_database_containers_for_data_protection.html 
 sidebar: sidebar 
 keywords: multitenant database containers 
-summary: 'Pour les hôtes SAP HANA directement enregistrés dans SnapCenter, l"installation ou la mise à niveau du plug-in SnapCenter pour base de données SAP HANA déclenchera une détection automatique des ressources sur l"hôte. Après l"installation ou la mise à niveau du plug-in, pour chaque conteneur de base de données multitenant \(MDC\) situé sur l"hôte du plug-in, une autre ressource MDC sera automatiquement découverte avec un format GUID différent et enregistrée dans SnapCenter. La nouvelle ressource sera à l"état "verrouillée".' 
+summary: 'Pour les hôtes SAP HANA enregistrés directement dans SnapCenter, l’installation ou la mise à niveau du plug-in SnapCenter pour la base de données SAP HANA déclenchera une détection automatique des ressources sur l’hôte. Après l’installation ou la mise à niveau du plug-in, pour chaque ressource MDC (Multitenant Database Container) située sur l’hôte du plug-in, une autre ressource MDC sera automatiquement détectée avec un format GUID différent et enregistrée dans SnapCenter. La nouvelle ressource sera dans un état « verrouillé ».' 
 ---
 = Préparez les conteneurs de bases de données multilocataires pour la protection des données dans SnapCenter
 :allow-uri-read: 

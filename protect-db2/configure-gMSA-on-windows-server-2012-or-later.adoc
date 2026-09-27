@@ -2,7 +2,7 @@
 permalink: protect-db2/configure-gMSA-on-windows-server-2012-or-later.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Windows Server 2016 ou version ultérieure vous permet de créer un compte de service géré de groupe \(GMSA\) qui fournit une gestion automatisée des mots de passe de compte de service à partir d"un compte de domaine géré.' 
+summary: 'Windows Server 2016 ou version ultérieure vous permet de créer un compte de service géré de groupe (GMSA) qui fournit une gestion automatisée des mots de passe de compte de service à partir d"un compte de domaine géré.' 
 ---
 = Configurer gMSA sur Windows Server 2016 ou version ultérieure pour SnapCenter
 :allow-uri-read: 

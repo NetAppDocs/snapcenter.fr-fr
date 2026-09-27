@@ -2,7 +2,7 @@
 permalink: protect-sco/task_clone_a_pluggable_database.html 
 sidebar: sidebar 
 keywords: clone, pluggable database, PDB 
-summary: 'Vous pouvez cloner une base de données enfichable \(PDB\) sur un CDB cible différent ou identique sur le même hôte ou un autre hôte. Vous pouvez également récupérer le PDB cloné sur un SCN ou une date et une heure souhaités.' 
+summary: 'Vous pouvez cloner une base de données enfichable (PDB) sur un CDB cible différent ou identique sur le même hôte ou un autre hôte. Vous pouvez également récupérer le PDB cloné sur un SCN ou une date et une heure souhaités.' 
 ---
 = Cloner une base de données pluggable Oracle avec SnapCenter
 :allow-uri-read: 

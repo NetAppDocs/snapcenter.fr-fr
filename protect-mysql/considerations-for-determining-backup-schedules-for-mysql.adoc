@@ -2,7 +2,7 @@
 permalink: protect-mysql/considerations-for-determining-backup-schedules-for-mysql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL 
-summary: 'Le facteur le plus important dans la détermination d"un planning de sauvegarde est le taux de modification de la ressource. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. D"autres facteurs entrent en ligne de compte l"importance de la ressource pour votre entreprise, votre accord de niveau de service \(SLA\) et votre objectif de point de récupération \(RPO\).' 
+summary: 'Le facteur le plus important dans la détermination d"un planning de sauvegarde est le taux de modification de la ressource. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. D"autres facteurs entrent en ligne de compte l"importance des ressources pour votre entreprise, votre contrat de niveau de service et votre objectif de point de récupération (RPO).' 
 ---
 = Facteurs de planification des sauvegardes pour les bases de données MySQL dans SnapCenter
 :allow-uri-read: 

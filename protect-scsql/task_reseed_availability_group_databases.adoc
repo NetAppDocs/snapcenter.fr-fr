@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_reseed_availability_group_databases.html 
 sidebar: sidebar 
 keywords: reseed 
-summary: 'Réamorçage est une option permettant de restaurer les bases de données du groupe de disponibilité \(AG\). Si une base de données secondaire n"est plus synchronisée avec la base de données principale d"un AG, vous pouvez réamorcer la base de données secondaire.' 
+summary: 'Réamorçage est une option permettant de restaurer les bases de données du groupe de disponibilité (AG). Si une base de données secondaire n"est plus synchronisée avec la base de données principale d"un AG, vous pouvez réamorcer la base de données secondaire.' 
 ---
 = Réensemencez les bases de données du groupe de disponibilité dans SnapCenter
 :allow-uri-read: 

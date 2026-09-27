@@ -2,7 +2,7 @@
 permalink: protect-postgresql/considerations-for-determining-backup-schedules-for-postgresql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for PostgreSQL 
-summary: 'Le facteur le plus important dans la détermination d"un planning de sauvegarde est le taux de modification de la ressource. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. D"autres facteurs entrent en ligne de compte l"importance de la ressource pour votre entreprise, votre accord de niveau de service \(SLA\) et votre objectif de point de récupération \(RPO\).' 
+summary: 'Le facteur le plus important dans la détermination d"un planning de sauvegarde est le taux de modification de la ressource. Vous pouvez sauvegarder chaque heure une ressource largement utilisée et il vous est possible de sauvegarder une ressource peu utilisée une fois par jour. D"autres facteurs entrent en ligne de compte l"importance des ressources pour votre entreprise, votre contrat de niveau de service et votre objectif de point de récupération (RPO).' 
 ---
 = SnapCenter Plug-in pour les facteurs de planification des sauvegardes PostgreSQL
 :allow-uri-read: 

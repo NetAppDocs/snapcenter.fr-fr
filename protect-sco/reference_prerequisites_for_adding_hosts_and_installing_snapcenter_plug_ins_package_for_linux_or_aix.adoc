@@ -25,6 +25,10 @@ Le module de plug-ins SnapCenter pour AIX résout automatiquement le lien symbol
 * Créez des informations d'identification avec le mode d'authentification sous Linux ou AIX pour l'utilisateur d'installation.
 * Vous devez avoir installé Java 17 (pour SnapCenter 6.2.1 et versions ultérieures) ou Java 11 (pour SnapCenter 6.2 et versions antérieures) sur votre hôte Linux ou AIX.
 +
+
+NOTE: Les utilisateurs non-root doivent disposer des droits d'exécution pour exécuter Java.
+
++
 ** Java d'Oracle, d'OpenJDK ou de SAP JDK est pris en charge sous Linux.
 ** IBM Java pour AIX. Vous pouvez le télécharger depuis https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?version=17&os=AIX["Téléchargements IBM Semeru RunTimes"^].
 +
@@ -224,6 +228,10 @@ NOTE: Vous devez allouer suffisamment d'espace disque et surveiller la consommat
 Packs logiciels requis
  a| 
 * IBM Java 17 pour SnapCenter 6.2.1 et versions ultérieures ou IBM Java 11 pour SnapCenter 6.2 et versions antérieures
++
+
+NOTE: Les utilisateurs non-root doivent disposer des droits d'exécution pour exécuter Java.
+
 
 
 Si vous avez mis à jour Java vers la dernière version, vous devez vous assurer que l'option JAVA_HOME située dans /var/opt/snapcenter/spl/etc/spl.properties est définie sur la version Java correcte et le chemin correct.

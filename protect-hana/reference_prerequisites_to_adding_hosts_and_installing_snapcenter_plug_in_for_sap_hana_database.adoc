@@ -50,6 +50,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Téléchargez J
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Téléchargez Java pour tous les systèmes d'exploitation"]
 
++
+
+NOTE: Les utilisateurs non-root doivent disposer des droits d'exécution pour exécuter Java.
+
 * Pour les bases de données SAP HANA qui s'exécutent sur un hôte Linux, lors de l'installation du plug-in pour base de données SAP HANA, le plug-in SnapCenter pour UNIX est installé automatiquement.
 * Vous devez avoir *bash* comme shell par défaut pour l'installation du plug-in.
 

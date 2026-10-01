@@ -15,7 +15,7 @@ Les ressources sont des bases de données IBM DB2 gérées par SnapCenter sur l'
 
 .Avant de commencer
 * Vous devez avoir déjà effectué des tâches telles que l'installation du serveur SnapCenter, l'ajout d'hôtes et la configuration des connexions du système de stockage.
-* Le plug-in SnapCenter pour IBM DB2 ne prend pas en charge la découverte automatique des ressources résidant dans les environnements virtuels RDM/VMDK. Vous devez fournir les informations de stockage pour les environnements virtuels tout en ajoutant les bases de données manuellement.
+* SnapCenter Plug-in for IBM Db2 ne prend pas en charge la détection automatique des ressources résidant dans les environnements virtuels RDM/VMDK. Vous devez fournir les informations de stockage pour les environnements virtuels lors de l'ajout manuel des bases de données. Consultez <<resources_rdm_vmdk_virtual_environments,Ressources résidant dans des environnements virtuels RDM/VMDK>> pour plus de détails.
 
 
 .Description de la tâche
@@ -45,3 +45,16 @@ Les ressources s'affichent avec des informations telles que le type de ressource
 
 
 IMPORTANT: Vous devez actualiser les ressources si les bases de données sont renommées en dehors de SnapCenter.
+
+[[resources_rdm_vmdk_virtual_environments]]
+.Ressources résidant dans des environnements virtuels RDM/VMDK
+Les ressources résidant sur des environnements virtuels RDM/VMDK ne peuvent pas être détectées automatiquement. Vous devez désactiver la détection automatique et ajouter manuellement l'instance pour le plug-in SnapCenter pour IBM Db2, comme suit :
+
+[listing]
+----
+Set-SmConfigSettings -Agent -Hostname <HOST_NAME> -configSettings @{"DISABLE_AUTO_DISCOVERY"="true"}
+
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode DB2 -ResourceType Instance -ResourceName db2inst1 -StorageFootPrint
+(@{"VolumeName"="windb201_data01";"LUNName"="windb201_data01";"StorageSystem"="windb2svm"})
+----
+Consultez link:back-up-db2-databases.html["Sauvegarde des bases de données IBM Db2, cmdlets PowerShell"] pour plus d'informations.

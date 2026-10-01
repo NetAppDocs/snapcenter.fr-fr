@@ -18,6 +18,10 @@ Avant d'utiliser le plug-in SnapCenter pour IBM DB2, l'administrateur SnapCenter
 * Configurez l'environnement SnapCenter en ajoutant des connexions au système de stockage et en créant des identifiants, le cas échéant.
 * Installez Java 17 (Oracle Java, OpenJDK ou SAP JDK) pour SnapCenter 6.2.1 et versions ultérieures ou Java 11 pour SnapCenter 6.2 et versions antérieures sur votre hôte Linux ou Windows.
 +
+
+NOTE: Les utilisateurs non-root doivent disposer des droits d'exécution pour exécuter Java.
+
++
 Vous devez définir le chemin Java dans la variable de chemin d'environnement de la machine hôte.
 
 * Configurer SnapMirror et SnapVault pour la réplication de sauvegarde.

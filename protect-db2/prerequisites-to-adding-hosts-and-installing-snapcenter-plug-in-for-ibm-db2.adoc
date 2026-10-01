@@ -50,6 +50,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Télécharger J
 +
 link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["Télécharger Java pour AIX"^]
 
++
+
+NOTE: Les utilisateurs non-root doivent disposer des droits d'exécution pour exécuter Java.
+
 * Pour les bases de données IBM DB2 exécutées sur un hôte Linux, lors de l'installation de Plug-in pour IBM DB2, SnapCenter Plug-in pour UNIX est installé automatiquement.
 * Vous devez avoir *bash* comme shell par défaut pour l'installation du plug-in.
 

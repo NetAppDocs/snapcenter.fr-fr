@@ -13,6 +13,13 @@ summary: Vous créez des groupes initiateurs pour spécifier les hôtes pouvant 
 [role="lead"]
 Vous créez des groupes initiateurs pour spécifier les hôtes pouvant accéder à une LUN donnée sur le système de stockage. SnapCenter permet de créer, renommer, modifier ou supprimer un groupe initiateur sur un hôte Windows.
 
+[NOTE]
+====
+* SnapCenter crée automatiquement un igroup s'il n'en existe pas déjà un lors de l'exécution d'opérations de restauration ou de clonage de LUN. L'igroup est créé selon le format de nom suivant `snapcenter_<id>_igroup`.
+* SnapCenter ne supprime pas un igroup créé dans le cadre d'une opération de suppression de clone. Il est conservé pour d'autres opérations de clonage ou de restauration.
+
+
+====
 
 
 [[create-an-igroup]]
